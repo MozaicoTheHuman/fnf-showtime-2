@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Maritza.png">
+	<!-- Created with Adobe Animate version 18.0.2.126 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="maritzamenu0000" x="10" y="10" width="489" height="620" frameX="0" frameY="0" frameWidth="490" frameHeight="620"/>
+	<SubTexture name="maritzamenu0001" x="10" y="10" width="489" height="620" frameX="0" frameY="0" frameWidth="490" frameHeight="620"/>
+	<SubTexture name="maritzamenu0002" x="509" y="10" width="489" height="620" frameX="0" frameY="0" frameWidth="490" frameHeight="620"/>
+	<SubTexture name="maritzamenu0003" x="509" y="10" width="489" height="620" frameX="0" frameY="0" frameWidth="490" frameHeight="620"/>
+	<SubTexture name="maritzamenu0004" x="10" y="640" width="489" height="620" frameX="0" frameY="0" frameWidth="490" frameHeight="620"/>
+	<SubTexture name="maritzamenu0005" x="10" y="640" width="489" height="620" frameX="0" frameY="0" frameWidth="490" frameHeight="620"/>
+	<SubTexture name="maritzamenu0006" x="509" y="640" width="489" height="620" frameX="-1" frameY="0" frameWidth="490" frameHeight="620"/>
+	<SubTexture name="maritzamenu0007" x="509" y="640" width="489" height="620" frameX="-1" frameY="0" frameWidth="490" frameHeight="620"/>
+	<SubTexture name="maritzamenu0008" x="509" y="640" width="489" height="620" frameX="-1" frameY="0" frameWidth="490" frameHeight="620"/>
+	<SubTexture name="maritzamenu0009" x="509" y="640" width="489" height="620" frameX="-1" frameY="0" frameWidth="490" frameHeight="620"/>
+	<SubTexture name="maritzamenu0010" x="509" y="640" width="489" height="620" frameX="-1" frameY="0" frameWidth="490" frameHeight="620"/>
+	<SubTexture name="maritzamenu0011" x="509" y="640" width="489" height="620" frameX="-1" frameY="0" frameWidth="490" frameHeight="620"/>
+	<SubTexture name="maritzamenu0012" x="509" y="640" width="489" height="620" frameX="-1" frameY="0" frameWidth="490" frameHeight="620"/>
+	<SubTexture name="maritzamenu0013" x="509" y="640" width="489" height="620" frameX="-1" frameY="0" frameWidth="490" frameHeight="620"/>
+	<SubTexture name="maritzamenu0014" x="509" y="640" width="489" height="620" frameX="-1" frameY="0" frameWidth="490" frameHeight="620"/>
+</TextureAtlas>

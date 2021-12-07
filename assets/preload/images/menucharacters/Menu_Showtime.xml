@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Menu_Showtime.png">
+	<!-- Created with Adobe Animate version 18.0.2.126 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="showtime0000" x="20" y="20" width="924" height="836"/>
+	<SubTexture name="showtime0001" x="20" y="20" width="924" height="836"/>
+	<SubTexture name="showtime0002" x="954" y="20" width="924" height="836"/>
+	<SubTexture name="showtime0003" x="954" y="20" width="924" height="836"/>
+	<SubTexture name="showtime0004" x="1888" y="20" width="924" height="836"/>
+	<SubTexture name="showtime0005" x="2822" y="20" width="924" height="836"/>
+	<SubTexture name="showtime0006" x="20" y="866" width="924" height="836"/>
+	<SubTexture name="showtime0007" x="954" y="866" width="924" height="836"/>
+	<SubTexture name="showtime0008" x="1888" y="866" width="924" height="836"/>
+	<SubTexture name="showtime0009" x="1888" y="866" width="924" height="836"/>
+	<SubTexture name="showtime0010" x="1888" y="866" width="924" height="836"/>
+	<SubTexture name="showtime0011" x="1888" y="866" width="924" height="836"/>
+	<SubTexture name="showtime0012" x="1888" y="866" width="924" height="836"/>
+	<SubTexture name="showtime0013" x="1888" y="866" width="924" height="836"/>
+	<SubTexture name="showtime0014" x="2822" y="866" width="924" height="836"/>
+	<SubTexture name="showtime0015" x="2822" y="866" width="924" height="836"/>
+	<SubTexture name="showtime0016" x="20" y="1712" width="924" height="836"/>
+	<SubTexture name="showtime0017" x="20" y="1712" width="924" height="836"/>
+	<SubTexture name="showtime0018" x="954" y="1712" width="924" height="836"/>
+	<SubTexture name="showtime0019" x="1888" y="1712" width="924" height="836"/>
+	<SubTexture name="showtime0020" x="2822" y="1712" width="924" height="836"/>
+	<SubTexture name="showtime0021" x="2822" y="1712" width="924" height="836"/>
+	<SubTexture name="showtime0022" x="1888" y="866" width="924" height="836"/>
+	<SubTexture name="showtime0023" x="1888" y="866" width="924" height="836"/>
+	<SubTexture name="showtime0024" x="1888" y="866" width="924" height="836"/>
+	<SubTexture name="showtime0025" x="1888" y="866" width="924" height="836"/>
+	<SubTexture name="showtime0026" x="1888" y="866" width="924" height="836"/>
+	<SubTexture name="showtime0027" x="1888" y="866" width="924" height="836"/>
+</TextureAtlas>

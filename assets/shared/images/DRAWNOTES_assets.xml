@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="DRAWNOTES_assets.png">
+	<!-- Created with Adobe Animate version 18.0.2.126 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="abajo instance 10000" x="10" y="10" width="184" height="173"/>
+	<SubTexture name="abajo instance 10001" x="204" y="10" width="184" height="173"/>
+	<SubTexture name="abajo instance 10002" x="398" y="10" width="184" height="173"/>
+	<SubTexture name="arriba instance 10000" x="592" y="10" width="184" height="173"/>
+	<SubTexture name="arriba instance 10001" x="786" y="10" width="184" height="173"/>
+	<SubTexture name="arriba instance 10002" x="10" y="193" width="184" height="173"/>
+	<SubTexture name="derecha instance 10000" x="204" y="193" width="173" height="184"/>
+	<SubTexture name="derecha instance 10001" x="387" y="193" width="173" height="184"/>
+	<SubTexture name="derecha instance 10002" x="570" y="193" width="173" height="184"/>
+	<SubTexture name="izquierda instance 10000" x="753" y="193" width="173" height="184"/>
+	<SubTexture name="izquierda instance 10001" x="10" y="387" width="173" height="184"/>
+	<SubTexture name="izquierda instance 10002" x="193" y="387" width="173" height="184"/>
+</TextureAtlas>

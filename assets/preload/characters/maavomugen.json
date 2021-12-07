@@ -1,0 +1,232 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-60,
+				49
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "MaavoMUGENHighHit",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-60,
+				50
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "MaavoMUGENHighHit",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				17
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "MaavoMUGENLowHit",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				17
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "MaavoMUGENLowHit",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				90,
+				-133
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "MaavoMUGENDown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				26
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "MaavoMUGENUp",
+			"indices": []
+		},
+		{
+			"offsets": [
+				210,
+				-30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "MaavoMUGENRight"
+		},
+		{
+			"offsets": [
+				10,
+				-123
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "MaavoMUGENLeft"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				7,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "MaavoMUGENStand",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				390,
+				-34
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "MaavoMUGENIzquierda",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				170,
+				-21
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "MaavoMUGENDerecha",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				136,
+				39
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "MaavoMUGENHey",
+			"indices": []
+		},
+		{
+			"offsets": [
+				270,
+				5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "MaavoMUGENAbajo"
+		},
+		{
+			"offsets": [
+				0,
+				10
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle-alt",
+			"indices": [],
+			"name": "MaavoMUGENidle-alt"
+		},
+		{
+			"offsets": [
+				294,
+				89
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "MaavoMUGENArriba"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singRIGHT-loop",
+			"fps": 24,
+			"name": "MaavoMUGENidle-alt",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singLEFT-loop",
+			"fps": 24,
+			"name": "MaavoMUGENidle-alt",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUP-loop",
+			"fps": 24,
+			"name": "MaavoMUGENidle-alt",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singDOWN-loop",
+			"fps": 24,
+			"name": "MaavoMUGENidle-alt",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/bf-maavoMUGEN",
+	"position": [
+		200,
+		310
+	],
+	"healthicon": "bf-maavoMUGEN",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		235,
+		0
+	],
+	"camera_position": [
+		330,
+		-60
+	],
+	"sing_duration": 4,
+	"scale": 2.40000000000001
+}

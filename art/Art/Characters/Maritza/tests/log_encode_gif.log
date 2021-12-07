@@ -1,0 +1,189 @@
+ffmpeg version git-2020-08-09-6e951d0 Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 10.2.1 (GCC) 20200805
+  configuration: --enable-gpl --enable-version3 --enable-sdl2 --enable-fontconfig --enable-gnutls --enable-iconv --enable-libass --enable-libdav1d --enable-libbluray --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libopus --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libsrt --enable-libtheora --enable-libtwolame --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libzimg --enable-lzma --enable-zlib --enable-gmp --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvo-amrwbenc --enable-libmysofa --enable-libspeex --enable-libxvid --enable-libaom --enable-libgsm --enable-librav1e --disable-w32threads --enable-libmfx --enable-ffnvcodec --enable-cuda-llvm --enable-cuvid --enable-d3d11va --enable-nvenc --enable-nvdec --enable-dxva2 --enable-avisynth --enable-libopenmpt --enable-amf
+  libavutil      56. 58.100 / 56. 58.100
+  libavcodec     58.100.100 / 58.100.100
+  libavformat    58. 50.100 / 58. 50.100
+  libavdevice    58. 11.101 / 58. 11.101
+  libavfilter     7. 87.100 /  7. 87.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+Splitting the commandline.
+Reading option '-v' ... matched as option 'v' (set logging level) with argument 'debug'.
+Reading option '-nostdin' ... matched as option 'stdin' (enable or disable interaction on standard input) with argument 0.
+Reading option '-progress' ... matched as option 'progress' (write program-readable progress information) with argument 'C:/Users/Maavo/AppData/Local/Temp/KritaFFmpegProgress.MPhpwV'.
+Reading option '-r' ... matched as option 'r' (set frame rate (Hz value, fraction or abbreviation)) with argument '24'.
+Reading option '-start_number' ... matched as AVOption 'start_number' with argument '0'.
+Reading option '-i' ... matched as input url with argument 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface%04d.png'.
+Reading option '-i' ... matched as input url with argument 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/palette.png'.
+Reading option '-lavfi' ... matched as option 'lavfi' (create a complex filtergraph) with argument 'scale=w=820:h=592[0:v];[0:v][1:v] paletteuse'.
+Reading option '-y' ... matched as option 'y' (overwrite output files) with argument '1'.
+Reading option 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/test14.gif' ... matched as output url.
+Finished splitting the commandline.
+Parsing a group of options: global .
+Applying option v (set logging level) with argument debug.
+Applying option nostdin (enable or disable interaction on standard input) with argument 0.
+Applying option progress (write program-readable progress information) with argument C:/Users/Maavo/AppData/Local/Temp/KritaFFmpegProgress.MPhpwV.
+[file @ 000002157c371980] Setting default whitelist 'file,crypto,data'
+Applying option lavfi (create a complex filtergraph) with argument scale=w=820:h=592[0:v];[0:v][1:v] paletteuse.
+Applying option y (overwrite output files) with argument 1.
+Successfully parsed a group of options.
+Parsing a group of options: input url C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface%04d.png.
+Applying option r (set frame rate (Hz value, fraction or abbreviation)) with argument 24.
+Successfully parsed a group of options.
+Opening an input file: C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface%04d.png.
+[image2 @ 000002157c3b1e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface0000.png' for reading
+[file @ 000002157c3b5800] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002157c3bd9c0] Statistics: 93281 bytes read, 0 seeks
+[image2 @ 000002157c3b1e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface0001.png' for reading
+[file @ 000002157c3d4940] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002157c3dfc40] Statistics: 93281 bytes read, 0 seeks
+[image2 @ 000002157c3b1e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface0002.png' for reading
+[file @ 000002157c3f6c00] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002157c3dfc40] Statistics: 95532 bytes read, 0 seeks
+[image2 @ 000002157c3b1e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface0003.png' for reading
+[file @ 000002157c40e440] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002157c3dfc40] Statistics: 95532 bytes read, 0 seeks
+[image2 @ 000002157c3b1e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface0004.png' for reading
+[file @ 000002157c9a7780] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002157c3dfc40] Statistics: 96234 bytes read, 0 seeks
+[image2 @ 000002157c3b1e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface0005.png' for reading
+[file @ 000002157c40e540] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002157c3dfc40] Statistics: 96234 bytes read, 0 seeks
+[image2 @ 000002157c3b1e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface0006.png' for reading
+[file @ 000002157c40e700] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002157c3dfc40] Statistics: 92877 bytes read, 0 seeks
+[image2 @ 000002157c3b1e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface0007.png' for reading
+[file @ 000002157c40e880] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002157c3dfc40] Statistics: 94266 bytes read, 0 seeks
+[image2 @ 000002157c3b1e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface0008.png' for reading
+[file @ 000002157c40f9c0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002157c3dfc40] Statistics: 94266 bytes read, 0 seeks
+[image2 @ 000002157c3b1e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface0009.png' for reading
+[file @ 000002157c40fa80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002157c3dfc40] Statistics: 93346 bytes read, 0 seeks
+[image2 @ 000002157c3b1e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface0010.png' for reading
+[file @ 000002157c40fb00] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002157c3dfc40] Statistics: 93346 bytes read, 0 seeks
+[image2 @ 000002157c3b1e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface0011.png' for reading
+[file @ 000002157c40fbc0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002157c3dfc40] Statistics: 100413 bytes read, 0 seeks
+[image2 @ 000002157c3b1e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface0012.png' for reading
+[file @ 000002157c40fbc0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002157c3dfc40] Statistics: 100413 bytes read, 0 seeks
+[image2 @ 000002157c3b1e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface0013.png' for reading
+[file @ 000002157c40fbc0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002157c3dfc40] Statistics: 99302 bytes read, 0 seeks
+[image2 @ 000002157c3b1e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface0014.png' for reading
+[file @ 000002157c40fbc0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002157c3dfc40] Statistics: 99302 bytes read, 0 seeks
+[image2 @ 000002157c3b1e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface0015.png' for reading
+[file @ 000002157c40fbc0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002157c3dfc40] Statistics: 95793 bytes read, 0 seeks
+[image2 @ 000002157c3b1e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface0016.png' for reading
+[file @ 000002157c40fbc0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002157c3dfc40] Statistics: 94422 bytes read, 0 seeks
+[image2 @ 000002157c3b1e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface0017.png' for reading
+[file @ 000002157c40fbc0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000002157c3dfc40] Statistics: 94422 bytes read, 0 seeks
+Input #0, image2, from 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface%04d.png':
+  Duration: 00:00:00.72, start: 0.000000, bitrate: N/A
+    Stream #0:0, 18, 1/25: Video: png, 1 reference frame, rgba(pc), 819x592 [SAR 3937:3937 DAR 819:592], 0/1, 25 fps, 25 tbr, 25 tbn, 25 tbc
+Successfully opened the file.
+Parsing a group of options: input url C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/palette.png.
+Successfully parsed a group of options.
+Opening an input file: C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/palette.png.
+[NULL @ 000002157caf1000] Opening 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/palette.png' for reading
+[file @ 000002157c40fe80] Setting default whitelist 'file,crypto,data'
+[png_pipe @ 000002157caf1000] Format png_pipe probed with size=2048 and score=99
+[png_pipe @ 000002157caf1000] Before avformat_find_stream_info() pos: 0 bytes read:963 seeks:0 nb_streams:1
+[png_pipe @ 000002157caf1000] After avformat_find_stream_info() pos: 963 bytes read:963 seeks:0 frames:1
+Input #1, png_pipe, from 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/palette.png':
+  Duration: N/A, bitrate: N/A
+    Stream #1:0, 1, 1/25: Video: png, 1 reference frame, rgba(pc), 16x16 [SAR 1:1 DAR 1:1], 0/1, 25 tbr, 25 tbn, 25 tbc
+Successfully opened the file.
+[Parsed_scale_0 @ 000002157c3ded40] Setting 'w' to value '820'
+[Parsed_scale_0 @ 000002157c3ded40] Setting 'h' to value '592'
+[Parsed_scale_0 @ 000002157c3ded40] w:820 h:592 flags:'bilinear' interl:0
+Parsing a group of options: output url C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/test14.gif.
+Successfully parsed a group of options.
+Opening an output file: C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/test14.gif.
+[file @ 000002157caf5b80] Setting default whitelist 'file,crypto,data'
+Successfully opened the file.
+detected 8 logical cores
+Stream mapping:
+  Stream #0:0 (png) -> scale
+  Stream #1:0 (png) -> paletteuse:palette
+  paletteuse -> Stream #0:0 (gif)
+cur_dts is invalid st:0 (0) [init:0 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000002157c3b1e00] Thread message queue blocking; consider raising the thread_queue_size option (current value: 8)
+cur_dts is invalid st:0 (0) [init:0 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+    Last message repeated 9 times
+[Parsed_scale_0 @ 000002157cb3e7c0] Setting 'w' to value '820'
+[Parsed_scale_0 @ 000002157cb3e7c0] Setting 'h' to value '592'
+[Parsed_scale_0 @ 000002157cb3e7c0] w:820 h:592 flags:'bilinear' interl:0
+[graph 0 input from stream 0:0 @ 000002157c41ef00] Setting 'video_size' to value '819x592'
+[graph 0 input from stream 0:0 @ 000002157c41ef00] Setting 'pix_fmt' to value '26'
+[graph 0 input from stream 0:0 @ 000002157c41ef00] Setting 'time_base' to value '1/24'
+[graph 0 input from stream 0:0 @ 000002157c41ef00] Setting 'pixel_aspect' to value '3937/3937'
+[graph 0 input from stream 0:0 @ 000002157c41ef00] Setting 'frame_rate' to value '24/1'
+[graph 0 input from stream 0:0 @ 000002157c41ef00] w:819 h:592 pixfmt:rgba tb:1/24 fr:24/1 sar:3937/3937
+[graph 0 input from stream 1:0 @ 000002157c3f6c80] Setting 'video_size' to value '16x16'
+[graph 0 input from stream 1:0 @ 000002157c3f6c80] Setting 'pix_fmt' to value '26'
+[graph 0 input from stream 1:0 @ 000002157c3f6c80] Setting 'time_base' to value '1/25'
+[graph 0 input from stream 1:0 @ 000002157c3f6c80] Setting 'pixel_aspect' to value '1/1'
+[graph 0 input from stream 1:0 @ 000002157c3f6c80] Setting 'frame_rate' to value '25/1'
+[graph 0 input from stream 1:0 @ 000002157c3f6c80] w:16 h:16 pixfmt:rgba tb:1/25 fr:25/1 sar:1/1
+[format @ 000002157cb6c780] Setting 'pix_fmts' to value 'rgb8|bgr8|rgb4_byte|bgr4_byte|gray|pal8'
+[auto_scaler_0 @ 000002157d198300] w:iw h:ih flags:'bilinear' interl:0
+[Parsed_paletteuse_1 @ 000002157c40fa40] auto-inserting filter 'auto_scaler_0' between the filter 'graph 0 input from stream 1:0' and the filter 'Parsed_paletteuse_1'
+[AVFilterGraph @ 000002157c3d5740] query_formats: 6 queried, 4 merged, 1 already done, 0 delayed
+[swscaler @ 000002157d232cc0] Forcing full internal H chroma due to input having non subsampled chroma
+[Parsed_scale_0 @ 000002157cb3e7c0] w:819 h:592 fmt:rgba sar:3937/3937 -> w:820 h:592 fmt:bgra sar:819/820 flags:0x2
+[swscaler @ 000002157d25a840] Forcing full internal H chroma due to input having non subsampled chroma
+[auto_scaler_0 @ 000002157d198300] w:16 h:16 fmt:rgba sar:1/1 -> w:16 h:16 fmt:bgra sar:1/1 flags:0x2
+[Parsed_paletteuse_1 @ 000002157c40fa40] [framesync @ 000002157d1b0d48] Selected 1/600 time base
+[Parsed_paletteuse_1 @ 000002157c40fa40] [framesync @ 000002157d1b0d48] Sync level 2
+Output #0, gif, to 'C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/test14.gif':
+  Metadata:
+    encoder         : Lavf58.50.100
+    Stream #0:0, 0, 1/100: Video: gif, 1 reference frame, pal8, 820x592 [SAR 819:820 DAR 819:592], 0/1, q=2-31, 200 kb/s, 24 fps, 100 tbn, 24 tbc (default)
+    Metadata:
+      encoder         : Lavc58.100.100 gif
+Clipping frame in rate conversion by 0.000008
+[gif @ 000002157caf4f80] 330x544 image at pos (39;21) [area:820x592]
+[gif @ 000002157caf4f80] 330x534 image at pos (52;31) [area:820x592]
+    Last message repeated 1 times
+[gif @ 000002157caf4f80] 334x533 image at pos (46;31) [area:820x592]
+    Last message repeated 1 times
+[gif @ 000002157caf4f80] 337x532 image at pos (44;32) [area:820x592]
+[gif @ 000002157caf4f80] 328x539 image at pos (43;26) [area:820x592]
+    Last message repeated 1 times
+[gif @ 000002157caf4f80] 330x544 image at pos (39;21) [area:820x592]
+    Last message repeated 1 times
+[gif @ 000002157caf4f80] 318x529 image at pos (27;36) [area:820x592]
+    Last message repeated 1 times
+[gif @ 000002157caf4f80] 338x529 image at pos (17;36) [area:820x592]
+    Last message repeated 1 times
+[gif @ 000002157caf4f80] 331x535 image at pos (29;30) [area:820x592]
+[gif @ 000002157caf4f80] 328x543 image at pos (37;23) [area:820x592]
+    Last message repeated 1 times
+[Parsed_paletteuse_1 @ 000002157c40fa40] [framesync @ 000002157d1b0d48] Sync level 0
+[out_0_0 @ 000002157cb8ee80] EOF on sink link out_0_0:default.
+No more output streams to write to, finishing.
+frame=   18 fps=0.0 q=-0.0 Lsize=     537kB time=00:00:00.72 bitrate=6105.5kbits/s speed=1.92x    
+[AVIOContext @ 000002157c3b1b40] Statistics: 0 seeks, 1 writeouts
+video:537kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.003640%
+Input file #0 (C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/cleanupface%04d.png):
+  Input stream #0:0 (video): 18 packets read (1722262 bytes); 18 frames decoded; 
+  Total: 18 packets (1722262 bytes) demuxed
+Input file #1 (C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/palette.png):
+  Input stream #1:0 (video): 1 packets read (963 bytes); 1 frames decoded; 
+  Total: 1 packets (963 bytes) demuxed
+Output file #0 (C:/Users/Maavo/Documents/FNF MODS/Friday Night Funkin - ShowTime!/Characters/Maritza/tests/test14.gif):
+  Output stream #0:0 (video): 18 frames encoded; 18 packets muxed (549471 bytes); 
+  Total: 18 packets (549471 bytes) muxed
+19 frames successfully decoded, 0 decoding errors
+[AVIOContext @ 000002157caf5cc0] Statistics: 0 seeks, 3 writeouts
+[AVIOContext @ 000002157caf9680] Statistics: 963 bytes read, 0 seeks

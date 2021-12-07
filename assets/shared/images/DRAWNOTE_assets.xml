@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="NOTE_Draws.png">
+	<!-- Created with Adobe Animate version 18.0.2.126 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="abajo0000" x="10" y="10" width="189" height="178"/>
+	<SubTexture name="abajo0001" x="10" y="10" width="189" height="178"/>
+	<SubTexture name="abajo0002" x="200" y="10" width="189" height="178"/>
+	<SubTexture name="abajo0003" x="200" y="10" width="189" height="178"/>
+	<SubTexture name="abajo0004" x="390" y="10" width="189" height="178"/>
+	<SubTexture name="abajo0005" x="390" y="10" width="189" height="178"/>
+	<SubTexture name="arriba0000" x="580" y="10" width="189" height="178"/>
+	<SubTexture name="arriba0001" x="580" y="10" width="189" height="178"/>
+	<SubTexture name="arriba0002" x="770" y="10" width="189" height="178"/>
+	<SubTexture name="arriba0003" x="770" y="10" width="189" height="178"/>
+	<SubTexture name="arriba0004" x="10" y="189" width="189" height="178"/>
+	<SubTexture name="arriba0005" x="10" y="189" width="189" height="178"/>
+	<SubTexture name="derecha0000" x="200" y="189" width="178" height="189"/>
+	<SubTexture name="derecha0001" x="200" y="189" width="178" height="189"/>
+	<SubTexture name="derecha0002" x="379" y="189" width="178" height="189"/>
+	<SubTexture name="derecha0003" x="379" y="189" width="178" height="189"/>
+	<SubTexture name="derecha0004" x="558" y="189" width="178" height="189"/>
+	<SubTexture name="derecha0005" x="558" y="189" width="178" height="189"/>
+	<SubTexture name="izquierda0000" x="737" y="189" width="178" height="189"/>
+	<SubTexture name="izquierda0001" x="737" y="189" width="178" height="189"/>
+	<SubTexture name="izquierda0002" x="10" y="379" width="178" height="189"/>
+	<SubTexture name="izquierda0003" x="10" y="379" width="178" height="189"/>
+	<SubTexture name="izquierda0004" x="189" y="379" width="178" height="189"/>
+	<SubTexture name="izquierda0005" x="189" y="379" width="178" height="189"/>
+</TextureAtlas>

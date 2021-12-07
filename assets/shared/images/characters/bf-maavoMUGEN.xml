@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bf-maavoMUGEN.png">
+	<!-- Created with Adobe Animate version 18.0.2.126 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="MaavoMUGENAbajo0000" x="10" y="10" width="291" height="200" frameX="-17" frameY="-62" frameWidth="308" frameHeight="263"/>
+	<SubTexture name="MaavoMUGENAbajo0001" x="10" y="10" width="291" height="200" frameX="-17" frameY="-62" frameWidth="308" frameHeight="263"/>
+	<SubTexture name="MaavoMUGENAbajo0002" x="311" y="10" width="287" height="203" frameX="-17" frameY="-59" frameWidth="308" frameHeight="263"/>
+	<SubTexture name="MaavoMUGENAbajo0003" x="311" y="10" width="287" height="203" frameX="-17" frameY="-59" frameWidth="308" frameHeight="263"/>
+	<SubTexture name="MaavoMUGENAbajo0004" x="608" y="10" width="292" height="215" frameX="-12" frameY="-47" frameWidth="308" frameHeight="263"/>
+	<SubTexture name="MaavoMUGENAbajo0005" x="910" y="10" width="227" height="225" frameX="0" frameY="-37" frameWidth="308" frameHeight="263"/>
+	<SubTexture name="MaavoMUGENAbajo0006" x="1147" y="10" width="159" height="263" frameX="-36" frameY="0" frameWidth="308" frameHeight="263"/>
+	<SubTexture name="MaavoMUGENArriba0000" x="1316" y="10" width="184" height="249" frameX="-30" frameY="-46" frameWidth="314" frameHeight="322"/>
+	<SubTexture name="MaavoMUGENArriba0001" x="1316" y="10" width="184" height="249" frameX="-30" frameY="-46" frameWidth="314" frameHeight="322"/>
+	<SubTexture name="MaavoMUGENArriba0002" x="1510" y="10" width="311" height="322" frameX="-2" frameY="0" frameWidth="314" frameHeight="322"/>
+	<SubTexture name="MaavoMUGENArriba0003" x="10" y="342" width="311" height="322" frameX="0" frameY="0" frameWidth="314" frameHeight="322"/>
+	<SubTexture name="MaavoMUGENArriba0004" x="331" y="342" width="311" height="322" frameX="-3" frameY="0" frameWidth="314" frameHeight="322"/>
+	<SubTexture name="MaavoMUGENArriba0005" x="652" y="342" width="311" height="322" frameX="-2" frameY="0" frameWidth="314" frameHeight="322"/>
+	<SubTexture name="MaavoMUGENArriba0006" x="652" y="342" width="311" height="322" frameX="-2" frameY="0" frameWidth="314" frameHeight="322"/>
+	<SubTexture name="MaavoMUGENArriba0007" x="973" y="342" width="196" height="265" frameX="-36" frameY="-35" frameWidth="314" frameHeight="322"/>
+	<SubTexture name="MaavoMUGENArriba0008" x="973" y="342" width="196" height="265" frameX="-36" frameY="-35" frameWidth="314" frameHeight="322"/>
+	<SubTexture name="MaavoMUGENArriba0009" x="973" y="342" width="196" height="265" frameX="-36" frameY="-35" frameWidth="314" frameHeight="322"/>
+	<SubTexture name="MaavoMUGENArriba0010" x="973" y="342" width="196" height="265" frameX="-36" frameY="-35" frameWidth="314" frameHeight="322"/>
+	<SubTexture name="MaavoMUGENDerecha0000" x="1179" y="342" width="232" height="218" frameX="0" frameY="-35" frameWidth="232" frameHeight="253"/>
+	<SubTexture name="MaavoMUGENDerecha0001" x="1421" y="342" width="182" height="225" frameX="0" frameY="-28" frameWidth="232" frameHeight="253"/>
+	<SubTexture name="MaavoMUGENDerecha0002" x="1613" y="342" width="182" height="227" frameX="0" frameY="-26" frameWidth="232" frameHeight="253"/>
+	<SubTexture name="MaavoMUGENDerecha0003" x="1613" y="342" width="182" height="227" frameX="0" frameY="-26" frameWidth="232" frameHeight="253"/>
+	<SubTexture name="MaavoMUGENDerecha0004" x="1805" y="342" width="182" height="228" frameX="0" frameY="-25" frameWidth="232" frameHeight="253"/>
+	<SubTexture name="MaavoMUGENDerecha0005" x="1805" y="342" width="182" height="228" frameX="0" frameY="-25" frameWidth="232" frameHeight="253"/>
+	<SubTexture name="MaavoMUGENDerecha0006" x="10" y="674" width="152" height="252" frameX="0" frameY="0" frameWidth="232" frameHeight="253"/>
+	<SubTexture name="MaavoMUGENDown0000" x="172" y="674" width="199" height="206"/>
+	<SubTexture name="MaavoMUGENDown0001" x="172" y="674" width="199" height="206"/>
+	<SubTexture name="MaavoMUGENDown0002" x="381" y="674" width="199" height="206"/>
+	<SubTexture name="MaavoMUGENDown0003" x="381" y="674" width="199" height="206"/>
+	<SubTexture name="MaavoMUGENDown0004" x="381" y="674" width="199" height="206"/>
+	<SubTexture name="MaavoMUGENDown0005" x="381" y="674" width="199" height="206"/>
+	<SubTexture name="MaavoMUGENDown0006" x="381" y="674" width="199" height="206"/>
+	<SubTexture name="MaavoMUGENDown0007" x="381" y="674" width="199" height="206"/>
+	<SubTexture name="MaavoMUGENDown0008" x="381" y="674" width="199" height="206"/>
+	<SubTexture name="MaavoMUGENDown0009" x="381" y="674" width="199" height="206"/>
+	<SubTexture name="MaavoMUGENDown0010" x="381" y="674" width="199" height="206"/>
+	<SubTexture name="MaavoMUGENDown0011" x="381" y="674" width="199" height="206"/>
+	<SubTexture name="MaavoMUGENDown0012" x="381" y="674" width="199" height="206"/>
+	<SubTexture name="MaavoMUGENDown0013" x="381" y="674" width="199" height="206"/>
+	<SubTexture name="MaavoMUGENDown0014" x="381" y="674" width="199" height="206"/>
+	<SubTexture name="MaavoMUGENHey0000" x="590" y="674" width="171" height="272" frameX="0" frameY="-3" frameWidth="212" frameHeight="276"/>
+	<SubTexture name="MaavoMUGENHey0001" x="771" y="674" width="206" height="276" frameX="-6" frameY="0" frameWidth="212" frameHeight="276"/>
+	<SubTexture name="MaavoMUGENHey0002" x="987" y="674" width="149" height="267" frameX="-4" frameY="-9" frameWidth="212" frameHeight="276"/>
+	<SubTexture name="MaavoMUGENHey0003" x="987" y="674" width="149" height="267" frameX="-4" frameY="-9" frameWidth="212" frameHeight="276"/>
+	<SubTexture name="MaavoMUGENHey0004" x="1146" y="674" width="150" height="267" frameX="-4" frameY="-9" frameWidth="212" frameHeight="276"/>
+	<SubTexture name="MaavoMUGENHey0005" x="1146" y="674" width="150" height="267" frameX="-4" frameY="-9" frameWidth="212" frameHeight="276"/>
+	<SubTexture name="MaavoMUGENHey0006" x="1306" y="674" width="149" height="268" frameX="-4" frameY="-8" frameWidth="212" frameHeight="276"/>
+	<SubTexture name="MaavoMUGENHey0007" x="1306" y="674" width="149" height="268" frameX="-4" frameY="-8" frameWidth="212" frameHeight="276"/>
+	<SubTexture name="MaavoMUGENHey0008" x="1306" y="674" width="149" height="268" frameX="-4" frameY="-8" frameWidth="212" frameHeight="276"/>
+	<SubTexture name="MaavoMUGENHey0009" x="1306" y="674" width="149" height="268" frameX="-4" frameY="-8" frameWidth="212" frameHeight="276"/>
+	<SubTexture name="MaavoMUGENHey0010" x="1306" y="674" width="149" height="268" frameX="-4" frameY="-8" frameWidth="212" frameHeight="276"/>
+	<SubTexture name="MaavoMUGENHey0011" x="1306" y="674" width="149" height="268" frameX="-4" frameY="-8" frameWidth="212" frameHeight="276"/>
+	<SubTexture name="MaavoMUGENHey0012" x="1306" y="674" width="149" height="268" frameX="-4" frameY="-8" frameWidth="212" frameHeight="276"/>
+	<SubTexture name="MaavoMUGENHey0013" x="1306" y="674" width="149" height="268" frameX="-4" frameY="-8" frameWidth="212" frameHeight="276"/>
+	<SubTexture name="MaavoMUGENHey0014" x="1306" y="674" width="149" height="268" frameX="-4" frameY="-8" frameWidth="212" frameHeight="276"/>
+	<SubTexture name="MaavoMUGENHighHit0000" x="1465" y="674" width="137" height="282" frameX="-10" frameY="0" frameWidth="147" frameHeight="284"/>
+	<SubTexture name="MaavoMUGENHighHit0001" x="1612" y="674" width="137" height="282" frameX="-3" frameY="0" frameWidth="147" frameHeight="284"/>
+	<SubTexture name="MaavoMUGENHighHit0002" x="1612" y="674" width="137" height="282" frameX="-3" frameY="0" frameWidth="147" frameHeight="284"/>
+	<SubTexture name="MaavoMUGENHighHit0003" x="1759" y="674" width="137" height="282" frameX="-2" frameY="-2" frameWidth="147" frameHeight="284"/>
+	<SubTexture name="MaavoMUGENHighHit0004" x="1759" y="674" width="137" height="282" frameX="-2" frameY="-2" frameWidth="147" frameHeight="284"/>
+	<SubTexture name="MaavoMUGENHighHit0005" x="10" y="966" width="137" height="282" frameX="0" frameY="-1" frameWidth="147" frameHeight="284"/>
+	<SubTexture name="MaavoMUGENHighHit0006" x="10" y="966" width="137" height="282" frameX="0" frameY="-1" frameWidth="147" frameHeight="284"/>
+	<SubTexture name="MaavoMUGENHighHit0007" x="10" y="966" width="137" height="282" frameX="0" frameY="-1" frameWidth="147" frameHeight="284"/>
+	<SubTexture name="MaavoMUGENHighHit0008" x="10" y="966" width="137" height="282" frameX="0" frameY="-1" frameWidth="147" frameHeight="284"/>
+	<SubTexture name="MaavoMUGENHighHit0009" x="10" y="966" width="137" height="282" frameX="0" frameY="-1" frameWidth="147" frameHeight="284"/>
+	<SubTexture name="MaavoMUGENHighHit0010" x="10" y="966" width="137" height="282" frameX="0" frameY="-1" frameWidth="147" frameHeight="284"/>
+	<SubTexture name="MaavoMUGENHighHit0011" x="10" y="966" width="137" height="282" frameX="0" frameY="-1" frameWidth="147" frameHeight="284"/>
+	<SubTexture name="MaavoMUGENHighHit0012" x="10" y="966" width="137" height="282" frameX="0" frameY="-1" frameWidth="147" frameHeight="284"/>
+	<SubTexture name="MaavoMUGENHighHit0013" x="10" y="966" width="137" height="282" frameX="0" frameY="-1" frameWidth="147" frameHeight="284"/>
+	<SubTexture name="MaavoMUGENIzquierda0000" x="157" y="966" width="176" height="225" frameX="-60" frameY="-17" frameWidth="334" frameHeight="248"/>
+	<SubTexture name="MaavoMUGENIzquierda0001" x="343" y="966" width="260" height="237" frameX="-74" frameY="-4" frameWidth="334" frameHeight="248"/>
+	<SubTexture name="MaavoMUGENIzquierda0002" x="343" y="966" width="260" height="237" frameX="-74" frameY="-4" frameWidth="334" frameHeight="248"/>
+	<SubTexture name="MaavoMUGENIzquierda0003" x="613" y="966" width="170" height="241" frameX="-127" frameY="0" frameWidth="334" frameHeight="248"/>
+	<SubTexture name="MaavoMUGENIzquierda0004" x="793" y="966" width="156" height="229" frameX="-31" frameY="-18" frameWidth="334" frameHeight="248"/>
+	<SubTexture name="MaavoMUGENIzquierda0005" x="959" y="966" width="175" height="205" frameX="-17" frameY="-43" frameWidth="334" frameHeight="248"/>
+	<SubTexture name="MaavoMUGENIzquierda0006" x="959" y="966" width="175" height="205" frameX="-17" frameY="-43" frameWidth="334" frameHeight="248"/>
+	<SubTexture name="MaavoMUGENIzquierda0007" x="1144" y="966" width="178" height="199" frameX="-17" frameY="-49" frameWidth="334" frameHeight="248"/>
+	<SubTexture name="MaavoMUGENIzquierda0008" x="1144" y="966" width="178" height="199" frameX="-17" frameY="-49" frameWidth="334" frameHeight="248"/>
+	<SubTexture name="MaavoMUGENIzquierda0009" x="1332" y="966" width="175" height="222" frameX="0" frameY="-26" frameWidth="334" frameHeight="248"/>
+	<SubTexture name="MaavoMUGENLeft0000" x="1517" y="966" width="205" height="209"/>
+	<SubTexture name="MaavoMUGENLeft0001" x="1517" y="966" width="205" height="209"/>
+	<SubTexture name="MaavoMUGENLeft0002" x="1732" y="966" width="205" height="209"/>
+	<SubTexture name="MaavoMUGENLeft0003" x="1732" y="966" width="205" height="209"/>
+	<SubTexture name="MaavoMUGENLeft0004" x="1732" y="966" width="205" height="209"/>
+	<SubTexture name="MaavoMUGENLeft0005" x="1732" y="966" width="205" height="209"/>
+	<SubTexture name="MaavoMUGENLeft0006" x="1732" y="966" width="205" height="209"/>
+	<SubTexture name="MaavoMUGENLeft0007" x="1732" y="966" width="205" height="209"/>
+	<SubTexture name="MaavoMUGENLeft0008" x="1732" y="966" width="205" height="209"/>
+	<SubTexture name="MaavoMUGENLeft0009" x="1732" y="966" width="205" height="209"/>
+	<SubTexture name="MaavoMUGENLeft0010" x="1732" y="966" width="205" height="209"/>
+	<SubTexture name="MaavoMUGENLeft0011" x="1732" y="966" width="205" height="209"/>
+	<SubTexture name="MaavoMUGENLeft0012" x="1732" y="966" width="205" height="209"/>
+	<SubTexture name="MaavoMUGENLeft0013" x="1732" y="966" width="205" height="209"/>
+	<SubTexture name="MaavoMUGENLeft0014" x="1732" y="966" width="205" height="209"/>
+	<SubTexture name="MaavoMUGENLowHit0000" x="10" y="1258" width="153" height="273" frameX="-26" frameY="0" frameWidth="179" frameHeight="275"/>
+	<SubTexture name="MaavoMUGENLowHit0001" x="173" y="1258" width="173" height="269" frameX="0" frameY="-5" frameWidth="179" frameHeight="275"/>
+	<SubTexture name="MaavoMUGENLowHit0002" x="173" y="1258" width="173" height="269" frameX="0" frameY="-5" frameWidth="179" frameHeight="275"/>
+	<SubTexture name="MaavoMUGENLowHit0003" x="356" y="1258" width="173" height="269" frameX="0" frameY="-6" frameWidth="179" frameHeight="275"/>
+	<SubTexture name="MaavoMUGENLowHit0004" x="356" y="1258" width="173" height="269" frameX="0" frameY="-6" frameWidth="179" frameHeight="275"/>
+	<SubTexture name="MaavoMUGENLowHit0005" x="539" y="1258" width="166" height="269" frameX="-6" frameY="-5" frameWidth="179" frameHeight="275"/>
+	<SubTexture name="MaavoMUGENLowHit0006" x="539" y="1258" width="166" height="269" frameX="-6" frameY="-5" frameWidth="179" frameHeight="275"/>
+	<SubTexture name="MaavoMUGENLowHit0007" x="539" y="1258" width="166" height="269" frameX="-6" frameY="-5" frameWidth="179" frameHeight="275"/>
+	<SubTexture name="MaavoMUGENLowHit0008" x="539" y="1258" width="166" height="269" frameX="-6" frameY="-5" frameWidth="179" frameHeight="275"/>
+	<SubTexture name="MaavoMUGENLowHit0009" x="539" y="1258" width="166" height="269" frameX="-6" frameY="-5" frameWidth="179" frameHeight="275"/>
+	<SubTexture name="MaavoMUGENLowHit0010" x="539" y="1258" width="166" height="269" frameX="-6" frameY="-5" frameWidth="179" frameHeight="275"/>
+	<SubTexture name="MaavoMUGENLowHit0011" x="539" y="1258" width="166" height="269" frameX="-6" frameY="-5" frameWidth="179" frameHeight="275"/>
+	<SubTexture name="MaavoMUGENLowHit0012" x="539" y="1258" width="166" height="269" frameX="-6" frameY="-5" frameWidth="179" frameHeight="275"/>
+	<SubTexture name="MaavoMUGENRight0000" x="715" y="1258" width="243" height="247"/>
+	<SubTexture name="MaavoMUGENRight0001" x="715" y="1258" width="243" height="247"/>
+	<SubTexture name="MaavoMUGENRight0002" x="968" y="1258" width="243" height="247"/>
+	<SubTexture name="MaavoMUGENRight0003" x="968" y="1258" width="243" height="247"/>
+	<SubTexture name="MaavoMUGENRight0004" x="968" y="1258" width="243" height="247"/>
+	<SubTexture name="MaavoMUGENRight0005" x="968" y="1258" width="243" height="247"/>
+	<SubTexture name="MaavoMUGENRight0006" x="968" y="1258" width="243" height="247"/>
+	<SubTexture name="MaavoMUGENRight0007" x="968" y="1258" width="243" height="247"/>
+	<SubTexture name="MaavoMUGENRight0008" x="968" y="1258" width="243" height="247"/>
+	<SubTexture name="MaavoMUGENRight0009" x="968" y="1258" width="243" height="247"/>
+	<SubTexture name="MaavoMUGENRight0010" x="968" y="1258" width="243" height="247"/>
+	<SubTexture name="MaavoMUGENRight0011" x="968" y="1258" width="243" height="247"/>
+	<SubTexture name="MaavoMUGENRight0012" x="968" y="1258" width="243" height="247"/>
+	<SubTexture name="MaavoMUGENRight0013" x="968" y="1258" width="243" height="247"/>
+	<SubTexture name="MaavoMUGENStand0000" x="1221" y="1258" width="159" height="260"/>
+	<SubTexture name="MaavoMUGENStand0001" x="1221" y="1258" width="159" height="260"/>
+	<SubTexture name="MaavoMUGENStand0002" x="1390" y="1258" width="159" height="260"/>
+	<SubTexture name="MaavoMUGENStand0003" x="1390" y="1258" width="159" height="260"/>
+	<SubTexture name="MaavoMUGENStand0004" x="1559" y="1258" width="159" height="260"/>
+	<SubTexture name="MaavoMUGENStand0005" x="1559" y="1258" width="159" height="260"/>
+	<SubTexture name="MaavoMUGENStand0006" x="1728" y="1258" width="159" height="260"/>
+	<SubTexture name="MaavoMUGENStand0007" x="1728" y="1258" width="159" height="260"/>
+	<SubTexture name="MaavoMUGENStand0008" x="10" y="1541" width="159" height="260"/>
+	<SubTexture name="MaavoMUGENStand0009" x="10" y="1541" width="159" height="260"/>
+	<SubTexture name="MaavoMUGENStand0010" x="10" y="1541" width="159" height="260"/>
+	<SubTexture name="MaavoMUGENStand0011" x="10" y="1541" width="159" height="260"/>
+	<SubTexture name="MaavoMUGENStand0012" x="10" y="1541" width="159" height="260"/>
+	<SubTexture name="MaavoMUGENStand0013" x="10" y="1541" width="159" height="260"/>
+	<SubTexture name="MaavoMUGENUp0000" x="179" y="1541" width="167" height="281"/>
+	<SubTexture name="MaavoMUGENUp0001" x="179" y="1541" width="167" height="281"/>
+	<SubTexture name="MaavoMUGENUp0002" x="356" y="1541" width="167" height="281"/>
+	<SubTexture name="MaavoMUGENUp0003" x="356" y="1541" width="167" height="281"/>
+	<SubTexture name="MaavoMUGENUp0004" x="356" y="1541" width="167" height="281"/>
+	<SubTexture name="MaavoMUGENUp0005" x="356" y="1541" width="167" height="281"/>
+	<SubTexture name="MaavoMUGENUp0006" x="356" y="1541" width="167" height="281"/>
+	<SubTexture name="MaavoMUGENUp0007" x="356" y="1541" width="167" height="281"/>
+	<SubTexture name="MaavoMUGENUp0008" x="356" y="1541" width="167" height="281"/>
+	<SubTexture name="MaavoMUGENUp0009" x="356" y="1541" width="167" height="281"/>
+	<SubTexture name="MaavoMUGENUp0010" x="356" y="1541" width="167" height="281"/>
+	<SubTexture name="MaavoMUGENUp0011" x="356" y="1541" width="167" height="281"/>
+	<SubTexture name="MaavoMUGENUp0012" x="356" y="1541" width="167" height="281"/>
+	<SubTexture name="MaavoMUGENUp0013" x="356" y="1541" width="167" height="281"/>
+	<SubTexture name="MaavoMUGENidle-alt0000" x="533" y="1541" width="158" height="265" frameX="-5" frameY="0" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0001" x="533" y="1541" width="158" height="265" frameX="-5" frameY="0" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0002" x="533" y="1541" width="158" height="265" frameX="-5" frameY="0" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0003" x="701" y="1541" width="159" height="263" frameX="-4" frameY="-2" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0004" x="701" y="1541" width="159" height="263" frameX="-4" frameY="-2" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0005" x="701" y="1541" width="159" height="263" frameX="-4" frameY="-2" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0006" x="870" y="1541" width="163" height="261" frameX="0" frameY="-4" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0007" x="870" y="1541" width="163" height="261" frameX="0" frameY="-4" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0008" x="870" y="1541" width="163" height="261" frameX="0" frameY="-4" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0009" x="1043" y="1541" width="160" height="264" frameX="-3" frameY="-1" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0010" x="1043" y="1541" width="160" height="264" frameX="-3" frameY="-1" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0011" x="1043" y="1541" width="160" height="264" frameX="-3" frameY="-1" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0012" x="1213" y="1541" width="156" height="263" frameX="-7" frameY="-2" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0013" x="1213" y="1541" width="156" height="263" frameX="-7" frameY="-2" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0014" x="1213" y="1541" width="156" height="263" frameX="-7" frameY="-2" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0015" x="1379" y="1541" width="154" height="262" frameX="-9" frameY="-3" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0016" x="1379" y="1541" width="154" height="262" frameX="-9" frameY="-3" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0017" x="1379" y="1541" width="154" height="262" frameX="-9" frameY="-3" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0018" x="1543" y="1541" width="155" height="264" frameX="-8" frameY="-1" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0019" x="1543" y="1541" width="155" height="264" frameX="-8" frameY="-1" frameWidth="163" frameHeight="265"/>
+	<SubTexture name="MaavoMUGENidle-alt0020" x="1543" y="1541" width="155" height="264" frameX="-8" frameY="-1" frameWidth="163" frameHeight="265"/>
+</TextureAtlas>
