@@ -17,7 +17,7 @@ function goodNoteHit(id, direction, noteType, isSustainNote)
     	characterPlayAnim('bf', 'stun', true);
     	setProperty('boyfriend.stunned', true);
     	stun = true;
-    	runTimer('endStun', 10);
+    	runTimer('endStun', 1);
     end
 end
 
