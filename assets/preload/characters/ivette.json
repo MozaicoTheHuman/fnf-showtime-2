@@ -1,69 +1,69 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-398,
 				-60
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "IvetteIdle"
+			"fps": 24,
+			"name": "IvetteIdle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-363,
 				-34
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "IvetteUp"
+			"fps": 24,
+			"name": "IvetteUp",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-361,
 				-59
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "IvetteDown"
+			"fps": 24,
+			"name": "IvetteDown",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-376,
 				-36
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "IvetteLeft"
+			"fps": 24,
+			"name": "IvetteLeft",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-387,
 				-37
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "IvetteRight"
+			"fps": 24,
+			"name": "IvetteRight",
+			"indices": []
 		},
 		{
 			"offsets": [
 				-391,
 				-51
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHT-alt",
 			"indices": [],
+			"fps": 26,
+			"anim": "singRIGHT-alt",
+			"loop": false,
 			"name": "IvetteDerecha"
 		},
 		{
@@ -71,10 +71,10 @@
 				-160,
 				-79
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singDOWN-alt",
 			"indices": [],
+			"fps": 27,
+			"anim": "singDOWN-alt",
+			"loop": false,
 			"name": "IvetteAbajo"
 		},
 		{
@@ -82,10 +82,10 @@
 				-360,
 				-55
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singLEFT-alt",
 			"indices": [],
+			"fps": 27,
+			"anim": "singLEFT-alt",
+			"loop": false,
 			"name": "IvetteIzquierda"
 		},
 		{
@@ -93,10 +93,10 @@
 				-287,
 				22
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singUP-alt",
 			"indices": [],
+			"fps": 27,
+			"anim": "singUP-alt",
+			"loop": false,
 			"name": "IvetteArriba"
 		}
 	],
