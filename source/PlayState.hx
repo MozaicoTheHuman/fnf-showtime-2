@@ -551,6 +551,20 @@ class PlayState extends MusicBeatState
 						maavoBopper.antialiasing = ClientPrefs.globalAntialiasing;
 						add(maavoBopper);
 
+			case 'show':
+						defaultCamZoom = 0.75;
+
+						var bg:FlxSprite = new FlxSprite(-350, -225).loadGraphic(Paths.image('showtime_bg', 'shared'));
+						bg.scrollFactor.set(0.25, 0.25);
+						bg.active = false;
+						bg.setGraphicSize(Std.int(bg.width * 0.8));
+						bg.updateHitbox();
+						add(bg);
+
+						var stage:FlxSprite = new FlxSprite(-800, -250).loadGraphic(Paths.image('showtime_stage', 'shared'));
+						stage.active = false;
+						add(stage);
+
 			case 'mall': //Week 5 - Cocoa, Eggnog
 				var bg:BGSprite = new BGSprite('christmas/bgWalls', -1000, -500, 0.2, 0.2);
 				bg.setGraphicSize(Std.int(bg.width * 0.8));

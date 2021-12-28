@@ -9,11 +9,6 @@
 		253
 	],
 	"startUnlocked": true,
-	"weekCharacters": [
-		"showtime",
-		"bf",
-		"gf"
-	],
 	"songs": [
 		[
 			"Lovely",
@@ -43,15 +38,20 @@
 			]
 		],
 		[
-			"Showtime",
-			"showtime",
+			"4",
+			"dad",
 			[
-				255,
-				100,
-				100
+				146,
+				113,
+				253
 			]
 		]
 	],
 	"hideStoryMode": false,
+	"weekCharacters": [
+		"showtime",
+		"bf",
+		"gf"
+	],
 	"weekName": "Showtime"
 }

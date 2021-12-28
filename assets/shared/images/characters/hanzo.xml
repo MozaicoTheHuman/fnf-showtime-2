@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="hanzo.png">
+	<!-- Created with Adobe Animate version 18.0.2.126 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="hanzo_abajo0000" x="10" y="10" width="291" height="663" frameX="-3" frameY="-13" frameWidth="294" frameHeight="676"/>
+	<SubTexture name="hanzo_abajo0001" x="10" y="10" width="291" height="663" frameX="-3" frameY="-13" frameWidth="294" frameHeight="676"/>
+	<SubTexture name="hanzo_abajo0002" x="311" y="10" width="287" height="673" frameX="0" frameY="-2" frameWidth="294" frameHeight="676"/>
+	<SubTexture name="hanzo_abajo0003" x="311" y="10" width="287" height="673" frameX="0" frameY="-2" frameWidth="294" frameHeight="676"/>
+	<SubTexture name="hanzo_abajo0004" x="608" y="10" width="287" height="675" frameX="0" frameY="0" frameWidth="294" frameHeight="676"/>
+	<SubTexture name="hanzo_abajo0005" x="608" y="10" width="287" height="675" frameX="0" frameY="0" frameWidth="294" frameHeight="676"/>
+	<SubTexture name="hanzo_arriba0000" x="905" y="10" width="259" height="774"/>
+	<SubTexture name="hanzo_arriba0001" x="905" y="10" width="259" height="774"/>
+	<SubTexture name="hanzo_arriba0002" x="1174" y="10" width="258" height="754" frameX="-1" frameY="-20" frameWidth="259" frameHeight="774"/>
+	<SubTexture name="hanzo_arriba0003" x="1174" y="10" width="258" height="754" frameX="-1" frameY="-20" frameWidth="259" frameHeight="774"/>
+	<SubTexture name="hanzo_arriba0004" x="1442" y="10" width="258" height="752" frameX="-1" frameY="-22" frameWidth="259" frameHeight="774"/>
+	<SubTexture name="hanzo_arriba0005" x="1442" y="10" width="258" height="752" frameX="-1" frameY="-22" frameWidth="259" frameHeight="774"/>
+	<SubTexture name="hanzo_arriba0006" x="1442" y="10" width="258" height="752" frameX="-1" frameY="-22" frameWidth="259" frameHeight="774"/>
+	<SubTexture name="hanzo_arriba0007" x="1442" y="10" width="258" height="752" frameX="-1" frameY="-22" frameWidth="259" frameHeight="774"/>
+	<SubTexture name="hanzo_derecha0000" x="1710" y="10" width="272" height="759" frameX="-2" frameY="0" frameWidth="274" frameHeight="759"/>
+	<SubTexture name="hanzo_derecha0001" x="1710" y="10" width="272" height="759" frameX="-2" frameY="0" frameWidth="274" frameHeight="759"/>
+	<SubTexture name="hanzo_derecha0002" x="10" y="794" width="258" height="756" frameX="-1" frameY="-3" frameWidth="274" frameHeight="759"/>
+	<SubTexture name="hanzo_derecha0003" x="10" y="794" width="258" height="756" frameX="-1" frameY="-3" frameWidth="274" frameHeight="759"/>
+	<SubTexture name="hanzo_derecha0004" x="278" y="794" width="259" height="756" frameX="0" frameY="-3" frameWidth="274" frameHeight="759"/>
+	<SubTexture name="hanzo_derecha0005" x="278" y="794" width="259" height="756" frameX="0" frameY="-3" frameWidth="274" frameHeight="759"/>
+	<SubTexture name="hanzo_idle0000" x="547" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0001" x="547" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0002" x="885" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0003" x="885" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0004" x="1223" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0005" x="1223" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0006" x="1561" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0007" x="1561" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0008" x="1561" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0009" x="1561" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0010" x="1561" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0011" x="1561" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0012" x="1561" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0013" x="1561" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0014" x="1561" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0015" x="1561" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0016" x="1561" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0017" x="1561" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0018" x="1561" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0019" x="1561" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0020" x="1561" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0021" x="1561" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0022" x="1561" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0023" x="1561" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_idle0024" x="1561" y="794" width="328" height="762"/>
+	<SubTexture name="hanzo_izquierda0000" x="10" y="1566" width="308" height="762" frameX="0" frameY="0" frameWidth="312" frameHeight="762"/>
+	<SubTexture name="hanzo_izquierda0001" x="10" y="1566" width="308" height="762" frameX="0" frameY="0" frameWidth="312" frameHeight="762"/>
+	<SubTexture name="hanzo_izquierda0002" x="328" y="1566" width="297" height="759" frameX="-11" frameY="-3" frameWidth="312" frameHeight="762"/>
+	<SubTexture name="hanzo_izquierda0003" x="328" y="1566" width="297" height="759" frameX="-11" frameY="-3" frameWidth="312" frameHeight="762"/>
+	<SubTexture name="hanzo_izquierda0004" x="635" y="1566" width="298" height="759" frameX="-14" frameY="-3" frameWidth="312" frameHeight="762"/>
+	<SubTexture name="hanzo_izquierda0005" x="635" y="1566" width="298" height="759" frameX="-14" frameY="-3" frameWidth="312" frameHeight="762"/>
+	<SubTexture name="hanzo_izquierda0006" x="635" y="1566" width="298" height="759" frameX="-14" frameY="-3" frameWidth="312" frameHeight="762"/>
+</TextureAtlas>
