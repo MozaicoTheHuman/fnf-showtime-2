@@ -45,6 +45,13 @@ class NoteSplash extends FlxSprite
 		var animNum:Int = FlxG.random.int(1, 2);
 		animation.play('note' + note + '-' + animNum, true);
 		animation.curAnim.frameRate = 24 + FlxG.random.int(-2, 2);
+
+		switch (texture)
+		{
+			case 'DRAWNOTE_splashes':
+				offset.x -= 40;
+				offset.y -= 20;
+		}
 	}
 
 	function loadAnims(skin:String) {

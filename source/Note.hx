@@ -107,6 +107,8 @@ class Note extends FlxSprite
 						missHealth = 0.3;
 					}
 					hitCausesMiss = true;
+				case 'stun note':
+					noteSplashTexture = 'DRAWNOTE_splashes';
 				case 'No Animation':
 					noAnimation = true;
 			}
