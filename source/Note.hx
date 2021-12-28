@@ -412,7 +412,7 @@ class Note extends FlxSprite
 
 		if (noteType == 'stun note')
 		{
-			//pointyAngle -= elapsed * 60 * 16;
+			pointyAngle -= elapsed * 20 * 16;
 		}
 
 		if (inEditor)
