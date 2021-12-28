@@ -13,6 +13,7 @@ using StringTools;
 class Note extends FlxSprite
 {
 	public var strumTime:Float = 0;
+	public var rStrumTime:Float = 0;
 
 	public var mustPress:Bool = false;
 	public var noteData:Int = 0;
@@ -67,6 +68,16 @@ class Note extends FlxSprite
 	public var noAnimation:Bool = false;
 	public var hitCausesMiss:Bool = false;
 
+	public var pointyAngle:Float = 0;
+
+	public var dataColor:Array<String> = ['purple', 'blue', 'green', 'red'];
+	public var qColor:Array<Int> = [RED_NOTE, 2, BLUE_NOTE, 2, PURP_NOTE, 2, BLUE_NOTE, 2];
+	public var defAngles:Array<Int> = [180, 90, 270, 0];
+	public var arrowAngles:Array<Int> = [180, 90, 270, 0];
+	public var noteColor:Int = 0;
+
+	var curSection:Float;
+
 	private function set_texture(value:String):String {
 		if(texture != value) {
 			reloadNote('', value);
@@ -100,6 +111,7 @@ class Note extends FlxSprite
 					noAnimation = true;
 			}
 			noteType = value;
+			if (noteType == 'stun note') pointyAngle = 0;
 		}
 		noteSplashHue = colorSwap.hue;
 		noteSplashSat = colorSwap.saturation;
@@ -107,7 +119,30 @@ class Note extends FlxSprite
 		return value;
 	}
 
-	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?inEditor:Bool = false)
+	var bpmLeak:Float = PlayState.SONG.bpm;
+	function sectionStartTime(add:Int = 0):Float
+	{
+		var _song = PlayState.SONG;
+		var daBPM:Float = _song.bpm;
+		var daPos:Float = 0;
+		var sec = Std.int(curSection);
+		for (i in 0...sec + add)
+		{
+			if (_song.notes[i].changeBPM)
+			{
+				daBPM = _song.notes[i].bpm;
+				bpmLeak = daBPM;
+			}
+			daPos += 4 * (1000 * 60 / daBPM);
+		}
+		if (_song.notes[sec].changeBPM)
+		{
+			bpmLeak = _song.notes[sec].bpm;
+		}
+		return daPos;
+	}
+
+	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?inEditor:Bool = false, ?sec:Float = 0)
 	{
 		super();
 
@@ -121,7 +156,8 @@ class Note extends FlxSprite
 		x += (ClientPrefs.middleScroll ? PlayState.STRUM_X_MIDDLESCROLL : PlayState.STRUM_X) + 50;
 		// MAKE SURE ITS DEFINITELY OFF SCREEN?
 		y -= 2000;
-		this.strumTime = strumTime;
+		rStrumTime = strumTime;
+		this.strumTime = rStrumTime;
 		if(!inEditor) this.strumTime += ClientPrefs.noteOffset;
 
 		this.noteData = noteData;
@@ -150,6 +186,8 @@ class Note extends FlxSprite
 		}
 
 		// trace(prevNote);
+		noteColor = noteData;
+		quantCalc();
 
 		if (isSustainNote && prevNote != null)
 		{
@@ -160,7 +198,7 @@ class Note extends FlxSprite
 			offsetX += width / 2;
 			copyAngle = false;
 
-			switch (noteData)
+			switch (noteColor)
 			{
 				case 0:
 					animation.play('purpleholdend');
@@ -181,7 +219,7 @@ class Note extends FlxSprite
 
 			if (prevNote.isSustainNote)
 			{
-				switch (prevNote.noteData)
+				switch (prevNote.noteColor)
 				{
 					case 0:
 						prevNote.animation.play('purplehold');
@@ -209,6 +247,38 @@ class Note extends FlxSprite
 			earlyHitMult = 1;
 		}
 		x += offsetX;
+	}
+
+	function quantCalc(?force = false)
+	{
+		if (ClientPrefs.noteQuant)
+		{
+			if (!isSustainNote)
+			{
+				var col:Int = 0;
+
+				var secStart = sectionStartTime();
+				var sCrochet = ((60 / bpmLeak) * 1000) / 4;
+				var beat = Math.round(FlxMath.remapToRange(rStrumTime - secStart, 0, 16 * sCrochet, 0, 32));
+				//var beatRow = Math.round(beat * 48);
+
+				col = qColor[beat % 8];
+
+				animation.play(dataColor[col] + 'Scroll');
+				pointyAngle -= arrowAngles[col];
+				pointyAngle += defAngles[noteData];
+
+				noteColor = col;
+			}
+			else
+			{
+				noteColor = prevNote.noteColor;
+				//animation.play(dataColor[0] + 'Scroll');
+				//colorSwap.saturation = 255;
+			}
+			//originAngle = localAngle;
+			//originColor = col;
+		}
 	}
 
 	function reloadNote(?prefix:String = '', ?texture:String = '', ?suffix:String = '') {
@@ -338,6 +408,16 @@ class Note extends FlxSprite
 		{
 			if (alpha > 0.3)
 				alpha = 0.3;
+		}
+
+		if (noteType == 'stun note')
+		{
+			//pointyAngle -= elapsed * 60 * 16;
+		}
+
+		if (inEditor)
+		{
+			angle = pointyAngle;
 		}
 	}
 }

@@ -135,6 +135,12 @@ class StrumNote extends FlxSprite
 				updateConfirmOffset();
 			}
 		}
+
+		updateHitbox();
+
+		offset.set(frameWidth / 2, frameHeight / 2);
+		offset.x -= Note.swagWidth / 2;
+		offset.y -= Note.swagWidth / 2;
 	}
 
 	function updateConfirmOffset() { //TO DO: Find a calc to make the offset work fine on other angles

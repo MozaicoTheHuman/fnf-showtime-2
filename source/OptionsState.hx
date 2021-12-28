@@ -682,8 +682,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'GAMEPLAY',
 		'Downscroll',
 		'Middlescroll',
-		'Ghost Tapping',
 		'Note Delay',
+		'Note Quantization',
 		'Note Splashes',
 		'Hide HUD',
 		'Hide Song Length',
@@ -843,6 +843,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 						}
 						OptionsState.menuBG.antialiasing = ClientPrefs.globalAntialiasing;
 
+					case 'Note Quantization':
+						ClientPrefs.noteQuant = !ClientPrefs.noteQuant;
+
 					case 'Note Splashes':
 						ClientPrefs.noteSplashes = !ClientPrefs.noteSplashes;
 
@@ -959,6 +962,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 				daText = "If unchecked, your mom won't be angry at you.";
 			case 'Violence':
 				daText = "If unchecked, you won't get disgusted as frequently.";
+			case 'Note Quantization':
+				daText = "If checked, the note colors will depend on\ntheir beat quantization instead of their direction.";
 			case 'Note Splashes':
 				daText = "If unchecked, hitting \"Sick!\" notes won't show particles.";
 			case 'Flashing Lights':
@@ -1019,6 +1024,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 						daValue = ClientPrefs.lowQuality;
 					case 'Anti-Aliasing':
 						daValue = ClientPrefs.globalAntialiasing;
+					case 'Note Quantization':
+						daValue = ClientPrefs.noteQuant;
 					case 'Note Splashes':
 						daValue = ClientPrefs.noteSplashes;
 					case 'Flashing Lights':

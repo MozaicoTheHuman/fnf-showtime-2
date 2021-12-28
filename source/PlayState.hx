@@ -1650,6 +1650,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 
+		var secNum = 0;
 		for (section in noteData)
 		{
 			for (songNotes in section.sectionNotes)
@@ -1671,7 +1672,7 @@ class PlayState extends MusicBeatState
 					else
 						oldNote = null;
 
-					var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote);
+					var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote, false, false, secNum);
 					swagNote.mustPress = gottaHitNote;
 					swagNote.sustainLength = songNotes[2];
 					swagNote.noteType = songNotes[3];
@@ -1716,6 +1717,7 @@ class PlayState extends MusicBeatState
 					eventPushed(songNotes);
 				}
 			}
+			secNum ++;
 			daBeats += 1;
 		}
 
@@ -2314,7 +2316,7 @@ class PlayState extends MusicBeatState
 					daNote.x = strumX;
 				}
 				if(daNote.copyAngle) {
-					daNote.angle = strumAngle;
+					daNote.angle = strumAngle + daNote.pointyAngle;
 				}
 				if(daNote.copyAlpha) {
 					daNote.alpha = strumAlpha;
@@ -3453,10 +3455,12 @@ class PlayState extends MusicBeatState
 	}
 
 	function ghostMiss(statement:Bool = false, direction:Int = 0, ?ghostMiss:Bool = false) {
+		/* quien chucha querria jugar sin ghost tapping hoy en día de todas formas 🙄🙄🙄🥱🥱🥱🥱
 		if (statement) {
 			noteMissPress(direction, ghostMiss);
 			callOnLuas('noteMissPress', [direction]);
 		}
+		*/
 	}
 
 	function noteMiss(daNote:Note):Void { //You didn't hit the key and let it go offscreen, also used by Hurt Notes
