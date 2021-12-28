@@ -1,4 +1,3 @@
-4:showtime:0xFF9271FD
 Pondering:hanzo:0xFF9271FD
 Tokyo:maavisa:0xFF9271FD
 MUGEN:clown:0xFF9271FD
