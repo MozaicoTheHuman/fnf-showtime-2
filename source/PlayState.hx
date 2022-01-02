@@ -487,16 +487,31 @@ class PlayState extends MusicBeatState
 
 			case 'maritzashow':
 
-						var bg:FlxSprite = new FlxSprite(-350, -225).loadGraphic(Paths.image('showtime_bg', 'shared'));
-						bg.scrollFactor.set(0.25, 0.25);
+						var bg:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_SKY', 'shared'));
+						bg.scrollFactor.set(0.35, 0.35);
 						bg.active = false;
-						bg.antialiasing = ClientPrefs.globalAntialiasing;
-						bg.setGraphicSize(Std.int(bg.width * 0.8));
 						bg.updateHitbox();
 						add(bg);
 
-						var stage:FlxSprite = new FlxSprite(-800, -250).loadGraphic(Paths.image('showtime_stage', 'shared'));
-						stage.antialiasing = ClientPrefs.globalAntialiasing;
+						var bg:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_EDIFICIOS', 'shared'));
+						bg.scrollFactor.set(0.42, 0.42);
+						bg.active = false;
+						bg.updateHitbox();
+						add(bg);
+
+						var bg:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_EDIFICIOS1', 'shared'));
+						bg.scrollFactor.set(0.56, 0.56);
+						bg.active = false;
+						bg.updateHitbox();
+						add(bg);
+
+						var bg:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_EDIFICIOS2', 'shared'));
+						bg.scrollFactor.set(0.65, 0.65);
+						bg.active = false;
+						bg.updateHitbox();
+						add(bg);
+
+						var stage:FlxSprite = new FlxSprite(-1300, -750).loadGraphic(Paths.image('NEW_BG_XD', 'shared'));
 						stage.active = false;
 						add(stage);
 
@@ -507,21 +522,38 @@ class PlayState extends MusicBeatState
 						ivette.antialiasing = ClientPrefs.globalAntialiasing;
 						add(ivette);
 
-						maavoBopper = new BGSprite('MaavoWait', -300, 60, 1, 1, ['MaavoWait']);
+						maavoBopper = new BGSprite('MaavoWait', -159, 60, 1, 1, ['MaavoWait']);
 						maavoBopper.updateHitbox();
 						maavoBopper.antialiasing = ClientPrefs.globalAntialiasing;
 						add(maavoBopper);
 
 			case 'maavoshow':
 
-						var bg:FlxSprite = new FlxSprite(-350, -225).loadGraphic(Paths.image('showtime_bg', 'shared'));
-						bg.scrollFactor.set(0.25, 0.25);
+						var bg:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_SKY', 'shared'));
+						bg.scrollFactor.set(0.35, 0.35);
 						bg.active = false;
-						bg.setGraphicSize(Std.int(bg.width * 0.8));
 						bg.updateHitbox();
 						add(bg);
 
-						var stage:FlxSprite = new FlxSprite(-800, -250).loadGraphic(Paths.image('showtime_stage', 'shared'));
+						var bg:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_EDIFICIOS', 'shared'));
+						bg.scrollFactor.set(0.42, 0.42);
+						bg.active = false;
+						bg.updateHitbox();
+						add(bg);
+
+						var bg:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_EDIFICIOS1', 'shared'));
+						bg.scrollFactor.set(0.56, 0.56);
+						bg.active = false;
+						bg.updateHitbox();
+						add(bg);
+
+						var bg:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_EDIFICIOS2', 'shared'));
+						bg.scrollFactor.set(0.65, 0.65);
+						bg.active = false;
+						bg.updateHitbox();
+						add(bg);
+
+						var stage:FlxSprite = new FlxSprite(-1300, -750).loadGraphic(Paths.image('NEW_BG_XD', 'shared'));
 						stage.active = false;
 						add(stage);
 
@@ -533,20 +565,36 @@ class PlayState extends MusicBeatState
 						add(ivette);
 
 			case 'ivetteshow':
-						defaultCamZoom = 0.75;
 
-						var bg:FlxSprite = new FlxSprite(-350, -225).loadGraphic(Paths.image('showtime_bg', 'shared'));
-						bg.scrollFactor.set(0.25, 0.25);
+						var bg:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_SKY', 'shared'));
+						bg.scrollFactor.set(0.35, 0.35);
 						bg.active = false;
-						bg.setGraphicSize(Std.int(bg.width * 0.8));
 						bg.updateHitbox();
 						add(bg);
 
-						var stage:FlxSprite = new FlxSprite(-800, -250).loadGraphic(Paths.image('showtime_stage', 'shared'));
+						var bg:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_EDIFICIOS', 'shared'));
+						bg.scrollFactor.set(0.42, 0.42);
+						bg.active = false;
+						bg.updateHitbox();
+						add(bg);
+
+						var bg:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_EDIFICIOS1', 'shared'));
+						bg.scrollFactor.set(0.56, 0.56);
+						bg.active = false;
+						bg.updateHitbox();
+						add(bg);
+
+						var bg:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_EDIFICIOS2', 'shared'));
+						bg.scrollFactor.set(0.65, 0.65);
+						bg.active = false;
+						bg.updateHitbox();
+						add(bg);
+
+						var stage:FlxSprite = new FlxSprite(-1300, -750).loadGraphic(Paths.image('NEW_BG_XD', 'shared'));
 						stage.active = false;
 						add(stage);
 
-						maavoBopper = new BGSprite('MaavoWait', -170, 60, 1, 1, ['MaavoWait']);
+						maavoBopper = new BGSprite('MaavoWait', 5, 60, 1, 1, ['MaavoWait']);
 						maavoBopper.updateHitbox();
 						maavoBopper.antialiasing = ClientPrefs.globalAntialiasing;
 						add(maavoBopper);
@@ -554,14 +602,31 @@ class PlayState extends MusicBeatState
 			case 'show':
 						defaultCamZoom = 0.75;
 
-						var bg:FlxSprite = new FlxSprite(-350, -225).loadGraphic(Paths.image('showtime_bg', 'shared'));
-						bg.scrollFactor.set(0.25, 0.25);
+						var bg:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_SKY', 'shared'));
+						bg.scrollFactor.set(0.35, 0.35);
 						bg.active = false;
-						bg.setGraphicSize(Std.int(bg.width * 0.8));
 						bg.updateHitbox();
 						add(bg);
 
-						var stage:FlxSprite = new FlxSprite(-800, -250).loadGraphic(Paths.image('showtime_stage', 'shared'));
+						var bg:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_EDIFICIOS', 'shared'));
+						bg.scrollFactor.set(0.42, 0.42);
+						bg.active = false;
+						bg.updateHitbox();
+						add(bg);
+
+						var bg:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_EDIFICIOS1', 'shared'));
+						bg.scrollFactor.set(0.56, 0.56);
+						bg.active = false;
+						bg.updateHitbox();
+						add(bg);
+
+						var bg:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_EDIFICIOS2', 'shared'));
+						bg.scrollFactor.set(0.65, 0.65);
+						bg.active = false;
+						bg.updateHitbox();
+						add(bg);
+
+						var stage:FlxSprite = new FlxSprite(-1300, -750).loadGraphic(Paths.image('NEW_BG_XD', 'shared'));
 						stage.active = false;
 						add(stage);
 
@@ -737,7 +802,7 @@ class PlayState extends MusicBeatState
 
 					for (i in 0...5)
 					{
-						var dancer:BackgroundDancer = new BackgroundDancer(160, 310);
+						var dancer:BackgroundDancer = new BackgroundDancer(-260, 310);
 						dancer.antialiasing = ClientPrefs.globalAntialiasing;
 						grpLimoDancers.add(dancer);
 					}
@@ -751,7 +816,7 @@ class PlayState extends MusicBeatState
 
 					for (i in 0...5)
 					{
-						var dancer:BackgroundDancer = new BackgroundDancer(160, 310);
+						var dancer:BackgroundDancer = new BackgroundDancer(428, 310);
 						dancer.antialiasing = ClientPrefs.globalAntialiasing;
 						grpLimoDancers.add(dancer);
 					}
