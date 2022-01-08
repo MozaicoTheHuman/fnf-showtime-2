@@ -137,10 +137,10 @@
 				77,
 				150
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "stun",
-			"loop": false,
+			"indices": [],
 			"name": "BF SHOWTIME STUN"
 		},
 		{
@@ -148,10 +148,10 @@
 				116,
 				150
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "idle",
-			"loop": false,
+			"indices": [],
 			"name": "BF SHOWTIME IDLE"
 		}
 	],
@@ -169,8 +169,8 @@
 		209
 	],
 	"camera_position": [
-		420,
-		-220
+		-100,
+		-160
 	],
 	"sing_duration": 4,
 	"scale": 1

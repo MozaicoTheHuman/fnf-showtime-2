@@ -2193,6 +2193,7 @@ class PlayState extends MusicBeatState
 					MusicBeatState.switchState(new GitarooPause());
 				}
 				else {
+				FlxG.sound.play(Paths.sound('pauseMenu'), 0.4);
 					if(FlxG.sound.music != null) {
 						FlxG.sound.music.pause();
 						vocals.pause();

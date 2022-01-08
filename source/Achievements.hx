@@ -52,7 +52,7 @@ class Achievements {
 	public static function unlockAchievement(id:Int):Void {
 		FlxG.log.add('Completed achievement "' + achievementsStuff[id][0] +'"');
 		achievementsUnlocked[id][1] = true;
-		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+		FlxG.sound.play(Paths.sound('awardMenu'), 0.7);
 	}
 
 	public static function loadAchievements():Void {

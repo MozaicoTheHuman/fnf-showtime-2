@@ -60,10 +60,10 @@
 				-391,
 				-51
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 26,
 			"anim": "singRIGHT-alt",
-			"loop": false,
+			"indices": [],
 			"name": "IvetteDerecha"
 		},
 		{
@@ -71,10 +71,10 @@
 				-160,
 				-79
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 27,
 			"anim": "singDOWN-alt",
-			"loop": false,
+			"indices": [],
 			"name": "IvetteAbajo"
 		},
 		{
@@ -82,10 +82,10 @@
 				-360,
 				-55
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 27,
 			"anim": "singLEFT-alt",
-			"loop": false,
+			"indices": [],
 			"name": "IvetteIzquierda"
 		},
 		{
@@ -93,10 +93,10 @@
 				-287,
 				22
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 27,
 			"anim": "singUP-alt",
-			"loop": false,
+			"indices": [],
 			"name": "IvetteArriba"
 		}
 	],
@@ -114,7 +114,7 @@
 		0
 	],
 	"camera_position": [
-		490,
+		-30,
 		0
 	],
 	"sing_duration": 4,
