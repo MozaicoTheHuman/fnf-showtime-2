@@ -1,213 +1,169 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-60,
 				49
 			],
-			"anim": "singUPmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "MaavoMUGENHighHit",
-			"indices": []
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "MaavoMUGENHighHit"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-60,
 				50
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singRIGHTmiss",
-			"fps": 24,
-			"name": "MaavoMUGENHighHit",
-			"indices": []
+			"indices": [],
+			"name": "MaavoMUGENHighHit"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				17
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFTmiss",
-			"fps": 24,
-			"name": "MaavoMUGENLowHit",
-			"indices": []
+			"indices": [],
+			"name": "MaavoMUGENLowHit"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				17
 			],
-			"anim": "singDOWNmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "MaavoMUGENLowHit",
-			"indices": []
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "MaavoMUGENLowHit"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				90,
 				-133
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "MaavoMUGENDown",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "MaavoMUGENDown"
 		},
 		{
 			"loop": false,
-			"offsets": [
-				0,
-				26
-			],
-			"anim": "singUP",
-			"fps": 24,
-			"name": "MaavoMUGENUp",
-			"indices": []
-		},
-		{
 			"offsets": [
 				210,
 				-30
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "MaavoMUGENRight"
+			"fps": 24,
+			"name": "MaavoMUGENRight",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				10,
 				-123
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "MaavoMUGENLeft"
+			"fps": 24,
+			"name": "MaavoMUGENLeft",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				7,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "MaavoMUGENStand",
-			"indices": []
+			"indices": [],
+			"name": "MaavoMUGENStand"
 		},
 		{
-			"loop": false,
-			"offsets": [
-				390,
-				-34
-			],
-			"anim": "singLEFT-alt",
-			"fps": 24,
-			"name": "MaavoMUGENIzquierda",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				170,
-				-21
-			],
-			"anim": "singRIGHT-alt",
-			"fps": 24,
-			"name": "MaavoMUGENDerecha",
-			"indices": []
-		},
-		{
-			"loop": false,
 			"offsets": [
 				136,
 				39
 			],
-			"anim": "hey",
-			"fps": 24,
-			"name": "MaavoMUGENHey",
-			"indices": []
-		},
-		{
-			"offsets": [
-				270,
-				5
-			],
 			"loop": false,
 			"fps": 24,
-			"anim": "singDOWN-alt",
+			"anim": "hey",
 			"indices": [],
-			"name": "MaavoMUGENAbajo"
+			"name": "MaavoMUGENHey"
 		},
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				10
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle-alt",
+			"fps": 24,
+			"name": "MaavoMUGENidle-alt",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				26
+			],
 			"indices": [],
-			"name": "MaavoMUGENidle-alt"
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "MaavoMUGENUp"
 		},
 		{
 			"offsets": [
 				294,
 				89
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singUP-alt",
 			"indices": [],
+			"fps": 36,
+			"anim": "singUP-alt",
+			"loop": false,
 			"name": "MaavoMUGENArriba"
 		},
 		{
-			"loop": true,
 			"offsets": [
-				0,
-				0
+				270,
+				5
 			],
-			"anim": "singRIGHT-loop",
-			"fps": 24,
-			"name": "MaavoMUGENidle-alt",
-			"indices": []
+			"indices": [],
+			"fps": 29,
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "MaavoMUGENAbajo"
 		},
 		{
-			"loop": true,
 			"offsets": [
-				0,
-				0
+				390,
+				-34
 			],
-			"anim": "singLEFT-loop",
-			"fps": 24,
-			"name": "MaavoMUGENidle-alt",
-			"indices": []
+			"indices": [],
+			"fps": 32,
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"name": "MaavoMUGENIzquierda"
 		},
 		{
-			"loop": true,
 			"offsets": [
-				0,
-				0
+				170,
+				-21
 			],
-			"anim": "singUP-loop",
-			"fps": 24,
-			"name": "MaavoMUGENidle-alt",
-			"indices": []
-		},
-		{
-			"loop": true,
-			"offsets": [
-				0,
-				0
-			],
-			"anim": "singDOWN-loop",
-			"fps": 24,
-			"name": "MaavoMUGENidle-alt",
-			"indices": []
+			"indices": [],
+			"fps": 30,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "MaavoMUGENDerecha"
 		}
 	],
 	"no_antialiasing": true,
