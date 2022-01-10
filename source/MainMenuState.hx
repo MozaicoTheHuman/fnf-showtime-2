@@ -31,7 +31,7 @@ class MainMenuState extends MusicBeatState
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
 	
-	var optionShit:Array<String> = ['story_mode', 'freeplay', #if ACHIEVEMENTS_ALLOWED 'awards', #end 'credits', #if !switch 'donate', #end 'options'];
+	var optionShit:Array<String> = ['story_mode','freeplay','options','awards','credits'];
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
@@ -58,13 +58,57 @@ class MainMenuState extends MusicBeatState
 		persistentUpdate = persistentDraw = true;
 
 		var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
-		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('menuBG'));
-		bg.scrollFactor.set(0, yScroll);
-		bg.setGraphicSize(Std.int(bg.width * 1.175));
-		bg.updateHitbox();
+
+		var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/bg'));
 		bg.screenCenter();
-		bg.antialiasing = ClientPrefs.globalAntialiasing;
+		bg.scrollFactor.set(0, 0);
+		bg.scale.x = 0.7;
+		bg.scale.y = 0.7;
 		add(bg);
+
+		var overlay1:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/overlay1'));
+		overlay1.screenCenter();
+		overlay1.scrollFactor.set(0, 0);
+		overlay1.scale.x = 0.7;
+		overlay1.scale.y = 0.7;
+		overlay1.antialiasing = ClientPrefs.globalAntialiasing;
+		add(overlay1);
+
+		var overlay2:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/overlay2'));
+		overlay2.screenCenter();
+		overlay2.scrollFactor.set(0, 0);
+		overlay2.scale.x = 0.7;
+		overlay2.scale.y = 0.7;
+		overlay2.antialiasing = ClientPrefs.globalAntialiasing;
+		add(overlay2);
+
+		var charshadow:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/charshadow'));
+		charshadow.screenCenter();
+		charshadow.scrollFactor.set(0, 0);
+		charshadow.x += 75;
+		charshadow.y += 35;
+		charshadow.scale.x = 0.6;
+		charshadow.scale.y = 0.6;
+		charshadow.antialiasing = ClientPrefs.globalAntialiasing;
+		add(charshadow);
+
+		var char:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/char'));
+		char.screenCenter();
+		char.scrollFactor.set(0, 0);
+		char.x += 75;
+		char.y += 35;
+		char.scale.x = 0.6;
+		char.scale.y = 0.6;
+		char.antialiasing = ClientPrefs.globalAntialiasing;
+		add(char);
+
+		var menu:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/menu'));
+		menu.screenCenter();
+		menu.scrollFactor.set(0, 0);
+		menu.scale.x = 0.7;
+		menu.scale.y = 0.7;
+		menu.antialiasing = ClientPrefs.globalAntialiasing;
+		add(menu);
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 		camFollowPos = new FlxObject(0, 0, 1, 1);
@@ -87,14 +131,16 @@ class MainMenuState extends MusicBeatState
 
 		for (i in 0...optionShit.length)
 		{
-			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(0, (i * 140)  + offset);
+
+			var offset:Float = 50 - (Math.max(optionShit.length, 4) - 4) * 80;
+			var offset2:Float = 140 - (Math.max(optionShit.length, 4) - 4) * 80;
+			var menuItem:FlxSprite = new FlxSprite( 250 + (i * - 50)  - offset, 300 + (i * 80)  + offset);
+			menuItem.scale.set(0.5,0.5);
 			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
-			menuItem.screenCenter(X);
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if(optionShit.length < 6) scr = 0;
@@ -235,10 +281,6 @@ class MainMenuState extends MusicBeatState
 
 		super.update(elapsed);
 
-		menuItems.forEach(function(spr:FlxSprite)
-		{
-			spr.screenCenter(X);
-		});
 	}
 
 	function changeItem(huh:Int = 0)
@@ -259,9 +301,7 @@ class MainMenuState extends MusicBeatState
 			if (spr.ID == curSelected)
 			{
 				spr.animation.play('selected');
-				camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y);
-				spr.offset.x = 0.15 * (spr.frameWidth / 2 + 180);
-				spr.offset.y = 0.15 * spr.frameHeight;
+				camFollow.setPosition(0,0);
 				FlxG.log.add(spr.frameWidth);
 			}
 		});
