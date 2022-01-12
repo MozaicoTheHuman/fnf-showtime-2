@@ -26,6 +26,7 @@ class ClientPrefs {
 	public static var ghostTapping:Bool = true;
 	public static var hideTime:Bool = false;
 	public static var noteQuant:Bool = false;
+	public static var havePlayedDerker:Bool = false;
 
 	public static var defaultKeys:Array<FlxKey> = [
 		A, LEFT,			//Note Left
@@ -82,6 +83,7 @@ class ClientPrefs {
 		FlxG.save.data.ghostTapping = ghostTapping;
 		FlxG.save.data.hideTime = hideTime;
 		FlxG.save.data.noteQuant = noteQuant;
+		FlxG.save.data.havePlayedDerker = havePlayedDerker;
 
 		var achieves:Array<String> = [];
 		for (i in 0...Achievements.achievementsUnlocked.length) {
@@ -165,6 +167,9 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.noteQuant != null) {
 			noteQuant = FlxG.save.data.noteQuant;
+		}
+		if(FlxG.save.data.havePlayedDerker != null) {
+			havePlayedDerker = FlxG.save.data.havePlayedDerker;
 		}
 
 		var save:FlxSave = new FlxSave();

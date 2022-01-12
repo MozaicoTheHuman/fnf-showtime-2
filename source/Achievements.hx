@@ -26,7 +26,8 @@ class Achievements {
 		["Hyperactive",					"Finish a Song without going Idle.",					false],
 		["Just the Two of Us",			"Finish a Song pressing only two keys.",				false],
 		["Toaster Gamer",				"Have you tried to run the game on a toaster?",			false],
-		["Debugger",					"Beat the \"Test\" Stage from the Chart Editor.",		 true]
+		["Debugger",					"Beat the \"Test\" Stage from the Chart Editor.",		 true],
+		["Good Taste for Music",		"Play a song on Friday Night Funkin - Derker Bluer Edition once",			true]
 	];
 
 	public static var achievementsUnlocked:Array<Dynamic> = [ //Save string and Achievement tag + is it unlocked?
@@ -46,6 +47,7 @@ class Achievements {
 		['two_keys', false],			//13
 		['toastie', false],				//14
 		['debugger', false], 			//15
+		['good_taste', false], 			//16
 	];
 
 	public static var henchmenDeath:Int = 0;

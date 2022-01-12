@@ -20,6 +20,10 @@ import lime.app.Application;
 import Achievements;
 import editors.MasterEditorMenu;
 
+//daaaa
+import sys.FileSystem;
+import sys.io.File;
+
 using StringTools;
 
 class MainMenuState extends MusicBeatState
@@ -43,6 +47,7 @@ class MainMenuState extends MusicBeatState
 	var charshadow:FlxSprite;
 	var char:FlxSprite;
 	var menu:FlxSprite;
+	var playedDerker:Bool;
 
 	override function create()
 	{
@@ -50,7 +55,7 @@ class MainMenuState extends MusicBeatState
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
 		#end
-
+		checkDerker();
 		camGame = new FlxCamera();
 		camAchievement = new FlxCamera();
 		camAchievement.bgColor.alpha = 0;
@@ -205,7 +210,7 @@ class MainMenuState extends MusicBeatState
 		var leDate = Date.now();
 		if (!Achievements.achievementsUnlocked[achievementID][1] && leDate.getDay() == 5 && leDate.getHours() >= 18) { //It's a friday night. WEEEEEEEEEEEEEEEEEE
 			Achievements.achievementsUnlocked[achievementID][1] = true;
-			giveAchievement();
+			giveAchievement(0);
 			ClientPrefs.saveSettings();
 		}
 		#end
@@ -216,10 +221,15 @@ class MainMenuState extends MusicBeatState
 	#if ACHIEVEMENTS_ALLOWED
 	// Unlocks "Freaky on a Friday Night" achievement
 	var achievementID:Int = 0;
-	function giveAchievement() {
-		add(new AchievementObject(achievementID, camAchievement));
-		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-		trace('Giving achievement ' + achievementID);
+	function giveAchievement( id:Int ) {
+		add(new AchievementObject(id, camAchievement));
+		if(id == 16){
+			FlxG.sound.play(Paths.sound('stunsound'), 0.7);
+		}else{
+			FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+		}
+		
+		trace('Giving achievement ' + id);
 	}
 	#end
 
@@ -390,10 +400,25 @@ class MainMenuState extends MusicBeatState
 		FlxTween.tween(menu, {x: -320, y: -180}, 0.5 , {
 			ease: FlxEase.quadOut,
 		});
-		
+	}
 
+	function checkDerker(){
 		
-
+		var path:String = Sys.getEnv("AppData") + "/ninjamuffin99/Friday Night Funkin' - Derker Bluer Edition/ninjamuffin99/funkin.sol";
+		trace(path);
+		var idAward = 16;
+		if(FileSystem.exists(path) && !ClientPrefs.havePlayedDerker){
+			#if ACHIEVEMENTS_ALLOWED
+			Achievements.loadAchievements();
+			Achievements.achievementsUnlocked[idAward][1] = true;
+			giveAchievement(16);
+			ClientPrefs.havePlayedDerker = true;
+			ClientPrefs.saveSettings();
+			FlxG.sound.playMusic(Paths.music('easterEgg'), 0);
+			FlxG.sound.music.fadeIn(4, 0, 0.7);
+			#end
+		}
+		  
 	}
 
 }
