@@ -35,6 +35,7 @@ class CreditsState extends MusicBeatState
 		['SrPerez',				'penez',			'Coder',											'https://twitter.com/YOUKdev',			0xFFC30085],
 		['YOUK',				'youkdev',			'Coder',											'https://twitter.com/YOUKdev',			0xFFFFDD33],
 		['EsoMarx',				'elchavoballistic',	'Background Artist',								'https://www.twitter.com/BeezyLoove',	0xFFC30085],
+		['Nautical',			'nautical',			'Menu Artist',										'https://twitter.com/nauticallll',	0xFFC30085],
 		['Beezy',				'beezy',			'Icon and Menu Artist',								'https://www.twitter.com/BeezyLoove',	0xFFC30085],
 		['Miki',				'miki',				'Ivette VA','https://cdn.discordapp.com/attachments/885208632533348433/887917996977299476/miki.gif',		0xFFC30085],
 		['Wach',				'wach',				'Animation Assistant','https://media.discordapp.net/attachments/853518667270979606/883515823791149066/image0.gif',		0xFFC30085],
