@@ -232,6 +232,10 @@ class MainMenuState extends MusicBeatState
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
 
+		if(bg.alpha > 0.5){
+				bg.alpha = 0.5;
+		}
+
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 5.6, 0, 1);
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 
@@ -313,11 +317,11 @@ class MainMenuState extends MusicBeatState
 			}
 			#end
 		}
-
 		super.update(elapsed);
 
 	}
 
+	
 	function changeItem(huh:Int = 0)
 	{
 		curSelected += huh;
@@ -364,7 +368,7 @@ class MainMenuState extends MusicBeatState
 			}
 		});
 	}
-	function beatHit()
+	
 	function oncreateAnims(){
 
 		FlxTween.tween(bg, {alpha: 1}, 5, {
