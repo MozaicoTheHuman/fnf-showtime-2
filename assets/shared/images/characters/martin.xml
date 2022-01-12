@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="martin.png">
+	<!-- Created with Adobe Animate version 18.0.2.126 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="idle0000" x="15" y="15" width="323" height="713" frameX="-1" frameY="0" frameWidth="326" frameHeight="713"/>
+	<SubTexture name="idle0001" x="353" y="15" width="325" height="701" frameX="-1" frameY="-12" frameWidth="326" frameHeight="713"/>
+	<SubTexture name="idle0002" x="353" y="15" width="325" height="701" frameX="-1" frameY="-12" frameWidth="326" frameHeight="713"/>
+	<SubTexture name="idle0003" x="693" y="15" width="324" height="711" frameX="0" frameY="-2" frameWidth="326" frameHeight="713"/>
+	<SubTexture name="idle0004" x="693" y="15" width="324" height="711" frameX="0" frameY="-2" frameWidth="326" frameHeight="713"/>
+	<SubTexture name="idle0005" x="1032" y="15" width="323" height="713" frameX="-1" frameY="0" frameWidth="326" frameHeight="713"/>
+	<SubTexture name="idle0006" x="1032" y="15" width="323" height="713" frameX="-1" frameY="0" frameWidth="326" frameHeight="713"/>
+	<SubTexture name="idle0007" x="1032" y="15" width="323" height="713" frameX="-1" frameY="0" frameWidth="326" frameHeight="713"/>
+	<SubTexture name="idle0008" x="1032" y="15" width="323" height="713" frameX="-1" frameY="0" frameWidth="326" frameHeight="713"/>
+	<SubTexture name="idle0009" x="1032" y="15" width="323" height="713" frameX="-1" frameY="0" frameWidth="326" frameHeight="713"/>
+	<SubTexture name="idle0010" x="1032" y="15" width="323" height="713" frameX="-1" frameY="0" frameWidth="326" frameHeight="713"/>
+	<SubTexture name="idle0011" x="1032" y="15" width="323" height="713" frameX="-1" frameY="0" frameWidth="326" frameHeight="713"/>
+	<SubTexture name="idle0012" x="1032" y="15" width="323" height="713" frameX="-1" frameY="0" frameWidth="326" frameHeight="713"/>
+	<SubTexture name="idle0013" x="1032" y="15" width="323" height="713" frameX="-1" frameY="0" frameWidth="326" frameHeight="713"/>
+	<SubTexture name="idle0014" x="1032" y="15" width="323" height="713" frameX="-1" frameY="0" frameWidth="326" frameHeight="713"/>
+	<SubTexture name="martindown0000" x="1370" y="15" width="506" height="608" frameX="0" frameY="-23" frameWidth="506" frameHeight="632"/>
+	<SubTexture name="martindown0001" x="1370" y="15" width="506" height="608" frameX="0" frameY="-23" frameWidth="506" frameHeight="632"/>
+	<SubTexture name="martindown0002" x="15" y="743" width="500" height="629" frameX="0" frameY="-3" frameWidth="506" frameHeight="632"/>
+	<SubTexture name="martindown0003" x="15" y="743" width="500" height="629" frameX="0" frameY="-3" frameWidth="506" frameHeight="632"/>
+	<SubTexture name="martindown0004" x="530" y="743" width="497" height="632" frameX="0" frameY="0" frameWidth="506" frameHeight="632"/>
+	<SubTexture name="martindown0005" x="530" y="743" width="497" height="632" frameX="0" frameY="0" frameWidth="506" frameHeight="632"/>
+	<SubTexture name="martindown0006" x="530" y="743" width="497" height="632" frameX="0" frameY="0" frameWidth="506" frameHeight="632"/>
+	<SubTexture name="martindown0007" x="530" y="743" width="497" height="632" frameX="0" frameY="0" frameWidth="506" frameHeight="632"/>
+	<SubTexture name="martindown0008" x="530" y="743" width="497" height="632" frameX="0" frameY="0" frameWidth="506" frameHeight="632"/>
+	<SubTexture name="martindown0009" x="530" y="743" width="497" height="632" frameX="0" frameY="0" frameWidth="506" frameHeight="632"/>
+	<SubTexture name="martinleft0000" x="1042" y="743" width="407" height="713" frameX="-1" frameY="-16" frameWidth="408" frameHeight="729"/>
+	<SubTexture name="martinleft0001" x="1042" y="743" width="407" height="713" frameX="-1" frameY="-16" frameWidth="408" frameHeight="729"/>
+	<SubTexture name="martinleft0002" x="1464" y="743" width="406" height="726" frameX="-1" frameY="-3" frameWidth="408" frameHeight="729"/>
+	<SubTexture name="martinleft0003" x="1464" y="743" width="406" height="726" frameX="-1" frameY="-3" frameWidth="408" frameHeight="729"/>
+	<SubTexture name="martinleft0004" x="15" y="1484" width="406" height="729" frameX="0" frameY="0" frameWidth="408" frameHeight="729"/>
+	<SubTexture name="martinleft0005" x="15" y="1484" width="406" height="729" frameX="0" frameY="0" frameWidth="408" frameHeight="729"/>
+	<SubTexture name="martinleft0006" x="15" y="1484" width="406" height="729" frameX="0" frameY="0" frameWidth="408" frameHeight="729"/>
+	<SubTexture name="martinleft0007" x="15" y="1484" width="406" height="729" frameX="0" frameY="0" frameWidth="408" frameHeight="729"/>
+	<SubTexture name="martinleft0008" x="15" y="1484" width="406" height="729" frameX="0" frameY="0" frameWidth="408" frameHeight="729"/>
+	<SubTexture name="martinright0000" x="436" y="1484" width="479" height="697" frameX="-13" frameY="0" frameWidth="492" frameHeight="697"/>
+	<SubTexture name="martinright0001" x="436" y="1484" width="479" height="697" frameX="-13" frameY="0" frameWidth="492" frameHeight="697"/>
+	<SubTexture name="martinright0002" x="930" y="1484" width="475" height="692" frameX="-2" frameY="-5" frameWidth="492" frameHeight="697"/>
+	<SubTexture name="martinright0003" x="930" y="1484" width="475" height="692" frameX="-2" frameY="-5" frameWidth="492" frameHeight="697"/>
+	<SubTexture name="martinright0004" x="1420" y="1484" width="476" height="691" frameX="0" frameY="-6" frameWidth="492" frameHeight="697"/>
+	<SubTexture name="martinright0005" x="1420" y="1484" width="476" height="691" frameX="0" frameY="-6" frameWidth="492" frameHeight="697"/>
+	<SubTexture name="martinright0006" x="1420" y="1484" width="476" height="691" frameX="0" frameY="-6" frameWidth="492" frameHeight="697"/>
+	<SubTexture name="martinright0007" x="1420" y="1484" width="476" height="691" frameX="0" frameY="-6" frameWidth="492" frameHeight="697"/>
+	<SubTexture name="martinright0008" x="1420" y="1484" width="476" height="691" frameX="0" frameY="-6" frameWidth="492" frameHeight="697"/>
+	<SubTexture name="martinup0000" x="15" y="2228" width="415" height="786"/>
+	<SubTexture name="martinup0001" x="15" y="2228" width="415" height="786"/>
+	<SubTexture name="martinup0002" x="445" y="2228" width="409" height="765" frameX="-3" frameY="-19" frameWidth="415" frameHeight="786"/>
+	<SubTexture name="martinup0003" x="445" y="2228" width="409" height="765" frameX="-3" frameY="-19" frameWidth="415" frameHeight="786"/>
+	<SubTexture name="martinup0004" x="869" y="2228" width="407" height="760" frameX="-3" frameY="-23" frameWidth="415" frameHeight="786"/>
+	<SubTexture name="martinup0005" x="869" y="2228" width="407" height="760" frameX="-3" frameY="-23" frameWidth="415" frameHeight="786"/>
+	<SubTexture name="martinup0006" x="869" y="2228" width="407" height="760" frameX="-3" frameY="-23" frameWidth="415" frameHeight="786"/>
+	<SubTexture name="martinup0007" x="869" y="2228" width="407" height="760" frameX="-3" frameY="-23" frameWidth="415" frameHeight="786"/>
+	<SubTexture name="martinup0008" x="869" y="2228" width="407" height="760" frameX="-3" frameY="-23" frameWidth="415" frameHeight="786"/>
+	<SubTexture name="martinup0009" x="869" y="2228" width="407" height="760" frameX="-3" frameY="-23" frameWidth="415" frameHeight="786"/>
+	<SubTexture name="martinup0010" x="869" y="2228" width="407" height="760" frameX="-3" frameY="-23" frameWidth="415" frameHeight="786"/>
+</TextureAtlas>
