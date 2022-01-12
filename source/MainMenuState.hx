@@ -37,6 +37,13 @@ class MainMenuState extends MusicBeatState
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
 
+	var bg:FlxSprite;
+	var overlay1:FlxSprite;
+	var overlay2:FlxSprite;
+	var charshadow:FlxSprite;
+	var char:FlxSprite;
+	var menu:FlxSprite;
+
 	override function create()
 	{
 		#if desktop
@@ -59,30 +66,33 @@ class MainMenuState extends MusicBeatState
 
 		var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
 
-		var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/bg'));
+		bg = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/bg'));
 		bg.screenCenter();
 		bg.scrollFactor.set(0, 0);
 		bg.scale.x = 0.7;
 		bg.scale.y = 0.7;
+		bg.alpha = 0;
 		add(bg);
 
-		var overlay1:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/overlay1'));
+		overlay1 = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/overlay1'));
 		overlay1.screenCenter();
 		overlay1.scrollFactor.set(0, 0);
 		overlay1.scale.x = 0.7;
 		overlay1.scale.y = 0.7;
 		overlay1.antialiasing = ClientPrefs.globalAntialiasing;
+		overlay1.x = -3000;
 		add(overlay1);
 
-		var overlay2:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/overlay2'));
+		overlay2 = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/overlay2'));
 		overlay2.screenCenter();
 		overlay2.scrollFactor.set(0, 0);
 		overlay2.scale.x = 0.7;
 		overlay2.scale.y = 0.7;
 		overlay2.antialiasing = ClientPrefs.globalAntialiasing;
+		overlay2.x = -3000;
 		add(overlay2);
 
-		var charshadow:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/charshadow'));
+		charshadow = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/charshadow'));
 		charshadow.screenCenter();
 		charshadow.scrollFactor.set(0, 0);
 		charshadow.x += 75;
@@ -90,9 +100,10 @@ class MainMenuState extends MusicBeatState
 		charshadow.scale.x = 0.6;
 		charshadow.scale.y = 0.6;
 		charshadow.antialiasing = ClientPrefs.globalAntialiasing;
+		charshadow.x = 1000;
 		add(charshadow);
 
-		var char:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/char'));
+		char = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/char'));
 		char.screenCenter();
 		char.scrollFactor.set(0, 0);
 		char.x += 75;
@@ -100,14 +111,17 @@ class MainMenuState extends MusicBeatState
 		char.scale.x = 0.6;
 		char.scale.y = 0.6;
 		char.antialiasing = ClientPrefs.globalAntialiasing;
+		char.x = 1000;
 		add(char);
 
-		var menu:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/menu'));
+		menu = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/menu'));
 		menu.screenCenter();
 		menu.scrollFactor.set(0, 0);
 		menu.scale.x = 0.7;
 		menu.scale.y = 0.7;
 		menu.antialiasing = ClientPrefs.globalAntialiasing;
+		menu.x = -1000;
+		menu.y = 1000;
 		add(menu);
 
 		camFollow = new FlxObject(0, 0, 1, 1);
@@ -140,14 +154,35 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
+
+			//hardcoding the offsets shit, there is no problem
+			switch(i){
+				case 0:
+					menuItem.x -= 35;
+				case 1:
+					menuItem.x += 5;
+				case 2:
+					menuItem.x += 10;
+				case 3:
+					menuItem.x += 35;
+				case 4:
+					menuItem.x += 35;
+			}
+			
 			menuItem.ID = i;
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if(optionShit.length < 6) scr = 0;
 			menuItem.scrollFactor.set(0, scr);
 			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
+			menuItem.alpha = 0;
+
+			FlxTween.tween(menuItem, {alpha: 1}, 2 , {
+				ease: FlxEase.quadOut,
+			});
 			//menuItem.setGraphicSize(Std.int(menuItem.width * 0.58));
 			menuItem.updateHitbox();
+
 		}
 
 		FlxG.camera.follow(camFollowPos, null, 1);
@@ -174,7 +209,7 @@ class MainMenuState extends MusicBeatState
 			ClientPrefs.saveSettings();
 		}
 		#end
-
+		oncreateAnims();
 		super.create();
 	}
 
@@ -302,8 +337,59 @@ class MainMenuState extends MusicBeatState
 			{
 				spr.animation.play('selected');
 				camFollow.setPosition(0,0);
+				spr.offset.x = 0.15 * (spr.frameWidth / 2 + 180);
+				spr.offset.y = 0.15 * spr.frameHeight;
+
+				//hardcoding again waaaaaa D':
+				switch(spr.ID){
+					case 0:
+						spr.offset.x += 100;
+						spr.offset.y += 25;
+					case 1:
+						spr.offset.x += 75;
+						spr.offset.y += 20;
+					case 2:
+						spr.offset.x += 60;
+						spr.offset.y += 20;
+					case 3:
+						spr.offset.x += 60;
+						spr.offset.y += 20;
+					case 4:
+						spr.offset.x += 60;
+						spr.offset.y += 20;
+				}
+
+
 				FlxG.log.add(spr.frameWidth);
 			}
 		});
 	}
+	function beatHit()
+	function oncreateAnims(){
+
+		FlxTween.tween(bg, {alpha: 1}, 5, {
+			ease: FlxEase.quadOut,
+		});
+
+		FlxTween.tween(overlay1, {x: -320}, 1, {
+			ease: FlxEase.quadOut,
+		});
+		FlxTween.tween(overlay2, {x: -320}, 1, {
+			ease: FlxEase.quadOut,
+		});
+		FlxTween.tween(char, {x: -245}, 1, {
+			ease: FlxEase.quadOut,
+		});
+		FlxTween.tween(charshadow, {x: -245}, 1, {
+			ease: FlxEase.quadOut,
+		});
+		FlxTween.tween(menu, {x: -320, y: -180}, 0.5 , {
+			ease: FlxEase.quadOut,
+		});
+		
+
+		
+
+	}
+
 }
