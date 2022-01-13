@@ -47,7 +47,8 @@ class MainMenuState extends MusicBeatState
 	var charshadow:FlxSprite;
 	var char:FlxSprite;
 	var menu:FlxSprite;
-	var playedDerker:Bool;
+	var unlockedMenus:Array<String>;
+	var menuUnlocked:String;
 
 	override function create()
 	{
@@ -55,7 +56,7 @@ class MainMenuState extends MusicBeatState
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
 		#end
-		checkDerker();
+		
 		camGame = new FlxCamera();
 		camAchievement = new FlxCamera();
 		camAchievement.bgColor.alpha = 0;
@@ -71,7 +72,19 @@ class MainMenuState extends MusicBeatState
 
 		var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
 
-		bg = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/bg'));
+		
+		
+		var random:Int = FlxG.random.int(0, ClientPrefs.unlockedMenus.length - 1);
+
+		menuUnlocked = ClientPrefs.unlockedMenus[random];
+		checkDerker();
+		
+		if(menuUnlocked == "derker" && ClientPrefs.havePlayedDerker){
+			FlxG.sound.playMusic(Paths.music('easterEgg'), 0);
+			FlxG.sound.music.fadeIn(4, 0, 0.7);
+		}
+
+		bg = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/'+ menuUnlocked +'/bg'));
 		bg.screenCenter();
 		bg.scrollFactor.set(0, 0);
 		bg.scale.x = 0.7;
@@ -79,7 +92,7 @@ class MainMenuState extends MusicBeatState
 		bg.alpha = 0;
 		add(bg);
 
-		overlay1 = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/overlay1'));
+		overlay1 = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/'+ menuUnlocked +'/overlay1'));
 		overlay1.screenCenter();
 		overlay1.scrollFactor.set(0, 0);
 		overlay1.scale.x = 0.7;
@@ -88,7 +101,7 @@ class MainMenuState extends MusicBeatState
 		overlay1.x = -3000;
 		add(overlay1);
 
-		overlay2 = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/overlay2'));
+		overlay2 = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/'+ menuUnlocked +'/overlay2'));
 		overlay2.screenCenter();
 		overlay2.scrollFactor.set(0, 0);
 		overlay2.scale.x = 0.7;
@@ -97,7 +110,7 @@ class MainMenuState extends MusicBeatState
 		overlay2.x = -3000;
 		add(overlay2);
 
-		charshadow = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/charshadow'));
+		charshadow = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/'+ menuUnlocked +'/artworkshadow'));
 		charshadow.screenCenter();
 		charshadow.scrollFactor.set(0, 0);
 		charshadow.x += 75;
@@ -108,18 +121,23 @@ class MainMenuState extends MusicBeatState
 		charshadow.x = 1000;
 		add(charshadow);
 
-		char = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/char'));
+		char = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/'+ menuUnlocked +'/artwork'));
 		char.screenCenter();
 		char.scrollFactor.set(0, 0);
 		char.x += 75;
 		char.y += 35;
-		char.scale.x = 0.6;
-		char.scale.y = 0.6;
+		if(menuUnlocked != "maritza"){
+			char.scale.x = 0.6;
+			char.scale.y = 0.6;
+		}else{
+			char.scale.x = 0.73;
+			char.scale.y = 0.73;
+		}
 		char.antialiasing = ClientPrefs.globalAntialiasing;
 		char.x = 1000;
 		add(char);
 
-		menu = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/1/menu'));
+		menu = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/'+ menuUnlocked +'/menu'));
 		menu.screenCenter();
 		menu.scrollFactor.set(0, 0);
 		menu.scale.x = 0.7;
@@ -416,9 +434,12 @@ class MainMenuState extends MusicBeatState
 			ClientPrefs.saveSettings();
 			FlxG.sound.playMusic(Paths.music('easterEgg'), 0);
 			FlxG.sound.music.fadeIn(4, 0, 0.7);
+			ClientPrefs.unlockedMenus.push("derker");
+			ClientPrefs.saveSettings();
+			menuUnlocked = "derker";
 			#end
 		}
-		  
+		trace(ClientPrefs.unlockedMenus);
 	}
 
 }

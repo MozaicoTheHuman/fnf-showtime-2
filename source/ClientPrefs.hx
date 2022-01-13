@@ -27,6 +27,7 @@ class ClientPrefs {
 	public static var hideTime:Bool = false;
 	public static var noteQuant:Bool = false;
 	public static var havePlayedDerker:Bool = false;
+	public static var unlockedMenus:Array<String> = ["maavo","ivette","maritza"];
 
 	public static var defaultKeys:Array<FlxKey> = [
 		A, LEFT,			//Note Left
@@ -84,6 +85,7 @@ class ClientPrefs {
 		FlxG.save.data.hideTime = hideTime;
 		FlxG.save.data.noteQuant = noteQuant;
 		FlxG.save.data.havePlayedDerker = havePlayedDerker;
+		FlxG.save.data.unlockedMenus = unlockedMenus;
 
 		var achieves:Array<String> = [];
 		for (i in 0...Achievements.achievementsUnlocked.length) {
@@ -170,6 +172,9 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.havePlayedDerker != null) {
 			havePlayedDerker = FlxG.save.data.havePlayedDerker;
+		}
+		if(FlxG.save.data.unlockedMenus != null){
+			unlockedMenus = FlxG.save.data.unlockedMenus;
 		}
 
 		var save:FlxSave = new FlxSave();
