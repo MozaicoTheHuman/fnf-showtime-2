@@ -49,39 +49,6 @@
 				130,
 				-230
 			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singUP-loop",
-			"indices": [],
-			"name": "idle"
-		},
-		{
-			"offsets": [
-				130,
-				-230
-			],
-			"loop": false,
-			"fps": 30,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "down"
-		},
-		{
-			"offsets": [
-				130,
-				-230
-			],
-			"loop": false,
-			"fps": 30,
-			"anim": "singUP",
-			"indices": [],
-			"name": "up"
-		},
-		{
-			"offsets": [
-				130,
-				-230
-			],
 			"loop": false,
 			"fps": 30,
 			"anim": "singRIGHT",
@@ -93,18 +60,51 @@
 				130,
 				-230
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 30,
 			"anim": "singLEFT",
-			"loop": false,
+			"indices": [],
 			"name": "left"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				130,
+				-230
+			],
+			"anim": "singUP-loop",
+			"fps": 30,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				130,
+				-230
+			],
+			"anim": "singUP",
+			"fps": 40,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				130,
+				-230
+			],
+			"anim": "singDOWN",
+			"fps": 32,
+			"name": "down",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/mario",
 	"position": [
-		140,
-		0
+		90,
+		-50
 	],
 	"healthicon": "dad",
 	"flip_x": false,
@@ -114,9 +114,9 @@
 		206
 	],
 	"camera_position": [
-		-500,
-		40
+		-670,
+		-220
 	],
 	"sing_duration": 50.1,
-	"scale": 2
+	"scale": 3.1
 }

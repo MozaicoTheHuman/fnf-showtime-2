@@ -1,68 +1,68 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "Mom Idle",
-			"indices": []
+			"indices": [],
+			"name": "idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				250,
-				-23
+				98,
+				13
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "Mom Left Pose",
-			"indices": []
+			"indices": [],
+			"name": "martinleft"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				10,
-				-60
+				4,
+				-13
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "Mom Pose Left",
-			"indices": []
+			"indices": [],
+			"name": "martinright"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				20,
-				-160
+				50,
+				-80
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "MOM DOWN POSE",
-			"indices": []
+			"indices": [],
+			"name": "martindown"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				14,
-				71
+				72,
+				67
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Mom Up Pose",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "martinup"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/Mom_Assets",
+	"image": "characters/martin",
 	"position": [
-		0,
-		0
+		-10,
+		60
 	],
-	"healthicon": "mom",
+	"healthicon": "martin",
 	"flip_x": false,
 	"healthbar_colors": [
 		216,
@@ -70,9 +70,9 @@
 		142
 	],
 	"camera_position": [
-		0,
-		0
+		-130,
+		30
 	],
-	"sing_duration": 4,
+	"sing_duration": 8,
 	"scale": 1
 }

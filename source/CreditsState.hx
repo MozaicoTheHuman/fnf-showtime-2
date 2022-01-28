@@ -46,6 +46,7 @@ class CreditsState extends MusicBeatState
 		['Psych Engine Team'],
 		['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',					'https://twitter.com/Shadow_Mario_',	0xFFFFDD33],
 		['RiverOaken',			'riveroaken',		'Main Artist/Animator of Psych Engine',				'https://twitter.com/river_oaken',		0xFFC30085],
+		['Beezy',				'beezy',			'Icon and Menu Artist',								'https://www.twitter.com/BeezyLoove',	0xFFFFDD33],
 		[''],
 		['Engine Contributors'],
 		['shubs',				'shubs',			'New Input System Programmer',						'https://twitter.com/yoshubs',			0xFF4494E6],
@@ -53,12 +54,14 @@ class CreditsState extends MusicBeatState
 		['gedehari',			'gedehari',			'Chart Editor\'s Sound Waveform base',				'https://twitter.com/gedehari',			0xFFFF9300],
 		['Keoiki',				'keoiki',			'Note Splash Animations',							'https://twitter.com/Keoiki_',			0xFFFFFFFF],
 		['SandPlanet',			'sandplanet',		'Psych Engine Preacher\nAlso cool guy lol',			'https://twitter.com/SandPlanetNG',		0xFFD10616],
+		['Beezy',				'beezy',			'Icon and Menu Artist',								'https://www.twitter.com/BeezyLoove',	0xFFFFDD33],
 		[''],
 		["Funkin' Crew"],
 		['ninjamuffin99',		'ninjamuffin99',	"Programmer of Friday Night Funkin'",				'https://twitter.com/ninja_muffin99',	0xFFF73838],
 		['PhantomArcade',		'phantomarcade',	"Animator of Friday Night Funkin'",					'https://twitter.com/PhantomArcade3K',	0xFFFFBB1B],
 		['evilsk8r',			'evilsk8r',			"Artist of Friday Night Funkin'",					'https://twitter.com/evilsk8r',			0xFF53E52C],
-		['kawaisprite',			'kawaisprite',		"Composer of Friday Night Funkin'",					'https://twitter.com/kawaisprite',		0xFF6475F3]
+		['kawaisprite',			'kawaisprite',		"Composer of Friday Night Funkin'",					'https://twitter.com/kawaisprite',		0xFF6475F3],
+		['Beezy',				'beezy',			'Icon and Menu Artist Follow her or i will eat your liver',								'https://www.twitter.com/BeezyLoove',	0xFFFFDD33]
 	];
 
 	var bg:FlxSprite;

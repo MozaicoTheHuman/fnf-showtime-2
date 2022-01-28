@@ -1,6 +1,6 @@
 {
 	"song": {
-		"player1": "bfST",
+		"player1": "bf",
 		"player2": "maritza",
 		"notes": [
 			{
@@ -24340,7 +24340,7 @@
 				"mustHitSection": true
 			}
 		],
-		"gfVersion": "gfST",
+		"gfVersion": "gf",
 		"player3": "gf",
 		"eventObjects": [
 			{

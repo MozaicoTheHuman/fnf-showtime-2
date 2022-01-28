@@ -1,3 +1,4 @@
 Pondering:hanzo:0xFF9271FD
-Tokyo:maavisa:0xFF9271FD
+Tokyo:icon:0xFF9271FD
+Light-On:martin:0xFF9271FD
 MUGEN:clown:0xFF9271FD

@@ -2448,6 +2448,7 @@ class PlayState extends MusicBeatState
 					} else if(!daNote.noAnimation) {
 						var altAnim:String = "";
 
+
 						if (SONG.notes[Math.floor(curStep / 16)] != null)
 						{
 							if (SONG.notes[Math.floor(curStep / 16)].altAnim || daNote.noteType == 'Alt Animation') {

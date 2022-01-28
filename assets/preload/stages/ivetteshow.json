@@ -1,9 +1,9 @@
 {
 	"directory": "horadelshow",
-	"defaultZoom": 0.65,
+	"defaultZoom": 0.69,
 	"isPixelStage": false,
 
-	"boyfriend": [970, 100],
-	"girlfriend": [400, 130],
-	"opponent": [-400, 101]
+	"boyfriend": [1190, 100],
+	"girlfriend": [750, 130],
+	"opponent": [-210, 100]
 }
