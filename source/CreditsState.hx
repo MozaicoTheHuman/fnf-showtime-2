@@ -31,7 +31,6 @@ class CreditsState extends MusicBeatState
 		['Vtroy Jerof',			'vtroy',			'Musician',										'https://www.youtube.com/c/VtroyJerof/',	0xFFFFDD33],
 		['Hanzo Santiago',		'hanzo',	'Musician, Artist, Animator, Hanzo VA',	'https://www.youtube.com/channel/UC6QSZk8SYmTm_VoZAPOW6NQ',	0xFFFFDD33],
 		['Ben Sanchez',			'ben',				'Coder',											'https://twitter.com/art_keny',			0xFFFFDD33],
-		['Mad!Wolf',			'mad',				'Coder',											'https://twitter.com/YOUKdev',			0xFFFFDD33],
 		['SrPerez',				'penez',			'Coder',											'https://twitter.com/YOUKdev',			0xFFFFDD33],
 		['YOUK',				'youkdev',			'Coder',											'https://twitter.com/YOUKdev',			0xFFFFDD33],
 		['EsoMarx',				'elchavoballistic',	'Background Artist',			'https://www.youtube.com/channel/UCeQKrBu2HeKOw2EnlL4BKNg',	0xFFFFDD33],
