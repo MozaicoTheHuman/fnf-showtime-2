@@ -1,25 +1,25 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-398,
 				-60
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "IvetteIdle"
+			"fps": 24,
+			"name": "IvetteIdle",
+			"indices": []
 		},
 		{
 			"offsets": [
 				-363,
 				-34
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singUP",
 			"indices": [],
+			"fps": 25,
+			"anim": "singUP",
+			"loop": false,
 			"name": "IvetteUp"
 		},
 		{
@@ -27,10 +27,10 @@
 				-361,
 				-59
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singDOWN",
 			"indices": [],
+			"fps": 25,
+			"anim": "singDOWN",
+			"loop": false,
 			"name": "IvetteDown"
 		},
 		{
@@ -38,10 +38,10 @@
 				-376,
 				-36
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singLEFT",
 			"indices": [],
+			"fps": 25,
+			"anim": "singLEFT",
+			"loop": false,
 			"name": "IvetteLeft"
 		},
 		{
@@ -49,55 +49,55 @@
 				-387,
 				-37
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHT",
 			"indices": [],
+			"fps": 25,
+			"anim": "singRIGHT",
+			"loop": false,
 			"name": "IvetteRight"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-391,
 				-51
 			],
+			"indices": [],
+			"fps": 28,
 			"anim": "singRIGHT-alt",
-			"fps": 26,
-			"name": "IvetteDerecha",
-			"indices": []
+			"loop": false,
+			"name": "IvetteDerecha"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-160,
 				-79
 			],
+			"indices": [],
+			"fps": 29,
 			"anim": "singDOWN-alt",
-			"fps": 27,
-			"name": "IvetteAbajo",
-			"indices": []
+			"loop": false,
+			"name": "IvetteAbajo"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-360,
 				-55
 			],
+			"indices": [],
+			"fps": 29,
 			"anim": "singLEFT-alt",
-			"fps": 27,
-			"name": "IvetteIzquierda",
-			"indices": []
+			"loop": false,
+			"name": "IvetteIzquierda"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-287,
 				22
 			],
+			"indices": [],
+			"fps": 29,
 			"anim": "singUP-alt",
-			"fps": 27,
-			"name": "IvetteArriba",
-			"indices": []
+			"loop": false,
+			"name": "IvetteArriba"
 		}
 	],
 	"no_antialiasing": false,

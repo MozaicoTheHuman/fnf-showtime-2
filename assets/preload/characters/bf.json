@@ -1,25 +1,124 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-3,
 				5
 			],
-			"anim": "hey",
+			"loop": false,
 			"fps": 24,
-			"name": "BF HEY",
+			"anim": "hey",
+			"indices": [],
+			"name": "BF HEY"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				112,
+				148
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "BF SHOWTIME izquierda",
 			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				93,
+				153
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "BF SHOWTIME abajo",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				101,
+				150
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "BF SHOWTIME arriba",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				102,
+				148
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "BF SHOWTIME derecha",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				207,
+				231
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "BF SHOWTIME RIP",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				207,
+				231
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "BF SHOWTIME cocos",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				207,
+				231
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "BF SHOWTIME coquimbo",
+			"indices": []
+		},
+		{
+			"offsets": [
+				77,
+				150
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "stun",
+			"indices": [],
+			"name": "BF SHOWTIME STUN"
+		},
+		{
+			"offsets": [
+				116,
+				150
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "BF SHOWTIME IDLE"
 		},
 		{
 			"offsets": [
 				117,
 				149
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singLEFT",
 			"indices": [],
+			"fps": 25,
+			"anim": "singLEFT",
+			"loop": false,
 			"name": "BF SHOWTIME LEFT"
 		},
 		{
@@ -27,10 +126,10 @@
 				105,
 				153
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singDOWN",
 			"indices": [],
+			"fps": 25,
+			"anim": "singDOWN",
+			"loop": false,
 			"name": "BF SHOWTIME DOWN"
 		},
 		{
@@ -38,10 +137,10 @@
 				111,
 				150
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singUP",
 			"indices": [],
+			"fps": 25,
+			"anim": "singUP",
+			"loop": false,
 			"name": "BF SHOWTIME UP"
 		},
 		{
@@ -49,110 +148,11 @@
 				112,
 				147
 			],
-			"loop": false,
-			"fps": 24,
+			"indices": [],
+			"fps": 25,
 			"anim": "singRIGHT",
-			"indices": [],
+			"loop": false,
 			"name": "BF SHOWTIME RIGHT"
-		},
-		{
-			"offsets": [
-				112,
-				148
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "BF SHOWTIME izquierda"
-		},
-		{
-			"offsets": [
-				93,
-				153
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "BF SHOWTIME abajo"
-		},
-		{
-			"offsets": [
-				101,
-				150
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singUPmiss",
-			"indices": [],
-			"name": "BF SHOWTIME arriba"
-		},
-		{
-			"offsets": [
-				102,
-				148
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "BF SHOWTIME derecha"
-		},
-		{
-			"offsets": [
-				207,
-				231
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "firstDeath",
-			"indices": [],
-			"name": "BF SHOWTIME RIP"
-		},
-		{
-			"offsets": [
-				207,
-				231
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "deathLoop",
-			"indices": [],
-			"name": "BF SHOWTIME cocos"
-		},
-		{
-			"offsets": [
-				207,
-				231
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "deathConfirm",
-			"indices": [],
-			"name": "BF SHOWTIME coquimbo"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				77,
-				150
-			],
-			"anim": "stun",
-			"fps": 24,
-			"name": "BF SHOWTIME STUN",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				116,
-				150
-			],
-			"anim": "idle",
-			"fps": 24,
-			"name": "BF SHOWTIME IDLE",
-			"indices": []
 		}
 	],
 	"no_antialiasing": false,

@@ -3,75 +3,130 @@
 		{
 			"loop": false,
 			"offsets": [
-				78,
+				128,
 				316
 			],
-			"anim": "singUP",
-			"fps": 24,
-			"name": "MARITZA NOTE UP",
+			"anim": "singUP-alt",
+			"fps": 31,
+			"name": "maritza_up",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				58,
+				128,
+				316
+			],
+			"anim": "singDOWN-alt",
+			"fps": 30,
+			"name": "maritza_down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				159,
+				316
+			],
+			"anim": "singLEFT-alt",
+			"fps": 30,
+			"name": "maritza_left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				137,
+				316
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 30,
+			"name": "maritza_right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				128,
 				316
 			],
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "MARITZA NOTE DOWN",
+			"fps": 25,
+			"name": "maritza_down",
 			"indices": []
 		},
 		{
-			"offsets": [
-				-200,
-				170
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "maritzaidle"
-		},
-		{
 			"loop": false,
 			"offsets": [
-				68,
+				128,
 				316
 			],
-			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "MARITZA NOTE RIGHT",
+			"anim": "singUP",
+			"fps": 25,
+			"name": "maritza_up",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				118,
+				159,
 				316
 			],
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "MARITZA NOTE LEFT",
+			"fps": 25,
+			"name": "maritza_left",
 			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				137,
+				316
+			],
+			"anim": "singRIGHT",
+			"fps": 25,
+			"name": "maritza_right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				180
+			],
+			"loop": false,
+			"fps": 23,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "maritza_idle"
+		},
+		{
+			"offsets": [
+				0,
+				180
+			],
+			"loop": false,
+			"fps": 23,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "maritza_danceright"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/Maritza",
 	"position": [
-		-120,
+		-300,
 		355
 	],
 	"healthicon": "maritza",
-	"flip_x": true,
+	"flip_x": false,
 	"healthbar_colors": [
 		0,
 		0,
 		0
 	],
 	"camera_position": [
-		0,
-		-280
+		-100,
+		-220
 	],
 	"sing_duration": 4,
 	"scale": 1
