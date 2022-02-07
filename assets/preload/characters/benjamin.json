@@ -3,57 +3,57 @@
 		{
 			"loop": false,
 			"offsets": [
-				270,
-				-179
-			],
-			"anim": "idle",
-			"fps": 24,
-			"name": "benjastand",
-			"indices": []
-		},
-		{
-			"offsets": [
 				315,
 				-192
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "left"
+			"fps": 24,
+			"name": "left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				267,
 				-191
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "right"
+			"fps": 24,
+			"name": "right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				279,
 				-233
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "down"
+			"fps": 24,
+			"name": "down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				260,
 				-160
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"offsets": [
+				270,
+				-179
+			],
 			"indices": [],
-			"name": "up"
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "idle"
 		}
 	],
 	"no_antialiasing": false,
