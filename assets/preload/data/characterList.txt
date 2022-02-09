@@ -1,9 +1,11 @@
 bf
-dad
 gf
-pico
 maritza
+maritza-playable
 maavo
+maavo-playable
 ivette
+martin
+benjamin
 clown
-bf-maavoMUGEN
+maavomugen
