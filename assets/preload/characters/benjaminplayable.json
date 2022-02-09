@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				270,
+				-179
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "benjastand"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				279,
+				-233
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				260,
+				-160
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				312,
+				-192
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				243,
+				-191
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				279,
+				-233
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				260,
+				-160
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP-alt",
+			"loop": false,
+			"name": "up"
+		},
+		{
+			"offsets": [
+				312,
+				-192
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"loop": false,
+			"name": "right"
+		},
+		{
+			"offsets": [
+				243,
+				-191
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "left"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/benjamin",
+	"position": [
+		0,
+		60
+	],
+	"healthicon": "benjamin",
+	"flip_x": false,
+	"healthbar_colors": [
+		216,
+		85,
+		142
+	],
+	"camera_position": [
+		420,
+		310
+	],
+	"sing_duration": 8,
+	"scale": 1
+}
