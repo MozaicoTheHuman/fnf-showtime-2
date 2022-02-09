@@ -20,6 +20,8 @@ import lime.app.Application;
 import Achievements;
 import editors.MasterEditorMenu;
 
+import flixel.util.FlxTimer;
+
 //daaaa
 import sys.FileSystem;
 import sys.io.File;
@@ -49,6 +51,11 @@ class MainMenuState extends MusicBeatState
 	var menu:FlxSprite;
 	var unlockedMenus:Array<String>;
 	var menuUnlocked:String;
+	var logoshowtime:FlxSprite;
+	var starup: FlxSprite;
+	var starupshadow: FlxSprite;
+	var stardown: FlxSprite;
+	var stardownshadow: FlxSprite;
 
 	override function create()
 	{
@@ -233,6 +240,64 @@ class MainMenuState extends MusicBeatState
 		}
 		#end
 		oncreateAnims();
+		logoshowtime = new FlxSprite(-80).loadGraphic(Paths.image('horadeldou-ui/showtimelogo'));
+		logoshowtime.screenCenter();
+		logoshowtime.scrollFactor.set(0, 0);
+		logoshowtime.scale.x = 0.6;
+		logoshowtime.scale.y = 0.6;
+		logoshowtime.x += -480;
+		logoshowtime.y += -280;
+		add(logoshowtime);
+
+		//estrellas
+
+		starupshadow = new FlxSprite(-80).loadGraphic(Paths.image('horadeldou-ui/estrellaupshadow'));
+		starupshadow.screenCenter();
+		starupshadow.scrollFactor.set(0, 0);
+		starupshadow.scale.x = 0.7;
+		starupshadow.scale.y = 0.7;
+		starupshadow.x += 8;
+		starupshadow.y += 8;
+		add(starupshadow);
+
+		starupshadow.x += -400;
+		starupshadow.y += -150;
+
+		starup= new FlxSprite(-80).loadGraphic(Paths.image('horadeldou-ui/estrellaup'));
+		starup.screenCenter();
+		starup.scrollFactor.set(0, 0);
+		starup.scale.x = 0.7;
+		starup.scale.y = 0.7;
+		add(starup);
+
+		starup.x += -400;
+		starup.y += -150;
+
+
+		stardownshadow = new FlxSprite(-80).loadGraphic(Paths.image('horadeldou-ui/estrelladownshadow'));
+		stardownshadow.screenCenter();
+		stardownshadow.scrollFactor.set(0, 0);
+		stardownshadow.scale.x = 0.7;
+		stardownshadow.scale.y = 0.7;
+		stardownshadow.x += -8;
+		stardownshadow.y += -8;
+		add(stardownshadow);
+
+		stardownshadow.x += -250;
+		stardownshadow.y += 340;
+
+		stardown= new FlxSprite(-80).loadGraphic(Paths.image('horadeldou-ui/estrelladown'));
+		stardown.screenCenter();
+		stardown.scrollFactor.set(0, 0);
+		stardown.scale.x = 0.7;
+		stardown.scale.y = 0.7;
+		add(stardown);
+
+		stardown.x += -250;
+		stardown.y += 340;
+
+		tweenlogo();
+
 		super.create();
 	}
 
@@ -345,6 +410,8 @@ class MainMenuState extends MusicBeatState
 			}
 			#end
 		}
+		
+
 		super.update(elapsed);
 
 	}
@@ -440,6 +507,20 @@ class MainMenuState extends MusicBeatState
 			#end
 		}
 		trace(ClientPrefs.unlockedMenus);
+	}
+
+	function tweenlogo():Void {
+		trace("moviendo");
+		logoshowtime.angle = -4;
+
+			new FlxTimer().start(0.01, function(tmr:FlxTimer)
+			{
+				if (logoshowtime.angle == -4)
+					FlxTween.angle(logoshowtime, logoshowtime.angle, 4, 4, {ease: FlxEase.quartInOut});
+				if (logoshowtime.angle == 4)
+					FlxTween.angle(logoshowtime, logoshowtime.angle, -4, 4, {ease: FlxEase.quartInOut});
+			}, 0);
+
 	}
 
 }
