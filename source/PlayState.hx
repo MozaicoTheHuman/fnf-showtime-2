@@ -600,7 +600,6 @@ class PlayState extends MusicBeatState
 						add(maavoBopper);
 
 			case 'show':
-						defaultCamZoom = 0.75;
 
 						var bg:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_SKY', 'shared'));
 						bg.scrollFactor.set(0.35, 0.35);
