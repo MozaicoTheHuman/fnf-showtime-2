@@ -53,7 +53,7 @@ class FreeplayState extends MusicBeatState
 		WeekData.reloadWeekFiles(false);
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		DiscordClient.changePresence("In Freeplay", null);
 		#end
 
 		for (i in 0...WeekData.weeksList.length) {
@@ -301,6 +301,11 @@ class FreeplayState extends MusicBeatState
 		{
 			openSubState(new ResetScoreSubState(songs[curSelected].songName, curDifficulty, songs[curSelected].songCharacter));
 			FlxG.sound.play(Paths.sound('scrollMenu'));
+		}
+
+		if(controls.BACK)
+		{
+			destroyFreeplayVocals();
 		}
 		super.update(elapsed);
 	}
