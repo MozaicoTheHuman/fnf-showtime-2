@@ -37,7 +37,7 @@ class MainMenuState extends MusicBeatState
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
 	
-	var optionShit:Array<String> = ['story_mode','freeplay','options','awards','credits'];
+	var optionShit:Array<String> = ['story_mode','freeplay','awards','credits','options'];
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
@@ -61,7 +61,7 @@ class MainMenuState extends MusicBeatState
 	{
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		DiscordClient.changePresence("Main Menu", null);
 		#end
 		
 		Conductor.changeBPM(102);
@@ -125,8 +125,8 @@ class MainMenuState extends MusicBeatState
 		charshadow.scrollFactor.set(0, 0);
 		charshadow.x += 75;
 		charshadow.y += 35;
-		charshadow.scale.x = 0.6;
-		charshadow.scale.y = 0.6;
+		charshadow.scale.x = 0.64;
+		charshadow.scale.y = 0.64;
 		charshadow.antialiasing = ClientPrefs.globalAntialiasing;
 		charshadow.x = 1000;
 		add(charshadow);
@@ -137,8 +137,8 @@ class MainMenuState extends MusicBeatState
 		char.x += 75;
 		char.y += 35;
 		if(menuUnlocked != "maritza"){
-			char.scale.x = 0.6;
-			char.scale.y = 0.6;
+			char.scale.x = 0.64;
+			char.scale.y = 0.64;
 		}else{
 			char.scale.x = 0.73;
 			char.scale.y = 0.73;
@@ -493,7 +493,7 @@ class MainMenuState extends MusicBeatState
 			ease: FlxEase.quadOut,
 		});
 
-		FlxTween.tween(overlay1, {x: -320}, 1, {
+		FlxTween.tween(overlay1, {x: -320}, 1.05, {
 			ease: FlxEase.quadOut,
 		});
 		FlxTween.tween(overlay2, {x: -320}, 1, {
