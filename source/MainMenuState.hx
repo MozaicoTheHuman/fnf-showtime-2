@@ -64,6 +64,8 @@ class MainMenuState extends MusicBeatState
 		DiscordClient.changePresence("In the Menus", null);
 		#end
 		
+		Conductor.changeBPM(102);
+
 		camGame = new FlxCamera();
 		camAchievement = new FlxCamera();
 		camAchievement.bgColor.alpha = 0;
@@ -93,9 +95,10 @@ class MainMenuState extends MusicBeatState
 
 		bg = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/'+ menuUnlocked +'/bg'));
 		bg.screenCenter();
-		bg.scrollFactor.set(0, 0);
 		bg.scale.x = 0.7;
 		bg.scale.y = 0.7;
+		bg.scrollFactor.x = 0;
+		bg.scrollFactor.y = 0.18;
 		bg.alpha = 0;
 		add(bg);
 
@@ -317,16 +320,37 @@ class MainMenuState extends MusicBeatState
 	#end
 
 	var selectedSomethin:Bool = false;
+	var danceLeft:Bool = false;
 
 	override function update(elapsed:Float)
 	{
+		if (FlxG.sound.music != null)
+			Conductor.songPosition = FlxG.sound.music.time;
+
 		if (FlxG.sound.music.volume < 0.8)
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
 
-		if(bg.alpha > 0.5){
-				bg.alpha = 0.5;
+		if(bg.alpha > 1){
+				bg.alpha = 1;
+		}
+		if (bg.scale.x == 0.72 && bg.scale.y == 0.72) {
+			FlxTween.tween(bg, {'scale.x': 0.7, 'scale.y': 0.7}, 0.8, {ease: FlxEase.quadInOut});
+		} else if (bg.scale.x == 0.7 && bg.scale.y == 0.7) {
+			bg.scale.x = 0.72;
+			bg.scale.y = 0.72;
+		}
+
+		if (starup.scale.x == 1 && starup.scale.y == 1) {
+			FlxTween.tween(starup, {'scale.x': 0.7, 'scale.y': 0.7}, 2, {ease: FlxEase.quadInOut});
+		} else if (stardown.scale.x == 0.7 && stardown.scale.y == 0.7) {
+			FlxTween.tween(starup, {'scale.x': 1, 'scale.y': 1}, 2, {ease: FlxEase.quadInOut});
+		}
+		if (stardown.scale.x == 1 && stardown.scale.y == 1) {
+			FlxTween.tween(stardown, {'scale.x': 0.7, 'scale.y': 0.7}, 2, {ease: FlxEase.quadInOut});
+		} else if (stardown.scale.x == 0.7 && stardown.scale.y == 0.7) {
+			FlxTween.tween(stardown, {'scale.x': 1, 'scale.y': 1}, 2, {ease: FlxEase.quadInOut});
 		}
 
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 5.6, 0, 1);
@@ -416,7 +440,6 @@ class MainMenuState extends MusicBeatState
 
 	}
 
-	
 	function changeItem(huh:Int = 0)
 	{
 		curSelected += huh;
@@ -457,7 +480,7 @@ class MainMenuState extends MusicBeatState
 						spr.offset.x += 60;
 						spr.offset.y += 20;
 				}
-
+				camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y);
 
 				FlxG.log.add(spr.frameWidth);
 			}
