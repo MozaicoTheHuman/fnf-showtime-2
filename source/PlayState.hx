@@ -3671,11 +3671,13 @@ class PlayState extends MusicBeatState
 		if (noteDiff > Conductor.safeZoneOffset * 0.75)
 		{
 			daRating = 'shit';
+			health -= 0.15;
 			score = 50;
 		}
 		else if (noteDiff > Conductor.safeZoneOffset * 0.5)
 		{
 			daRating = 'bad';
+			health -= 0.09;
 			score = 100;
 		}
 		else if (noteDiff > Conductor.safeZoneOffset * 0.25)
@@ -3985,6 +3987,7 @@ class PlayState extends MusicBeatState
 
 		health -= daNote.missHealth; // For testing purposes
 		trace(daNote.missHealth);
+		combo = 0;
 		songMisses++;
 		vocals.volume = 0;
 		RecalculateRating();
@@ -4026,7 +4029,8 @@ class PlayState extends MusicBeatState
 	{
 		if (!boyfriend.stunned)
 		{
-			health -= 0.04;
+			health -= 0.05;
+			combo = 0;
 			if (combo > 5 && gf.animOffsets.exists('sad'))
 			{
 				gf.playAnim('sad');
