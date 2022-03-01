@@ -139,7 +139,7 @@ class FreeplayState extends MusicBeatState
 		var swag:Alphabet = new Alphabet(1, 0, "swag");
 
 		// JUST DOIN THIS SHIT FOR TESTING!!!
-		/* 
+		/*
 			var md:String = Markdown.markdownToHtml(Assets.getText('CHANGELOG.md'));
 
 			var texFel:TextField = new TextField();
@@ -220,6 +220,7 @@ class FreeplayState extends MusicBeatState
 		var downP = controls.UI_DOWN_P;
 		var accepted = controls.ACCEPT;
 		var space = FlxG.keys.justPressed.SPACE;
+		var chars = FlxG.keys.justPressed.P;
 
 		var shiftMult:Int = 1;
 		if(FlxG.keys.pressed.SHIFT) shiftMult = 3;
@@ -240,6 +241,7 @@ class FreeplayState extends MusicBeatState
 
 		if (controls.BACK)
 		{
+			destroyFreeplayVocals();
 			if(colorTween != null) {
 				colorTween.cancel();
 			}
@@ -294,7 +296,7 @@ class FreeplayState extends MusicBeatState
 			LoadingState.loadAndSwitchState(new PlayState());
 
 			FlxG.sound.music.volume = 0;
-					
+
 			destroyFreeplayVocals();
 		}
 		else if(controls.RESET)
@@ -303,10 +305,8 @@ class FreeplayState extends MusicBeatState
 			FlxG.sound.play(Paths.sound('scrollMenu'));
 		}
 
-		if(controls.BACK)
-		{
-			destroyFreeplayVocals();
-		}
+		if (chars) MusicBeatState.switchState(new CharactersMenuState());
+		
 		super.update(elapsed);
 	}
 

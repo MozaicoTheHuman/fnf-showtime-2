@@ -31,6 +31,8 @@ class ClientPrefs
 	public static var dynamicCamera:Bool = true;
 	public static var unlockedMenus:Array<String> = ["maavo", "ivette", "maritza"];
 
+	public static var comboOffset:Array<Int> = [0, 0, 0, 0];
+
 	public static var defaultKeys:Array<FlxKey> = [
 		A,
 		LEFT, // Note Left
@@ -89,6 +91,7 @@ class ClientPrefs
 		FlxG.save.data.violence = violence;
 		FlxG.save.data.camZooms = camZooms;
 		FlxG.save.data.noteOffset = noteOffset;
+		FlxG.save.data.comboOffset = comboOffset;
 		FlxG.save.data.hideHud = hideHud;
 		FlxG.save.data.arrowHSV = arrowHSV;
 		FlxG.save.data.imagesPersist = imagesPersist;
@@ -187,6 +190,10 @@ class ClientPrefs
 		if (FlxG.save.data.noteOffset != null)
 		{
 			noteOffset = FlxG.save.data.noteOffset;
+		}
+		if (FlxG.save.data.comboOffset != null)
+		{
+			comboOffset = FlxG.save.data.comboOffset;
 		}
 		if (FlxG.save.data.arrowHSV != null)
 		{
