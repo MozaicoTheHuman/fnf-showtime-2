@@ -27,7 +27,7 @@ class NoteSplash extends FlxSprite
 
 	public function setupNoteSplash(x:Float, y:Float, note:Int = 0, texture:String = null, hueColor:Float = 0, satColor:Float = 0, brtColor:Float = 0) {
 		setPosition(x - Note.swagWidth * 0.95, y - Note.swagWidth);
-		alpha = 0.6;
+		alpha = 0.69;
 
 		if(texture == null) {
 			texture = 'noteSplashes';
@@ -40,7 +40,7 @@ class NoteSplash extends FlxSprite
 		colorSwap.hue = hueColor;
 		colorSwap.saturation = satColor;
 		colorSwap.brightness = brtColor;
-		offset.set(10, 10);
+		offset.set(-24, -10); //offset.set(10, 10);
 
 		var animNum:Int = FlxG.random.int(1, 2);
 		animation.play('note' + note + '-' + animNum, true);
@@ -49,8 +49,9 @@ class NoteSplash extends FlxSprite
 		switch (texture)
 		{
 			case 'DRAWNOTE_splashes':
-				offset.x -= 40;
-				offset.y -= 20;
+				offset.x -= 18;
+				offset.y -= 18;
+				alpha = 1;
 		}
 	}
 
