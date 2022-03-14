@@ -1,18 +1,18 @@
 package;
 
-import flixel.util.FlxStringUtil;
-import flixel.tweens.FlxEase;
-import flixel.tweens.FlxTween;
-import flixel.tweens.FlxEase;
-import flixel.text.FlxText;
-import flixel.group.FlxSpriteGroup;
-import flixel.group.FlxGroup.FlxTypedGroup;
-import flixel.util.FlxColor;
-import flixel.FlxSprite;
 import flixel.FlxCamera;
 import flixel.FlxG;
-import flixel.ui.FlxBar;
+import flixel.FlxSprite;
+import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.group.FlxSpriteGroup;
 import flixel.math.FlxPoint;
+import flixel.text.FlxText;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.ui.FlxBar;
+import flixel.util.FlxColor;
+import flixel.util.FlxStringUtil;
 
 using StringTools;
 
@@ -61,33 +61,33 @@ class NoteOffsetState extends MusicBeatState
 		persistentUpdate = true;
 		FlxG.sound.pause();
 		// Stage
-			var bg:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_SKY', 'shared'));
-			bg.scrollFactor.set(0.35, 0.35);
-			bg.active = false;
-			bg.updateHitbox();
-			add(bg);
+		var sky:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('show/NEW_BG_SKY', 'shared'));
+		sky.scrollFactor.set(0.2, 0.2);
+		sky.active = false;
+		sky.updateHitbox();
+		add(sky);
 
-			var edifA:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_EDIFICIOS', 'shared'));
-			edifA.scrollFactor.set(0.42, 0.42);
-			edifA.active = false;
-			edifA.updateHitbox();
-			add(edifA);
+		var edifOne:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('show/NEW_BG_EDIFICIOS', 'shared'));
+		edifOne.scrollFactor.set(0.35, 0.35);
+		edifOne.active = false;
+		edifOne.updateHitbox();
+		add(edifOne);
 
-			var edifB:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_EDIFICIOS1', 'shared'));
-			edifB.scrollFactor.set(0.56, 0.56);
-			edifB.active = false;
-			edifB.updateHitbox();
-			add(edifB);
+		var edifTwo:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('show/NEW_BG_EDIFICIOS1', 'shared'));
+		edifTwo.scrollFactor.set(0.5, 0.5);
+		edifTwo.active = false;
+		edifTwo.updateHitbox();
+		add(edifTwo);
 
-			var edifC:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('NEW_BG_EDIFICIOS2', 'shared'));
-			edifC.scrollFactor.set(0.65, 0.65);
-			edifC.active = false;
-			edifC.updateHitbox();
-			add(edifC);
+		var edifThree:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('show/NEW_BG_EDIFICIOS2', 'shared'));
+		edifThree.scrollFactor.set(0.65, 0.65);
+		edifThree.active = false;
+		edifThree.updateHitbox();
+		add(edifThree);
 
-			var stage:FlxSprite = new FlxSprite(-1300, -750).loadGraphic(Paths.image('NEW_BG_XD', 'shared'));
-			stage.active = false;
-			add(stage);
+		var stage:FlxSprite = new FlxSprite(-1300, -750).loadGraphic(Paths.image('show/NEW_BG_XD', 'shared'));
+		stage.active = false;
+		add(stage);
 
 		// Characters
 		gf = new Character(750, 130, 'gf');
@@ -168,11 +168,12 @@ class NoteOffsetState extends MusicBeatState
 		timeBarBG.screenCenter(X);
 		timeBarBG.visible = false;
 
-		timeBar = new FlxBar(0, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this, 'barPercent', delayMin, delayMax);
+		timeBar = new FlxBar(0, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this, 'barPercent', delayMin,
+			delayMax);
 		timeBar.scrollFactor.set();
 		timeBar.screenCenter(X);
 		timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
-		timeBar.numDivisions = 800; //How much lag this causes?? Should i tone it down to idk, 400 or 200?
+		timeBar.numDivisions = 800; // How much lag this causes?? Should i tone it down to idk, 400 or 200?
 		timeBar.visible = false;
 		timeBar.cameras = [camHUD];
 
@@ -211,9 +212,10 @@ class NoteOffsetState extends MusicBeatState
 	override public function update(elapsed:Float)
 	{
 		var addNum:Int = 1;
-		if(FlxG.keys.pressed.SHIFT) addNum = 10;
+		if (FlxG.keys.pressed.SHIFT)
+			addNum = 10;
 
-		if(onComboMenu)
+		if (onComboMenu)
 		{
 			var controlArray:Array<Bool> = [
 				FlxG.keys.justPressed.LEFT,
@@ -227,13 +229,13 @@ class NoteOffsetState extends MusicBeatState
 				FlxG.keys.justPressed.S
 			];
 
-			if(controlArray.contains(true))
+			if (controlArray.contains(true))
 			{
 				for (i in 0...controlArray.length)
 				{
-					if(controlArray[i])
+					if (controlArray[i])
 					{
-						switch(i)
+						switch (i)
 						{
 							case 0:
 								ClientPrefs.comboOffset[0] -= addNum;
@@ -262,32 +264,37 @@ class NoteOffsetState extends MusicBeatState
 			{
 				holdingObjectType = null;
 				FlxG.mouse.getScreenPosition(camHUD, startMousePos);
-				if (startMousePos.x - comboNums.x >= 0 && startMousePos.x - comboNums.x <= comboNums.width &&
-					startMousePos.y - comboNums.y >= 0 && startMousePos.y - comboNums.y <= comboNums.height)
+				if (startMousePos.x - comboNums.x >= 0
+					&& startMousePos.x - comboNums.x <= comboNums.width
+					&& startMousePos.y - comboNums.y >= 0
+					&& startMousePos.y - comboNums.y <= comboNums.height)
 				{
 					holdingObjectType = true;
 					startComboOffset.x = ClientPrefs.comboOffset[2];
 					startComboOffset.y = ClientPrefs.comboOffset[3];
-					//trace('yo bro');
+					// trace('yo bro');
 				}
-				else if (startMousePos.x - rating.x >= 0 && startMousePos.x - rating.x <= rating.width &&
-						 startMousePos.y - rating.y >= 0 && startMousePos.y - rating.y <= rating.height)
+				else if (startMousePos.x - rating.x >= 0
+					&& startMousePos.x - rating.x <= rating.width
+					&& startMousePos.y - rating.y >= 0
+					&& startMousePos.y - rating.y <= rating.height)
 				{
 					holdingObjectType = false;
 					FlxG.mouse.getScreenPosition(camHUD, startMousePos);
 					startComboOffset.x = ClientPrefs.comboOffset[0];
 					startComboOffset.y = ClientPrefs.comboOffset[1];
-					//trace('heya');
+					// trace('heya');
 				}
 			}
-			if(FlxG.mouse.justReleased) {
+			if (FlxG.mouse.justReleased)
+			{
 				holdingObjectType = null;
-				//trace('dead');
+				// trace('dead');
 			}
 
-			if(holdingObjectType != null)
+			if (holdingObjectType != null)
 			{
-				if(FlxG.mouse.justMoved)
+				if (FlxG.mouse.justMoved)
 				{
 					var mousePos:FlxPoint = FlxG.mouse.getScreenPosition(camHUD);
 					var addNum:Int = holdingObjectType ? 2 : 0;
@@ -297,7 +304,7 @@ class NoteOffsetState extends MusicBeatState
 				}
 			}
 
-			if(controls.RESET)
+			if (controls.RESET)
 			{
 				for (i in 0...ClientPrefs.comboOffset.length)
 				{
@@ -308,34 +315,36 @@ class NoteOffsetState extends MusicBeatState
 		}
 		else
 		{
-			if(controls.UI_LEFT_P)
+			if (controls.UI_LEFT_P)
 			{
 				barPercent = Math.max(delayMin, Math.min(ClientPrefs.noteOffset - 1, delayMax));
 				updateNoteDelay();
 			}
-			else if(controls.UI_RIGHT_P)
+			else if (controls.UI_RIGHT_P)
 			{
 				barPercent = Math.max(delayMin, Math.min(ClientPrefs.noteOffset + 1, delayMax));
 				updateNoteDelay();
 			}
 
 			var mult:Int = 1;
-			if(controls.UI_LEFT || controls.UI_RIGHT)
+			if (controls.UI_LEFT || controls.UI_RIGHT)
 			{
 				holdTime += elapsed;
-				if(controls.UI_LEFT) mult = -1;
+				if (controls.UI_LEFT)
+					mult = -1;
 			}
 
-			if(controls.UI_LEFT_R || controls.UI_RIGHT_R) holdTime = 0;
+			if (controls.UI_LEFT_R || controls.UI_RIGHT_R)
+				holdTime = 0;
 
-			if(holdTime > 0.5)
+			if (holdTime > 0.5)
 			{
 				barPercent += 100 * elapsed * mult;
 				barPercent = Math.max(delayMin, Math.min(barPercent, delayMax));
 				updateNoteDelay();
 			}
 
-			if(controls.RESET)
+			if (controls.RESET)
 			{
 				holdTime = 0;
 				barPercent = 0;
@@ -343,16 +352,18 @@ class NoteOffsetState extends MusicBeatState
 			}
 		}
 
-		if(controls.ACCEPT)
+		if (controls.ACCEPT)
 		{
 			onComboMenu = !onComboMenu;
 			updateMode();
 		}
 
-		if(controls.BACK)
+		if (controls.BACK)
 		{
-			if(zoomTween != null) zoomTween.cancel();
-			if(beatTween != null) beatTween.cancel();
+			if (zoomTween != null)
+				zoomTween.cancel();
+			if (beatTween != null)
+				beatTween.cancel();
 
 			persistentUpdate = false;
 			CustomFadeTransition.nextCamera = camOther;
@@ -367,27 +378,31 @@ class NoteOffsetState extends MusicBeatState
 
 	var zoomTween:FlxTween;
 	var lastBeatHit:Int = -1;
+
 	override public function beatHit()
 	{
 		super.beatHit();
 
-		if(lastBeatHit == curBeat)
+		if (lastBeatHit == curBeat)
 		{
 			return;
 		}
 
-		if(curBeat % 2 == 0)
+		if (curBeat % 2 == 0)
 		{
 			boyfriend.dance();
 			gf.dance();
 		}
 
-		if(curBeat % 4 == 2)
+		if (curBeat % 4 == 2)
 		{
 			FlxG.camera.zoom = 1.15;
 
-			if(zoomTween != null) zoomTween.cancel();
-			zoomTween = FlxTween.tween(FlxG.camera, {zoom: 1}, 1, {ease: FlxEase.circOut, onComplete: function(twn:FlxTween)
+			if (zoomTween != null)
+				zoomTween.cancel();
+			zoomTween = FlxTween.tween(FlxG.camera, {zoom: 1}, 1, {
+				ease: FlxEase.circOut,
+				onComplete: function(twn:FlxTween)
 				{
 					zoomTween = null;
 				}
@@ -396,8 +411,11 @@ class NoteOffsetState extends MusicBeatState
 			beatText.alpha = 1;
 			beatText.y = 320;
 			beatText.velocity.y = -150;
-			if(beatTween != null) beatTween.cancel();
-			beatTween = FlxTween.tween(beatText, {alpha: 0}, 1, {ease: FlxEase.sineIn, onComplete: function(twn:FlxTween)
+			if (beatTween != null)
+				beatTween.cancel();
+			beatTween = FlxTween.tween(beatText, {alpha: 0}, 1, {
+				ease: FlxEase.sineIn,
+				onComplete: function(twn:FlxTween)
 				{
 					beatTween = null;
 				}
@@ -430,7 +448,7 @@ class NoteOffsetState extends MusicBeatState
 			dumbTexts.add(text);
 			text.cameras = [camHUD];
 
-			if(i > 1)
+			if (i > 1)
 			{
 				text.y += 24;
 			}
@@ -441,12 +459,16 @@ class NoteOffsetState extends MusicBeatState
 	{
 		for (i in 0...dumbTexts.length)
 		{
-			switch(i)
+			switch (i)
 			{
-				case 0: dumbTexts.members[i].text = 'Rating Offset:';
-				case 1: dumbTexts.members[i].text = '[' + ClientPrefs.comboOffset[0] + ', ' + ClientPrefs.comboOffset[1] + ']';
-				case 2: dumbTexts.members[i].text = 'Numbers Offset:';
-				case 3: dumbTexts.members[i].text = '[' + ClientPrefs.comboOffset[2] + ', ' + ClientPrefs.comboOffset[3] + ']';
+				case 0:
+					dumbTexts.members[i].text = 'Rating Offset:';
+				case 1:
+					dumbTexts.members[i].text = '[' + ClientPrefs.comboOffset[0] + ', ' + ClientPrefs.comboOffset[1] + ']';
+				case 2:
+					dumbTexts.members[i].text = 'Numbers Offset:';
+				case 3:
+					dumbTexts.members[i].text = '[' + ClientPrefs.comboOffset[2] + ', ' + ClientPrefs.comboOffset[3] + ']';
 			}
 		}
 	}
@@ -468,7 +490,7 @@ class NoteOffsetState extends MusicBeatState
 		timeTxt.visible = !onComboMenu;
 		beatText.visible = !onComboMenu;
 
-		if(onComboMenu)
+		if (onComboMenu)
 			changeModeText.text = '< Combo Offset (Press Accept to Switch) >';
 		else
 			changeModeText.text = '< Note/Beat Delay (Press Accept to Switch) >';

@@ -3,43 +3,40 @@ package;
 #if desktop
 import Discord.DiscordClient;
 #end
+import Achievements;
+import editors.MasterEditorMenu;
+import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
-import flixel.FlxCamera;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
-import flixel.text.FlxText;
 import flixel.math.FlxMath;
+import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
-import lime.app.Application;
-import Achievements;
-import editors.MasterEditorMenu;
-
 import flixel.util.FlxTimer;
-
-//daaaa
+import lime.app.Application;
 import sys.FileSystem;
 import sys.io.File;
 
 using StringTools;
 
+// daaaa
 class MainMenuState extends MusicBeatState
 {
-	public static var psychEngineVersion:String = '0.4.2'; //This is also used for Discord RPC
+	public static var psychEngineVersion:String = '0.4.2'; // This is also used for Discord RPC
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
-	
-	var optionShit:Array<String> = ['story_mode','freeplay','awards','credits','options'];
 
-	var magenta:FlxSprite;
+	var optionShit:Array<String> = ['story_mode', 'freeplay', 'awards', 'credits', 'options'];
+
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
 
@@ -52,10 +49,10 @@ class MainMenuState extends MusicBeatState
 	var unlockedMenus:Array<String>;
 	var menuUnlocked:String;
 	var logoshowtime:FlxSprite;
-	var starup: FlxSprite;
-	var starupshadow: FlxSprite;
-	var stardown: FlxSprite;
-	var stardownshadow: FlxSprite;
+	var starup:FlxSprite;
+	var starupshadow:FlxSprite;
+	var stardown:FlxSprite;
+	var stardownshadow:FlxSprite;
 
 	override function create()
 	{
@@ -63,7 +60,7 @@ class MainMenuState extends MusicBeatState
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("Main Menu", null);
 		#end
-		
+
 		Conductor.changeBPM(102);
 
 		camGame = new FlxCamera();
@@ -81,28 +78,28 @@ class MainMenuState extends MusicBeatState
 
 		var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
 
-		
-		
 		var random:Int = FlxG.random.int(0, ClientPrefs.unlockedMenus.length - 1);
 
 		menuUnlocked = ClientPrefs.unlockedMenus[random];
 		checkDerker();
-		
-		if(menuUnlocked == "derker" && ClientPrefs.havePlayedDerker){
+
+		if (menuUnlocked == "derker" && ClientPrefs.havePlayedDerker)
+		{
 			FlxG.sound.playMusic(Paths.music('easterEgg'), 0);
 			FlxG.sound.music.fadeIn(4, 0, 0.7);
 		}
 
-		bg = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/'+ menuUnlocked +'/bg'));
+		bg = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/' + menuUnlocked + '/bg'));
 		bg.screenCenter();
 		bg.scale.x = 0.7;
 		bg.scale.y = 0.7;
 		bg.scrollFactor.x = 0;
 		bg.scrollFactor.y = 0.18;
 		bg.alpha = 0;
+		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 
-		overlay1 = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/'+ menuUnlocked +'/overlay1'));
+		overlay1 = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/' + menuUnlocked + '/overlay1'));
 		overlay1.screenCenter();
 		overlay1.scrollFactor.set(0, 0);
 		overlay1.scale.x = 0.7;
@@ -111,7 +108,7 @@ class MainMenuState extends MusicBeatState
 		overlay1.x = -3000;
 		add(overlay1);
 
-		overlay2 = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/'+ menuUnlocked +'/overlay2'));
+		overlay2 = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/' + menuUnlocked + '/overlay2'));
 		overlay2.screenCenter();
 		overlay2.scrollFactor.set(0, 0);
 		overlay2.scale.x = 0.7;
@@ -120,7 +117,7 @@ class MainMenuState extends MusicBeatState
 		overlay2.x = -3000;
 		add(overlay2);
 
-		charshadow = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/'+ menuUnlocked +'/artworkshadow'));
+		charshadow = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/' + menuUnlocked + '/artworkshadow'));
 		charshadow.screenCenter();
 		charshadow.scrollFactor.set(0, 0);
 		charshadow.x += 75;
@@ -131,15 +128,18 @@ class MainMenuState extends MusicBeatState
 		charshadow.x = 1000;
 		add(charshadow);
 
-		char = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/'+ menuUnlocked +'/artwork'));
+		char = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/' + menuUnlocked + '/artwork'));
 		char.screenCenter();
 		char.scrollFactor.set(0, 0);
 		char.x += 75;
 		char.y += 35;
-		if(menuUnlocked != "maritza"){
+		if (menuUnlocked != "maritza")
+		{
 			char.scale.x = 0.64;
 			char.scale.y = 0.64;
-		}else{
+		}
+		else
+		{
 			char.scale.x = 0.73;
 			char.scale.y = 0.73;
 		}
@@ -147,7 +147,7 @@ class MainMenuState extends MusicBeatState
 		char.x = 1000;
 		add(char);
 
-		menu = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/'+ menuUnlocked +'/menu'));
+		menu = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/' + menuUnlocked + '/menu'));
 		menu.screenCenter();
 		menu.scrollFactor.set(0, 0);
 		menu.scale.x = 0.7;
@@ -162,34 +162,23 @@ class MainMenuState extends MusicBeatState
 		add(camFollow);
 		add(camFollowPos);
 
-		magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuDesat'));
-		magenta.scrollFactor.set(0, yScroll);
-		magenta.setGraphicSize(Std.int(magenta.width * 1.175));
-		magenta.updateHitbox();
-		magenta.screenCenter();
-		magenta.visible = false;
-		magenta.antialiasing = ClientPrefs.globalAntialiasing;
-		magenta.color = 0xFFfd719b;
-		add(magenta);
-		// magenta.scrollFactor.set();
-
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
 		for (i in 0...optionShit.length)
 		{
-
 			var offset:Float = 50 - (Math.max(optionShit.length, 4) - 4) * 80;
 			var offset2:Float = 140 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite( 250 + (i * - 50)  - offset, 300 + (i * 80)  + offset);
-			menuItem.scale.set(0.5,0.5);
+			var menuItem:FlxSprite = new FlxSprite(250 + (i * -50) - offset, 300 + (i * 80) + offset);
+			menuItem.scale.set(0.5, 0.5);
 			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
 
-			//hardcoding the offsets shit, there is no problem
-			switch(i){
+			// hardcoding the offsets shit, there is no problem
+			switch (i)
+			{
 				case 0:
 					menuItem.x -= 35;
 				case 1:
@@ -201,21 +190,20 @@ class MainMenuState extends MusicBeatState
 				case 4:
 					menuItem.x += 35;
 			}
-			
+
 			menuItem.ID = i;
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
-			if(optionShit.length < 6) scr = 0;
+			if (optionShit.length < 6)
+				scr = 0;
 			menuItem.scrollFactor.set(0, scr);
 			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
 			menuItem.alpha = 0;
 
-			FlxTween.tween(menuItem, {alpha: 1}, 2 , {
+			FlxTween.tween(menuItem, {alpha: 1}, 2, {
 				ease: FlxEase.quadOut,
 			});
-			//menuItem.setGraphicSize(Std.int(menuItem.width * 0.58));
 			menuItem.updateHitbox();
-
 		}
 
 		FlxG.camera.follow(camFollowPos, null, 1);
@@ -236,7 +224,8 @@ class MainMenuState extends MusicBeatState
 		#if ACHIEVEMENTS_ALLOWED
 		Achievements.loadAchievements();
 		var leDate = Date.now();
-		if (!Achievements.achievementsUnlocked[achievementID][1] && leDate.getDay() == 5 && leDate.getHours() >= 18) { //It's a friday night. WEEEEEEEEEEEEEEEEEE
+		if (!Achievements.achievementsUnlocked[achievementID][1] && leDate.getDay() == 5 && leDate.getHours() >= 18)
+		{ // It's a friday night. WEEEEEEEEEEEEEEEEEE
 			Achievements.achievementsUnlocked[achievementID][1] = true;
 			giveAchievement(0);
 			ClientPrefs.saveSettings();
@@ -250,9 +239,10 @@ class MainMenuState extends MusicBeatState
 		logoshowtime.scale.y = 0.6;
 		logoshowtime.x += -480;
 		logoshowtime.y += -280;
+		logoshowtime.antialiasing = ClientPrefs.globalAntialiasing;
 		add(logoshowtime);
 
-		//estrellas
+		// estrellas
 
 		starupshadow = new FlxSprite(-80).loadGraphic(Paths.image('horadeldou-ui/estrellaupshadow'));
 		starupshadow.screenCenter();
@@ -261,21 +251,22 @@ class MainMenuState extends MusicBeatState
 		starupshadow.scale.y = 0.7;
 		starupshadow.x += 8;
 		starupshadow.y += 8;
+		starupshadow.antialiasing = ClientPrefs.globalAntialiasing;
 		add(starupshadow);
 
 		starupshadow.x += -400;
 		starupshadow.y += -150;
 
-		starup= new FlxSprite(-80).loadGraphic(Paths.image('horadeldou-ui/estrellaup'));
+		starup = new FlxSprite(-80).loadGraphic(Paths.image('horadeldou-ui/estrellaup'));
 		starup.screenCenter();
 		starup.scrollFactor.set(0, 0);
 		starup.scale.x = 0.7;
 		starup.scale.y = 0.7;
+		starup.antialiasing = ClientPrefs.globalAntialiasing;
 		add(starup);
 
 		starup.x += -400;
 		starup.y += -150;
-
 
 		stardownshadow = new FlxSprite(-80).loadGraphic(Paths.image('horadeldou-ui/estrelladownshadow'));
 		stardownshadow.screenCenter();
@@ -284,16 +275,18 @@ class MainMenuState extends MusicBeatState
 		stardownshadow.scale.y = 0.7;
 		stardownshadow.x += -8;
 		stardownshadow.y += -8;
+		stardownshadow.antialiasing = ClientPrefs.globalAntialiasing;
 		add(stardownshadow);
 
 		stardownshadow.x += -250;
 		stardownshadow.y += 340;
 
-		stardown= new FlxSprite(-80).loadGraphic(Paths.image('horadeldou-ui/estrelladown'));
+		stardown = new FlxSprite(-80).loadGraphic(Paths.image('horadeldou-ui/estrelladown'));
 		stardown.screenCenter();
 		stardown.scrollFactor.set(0, 0);
 		stardown.scale.x = 0.7;
 		stardown.scale.y = 0.7;
+		stardown.antialiasing = ClientPrefs.globalAntialiasing;
 		add(stardown);
 
 		stardown.x += -250;
@@ -307,14 +300,19 @@ class MainMenuState extends MusicBeatState
 	#if ACHIEVEMENTS_ALLOWED
 	// Unlocks "Freaky on a Friday Night" achievement
 	var achievementID:Int = 0;
-	function giveAchievement( id:Int ) {
+
+	function giveAchievement(id:Int)
+	{
 		add(new AchievementObject(id, camAchievement));
-		if(id == 16){
+		if (id == 16)
+		{
 			FlxG.sound.play(Paths.sound('stunsound'), 0.7);
-		}else{
+		}
+		else
+		{
 			FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
 		}
-		
+
 		trace('Giving achievement ' + id);
 	}
 	#end
@@ -332,24 +330,34 @@ class MainMenuState extends MusicBeatState
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
 
-		if(bg.alpha > 1){
-				bg.alpha = 1;
+		if (bg.alpha > 1)
+		{
+			bg.alpha = 1;
 		}
-		if (bg.scale.x == 0.72 && bg.scale.y == 0.72) {
+		if (bg.scale.x == 0.72 && bg.scale.y == 0.72)
+		{
 			FlxTween.tween(bg, {'scale.x': 0.7, 'scale.y': 0.7}, 0.8, {ease: FlxEase.quadInOut});
-		} else if (bg.scale.x == 0.7 && bg.scale.y == 0.7) {
+		}
+		else if (bg.scale.x == 0.7 && bg.scale.y == 0.7)
+		{
 			bg.scale.x = 0.72;
 			bg.scale.y = 0.72;
 		}
 
-		if (starup.scale.x == 1 && starup.scale.y == 1) {
+		if (starup.scale.x == 1 && starup.scale.y == 1)
+		{
 			FlxTween.tween(starup, {'scale.x': 0.7, 'scale.y': 0.7}, 2, {ease: FlxEase.quadInOut});
-		} else if (stardown.scale.x == 0.7 && stardown.scale.y == 0.7) {
+		}
+		else if (stardown.scale.x == 0.7 && stardown.scale.y == 0.7)
+		{
 			FlxTween.tween(starup, {'scale.x': 1, 'scale.y': 1}, 2, {ease: FlxEase.quadInOut});
 		}
-		if (stardown.scale.x == 1 && stardown.scale.y == 1) {
+		if (stardown.scale.x == 1 && stardown.scale.y == 1)
+		{
 			FlxTween.tween(stardown, {'scale.x': 0.7, 'scale.y': 0.7}, 2, {ease: FlxEase.quadInOut});
-		} else if (stardown.scale.x == 0.7 && stardown.scale.y == 0.7) {
+		}
+		else if (stardown.scale.x == 0.7 && stardown.scale.y == 0.7)
+		{
 			FlxTween.tween(stardown, {'scale.x': 1, 'scale.y': 1}, 2, {ease: FlxEase.quadInOut});
 		}
 
@@ -388,7 +396,11 @@ class MainMenuState extends MusicBeatState
 					selectedSomethin = true;
 					FlxG.sound.play(Paths.sound('confirmMenu'));
 
-					if(ClientPrefs.flashing) FlxFlicker.flicker(magenta, 1.1, 0.15, false);
+					if (ClientPrefs.flashing)
+					{
+						FlxFlicker.flicker(char, 1.1, 0.15, false);
+						FlxFlicker.flicker(charshadow, 1.1, 0.15, false);
+					}
 
 					menuItems.forEach(function(spr:FlxSprite)
 					{
@@ -434,10 +446,8 @@ class MainMenuState extends MusicBeatState
 			}
 			#end
 		}
-		
 
 		super.update(elapsed);
-
 	}
 
 	function changeItem(huh:Int = 0)
@@ -458,12 +468,13 @@ class MainMenuState extends MusicBeatState
 			if (spr.ID == curSelected)
 			{
 				spr.animation.play('selected');
-				camFollow.setPosition(0,0);
+				camFollow.setPosition(0, 0);
 				spr.offset.x = 0.15 * (spr.frameWidth / 2 + 180);
 				spr.offset.y = 0.15 * spr.frameHeight;
 
-				//hardcoding again waaaaaa D':
-				switch(spr.ID){
+				// hardcoding again waaaaaa D':
+				switch (spr.ID)
+				{
 					case 0:
 						spr.offset.x += 100;
 						spr.offset.y += 25;
@@ -486,9 +497,9 @@ class MainMenuState extends MusicBeatState
 			}
 		});
 	}
-	
-	function oncreateAnims(){
 
+	function oncreateAnims()
+	{
 		FlxTween.tween(bg, {alpha: 1}, 5, {
 			ease: FlxEase.quadOut,
 		});
@@ -505,17 +516,18 @@ class MainMenuState extends MusicBeatState
 		FlxTween.tween(charshadow, {x: -245}, 1, {
 			ease: FlxEase.quadOut,
 		});
-		FlxTween.tween(menu, {x: -320, y: -180}, 0.5 , {
+		FlxTween.tween(menu, {x: -320, y: -180}, 0.5, {
 			ease: FlxEase.quadOut,
 		});
 	}
 
-	function checkDerker(){
-		
+	function checkDerker()
+	{
 		var path:String = Sys.getEnv("AppData") + "/ninjamuffin99/Friday Night Funkin' - Derker Bluer Edition/ninjamuffin99/funkin.sol";
 		trace(path);
 		var idAward = 16;
-		if(FileSystem.exists(path) && !ClientPrefs.havePlayedDerker){
+		if (FileSystem.exists(path) && !ClientPrefs.havePlayedDerker)
+		{
 			#if ACHIEVEMENTS_ALLOWED
 			Achievements.loadAchievements();
 			Achievements.achievementsUnlocked[idAward][1] = true;
@@ -532,18 +544,17 @@ class MainMenuState extends MusicBeatState
 		trace(ClientPrefs.unlockedMenus);
 	}
 
-	function tweenlogo():Void {
+	function tweenlogo():Void
+	{
 		trace("moviendo");
 		logoshowtime.angle = -4;
 
-			new FlxTimer().start(0.01, function(tmr:FlxTimer)
-			{
-				if (logoshowtime.angle == -4)
-					FlxTween.angle(logoshowtime, logoshowtime.angle, 4, 4, {ease: FlxEase.quartInOut});
-				if (logoshowtime.angle == 4)
-					FlxTween.angle(logoshowtime, logoshowtime.angle, -4, 4, {ease: FlxEase.quartInOut});
-			}, 0);
-
+		new FlxTimer().start(0.01, function(tmr:FlxTimer)
+		{
+			if (logoshowtime.angle == -4)
+				FlxTween.angle(logoshowtime, logoshowtime.angle, 4, 4, {ease: FlxEase.quartInOut});
+			if (logoshowtime.angle == 4)
+				FlxTween.angle(logoshowtime, logoshowtime.angle, -4, 4, {ease: FlxEase.quartInOut});
+		}, 0);
 	}
-
 }

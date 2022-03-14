@@ -3,38 +3,34 @@ package;
 #if desktop
 import Discord.DiscordClient;
 #end
+import Controls;
+import flash.text.TextField;
 import flash.text.TextField;
 import flixel.FlxG;
+import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.FlxSprite;
+import flixel.FlxSubState;
 import flixel.addons.display.FlxGridOverlay;
+import flixel.graphics.FlxGraphic;
 import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.input.keyboard.FlxKey;
 import flixel.math.FlxMath;
 import flixel.text.FlxText;
-import flixel.util.FlxColor;
-import lime.utils.Assets;
-import flixel.FlxSubState;
-import flash.text.TextField;
-import flixel.FlxG;
-import flixel.FlxSprite;
-import flixel.util.FlxSave;
-import haxe.Json;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import flixel.util.FlxColor;
+import flixel.util.FlxSave;
 import flixel.util.FlxTimer;
-import flixel.input.keyboard.FlxKey;
-import flixel.graphics.FlxGraphic;
-import Controls;
+import haxe.Json;
+import lime.utils.Assets;
 
 using StringTools;
 
 // TO DO: Redo the menu creation system for not being as dumb
 class OptionsState extends MusicBeatState
 {
-	var options:Array<String> = [
-	'Note Colors',
-	'Controls',
-	'Adjust Delay and Combo',
-	'Preferences'];
+	var options:Array<String> = ['Note Colors', 'Controls', 'Adjust Delay and Combo', 'Preferences'];
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 
 	private static var curSelected:Int = 0;
@@ -796,7 +792,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 {
 	private static var curSelected:Int = 0;
 	static var unselectableOptions:Array<String> = ['GRAPHICS', 'GAMEPLAY'];
-	static var noCheckbox:Array<String> = ['Framerate', 'Note Delay'];
+	static var noCheckbox:Array<String> = ['Framerate'];
 
 	static var options:Array<String> = [
 		'GRAPHICS',
@@ -809,7 +805,6 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'GAMEPLAY',
 		'Downscroll',
 		'Middlescroll',
-		'Note Delay',
 		'Note Quantization',
 		'Note Splashes',
 		'Hide HUD',
@@ -1064,17 +1059,6 @@ class PreferencesSubstate extends MusicBeatSubstate
 								FlxG.drawFramerate = ClientPrefs.framerate;
 								FlxG.updateFramerate = ClientPrefs.framerate;
 							}
-						case 'Note Delay':
-							var mult:Int = 1;
-							if (holdTime > 1.5)
-							{ // Double speed after 1.5 seconds holding
-								mult = 2;
-							}
-							ClientPrefs.noteOffset += add * mult;
-							if (ClientPrefs.noteOffset < 0)
-								ClientPrefs.noteOffset = 0;
-							else if (ClientPrefs.noteOffset > 500)
-								ClientPrefs.noteOffset = 500;
 					}
 				reloadValues();
 
@@ -1119,8 +1103,6 @@ class PreferencesSubstate extends MusicBeatSubstate
 				daText = "The camera will move in the note direction.";
 			case 'Framerate':
 				daText = "Pretty self explanatory, isn't it?\nDefault value is 60.";
-			case 'Note Delay':
-				daText = "Changes how late a note is spawned.\nUseful for preventing audio lag from wireless earphones.";
 			case 'FPS Counter':
 				daText = "If unchecked, hides FPS Counter.";
 			case 'Low Quality':
@@ -1253,8 +1235,6 @@ class PreferencesSubstate extends MusicBeatSubstate
 				{
 					case 'Framerate':
 						daText = '' + ClientPrefs.framerate;
-					case 'Note Delay':
-						daText = ClientPrefs.noteOffset + 'ms';
 				}
 				var lastTracker:FlxSprite = text.sprTracker;
 				text.sprTracker = null;
