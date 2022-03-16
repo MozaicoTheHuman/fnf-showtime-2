@@ -100,10 +100,14 @@ class PlayState extends MusicBeatState
 	#end
 
 	// dynamic camera vars
-	public static var bfnoteMovementXoffset:Int = 0;
+	/*public static var bfnoteMovementXoffset:Int = 0;
 	public static var dadnoteMovementXoffset:Int = 0;
 	public static var dadnoteMovementYoffset:Int = 0;
-	public static var bfnoteMovementYoffset:Int = 0;
+	public static var bfnoteMovementYoffset:Int = 0;*/
+	var camX:Int = 0;
+	var camY:Int = 0;
+	var bfcamX:Int = 0;
+	var bfcamY:Int = 0;
 
 	public var BF_X:Float = 770;
 	public var BF_Y:Float = 100;
@@ -296,13 +300,6 @@ class PlayState extends MusicBeatState
 		FlxG.cameras.add(camHUD);
 		FlxG.cameras.add(camOther);
 		grpNoteSplashes = new FlxTypedGroup<NoteSplash>();
-		if (ClientPrefs.dynamicCamera)
-		{
-			dadnoteMovementXoffset = 0;
-			dadnoteMovementYoffset = 0;
-			bfnoteMovementXoffset = 0;
-			bfnoteMovementYoffset = 0;
-		}
 
 		FlxCamera.defaultCameras = [camGame];
 		CustomFadeTransition.nextCamera = camOther;
@@ -2352,20 +2349,20 @@ class PlayState extends MusicBeatState
 						{
 							case 0:
 								animToPlay = 'singLEFT';
-								if (ClientPrefs.dynamicCamera)
-									dadnoteMovementXoffset = -30;
+								camX = -30;
+								camY = 0;
 							case 1:
 								animToPlay = 'singDOWN';
-								if (ClientPrefs.dynamicCamera)
-									dadnoteMovementYoffset = 30;
+								camY = 30;
+								camX = 0;
 							case 2:
 								animToPlay = 'singUP';
-								if (ClientPrefs.dynamicCamera)
-									dadnoteMovementYoffset = -30;
+								camY = -30;
+								camX = 0;
 							case 3:
 								animToPlay = 'singRIGHT';
-								if (ClientPrefs.dynamicCamera)
-									dadnoteMovementXoffset = 30;
+								camX = 30;
+								camY = 0;
 						}
 						if (daNote.noteType == 'GF Sing')
 						{
@@ -3029,27 +3026,28 @@ class PlayState extends MusicBeatState
 	{
 		if (isDad)
 		{
-			switch (ClientPrefs.dynamicCamera)
-			{
-				case true:
-					camFollow.set(dad.getMidpoint().x + 150 + dadnoteMovementXoffset, dad.getMidpoint().y - 100 + dadnoteMovementYoffset);
-
-				case false:
-					camFollow.set(dad.getMidpoint().x + 150, dad.getMidpoint().y - 100);
-			}
+			camFollow.set(dad.getMidpoint().x + 150, dad.getMidpoint().y - 100);
 			camFollow.x += dad.cameraPosition[0];
 			camFollow.y += dad.cameraPosition[1];
+
+			if(ClientPrefs.dynamicCamera) {
+				camFollow.y += camY;
+				camFollow.x += camX;
+			}
+
 			tweenCamIn();
 		}
 		else
 		{
-			switch (ClientPrefs.dynamicCamera)
-			{
-				case true:
-					camFollow.set(boyfriend.getMidpoint().x - 100 + bfnoteMovementXoffset, boyfriend.getMidpoint().y - 100 + bfnoteMovementYoffset);
-				case false:
-					camFollow.set(boyfriend.getMidpoint().x - 100, boyfriend.getMidpoint().y - 100);
+			camFollow.set(boyfriend.getMidpoint().x - 100, boyfriend.getMidpoint().y - 100);
+			camFollow.x -= boyfriend.cameraPosition[0];
+			camFollow.y += boyfriend.cameraPosition[1];
+			
+			if(ClientPrefs.dynamicCamera) {
+				camFollow.y += bfcamY;
+				camFollow.x += bfcamX;
 			}
+
 			switch (curStage)
 			{
 				case 'limo':
@@ -3060,8 +3058,6 @@ class PlayState extends MusicBeatState
 					camFollow.x = boyfriend.getMidpoint().x - 200;
 					camFollow.y = boyfriend.getMidpoint().y - 200;
 			}
-			camFollow.x -= boyfriend.cameraPosition[0];
-			camFollow.y += boyfriend.cameraPosition[1];
 
 			if (Paths.formatToSongPath(SONG.song) == 'tutorial' && cameraTwn == null && FlxG.camera.zoom != 1)
 			{
@@ -3850,20 +3846,21 @@ class PlayState extends MusicBeatState
 				{
 					case 0:
 						animToPlay = 'singLEFT';
-						if (ClientPrefs.dynamicCamera)
-							bfnoteMovementXoffset = -30;
+						bfcamX = -30;
+						bfcamY = 0;
 					case 1:
 						animToPlay = 'singDOWN';
-						if (ClientPrefs.dynamicCamera)
-							bfnoteMovementYoffset = 30;
+						bfcamY = 30;
+						bfcamX = 0;
+
 					case 2:
 						animToPlay = 'singUP';
-						if (ClientPrefs.dynamicCamera)
-							bfnoteMovementYoffset = -30;
+						bfcamY = -30;
+						bfcamX = 0;
 					case 3:
 						animToPlay = 'singRIGHT';
-						if (ClientPrefs.dynamicCamera)
-							bfnoteMovementXoffset = 30;
+						bfcamX = 30;
+						bfcamY = 0;
 				}
 
 				if (note.noteType == 'GF Sing')
@@ -4180,6 +4177,11 @@ class PlayState extends MusicBeatState
 		lastStepHit = curStep;
 		setOnLuas('curStep', curStep);
 		callOnLuas('onStepHit', []);
+
+		if (generatedMusic && PlayState.SONG.notes[Std.int(curStep / 16)] != null && !endingSong && !isCameraOnForcedPos)
+			{
+				moveCameraSection(Std.int(curStep / 16));
+			}
 	}
 
 	var lightningStrikeBeat:Int = 0;
@@ -4217,10 +4219,10 @@ class PlayState extends MusicBeatState
 		}
 		// FlxG.log.add('change bpm' + SONG.notes[Std.int(curStep / 16)].changeBPM);
 
-		if (generatedMusic && PlayState.SONG.notes[Std.int(curStep / 16)] != null && !endingSong && !isCameraOnForcedPos)
+		/*if (generatedMusic && PlayState.SONG.notes[Std.int(curStep / 16)] != null && !endingSong && !isCameraOnForcedPos)
 		{
 			moveCameraSection(Std.int(curStep / 16));
-		}
+		}*/
 		if (camZooming && FlxG.camera.zoom < 1.35 && ClientPrefs.camZooms && curBeat % 4 == 0)
 		{
 			FlxG.camera.zoom += 0.015;
