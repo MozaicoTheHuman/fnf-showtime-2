@@ -1,4 +1,5 @@
 bf
+bf-og
 gf
 maritza
 maritza-playable
@@ -7,5 +8,10 @@ maavo-playable
 ivette
 martin
 benjamin
-clown
+kishioclown
 maavomugen
+maavomugenalt
+derki
+derkiswag
+deki
+anonimo

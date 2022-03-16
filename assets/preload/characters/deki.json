@@ -1,0 +1,218 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				180,
+				150
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				180,
+				150
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle-loop",
+			"indices": [
+				10,
+				11,
+				12,
+				13
+			],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				135,
+				104
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				135,
+				104
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singRIGHT-loop",
+			"indices": [
+				3,
+				4
+			],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				171,
+				127
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				170,
+				127
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singUP-loop",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				202,
+				83
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				202,
+				83
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singLEFT-loop",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				170,
+				80
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				170,
+				80
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singDOWN-loop",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				162,
+				84
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "izquierda"
+		},
+		{
+			"offsets": [
+				139,
+				71
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "abajo"
+		},
+		{
+			"offsets": [
+				191,
+				107
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "arriba"
+		},
+		{
+			"offsets": [
+				140,
+				81
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "derecha"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				969,
+				709
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "gameover",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1000,
+				300
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "ded",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				990,
+				299
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "calamardo",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/deki_assets",
+	"position": [
+		0,
+		350
+	],
+	"healthicon": "deki",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

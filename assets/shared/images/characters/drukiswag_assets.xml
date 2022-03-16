@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="drukiblu_assets.png">
+	<!-- Created with Adobe Animate version 18.0.2.126 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Derker Sing Note DOWN0000" x="0" y="0" width="594" height="564" frameX="90" frameY="-165" frameWidth="594" frameHeight="623"/>
+	<SubTexture name="Derker Sing Note DOWN0001" x="0" y="0" width="594" height="564" frameX="90" frameY="-165" frameWidth="594" frameHeight="623"/>
+	<SubTexture name="Derker Sing Note DOWN0002" x="594" y="0" width="583" height="570" frameX="87" frameY="-160" frameWidth="594" frameHeight="623"/>
+	<SubTexture name="Derker Sing Note DOWN0003" x="594" y="0" width="583" height="570" frameX="87" frameY="-160" frameWidth="594" frameHeight="623"/>
+	<SubTexture name="Derker Sing Note DOWN0004" x="594" y="0" width="583" height="570" frameX="87" frameY="-160" frameWidth="594" frameHeight="623"/>
+	<SubTexture name="Derker Sing Note DOWN0005" x="594" y="0" width="583" height="570" frameX="87" frameY="-160" frameWidth="594" frameHeight="623"/>
+	<SubTexture name="Derker Sing Note DOWN0006" x="594" y="0" width="583" height="570" frameX="87" frameY="-160" frameWidth="594" frameHeight="623"/>
+	<SubTexture name="Derker Sing Note DOWN0007" x="594" y="0" width="583" height="570" frameX="87" frameY="-160" frameWidth="594" frameHeight="623"/>
+	<SubTexture name="Derker Sing Note DOWN0008" x="594" y="0" width="583" height="570" frameX="87" frameY="-160" frameWidth="594" frameHeight="623"/>
+	<SubTexture name="Derker Sing Note DOWN0009" x="594" y="0" width="583" height="570" frameX="87" frameY="-160" frameWidth="594" frameHeight="623"/>
+	<SubTexture name="Derker Sing Note DOWN0010" x="594" y="0" width="583" height="570" frameX="87" frameY="-160" frameWidth="594" frameHeight="623"/>
+	<SubTexture name="Derker Sing Note DOWN0011" x="594" y="0" width="583" height="570" frameX="87" frameY="-160" frameWidth="594" frameHeight="623"/>
+	<SubTexture name="Derker Sing Note DOWN0012" x="594" y="0" width="583" height="570" frameX="87" frameY="-160" frameWidth="594" frameHeight="623"/>
+	<SubTexture name="Derker Sing Note DOWN0013" x="594" y="0" width="583" height="570" frameX="87" frameY="-160" frameWidth="594" frameHeight="623"/>
+	<SubTexture name="Derker Sing Note DOWN0014" x="594" y="0" width="583" height="570" frameX="87" frameY="-160" frameWidth="594" frameHeight="623"/>
+	<SubTexture name="Derker Sing Note DOWN0015" x="594" y="0" width="583" height="570" frameX="87" frameY="-160" frameWidth="594" frameHeight="623"/>
+	<SubTexture name="Derker Sing Note LEFT0000" x="1177" y="0" width="471" height="698"frameX="50" frameY="-80" frameWidth="471" frameHeight="698"/>
+	<SubTexture name="Derker Sing Note LEFT0001" x="1177" y="0" width="471" height="698"frameX="50" frameY="-80" frameWidth="471" frameHeight="698"/>
+	<SubTexture name="Derker Sing Note LEFT0002" x="0" y="698" width="470" height="698" frameX="50" frameY="-80" frameWidth="471" frameHeight="698"/>
+	<SubTexture name="Derker Sing Note LEFT0003" x="0" y="698" width="470" height="698" frameX="50" frameY="-80" frameWidth="471" frameHeight="698"/>
+	<SubTexture name="Derker Sing Note LEFT0004" x="0" y="698" width="470" height="698" frameX="50" frameY="-80" frameWidth="471" frameHeight="698"/>
+	<SubTexture name="Derker Sing Note LEFT0005" x="0" y="698" width="470" height="698" frameX="50" frameY="-80" frameWidth="471" frameHeight="698"/>
+	<SubTexture name="Derker Sing Note LEFT0006" x="0" y="698" width="470" height="698" frameX="50" frameY="-80" frameWidth="471" frameHeight="698"/>
+	<SubTexture name="Derker Sing Note LEFT0007" x="0" y="698" width="470" height="698" frameX="50" frameY="-80" frameWidth="471" frameHeight="698"/>
+	<SubTexture name="Derker Sing Note LEFT0008" x="0" y="698" width="470" height="698" frameX="50" frameY="-80" frameWidth="471" frameHeight="698"/>
+	<SubTexture name="Derker Sing Note LEFT0009" x="0" y="698" width="470" height="698" frameX="50" frameY="-80" frameWidth="471" frameHeight="698"/>
+	<SubTexture name="Derker Sing Note LEFT0010" x="0" y="698" width="470" height="698" frameX="50" frameY="-80" frameWidth="471" frameHeight="698"/>
+	<SubTexture name="Derker Sing Note LEFT0011" x="0" y="698" width="470" height="698" frameX="50" frameY="-80" frameWidth="471" frameHeight="698"/>
+	<SubTexture name="Derker Sing Note LEFT0012" x="0" y="698" width="470" height="698" frameX="50" frameY="-80" frameWidth="471" frameHeight="698"/>
+	<SubTexture name="Derker Sing Note LEFT0013" x="0" y="698" width="470" height="698" frameX="50" frameY="-80" frameWidth="471" frameHeight="698"/>
+	<SubTexture name="Derker Sing Note LEFT0014" x="0" y="698" width="470" height="698" frameX="50" frameY="-80" frameWidth="471" frameHeight="698"/>
+	<SubTexture name="Derker Sing Note LEFT0015" x="0" y="698" width="470" height="698" frameX="50" frameY="-80" frameWidth="471" frameHeight="698"/>
+	<SubTexture name="Derker Sing Note RIGHT0000" x="470" y="698" width="505" height="591" frameX="51" frameY="-198" frameWidth="505" frameHeight="595"/>
+	<SubTexture name="Derker Sing Note RIGHT0001" x="470" y="698" width="505" height="591" frameX="51" frameY="-198" frameWidth="505" frameHeight="595"/>
+	<SubTexture name="Derker Sing Note RIGHT0002" x="975" y="698" width="500" height="595" frameX="50" frameY="-194" frameWidth="505" frameHeight="595"/>
+	<SubTexture name="Derker Sing Note RIGHT0003" x="975" y="698" width="500" height="595" frameX="50" frameY="-194" frameWidth="505" frameHeight="595"/>
+	<SubTexture name="Derker Sing Note RIGHT0004" x="975" y="698" width="500" height="595" frameX="50" frameY="-194" frameWidth="505" frameHeight="595"/>
+	<SubTexture name="Derker Sing Note RIGHT0005" x="975" y="698" width="500" height="595" frameX="50" frameY="-194" frameWidth="505" frameHeight="595"/>
+	<SubTexture name="Derker Sing Note RIGHT0006" x="975" y="698" width="500" height="595" frameX="50" frameY="-194" frameWidth="505" frameHeight="595"/>
+	<SubTexture name="Derker Sing Note RIGHT0007" x="975" y="698" width="500" height="595" frameX="50" frameY="-194" frameWidth="505" frameHeight="595"/>
+	<SubTexture name="Derker Sing Note RIGHT0008" x="975" y="698" width="500" height="595" frameX="50" frameY="-194" frameWidth="505" frameHeight="595"/>
+	<SubTexture name="Derker Sing Note RIGHT0009" x="975" y="698" width="500" height="595" frameX="50" frameY="-194" frameWidth="505" frameHeight="595"/>
+	<SubTexture name="Derker Sing Note RIGHT0010" x="975" y="698" width="500" height="595" frameX="50" frameY="-194" frameWidth="505" frameHeight="595"/>
+	<SubTexture name="Derker Sing Note RIGHT0011" x="975" y="698" width="500" height="595" frameX="50" frameY="-194" frameWidth="505" frameHeight="595"/>
+	<SubTexture name="Derker Sing Note RIGHT0012" x="975" y="698" width="500" height="595" frameX="50" frameY="-194" frameWidth="505" frameHeight="595"/>
+	<SubTexture name="Derker Sing Note RIGHT0013" x="975" y="698" width="500" height="595" frameX="50" frameY="-194" frameWidth="505" frameHeight="595"/>
+	<SubTexture name="Derker Sing Note RIGHT0014" x="975" y="698" width="500" height="595" frameX="50" frameY="-194" frameWidth="505" frameHeight="595"/>
+	<SubTexture name="Derker Sing Note RIGHT0015" x="975" y="698" width="500" height="595" frameX="50" frameY="-194" frameWidth="505" frameHeight="595"/>
+	<SubTexture name="Derker Sing Note RIGHT0016" x="975" y="698" width="500" height="595" frameX="50" frameY="-194" frameWidth="505" frameHeight="595"/>
+	<SubTexture name="Derker Sing Note RIGHT0017" x="975" y="698" width="500" height="595" frameX="50" frameY="-194" frameWidth="505" frameHeight="595"/>
+	<SubTexture name="Derker Sing Note RIGHT0018" x="975" y="698" width="500" height="595" frameX="50" frameY="-194" frameWidth="505" frameHeight="595"/>
+	<SubTexture name="Derker Sing Note UP0000" x="1475" y="698" width="305" height="779" frameX="0" frameY="-40" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0001" x="0" y="1477" width="305" height="779" frameX="0" frameY="-40" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0002" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0003" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0004" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0005" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0006" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0007" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0008" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0009" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0010" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0011" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0012" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0013" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0014" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0015" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0016" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0017" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0018" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0019" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0020" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0021" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0022" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0023" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0024" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0025" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0026" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0027" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0028" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0029" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0030" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0031" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0032" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0033" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0034" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0035" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0036" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0037" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0038" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0039" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0040" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0041" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0042" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0043" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0044" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0045" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0046" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0047" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0048" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0049" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0050" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0051" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0052" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0053" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0054" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0055" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0056" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0057" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0058" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker Sing Note UP0059" x="305" y="1477" width="306" height="774" frameX="0" frameY="-45" frameWidth="306" frameHeight="779"/>
+	<SubTexture name="Derker idle dance0000" x="611" y="1477" width="346" height="707" frameX="-5" frameY="-52" frameWidth="356" frameHeight="707"/>
+	<SubTexture name="Derker idle dance0001" x="611" y="1477" width="346" height="707" frameX="-5" frameY="-52" frameWidth="356" frameHeight="707"/>
+	<SubTexture name="Derker idle dance0002" x="957" y="1477" width="356" height="688" frameX="0" frameY="-70" frameWidth="356" frameHeight="707"/>
+	<SubTexture name="Derker idle dance0003" x="957" y="1477" width="356" height="688" frameX="0" frameY="-70" frameWidth="356" frameHeight="707"/>
+	<SubTexture name="Derker idle dance0004" x="1313" y="1477" width="354" height="694" frameX="-1" frameY="-65" frameWidth="356" frameHeight="707"/>
+	<SubTexture name="Derker idle dance0005" x="1313" y="1477" width="354" height="694" frameX="-1" frameY="-65" frameWidth="356" frameHeight="707"/>
+	<SubTexture name="Derker idle dance0006" x="1667" y="1477" width="352" height="697" frameX="-2" frameY="-62" frameWidth="356" frameHeight="707"/>
+	<SubTexture name="Derker idle dance0007" x="1667" y="1477" width="352" height="697" frameX="-2" frameY="-62" frameWidth="356" frameHeight="707"/>
+	<SubTexture name="Derker idle dance0008" x="0" y="2256" width="348" height="704" frameX="-4" frameY="-55" frameWidth="356" frameHeight="707"/>
+	<SubTexture name="Derker idle dance0009" x="0" y="2256" width="348" height="704" frameX="-4" frameY="-55" frameWidth="356" frameHeight="707"/>
+	<SubTexture name="Derker idle dance0010" x="611" y="1477" width="346" height="707" frameX="-5" frameY="-53" frameWidth="356" frameHeight="707"/>
+	<SubTexture name="Derker idle dance0011" x="611" y="1477" width="346" height="707" frameX="-5" frameY="-53" frameWidth="356" frameHeight="707"/>
+	<SubTexture name="Derker idle dance0012" x="611" y="1477" width="346" height="707" frameX="-5" frameY="-52" frameWidth="356" frameHeight="707"/>
+</TextureAtlas>
