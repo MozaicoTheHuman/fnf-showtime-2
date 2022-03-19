@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "hanzo_idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-54,
+				-86
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "hanzo_abajo",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-64,
+				13
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "hanzo_arriba",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-50,
+				-2
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "hanzo_derecha"
+		},
+		{
+			"offsets": [
+				-43,
+				-1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "hanzo_izquierda"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/hanzo",
+	"position": [
+		-210,
+		0
+	],
+	"healthicon": "hanzo",
+	"flip_x": false,
+	"healthbar_colors": [
+		216,
+		85,
+		142
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.5,
+	"scale": 1
+}

@@ -1,54 +1,88 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="Maavo-Light.png">
+<TextureAtlas imagePath="MAVO.png">
 	<!-- Created with Adobe Animate version 18.0.2.126 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="MAVO DOWN0000" x="10" y="10" width="411" height="460" frameX="0" frameY="-19" frameWidth="411" frameHeight="479"/>
-	<SubTexture name="MAVO DOWN0001" x="10" y="10" width="411" height="460" frameX="0" frameY="-19" frameWidth="411" frameHeight="479"/>
-	<SubTexture name="MAVO DOWN0002" x="431" y="10" width="403" height="479" frameX="-4" frameY="0" frameWidth="411" frameHeight="479"/>
-	<SubTexture name="MAVO DOWN0003" x="431" y="10" width="403" height="479" frameX="-4" frameY="0" frameWidth="411" frameHeight="479"/>
-	<SubTexture name="MAVO DOWN0004" x="844" y="10" width="403" height="479" frameX="-4" frameY="0" frameWidth="411" frameHeight="479"/>
-	<SubTexture name="MAVO UP0000" x="1257" y="10" width="322" height="632" frameX="-5" frameY="0" frameWidth="343" frameHeight="632"/>
-	<SubTexture name="MAVO UP0001" x="1257" y="10" width="322" height="632" frameX="-5" frameY="0" frameWidth="343" frameHeight="632"/>
-	<SubTexture name="MAVO UP0002" x="1589" y="10" width="343" height="604" frameX="0" frameY="-27" frameWidth="343" frameHeight="632"/>
-	<SubTexture name="MAVO UP0003" x="1589" y="10" width="343" height="604" frameX="0" frameY="-27" frameWidth="343" frameHeight="632"/>
-	<SubTexture name="MAVO UP0004" x="10" y="652" width="343" height="605" frameX="0" frameY="-26" frameWidth="343" frameHeight="632"/>
-	<SubTexture name="mavo left0000" x="363" y="652" width="330" height="534" frameX="-2" frameY="0" frameWidth="332" frameHeight="534"/>
-	<SubTexture name="mavo left0001" x="363" y="652" width="330" height="534" frameX="-2" frameY="0" frameWidth="332" frameHeight="534"/>
-	<SubTexture name="mavo left0002" x="703" y="652" width="329" height="533" frameX="0" frameY="-1" frameWidth="332" frameHeight="534"/>
-	<SubTexture name="mavo left0003" x="703" y="652" width="329" height="533" frameX="0" frameY="-1" frameWidth="332" frameHeight="534"/>
-	<SubTexture name="mavo left0004" x="1042" y="652" width="329" height="533" frameX="0" frameY="-1" frameWidth="332" frameHeight="534"/>
-	<SubTexture name="mavoo dance20000" x="1381" y="652" width="295" height="559" frameX="0" frameY="-10" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo dance20001" x="1381" y="652" width="295" height="559" frameX="0" frameY="-10" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo dance20002" x="1686" y="652" width="294" height="562" frameX="-1" frameY="-7" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo dance20003" x="1686" y="652" width="294" height="562" frameX="-1" frameY="-7" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo dance20004" x="10" y="1267" width="293" height="568" frameX="-2" frameY="-1" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo dance20005" x="10" y="1267" width="293" height="568" frameX="-2" frameY="-1" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo dance20006" x="313" y="1267" width="292" height="569" frameX="-3" frameY="0" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo dance20007" x="313" y="1267" width="292" height="569" frameX="-3" frameY="0" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo dance20008" x="615" y="1267" width="291" height="569" frameX="-3" frameY="0" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo dance20009" x="615" y="1267" width="291" height="569" frameX="-3" frameY="0" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo dance20010" x="916" y="1267" width="293" height="568" frameX="-2" frameY="-1" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo dance20011" x="916" y="1267" width="293" height="568" frameX="-2" frameY="-1" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo dance20012" x="1219" y="1267" width="293" height="567" frameX="-2" frameY="-2" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo dance20013" x="1219" y="1267" width="293" height="567" frameX="-2" frameY="-2" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo dance20014" x="1522" y="1267" width="293" height="568" frameX="-2" frameY="-1" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo idle0000" x="10" y="1846" width="295" height="559" frameX="0" frameY="-10" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo idle0001" x="10" y="1846" width="295" height="559" frameX="0" frameY="-10" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo idle0002" x="315" y="1846" width="294" height="562" frameX="-1" frameY="-7" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo idle0003" x="315" y="1846" width="294" height="562" frameX="-1" frameY="-7" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo idle0004" x="619" y="1846" width="293" height="568" frameX="-2" frameY="-1" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo idle0005" x="619" y="1846" width="293" height="568" frameX="-2" frameY="-1" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo idle0006" x="922" y="1846" width="292" height="569" frameX="-3" frameY="0" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo idle0007" x="922" y="1846" width="292" height="569" frameX="-3" frameY="0" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo idle0008" x="615" y="1267" width="291" height="569" frameX="-3" frameY="0" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo idle0009" x="615" y="1267" width="291" height="569" frameX="-3" frameY="0" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo idle0010" x="1224" y="1846" width="293" height="568" frameX="-2" frameY="-1" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo idle0011" x="1224" y="1846" width="293" height="568" frameX="-2" frameY="-1" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo idle0012" x="1527" y="1846" width="293" height="567" frameX="-2" frameY="-2" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo idle0013" x="1527" y="1846" width="293" height="567" frameX="-2" frameY="-2" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo idle0014" x="10" y="2425" width="293" height="568" frameX="-2" frameY="-1" frameWidth="295" frameHeight="569"/>
-	<SubTexture name="mavoo right0000" x="313" y="2425" width="513" height="540" frameX="0" frameY="-7" frameWidth="515" frameHeight="547"/>
-	<SubTexture name="mavoo right0001" x="313" y="2425" width="513" height="540" frameX="0" frameY="-7" frameWidth="515" frameHeight="547"/>
-	<SubTexture name="mavoo right0002" x="836" y="2425" width="493" height="547" frameX="-22" frameY="0" frameWidth="515" frameHeight="547"/>
-	<SubTexture name="mavoo right0003" x="1339" y="2425" width="493" height="547" frameX="-22" frameY="0" frameWidth="515" frameHeight="547"/>
+	<SubTexture name="MAVO DOWN instance 10000" x="10" y="10" width="559" height="625" frameX="0" frameY="-26" frameWidth="559" frameHeight="651"/>
+	<SubTexture name="MAVO DOWN instance 10001" x="10" y="10" width="559" height="625" frameX="0" frameY="-26" frameWidth="559" frameHeight="651"/>
+	<SubTexture name="MAVO DOWN instance 10002" x="579" y="10" width="547" height="648" frameX="-6" frameY="-3" frameWidth="559" frameHeight="651"/>
+	<SubTexture name="MAVO DOWN instance 10003" x="579" y="10" width="547" height="648" frameX="-6" frameY="-3" frameWidth="559" frameHeight="651"/>
+	<SubTexture name="MAVO DOWN instance 10004" x="1136" y="10" width="547" height="651" frameX="-6" frameY="0" frameWidth="559" frameHeight="651"/>
+	<SubTexture name="MAVO UP instance 10000" x="1693" y="10" width="428" height="838" frameX="-13" frameY="0" frameWidth="446" frameHeight="838"/>
+	<SubTexture name="MAVO UP instance 10001" x="1693" y="10" width="428" height="838" frameX="-13" frameY="0" frameWidth="446" frameHeight="838"/>
+	<SubTexture name="MAVO UP instance 10002" x="2131" y="10" width="443" height="824" frameX="-3" frameY="-14" frameWidth="446" frameHeight="838"/>
+	<SubTexture name="MAVO UP instance 10003" x="2131" y="10" width="443" height="824" frameX="-3" frameY="-14" frameWidth="446" frameHeight="838"/>
+	<SubTexture name="MAVO UP instance 10004" x="2584" y="10" width="446" height="821" frameX="0" frameY="-16" frameWidth="446" frameHeight="838"/>
+	<SubTexture name="MAVO UP instance 10005" x="2584" y="10" width="446" height="821" frameX="0" frameY="-16" frameWidth="446" frameHeight="838"/>
+	<SubTexture name="MAVO UP instance 10006" x="3040" y="10" width="445" height="822" frameX="-1" frameY="-15" frameWidth="446" frameHeight="838"/>
+	<SubTexture name="MAVO UP instance 10007" x="3040" y="10" width="445" height="822" frameX="-1" frameY="-15" frameWidth="446" frameHeight="838"/>
+	<SubTexture name="MAVO abajo instance 10000" x="3495" y="10" width="576" height="625" frameX="0" frameY="-17" frameWidth="576" frameHeight="642"/>
+	<SubTexture name="MAVO abajo instance 10001" x="10" y="858" width="561" height="639" frameX="-8" frameY="-3" frameWidth="576" frameHeight="642"/>
+	<SubTexture name="MAVO abajo instance 10002" x="10" y="858" width="561" height="639" frameX="-8" frameY="-3" frameWidth="576" frameHeight="642"/>
+	<SubTexture name="MAVO abajo instance 10003" x="581" y="858" width="557" height="642" frameX="-10" frameY="0" frameWidth="576" frameHeight="642"/>
+	<SubTexture name="MAVO abajo instance 10004" x="581" y="858" width="557" height="642" frameX="-10" frameY="0" frameWidth="576" frameHeight="642"/>
+	<SubTexture name="MAVO abajo instance 10005" x="581" y="858" width="557" height="642" frameX="-10" frameY="0" frameWidth="576" frameHeight="642"/>
+	<SubTexture name="MAVO arriba instance 10000" x="1693" y="10" width="428" height="838" frameX="-14" frameY="0" frameWidth="446" frameHeight="838"/>
+	<SubTexture name="MAVO arriba instance 10001" x="1148" y="858" width="446" height="817" frameX="0" frameY="-21" frameWidth="446" frameHeight="838"/>
+	<SubTexture name="MAVO arriba instance 10002" x="1148" y="858" width="446" height="817" frameX="0" frameY="-21" frameWidth="446" frameHeight="838"/>
+	<SubTexture name="MAVO arriba instance 10003" x="1604" y="858" width="446" height="809" frameX="0" frameY="-29" frameWidth="446" frameHeight="838"/>
+	<SubTexture name="MAVO arriba instance 10004" x="1604" y="858" width="446" height="809" frameX="0" frameY="-29" frameWidth="446" frameHeight="838"/>
+	<SubTexture name="mavo izquierda instance 10000" x="2060" y="858" width="573" height="724" frameX="0" frameY="0" frameWidth="592" frameHeight="724"/>
+	<SubTexture name="mavo izquierda instance 10001" x="2643" y="858" width="590" height="723" frameX="-2" frameY="-1" frameWidth="592" frameHeight="724"/>
+	<SubTexture name="mavo izquierda instance 10002" x="2643" y="858" width="590" height="723" frameX="-2" frameY="-1" frameWidth="592" frameHeight="724"/>
+	<SubTexture name="mavo izquierda instance 10003" x="3243" y="858" width="582" height="723" frameX="0" frameY="-1" frameWidth="592" frameHeight="724"/>
+	<SubTexture name="mavo izquierda instance 10004" x="3243" y="858" width="582" height="723" frameX="0" frameY="-1" frameWidth="592" frameHeight="724"/>
+	<SubTexture name="mavo izquierda instance 10005" x="3243" y="858" width="582" height="723" frameX="0" frameY="-1" frameWidth="592" frameHeight="724"/>
+	<SubTexture name="mavo izquierda instance 10006" x="3243" y="858" width="582" height="723" frameX="0" frameY="-1" frameWidth="592" frameHeight="724"/>
+	<SubTexture name="mavo izquierda instance 10007" x="3243" y="858" width="582" height="723" frameX="0" frameY="-1" frameWidth="592" frameHeight="724"/>
+	<SubTexture name="mavo izquierda instance 10008" x="3243" y="858" width="582" height="723" frameX="0" frameY="-1" frameWidth="592" frameHeight="724"/>
+	<SubTexture name="mavo izquierda instance 10009" x="3243" y="858" width="582" height="723" frameX="0" frameY="-1" frameWidth="592" frameHeight="724"/>
+	<SubTexture name="mavo left instance 10000" x="10" y="1685" width="574" height="724" frameX="-3" frameY="0" frameWidth="577" frameHeight="724"/>
+	<SubTexture name="mavo left instance 10001" x="10" y="1685" width="574" height="724" frameX="-3" frameY="0" frameWidth="577" frameHeight="724"/>
+	<SubTexture name="mavo left instance 10002" x="594" y="1685" width="568" height="723" frameX="-1" frameY="-1" frameWidth="577" frameHeight="724"/>
+	<SubTexture name="mavo left instance 10003" x="594" y="1685" width="568" height="723" frameX="-1" frameY="-1" frameWidth="577" frameHeight="724"/>
+	<SubTexture name="mavo left instance 10004" x="1172" y="1685" width="566" height="723" frameX="0" frameY="-1" frameWidth="577" frameHeight="724"/>
+	<SubTexture name="mavoo dance2 instance 10000" x="1748" y="1685" width="402" height="758" frameX="0" frameY="-16" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo dance2 instance 10001" x="1748" y="1685" width="402" height="758" frameX="0" frameY="-16" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo dance2 instance 10002" x="2160" y="1685" width="399" height="763" frameX="-2" frameY="-11" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo dance2 instance 10003" x="2160" y="1685" width="399" height="763" frameX="-2" frameY="-11" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo dance2 instance 10004" x="2569" y="1685" width="398" height="770" frameX="-3" frameY="-4" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo dance2 instance 10005" x="2569" y="1685" width="398" height="770" frameX="-3" frameY="-4" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo dance2 instance 10006" x="2977" y="1685" width="398" height="772" frameX="-3" frameY="-2" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo dance2 instance 10007" x="2977" y="1685" width="398" height="772" frameX="-3" frameY="-2" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo dance2 instance 10008" x="10" y="3249" width="397" height="774" frameX="-3" frameY="0" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo dance2 instance 10009" x="10" y="3249" width="397" height="774" frameX="-3" frameY="0" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo dance2 instance 10010" x="3385" y="1685" width="398" height="770" frameX="-3" frameY="-4" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo dance2 instance 10011" x="3385" y="1685" width="398" height="770" frameX="-3" frameY="-4" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo dance2 instance 10012" x="10" y="2467" width="398" height="770" frameX="-3" frameY="-4" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo dance2 instance 10013" x="10" y="2467" width="398" height="770" frameX="-3" frameY="-4" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo dance2 instance 10014" x="418" y="2467" width="398" height="771" frameX="-3" frameY="-3" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo derecha instance 10000" x="1644" y="3249" width="698" height="730" frameX="0" frameY="-10" frameWidth="701" frameHeight="742"/>
+	<SubTexture name="mavoo derecha instance 10001" x="826" y="2467" width="677" height="741" frameX="-22" frameY="0" frameWidth="700" frameHeight="741"/>
+	<SubTexture name="mavoo derecha instance 10002" x="826" y="2467" width="677" height="741" frameX="-22" frameY="0" frameWidth="700" frameHeight="741"/>
+	<SubTexture name="mavoo derecha instance 10003" x="1513" y="2467" width="673" height="741" frameX="-27" frameY="0" frameWidth="700" frameHeight="741"/>
+	<SubTexture name="mavoo derecha instance 10004" x="1513" y="2467" width="673" height="741" frameX="-27" frameY="0" frameWidth="700" frameHeight="741"/>
+	<SubTexture name="mavoo idle instance 10000" x="2196" y="2467" width="402" height="759" frameX="0" frameY="-15" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo idle instance 10001" x="2196" y="2467" width="402" height="759" frameX="0" frameY="-15" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo idle instance 10002" x="2608" y="2467" width="400" height="762" frameX="-2" frameY="-12" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo idle instance 10003" x="2608" y="2467" width="400" height="762" frameX="-2" frameY="-12" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo idle instance 10004" x="3018" y="2467" width="399" height="770" frameX="-3" frameY="-4" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo idle instance 10005" x="3018" y="2467" width="399" height="770" frameX="-3" frameY="-4" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo idle instance 10006" x="3427" y="2467" width="397" height="772" frameX="-4" frameY="-2" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo idle instance 10007" x="3427" y="2467" width="397" height="772" frameX="-4" frameY="-2" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo idle instance 10008" x="10" y="3249" width="397" height="774" frameX="-4" frameY="0" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo idle instance 10009" x="10" y="3249" width="397" height="774" frameX="-4" frameY="0" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo idle instance 10010" x="417" y="3249" width="399" height="770" frameX="-3" frameY="-4" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo idle instance 10011" x="417" y="3249" width="399" height="770" frameX="-3" frameY="-4" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo idle instance 10012" x="826" y="3249" width="399" height="770" frameX="-3" frameY="-4" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo idle instance 10013" x="826" y="3249" width="399" height="770" frameX="-3" frameY="-4" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo idle instance 10014" x="1235" y="3249" width="399" height="771" frameX="-3" frameY="-3" frameWidth="402" frameHeight="774"/>
+	<SubTexture name="mavoo right instance 10000" x="1644" y="3249" width="698" height="730" frameX="0" frameY="-12" frameWidth="701" frameHeight="742"/>
+	<SubTexture name="mavoo right instance 10001" x="1644" y="3249" width="698" height="730" frameX="0" frameY="-12" frameWidth="701" frameHeight="742"/>
+	<SubTexture name="mavoo right instance 10002" x="2352" y="3249" width="677" height="739" frameX="-24" frameY="-2" frameWidth="701" frameHeight="742"/>
+	<SubTexture name="mavoo right instance 10003" x="2352" y="3249" width="677" height="739" frameX="-24" frameY="-2" frameWidth="701" frameHeight="742"/>
+	<SubTexture name="mavoo right instance 10004" x="3039" y="3249" width="674" height="740" frameX="-27" frameY="-2" frameWidth="701" frameHeight="742"/>
+	<SubTexture name="mavoo right instance 10005" x="3039" y="3249" width="674" height="740" frameX="-27" frameY="-2" frameWidth="701" frameHeight="742"/>
+	<SubTexture name="mavoo right instance 10006" x="10" y="4033" width="674" height="742" frameX="-27" frameY="0" frameWidth="701" frameHeight="742"/>
+	<SubTexture name="mavoo right instance 10007" x="10" y="4033" width="674" height="742" frameX="-27" frameY="0" frameWidth="701" frameHeight="742"/>
+	<SubTexture name="mavoo right instance 10008" x="694" y="4033" width="673" height="740" frameX="-28" frameY="-1" frameWidth="701" frameHeight="742"/>
 </TextureAtlas>

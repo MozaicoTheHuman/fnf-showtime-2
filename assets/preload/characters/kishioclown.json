@@ -1,114 +1,114 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-96,
 				-374
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "ronaldLEFT",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "ronaldLEFT"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-40,
 				-367
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "ronaldDOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "ronaldDOWN"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-137,
 				53
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "ronaldUP",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "ronaldUP"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-52,
 				-322
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "ronaldRIGHT",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "ronaldRIGHT"
+		},
+		{
+			"offsets": [
+				419,
+				99
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "ronaldHYPER"
 		},
 		{
 			"loop": false,
-			"offsets": [
-				418,
-				100
-			],
-			"anim": "hey",
-			"fps": 24,
-			"name": "ronaldHYPER",
-			"indices": []
-		},
-		{
 			"offsets": [
 				-115,
 				-260
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT-alt",
-			"indices": [],
-			"name": "ronaldIZQUIERDA"
+			"fps": 24,
+			"name": "ronaldIZQUIERDA",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-75,
 				-660
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN-alt",
-			"indices": [],
-			"name": "ronaldABAJO"
+			"fps": 24,
+			"name": "ronaldABAJO",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				120,
 				-167
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP-alt",
-			"indices": [],
-			"name": "ronaldARRIBA"
+			"fps": 24,
+			"name": "ronaldARRIBA",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-139,
 				-218
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "ronaldIDLE"
+			"fps": 24,
+			"name": "ronaldIDLE",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-133,
 				-218
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT-alt",
-			"indices": [],
-			"name": "ronaldRUUU"
+			"fps": 24,
+			"name": "ronaldRUUU",
+			"indices": []
 		}
 	],
 	"no_antialiasing": true,
@@ -117,7 +117,7 @@
 		100,
 		-105
 	],
-	"healthicon": "clown",
+	"healthicon": "nothing",
 	"flip_x": false,
 	"healthbar_colors": [
 		220,

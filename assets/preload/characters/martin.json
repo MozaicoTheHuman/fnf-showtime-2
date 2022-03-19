@@ -1,76 +1,76 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "idle"
+			"fps": 24,
+			"name": "idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				98,
 				13
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "martinleft"
+			"fps": 24,
+			"name": "martinleft",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				4,
 				-13
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "martinright"
+			"fps": 24,
+			"name": "martinright",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				50,
 				-80
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "martindown"
+			"fps": 24,
+			"name": "martindown",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				72,
 				67
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "martinup"
+			"fps": 24,
+			"name": "martinup",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/martin",
 	"position": [
-		330,
+		0,
 		60
 	],
-	"healthicon": "martin",
+	"healthicon": "2016",
 	"flip_x": false,
 	"healthbar_colors": [
-		216,
-		85,
-		142
+		115,
+		115,
+		115
 	],
 	"camera_position": [
-		-130,
+		200,
 		30
 	],
 	"sing_duration": 8,

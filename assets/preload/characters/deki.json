@@ -1,199 +1,199 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				180,
 				150
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "idle"
+			"fps": 24,
+			"name": "idle",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				180,
 				150
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle-loop",
+			"fps": 24,
+			"name": "idle",
 			"indices": [
 				10,
 				11,
 				12,
 				13
-			],
-			"name": "idle"
+			]
 		},
 		{
-			"offsets": [
-				135,
-				104
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "left"
-		},
-		{
 			"offsets": [
 				135,
 				104
 			],
-			"loop": true,
+			"anim": "singRIGHT",
 			"fps": 24,
+			"name": "left",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				135,
+				104
+			],
 			"anim": "singRIGHT-loop",
+			"fps": 24,
+			"name": "left",
 			"indices": [
 				3,
 				4
-			],
-			"name": "left"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				171,
 				127
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "up"
+			"fps": 24,
+			"name": "up",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				170,
 				127
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singUP-loop",
-			"indices": [],
-			"name": "up"
+			"fps": 24,
+			"name": "up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				202,
 				83
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "right"
+			"fps": 24,
+			"name": "right",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				202,
 				83
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singLEFT-loop",
-			"indices": [],
-			"name": "right"
+			"fps": 24,
+			"name": "right",
+			"indices": []
 		},
 		{
-			"offsets": [
-				170,
-				80
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "down"
-		},
-		{
 			"offsets": [
 				170,
 				80
 			],
-			"loop": true,
+			"anim": "singDOWN",
 			"fps": 24,
-			"anim": "singDOWN-loop",
-			"indices": [],
-			"name": "down"
+			"name": "down",
+			"indices": []
 		},
 		{
+			"loop": true,
+			"offsets": [
+				170,
+				80
+			],
+			"anim": "singDOWN-loop",
+			"fps": 24,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
 			"offsets": [
 				162,
 				84
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "izquierda"
+			"fps": 24,
+			"name": "izquierda",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				139,
 				71
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "abajo"
+			"fps": 24,
+			"name": "abajo",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				191,
 				107
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUPmiss",
-			"indices": [],
-			"name": "arriba"
+			"fps": 24,
+			"name": "arriba",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				140,
 				81
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "derecha"
+			"fps": 24,
+			"name": "derecha",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				969,
 				709
 			],
-			"anim": "firstDeath",
+			"loop": false,
 			"fps": 24,
-			"name": "gameover",
-			"indices": []
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "gameover"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				1000,
 				300
 			],
-			"anim": "deathLoop",
+			"loop": false,
 			"fps": 24,
-			"name": "ded",
-			"indices": []
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "ded"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				990,
 				299
 			],
-			"anim": "deathConfirm",
+			"loop": false,
 			"fps": 24,
-			"name": "calamardo",
-			"indices": []
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "calamardo"
 		}
 	],
 	"no_antialiasing": false,
@@ -203,7 +203,7 @@
 		350
 	],
 	"healthicon": "deki",
-	"flip_x": false,
+	"flip_x": true,
 	"healthbar_colors": [
 		255,
 		255,

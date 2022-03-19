@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle",
-			"loop": false,
-			"name": "hanzo_idle"
+			"fps": 24,
+			"name": "hanzo_idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				28,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "hanzo_izquierda"
+			"fps": 24,
+			"name": "hanzo_izquierda",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-4,
 				-3
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
-			"name": "hanzo_derecha"
+			"fps": 24,
+			"name": "hanzo_derecha",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				16,
 				-86
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
-			"name": "hanzo_abajo"
+			"fps": 24,
+			"name": "hanzo_abajo",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-7,
 				13
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
-			"name": "hanzo_arriba"
+			"fps": 24,
+			"name": "hanzo_arriba",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -65,9 +65,9 @@
 	"healthicon": "hanzo",
 	"flip_x": false,
 	"healthbar_colors": [
-		216,
-		85,
-		142
+		115,
+		115,
+		115
 	],
 	"camera_position": [
 		0,

@@ -115,10 +115,10 @@
 				117,
 				149
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 25,
 			"anim": "singLEFT",
-			"loop": false,
+			"indices": [],
 			"name": "BF SHOWTIME LEFT"
 		},
 		{
@@ -126,10 +126,10 @@
 				105,
 				153
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 25,
 			"anim": "singDOWN",
-			"loop": false,
+			"indices": [],
 			"name": "BF SHOWTIME DOWN"
 		},
 		{
@@ -137,10 +137,10 @@
 				111,
 				150
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 25,
 			"anim": "singUP",
-			"loop": false,
+			"indices": [],
 			"name": "BF SHOWTIME UP"
 		},
 		{
@@ -148,10 +148,10 @@
 				112,
 				147
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 25,
 			"anim": "singRIGHT",
-			"loop": false,
+			"indices": [],
 			"name": "BF SHOWTIME RIGHT"
 		}
 	],
@@ -164,9 +164,9 @@
 	"healthicon": "bf",
 	"flip_x": true,
 	"healthbar_colors": [
-		49,
-		176,
-		209
+		0,
+		255,
+		255
 	],
 	"camera_position": [
 		20,

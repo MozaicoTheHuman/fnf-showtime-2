@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
-				0,
+				60,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle",
-			"loop": false,
-			"name": "Derker idle dance"
-		},
-		{
-			"offsets": [
-				-9,
-				10
-			],
-			"indices": [],
 			"fps": 24,
-			"anim": "singLEFT",
-			"loop": false,
-			"name": "Derker Sing Note LEFT"
+			"name": "Derker idle dance",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				0,
+				171,
+				20
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Derker Sing Note LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				257,
 				-30
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
-			"name": "Derker Sing Note DOWN"
+			"fps": 24,
+			"name": "Derker Sing Note DOWN",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				-6,
-				50
+				44,
+				60
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
-			"name": "Derker Sing Note UP"
+			"fps": 24,
+			"name": "Derker Sing Note UP",
+			"indices": []
 		},
 		{
-			"offsets": [
-				0,
-				27
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singRIGHT",
 			"loop": false,
-			"name": "Derker Sing Note RIGHT"
+			"offsets": [
+				202,
+				32
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Derker Sing Note RIGHT",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,

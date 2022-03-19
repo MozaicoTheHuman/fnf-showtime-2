@@ -35,7 +35,7 @@
 		},
 		{
 			"offsets": [
-				137,
+				107,
 				316
 			],
 			"loop": false,
@@ -79,7 +79,7 @@
 		},
 		{
 			"offsets": [
-				137,
+				107,
 				316
 			],
 			"loop": false,
@@ -120,9 +120,9 @@
 	"healthicon": "maritza",
 	"flip_x": false,
 	"healthbar_colors": [
-		0,
-		0,
-		0
+		115,
+		115,
+		115
 	],
 	"camera_position": [
 		-100,
