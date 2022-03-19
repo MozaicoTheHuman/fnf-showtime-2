@@ -5,6 +5,12 @@ function onCreate()
 				setPropertyFromGroup('unspawnNotes', i, 'ignoreNote', true);
 		end
 	end
+	makeLuaSprite('theHealth','lifebars/Maavo', 215, 535);
+	addLuaSprite('theHealth',false);
+	scaleObject('theHealth', 0.93, 0.93);
+	setObjectCamera('theHealth', 'hud')
+	setObjectOrder('theHealth', getObjectOrder('healthBar'))
+
 end
 local stun = false;
 function goodNoteHit(id, direction, noteType, isSustainNote)
@@ -23,4 +29,11 @@ function onTimerCompleted(tag)
         setProperty('boyfriend.stunned', false);
         stun = false;
     end
+end
+
+function onUpdate()
+	setProperty('iconP1.y', 565)
+	setProperty('iconP1.x', 875)
+	setProperty('iconP2.x', 270)
+	setProperty('iconP2.y', 550)
 end

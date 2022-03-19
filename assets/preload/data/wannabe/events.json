@@ -364,24 +364,24 @@
 						"385"
 					],
 					[
-						60405.1339285715,
-						-1,
-						"Set Camera Zoom",
-						"0.95",
-						""
-					],
-					[
-						61709.8214285715,
-						-1,
-						"Set Camera Zoom",
-						"0.7",
-						""
-					],
-					[
 						61705.3571428572,
 						-1,
 						"Camera Follow Pos",
 						"",
+						""
+					],
+					[
+						60405.2455357143,
+						-1,
+						"Set Camera Zoom",
+						"0.9",
+						""
+					],
+					[
+						61713.4486607143,
+						-1,
+						"Set Camera Zoom",
+						"0.75",
 						""
 					]
 				],
@@ -1045,20 +1045,47 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						89142.8571428571,
+						89144.6428571429,
 						-1,
-						"Add Camera Zoom",
-						"0.06",
+						"Set Camera Zoom",
+						"0.69",
 						""
 					],
 					[
-						89151.7857142857,
+						89143.75,
 						-1,
-						"Set Camera Zoom",
-						"0.65",
+						"Add Camera Zoom",
+						"0.9",
 						""
 					]
 				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false

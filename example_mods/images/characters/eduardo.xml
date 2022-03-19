@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="eduardo.png">
+	<!-- Created with Adobe Animate version 18.0.2.126 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="eduardodown0000" x="10" y="10" width="251" height="272" frameX="0" frameY="-14" frameWidth="260" frameHeight="286"/>
+	<SubTexture name="eduardodown0001" x="10" y="10" width="251" height="272" frameX="0" frameY="-14" frameWidth="260" frameHeight="286"/>
+	<SubTexture name="eduardodown0002" x="271" y="10" width="260" height="270" frameX="0" frameY="0" frameWidth="260" frameHeight="286"/>
+	<SubTexture name="eduardodown0003" x="271" y="10" width="260" height="270" frameX="0" frameY="0" frameWidth="260" frameHeight="286"/>
+	<SubTexture name="eduardodown0004" x="271" y="10" width="260" height="270" frameX="0" frameY="0" frameWidth="260" frameHeight="286"/>
+	<SubTexture name="eduardodown0005" x="271" y="10" width="260" height="270" frameX="0" frameY="0" frameWidth="260" frameHeight="286"/>
+	<SubTexture name="eduardodown0006" x="271" y="10" width="260" height="270" frameX="0" frameY="0" frameWidth="260" frameHeight="286"/>
+	<SubTexture name="eduardodown0007" x="271" y="10" width="260" height="270" frameX="0" frameY="0" frameWidth="260" frameHeight="286"/>
+	<SubTexture name="eduardodown0008" x="271" y="10" width="260" height="270" frameX="0" frameY="0" frameWidth="260" frameHeight="286"/>
+	<SubTexture name="eduardoidle0000" x="541" y="10" width="282" height="315" frameX="0" frameY="-23" frameWidth="283" frameHeight="338"/>
+	<SubTexture name="eduardoidle0001" x="541" y="10" width="282" height="315" frameX="0" frameY="-23" frameWidth="283" frameHeight="338"/>
+	<SubTexture name="eduardoidle0002" x="10" y="335" width="269" height="338" frameX="-10" frameY="0" frameWidth="283" frameHeight="338"/>
+	<SubTexture name="eduardoidle0003" x="10" y="335" width="269" height="338" frameX="-10" frameY="0" frameWidth="283" frameHeight="338"/>
+	<SubTexture name="eduardoidle0004" x="289" y="335" width="278" height="323" frameX="-5" frameY="-15" frameWidth="283" frameHeight="338"/>
+	<SubTexture name="eduardoidle0005" x="289" y="335" width="278" height="323" frameX="-5" frameY="-15" frameWidth="283" frameHeight="338"/>
+	<SubTexture name="eduardoidle0006" x="577" y="335" width="270" height="326" frameX="-8" frameY="-12" frameWidth="283" frameHeight="338"/>
+	<SubTexture name="eduardoidle0007" x="577" y="335" width="270" height="326" frameX="-8" frameY="-12" frameWidth="283" frameHeight="338"/>
+	<SubTexture name="eduardoidle0008" x="577" y="335" width="270" height="326" frameX="-8" frameY="-12" frameWidth="283" frameHeight="338"/>
+	<SubTexture name="eduardoidle0009" x="577" y="335" width="270" height="326" frameX="-8" frameY="-12" frameWidth="283" frameHeight="338"/>
+	<SubTexture name="eduardoidle0010" x="577" y="335" width="270" height="326" frameX="-8" frameY="-12" frameWidth="283" frameHeight="338"/>
+	<SubTexture name="eduardoidle0011" x="577" y="335" width="270" height="326" frameX="-8" frameY="-12" frameWidth="283" frameHeight="338"/>
+	<SubTexture name="eduardoidle0012" x="577" y="335" width="270" height="326" frameX="-8" frameY="-12" frameWidth="283" frameHeight="338"/>
+	<SubTexture name="eduardoidle0013" x="577" y="335" width="270" height="326" frameX="-8" frameY="-12" frameWidth="283" frameHeight="338"/>
+	<SubTexture name="eduardoidle0014" x="577" y="335" width="270" height="326" frameX="-8" frameY="-12" frameWidth="283" frameHeight="338"/>
+	<SubTexture name="eduardoleft0000" x="10" y="683" width="256" height="311" frameX="0" frameY="-7" frameWidth="282" frameHeight="318"/>
+	<SubTexture name="eduardoleft0001" x="10" y="683" width="256" height="311" frameX="0" frameY="-7" frameWidth="282" frameHeight="318"/>
+	<SubTexture name="eduardoleft0002" x="276" y="683" width="265" height="318" frameX="-17" frameY="0" frameWidth="282" frameHeight="318"/>
+	<SubTexture name="eduardoleft0003" x="276" y="683" width="265" height="318" frameX="-17" frameY="0" frameWidth="282" frameHeight="318"/>
+	<SubTexture name="eduardoleft0004" x="276" y="683" width="265" height="318" frameX="-17" frameY="0" frameWidth="282" frameHeight="318"/>
+	<SubTexture name="eduardoleft0005" x="276" y="683" width="265" height="318" frameX="-17" frameY="0" frameWidth="282" frameHeight="318"/>
+	<SubTexture name="eduardoleft0006" x="276" y="683" width="265" height="318" frameX="-17" frameY="0" frameWidth="282" frameHeight="318"/>
+	<SubTexture name="eduardoleft0007" x="276" y="683" width="265" height="318" frameX="-17" frameY="0" frameWidth="282" frameHeight="318"/>
+	<SubTexture name="eduardoleft0008" x="276" y="683" width="265" height="318" frameX="-17" frameY="0" frameWidth="282" frameHeight="318"/>
+	<SubTexture name="eduardoright0000" x="551" y="683" width="295" height="326" frameX="-1" frameY="0" frameWidth="296" frameHeight="326"/>
+	<SubTexture name="eduardoright0001" x="551" y="683" width="295" height="326" frameX="-1" frameY="0" frameWidth="296" frameHeight="326"/>
+	<SubTexture name="eduardoright0002" x="10" y="1019" width="280" height="326" frameX="0" frameY="0" frameWidth="296" frameHeight="326"/>
+	<SubTexture name="eduardoright0003" x="10" y="1019" width="280" height="326" frameX="0" frameY="0" frameWidth="296" frameHeight="326"/>
+	<SubTexture name="eduardoright0004" x="10" y="1019" width="280" height="326" frameX="0" frameY="0" frameWidth="296" frameHeight="326"/>
+	<SubTexture name="eduardoright0005" x="10" y="1019" width="280" height="326" frameX="0" frameY="0" frameWidth="296" frameHeight="326"/>
+	<SubTexture name="eduardoright0006" x="10" y="1019" width="280" height="326" frameX="0" frameY="0" frameWidth="296" frameHeight="326"/>
+	<SubTexture name="eduardoright0007" x="10" y="1019" width="280" height="326" frameX="0" frameY="0" frameWidth="296" frameHeight="326"/>
+	<SubTexture name="eduardoright0008" x="10" y="1019" width="280" height="326" frameX="0" frameY="0" frameWidth="296" frameHeight="326"/>
+	<SubTexture name="eduardoup0000" x="300" y="1019" width="265" height="371" frameX="-1" frameY="0" frameWidth="268" frameHeight="371"/>
+	<SubTexture name="eduardoup0001" x="300" y="1019" width="265" height="371" frameX="-1" frameY="0" frameWidth="268" frameHeight="371"/>
+	<SubTexture name="eduardoup0002" x="575" y="1019" width="268" height="352" frameX="0" frameY="-19" frameWidth="268" frameHeight="371"/>
+	<SubTexture name="eduardoup0003" x="575" y="1019" width="268" height="352" frameX="0" frameY="-19" frameWidth="268" frameHeight="371"/>
+	<SubTexture name="eduardoup0004" x="575" y="1019" width="268" height="352" frameX="0" frameY="-19" frameWidth="268" frameHeight="371"/>
+	<SubTexture name="eduardoup0005" x="575" y="1019" width="268" height="352" frameX="0" frameY="-19" frameWidth="268" frameHeight="371"/>
+	<SubTexture name="eduardoup0006" x="575" y="1019" width="268" height="352" frameX="0" frameY="-19" frameWidth="268" frameHeight="371"/>
+	<SubTexture name="eduardoup0007" x="575" y="1019" width="268" height="352" frameX="0" frameY="-19" frameWidth="268" frameHeight="371"/>
+	<SubTexture name="eduardoup0008" x="575" y="1019" width="268" height="352" frameX="0" frameY="-19" frameWidth="268" frameHeight="371"/>
+</TextureAtlas>

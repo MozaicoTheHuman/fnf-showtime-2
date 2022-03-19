@@ -1,16 +1,29 @@
 local maavoSingin = false
 local focaSingin = false
 
+function onUpdate()
+	setProperty('iconP1.y', 565)
+	setProperty('iconP1.x', 875)
+	setProperty('iconP2.x', 270)
+	setProperty('iconP2.y', 550)
+end
+
 function onCreate()
 
-	makeAnimatedLuaSprite('Tulon', 'Maavo', 900, 75)
-	addAnimationByPrefix('Tulon', 'idle', 'idle', 24, false)
-	addAnimationByPrefix('Tulon', 'left', 'right', 24, false)
-	addAnimationByPrefix('Tulon', 'down', 'down', 24, false)
-	addAnimationByPrefix('Tulon', 'up', 'up', 24, false)
-	addAnimationByPrefix('Tulon', 'right', 'left', 24, false)
-	scaleObject('Tulon', -1, 1);	
-	addLuaSprite('Tulon', true)
+	makeAnimatedLuaSprite('Tulon', 'Maritza', 600, 225)
+	addAnimationByPrefix('Tulon', 'idle', 'maritza_danceright', 24, false)
+	addAnimationByPrefix('Tulon', 'left', 'maritza_right', 24, false)
+	addAnimationByPrefix('Tulon', 'down', 'maritza_down', 24, false)
+	addAnimationByPrefix('Tulon', 'up', 'maritza_up', 24, false)
+	addAnimationByPrefix('Tulon', 'right', 'maritza_left', 24, false)
+	scaleObject('Tulon', 1, 1);	
+	addLuaSprite('Tulon', false)
+
+	makeLuaSprite('theHealth','lifebars/BenjaminMartin', 172, 527);
+	addLuaSprite('theHealth',false);
+	scaleObject('theHealth', 0.93, 0.93);
+	setObjectCamera('theHealth', 'hud')
+	setObjectOrder('theHealth', getObjectOrder('healthBar'))
 
     makeAnimatedLuaSprite('Foca culia', 'foca ql', -350, 265)
 	addAnimationByPrefix('Foca culia', 'idle', 'benjastand', 24, false)
@@ -165,3 +178,4 @@ function onTimerCompleted(tag)
 		objectPlayAnimation('Tulon', 'idle', true)
 	end
 end
+
