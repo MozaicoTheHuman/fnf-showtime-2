@@ -2332,6 +2332,23 @@ class PlayState extends MusicBeatState
 						dad.specialAnim = true;
 						dad.heyTimer = 0.6;
 					}
+					if (daNote.noAnimation) {
+						switch (Math.abs(daNote.noteData))
+						{
+							case 0:
+								camX = -30;
+								camY = 0;
+							case 1:
+								camY = 30;
+								camX = 0;
+							case 2:
+								camY = -30;
+								camX = 0;
+							case 3:
+								camX = 30;
+								camY = 0;
+						}
+					}
 					else if (!daNote.noAnimation)
 					{
 						var altAnim:String = "";
@@ -3834,6 +3851,23 @@ class PlayState extends MusicBeatState
 			}
 			health += note.hitHealth;
 
+			if (note.noAnimation) {
+				switch (Math.abs(note.noteData))
+				{
+					case 0:
+						bfcamX = -30;
+						bfcamY = 0;
+					case 1:
+						bfcamY = 30;
+						bfcamX = 0;
+					case 2:
+						bfcamY = -30;
+						bfcamX = 0;
+					case 3:
+						bfcamX = 30;
+						bfcamY = 0;
+				}
+			}
 			if (!note.noAnimation)
 			{
 				var daAlt = '';
