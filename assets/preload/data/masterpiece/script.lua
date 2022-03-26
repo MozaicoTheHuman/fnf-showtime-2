@@ -1,3 +1,19 @@
+local characterDuet = 1
+local ivetteSingin = false
+local maritzaSingin = false
+local stun = false;
+
+function onEvent(name, value1, value2)
+	if name == 'Change Duet' then
+		characterID = tonumber(value1);
+		if characterID == 0 then
+			characterDuet = 0
+		else
+			characterDuet = characterID
+		end
+	end
+end
+
 function onCreate()
 	for i = 0, getProperty('unspawnNotes.length')-1 do
 		if getPropertyFromGroup('unspawnNotes', i, 'noteType') == 'stun note' then
@@ -11,9 +27,30 @@ function onCreate()
 	setObjectCamera('theHealth', 'hud')
 	setObjectOrder('theHealth', getObjectOrder('healthBar'))
 
+--3 monos--
+
+--Mari
+	makeAnimatedLuaSprite('mari', 'maritzamasterpiece', 130, 140)
+	addAnimationByPrefix('mari', 'idle', 'danceleft', 24, false)
+	addAnimationByPrefix('mari', 'left', 'left', 24, false)
+	addAnimationByPrefix('mari', 'down', 'down', 24, false)
+	addAnimationByPrefix('mari', 'up', 'up', 24, false)
+	addAnimationByPrefix('mari', 'right', 'right', 24, false)
+	scaleObject('mari', 1, 1);	
+	addLuaSprite('mari', true)
+--Ivette
+	makeAnimatedLuaSprite('ibet', 'ivettemasterpiece', -700, 100)
+	addAnimationByPrefix('ibet', 'idle', 'idle', 24, false)
+	addAnimationByPrefix('ibet', 'left', 'left', 24, false)
+	addAnimationByPrefix('ibet', 'down', 'down', 24, false)
+	addAnimationByPrefix('ibet', 'up', 'up', 24, false)
+	addAnimationByPrefix('ibet', 'right', 'right', 24, false)
+	scaleObject('ibet', 1, 1);	
+	addLuaSprite('ibet', false)
 end
-local stun = false;
+
 function goodNoteHit(id, direction, noteType, isSustainNote)
+	--Nota stun
     if noteType == 'stun note' then
         triggerEvent('Screen Shake','0.2,0.01','')
         playSound('stunsound', 1);
@@ -24,14 +61,201 @@ function goodNoteHit(id, direction, noteType, isSustainNote)
     end
 end
 
+
+function opponentNoteHit(id,data,type,sus)
+	--Mono solo
+	if type == 'No Animation' then
+		if characterDuet == 0 then
+			--Mari
+			if data == 0 then
+				objectPlayAnimation('mari', 'left', true)
+				maritzaSingin = true
+				cancelTimer('endMari')
+				runTimer('endMari', 0.7);
+			end
+			if data == 1 then
+				objectPlayAnimation('mari', 'down', true)
+				maritzaSingin = true
+				cancelTimer('endMari')
+				runTimer('endMari', 0.7);
+			end
+			if data == 2 then
+				objectPlayAnimation('mari', 'up', true)
+				maritzaSingin = true
+				cancelTimer('endMari')
+				runTimer('endMari', 0.7);
+			end
+			if data == 3 then
+				objectPlayAnimation('mari', 'right', true)
+				maritzaSingin = true
+				cancelTimer('endMari')
+				runTimer('endMari', 0.7);
+			end
+		end
+		if characterDuet == 1 then
+			--Ibet
+			if data == 0 then
+				objectPlayAnimation('ibet', 'left', true)
+				ivetteSingin = true
+				cancelTimer('endIbet')
+				runTimer('endIbet', 0.7);
+			end
+			if data == 1 then
+				objectPlayAnimation('ibet', 'down', true)
+				ivetteSingin = true
+				cancelTimer('endIbet')
+				runTimer('endIbet', 0.7);
+			end
+			if data == 2 then
+				objectPlayAnimation('ibet', 'up', true)
+				ivetteSingin = true
+				cancelTimer('endIbet')
+				runTimer('endIbet', 0.7);
+			end
+			if data == 3 then
+				objectPlayAnimation('ibet', 'right', true)
+				ivetteSingin = true
+				cancelTimer('endIbet')
+				runTimer('endIbet', 0.7);
+			end
+		end
+	end
+	--Que todos canten
+	if type == 'All' then
+		if data == 0 then
+			objectPlayAnimation('mari', 'left', true)
+			maritzaSingin = true
+			cancelTimer('endMari')
+			runTimer('endMari', 0.7);
+
+			objectPlayAnimation('ibet', 'left', true)
+			ivetteSingin = true
+			cancelTimer('endIbet')
+			runTimer('endIbet', 0.7);
+		end
+		if data == 1 then
+			objectPlayAnimation('mari', 'down', true)
+			maritzaSingin = true
+			cancelTimer('endMari')
+			runTimer('endMari', 0.7);
+
+			objectPlayAnimation('ibet', 'down', true)
+			ivetteSingin = true
+			cancelTimer('endIbet')
+			runTimer('endIbet', 0.7);
+		end
+		if data == 2 then
+			objectPlayAnimation('mari', 'up', true)
+			maritzaSingin = true
+			cancelTimer('endMari')
+			runTimer('endMari', 0.7);
+
+			objectPlayAnimation('ibet', 'up', true)
+			ivetteSingin = true
+			cancelTimer('endIbet')
+			runTimer('endIbet', 0.7);
+		end
+		if data == 3 then
+			objectPlayAnimation('mari', 'right', true)
+			maritzaSingin = true
+			cancelTimer('endMari')
+			runTimer('endMari', 0.7);
+
+			objectPlayAnimation('ibet', 'right', true)
+			ivetteSingin = true
+			cancelTimer('endIbet')
+			runTimer('endIbet', 0.7);
+		end
+	end	
+	if type == 'Both' then
+		--Que canten 2 personajes
+		if characterDuet == 0 then
+			if data == 0 then
+				objectPlayAnimation('mari', 'left', true)
+				maritzaSingin = true
+				cancelTimer('endMari')
+				runTimer('endMari', 0.7);
+			end
+			if data == 1 then
+				objectPlayAnimation('mari', 'down', true)
+				maritzaSingin = true
+				cancelTimer('endMari')
+				runTimer('endMari', 0.7);
+			end
+			if data == 2 then
+				objectPlayAnimation('mari', 'up', true)
+				maritzaSingin = true
+				cancelTimer('endMari')
+				runTimer('endMari', 0.7);
+			end
+			if data == 3 then
+				objectPlayAnimation('mari', 'right', true)
+				maritzaSingin = true
+				cancelTimer('endMari')
+				runTimer('endMari', 0.7);
+			end
+		end
+		if characterDuet == 1 then
+			if data == 0 then
+				objectPlayAnimation('ibet', 'left', true)
+				ivetteSingin = true
+				cancelTimer('endIbet')
+				runTimer('endIbet', 0.7);
+			end
+			if data == 1 then
+				objectPlayAnimation('ibet', 'down', true)
+				ivetteSingin = true
+				cancelTimer('endIbet')
+				runTimer('endIbet', 0.7);
+			end
+			if data == 2 then
+				objectPlayAnimation('ibet', 'up', true)
+				ivetteSingin = true
+				cancelTimer('endIbet')
+				runTimer('endIbet', 0.7);
+			end
+			if data == 3 then
+				objectPlayAnimation('ibet', 'right', true)
+				ivetteSingin = true
+				cancelTimer('endIbet')
+				runTimer('endIbet', 0.7);
+			end
+		end
+	end
+end
+
+function onBeatHit()
+	if  ivetteSingin == false then
+	    if curBeat % 2 == 0 then
+		    objectPlayAnimation('ibet', 'idle', true)
+		end
+	end
+	if 	maritzaSingin == false then
+	    if curBeat % 2 == 0 then
+		    objectPlayAnimation('mari', 'idle', true)
+		end
+	end
+end
+
 function onTimerCompleted(tag)
+	--Nota stun
     if tag == 'endStun' then
         setProperty('boyfriend.stunned', false);
         stun = false;
     end
+	--timer Mari
+	if tag == 'endMari' then
+		maritzaSingin = false
+	end
+	--timer Ivette
+	if tag == 'endIbet' then
+		ivetteSingin = false
+	end
 end
 
-function onUpdate()
+
+function onUpdate()	
+--Ubicación de los iconitos
 	setProperty('iconP1.y', 565)
 	setProperty('iconP1.x', 875)
 	setProperty('iconP2.x', 270)
