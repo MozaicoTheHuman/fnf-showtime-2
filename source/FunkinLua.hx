@@ -615,10 +615,13 @@ class FunkinLua {
 			cameraFromString(camera).shake(intensity, duration);
 		});
 		Lua_helper.add_callback(lua, "setRatingPercent", function(value:Float) {
-			lePlayState.ratingPercent = value;
+			PlayState.instance.ratingPercent = value;
 		});
-		Lua_helper.add_callback(lua, "setRatingString", function(value:String) {
-			lePlayState.ratingString = value;
+		Lua_helper.add_callback(lua, "setRatingName", function(value:String) {
+			PlayState.instance.ratingName = value;
+		});
+		Lua_helper.add_callback(lua, "setRatingFC", function(value:String) {
+			PlayState.instance.ratingFC = value;
 		});
 		Lua_helper.add_callback(lua, "getMouseX", function(camera:String) {
 			var cam:FlxCamera = cameraFromString(camera);
