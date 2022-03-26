@@ -176,11 +176,6 @@ class PlayState extends MusicBeatState
 
 	public var timeBar:FlxBar;
 
-	public var sicks:Int = 0;
-	public var goods:Int = 0;
-	public var bads:Int = 0;
-	public var shits:Int = 0;
-
 	private var generatedMusic:Bool = false;
 
 	public var endingSong:Bool = false;
@@ -280,7 +275,6 @@ class PlayState extends MusicBeatState
 
 	// Lua shit
 	private var luaDebugGroup:FlxTypedGroup<DebugLuaText>;
-	public static var instance:PlayState;
 
 	public var introSoundsSuffix:String = '';
 
@@ -290,7 +284,6 @@ class PlayState extends MusicBeatState
 		Paths.destroyLoadedImages(resetSpriteCache);
 		#end
 		resetSpriteCache = false;
-		instance = this;
 
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
@@ -915,6 +908,11 @@ class PlayState extends MusicBeatState
 			startCountdown();
 		}
 		RecalculateRating();
+
+		// PRECACHING MISS SOUNDS BECAUSE I THINK THEY CAN LAG PEOPLE AND FUCK THEM UP IDK HOW HAXE WORKS
+		CoolUtil.precacheSound('missnote1');
+		CoolUtil.precacheSound('missnote2');
+		CoolUtil.precacheSound('missnote3');
 
 		#if desktop
 		// Updating Discord Rich Presence.
@@ -2016,10 +2014,21 @@ class PlayState extends MusicBeatState
 
 		super.update(elapsed);
 
-		if(ratingName == '?') {
-			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName;
-		} else {
-			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;//peeps wanted no integer rating
+		if (ratingString == '?')
+		{
+			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingString;
+		}
+		else
+		{
+			scoreTxt.text = 'Score: '
+				+ songScore
+				+ ' | Misses: '
+				+ songMisses
+				+ ' | Rating: '
+				+ ratingString
+				+ ' ('
+				+ Math.floor(ratingPercent * 100)
+				+ '%)';
 		}
 
 		if (cpuControlled)
@@ -3361,9 +3370,6 @@ class PlayState extends MusicBeatState
 		eventNotes = [];
 	}
 
-	public var totalPlayed:Int = 0;
-	public var totalNotesHit:Float = 0.0;
-
 	private function popUpScore(note:Note = null):Void
 	{
 		var noteDiff:Float = Math.abs(note.strumTime - Conductor.songPosition + 8);
@@ -3381,31 +3387,25 @@ class PlayState extends MusicBeatState
 		var rating:FlxSprite = new FlxSprite();
 		var score:Int = 350;
 
-		var daRating:String = Conductor.judgeNote(note, noteDiff);
+		var daRating:String = "sick";
 
-		switch (daRating)
+		if (noteDiff > Conductor.safeZoneOffset * 0.75)
 		{
-			case "shit": // shit
-				totalNotesHit += 0;
-				note.ratingMod = 0;
-				score = 50;
-				shits++;
-			case "bad": // bad
-				totalNotesHit += 0.5;
-				note.ratingMod = 0.5;
-				score = 100;
-				bads++;
-			case "good": // good
-				totalNotesHit += 0.75;
-				note.ratingMod = 0.75;
-				score = 200;
-				goods++;
-			case "sick": // sick
-				totalNotesHit += 1;
-				note.ratingMod = 1;
-				sicks++;
+			daRating = 'shit';
+			health -= 0.15;
+			score = 50;
 		}
-		note.rating = daRating;
+		else if (noteDiff > Conductor.safeZoneOffset * 0.5)
+		{
+			daRating = 'bad';
+			health -= 0.09;
+			score = 100;
+		}
+		else if (noteDiff > Conductor.safeZoneOffset * 0.25)
+		{
+			daRating = 'good';
+			score = 200;
+		}
 
 		if (daRating == 'sick' && !note.noteSplashDisabled)
 		{
@@ -3416,9 +3416,7 @@ class PlayState extends MusicBeatState
 		{
 			songScore += score;
 			songHits++;
-			totalPlayed++;
 			RecalculateRating();
-
 			if (scoreTxtTween != null)
 			{
 				scoreTxtTween.cancel();
@@ -3726,8 +3724,6 @@ class PlayState extends MusicBeatState
 		combo = 0;
 		songMisses++;
 		vocals.volume = 0;
-
-		totalPlayed++;
 		RecalculateRating();
 
 		var animToPlay:String = '';
@@ -3783,7 +3779,6 @@ class PlayState extends MusicBeatState
 					ghostMisses++;
 				songMisses++;
 			}
-			totalPlayed++;
 			RecalculateRating();
 
 			FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.1, 0.2));
@@ -4399,55 +4394,47 @@ class PlayState extends MusicBeatState
 		}
 	}
 
-	public var ratingName:String = '?';
+	public var ratingString:String;
 	public var ratingPercent:Float;
-	public var ratingFC:String;
 
-	public function RecalculateRating() {
+	public function RecalculateRating()
+	{
 		setOnLuas('score', songScore);
 		setOnLuas('misses', songMisses);
+		setOnLuas('ghostMisses', songMisses);
 		setOnLuas('hits', songHits);
 
 		var ret:Dynamic = callOnLuas('onRecalculateRating', []);
-		if(ret != FunkinLua.Function_Stop)
+		if (ret != FunkinLua.Function_Stop)
 		{
-			if(totalPlayed < 1) //Prevent divide by 0
-				ratingName = '?';
+			ratingPercent = songScore / ((songHits + songMisses - ghostMisses) * 350);
+			if (!Math.isNaN(ratingPercent) && ratingPercent < 0)
+				ratingPercent = 0;
+
+			if (Math.isNaN(ratingPercent))
+			{
+				ratingString = '?';
+			}
+			else if (ratingPercent >= 1)
+			{
+				ratingPercent = 1;
+				ratingString = ratingStuff[ratingStuff.length - 1][0]; // Uses last string
+			}
 			else
 			{
-				// Rating Percent
-				ratingPercent = Math.min(1, Math.max(0, totalNotesHit / totalPlayed));
-				//trace((totalNotesHit / totalPlayed) + ', Total: ' + totalPlayed + ', notes hit: ' + totalNotesHit);
-
-				// Rating Name
-				if(ratingPercent >= 1)
+				for (i in 0...ratingStuff.length - 1)
 				{
-					ratingName = ratingStuff[ratingStuff.length-1][0]; //Uses last string
-				}
-				else
-				{
-					for (i in 0...ratingStuff.length-1)
+					if (ratingPercent < ratingStuff[i][1])
 					{
-						if(ratingPercent < ratingStuff[i][1])
-						{
-							ratingName = ratingStuff[i][0];
-							break;
-						}
+						ratingString = ratingStuff[i][0];
+						break;
 					}
 				}
 			}
 
-			// Rating FC
-			ratingFC = "";
-			if (sicks > 0) ratingFC = "SFC";
-			if (goods > 0) ratingFC = "GFC";
-			if (bads > 0 || shits > 0) ratingFC = "FC";
-			if (songMisses > 0 && songMisses < 10) ratingFC = "SDCB";
-			else if (songMisses >= 10) ratingFC = "Clear";
+			setOnLuas('rating', ratingPercent);
+			setOnLuas('ratingName', ratingString);
 		}
-		setOnLuas('rating', ratingPercent);
-		setOnLuas('ratingName', ratingName);
-		setOnLuas('ratingFC', ratingFC);
 	}
 
 	#if ACHIEVEMENTS_ALLOWED

@@ -87,13 +87,6 @@ class CreditsState extends MusicBeatState
 				'https://www.youtube.com/channel/UCzs0woaCtgqCxLNkI_qwE9A/',
 				'FFDD33'
 			],
-			[
-				'Sandwich',
-				'sandwich',
-				'Coder',
-				'https://twitter.com/randomguyhere0',
-				'FFDD33'
-			],
 			['Ben Sanchez', 'ben', 'Coder', 'https://twitter.com/art_keny', 'FFDD33'],
 			['SrPerez', 'penez', 'Coder', 'https://twitter.com/YOUKdev', 'FFDD33'],
 			['YOUK', 'youkdev', 'Coder', 'https://twitter.com/YOUKdev', 'FFDD33'],
