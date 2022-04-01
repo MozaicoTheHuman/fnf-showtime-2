@@ -1,0 +1,177 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				5
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "BF HEY",
+			"indices": []
+		},
+		{
+			"offsets": [
+				207,
+				231
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "BF SHOWTIME RIP"
+		},
+		{
+			"offsets": [
+				207,
+				231
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "BF SHOWTIME cocos"
+		},
+		{
+			"offsets": [
+				207,
+				231
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "BF SHOWTIME coquimbo"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				77,
+				150
+			],
+			"anim": "stun",
+			"fps": 24,
+			"name": "BF SHOWTIME STUN",
+			"indices": []
+		},
+		{
+			"offsets": [
+				116,
+				150
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				117,
+				149
+			],
+			"indices": [],
+			"fps": 25,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "left"
+		},
+		{
+			"offsets": [
+				112,
+				147
+			],
+			"indices": [],
+			"fps": 25,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "right"
+		},
+		{
+			"offsets": [
+				111,
+				150
+			],
+			"indices": [],
+			"fps": 25,
+			"anim": "singUP",
+			"loop": false,
+			"name": "up"
+		},
+		{
+			"offsets": [
+				105,
+				153
+			],
+			"indices": [],
+			"fps": 25,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "down"
+		},
+		{
+			"offsets": [
+				112,
+				148
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "izquierda"
+		},
+		{
+			"offsets": [
+				93,
+				153
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "abajo"
+		},
+		{
+			"offsets": [
+				101,
+				150
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "arriba"
+		},
+		{
+			"offsets": [
+				102,
+				148
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "derecha"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/show-bf",
+	"position": [
+		0,
+		450
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		0,
+		255,
+		255
+	],
+	"camera_position": [
+		20,
+		-160
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

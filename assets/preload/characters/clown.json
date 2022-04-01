@@ -1,0 +1,133 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-96,
+				-374
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "ronaldLEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				-367
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "ronaldDOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-137,
+				53
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "ronaldUP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-52,
+				-322
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "ronaldRIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				418,
+				100
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "ronaldHYPER",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-115,
+				-260
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"name": "ronaldIZQUIERDA"
+		},
+		{
+			"offsets": [
+				-75,
+				-660
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "ronaldABAJO"
+		},
+		{
+			"offsets": [
+				120,
+				-167
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "ronaldARRIBA"
+		},
+		{
+			"offsets": [
+				-139,
+				-218
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "ronaldIDLE"
+		},
+		{
+			"offsets": [
+				-133,
+				-218
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "ronaldRUUU"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/clown",
+	"position": [
+		100,
+		-105
+	],
+	"healthicon": "clown",
+	"flip_x": false,
+	"healthbar_colors": [
+		220,
+		0,
+		0
+	],
+	"camera_position": [
+		-270,
+		260
+	],
+	"sing_duration": 6.1,
+	"scale": 2.85
+}

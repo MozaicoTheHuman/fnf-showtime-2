@@ -1,18 +1,6 @@
-local characterDuet = 1
 local ivetteSingin = false
 local maritzaSingin = false
 local stun = false;
-
-function onEvent(name, value1, value2)
-	if name == 'Change Duet' then
-		characterID = tonumber(value1);
-		if characterID == 0 then
-			characterDuet = 0
-		else
-			characterDuet = characterID
-		end
-	end
-end
 
 function onCreate()
 	for i = 0, getProperty('unspawnNotes.length')-1 do
@@ -21,14 +9,8 @@ function onCreate()
 				setPropertyFromGroup('unspawnNotes', i, 'ignoreNote', true);
 		end
 	end
-	makeLuaSprite('theHealth','lifebars/Maavo', 215, 535);
-	addLuaSprite('theHealth',false);
-	scaleObject('theHealth', 0.93, 0.93);
-	setObjectCamera('theHealth', 'hud')
-	setObjectOrder('theHealth', getObjectOrder('healthBar'))
 
 --3 monos--
-
 --Mari
 	makeAnimatedLuaSprite('mari', 'maritzamasterpiece', 130, 140)
 	addAnimationByPrefix('mari', 'idle', 'danceleft', 24, false)
@@ -63,65 +45,62 @@ end
 
 
 function opponentNoteHit(id,data,type,sus)
-	--Mono solo
-	if type == 'No Animation' then
-		if characterDuet == 0 then
-			--Mari
-			if data == 0 then
-				objectPlayAnimation('mari', 'left', true)
-				maritzaSingin = true
-				cancelTimer('endMari')
-				runTimer('endMari', 0.7);
-			end
-			if data == 1 then
-				objectPlayAnimation('mari', 'down', true)
-				maritzaSingin = true
-				cancelTimer('endMari')
-				runTimer('endMari', 0.7);
-			end
-			if data == 2 then
-				objectPlayAnimation('mari', 'up', true)
-				maritzaSingin = true
-				cancelTimer('endMari')
-				runTimer('endMari', 0.7);
-			end
-			if data == 3 then
-				objectPlayAnimation('mari', 'right', true)
-				maritzaSingin = true
-				cancelTimer('endMari')
-				runTimer('endMari', 0.7);
-			end
+	--Maritza and Maavo or Maritza Alone Characters Sing
+	if (type == 'MainAndSecondCharacter' or type == 'SecondCharacter') then
+		if data == 0 then
+			objectPlayAnimation('mari', 'left', true)
+			maritzaSingin = true
+			cancelTimer('endMari')
+			runTimer('endMari', 0.7);
 		end
-		if characterDuet == 1 then
-			--Ibet
-			if data == 0 then
-				objectPlayAnimation('ibet', 'left', true)
-				ivetteSingin = true
-				cancelTimer('endIbet')
-				runTimer('endIbet', 0.7);
-			end
-			if data == 1 then
-				objectPlayAnimation('ibet', 'down', true)
-				ivetteSingin = true
-				cancelTimer('endIbet')
-				runTimer('endIbet', 0.7);
-			end
-			if data == 2 then
-				objectPlayAnimation('ibet', 'up', true)
-				ivetteSingin = true
-				cancelTimer('endIbet')
-				runTimer('endIbet', 0.7);
-			end
-			if data == 3 then
-				objectPlayAnimation('ibet', 'right', true)
-				ivetteSingin = true
-				cancelTimer('endIbet')
-				runTimer('endIbet', 0.7);
-			end
+		if data == 1 then
+			objectPlayAnimation('mari', 'down', true)
+			maritzaSingin = true
+			cancelTimer('endMari')
+			runTimer('endMari', 0.7);
+		end
+		if data == 2 then
+			objectPlayAnimation('mari', 'up', true)
+			maritzaSingin = true
+			cancelTimer('endMari')
+			runTimer('endMari', 0.7);
+		end
+		if data == 3 then
+			objectPlayAnimation('mari', 'right', true)
+			maritzaSingin = true
+			cancelTimer('endMari')
+			runTimer('endMari', 0.7);
 		end
 	end
-	--Que todos canten
-	if type == 'All' then
+	--Ivette and Maavo or Ivette Alone Characters Sing
+	if (type == 'MainAndThirdCharacter' or type == 'ThirdCharacter') then
+		if data == 0 then
+			objectPlayAnimation('ibet', 'left', true)
+			ivetteSingin = true
+			cancelTimer('endIbet')
+			runTimer('endIbet', 0.7);
+		end
+		if data == 1 then
+			objectPlayAnimation('ibet', 'down', true)
+			ivetteSingin = true
+			cancelTimer('endIbet')
+			runTimer('endIbet', 0.7);
+		end
+		if data == 2 then
+			objectPlayAnimation('ibet', 'up', true)
+			ivetteSingin = true
+			cancelTimer('endIbet')
+			runTimer('endIbet', 0.7);
+		end
+		if data == 3 then
+			objectPlayAnimation('ibet', 'right', true)
+			ivetteSingin = true
+			cancelTimer('endIbet')
+			runTimer('endIbet', 0.7);
+		end
+	end
+	--All Characters Sing
+	if (type == 'AllCharacters' or type == 'SecondAndThirdCharacter') then
 		if data == 0 then
 			objectPlayAnimation('mari', 'left', true)
 			maritzaSingin = true
@@ -167,61 +146,6 @@ function opponentNoteHit(id,data,type,sus)
 			runTimer('endIbet', 0.7);
 		end
 	end	
-	if type == 'Both' then
-		--Que canten 2 personajes
-		if characterDuet == 0 then
-			if data == 0 then
-				objectPlayAnimation('mari', 'left', true)
-				maritzaSingin = true
-				cancelTimer('endMari')
-				runTimer('endMari', 0.7);
-			end
-			if data == 1 then
-				objectPlayAnimation('mari', 'down', true)
-				maritzaSingin = true
-				cancelTimer('endMari')
-				runTimer('endMari', 0.7);
-			end
-			if data == 2 then
-				objectPlayAnimation('mari', 'up', true)
-				maritzaSingin = true
-				cancelTimer('endMari')
-				runTimer('endMari', 0.7);
-			end
-			if data == 3 then
-				objectPlayAnimation('mari', 'right', true)
-				maritzaSingin = true
-				cancelTimer('endMari')
-				runTimer('endMari', 0.7);
-			end
-		end
-		if characterDuet == 1 then
-			if data == 0 then
-				objectPlayAnimation('ibet', 'left', true)
-				ivetteSingin = true
-				cancelTimer('endIbet')
-				runTimer('endIbet', 0.7);
-			end
-			if data == 1 then
-				objectPlayAnimation('ibet', 'down', true)
-				ivetteSingin = true
-				cancelTimer('endIbet')
-				runTimer('endIbet', 0.7);
-			end
-			if data == 2 then
-				objectPlayAnimation('ibet', 'up', true)
-				ivetteSingin = true
-				cancelTimer('endIbet')
-				runTimer('endIbet', 0.7);
-			end
-			if data == 3 then
-				objectPlayAnimation('ibet', 'right', true)
-				ivetteSingin = true
-				cancelTimer('endIbet')
-				runTimer('endIbet', 0.7);
-			end
-		end
-	end
 end
 
 function onBeatHit()
@@ -251,13 +175,4 @@ function onTimerCompleted(tag)
 	if tag == 'endIbet' then
 		ivetteSingin = false
 	end
-end
-
-
-function onUpdate()	
---Ubicación de los iconitos
-	setProperty('iconP1.y', 565)
-	setProperty('iconP1.x', 875)
-	setProperty('iconP2.x', 270)
-	setProperty('iconP2.y', 550)
 end

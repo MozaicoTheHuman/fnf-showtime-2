@@ -120,10 +120,20 @@ class MainMenuState extends MusicBeatState
 		charshadow = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/' + menuUnlocked + '/artworkshadow'));
 		charshadow.screenCenter();
 		charshadow.scrollFactor.set(0, 0);
-		charshadow.x += 75;
-		charshadow.y += 35;
-		charshadow.scale.x = 0.64;
-		charshadow.scale.y = 0.64;
+		if (menuUnlocked != "maritza")
+		{
+			charshadow.scale.x = 0.70;
+			charshadow.scale.y = 0.70;
+			charshadow.x += 75;
+			charshadow.y += -19;
+		}
+		else
+		{
+			charshadow.scale.x = 0.74;
+			charshadow.scale.y = 0.74;
+			charshadow.x += 75;
+			charshadow.y += 5;
+		}
 		charshadow.antialiasing = ClientPrefs.globalAntialiasing;
 		charshadow.x = 1000;
 		add(charshadow);
@@ -131,17 +141,19 @@ class MainMenuState extends MusicBeatState
 		char = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/' + menuUnlocked + '/artwork'));
 		char.screenCenter();
 		char.scrollFactor.set(0, 0);
-		char.x += 75;
-		char.y += 35;
 		if (menuUnlocked != "maritza")
 		{
-			char.scale.x = 0.64;
-			char.scale.y = 0.64;
+			char.scale.x = 0.70;
+			char.scale.y = 0.70;
+			char.x += 75;
+			char.y += -19;
 		}
 		else
 		{
-			char.scale.x = 0.73;
-			char.scale.y = 0.73;
+			char.scale.x = 0.74;
+			char.scale.y = 0.74;
+			char.x += 75;
+			char.y += 5;
 		}
 		char.antialiasing = ClientPrefs.globalAntialiasing;
 		char.x = 1000;
@@ -497,7 +509,7 @@ class MainMenuState extends MusicBeatState
 		FlxTween.tween(char, {x: -245}, 1, {
 			ease: FlxEase.quadOut,
 		});
-		FlxTween.tween(charshadow, {x: -245}, 1, {
+		FlxTween.tween(charshadow, {x: -245}, 1.05, {
 			ease: FlxEase.quadOut,
 		});
 		FlxTween.tween(menu, {x: -320, y: -180}, 0.5, {

@@ -59,7 +59,7 @@
 	"no_antialiasing": false,
 	"image": "characters/martin",
 	"position": [
-		0,
+		-190,
 		60
 	],
 	"healthicon": "2016",
@@ -70,7 +70,7 @@
 		115
 	],
 	"camera_position": [
-		200,
+		40,
 		30
 	],
 	"sing_duration": 8,
