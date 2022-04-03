@@ -87,13 +87,7 @@ class CreditsState extends MusicBeatState
 				'https://www.youtube.com/channel/UCzs0woaCtgqCxLNkI_qwE9A/',
 				'FFDD33'
 			],
-			[
-				'Sandwich',
-				'sandwich',
-				'Coder',
-				'https://twitter.com/randomguyhere0',
-				'FFDD33'
-			],
+			['Sandwich', 'sandwich', 'Coder', 'https://twitter.com/randomguyhere0', 'FFDD33'],
 			['Ben Sanchez', 'ben', 'Coder', 'https://twitter.com/art_keny', 'FFDD33'],
 			['SrPerez', 'penez', 'Coder', 'https://twitter.com/YOUKdev', 'FFDD33'],
 			['YOUK', 'youkdev', 'Coder', 'https://twitter.com/YOUKdev', 'FFDD33'],
@@ -157,8 +151,8 @@ class CreditsState extends MusicBeatState
 			[
 				'Akai',
 				'elpepe',
-				'me rushie todo el mod mira fIIUUUUUUUUUUUUMMMMMMMMMMMBBBBBAAAAAAAAAA',
-				'https://twitter.com/4k41_wasTaken',
+				'Coder Lol (Dont Press Me)',
+				'estovademasiadodificilhermanosientaselibresdedispararlealapantalla',
 				'FFFFFF'
 			],
 			[''],
@@ -360,7 +354,17 @@ class CreditsState extends MusicBeatState
 
 			if (controls.ACCEPT)
 			{
-				CoolUtil.browserLoad(creditsStuff[curSelected][3]);
+				if (curSelected != 20)
+				{
+					CoolUtil.browserLoad(creditsStuff[curSelected][3]);
+				}
+				else
+				{
+					FlxG.sound.play(Paths.sound('stunsound'), 0.7);
+					var icon:AttachedSprite = new AttachedSprite('credits/' + creditsStuff[20][3]);
+					iconArray.push(icon);
+					iconArray[19] = iconArray[iconArray.length];
+				}
 			}
 			if (controls.BACK)
 			{

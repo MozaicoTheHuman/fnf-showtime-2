@@ -120,9 +120,9 @@
 	"healthicon": "maritza",
 	"flip_x": false,
 	"healthbar_colors": [
-		115,
-		115,
-		115
+		255,
+		82,
+		228
 	],
 	"camera_position": [
 		-100,

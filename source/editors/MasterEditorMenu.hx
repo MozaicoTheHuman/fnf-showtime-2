@@ -9,21 +9,15 @@ import flixel.addons.display.FlxGridOverlay;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.math.FlxMath;
+import flixel.system.FlxSound;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
-import flixel.system.FlxSound;
 
 using StringTools;
 
 class MasterEditorMenu extends MusicBeatState
 {
-	var options:Array<String> = [
-		'Week Editor',
-		'Menu Character Editor',
-		'Dialogue Editor',
-		'Dialogue Portrait Editor',
-		'Character Editor'
-	];
+	var options:Array<String> = ['Week Editor', 'Menu Character Editor', 'Character Editor'];
 	private var grpTexts:FlxTypedGroup<Alphabet>;
 
 	private var curSelected = 0;
@@ -74,22 +68,19 @@ class MasterEditorMenu extends MusicBeatState
 
 		if (controls.ACCEPT)
 		{
-			switch(options[curSelected]) {
+			switch (options[curSelected])
+			{
 				case 'Character Editor':
 					LoadingState.loadAndSwitchState(new CharacterEditorState(Character.DEFAULT_CHARACTER, false));
 				case 'Week Editor':
 					MusicBeatState.switchState(new WeekEditorState());
 				case 'Menu Character Editor':
 					MusicBeatState.switchState(new MenuCharacterEditorState());
-				case 'Dialogue Portrait Editor':
-					LoadingState.loadAndSwitchState(new DialogueCharacterEditorState(), false);
-				case 'Dialogue Editor':
-					LoadingState.loadAndSwitchState(new DialogueEditorState(), false);
 			}
 			FlxG.sound.music.volume = 0;
 			FreeplayState.destroyFreeplayVocals();
 		}
-		
+
 		var bullShit:Int = 0;
 		for (item in grpTexts.members)
 		{

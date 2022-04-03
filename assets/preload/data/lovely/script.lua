@@ -5,11 +5,6 @@ function onCreate()
 				setPropertyFromGroup('unspawnNotes', i, 'ignoreNote', true);
 		end
 	end
-	makeLuaSprite('theHealth','lifebars/Maritza', 172, 527);
-	addLuaSprite('theHealth',false);
-	scaleObject('theHealth', 1, 1);
-	setObjectCamera('theHealth', 'hud')
-	setObjectOrder('theHealth', getObjectOrder('healthBar'))
 
 end
 local stun = false;
@@ -29,11 +24,4 @@ function onTimerCompleted(tag)
         setProperty('boyfriend.stunned', false);
         stun = false;
     end
-end
-
-function onUpdate()
-	setProperty('iconP1.y', 565)
-	setProperty('iconP1.x', 883)
-	setProperty('iconP2.x', 240)
-	setProperty('iconP2.y', 550)
 end
