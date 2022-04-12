@@ -1,114 +1,114 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				180
 			],
+			"loop": false,
+			"fps": 23,
 			"anim": "danceLeft",
-			"fps": 23,
-			"name": "mavoo idle",
-			"indices": []
+			"indices": [],
+			"name": "mavoo idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				180
 			],
-			"anim": "danceRight",
+			"loop": false,
 			"fps": 23,
-			"name": "mavoo dance2",
-			"indices": []
+			"anim": "danceRight",
+			"indices": [],
+			"name": "mavoo dance2"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				78,
 				46
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 25,
-			"name": "MAVO DOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "MAVO DOWN"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				46,
 				224
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 25,
-			"name": "MAVO UP",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "MAVO UP"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				299,
 				126
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 25,
-			"name": "mavoo right",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "mavoo right"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				46,
 				133
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 25,
-			"name": "mavo left",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "mavo left"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				295,
 				126
 			],
-			"loop": false,
-			"fps": 25,
 			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "mavoo derecha"
+			"fps": 25,
+			"name": "mavoo derecha",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				48,
 				132
 			],
-			"loop": false,
-			"fps": 25,
 			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "mavo izquierda"
+			"fps": 25,
+			"name": "mavo izquierda",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				47,
 				224
 			],
-			"loop": false,
-			"fps": 25,
 			"anim": "singUPmiss",
-			"indices": [],
-			"name": "MAVO arriba"
+			"fps": 25,
+			"name": "MAVO arriba",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				86,
 				40
 			],
-			"loop": false,
-			"fps": 25,
 			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "MAVO abajo"
+			"fps": 25,
+			"name": "MAVO abajo",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -125,7 +125,7 @@
 		255
 	],
 	"camera_position": [
-		70,
+		130,
 		-130
 	],
 	"sing_duration": 7.5,

@@ -35,10 +35,43 @@
 	<SubTexture name="right0003" x="10" y="1606" width="754" height="788"/>
 	<SubTexture name="right0004" x="774" y="1606" width="754" height="788"/>
 	<SubTexture name="right0005" x="774" y="1606" width="754" height="788"/>
-	<SubTexture name="up0000" x="1538" y="1606" width="754" height="788"/>
-	<SubTexture name="up0001" x="1538" y="1606" width="754" height="788"/>
-	<SubTexture name="up0002" x="2302" y="1606" width="754" height="788"/>
-	<SubTexture name="up0003" x="2302" y="1606" width="754" height="788"/>
-	<SubTexture name="up0004" x="3066" y="1606" width="754" height="788"/>
-	<SubTexture name="up0005" x="3066" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0000" x="1538" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0001" x="1538" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0002" x="1538" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0003" x="1538" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0004" x="1538" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0005" x="1538" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0006" x="1538" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0007" x="1538" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0008" x="1538" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0009" x="1538" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0010" x="1538" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0011" x="1538" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0012" x="1538" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0013" x="2302" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0014" x="2302" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0015" x="2302" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0016" x="2302" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0017" x="3066" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0018" x="3066" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0019" x="3066" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0020" x="3066" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0021" x="3066" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0022" x="3066" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0023" x="3066" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0024" x="3066" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0025" x="3066" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0026" x="3066" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0027" x="3066" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0028" x="3066" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0029" x="2302" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0030" x="2302" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0031" x="2302" y="1606" width="754" height="788"/>
+	<SubTexture name="shuo0032" x="2302" y="1606" width="754" height="788"/>
+	<SubTexture name="up0000" x="10" y="2404" width="754" height="788"/>
+	<SubTexture name="up0001" x="10" y="2404" width="754" height="788"/>
+	<SubTexture name="up0002" x="774" y="2404" width="754" height="788"/>
+	<SubTexture name="up0003" x="774" y="2404" width="754" height="788"/>
+	<SubTexture name="up0004" x="1538" y="2404" width="754" height="788"/>
+	<SubTexture name="up0005" x="1538" y="2404" width="754" height="788"/>
 </TextureAtlas>

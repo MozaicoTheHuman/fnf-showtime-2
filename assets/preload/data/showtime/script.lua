@@ -12,7 +12,7 @@ function onCreate()
 
 --3 monos--
 --Mari
-	makeAnimatedLuaSprite('mari', 'maritzamasterpiece', 130, 140)
+	makeAnimatedLuaSprite('mari', 'maritzamasterpiece', 160, 140)
 	addAnimationByPrefix('mari', 'idle', 'danceleft', 24, false)
 	addAnimationByPrefix('mari', 'left', 'left', 24, false)
 	addAnimationByPrefix('mari', 'down', 'down', 24, false)
@@ -21,7 +21,7 @@ function onCreate()
 	scaleObject('mari', 1, 1);	
 	addLuaSprite('mari', true)
 --Ivette
-	makeAnimatedLuaSprite('ibet', 'ivettemasterpiece', -700, 100)
+	makeAnimatedLuaSprite('ibet', 'ivettemasterpiece', -650, 100)
 	addAnimationByPrefix('ibet', 'idle', 'idle', 24, false)
 	addAnimationByPrefix('ibet', 'left', 'left', 24, false)
 	addAnimationByPrefix('ibet', 'down', 'down', 24, false)
@@ -36,10 +36,10 @@ function goodNoteHit(id, direction, noteType, isSustainNote)
     if noteType == 'stun note' then
         triggerEvent('Screen Shake','0.2,0.01','')
         playSound('stunsound', 1);
-    	characterPlayAnim('bf', 'stun', true);
+        triggerEvent('Play Animation','stun','1')
     	setProperty('boyfriend.stunned', true);
     	stun = true;
-    	runTimer('endStun', 1.5);
+    	runTimer('endStun', 1.4);
     end
 end
 
