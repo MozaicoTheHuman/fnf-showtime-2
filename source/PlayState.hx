@@ -442,6 +442,39 @@ class PlayState extends MusicBeatState
 				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('kfm/stagebackKFM', 'shared'));
 				bg.active = true;
 				add(bg);
+			case 'ponderingmall': // Pondering
+				var bg:BGSprite = new BGSprite('mall/bgWalls', -1400, -885, 0.7, 0.7);
+				bg.setGraphicSize(Std.int(bg.width * 1.1));
+				bg.updateHitbox();
+				add(bg);
+
+				var fgSnow:BGSprite = new BGSprite('mall/fgSnow', -1005, -530, 0.8, 1);
+				add(fgSnow);
+
+				var bgEscalator:BGSprite = new BGSprite('mall/bgEscalator', -1400, -675, 0.8, 1);
+				bgEscalator.setGraphicSize(Std.int(bgEscalator.width * 1.0));
+				bgEscalator.updateHitbox();
+				add(bgEscalator);
+
+			case 'callejon': // Light On
+				var bg:BGSprite = new BGSprite('lighton/lighton-sky', -500, -290, 0.7, 0.7);
+				bg.setGraphicSize(Std.int(bg.width * 1.1));
+				bg.updateHitbox();
+				add(bg);
+
+				var fgSnow:BGSprite = new BGSprite('lighton/lighton-stage', -500, -130, 0.95, 0.95);
+				fgSnow.setGraphicSize(Std.int(bg.width * 1.1));
+				add(fgSnow);
+
+				var bgEscalator:BGSprite = new BGSprite('lighton/lighton-trash', -1030, -130, 1.3, 1.3);
+				bgEscalator.setGraphicSize(Std.int(bgEscalator.width * 1.2));
+				bgEscalator.updateHitbox();
+				add(bgEscalator);
+
+				var bgEscalator:BGSprite = new BGSprite('lighton/lighton-trash2', -400, -130, 1.3, 1.3);
+				bgEscalator.setGraphicSize(Std.int(bgEscalator.width * 1.2));
+				bgEscalator.updateHitbox();
+				add(bgEscalator);
 		}
 
 		if (isMugen)
