@@ -1044,7 +1044,7 @@ class PlayState extends MusicBeatState
 					case 0:
 						FlxG.sound.play(Paths.sound('intro3' + introSoundsSuffix), 0.6);
 					case 1:
-						var ready:FlxSprite = new FlxSprite().loadGraphic(hudFolder + Paths.image(introAlts[0]));
+						var ready:FlxSprite = new FlxSprite().loadGraphic(Paths.image(hudFolder + introAlts[0]));
 						ready.scrollFactor.set();
 						ready.updateHitbox();
 
@@ -1063,7 +1063,7 @@ class PlayState extends MusicBeatState
 						});
 						FlxG.sound.play(Paths.sound('intro2' + introSoundsSuffix), 0.6);
 					case 2:
-						var set:FlxSprite = new FlxSprite().loadGraphic(hudFolder + Paths.image(introAlts[1]));
+						var set:FlxSprite = new FlxSprite().loadGraphic(Paths.image(hudFolder + introAlts[1]));
 						set.scrollFactor.set();
 
 						set.screenCenter();
@@ -1081,7 +1081,7 @@ class PlayState extends MusicBeatState
 						});
 						FlxG.sound.play(Paths.sound('intro1' + introSoundsSuffix), 0.6);
 					case 3:
-						var go:FlxSprite = new FlxSprite().loadGraphic(hudFolder + Paths.image(introAlts[2]));
+						var go:FlxSprite = new FlxSprite().loadGraphic(Paths.image(hudFolder + introAlts[2]));
 						go.scrollFactor.set();
 
 						go.updateHitbox();
