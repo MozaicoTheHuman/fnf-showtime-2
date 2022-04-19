@@ -643,41 +643,54 @@ class PlayState extends MusicBeatState
 
 		FlxG.fixedTimestep = false;
 		moveCameraSection(0);
-
 		healthBarBG = new FlxSprite(172).loadGraphic(Paths.image(hudFolder + 'healthBar'));
 		healthBarBG.scrollFactor.set();
 		healthBarBG.visible = !ClientPrefs.hideHud;
 
-		if (ClientPrefs.downScroll)
-			healthBarBG.y = 30;
-		else
-			healthBarBG.y = FlxG.height - healthBarBG.height - 30;
-
-		healthBar = new FlxBar(healthBarBG.x + 178, healthBarBG.y + 119, RIGHT_TO_LEFT, 575, 26, this, 'health', 0, 2);
+		healthBar = new FlxBar(healthBarBG.x + 178, 0, RIGHT_TO_LEFT, 575, 26, this, 'health', 0, 2);
 		healthBar.scrollFactor.set();
-
 		healthBar.visible = !ClientPrefs.hideHud;
-		add(healthBar);
-		add(healthBarBG);
 
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
-		iconP1.y = healthBarBG.y + 36;
 		iconP1.x = healthBarBG.x + healthBarBG.width - 63;
 		iconP1.visible = !ClientPrefs.hideHud;
-		add(iconP1);
 
 		iconP2 = new HealthIcon(dad.healthIcon, false);
-		iconP2.y = healthBarBG.y + 32;
 		iconP2.x = healthBarBG.x + 45;
 		iconP2.visible = !ClientPrefs.hideHud;
+
+		if (ClientPrefs.downScroll)
+		{
+			healthBarBG.scale.y = -1;
+			healthBarBG.y = 50;
+			healthBar.y = healthBarBG.y + 12;
+			iconP2.y = healthBarBG.y - 25;
+			iconP1.y = healthBarBG.y - 29;
+		}
+		else
+		{
+			healthBarBG.y = FlxG.height - healthBarBG.height - 50;
+			healthBar.y = healthBarBG.y + 119;
+			iconP2.y = healthBarBG.y + 32;
+			iconP1.y = healthBarBG.y + 36;
+		}
+
+		add(healthBar);
+		add(healthBarBG);
+		add(iconP1);
 		add(iconP2);
 		reloadHealthBarColors();
 
-		scoreTxt = new FlxText(0, healthBarBG.y + healthBarBG.height, FlxG.width, "", 20);
+		scoreTxt = new FlxText(0, 0, FlxG.width, "", 20);
 		scoreTxt.setFormat(Paths.font("p5.ttf"), 25, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.45;
 		scoreTxt.visible = !ClientPrefs.hideHud;
+		if (ClientPrefs.downScroll)
+			scoreTxt.y = healthBarBG.y - scoreTxt.height;
+		else
+			scoreTxt.y = healthBarBG.y + healthBarBG.height;
+
 		add(scoreTxt);
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
