@@ -120,9 +120,9 @@
 	"healthicon": "showtime",
 	"flip_x": false,
 	"healthbar_colors": [
-		115,
-		115,
-		115
+		235,
+		0,
+		0
 	],
 	"camera_position": [
 		-190,

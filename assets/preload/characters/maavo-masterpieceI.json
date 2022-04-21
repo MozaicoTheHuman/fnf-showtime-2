@@ -120,13 +120,13 @@
 	"healthicon": "showtime",
 	"flip_x": false,
 	"healthbar_colors": [
-		115,
-		115,
-		115
+		131,
+		89,
+		218
 	],
 	"camera_position": [
 		-290,
-		-230
+		-160
 	],
 	"sing_duration": 6.1,
 	"scale": 1

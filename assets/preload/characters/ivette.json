@@ -1,103 +1,103 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-398,
 				-60
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "IvetteIdle"
+			"fps": 24,
+			"name": "IvetteIdle",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-363,
 				-34
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 25,
-			"name": "IvetteUp",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "IvetteUp"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-361,
 				-59
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 25,
-			"name": "IvetteDown",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "IvetteDown"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-376,
 				-36
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 25,
-			"name": "IvetteLeft",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "IvetteLeft"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-387,
 				-37
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 25,
-			"name": "IvetteRight",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "IvetteRight"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-391,
 				-51
 			],
-			"anim": "singRIGHT-alt",
+			"loop": false,
 			"fps": 28,
-			"name": "IvetteDerecha",
-			"indices": []
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "IvetteDerecha"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-160,
 				-79
 			],
-			"anim": "singDOWN-alt",
+			"loop": false,
 			"fps": 29,
-			"name": "IvetteAbajo",
-			"indices": []
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "IvetteAbajo"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-360,
 				-55
 			],
-			"anim": "singLEFT-alt",
+			"loop": false,
 			"fps": 29,
-			"name": "IvetteIzquierda",
-			"indices": []
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"name": "IvetteIzquierda"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-287,
 				22
 			],
-			"anim": "singUP-alt",
+			"loop": false,
 			"fps": 29,
-			"name": "IvetteArriba",
-			"indices": []
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "IvetteArriba"
 		}
 	],
 	"no_antialiasing": false,
@@ -109,9 +109,9 @@
 	"healthicon": "ivette",
 	"flip_x": false,
 	"healthbar_colors": [
-		115,
-		115,
-		115
+		131,
+		89,
+		218
 	],
 	"camera_position": [
 		150,

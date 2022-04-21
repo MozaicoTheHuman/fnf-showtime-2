@@ -3,7 +3,7 @@ local focaSingin = false
 
 function onCreate()
 
-	makeAnimatedLuaSprite('Tulon', 'maritzamasterpiece', 600, 125)
+	makeAnimatedLuaSprite('Tulon', 'Maritza', 700, 115)
 	addAnimationByPrefix('Tulon', 'idle', 'danceleft', 24, false)
 	addAnimationByPrefix('Tulon', 'left', 'right', 24, false)
 	addAnimationByPrefix('Tulon', 'down', 'down', 24, false)
@@ -12,7 +12,7 @@ function onCreate()
 	scaleObject('Tulon', -1, 1);	
 	addLuaSprite('Tulon', false)
 
-    makeAnimatedLuaSprite('Foca culia', 'foca ql', -350, 265)
+    makeAnimatedLuaSprite('Foca culia', 'foca ql', -290, 305)
 	addAnimationByPrefix('Foca culia', 'idle', 'benjastand', 24, false)
 	addAnimationByPrefix('Foca culia', 'left', 'left', 24, false)
 	addAnimationByPrefix('Foca culia', 'down', 'down', 24, false)
