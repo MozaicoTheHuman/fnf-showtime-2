@@ -1,3 +1,13 @@
+local allowCountdown = false
+function onStartCountdown()
+    if not allowCountdown and isStoryMode and not seenCutscene then --Block the first countdown
+        startVideo('finale');
+        allowCountdown = true;
+        return Function_Stop;
+    end
+    return Function_Continue;
+end
+
 function onCreate()
 	for i = 0, getProperty('unspawnNotes.length')-1 do
 		if getPropertyFromGroup('unspawnNotes', i, 'noteType') == 'stun note' then

@@ -37,7 +37,7 @@ class CreditsState extends MusicBeatState
 	{
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		DiscordClient.changePresence("Credits", null);
 		#end
 
 		persistentUpdate = true;
@@ -66,6 +66,7 @@ class CreditsState extends MusicBeatState
 				'FFDD33'
 			],
 			['Joan Atlas', 'joan', 'Musician', 'https://twitter.com/joan_atlas', 'FFDD33'],
+			['Ejsu Multimedia', 'ejsu', 'Musician', 'https://www.youtube.com/channel/UCIW8uHlBQ8ZOaxuo3PzpTig', 'FFDD33'],
 			[
 				'Vtroy Jerof',
 				'vtroy',
@@ -89,13 +90,28 @@ class CreditsState extends MusicBeatState
 			],
 			['Sandwich', 'sandwich', 'Coder', 'https://twitter.com/randomguyhere0', 'FFDD33'],
 			['Ben Sanchez', 'ben', 'Coder', 'https://twitter.com/art_keny', 'FFDD33'],
-			['SrPerez', 'penez', 'Coder', 'https://twitter.com/YOUKdev', 'FFDD33'],
 			['YOUK', 'youkdev', 'Coder', 'https://twitter.com/YOUKdev', 'FFDD33'],
+			['GenoX', 'genox', 'Coder and Main Chromatic Scales', 'https://twitter.com/GenoXACT2', 'FFDD33'],
+			['SrPerez', 'penez', 'Coder', 'https://twitter.com/YOUKdev', 'FFDD33'],
+			[
+				'Akai',
+				'elpepe',
+				'Coder Lol (Dont Press Me)',
+				'estovademasiadodificilhermanosientaselibresdedispararlealapantalla',
+				'FFFFFF'
+			],
 			[
 				'EsoMarx',
 				'elchavoballistic',
 				'Background Artist',
 				'https://www.youtube.com/channel/UCeQKrBu2HeKOw2EnlL4BKNg',
+				'FFDD33'
+			],
+			[
+				'Natu',
+				'natu',
+				'Background Artist',
+				'https://twitter.com/nataliofag',
 				'FFDD33'
 			],
 			[
@@ -106,10 +122,31 @@ class CreditsState extends MusicBeatState
 				'FFDD33'
 			],
 			[
+				'Maris',
+				'maris',
+				'Storyboard Artist',
+				'https://twitter.com/Marisgameplays',
+				'FFDD33'
+			],
+			[
+				'TzenZoule',
+				'tzen',
+				'Storyboard Artist',
+				'https://twitter.com/AbZoule',
+				'FFDD33'
+			],
+			[
 				'Nautical',
 				'nautical',
 				'Menu Artist',
 				'https://twitter.com/nauticallll',
+				'FFDD33'
+			],
+			[
+				'Valenn',
+				'valenn',
+				'Artist',
+				'https://twitter.com/oh_pls_jsjss',
 				'FFDD33'
 			],
 			[
@@ -124,6 +161,13 @@ class CreditsState extends MusicBeatState
 				'miki',
 				'Ivette VA',
 				'https://cdn.discordapp.com/attachments/885208632533348433/887917996977299476/miki.gif',
+				'FFDD33'
+			],
+			[
+				'Riusaki',
+				'Riusaki',
+				'Maritza VA',
+				'https://media.discordapp.net/attachments/893307883415023616/967080071619833917/c-mamoe.png',
 				'FFDD33'
 			],
 			[
@@ -144,16 +188,9 @@ class CreditsState extends MusicBeatState
 			[
 				'KoichiM4',
 				'koichi',
-				'Martin and Benjamin chromatic scales',
+				'Light On chromatic scales',
 				'https://twitter.com/Koixis_',
 				'FFDD33'
-			],
-			[
-				'Akai',
-				'elpepe',
-				'Coder Lol (Dont Press Me)',
-				'estovademasiadodificilhermanosientaselibresdedispararlealapantalla',
-				'FFFFFF'
 			],
 			[''],
 			['Psych Engine Team'],

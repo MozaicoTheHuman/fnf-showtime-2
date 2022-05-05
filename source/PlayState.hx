@@ -363,7 +363,6 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'show':
-				defaultCamZoom = 0.75;
 				var sky:FlxSprite = new FlxSprite(-1000, -750).loadGraphic(Paths.image('show/NEW_BG_SKY', 'shared'));
 				sky.scrollFactor.set(0.2, 0.2);
 				sky.active = false;
@@ -425,6 +424,9 @@ class PlayState extends MusicBeatState
 						trace("no show's?");
 				}
 			case 'kfm':
+				GameOverSubstate.deathSoundName = 'fnf_loss_mugen';
+				GameOverSubstate.characterName = 'maavomugen';
+
 				var skyyyy:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('kfm/stageblissKFM', 'shared'));
 				skyyyy.active = false;
 				skyyyy.scrollFactor.set(0.7, 0.8);
@@ -443,6 +445,9 @@ class PlayState extends MusicBeatState
 				bg.active = true;
 				add(bg);
 			case 'ponderingmall': // Pondering
+				GameOverSubstate.deathSoundName = 'fnf_loss_maavo';
+				GameOverSubstate.characterName = 'maavo-playable';
+
 				var bg:BGSprite = new BGSprite('mall/bgWalls', -1400, -885, 0.7, 0.7);
 				bg.setGraphicSize(Std.int(bg.width * 1.1));
 				bg.updateHitbox();
@@ -457,6 +462,9 @@ class PlayState extends MusicBeatState
 				add(bgEscalator);
 
 			case 'callejon': // Light On
+				GameOverSubstate.deathSoundName = 'fnf_loss_maavomaritza';
+				GameOverSubstate.characterName = 'maavo-playableL';
+
 				var bg:BGSprite = new BGSprite('lighton/lighton-sky', -500, -290, 0.7, 0.7);
 				bg.setGraphicSize(Std.int(bg.width * 1.1));
 				bg.updateHitbox();

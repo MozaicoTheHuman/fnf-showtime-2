@@ -2,17 +2,6 @@
 	"animations": [
 		{
 			"offsets": [
-				83,
-				159
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "showtime",
-			"indices": [],
-			"name": "Maavo HORA DEL DOU"
-		},
-		{
-			"offsets": [
 				-50,
 				72
 			],
@@ -65,13 +54,68 @@
 			"fps": 24,
 			"name": "Maavo Sing Left",
 			"indices": []
+		},
+		{
+			"offsets": [
+				86,
+				159
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "Maavo GAMEOVER"
+		},
+		{
+			"offsets": [
+				-36,
+				94
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "MaavoARRIBA"
+		},
+		{
+			"offsets": [
+				25,
+				110
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "MaavoABAJO"
+		},
+		{
+			"offsets": [
+				-85,
+				105
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "MaavoIZQUIERDA"
+		},
+		{
+			"offsets": [
+				62,
+				116
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "MaavoDERECHA"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/Maavo_NEWNoLight",
+	"image": "characters/Maavo_PLAYABLE",
 	"position": [
-		-190,
-		35
+		0,
+		15
 	],
 	"healthicon": "maavo",
 	"flip_x": false,
@@ -81,7 +125,7 @@
 		255
 	],
 	"camera_position": [
-		90,
+		180,
 		-170
 	],
 	"sing_duration": 6.1,

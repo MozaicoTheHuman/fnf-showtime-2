@@ -2,17 +2,6 @@
 	"animations": [
 		{
 			"offsets": [
-				-50,
-				72
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "Maavo idle"
-		},
-		{
-			"offsets": [
 				115,
 				106
 			],
@@ -98,12 +87,23 @@
 			"fps": 31,
 			"name": "Maavo IZQUIERDA",
 			"indices": []
+		},
+		{
+			"offsets": [
+				-50,
+				72
+			],
+			"indices": [],
+			"fps": 28,
+			"anim": "idle",
+			"loop": false,
+			"name": "Maavo idle"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/show-maavo",
 	"position": [
-		-150,
+		-280,
 		35
 	],
 	"healthicon": "maavo",
@@ -114,8 +114,8 @@
 		0
 	],
 	"camera_position": [
-		-190,
-		-230
+		-230,
+		-140
 	],
 	"sing_duration": 6.1,
 	"scale": 1
