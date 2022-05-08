@@ -31,6 +31,9 @@ class AttachedSprite extends FlxSprite
 		}
 		antialiasing = ClientPrefs.globalAntialiasing;
 		scrollFactor.set();
+
+		if (sprTracker != null)
+			setPosition(sprTracker.x + xAdd, sprTracker.y + yAdd);
 	}
 
 	override function update(elapsed:Float)

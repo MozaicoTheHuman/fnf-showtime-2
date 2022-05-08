@@ -89,7 +89,7 @@ class MainMenuState extends MusicBeatState
 			FlxG.sound.music.fadeIn(4, 0, 0.7);
 		}
 
-		bg = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/' + menuUnlocked + '/bg'));
+		bg = new FlxSprite(0, 0).loadGraphic(Paths.image('mainmenu/' + menuUnlocked + '/bg'));
 		bg.screenCenter();
 		bg.scale.x = 0.7;
 		bg.scale.y = 0.7;
@@ -99,7 +99,7 @@ class MainMenuState extends MusicBeatState
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 
-		overlay1 = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/' + menuUnlocked + '/overlay1'));
+		overlay1 = new FlxSprite(0, 0).loadGraphic(Paths.image('mainmenu/' + menuUnlocked + '/overlay1'));
 		overlay1.screenCenter();
 		overlay1.scrollFactor.set(0, 0);
 		overlay1.scale.x = 0.7;
@@ -108,7 +108,7 @@ class MainMenuState extends MusicBeatState
 		overlay1.x = -3000;
 		add(overlay1);
 
-		overlay2 = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/' + menuUnlocked + '/overlay2'));
+		overlay2 = new FlxSprite(0, 0).loadGraphic(Paths.image('mainmenu/' + menuUnlocked + '/overlay2'));
 		overlay2.screenCenter();
 		overlay2.scrollFactor.set(0, 0);
 		overlay2.scale.x = 0.7;
@@ -117,7 +117,7 @@ class MainMenuState extends MusicBeatState
 		overlay2.x = -3000;
 		add(overlay2);
 
-		charshadow = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/' + menuUnlocked + '/artworkshadow'));
+		charshadow = new FlxSprite(0, 0).loadGraphic(Paths.image('mainmenu/' + menuUnlocked + '/artworkshadow'));
 		charshadow.screenCenter();
 		charshadow.scrollFactor.set(0, 0);
 		if (menuUnlocked != "maritza")
@@ -138,7 +138,7 @@ class MainMenuState extends MusicBeatState
 		charshadow.x = 1000;
 		add(charshadow);
 
-		char = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/' + menuUnlocked + '/artwork'));
+		char = new FlxSprite(0, 0).loadGraphic(Paths.image('mainmenu/' + menuUnlocked + '/artwork'));
 		char.screenCenter();
 		char.scrollFactor.set(0, 0);
 		if (menuUnlocked != "maritza")
@@ -159,7 +159,7 @@ class MainMenuState extends MusicBeatState
 		char.x = 1000;
 		add(char);
 
-		menu = new FlxSprite(0, 0).loadGraphic(Paths.image('horadeldou-ui/' + menuUnlocked + '/menu'));
+		menu = new FlxSprite(0, 0).loadGraphic(Paths.image('mainmenu/' + menuUnlocked + '/menu'));
 		menu.screenCenter();
 		menu.scrollFactor.set(0, 0);
 		menu.scale.x = 0.7;
@@ -235,7 +235,7 @@ class MainMenuState extends MusicBeatState
 		}
 		#end
 		oncreateAnims();
-		logoshowtime = new FlxSprite(-80).loadGraphic(Paths.image('horadeldou-ui/showtimelogo'));
+		logoshowtime = new FlxSprite(-80).loadGraphic(Paths.image('mainmenu/showtimelogo'));
 		logoshowtime.screenCenter();
 		logoshowtime.scrollFactor.set(0, 0);
 		logoshowtime.scale.x = 0.6;
@@ -247,7 +247,7 @@ class MainMenuState extends MusicBeatState
 
 		// estrellas
 
-		starupshadow = new FlxSprite(-80).loadGraphic(Paths.image('horadeldou-ui/estrellaupshadow'));
+		starupshadow = new FlxSprite(-80).loadGraphic(Paths.image('mainmenu/estrellaupshadow'));
 		starupshadow.screenCenter();
 		starupshadow.scrollFactor.set(0, 0);
 		starupshadow.scale.x = 0.7;
@@ -260,7 +260,7 @@ class MainMenuState extends MusicBeatState
 		starupshadow.x += -400;
 		starupshadow.y += -150;
 
-		starup = new FlxSprite(-80).loadGraphic(Paths.image('horadeldou-ui/estrellaup'));
+		starup = new FlxSprite(-80).loadGraphic(Paths.image('mainmenu/estrellaup'));
 		starup.screenCenter();
 		starup.scrollFactor.set(0, 0);
 		starup.scale.x = 0.7;
@@ -271,7 +271,7 @@ class MainMenuState extends MusicBeatState
 		starup.x += -400;
 		starup.y += -150;
 
-		stardownshadow = new FlxSprite(-80).loadGraphic(Paths.image('horadeldou-ui/estrelladownshadow'));
+		stardownshadow = new FlxSprite(-80).loadGraphic(Paths.image('mainmenu/estrelladownshadow'));
 		stardownshadow.screenCenter();
 		stardownshadow.scrollFactor.set(0, 0);
 		stardownshadow.scale.x = 0.7;
@@ -284,7 +284,7 @@ class MainMenuState extends MusicBeatState
 		stardownshadow.x += -250;
 		stardownshadow.y += 340;
 
-		stardown = new FlxSprite(-80).loadGraphic(Paths.image('horadeldou-ui/estrelladown'));
+		stardown = new FlxSprite(-80).loadGraphic(Paths.image('mainmenu/estrelladown'));
 		stardown.screenCenter();
 		stardown.scrollFactor.set(0, 0);
 		stardown.scale.x = 0.7;

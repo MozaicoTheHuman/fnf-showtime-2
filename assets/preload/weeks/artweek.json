@@ -3,48 +3,27 @@
 	"hideFreeplay": false,
 	"weekBackground": "showtime",
 	"weekBefore": "tutorial",
-	"freeplayColor": [
-		146,
-		113,
-		253
-	],
 	"startUnlocked": true,
 	"songs": [
 		[
 			"Lovely",
 			"maritza",
-			[
-				255,
-				133,
-				195
-			]
+			"main"
 		],
 		[
 			"Wannabe",
 			"maavo",
-			[
-				255,
-				0,
-				0
-			]
+			"main"
 		],
 		[
 			"Finale",
 			"ivette",
-			[
-				255,
-				255,
-				255
-			]
+			"main"
 		],
 		[
 			"Showtime",
 			"showtime",
-			[
-				146,
-				113,
-				253
-			]
+			"show"
 		]
 	],
 	"hideStoryMode": false,
