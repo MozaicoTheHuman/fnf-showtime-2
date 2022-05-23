@@ -1,6 +1,5 @@
 local ivetteSingin = false
 local maritzaSingin = false
-local stun = false;
 local striptween = false
 
 function onUpdate()
@@ -21,14 +20,6 @@ function onUpdate()
 end
 
 function onCreate()
-	for i = 0, getProperty('unspawnNotes.length')-1 do
-		if getPropertyFromGroup('unspawnNotes', i, 'noteType') == 'stun note' then
-			setPropertyFromGroup('unspawnNotes', i, 'texture', 'DRAWNOTE_assets');
-				setPropertyFromGroup('unspawnNotes', i, 'ignoreNote', true);
-		end
-	end
-
-
     --SKY TRANSITION
     makeLuaSprite('theSkyT','mabosolo/sky-trans',-1300 , -750);
 	addLuaSprite('theSkyT',false);
@@ -94,18 +85,6 @@ function onCreate()
 	addLuaSprite('theStrip2',true);
 	setLuaSpriteScrollFactor('theStrip2',0, 0);
 	scaleObject('theStrip2', 4, 2);	
-end
-
-function goodNoteHit(id, direction, noteType, isSustainNote)
-	--Nota stun
-    if noteType == 'stun note' then
-        triggerEvent('Screen Shake','0.2,0.01','')
-        playSound('stunsound', 1);
-        triggerEvent('Play Animation','stun','1')
-    	setProperty('boyfriend.stunned', true);
-    	stun = true;
-    	runTimer('endStun', 1.4);
-    end
 end
 
 function onStepHit()
@@ -249,11 +228,6 @@ function onBeatHit()
 end
 
 function onTimerCompleted(tag)
-	--Nota stun
-    if tag == 'endStun' then
-        setProperty('boyfriend.stunned', false);
-        stun = false;
-    end
 	--timer Mari
 	if tag == 'endMari' then
 		maritzaSingin = false

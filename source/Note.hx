@@ -110,7 +110,10 @@ class Note extends FlxSprite
 					}
 					hitCausesMiss = true;
 				case 'stun note':
+					ignoreNote = mustPress;
+					reloadNote('DRAW');
 					noteSplashTexture = 'DRAWNOTE_splashes';
+					hitCausesMiss = true;
 				case 'No Animation':
 					noAnimation = true;
 			}

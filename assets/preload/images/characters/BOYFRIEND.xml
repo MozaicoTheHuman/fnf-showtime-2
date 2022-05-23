@@ -134,6 +134,29 @@
 	<SubTexture name="BF SHOWTIME STUN0012" x="491" y="2440" width="480" height="497"/>
 	<SubTexture name="BF SHOWTIME STUN0013" x="491" y="2440" width="480" height="497"/>
 	<SubTexture name="BF SHOWTIME STUN0014" x="491" y="2440" width="480" height="497"/>
+	<!-- from here on out i looped frames 11-14 to make the animation last 1.5 seconds for the stun thingy at 24 fps(36 frames) -->
+	<SubTexture name="BF SHOWTIME STUN0015" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0016" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0017" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0018" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0019" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0020" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0021" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0022" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0023" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0024" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0025" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0026" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0027" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0028" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0029" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0030" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0031" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0032" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0033" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0034" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0035" x="491" y="2440" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0036" x="491" y="2440" width="480" height="497"/>
 	<SubTexture name="BF SHOWTIME UP0000" x="972" y="2440" width="464" height="497"/>
 	<SubTexture name="BF SHOWTIME UP0001" x="972" y="2440" width="464" height="497"/>
 	<SubTexture name="BF SHOWTIME UP0002" x="1437" y="2440" width="464" height="497"/>

@@ -99,10 +99,6 @@ class PlayState extends MusicBeatState
 	#end
 
 	// dynamic camera vars
-	/*public static var bfnoteMovementXoffset:Int = 0;
-		public static var dadnoteMovementXoffset:Int = 0;
-		public static var dadnoteMovementYoffset:Int = 0;
-		public static var bfnoteMovementYoffset:Int = 0; */
 	var camX:Int = 0;
 	var camY:Int = 0;
 	var bfcamX:Int = 0;
@@ -802,6 +798,12 @@ class PlayState extends MusicBeatState
 			startCountdown();
 		}
 		RecalculateRating();
+
+		//PRECACHING MISS SOUNDS BECAUSE I THINK THEY CAN LAG PEOPLE AND FUCK THEM UP IDK HOW HAXE WORKS
+		CoolUtil.precacheSound('missnote1');
+		CoolUtil.precacheSound('missnote2');
+		CoolUtil.precacheSound('missnote3');
+		CoolUtil.precacheMusic('breakfast');
 
 		#if desktop
 		// Updating Discord Rich Presence.
@@ -1893,9 +1895,8 @@ class PlayState extends MusicBeatState
 						dad.specialAnim = true;
 						dad.heyTimer = 0.6;
 					}
-					if (daNote.noAnimation)
-					{
-						switch (Math.abs(daNote.noteData))
+
+					switch (Math.abs(daNote.noteData))
 						{
 							case 0:
 								camX = -camMvmntSpd;
@@ -1910,8 +1911,8 @@ class PlayState extends MusicBeatState
 								camX = camMvmntSpd;
 								camY = 0;
 						}
-					}
-					else if (!daNote.noAnimation)
+
+					if (!daNote.noAnimation)
 					{
 						var altAnim:String = "";
 
@@ -1928,20 +1929,12 @@ class PlayState extends MusicBeatState
 						{
 							case 0:
 								animToPlay = 'singLEFT';
-								camX = -camMvmntSpd;
-								camY = 0;
 							case 1:
 								animToPlay = 'singDOWN';
-								camY = camMvmntSpd;
-								camX = 0;
 							case 2:
 								animToPlay = 'singUP';
-								camY = -camMvmntSpd;
-								camX = 0;
 							case 3:
 								animToPlay = 'singRIGHT';
-								camX = camMvmntSpd;
-								camY = 0;
 						}
 						if (daNote.noteType == 'GF Sing')
 						{
@@ -3096,31 +3089,34 @@ class PlayState extends MusicBeatState
 		totalPlayed++;
 		RecalculateRating();
 
-		var animToPlay:String = '';
-		switch (Math.abs(daNote.noteData) % 4)
-		{
-			case 0:
-				animToPlay = 'singLEFTmiss';
-			case 1:
-				animToPlay = 'singDOWNmiss';
-			case 2:
-				animToPlay = 'singUPmiss';
-			case 3:
-				animToPlay = 'singRIGHTmiss';
-		}
+		if(!boyfriend.stunned){
+			var animToPlay:String = '';
+			switch (Math.abs(daNote.noteData) % 4)
+			{
+				case 0:
+					animToPlay = 'singLEFTmiss';
+				case 1:
+					animToPlay = 'singDOWNmiss';
+				case 2:
+					animToPlay = 'singUPmiss';
+				case 3:
+					animToPlay = 'singRIGHTmiss';
+			}
 
-		if (daNote.noteType == 'GF Sing')
-		{
-			gf.playAnim(animToPlay, true);
+			if (daNote.noteType == 'GF Sing')
+			{
+				gf.playAnim(animToPlay, true);
+			}
+			else
+			{
+				var daAlt = '';
+				if (daNote.noteType == 'Alt Animation')
+					daAlt = '-alt';
+			
+				boyfriend.playAnim(animToPlay + daAlt, true);
+			}
 		}
-		else
-		{
-			var daAlt = '';
-			if (daNote.noteType == 'Alt Animation')
-				daAlt = '-alt';
-
-			boyfriend.playAnim(animToPlay + daAlt, true);
-		}
+		
 		callOnLuas('noteMiss', [
 			notes.members.indexOf(daNote),
 			daNote.noteData,
@@ -3201,6 +3197,19 @@ class PlayState extends MusicBeatState
 							boyfriend.playAnim('hurt', true);
 							boyfriend.specialAnim = true;
 						}
+					
+					case 'stun note': // Stun note
+					{
+						triggerEventNote('Screen Shake', '0.2,0.01', '');
+						FlxG.sound.play(Paths.sound('stunsound'), 1);
+						boyfriend.playAnim('stun', true);
+						boyfriend.specialAnim = true;
+						boyfriend.stunned = true;
+						new FlxTimer().start(1.5, function(tmr:FlxTimer)
+						{
+							boyfriend.stunned = false;
+						});
+					}
 				}
 
 				note.wasGoodHit = true;
@@ -3222,9 +3231,7 @@ class PlayState extends MusicBeatState
 			}
 			health += note.hitHealth;
 
-			if (note.noAnimation)
-			{
-				switch (Math.abs(note.noteData))
+			switch (Math.abs(note.noteData))
 				{
 					case 0:
 						bfcamX = -camMvmntSpd;
@@ -3239,7 +3246,7 @@ class PlayState extends MusicBeatState
 						bfcamX = camMvmntSpd;
 						bfcamY = 0;
 				}
-			}
+
 			if (!note.noAnimation)
 			{
 				var daAlt = '';
@@ -3251,21 +3258,12 @@ class PlayState extends MusicBeatState
 				{
 					case 0:
 						animToPlay = 'singLEFT';
-						bfcamX = -camMvmntSpd;
-						bfcamY = 0;
 					case 1:
 						animToPlay = 'singDOWN';
-						bfcamY = camMvmntSpd;
-						bfcamX = 0;
-
 					case 2:
 						animToPlay = 'singUP';
-						bfcamY = -camMvmntSpd;
-						bfcamX = 0;
 					case 3:
 						animToPlay = 'singRIGHT';
-						bfcamX = camMvmntSpd;
-						bfcamY = 0;
 				}
 
 				if (note.noteType == 'GF Sing')
