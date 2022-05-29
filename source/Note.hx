@@ -110,7 +110,7 @@ class Note extends FlxSprite
 					}
 					hitCausesMiss = true;
 				case 'stun note':
-					ignoreNote = mustPress;
+					ignoreNote = true;
 					reloadNote('DRAW');
 					noteSplashTexture = 'DRAWNOTE_splashes';
 					hitCausesMiss = true;
