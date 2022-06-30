@@ -1,5 +1,7 @@
 package;
 
+import flixel.FlxObject;
+import flixel.FlxCamera;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -32,7 +34,7 @@ class FreeplayState extends MusicBeatState
 	var intendedScore:Int = 0;
 	var intendedRating:Float = 0;
 
-	private var grpSongs:FlxTypedGroup<Alphabet>;
+	private var grpSongs:FlxTypedGroup<FlxSprite>;
 	private var curPlaying:Bool = false;
 
 	private var iconArray:Array<HealthIcon> = [];
@@ -54,6 +56,10 @@ class FreeplayState extends MusicBeatState
 	var waveA2:FlxBackdrop;
 	var waveB2:FlxBackdrop;
 	var waveC2:FlxBackdrop;
+	
+	private var camGame:FlxCamera;
+	var camFollow:FlxObject;
+	var camFollowPos:FlxObject;
 
 	override function create()
 	{
@@ -65,6 +71,10 @@ class FreeplayState extends MusicBeatState
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In Freeplay", null);
 		#end
+
+		camGame = new FlxCamera();
+		FlxG.cameras.reset(camGame);
+		FlxCamera.defaultCameras = [camGame];
 
 		for (i in 0...WeekData.weeksList.length)
 		{
@@ -97,80 +107,99 @@ class FreeplayState extends MusicBeatState
 			}
 		}
 
-		// LOAD MUSIC
-
-		// LOAD CHARACTERS
+		camFollow = new FlxObject(0, 0, 1, 1);
+		camFollowPos = new FlxObject(0, 0, 1, 1);
+		add(camFollow);
+		add(camFollowPos);
 
 		bg = new FlxSprite().loadGraphic(Paths.image('freeplaymenu/bg'));
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
+		bg.scrollFactor.set();
 		add(bg);
 
 		waveA = new FlxBackdrop(null, 0.25, 0.25, true, false);
 		waveA.loadGraphic(Paths.image('freeplaymenu/blackthingup'));
+		waveA.scrollFactor.set();
 		add(waveA);
 
 		waveB = new FlxBackdrop(null, 0.50, 0.50, true, false);
 		waveB.loadGraphic(Paths.image('freeplaymenu/darkredthingup'));
+		waveB.scrollFactor.set();
 		add(waveB);
 
 		waveC = new FlxBackdrop(null, 1, 1, true, false);
 		waveC.loadGraphic(Paths.image('freeplaymenu/redthingup'));
+		waveC.scrollFactor.set();
 		add(waveC);
 
 		gridcenter = new FlxSprite(360, 210).loadGraphic(Paths.image('freeplaymenu/gridCenter'));
 		gridcenter.antialiasing = ClientPrefs.globalAntialiasing;
+		gridcenter.scrollFactor.set();
 		add(gridcenter);
 
 		album = new FlxSprite(105, 140);
 		album.loadGraphic(Paths.image('freeplaymenu/albums/placeholder'));
 		album.antialiasing = ClientPrefs.globalAntialiasing;
+		album.scrollFactor.set();
 		add(album);
 
 		star = new FlxSprite(370, 130);
 		star.loadGraphic(Paths.image('freeplaymenu/star'));
 		star.antialiasing = ClientPrefs.globalAntialiasing;
+		star.scrollFactor.set();
 		add(star);
 
 		griddown = new FlxSprite(0, 365).loadGraphic(Paths.image('freeplaymenu/grid'));
 		griddown.antialiasing = ClientPrefs.globalAntialiasing;
+		griddown.scrollFactor.set();
 		add(griddown);
 
 		songsBG = new FlxSprite(455, 0).loadGraphic(Paths.image('freeplaymenu/songsBG'));
 		songsBG.antialiasing = ClientPrefs.globalAntialiasing;
+		songsBG.scrollFactor.set();
 		add(songsBG);
 
-		grpSongs = new FlxTypedGroup<Alphabet>();
+		grpSongs = new FlxTypedGroup<FlxSprite>();
 		add(grpSongs);
 
 		for (i in 0...songs.length)
 		{
-			var songText:Alphabet = new Alphabet(0, (70 * i) + 30, songs[i].songName, true, false);
-			songText.isMenuItem = true;
-			songText.targetY = i;
+			Paths.currentModDirectory = songs[i].folder;
+
+			var offset:Float = 108 - (Math.max(songs.length, 4) - 4) * 80;
+			var songSprite = songs[i].songName;
+			var songText:FlxSprite = new FlxSprite(0, (i * 140)  + offset).loadGraphic(Paths.image('freeplaymenu/songs/$songSprite'));
+			songText.ID = i;
 			grpSongs.add(songText);
 
-			Paths.currentModDirectory = songs[i].folder;
 			var icon:HealthIcon = new HealthIcon(songs[i].songCharacter);
 			icon.sprTracker = songText;
-
-			// using a FlxGroup is too much fuss!
 			iconArray.push(icon);
 			add(icon);
 
-			// songText.x += 40;
-			// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
-			// songText.screenCenter(X);
+			var scr:Float = (songs.length - 4) * 0.135;
+			if(songs.length < 6) scr = 0;
+			songText.scrollFactor.set(0, scr);
+			songText.antialiasing = ClientPrefs.globalAntialiasing;
+			songText.updateHitbox();
+			icon.scrollFactor.set(0, scr);
+			icon.antialiasing = ClientPrefs.globalAntialiasing;
+			icon.updateHitbox();
 		}
 		WeekData.setDirectoryFromWeek();
+		
+		FlxG.camera.follow(camFollowPos, null, 1);
 
 		griddiffs = new FlxSprite(780, 0).loadGraphic(Paths.image('freeplaymenu/gridDiffs'));
 		griddiffs.antialiasing = ClientPrefs.globalAntialiasing;
+		griddiffs.scrollFactor.set();
 		add(griddiffs);
 
 		diffText = new FlxSprite(870, 25);
 		diffText.loadGraphic(Paths.image('freeplaymenu/diffs'), true, 370, 45);
 		diffText.animation.add('diffficult', [2, 1, 0], 0, false);
 		diffText.animation.play('diffficult');
+		diffText.scrollFactor.set();
 		add(diffText);
 
 		var ui_tex = Paths.getSparrowAtlas('freeplaymenu/arrows');
@@ -180,6 +209,7 @@ class FreeplayState extends MusicBeatState
 		arrRight.animation.addByIndices('idle', "arrRight", [0], "", 0);
 		arrRight.animation.addByIndices('pressed', "arrRight", [1], "", 0);
 		arrRight.animation.play('idle');
+		arrRight.scrollFactor.set();
 		add(arrRight);
 
 		arrLeft = new FlxSprite(845, 25);
@@ -187,28 +217,34 @@ class FreeplayState extends MusicBeatState
 		arrLeft.animation.addByIndices('idle', "arrLeft", [0], "", 0);
 		arrLeft.animation.addByIndices('pressed', "arrLeft", [1], "", 0);
 		arrLeft.animation.play('idle');
+		arrLeft.scrollFactor.set();
 		add(arrLeft);
 
 		waveA2 = new FlxBackdrop(null, 0.25, 0.25, true, false);
 		waveA2.y = 630;
 		waveA2.loadGraphic(Paths.image('freeplaymenu/blackthing'));
+		waveA2.scrollFactor.set();
 		add(waveA2);
 
 		waveB2 = new FlxBackdrop(null, 0.50, 0.50, true, false);
 		waveB2.y = 660;
 		waveB2.loadGraphic(Paths.image('freeplaymenu/darkredthing'));
+		waveB2.scrollFactor.set();
 		add(waveB2);
 
 		waveC2 = new FlxBackdrop(null, 1, 1, true, false);
 		waveC2.y = 660;
 		waveC2.loadGraphic(Paths.image('freeplaymenu/redthing'));
+		waveC2.scrollFactor.set();
 		add(waveC2);
 
 		scoreText = new FlxText(5, 5, 0, "", 32);
 		scoreText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, LEFT);
+		scoreText.scrollFactor.set();
 
 		scoreBG = new FlxSprite().makeGraphic(1, 42, 0xFF000000);
 		scoreBG.alpha = 0.6;
+		scoreBG.scrollFactor.set();
 		add(scoreBG);
 
 		add(scoreText);
@@ -220,6 +256,7 @@ class FreeplayState extends MusicBeatState
 
 		var textBG:FlxSprite = new FlxSprite(0, FlxG.height - 26).makeGraphic(FlxG.width, 26, 0xFF000000);
 		textBG.alpha = 0.6;
+		textBG.scrollFactor.set();
 		add(textBG);
 		#if PRELOAD_ALL
 		var leText:String = "P para abrir el skin selector/SPACE to listen the Song / RESET to Reset the Score";
@@ -295,6 +332,9 @@ class FreeplayState extends MusicBeatState
 		{ // Less than 2 decimals in it, add decimals then
 			ratingSplit[1] += '0';
 		}
+		
+		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
+		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 
 		scoreText.text = 'PERSONAL BEST: ' + lerpScore + ' (' + ratingSplit.join('.') + '%)';
 		positionHighscore();
@@ -447,29 +487,21 @@ class FreeplayState extends MusicBeatState
 		intendedRating = Highscore.getRating(songs[curSelected].songName, curDifficulty);
 		#end
 
-		var bullShit:Int = 0;
-
-		for (i in 0...iconArray.length)
-		{
-			iconArray[i].alpha = 0.6;
-		}
-
-		iconArray[curSelected].alpha = 1;
-
-		for (item in grpSongs.members)
-		{
-			item.targetY = bullShit - curSelected;
-			bullShit++;
-
-			item.alpha = 0.6;
-			// item.setGraphicSize(Std.int(item.width * 0.8));
-
-			if (item.targetY == 0)
+		grpSongs.forEach(function(spr:FlxSprite)
 			{
-				item.alpha = 1;
-				// item.setGraphicSize(Std.int(item.width));
-			}
-		}
+				spr.updateHitbox();
+	
+				if (spr.ID == curSelected)
+				{
+					var add:Float = 0;
+					if(grpSongs.length > 4) {
+						add = grpSongs.length * 8;
+					}
+					camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y - add);
+					spr.centerOffsets();
+				}
+			});
+
 
 		if (OpenFlAssets.exists(Paths.image('freeplaymenu/albums/' + songs[curSelected].album)))
 			album.loadGraphic(Paths.image('freeplaymenu/albums/' + songs[curSelected].album));
