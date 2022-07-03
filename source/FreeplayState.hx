@@ -168,7 +168,7 @@ class FreeplayState extends MusicBeatState
 
 			var offset:Float = 108 - (Math.max(songs.length, 4) - 4) * 80;
 			var songSprite = songs[i].songName;
-			var songText:FlxSprite = new FlxSprite(0, (i * 140)  + offset).loadGraphic(Paths.image('freeplaymenu/songs/$songSprite'));
+			var songText:FlxSprite = new FlxSprite(800 - (i * 65) - offset, 80 + (i * 130)  + offset).loadGraphic(Paths.image('freeplaymenu/songs/$songSprite'));
 			songText.ID = i;
 			grpSongs.add(songText);
 
@@ -179,10 +179,10 @@ class FreeplayState extends MusicBeatState
 
 			var scr:Float = (songs.length - 4) * 0.135;
 			if(songs.length < 6) scr = 0;
-			songText.scrollFactor.set(0, scr);
+			songText.scrollFactor.set(scr / 2, scr);
 			songText.antialiasing = ClientPrefs.globalAntialiasing;
 			songText.updateHitbox();
-			icon.scrollFactor.set(0, scr);
+			icon.scrollFactor.set(scr / 2, scr);
 			icon.antialiasing = ClientPrefs.globalAntialiasing;
 			icon.updateHitbox();
 		}
