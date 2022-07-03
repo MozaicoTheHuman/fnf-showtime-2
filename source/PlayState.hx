@@ -459,7 +459,7 @@ class PlayState extends MusicBeatState
 
 			case 'callejon': // Light On
 				GameOverSubstate.deathSoundName = 'fnf_loss_maavomaritza';
-				GameOverSubstate.characterName = 'maavo-playableL';
+				GameOverSubstate.characterName = 'maavo-playableL-GAMEOVER';
 
 				var bg:BGSprite = new BGSprite('lighton/lighton-sky', -500, -290, 0.7, 0.7);
 				bg.setGraphicSize(Std.int(bg.width * 1.1));

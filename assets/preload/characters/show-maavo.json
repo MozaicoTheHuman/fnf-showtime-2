@@ -1,103 +1,103 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				115,
 				106
 			],
-			"loop": false,
-			"fps": 25,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Maavo Sing Left"
+			"fps": 25,
+			"name": "Maavo Sing Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-36,
 				94
 			],
-			"loop": false,
-			"fps": 25,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Maavo Sing Up"
+			"fps": 25,
+			"name": "Maavo Sing Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				113
 			],
-			"loop": false,
-			"fps": 25,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Maavo Sing Down"
+			"fps": 25,
+			"name": "Maavo Sing Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-53,
 				118
 			],
-			"loop": false,
-			"fps": 25,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Maavo Sing Right"
+			"fps": 25,
+			"name": "Maavo Sing Right",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-159,
 				-10
 			],
-			"anim": "singRIGHT-alt",
+			"loop": false,
 			"fps": 31,
-			"name": "Maavo DERECHA",
-			"indices": []
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "Maavo DERECHA"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				169,
 				141
 			],
-			"anim": "singDOWN-alt",
+			"loop": false,
 			"fps": 31,
-			"name": "Maavo ABAJO",
-			"indices": []
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "Maavo ABAJO"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-56,
 				284
 			],
-			"anim": "singUP-alt",
+			"loop": false,
 			"fps": 31,
-			"name": "Maavo ARRIBA",
-			"indices": []
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "Maavo ARRIBA"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				75,
 				136
 			],
-			"anim": "singLEFT-alt",
+			"loop": false,
 			"fps": 31,
-			"name": "Maavo IZQUIERDA",
-			"indices": []
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"name": "Maavo IZQUIERDA"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-50,
 				72
 			],
-			"indices": [],
-			"fps": 28,
 			"anim": "idle",
-			"loop": false,
-			"name": "Maavo idle"
+			"fps": 28,
+			"name": "Maavo idle",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -106,7 +106,7 @@
 		-280,
 		35
 	],
-	"healthicon": "maavo",
+	"healthicon": "maavoSHOW",
 	"flip_x": false,
 	"healthbar_colors": [
 		0,

@@ -1,0 +1,106 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				20,
+				-163
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "MaritzaLEFT",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-135,
+				-175
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "MaritzaRIGHT",
+			"indices": []
+		},
+		{
+			"offsets": [
+				60,
+				-265
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "MaritzaDOWN",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-29,
+				-16
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "MaritzaUP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-44,
+				-110
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "MaritzaCLAP",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-29,
+				-16
+			],
+			"loop": true,
+			"fps": 12,
+			"anim": "singUP-loop",
+			"indices": [
+				4,
+				6,
+				8,
+				10,
+				12
+			],
+			"name": "MaritzaUP"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-90,
+				-172
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Maritza-alt",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/CHILEmaritza",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "maritza",
+	"flip_x": false,
+	"healthbar_colors": [
+		239,
+		132,
+		209
+	],
+	"camera_position": [
+		-100,
+		210
+	],
+	"sing_duration": 6.5,
+	"scale": 1
+}

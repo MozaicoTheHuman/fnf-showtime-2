@@ -1,66 +1,66 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "hanzo_idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "hanzo_idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				28,
 				0
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "hanzo_izquierda",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "hanzo_izquierda"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-4,
 				-3
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "hanzo_derecha",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "hanzo_derecha"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				16,
 				-86
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "hanzo_abajo",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "hanzo_abajo"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-7,
 				13
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "hanzo_arriba",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "hanzo_arriba"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/hanzo",
 	"position": [
 		0,
-		0
+		-10
 	],
 	"healthicon": "hanzo",
 	"flip_x": false,

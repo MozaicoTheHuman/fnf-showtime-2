@@ -1,0 +1,133 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-50,
+				72
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Dad idle dance"
+		},
+		{
+			"offsets": [
+				5,
+				56
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Dad Sing Note LEFT"
+		},
+		{
+			"offsets": [
+				-68,
+				67
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Dad Sing Note UP"
+		},
+		{
+			"offsets": [
+				-62,
+				43
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Dad Sing Note RIGHT"
+		},
+		{
+			"offsets": [
+				-52,
+				23
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Dad Sing Note DOWN"
+		},
+		{
+			"offsets": [
+				-68,
+				67
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "Dad Sing Note UP"
+		},
+		{
+			"offsets": [
+				5,
+				56
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"name": "Dad Sing Note LEFT"
+		},
+		{
+			"offsets": [
+				-62,
+				43
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "Dad Sing Note RIGHT"
+		},
+		{
+			"offsets": [
+				-52,
+				23
+			],
+			"loop": false,
+			"fps": 30,
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "Dad Sing Note DOWN"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-50,
+				72
+			],
+			"anim": "showtime",
+			"fps": 27,
+			"name": "Dad idle dance",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/OLDmabo",
+	"position": [
+		-80,
+		55
+	],
+	"healthicon": "maavo",
+	"flip_x": false,
+	"healthbar_colors": [
+		115,
+		115,
+		115
+	],
+	"camera_position": [
+		-70,
+		-80
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

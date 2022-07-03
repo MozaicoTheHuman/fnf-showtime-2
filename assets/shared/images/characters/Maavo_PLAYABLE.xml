@@ -2,201 +2,224 @@
 <TextureAtlas imagePath="Maavo_PLAYABLE.png">
 	<!-- Created with Adobe Animate version 18.0.2.126 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Maavo GAMEOVER0000" x="10" y="10" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0001" x="10" y="10" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0002" x="843" y="10" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0003" x="843" y="10" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0004" x="1676" y="10" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0005" x="1676" y="10" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0006" x="2509" y="10" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0007" x="2509" y="10" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0008" x="3342" y="10" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0009" x="3342" y="10" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0010" x="4175" y="10" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0011" x="4175" y="10" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0012" x="5008" y="10" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0013" x="5008" y="10" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0014" x="5841" y="10" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0015" x="5841" y="10" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0016" x="6674" y="10" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0017" x="6674" y="10" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0018" x="10" y="978" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0019" x="10" y="978" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0020" x="10" y="978" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0021" x="843" y="978" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0022" x="1676" y="978" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0023" x="1676" y="978" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0024" x="2509" y="978" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0025" x="2509" y="978" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0026" x="3342" y="978" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0027" x="3342" y="978" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0028" x="4175" y="978" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0029" x="4175" y="978" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0030" x="5008" y="978" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0031" x="5008" y="978" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0032" x="5841" y="978" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0033" x="5841" y="978" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0034" x="6674" y="978" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0035" x="6674" y="978" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0036" x="10" y="1946" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0037" x="10" y="1946" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0038" x="10" y="1946" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0039" x="10" y="1946" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0040" x="10" y="1946" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0041" x="10" y="1946" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0042" x="10" y="1946" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0043" x="10" y="1946" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0044" x="10" y="1946" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0045" x="10" y="1946" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0046" x="10" y="1946" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0047" x="10" y="1946" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0048" x="10" y="1946" width="823" height="958"/>
-	<SubTexture name="Maavo GAMEOVER0049" x="10" y="1946" width="823" height="958"/>
-	<SubTexture name="Maavo Sing Down0000" x="843" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Down0001" x="843" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Down0002" x="1576" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Down0003" x="1576" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Down0004" x="2309" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Down0005" x="2309" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Down0006" x="2309" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Down0007" x="2309" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Down0008" x="2309" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Down0009" x="2309" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Down0010" x="2309" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Down0011" x="2309" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Down0012" x="2309" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Down0013" x="2309" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Down0014" x="2309" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Down0015" x="2309" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Left0000" x="3042" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Left0001" x="3042" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Left0002" x="3775" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Left0003" x="3775" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Left0004" x="4508" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Left0005" x="4508" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Left0006" x="4508" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Left0007" x="4508" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Left0008" x="4508" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Left0009" x="4508" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Left0010" x="4508" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Left0011" x="4508" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Left0012" x="4508" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Left0013" x="4508" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Left0014" x="4508" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Right0000" x="5241" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Right0001" x="5241" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Right0002" x="5974" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Right0003" x="5974" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Right0004" x="6707" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Right0005" x="6707" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Right0006" x="6707" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Right0007" x="6707" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Right0008" x="6707" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Right0009" x="6707" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Right0010" x="6707" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Right0011" x="6707" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Right0012" x="6707" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Right0013" x="6707" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Right0014" x="6707" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Right0015" x="6707" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Right0016" x="6707" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Right0017" x="6707" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Right0018" x="6707" y="1946" width="723" height="858"/>
-	<SubTexture name="Maavo Sing Up0000" x="7440" y="1946" width="613" height="858"/>
-	<SubTexture name="Maavo Sing Up0001" x="7440" y="1946" width="613" height="858"/>
-	<SubTexture name="Maavo Sing Up0002" x="10" y="2914" width="613" height="858"/>
-	<SubTexture name="Maavo Sing Up0003" x="10" y="2914" width="613" height="858"/>
-	<SubTexture name="Maavo Sing Up0004" x="633" y="2914" width="613" height="858"/>
-	<SubTexture name="Maavo Sing Up0005" x="633" y="2914" width="613" height="858"/>
-	<SubTexture name="Maavo idle0000" x="1256" y="2914" width="606" height="819" frameX="0" frameY="0" frameWidth="607" frameHeight="819"/>
-	<SubTexture name="Maavo idle0001" x="1256" y="2914" width="606" height="819" frameX="0" frameY="0" frameWidth="607" frameHeight="819"/>
-	<SubTexture name="Maavo idle0002" x="1872" y="2914" width="606" height="819" frameX="0" frameY="0" frameWidth="607" frameHeight="819"/>
-	<SubTexture name="Maavo idle0003" x="1872" y="2914" width="606" height="819" frameX="0" frameY="0" frameWidth="607" frameHeight="819"/>
-	<SubTexture name="Maavo idle0004" x="2488" y="2914" width="606" height="819" frameX="0" frameY="0" frameWidth="607" frameHeight="819"/>
-	<SubTexture name="Maavo idle0005" x="2488" y="2914" width="606" height="819" frameX="0" frameY="0" frameWidth="607" frameHeight="819"/>
-	<SubTexture name="Maavo idle0006" x="3104" y="2914" width="606" height="819" frameX="-1" frameY="0" frameWidth="607" frameHeight="819"/>
-	<SubTexture name="Maavo idle0007" x="3104" y="2914" width="606" height="819" frameX="-1" frameY="0" frameWidth="607" frameHeight="819"/>
-	<SubTexture name="Maavo idle0008" x="3720" y="2914" width="606" height="819" frameX="-1" frameY="0" frameWidth="607" frameHeight="819"/>
-	<SubTexture name="Maavo idle0009" x="3720" y="2914" width="606" height="819" frameX="-1" frameY="0" frameWidth="607" frameHeight="819"/>
-	<SubTexture name="Maavo idle0010" x="3720" y="2914" width="606" height="819" frameX="-1" frameY="0" frameWidth="607" frameHeight="819"/>
-	<SubTexture name="Maavo idle0011" x="3720" y="2914" width="606" height="819" frameX="-1" frameY="0" frameWidth="607" frameHeight="819"/>
-	<SubTexture name="Maavo idle0012" x="3720" y="2914" width="606" height="819" frameX="-1" frameY="0" frameWidth="607" frameHeight="819"/>
-	<SubTexture name="Maavo idle0013" x="3720" y="2914" width="606" height="819" frameX="-1" frameY="0" frameWidth="607" frameHeight="819"/>
-	<SubTexture name="Maavo idle0014" x="3720" y="2914" width="606" height="819" frameX="-1" frameY="0" frameWidth="607" frameHeight="819"/>
-	<SubTexture name="MaavoABAJO0000" x="4336" y="2914" width="723" height="858"/>
-	<SubTexture name="MaavoABAJO0001" x="4336" y="2914" width="723" height="858"/>
-	<SubTexture name="MaavoABAJO0002" x="5069" y="2914" width="723" height="858"/>
-	<SubTexture name="MaavoABAJO0003" x="5069" y="2914" width="723" height="858"/>
-	<SubTexture name="MaavoABAJO0004" x="5802" y="2914" width="723" height="858"/>
-	<SubTexture name="MaavoABAJO0005" x="5802" y="2914" width="723" height="858"/>
-	<SubTexture name="MaavoABAJO0006" x="5802" y="2914" width="723" height="858"/>
-	<SubTexture name="MaavoABAJO0007" x="5802" y="2914" width="723" height="858"/>
-	<SubTexture name="MaavoABAJO0008" x="5802" y="2914" width="723" height="858"/>
-	<SubTexture name="MaavoABAJO0009" x="5802" y="2914" width="723" height="858"/>
-	<SubTexture name="MaavoABAJO0010" x="5802" y="2914" width="723" height="858"/>
-	<SubTexture name="MaavoABAJO0011" x="5802" y="2914" width="723" height="858"/>
-	<SubTexture name="MaavoABAJO0012" x="5802" y="2914" width="723" height="858"/>
-	<SubTexture name="MaavoABAJO0013" x="5802" y="2914" width="723" height="858"/>
-	<SubTexture name="MaavoABAJO0014" x="5802" y="2914" width="723" height="858"/>
-	<SubTexture name="MaavoABAJO0015" x="5802" y="2914" width="723" height="858"/>
-	<SubTexture name="MaavoABAJO0016" x="5802" y="2914" width="723" height="858"/>
-	<SubTexture name="MaavoABAJO0017" x="5802" y="2914" width="723" height="858"/>
-	<SubTexture name="MaavoABAJO0018" x="5802" y="2914" width="723" height="858"/>
-	<SubTexture name="MaavoARRIBA0000" x="6535" y="2914" width="613" height="858"/>
-	<SubTexture name="MaavoARRIBA0001" x="6535" y="2914" width="613" height="858"/>
-	<SubTexture name="MaavoARRIBA0002" x="7158" y="2914" width="613" height="858"/>
-	<SubTexture name="MaavoARRIBA0003" x="7158" y="2914" width="613" height="858"/>
-	<SubTexture name="MaavoARRIBA0004" x="10" y="3782" width="613" height="858"/>
-	<SubTexture name="MaavoARRIBA0005" x="10" y="3782" width="613" height="858"/>
-	<SubTexture name="MaavoARRIBA0006" x="10" y="3782" width="613" height="858"/>
-	<SubTexture name="MaavoARRIBA0007" x="10" y="3782" width="613" height="858"/>
-	<SubTexture name="MaavoARRIBA0008" x="10" y="3782" width="613" height="858"/>
-	<SubTexture name="MaavoARRIBA0009" x="10" y="3782" width="613" height="858"/>
-	<SubTexture name="MaavoARRIBA0010" x="10" y="3782" width="613" height="858"/>
-	<SubTexture name="MaavoARRIBA0011" x="10" y="3782" width="613" height="858"/>
-	<SubTexture name="MaavoARRIBA0012" x="10" y="3782" width="613" height="858"/>
-	<SubTexture name="MaavoARRIBA0013" x="10" y="3782" width="613" height="858"/>
-	<SubTexture name="MaavoARRIBA0014" x="10" y="3782" width="613" height="858"/>
-	<SubTexture name="MaavoARRIBA0015" x="10" y="3782" width="613" height="858"/>
-	<SubTexture name="MaavoARRIBA0016" x="10" y="3782" width="613" height="858"/>
-	<SubTexture name="MaavoARRIBA0017" x="10" y="3782" width="613" height="858"/>
-	<SubTexture name="MaavoARRIBA0018" x="10" y="3782" width="613" height="858"/>
-	<SubTexture name="MaavoDERECHA0000" x="633" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoDERECHA0001" x="633" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoDERECHA0002" x="1366" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoDERECHA0003" x="1366" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoDERECHA0004" x="2099" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoDERECHA0005" x="2099" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoDERECHA0006" x="2099" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoDERECHA0007" x="2099" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoDERECHA0008" x="2099" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoDERECHA0009" x="2099" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoDERECHA0010" x="2099" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoDERECHA0011" x="2099" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoDERECHA0012" x="2099" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoDERECHA0013" x="2099" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoDERECHA0014" x="2099" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoDERECHA0015" x="2099" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoDERECHA0016" x="2099" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoDERECHA0017" x="2099" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoDERECHA0018" x="2099" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoIZQUIERDA0000" x="2832" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoIZQUIERDA0001" x="2832" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoIZQUIERDA0002" x="3565" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoIZQUIERDA0003" x="3565" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoIZQUIERDA0004" x="4298" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoIZQUIERDA0005" x="4298" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoIZQUIERDA0006" x="4298" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoIZQUIERDA0007" x="4298" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoIZQUIERDA0008" x="4298" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoIZQUIERDA0009" x="4298" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoIZQUIERDA0010" x="4298" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoIZQUIERDA0011" x="4298" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoIZQUIERDA0012" x="4298" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoIZQUIERDA0013" x="4298" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoIZQUIERDA0014" x="4298" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoIZQUIERDA0015" x="4298" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoIZQUIERDA0016" x="4298" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoIZQUIERDA0017" x="4298" y="3782" width="723" height="858"/>
-	<SubTexture name="MaavoIZQUIERDA0018" x="4298" y="3782" width="723" height="858"/>
+	<SubTexture name="Maavo GAMEOVER0000" x="10" y="10" width="1065" height="794" pivotX="150" pivotY="207.05" frameX="0" frameY="-66" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0001" x="10" y="10" width="1065" height="794" frameX="0" frameY="-66" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0002" x="1085" y="10" width="1065" height="794" frameX="0" frameY="-66" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0003" x="1085" y="10" width="1065" height="794" frameX="0" frameY="-66" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0004" x="2160" y="10" width="1065" height="794" frameX="0" frameY="-66" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0005" x="2160" y="10" width="1065" height="794" frameX="0" frameY="-66" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0006" x="3235" y="10" width="1121" height="836" frameX="0" frameY="-66" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0007" x="4366" y="10" width="1121" height="836" frameX="0" frameY="-66" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0008" x="5497" y="10" width="1121" height="877" frameX="0" frameY="-48" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0009" x="6628" y="10" width="1121" height="877" frameX="0" frameY="-48" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0010" x="10" y="897" width="1121" height="863" frameX="0" frameY="-54" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0011" x="1141" y="897" width="1121" height="863" frameX="0" frameY="-54" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0012" x="2272" y="897" width="1121" height="857" frameX="0" frameY="-56" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0013" x="3403" y="897" width="1121" height="857" frameX="0" frameY="-56" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0014" x="3403" y="897" width="1121" height="857" frameX="0" frameY="-56" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0015" x="3403" y="897" width="1121" height="857" frameX="0" frameY="-56" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0016" x="3403" y="897" width="1121" height="857" frameX="0" frameY="-56" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0017" x="3403" y="897" width="1121" height="857" frameX="0" frameY="-56" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0018" x="3403" y="897" width="1121" height="857" frameX="0" frameY="-56" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0019" x="3403" y="897" width="1121" height="857" frameX="0" frameY="-56" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0020" x="3403" y="897" width="1121" height="857" frameX="0" frameY="-56" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0021" x="3403" y="897" width="1121" height="857" frameX="0" frameY="-56" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0022" x="3403" y="897" width="1121" height="857" frameX="0" frameY="-56" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0023" x="3403" y="897" width="1121" height="857" frameX="0" frameY="-56" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0024" x="3403" y="897" width="1121" height="857" frameX="0" frameY="-56" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0025" x="3403" y="897" width="1121" height="857" frameX="0" frameY="-56" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0026" x="3403" y="897" width="1121" height="857" frameX="0" frameY="-56" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0027" x="4534" y="897" width="1126" height="845" frameX="0" frameY="-61" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0028" x="4534" y="897" width="1126" height="845" frameX="0" frameY="-61" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0029" x="5670" y="897" width="1150" height="884" frameX="0" frameY="-48" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0030" x="5670" y="897" width="1150" height="884" frameX="0" frameY="-48" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0031" x="6830" y="897" width="1182" height="913" frameX="0" frameY="-36" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0032" x="6830" y="897" width="1182" height="913" frameX="0" frameY="-36" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0033" x="10" y="1820" width="1197" height="941" frameX="0" frameY="-19" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0034" x="10" y="1820" width="1197" height="941" frameX="0" frameY="-19" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0035" x="1217" y="1820" width="1203" height="951" frameX="0" frameY="-13" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0036" x="1217" y="1820" width="1203" height="951" frameX="0" frameY="-13" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0037" x="2430" y="1820" width="1208" height="962" frameX="0" frameY="-6" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0038" x="2430" y="1820" width="1208" height="962" frameX="0" frameY="-6" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0039" x="3648" y="1820" width="1207" height="969" frameX="0" frameY="0" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0040" x="3648" y="1820" width="1207" height="969" frameX="0" frameY="0" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0041" x="3648" y="1820" width="1207" height="969" frameX="0" frameY="0" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0042" x="3648" y="1820" width="1207" height="969" frameX="0" frameY="0" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0043" x="3648" y="1820" width="1207" height="969" frameX="0" frameY="0" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0044" x="3648" y="1820" width="1207" height="969" frameX="0" frameY="0" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0045" x="4865" y="1820" width="1207" height="969" frameX="0" frameY="0" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0046" x="6082" y="1820" width="1207" height="969" frameX="0" frameY="0" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0047" x="6082" y="1820" width="1207" height="969" frameX="0" frameY="0" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0048" x="10" y="2799" width="1207" height="969" frameX="0" frameY="0" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0049" x="10" y="2799" width="1207" height="969" frameX="0" frameY="0" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0050" x="1227" y="2799" width="1207" height="969" frameX="0" frameY="0" frameWidth="1208" frameHeight="969"/>
+	<SubTexture name="Maavo GAMEOVER0051" x="4562" y="3778" width="1207" height="969"/>
+	<SubTexture name="Maavo GAMEOVER0052" x="5779" y="3778" width="1207" height="969"/>
+	<SubTexture name="Maavo GAMEOVER0053" x="5779" y="3778" width="1207" height="969"/>
+	<SubTexture name="Maavo GAMEOVER0054" x="3345" y="3778" width="1207" height="969"/>
+	<SubTexture name="Maavo GAMEOVER0055" x="3345" y="3778" width="1207" height="969"/>
+	<SubTexture name="Maavo GAMEOVER0056" x="4562" y="3778" width="1207" height="969"/>
+	<SubTexture name="Maavo GAMEOVER0057" x="4562" y="3778" width="1207" height="969"/>
+	<SubTexture name="Maavo GAMEOVER0058" x="5779" y="3778" width="1207" height="969"/>
+	<SubTexture name="Maavo GAMEOVER0059" x="5779" y="3778" width="1207" height="969"/>
+	<SubTexture name="Maavo Sing Down0000" x="2444" y="2799" width="723" height="858" pivotX="178" pivotY="170"/>
+	<SubTexture name="Maavo Sing Down0001" x="2444" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Down0002" x="3177" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Down0003" x="3177" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Down0004" x="3910" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Down0005" x="3910" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Down0006" x="3910" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Down0007" x="3910" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Down0008" x="3910" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Down0009" x="3910" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Down0010" x="3910" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Down0011" x="3910" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Down0012" x="3910" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Down0013" x="3910" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Down0014" x="3910" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Down0015" x="3910" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Left0000" x="4643" y="2799" width="723" height="858" pivotX="381" pivotY="-295"/>
+	<SubTexture name="Maavo Sing Left0001" x="4643" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Left0002" x="5376" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Left0003" x="5376" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Left0004" x="6109" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Left0005" x="6109" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Left0006" x="6109" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Left0007" x="6109" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Left0008" x="6109" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Left0009" x="6109" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Left0010" x="6109" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Left0011" x="6109" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Left0012" x="6109" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Left0013" x="6109" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Left0014" x="6109" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Right0000" x="6842" y="2799" width="723" height="858" pivotX="150" pivotY="141"/>
+	<SubTexture name="Maavo Sing Right0001" x="6842" y="2799" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Right0002" x="10" y="3778" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Right0003" x="10" y="3778" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Right0004" x="743" y="3778" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Right0005" x="743" y="3778" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Right0006" x="743" y="3778" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Right0007" x="743" y="3778" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Right0008" x="743" y="3778" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Right0009" x="743" y="3778" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Right0010" x="743" y="3778" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Right0011" x="743" y="3778" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Right0012" x="743" y="3778" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Right0013" x="743" y="3778" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Right0014" x="743" y="3778" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Right0015" x="743" y="3778" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Right0016" x="743" y="3778" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Right0017" x="743" y="3778" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Right0018" x="743" y="3778" width="723" height="858"/>
+	<SubTexture name="Maavo Sing Up0000" x="1476" y="3778" width="613" height="858" pivotX="478" pivotY="625"/>
+	<SubTexture name="Maavo Sing Up0001" x="1476" y="3778" width="613" height="858"/>
+	<SubTexture name="Maavo Sing Up0002" x="2099" y="3778" width="613" height="858"/>
+	<SubTexture name="Maavo Sing Up0003" x="2099" y="3778" width="613" height="858"/>
+	<SubTexture name="Maavo Sing Up0004" x="2722" y="3778" width="613" height="858"/>
+	<SubTexture name="Maavo Sing Up0005" x="2722" y="3778" width="613" height="858"/>
+	<SubTexture name="Maavo dead0000" x="3345" y="3778" width="1207" height="969" pivotX="150" pivotY="207.05"/>
+	<SubTexture name="Maavo dead0001" x="3345" y="3778" width="1207" height="969"/>
+	<SubTexture name="Maavo dead0002" x="4562" y="3778" width="1207" height="969"/>
+	<SubTexture name="Maavo dead0003" x="4562" y="3778" width="1207" height="969"/>
+	<SubTexture name="Maavo dead0004" x="5779" y="3778" width="1207" height="969"/>
+	<SubTexture name="Maavo dead0005" x="5779" y="3778" width="1207" height="969"/>
+	<SubTexture name="Maavo idle0000" x="6996" y="3778" width="606" height="819" pivotX="614" pivotY="-37" frameX="0" frameY="0" frameWidth="607" frameHeight="819"/>
+	<SubTexture name="Maavo idle0001" x="6996" y="3778" width="606" height="819" frameX="0" frameY="0" frameWidth="607" frameHeight="819"/>
+	<SubTexture name="Maavo idle0002" x="10" y="4757" width="606" height="819" frameX="0" frameY="0" frameWidth="607" frameHeight="819"/>
+	<SubTexture name="Maavo idle0003" x="10" y="4757" width="606" height="819" frameX="0" frameY="0" frameWidth="607" frameHeight="819"/>
+	<SubTexture name="Maavo idle0004" x="626" y="4757" width="606" height="819" frameX="0" frameY="0" frameWidth="607" frameHeight="819"/>
+	<SubTexture name="Maavo idle0005" x="626" y="4757" width="606" height="819" frameX="0" frameY="0" frameWidth="607" frameHeight="819"/>
+	<SubTexture name="Maavo idle0006" x="1242" y="4757" width="606" height="819" frameX="-1" frameY="0" frameWidth="607" frameHeight="819"/>
+	<SubTexture name="Maavo idle0007" x="1242" y="4757" width="606" height="819" frameX="-1" frameY="0" frameWidth="607" frameHeight="819"/>
+	<SubTexture name="Maavo idle0008" x="1858" y="4757" width="606" height="819" frameX="-1" frameY="0" frameWidth="607" frameHeight="819"/>
+	<SubTexture name="Maavo idle0009" x="1858" y="4757" width="606" height="819" frameX="-1" frameY="0" frameWidth="607" frameHeight="819"/>
+	<SubTexture name="Maavo idle0010" x="1858" y="4757" width="606" height="819" frameX="-1" frameY="0" frameWidth="607" frameHeight="819"/>
+	<SubTexture name="Maavo idle0011" x="1858" y="4757" width="606" height="819" frameX="-1" frameY="0" frameWidth="607" frameHeight="819"/>
+	<SubTexture name="Maavo idle0012" x="1858" y="4757" width="606" height="819" frameX="-1" frameY="0" frameWidth="607" frameHeight="819"/>
+	<SubTexture name="Maavo idle0013" x="1858" y="4757" width="606" height="819" frameX="-1" frameY="0" frameWidth="607" frameHeight="819"/>
+	<SubTexture name="Maavo idle0014" x="1858" y="4757" width="606" height="819" frameX="-1" frameY="0" frameWidth="607" frameHeight="819"/>
+	<SubTexture name="Maavo retry0000" x="2474" y="4757" width="1207" height="983" pivotX="150" pivotY="207.05" frameX="0" frameY="0" frameWidth="1207" frameHeight="1072"/>
+	<SubTexture name="Maavo retry0001" x="3691" y="4757" width="1207" height="1042" frameX="0" frameY="0" frameWidth="1207" frameHeight="1072"/>
+	<SubTexture name="Maavo retry0002" x="4908" y="4757" width="1207" height="1072"/>
+	<SubTexture name="Maavo retry0003" x="6125" y="4757" width="1207" height="1042" frameX="0" frameY="0" frameWidth="1207" frameHeight="1072"/>
+	<SubTexture name="Maavo retry0004" x="10" y="5839" width="1207" height="1042" frameX="0" frameY="0" frameWidth="1207" frameHeight="1072"/>
+	<SubTexture name="Maavo retry0005" x="1227" y="5839" width="1207" height="1042" frameX="0" frameY="0" frameWidth="1207" frameHeight="1072"/>
+	<SubTexture name="Maavo retry0006" x="2444" y="5839" width="1207" height="1042" frameX="0" frameY="0" frameWidth="1207" frameHeight="1072"/>
+	<SubTexture name="MaavoABAJO0000" x="3661" y="5839" width="723" height="858" pivotX="150" pivotY="141"/>
+	<SubTexture name="MaavoABAJO0001" x="3661" y="5839" width="723" height="858"/>
+	<SubTexture name="MaavoABAJO0002" x="4394" y="5839" width="723" height="858"/>
+	<SubTexture name="MaavoABAJO0003" x="4394" y="5839" width="723" height="858"/>
+	<SubTexture name="MaavoABAJO0004" x="5127" y="5839" width="723" height="858"/>
+	<SubTexture name="MaavoABAJO0005" x="5127" y="5839" width="723" height="858"/>
+	<SubTexture name="MaavoABAJO0006" x="5127" y="5839" width="723" height="858"/>
+	<SubTexture name="MaavoABAJO0007" x="5127" y="5839" width="723" height="858"/>
+	<SubTexture name="MaavoABAJO0008" x="5127" y="5839" width="723" height="858"/>
+	<SubTexture name="MaavoABAJO0009" x="5127" y="5839" width="723" height="858"/>
+	<SubTexture name="MaavoABAJO0010" x="5127" y="5839" width="723" height="858"/>
+	<SubTexture name="MaavoABAJO0011" x="5127" y="5839" width="723" height="858"/>
+	<SubTexture name="MaavoABAJO0012" x="5127" y="5839" width="723" height="858"/>
+	<SubTexture name="MaavoABAJO0013" x="5127" y="5839" width="723" height="858"/>
+	<SubTexture name="MaavoABAJO0014" x="5127" y="5839" width="723" height="858"/>
+	<SubTexture name="MaavoABAJO0015" x="5127" y="5839" width="723" height="858"/>
+	<SubTexture name="MaavoABAJO0016" x="5127" y="5839" width="723" height="858"/>
+	<SubTexture name="MaavoABAJO0017" x="5127" y="5839" width="723" height="858"/>
+	<SubTexture name="MaavoABAJO0018" x="5127" y="5839" width="723" height="858"/>
+	<SubTexture name="MaavoARRIBA0000" x="5860" y="5839" width="613" height="858" pivotX="150" pivotY="141"/>
+	<SubTexture name="MaavoARRIBA0001" x="5860" y="5839" width="613" height="858"/>
+	<SubTexture name="MaavoARRIBA0002" x="6483" y="5839" width="613" height="858"/>
+	<SubTexture name="MaavoARRIBA0003" x="6483" y="5839" width="613" height="858"/>
+	<SubTexture name="MaavoARRIBA0004" x="7106" y="5839" width="613" height="858"/>
+	<SubTexture name="MaavoARRIBA0005" x="7106" y="5839" width="613" height="858"/>
+	<SubTexture name="MaavoARRIBA0006" x="7106" y="5839" width="613" height="858"/>
+	<SubTexture name="MaavoARRIBA0007" x="7106" y="5839" width="613" height="858"/>
+	<SubTexture name="MaavoARRIBA0008" x="7106" y="5839" width="613" height="858"/>
+	<SubTexture name="MaavoARRIBA0009" x="7106" y="5839" width="613" height="858"/>
+	<SubTexture name="MaavoARRIBA0010" x="7106" y="5839" width="613" height="858"/>
+	<SubTexture name="MaavoARRIBA0011" x="7106" y="5839" width="613" height="858"/>
+	<SubTexture name="MaavoARRIBA0012" x="7106" y="5839" width="613" height="858"/>
+	<SubTexture name="MaavoARRIBA0013" x="7106" y="5839" width="613" height="858"/>
+	<SubTexture name="MaavoARRIBA0014" x="7106" y="5839" width="613" height="858"/>
+	<SubTexture name="MaavoARRIBA0015" x="7106" y="5839" width="613" height="858"/>
+	<SubTexture name="MaavoARRIBA0016" x="7106" y="5839" width="613" height="858"/>
+	<SubTexture name="MaavoARRIBA0017" x="7106" y="5839" width="613" height="858"/>
+	<SubTexture name="MaavoARRIBA0018" x="7106" y="5839" width="613" height="858"/>
+	<SubTexture name="MaavoDERECHA0000" x="10" y="6891" width="723" height="858" pivotX="150" pivotY="141"/>
+	<SubTexture name="MaavoDERECHA0001" x="10" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoDERECHA0002" x="743" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoDERECHA0003" x="743" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoDERECHA0004" x="1476" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoDERECHA0005" x="1476" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoDERECHA0006" x="1476" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoDERECHA0007" x="1476" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoDERECHA0008" x="1476" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoDERECHA0009" x="1476" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoDERECHA0010" x="1476" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoDERECHA0011" x="1476" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoDERECHA0012" x="1476" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoDERECHA0013" x="1476" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoDERECHA0014" x="1476" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoDERECHA0015" x="1476" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoDERECHA0016" x="1476" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoDERECHA0017" x="1476" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoDERECHA0018" x="1476" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoIZQUIERDA0000" x="2209" y="6891" width="723" height="858" pivotX="150" pivotY="141"/>
+	<SubTexture name="MaavoIZQUIERDA0001" x="2209" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoIZQUIERDA0002" x="2942" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoIZQUIERDA0003" x="2942" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoIZQUIERDA0004" x="3675" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoIZQUIERDA0005" x="3675" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoIZQUIERDA0006" x="3675" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoIZQUIERDA0007" x="3675" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoIZQUIERDA0008" x="3675" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoIZQUIERDA0009" x="3675" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoIZQUIERDA0010" x="3675" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoIZQUIERDA0011" x="3675" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoIZQUIERDA0012" x="3675" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoIZQUIERDA0013" x="3675" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoIZQUIERDA0014" x="3675" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoIZQUIERDA0015" x="3675" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoIZQUIERDA0016" x="3675" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoIZQUIERDA0017" x="3675" y="6891" width="723" height="858"/>
+	<SubTexture name="MaavoIZQUIERDA0018" x="3675" y="6891" width="723" height="858"/>
 </TextureAtlas>

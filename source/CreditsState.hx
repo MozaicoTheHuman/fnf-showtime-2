@@ -81,13 +81,7 @@ class CreditsState extends MusicBeatState
 				'https://www.youtube.com/channel/UC6QSZk8SYmTm_VoZAPOW6NQ',
 				'FFDD33'
 			],
-			[
-				'Mad!Wolf',
-				'maddy',
-				'Lua Coder',
-				'https://www.youtube.com/channel/UCzs0woaCtgqCxLNkI_qwE9A/',
-				'FFDD33'
-			],
+			['Gabriel ML', 'gabo', 'Musician', 'https://www.youtube.com/channel/UCIW8uHlBQ8ZOaxuo3PzpTig', 'FFDD33'],
 			['Sandwich', 'sandwich', 'Coder', 'https://twitter.com/randomguyhere0', 'FFDD33'],
 			['Ben Sanchez', 'ben', 'Coder', 'https://twitter.com/art_keny', 'FFDD33'],
 			['YOUK', 'youkdev', 'Coder', 'https://twitter.com/YOUKdev', 'FFDD33'],
@@ -135,6 +129,8 @@ class CreditsState extends MusicBeatState
 				'https://twitter.com/AbZoule',
 				'FFDD33'
 			],
+			['Sulayre', 'sul', 'Cutscene Animator', 'https://twitter.com/YOUKdev', 'FFDD33'],
+			['Cote', 'cote', 'Cutscene Animator', 'https://twitter.com/YOUKdev', 'FFDD33'],
 			[
 				'Nautical',
 				'nautical',

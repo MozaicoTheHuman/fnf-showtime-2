@@ -12,98 +12,98 @@ ffmpeg version git-2020-08-09-6e951d0 Copyright (c) 2000-2020 the FFmpeg develop
 Splitting the commandline.
 Reading option '-v' ... matched as option 'v' (set logging level) with argument 'debug'.
 Reading option '-nostdin' ... matched as option 'stdin' (enable or disable interaction on standard input) with argument 0.
-Reading option '-progress' ... matched as option 'progress' (write program-readable progress information) with argument 'C:/Users/Maavo/AppData/Local/Temp/KritaFFmpegProgress.KlVoKi'.
+Reading option '-progress' ... matched as option 'progress' (write program-readable progress information) with argument 'C:/Users/Maavo/AppData/Local/Temp/KritaFFmpegProgress.rUwNrs'.
 Reading option '-r' ... matched as option 'r' (set frame rate (Hz value, fraction or abbreviation)) with argument '24'.
 Reading option '-start_number' ... matched as AVOption 'start_number' with argument '0'.
-Reading option '-i' ... matched as input url with argument 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias%04d.png'.
-Reading option '-i' ... matched as input url with argument 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/palette.png'.
+Reading option '-i' ... matched as input url with argument 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead%04d.png'.
+Reading option '-i' ... matched as input url with argument 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/palette.png'.
 Reading option '-lavfi' ... matched as option 'lavfi' (create a complex filtergraph) with argument 'scale=w=606:h=820[0:v];[0:v][1:v] paletteuse'.
 Reading option '-y' ... matched as option 'y' (overwrite output files) with argument '1'.
-Reading option 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/MaavoNewIdleAnimKrita.gif' ... matched as output url.
+Reading option 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/MaavoNewIdleAnimKrita.gif' ... matched as output url.
 Finished splitting the commandline.
 Parsing a group of options: global .
 Applying option v (set logging level) with argument debug.
 Applying option nostdin (enable or disable interaction on standard input) with argument 0.
-Applying option progress (write program-readable progress information) with argument C:/Users/Maavo/AppData/Local/Temp/KritaFFmpegProgress.KlVoKi.
-[file @ 00000129befe1a00] Setting default whitelist 'file,crypto,data'
+Applying option progress (write program-readable progress information) with argument C:/Users/Maavo/AppData/Local/Temp/KritaFFmpegProgress.rUwNrs.
+[file @ 000001e8973c1ac0] Setting default whitelist 'file,crypto,data'
 Applying option lavfi (create a complex filtergraph) with argument scale=w=606:h=820[0:v];[0:v][1:v] paletteuse.
 Applying option y (overwrite output files) with argument 1.
 Successfully parsed a group of options.
-Parsing a group of options: input url C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias%04d.png.
+Parsing a group of options: input url C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead%04d.png.
 Applying option r (set frame rate (Hz value, fraction or abbreviation)) with argument 24.
 Successfully parsed a group of options.
-Opening an input file: C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias%04d.png.
-[image2 @ 00000129bf021e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias0000.png' for reading
-[file @ 00000129bf0258c0] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 00000129bf02da80] Statistics: 119521 bytes read, 0 seeks
-[image2 @ 00000129bf021e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias0001.png' for reading
-[file @ 00000129bf04f5c0] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 00000129bf02d900] Statistics: 119521 bytes read, 0 seeks
-[image2 @ 00000129bf021e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias0002.png' for reading
-[file @ 00000129bf06cac0] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 00000129bf04b100] Statistics: 117546 bytes read, 0 seeks
-[image2 @ 00000129bf021e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias0003.png' for reading
-[file @ 00000129bf29cd80] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 00000129bf29ce80] Statistics: 117546 bytes read, 0 seeks
-[image2 @ 00000129bf021e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias0004.png' for reading
-[file @ 00000129bf29ce40] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 00000129bf2b9c80] Statistics: 117100 bytes read, 0 seeks
-[image2 @ 00000129bf021e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias0005.png' for reading
-[file @ 00000129bf29ce40] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 00000129bf2d6840] Statistics: 117100 bytes read, 0 seeks
-[image2 @ 00000129bf021e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias0006.png' for reading
-[file @ 00000129bf29ce40] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 00000129bf2f3400] Statistics: 117201 bytes read, 0 seeks
-[image2 @ 00000129bf021e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias0007.png' for reading
-[file @ 00000129bf29ce40] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 00000129bf04c180] Statistics: 117201 bytes read, 0 seeks
-[image2 @ 00000129bf021e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias0008.png' for reading
-[file @ 00000129bf04c180] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 00000129bf04ca80] Statistics: 118578 bytes read, 0 seeks
-[image2 @ 00000129bf021e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias0009.png' for reading
-[file @ 00000129bf04c180] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 00000129bf04ca80] Statistics: 118578 bytes read, 0 seeks
-[image2 @ 00000129bf021e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias0010.png' for reading
-[file @ 00000129bf04ca80] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 00000129bf04cbc0] Statistics: 118578 bytes read, 0 seeks
-[image2 @ 00000129bf021e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias0011.png' for reading
-[file @ 00000129bf04ca80] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 00000129bf04cbc0] Statistics: 118578 bytes read, 0 seeks
-[image2 @ 00000129bf021e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias0012.png' for reading
-[file @ 00000129bf04ca80] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 00000129bf04cbc0] Statistics: 118578 bytes read, 0 seeks
-[image2 @ 00000129bf021e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias0013.png' for reading
-[file @ 00000129bf04ca80] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 00000129bf04cbc0] Statistics: 118578 bytes read, 0 seeks
-[image2 @ 00000129bf021e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias0014.png' for reading
-[file @ 00000129bf04ca80] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 00000129bf04cbc0] Statistics: 118578 bytes read, 0 seeks
-[image2 @ 00000129bf021e00] Opening 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias0015.png' for reading
-[file @ 00000129bf04ca80] Setting default whitelist 'file,crypto,data'
-[AVIOContext @ 00000129bf04cbc0] Statistics: 118578 bytes read, 0 seeks
-Input #0, image2, from 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias%04d.png':
+Opening an input file: C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead%04d.png.
+[image2 @ 000001e897401f00] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead0000.png' for reading
+[file @ 000001e897405900] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000001e89740dac0] Statistics: 119519 bytes read, 0 seeks
+[image2 @ 000001e897401f00] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead0001.png' for reading
+[file @ 000001e89742f600] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000001e89740d940] Statistics: 119519 bytes read, 0 seeks
+[image2 @ 000001e897401f00] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead0002.png' for reading
+[file @ 000001e89744cb00] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000001e89742b140] Statistics: 117544 bytes read, 0 seeks
+[image2 @ 000001e897401f00] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead0003.png' for reading
+[file @ 000001e89768cd80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000001e89768ce80] Statistics: 117544 bytes read, 0 seeks
+[image2 @ 000001e897401f00] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead0004.png' for reading
+[file @ 000001e89768ce40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000001e8976a9c80] Statistics: 117098 bytes read, 0 seeks
+[image2 @ 000001e897401f00] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead0005.png' for reading
+[file @ 000001e89768ce40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000001e8976c6840] Statistics: 117098 bytes read, 0 seeks
+[image2 @ 000001e897401f00] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead0006.png' for reading
+[file @ 000001e89768ce40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000001e8976e3400] Statistics: 117199 bytes read, 0 seeks
+[image2 @ 000001e897401f00] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead0007.png' for reading
+[file @ 000001e89768ce40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000001e89742c1c0] Statistics: 117199 bytes read, 0 seeks
+[image2 @ 000001e897401f00] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead0008.png' for reading
+[file @ 000001e89742c1c0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000001e89742cac0] Statistics: 118576 bytes read, 0 seeks
+[image2 @ 000001e897401f00] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead0009.png' for reading
+[file @ 000001e89742c1c0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000001e89742cac0] Statistics: 118576 bytes read, 0 seeks
+[image2 @ 000001e897401f00] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead0010.png' for reading
+[file @ 000001e89742cac0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000001e89742cbc0] Statistics: 118576 bytes read, 0 seeks
+[image2 @ 000001e897401f00] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead0011.png' for reading
+[file @ 000001e89742cac0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000001e89742cbc0] Statistics: 118576 bytes read, 0 seeks
+[image2 @ 000001e897401f00] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead0012.png' for reading
+[file @ 000001e89742cac0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000001e89742cbc0] Statistics: 118576 bytes read, 0 seeks
+[image2 @ 000001e897401f00] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead0013.png' for reading
+[file @ 000001e89742cac0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000001e89742cbc0] Statistics: 118576 bytes read, 0 seeks
+[image2 @ 000001e897401f00] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead0014.png' for reading
+[file @ 000001e89742cac0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000001e89742cbc0] Statistics: 118576 bytes read, 0 seeks
+[image2 @ 000001e897401f00] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead0015.png' for reading
+[file @ 000001e89742cac0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 000001e89742cbc0] Statistics: 118576 bytes read, 0 seeks
+Input #0, image2, from 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead%04d.png':
   Duration: 00:00:00.64, start: 0.000000, bitrate: N/A
     Stream #0:0, 16, 1/25: Video: png, 1 reference frame, rgba(pc), 606x819 [SAR 2834:2834 DAR 202:273], 0/1, 25 fps, 25 tbr, 25 tbn, 25 tbc
 Successfully opened the file.
-Parsing a group of options: input url C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/palette.png.
+Parsing a group of options: input url C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/palette.png.
 Successfully parsed a group of options.
-Opening an input file: C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/palette.png.
-[NULL @ 00000129bf416540] Opening 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/palette.png' for reading
-[file @ 00000129bf416c40] Setting default whitelist 'file,crypto,data'
-[png_pipe @ 00000129bf416540] Format png_pipe probed with size=2048 and score=99
-[png_pipe @ 00000129bf416540] Before avformat_find_stream_info() pos: 0 bytes read:969 seeks:0 nb_streams:1
-[png_pipe @ 00000129bf416540] After avformat_find_stream_info() pos: 969 bytes read:969 seeks:0 frames:1
-Input #1, png_pipe, from 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/palette.png':
+Opening an input file: C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/palette.png.
+[NULL @ 000001e8978064c0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/palette.png' for reading
+[file @ 000001e897806ac0] Setting default whitelist 'file,crypto,data'
+[png_pipe @ 000001e8978064c0] Format png_pipe probed with size=2048 and score=99
+[png_pipe @ 000001e8978064c0] Before avformat_find_stream_info() pos: 0 bytes read:969 seeks:0 nb_streams:1
+[png_pipe @ 000001e8978064c0] After avformat_find_stream_info() pos: 969 bytes read:969 seeks:0 frames:1
+Input #1, png_pipe, from 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/palette.png':
   Duration: N/A, bitrate: N/A
     Stream #1:0, 1, 1/25: Video: png, 1 reference frame, rgba(pc), 16x16 [SAR 1:1 DAR 1:1], 0/1, 25 tbr, 25 tbn, 25 tbc
 Successfully opened the file.
-[Parsed_scale_0 @ 00000129bf04d100] Setting 'w' to value '606'
-[Parsed_scale_0 @ 00000129bf04d100] Setting 'h' to value '820'
-[Parsed_scale_0 @ 00000129bf04d100] w:606 h:820 flags:'bilinear' interl:0
-Parsing a group of options: output url C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/MaavoNewIdleAnimKrita.gif.
+[Parsed_scale_0 @ 000001e89742d140] Setting 'w' to value '606'
+[Parsed_scale_0 @ 000001e89742d140] Setting 'h' to value '820'
+[Parsed_scale_0 @ 000001e89742d140] w:606 h:820 flags:'bilinear' interl:0
+Parsing a group of options: output url C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/MaavoNewIdleAnimKrita.gif.
 Successfully parsed a group of options.
-Opening an output file: C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/MaavoNewIdleAnimKrita.gif.
-[file @ 00000129bf076d00] Setting default whitelist 'file,crypto,data'
+Opening an output file: C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/MaavoNewIdleAnimKrita.gif.
+[file @ 000001e897404340] Setting default whitelist 'file,crypto,data'
 Successfully opened the file.
 detected 8 logical cores
 Stream mapping:
@@ -111,66 +111,66 @@ Stream mapping:
   Stream #1:0 (png) -> paletteuse:palette
   paletteuse -> Stream #0:0 (gif)
 cur_dts is invalid st:0 (0) [init:0 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
-    Last message repeated 182 times
-[image2 @ 00000129bf021e00] Thread message queue blocking; consider raising the thread_queue_size option (current value: 8)
+    Last message repeated 988 times
+[image2 @ 000001e897401f00] Thread message queue blocking; consider raising the thread_queue_size option (current value: 8)
 cur_dts is invalid st:0 (0) [init:0 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
     Last message repeated 8 times
-[Parsed_scale_0 @ 00000129bf502e80] Setting 'w' to value '606'
-[Parsed_scale_0 @ 00000129bf502e80] Setting 'h' to value '820'
-[Parsed_scale_0 @ 00000129bf502e80] w:606 h:820 flags:'bilinear' interl:0
-[graph 0 input from stream 0:0 @ 00000129bf454e00] Setting 'video_size' to value '606x819'
-[graph 0 input from stream 0:0 @ 00000129bf454e00] Setting 'pix_fmt' to value '26'
-[graph 0 input from stream 0:0 @ 00000129bf454e00] Setting 'time_base' to value '1/24'
-[graph 0 input from stream 0:0 @ 00000129bf454e00] Setting 'pixel_aspect' to value '2834/2834'
-[graph 0 input from stream 0:0 @ 00000129bf454e00] Setting 'frame_rate' to value '24/1'
-[graph 0 input from stream 0:0 @ 00000129bf454e00] w:606 h:819 pixfmt:rgba tb:1/24 fr:24/1 sar:2834/2834
-[graph 0 input from stream 1:0 @ 00000129bf584d00] Setting 'video_size' to value '16x16'
-[graph 0 input from stream 1:0 @ 00000129bf584d00] Setting 'pix_fmt' to value '26'
-[graph 0 input from stream 1:0 @ 00000129bf584d00] Setting 'time_base' to value '1/25'
-[graph 0 input from stream 1:0 @ 00000129bf584d00] Setting 'pixel_aspect' to value '1/1'
-[graph 0 input from stream 1:0 @ 00000129bf584d00] Setting 'frame_rate' to value '25/1'
-[graph 0 input from stream 1:0 @ 00000129bf584d00] w:16 h:16 pixfmt:rgba tb:1/25 fr:25/1 sar:1/1
-[format @ 00000129bf4ee900] Setting 'pix_fmts' to value 'rgb8|bgr8|rgb4_byte|bgr4_byte|gray|pal8'
-[auto_scaler_0 @ 00000129bf43c940] w:iw h:ih flags:'bilinear' interl:0
-[Parsed_paletteuse_1 @ 00000129bf454d00] auto-inserting filter 'auto_scaler_0' between the filter 'graph 0 input from stream 1:0' and the filter 'Parsed_paletteuse_1'
-[AVFilterGraph @ 00000129bf384440] query_formats: 6 queried, 4 merged, 1 already done, 0 delayed
-[swscaler @ 00000129bf45ef80] Forcing full internal H chroma due to input having non subsampled chroma
-[Parsed_scale_0 @ 00000129bf502e80] w:606 h:819 fmt:rgba sar:2834/2834 -> w:606 h:820 fmt:bgra sar:820/819 flags:0x2
-[swscaler @ 00000129bf584fc0] Forcing full internal H chroma due to input having non subsampled chroma
-[auto_scaler_0 @ 00000129bf43c940] w:16 h:16 fmt:rgba sar:1/1 -> w:16 h:16 fmt:bgra sar:1/1 flags:0x2
-[Parsed_paletteuse_1 @ 00000129bf454d00] [framesync @ 00000129bf502f88] Selected 1/600 time base
-[Parsed_paletteuse_1 @ 00000129bf454d00] [framesync @ 00000129bf502f88] Sync level 2
-Output #0, gif, to 'C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/MaavoNewIdleAnimKrita.gif':
+[Parsed_scale_0 @ 000001e8976e33c0] Setting 'w' to value '606'
+[Parsed_scale_0 @ 000001e8976e33c0] Setting 'h' to value '820'
+[Parsed_scale_0 @ 000001e8976e33c0] w:606 h:820 flags:'bilinear' interl:0
+[graph 0 input from stream 0:0 @ 000001e89740aa00] Setting 'video_size' to value '606x819'
+[graph 0 input from stream 0:0 @ 000001e89740aa00] Setting 'pix_fmt' to value '26'
+[graph 0 input from stream 0:0 @ 000001e89740aa00] Setting 'time_base' to value '1/24'
+[graph 0 input from stream 0:0 @ 000001e89740aa00] Setting 'pixel_aspect' to value '2834/2834'
+[graph 0 input from stream 0:0 @ 000001e89740aa00] Setting 'frame_rate' to value '24/1'
+[graph 0 input from stream 0:0 @ 000001e89740aa00] w:606 h:819 pixfmt:rgba tb:1/24 fr:24/1 sar:2834/2834
+[graph 0 input from stream 1:0 @ 000001e89783ea80] Setting 'video_size' to value '16x16'
+[graph 0 input from stream 1:0 @ 000001e89783ea80] Setting 'pix_fmt' to value '26'
+[graph 0 input from stream 1:0 @ 000001e89783ea80] Setting 'time_base' to value '1/25'
+[graph 0 input from stream 1:0 @ 000001e89783ea80] Setting 'pixel_aspect' to value '1/1'
+[graph 0 input from stream 1:0 @ 000001e89783ea80] Setting 'frame_rate' to value '25/1'
+[graph 0 input from stream 1:0 @ 000001e89783ea80] w:16 h:16 pixfmt:rgba tb:1/25 fr:25/1 sar:1/1
+[format @ 000001e89783ee40] Setting 'pix_fmts' to value 'rgb8|bgr8|rgb4_byte|bgr4_byte|gray|pal8'
+[auto_scaler_0 @ 000001e8978ee0c0] w:iw h:ih flags:'bilinear' interl:0
+[Parsed_paletteuse_1 @ 000001e89740a840] auto-inserting filter 'auto_scaler_0' between the filter 'graph 0 input from stream 1:0' and the filter 'Parsed_paletteuse_1'
+[AVFilterGraph @ 000001e897774200] query_formats: 6 queried, 4 merged, 1 already done, 0 delayed
+[swscaler @ 000001e89783ef40] Forcing full internal H chroma due to input having non subsampled chroma
+[Parsed_scale_0 @ 000001e8976e33c0] w:606 h:819 fmt:rgba sar:2834/2834 -> w:606 h:820 fmt:bgra sar:820/819 flags:0x2
+[swscaler @ 000001e897858580] Forcing full internal H chroma due to input having non subsampled chroma
+[auto_scaler_0 @ 000001e8978ee0c0] w:16 h:16 fmt:rgba sar:1/1 -> w:16 h:16 fmt:bgra sar:1/1 flags:0x2
+[Parsed_paletteuse_1 @ 000001e89740a840] [framesync @ 000001e8978f2648] Selected 1/600 time base
+[Parsed_paletteuse_1 @ 000001e89740a840] [framesync @ 000001e8978f2648] Sync level 2
+Output #0, gif, to 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/MaavoNewIdleAnimKrita.gif':
   Metadata:
     encoder         : Lavf58.50.100
     Stream #0:0, 0, 1/100: Video: gif, 1 reference frame, pal8, 606x820 [SAR 820:819 DAR 202:273], 0/1, q=2-31, 200 kb/s, 24 fps, 100 tbn, 24 tbc (default)
     Metadata:
       encoder         : Lavc58.100.100 gif
 Clipping frame in rate conversion by 0.000008
-[gif @ 00000129bf023ac0] 491x776 image at pos (55;28) [area:606x820]
-[gif @ 00000129bf023ac0] 491x779 image at pos (54;25) [area:606x820]
+[gif @ 000001e897456b00] 491x776 image at pos (55;28) [area:606x820]
+[gif @ 000001e897456b00] 491x779 image at pos (54;25) [area:606x820]
     Last message repeated 1 times
-[gif @ 00000129bf023ac0] 491x784 image at pos (54;20) [area:606x820]
+[gif @ 000001e897456b00] 491x784 image at pos (54;20) [area:606x820]
     Last message repeated 1 times
-[gif @ 00000129bf023ac0] 492x791 image at pos (54;13) [area:606x820]
+[gif @ 000001e897456b00] 492x791 image at pos (54;13) [area:606x820]
     Last message repeated 1 times
-[gif @ 00000129bf023ac0] 487x789 image at pos (58;15) [area:606x820]
+[gif @ 000001e897456b00] 487x789 image at pos (58;15) [area:606x820]
     Last message repeated 7 times
-[Parsed_paletteuse_1 @ 00000129bf454d00] [framesync @ 00000129bf502f88] Sync level 0
-[out_0_0 @ 00000129bf4ee800] EOF on sink link out_0_0:default.
+[Parsed_paletteuse_1 @ 000001e89740a840] [framesync @ 000001e8978f2648] Sync level 0
+[out_0_0 @ 000001e89783ed40] EOF on sink link out_0_0:default.
 No more output streams to write to, finishing.
-frame=   16 fps=0.0 q=-0.0 Lsize=     636kB time=00:00:00.64 bitrate=8145.9kbits/s speed=1.96x    
-[AVIOContext @ 00000129bf021bc0] Statistics: 0 seeks, 1 writeouts
+frame=   16 fps=0.0 q=-0.0 Lsize=     636kB time=00:00:00.64 bitrate=8145.9kbits/s speed=2.04x    
+[AVIOContext @ 000001e897401c80] Statistics: 0 seeks, 1 writeouts
 video:636kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.003069%
-Input file #0 (C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/matias%04d.png):
-  Input stream #0:0 (video): 16 packets read (1891360 bytes); 16 frames decoded; 
-  Total: 16 packets (1891360 bytes) demuxed
-Input file #1 (C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/palette.png):
+Input file #0 (C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/dead%04d.png):
+  Input stream #0:0 (video): 16 packets read (1891328 bytes); 16 frames decoded; 
+  Total: 16 packets (1891328 bytes) demuxed
+Input file #1 (C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/palette.png):
   Input stream #1:0 (video): 1 packets read (969 bytes); 1 frames decoded; 
   Total: 1 packets (969 bytes) demuxed
-Output file #0 (C:/Users/Maavo/Documents/FNF MODS/FNF - Showtime!/showtime/art/Characters/Maavo/MaavoNewIdleAnimKrita.gif):
+Output file #0 (C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Characters/Maavo/MaavoNewIdleAnimKrita.gif):
   Output stream #0:0 (video): 16 frames encoded; 16 packets muxed (651649 bytes); 
   Total: 16 packets (651649 bytes) muxed
 17 frames successfully decoded, 0 decoding errors
-[AVIOContext @ 00000129bf076e40] Statistics: 0 seeks, 3 writeouts
-[AVIOContext @ 00000129bf416d40] Statistics: 969 bytes read, 0 seeks
+[AVIOContext @ 000001e897404480] Statistics: 0 seeks, 3 writeouts
+[AVIOContext @ 000001e897806c00] Statistics: 969 bytes read, 0 seeks

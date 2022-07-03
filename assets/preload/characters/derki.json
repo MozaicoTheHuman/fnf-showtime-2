@@ -1,57 +1,101 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
-				60,
+				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "Derker idle dance",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Derker idle dance"
+		},
+		{
+			"offsets": [
+				-9,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Derker Sing Note LEFT"
+		},
+		{
+			"offsets": [
+				0,
+				-30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Derker Sing Note DOWN"
+		},
+		{
+			"offsets": [
+				-6,
+				50
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Derker Sing Note UP"
+		},
+		{
+			"offsets": [
+				0,
+				27
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Derker Sing Note RIGHT"
 		},
 		{
 			"loop": false,
 			"offsets": [
-				171,
-				20
+				-9,
+				10
 			],
-			"anim": "singLEFT",
-			"fps": 24,
+			"anim": "singLEFT-alt",
+			"fps": 30,
 			"name": "Derker Sing Note LEFT",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				257,
+				0,
 				-30
 			],
-			"anim": "singDOWN",
-			"fps": 24,
+			"anim": "singDOWN-alt",
+			"fps": 30,
 			"name": "Derker Sing Note DOWN",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				44,
-				60
+				-6,
+				50
 			],
-			"anim": "singUP",
-			"fps": 24,
+			"anim": "singUP-alt",
+			"fps": 30,
 			"name": "Derker Sing Note UP",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				202,
-				32
+				0,
+				27
 			],
-			"anim": "singRIGHT",
-			"fps": 24,
+			"anim": "singRIGHT-alt",
+			"fps": 30,
 			"name": "Derker Sing Note RIGHT",
 			"indices": []
 		}
@@ -59,7 +103,7 @@
 	"no_antialiasing": false,
 	"image": "characters/drukiblu_assets",
 	"position": [
-		0,
+		-150,
 		0
 	],
 	"healthicon": "derki",
@@ -70,8 +114,8 @@
 		206
 	],
 	"camera_position": [
-		0,
-		0
+		-90,
+		50
 	],
 	"sing_duration": 6.1,
 	"scale": 1

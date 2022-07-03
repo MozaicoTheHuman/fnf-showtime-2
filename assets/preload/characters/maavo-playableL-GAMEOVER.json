@@ -1,0 +1,155 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				72
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Maavo idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-36,
+				94
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Maavo Sing Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				25,
+				110
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Maavo Sing Down",
+			"indices": []
+		},
+		{
+			"offsets": [
+				62,
+				116
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Maavo Sing Right"
+		},
+		{
+			"offsets": [
+				-85,
+				105
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Maavo Sing Left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-36,
+				94
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "MaavoARRIBA",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				25,
+				110
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "MaavoABAJO",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-85,
+				105
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "MaavoIZQUIERDA",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				62,
+				116
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "MaavoDERECHA",
+			"indices": []
+		},
+		{
+			"offsets": [
+				387,
+				93
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "Maritza GAMEOVER"
+		},
+		{
+			"offsets": [
+				215,
+				93
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "Mari Retry"
+		},
+		{
+			"offsets": [
+				215,
+				93
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "Mari ded2"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/MaritzaGameOver",
+	"position": [
+		0,
+		15
+	],
+	"healthicon": "2022",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		255,
+		255
+	],
+	"camera_position": [
+		440,
+		-290
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
