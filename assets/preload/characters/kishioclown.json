@@ -1,121 +1,176 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
-				-96,
+				-94,
 				-374
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "ronaldLEFT",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "ronaldLEFT"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-40,
 				-367
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "ronaldDOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "ronaldDOWN"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-137,
 				53
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "ronaldUP",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "ronaldUP"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-52,
 				-322
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "ronaldRIGHT",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "ronaldRIGHT"
+		},
+		{
+			"offsets": [
+				-94,
+				-374
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "ronaldHYPER"
 		},
 		{
 			"loop": false,
-			"offsets": [
-				419,
-				99
-			],
-			"anim": "hey",
-			"fps": 24,
-			"name": "ronaldHYPER",
-			"indices": []
-		},
-		{
 			"offsets": [
 				-115,
 				-260
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT-alt",
-			"indices": [],
-			"name": "ronaldIZQUIERDA"
+			"fps": 24,
+			"name": "ronaldIZQUIERDA",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-75,
 				-660
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN-alt",
-			"indices": [],
-			"name": "ronaldABAJO"
+			"fps": 24,
+			"name": "ronaldABAJO",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				120,
 				-167
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP-alt",
-			"indices": [],
-			"name": "ronaldARRIBA"
+			"fps": 24,
+			"name": "ronaldARRIBA",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-139,
 				-218
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "ronaldIDLE"
+			"fps": 24,
+			"name": "ronaldIDLE",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-133,
 				-218
 			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "ronaldRUUU",
+			"indices": []
+		},
+		{
+			"offsets": [
+				16,
+				-217
+			],
 			"loop": false,
 			"fps": 24,
-			"anim": "singRIGHT-alt",
+			"anim": "intro1",
 			"indices": [],
-			"name": "ronaldRUUU"
+			"name": "ronaldINTRO1"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-139,
+				-218
+			],
+			"anim": "intro2",
+			"fps": 24,
+			"name": "ronaldINTRO2",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-117,
+				1230
+			],
+			"anim": "intro3",
+			"fps": 24,
+			"name": "ronaldINTRO3",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-350,
+				-332
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "spark",
+			"loop": false,
+			"name": "hyperspark"
+		},
+		{
+			"offsets": [
+				380,
+				0
+			],
+			"indices": [],
+			"fps": 60,
+			"anim": "hyperportrait",
+			"loop": false,
+			"name": "hyperportrait"
 		}
 	],
 	"no_antialiasing": true,
 	"image": "characters/clown",
 	"position": [
-		100,
-		-105
+		300,
+		215
 	],
 	"healthicon": "nothing",
 	"flip_x": false,
@@ -125,8 +180,8 @@
 		0
 	],
 	"camera_position": [
-		-270,
-		300
+		-1100,
+		-490
 	],
 	"sing_duration": 6.1,
 	"scale": 2.85
