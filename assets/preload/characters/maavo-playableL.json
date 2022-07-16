@@ -1,143 +1,110 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-50,
 				72
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "Maavo idle",
-			"indices": []
+			"indices": [],
+			"name": "Maavo IDLE"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-36,
-				94
+				-11,
+				123
 			],
+			"loop": false,
+			"fps": 25,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "Maavo Sing Up",
-			"indices": []
+			"indices": [],
+			"name": "Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				25,
-				110
+				41,
+				-136
 			],
+			"loop": false,
+			"fps": 25,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "Maavo Sing Down",
-			"indices": []
-		},
-		{
-			"offsets": [
-				62,
-				116
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singLEFT",
 			"indices": [],
-			"name": "Maavo Sing Right"
+			"name": "Down"
 		},
 		{
 			"offsets": [
-				-85,
-				105
+				-1,
+				80
 			],
 			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Maavo Sing Left"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-36,
-				94
-			],
+			"fps": 25,
 			"anim": "singUPmiss",
-			"fps": 24,
-			"name": "MaavoARRIBA",
-			"indices": []
+			"indices": [],
+			"name": "Arriba"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				25,
-				110
+				40,
+				-62
 			],
+			"loop": false,
+			"fps": 25,
 			"anim": "singDOWNmiss",
-			"fps": 24,
-			"name": "MaavoABAJO",
-			"indices": []
+			"indices": [],
+			"name": "Abajo"
 		},
 		{
 			"loop": false,
 			"offsets": [
-				-85,
-				105
-			],
-			"anim": "singRIGHTmiss",
-			"fps": 24,
-			"name": "MaavoIZQUIERDA",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				62,
-				116
+				198,
+				6
 			],
 			"anim": "singLEFTmiss",
-			"fps": 24,
-			"name": "MaavoDERECHA",
+			"fps": 25,
+			"name": "Derecha",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				86,
-				193
+				91,
+				-24
 			],
-			"anim": "firstDeath",
-			"fps": 24,
-			"name": "Maavo GAMEOVER",
+			"anim": "singRIGHTmiss",
+			"fps": 25,
+			"name": "Izquierda",
 			"indices": []
 		},
 		{
-			"offsets": [
-				84,
-				192
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "deathConfirm",
-			"indices": [],
-			"name": "Maavo retry"
+			"offsets": [
+				91,
+				-22
+			],
+			"anim": "singRIGHT",
+			"fps": 25,
+			"name": "Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				85,
-				193
+				221,
+				7
 			],
-			"loop": true,
-			"fps": 24,
-			"anim": "deathLoop",
-			"indices": [],
-			"name": "Maavo dead"
+			"anim": "singLEFT",
+			"fps": 25,
+			"name": "Right",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/Maavo_PLAYABLE",
 	"position": [
-		0,
-		15
+		100,
+		0
 	],
 	"healthicon": "2022",
 	"flip_x": false,
@@ -147,8 +114,8 @@
 		255
 	],
 	"camera_position": [
-		400,
-		-170
+		290,
+		-30
 	],
 	"sing_duration": 6.1,
 	"scale": 1

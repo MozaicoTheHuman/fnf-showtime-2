@@ -70,7 +70,7 @@ function onCreate()
 	scaleObject('mari', 1, 1);	
 	addLuaSprite('mari', true)
     --Ivette
-	makeAnimatedLuaSprite('ibet', 'ivettemasterpiece', -650, 100)
+	makeAnimatedLuaSprite('ibet', 'ivettemasterpiece', -650, 65)
 	addAnimationByPrefix('ibet', 'idle', 'idle', 24, false)
 	addAnimationByPrefix('ibet', 'left', 'left', 24, false)
 	addAnimationByPrefix('ibet', 'down', 'down', 24, false)

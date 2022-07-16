@@ -1,59 +1,70 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				0,
-				0
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "idle"
-		},
-		{
 			"offsets": [
 				98,
 				13
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "martinleft"
+			"fps": 24,
+			"name": "martinleft",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				4,
 				-13
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "martinright"
+			"fps": 24,
+			"name": "martinright",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				50,
 				-80
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "martindown"
+			"fps": 24,
+			"name": "martindown",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				72,
 				67
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
+			"fps": 24,
+			"name": "martinup",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
 			"indices": [],
-			"name": "martinup"
+			"fps": 24,
+			"anim": "danceLeft",
+			"loop": false,
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "danceRight",
+			"loop": false,
+			"name": "idle"
 		}
 	],
 	"no_antialiasing": false,

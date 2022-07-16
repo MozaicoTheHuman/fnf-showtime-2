@@ -1,15 +1,15 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				33,
-				159
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "showtime",
-			"indices": [],
-			"name": "Maavo HORA DEL DOU"
+			"offsets": [
+				124,
+				-21
+			],
+			"anim": "singLEFT-alt",
+			"fps": 30,
+			"name": "Left",
+			"indices": []
 		},
 		{
 			"offsets": [
@@ -18,115 +18,115 @@
 			],
 			"loop": false,
 			"fps": 24,
-			"anim": "idle",
+			"anim": "danceLeft",
 			"indices": [],
-			"name": "Maavo idle"
+			"name": "Maavo IDLE"
 		},
 		{
 			"offsets": [
-				115,
-				106
+				-50,
+				72
 			],
 			"loop": false,
-			"fps": 27,
-			"anim": "singLEFT",
+			"fps": 24,
+			"anim": "danceRight",
 			"indices": [],
-			"name": "Maavo Sing Left"
+			"name": "Maavo IDLE"
 		},
 		{
-			"offsets": [
-				-36,
-				94
-			],
 			"loop": false,
-			"fps": 27,
+			"offsets": [
+				4,
+				121
+			],
 			"anim": "singUP",
-			"indices": [],
-			"name": "Maavo Sing Up"
+			"fps": 26,
+			"name": "Up",
+			"indices": []
 		},
 		{
-			"offsets": [
-				0,
-				113
-			],
 			"loop": false,
-			"fps": 27,
+			"offsets": [
+				124,
+				-21
+			],
+			"anim": "singLEFT",
+			"fps": 26,
+			"name": "Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				80,
+				-133
+			],
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Maavo Sing Down"
+			"fps": 26,
+			"name": "Down",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-62,
-				118
-			],
 			"loop": false,
-			"fps": 27,
+			"offsets": [
+				84,
+				8
+			],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Maavo Sing Right"
+			"fps": 26,
+			"name": "Right",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-62,
-				118
-			],
 			"loop": false,
-			"fps": 33,
+			"offsets": [
+				84,
+				8
+			],
 			"anim": "singRIGHT-alt",
-			"indices": [],
-			"name": "Maavo Sing Right"
+			"fps": 30,
+			"name": "Right",
+			"indices": []
 		},
 		{
-			"offsets": [
-				115,
-				106
-			],
 			"loop": false,
-			"fps": 33,
-			"anim": "singLEFT-alt",
-			"indices": [],
-			"name": "Maavo Sing Left"
-		},
-		{
 			"offsets": [
-				-36,
-				94
+				4,
+				121
 			],
-			"loop": false,
-			"fps": 33,
 			"anim": "singUP-alt",
-			"indices": [],
-			"name": "Maavo Sing Up"
+			"fps": 30,
+			"name": "Up",
+			"indices": []
 		},
 		{
-			"offsets": [
-				0,
-				114
-			],
 			"loop": false,
-			"fps": 33,
+			"offsets": [
+				80,
+				-133
+			],
 			"anim": "singDOWN-alt",
-			"indices": [],
-			"name": "Maavo Sing Down"
+			"fps": 30,
+			"name": "Down",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/Maavo_NEW",
+	"image": "characters/MAAVOnew",
 	"position": [
-		-150,
-		35
+		-90,
+		0
 	],
 	"healthicon": "showtime",
 	"flip_x": false,
 	"healthbar_colors": [
-		255,
-		82,
-		228
+		219,
+		40,
+		29
 	],
 	"camera_position": [
-		-60,
-		-110
+		90,
+		80
 	],
 	"sing_duration": 6.1,
 	"scale": 1
