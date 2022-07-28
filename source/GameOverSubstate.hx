@@ -13,6 +13,7 @@ import flixel.tweens.FlxTween;
 class GameOverSubstate extends MusicBeatSubstate
 {
 	var bf:Boyfriend;
+	var martin:Character;
 	var camFollow:FlxPoint;
 	var camFollowPos:FlxObject;
 	var updateCamera:Bool = false;
@@ -22,15 +23,20 @@ class GameOverSubstate extends MusicBeatSubstate
 	var lePlayState:PlayState;
 
 	public static var characterName:String = 'bf';
+	public static var characterName2:String = 'victorydance';
 	public static var deathSoundName:String = 'fnf_loss_sfx';
 	public static var loopSoundName:String = 'gameOver';
 	public static var endSoundName:String = 'gameOverEnd';
+	public static var loopSoundName2:String = 'gameOverLightOn';
+	public static var endSoundName2:String = 'gameOverLightOnEnd';
 
 	public static function resetVariables() {
 		characterName = 'bf';
 		deathSoundName = 'fnf_loss_sfx';
 		loopSoundName = 'gameOver';
 		endSoundName = 'gameOverEnd';
+		loopSoundName2 = 'gameOverLightOn';
+		endSoundName2 = 'gameOverLightOnEnd';
 	}
 
 	public function new(x:Float, y:Float, camX:Float, camY:Float, state:PlayState)
@@ -43,6 +49,8 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		bf = new Boyfriend(x, y, characterName);
 		add(bf);
+
+		martin = new Character(x, y, characterName2);
 
 		camFollow = new FlxPoint(bf.getGraphicMidpoint().x, bf.getGraphicMidpoint().y);
 
@@ -104,6 +112,18 @@ class GameOverSubstate extends MusicBeatSubstate
 			{
 				coolStartDeath();
 				bf.startedDeath = true;
+			}
+		}
+
+		if(PlayState.SONG.song.toLowerCase() == "light-on")
+		{
+			if (bf.animation.curAnim.name == 'deathLoop')
+			{
+				martin.playAnim('victorydance');
+				martin.x = -100;
+		        martin.y = 250;
+				martin.scale.set(3.0, 3.0);
+		        add(martin);
 			}
 		}
 

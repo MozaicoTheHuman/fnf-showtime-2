@@ -1,0 +1,67 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				387,
+				93
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "el baile del troleo",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				215,
+				93
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "el baile del troleo",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				215,
+				93
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "el baile del troleo",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-50,
+				72
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "el baile del troleo"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/victorydance",
+	"position": [
+		100,
+		0
+	],
+	"healthicon": "2022",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		255,
+		255
+	],
+	"camera_position": [
+		370,
+		-450
+	],
+	"sing_duration": 6.1,
+	"scale": 1.5
+}
