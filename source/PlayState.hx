@@ -412,7 +412,7 @@ class PlayState extends MusicBeatState
 						ivette.antialiasing = ClientPrefs.globalAntialiasing;
 						add(ivette);
 					case 'Finale':
-						maavoBopper = new BGSprite('show/MaavoWait', 5, 60, 1, 1, ['MaavoWait']);
+						maavoBopper = new BGSprite('show/MaavoFINALE', -600, 60, 1, 1, ['FinaleIDLE']);
 						maavoBopper.updateHitbox();
 						maavoBopper.antialiasing = ClientPrefs.globalAntialiasing;
 						add(maavoBopper);

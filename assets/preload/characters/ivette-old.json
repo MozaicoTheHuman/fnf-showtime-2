@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-398,
+				-60
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "IvetteIdle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-363,
+				-34
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singUP",
+			"indices": [],
+			"name": "IvetteUp"
+		},
+		{
+			"offsets": [
+				-361,
+				-59
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "IvetteDown"
+		},
+		{
+			"offsets": [
+				-376,
+				-36
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "IvetteLeft"
+		},
+		{
+			"offsets": [
+				-387,
+				-37
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "IvetteRight"
+		},
+		{
+			"offsets": [
+				-391,
+				-51
+			],
+			"loop": false,
+			"fps": 28,
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "IvetteDerecha"
+		},
+		{
+			"offsets": [
+				-160,
+				-79
+			],
+			"loop": false,
+			"fps": 29,
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "IvetteAbajo"
+		},
+		{
+			"offsets": [
+				-360,
+				-55
+			],
+			"loop": false,
+			"fps": 29,
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"name": "IvetteIzquierda"
+		},
+		{
+			"offsets": [
+				-287,
+				22
+			],
+			"loop": false,
+			"fps": 29,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "IvetteArriba"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Ivette",
+	"position": [
+		-490,
+		35
+	],
+	"healthicon": "ivette",
+	"flip_x": false,
+	"healthbar_colors": [
+		131,
+		89,
+		218
+	],
+	"camera_position": [
+		150,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

@@ -2,92 +2,92 @@
 <TextureAtlas imagePath="MaritzaGameOver.png">
 	<!-- Created with Adobe Animate version 18.0.2.126 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Maavo IDLE0000" x="10" y="10" width="449" height="843" frameX="0" frameY="-6" frameWidth="449" frameHeight="849"/>
-	<SubTexture name="Maavo IDLE0001" x="10" y="10" width="449" height="843" frameX="0" frameY="-6" frameWidth="449" frameHeight="849"/>
-	<SubTexture name="Maavo IDLE0002" x="469" y="10" width="442" height="845" frameX="-4" frameY="-4" frameWidth="449" frameHeight="849"/>
-	<SubTexture name="Maavo IDLE0003" x="469" y="10" width="442" height="845" frameX="-4" frameY="-4" frameWidth="449" frameHeight="849"/>
-	<SubTexture name="Maavo IDLE0004" x="921" y="10" width="439" height="849" frameX="-5" frameY="0" frameWidth="449" frameHeight="849"/>
-	<SubTexture name="Maavo IDLE0005" x="921" y="10" width="439" height="849" frameX="-5" frameY="0" frameWidth="449" frameHeight="849"/>
-	<SubTexture name="Maavo IDLE0006" x="1370" y="10" width="439" height="849" frameX="-5" frameY="0" frameWidth="449" frameHeight="849"/>
-	<SubTexture name="Maavo IDLE0007" x="1370" y="10" width="439" height="849" frameX="-5" frameY="0" frameWidth="449" frameHeight="849"/>
-	<SubTexture name="Maavo IDLE0008" x="1370" y="10" width="439" height="849" frameX="-5" frameY="0" frameWidth="449" frameHeight="849"/>
-	<SubTexture name="Maavo IDLE0009" x="1370" y="10" width="439" height="849" frameX="-5" frameY="0" frameWidth="449" frameHeight="849"/>
-	<SubTexture name="Maavo IDLE0010" x="1370" y="10" width="439" height="849" frameX="-5" frameY="0" frameWidth="449" frameHeight="849"/>
-	<SubTexture name="Maavo IDLE0011" x="1370" y="10" width="439" height="849" frameX="-5" frameY="0" frameWidth="449" frameHeight="849"/>
-	<SubTexture name="Maavo IDLE0012" x="1370" y="10" width="439" height="849" frameX="-5" frameY="0" frameWidth="449" frameHeight="849"/>
-	<SubTexture name="Maavo IDLE0013" x="1370" y="10" width="439" height="849" frameX="-5" frameY="0" frameWidth="449" frameHeight="849"/>
-	<SubTexture name="Maavo IDLE0014" x="1370" y="10" width="439" height="849" frameX="-5" frameY="0" frameWidth="449" frameHeight="849"/>
-	<SubTexture name="Mari Retry0000" x="1819" y="10" width="1302" height="983" frameX="0" frameY="0" frameWidth="1302" frameHeight="1072"/>
-	<SubTexture name="Mari Retry0001" x="3131" y="10" width="1302" height="1042" frameX="0" frameY="0" frameWidth="1302" frameHeight="1072"/>
-	<SubTexture name="Mari Retry0002" x="4443" y="10" width="1302" height="1072"/>
-	<SubTexture name="Mari Retry0003" x="5755" y="10" width="1302" height="1042" frameX="0" frameY="0" frameWidth="1302" frameHeight="1072"/>
-	<SubTexture name="Mari Retry0004" x="10" y="1092" width="1302" height="1042" frameX="0" frameY="0" frameWidth="1302" frameHeight="1072"/>
-	<SubTexture name="Mari Retry0005" x="1322" y="1092" width="1302" height="1042" frameX="0" frameY="0" frameWidth="1302" frameHeight="1072"/>
-	<SubTexture name="Mari Retry0006" x="2634" y="1092" width="1302" height="1042" frameX="0" frameY="0" frameWidth="1302" frameHeight="1072"/>
-	<SubTexture name="Mari ded20000" x="3946" y="1092" width="1302" height="969"/>
+	<SubTexture name="Maavo IDLE0000" x="10" y="10" width="449" height="849" pivotX="5" pivotY="0"/>
+	<SubTexture name="Maavo IDLE0001" x="10" y="10" width="449" height="849"/>
+	<SubTexture name="Maavo IDLE0002" x="469" y="10" width="449" height="849"/>
+	<SubTexture name="Maavo IDLE0003" x="469" y="10" width="449" height="849"/>
+	<SubTexture name="Maavo IDLE0004" x="928" y="10" width="449" height="849"/>
+	<SubTexture name="Maavo IDLE0005" x="928" y="10" width="449" height="849"/>
+	<SubTexture name="Maavo IDLE0006" x="1387" y="10" width="449" height="849"/>
+	<SubTexture name="Maavo IDLE0007" x="1387" y="10" width="449" height="849"/>
+	<SubTexture name="Maavo IDLE0008" x="1387" y="10" width="449" height="849"/>
+	<SubTexture name="Maavo IDLE0009" x="1387" y="10" width="449" height="849"/>
+	<SubTexture name="Maavo IDLE0010" x="1387" y="10" width="449" height="849"/>
+	<SubTexture name="Maavo IDLE0011" x="1387" y="10" width="449" height="849"/>
+	<SubTexture name="Maavo IDLE0012" x="1387" y="10" width="449" height="849"/>
+	<SubTexture name="Maavo IDLE0013" x="1387" y="10" width="449" height="849"/>
+	<SubTexture name="Maavo IDLE0014" x="1387" y="10" width="449" height="849"/>
+	<SubTexture name="Mari Retry0000" x="1846" y="10" width="1302" height="1072" pivotX="150" pivotY="207.05"/>
+	<SubTexture name="Mari Retry0001" x="3158" y="10" width="1302" height="1072"/>
+	<SubTexture name="Mari Retry0002" x="4470" y="10" width="1302" height="1072"/>
+	<SubTexture name="Mari Retry0003" x="5782" y="10" width="1302" height="1072"/>
+	<SubTexture name="Mari Retry0004" x="10" y="1092" width="1302" height="1072"/>
+	<SubTexture name="Mari Retry0005" x="1322" y="1092" width="1302" height="1072"/>
+	<SubTexture name="Mari Retry0006" x="2634" y="1092" width="1302" height="1072"/>
+	<SubTexture name="Mari ded20000" x="3946" y="1092" width="1302" height="969" pivotX="150" pivotY="207.05"/>
 	<SubTexture name="Mari ded20001" x="3946" y="1092" width="1302" height="969"/>
 	<SubTexture name="Mari ded20002" x="5258" y="1092" width="1302" height="969"/>
 	<SubTexture name="Mari ded20003" x="5258" y="1092" width="1302" height="969"/>
 	<SubTexture name="Mari ded20004" x="6570" y="1092" width="1302" height="969"/>
 	<SubTexture name="Mari ded20005" x="6570" y="1092" width="1302" height="969"/>
-	<SubTexture name="Maritza GAMEOVER0000" x="10" y="2144" width="1474" height="794" frameX="0" frameY="-66" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0001" x="10" y="2144" width="1474" height="794" frameX="0" frameY="-66" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0002" x="1494" y="2144" width="1474" height="794" frameX="0" frameY="-66" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0003" x="1494" y="2144" width="1474" height="794" frameX="0" frameY="-66" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0004" x="2978" y="2144" width="1474" height="794" frameX="0" frameY="-66" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0005" x="2978" y="2144" width="1474" height="794" frameX="0" frameY="-66" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0006" x="4462" y="2144" width="1283" height="836" frameX="0" frameY="-66" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0007" x="5755" y="2144" width="1283" height="836" frameX="0" frameY="-66" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0008" x="10" y="2990" width="1271" height="877" frameX="0" frameY="-48" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0009" x="1291" y="2990" width="1271" height="877" frameX="0" frameY="-48" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0010" x="2572" y="2990" width="1272" height="863" frameX="0" frameY="-54" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0011" x="3854" y="2990" width="1272" height="863" frameX="0" frameY="-54" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0012" x="5136" y="2990" width="1273" height="857" frameX="0" frameY="-56" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0013" x="6419" y="2990" width="1273" height="857" frameX="0" frameY="-56" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0014" x="6419" y="2990" width="1273" height="857" frameX="0" frameY="-56" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0015" x="6419" y="2990" width="1273" height="857" frameX="0" frameY="-56" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0016" x="6419" y="2990" width="1273" height="857" frameX="0" frameY="-56" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0017" x="6419" y="2990" width="1273" height="857" frameX="0" frameY="-56" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0018" x="6419" y="2990" width="1273" height="857" frameX="0" frameY="-56" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0019" x="6419" y="2990" width="1273" height="857" frameX="0" frameY="-56" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0020" x="6419" y="2990" width="1273" height="857" frameX="0" frameY="-56" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0021" x="6419" y="2990" width="1273" height="857" frameX="0" frameY="-56" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0022" x="6419" y="2990" width="1273" height="857" frameX="0" frameY="-56" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0023" x="6419" y="2990" width="1273" height="857" frameX="0" frameY="-56" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0024" x="6419" y="2990" width="1273" height="857" frameX="0" frameY="-56" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0025" x="6419" y="2990" width="1273" height="857" frameX="0" frameY="-56" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0026" x="6419" y="2990" width="1273" height="857" frameX="0" frameY="-56" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0027" x="10" y="3877" width="1272" height="845" frameX="0" frameY="-61" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0028" x="10" y="3877" width="1272" height="845" frameX="0" frameY="-61" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0029" x="1292" y="3877" width="1281" height="884" frameX="0" frameY="-48" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0030" x="1292" y="3877" width="1281" height="884" frameX="0" frameY="-48" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0031" x="2583" y="3877" width="1291" height="913" frameX="0" frameY="-36" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0032" x="2583" y="3877" width="1291" height="913" frameX="0" frameY="-36" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0033" x="3884" y="3877" width="1296" height="941" frameX="0" frameY="-19" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0034" x="3884" y="3877" width="1296" height="941" frameX="0" frameY="-19" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0035" x="5190" y="3877" width="1299" height="951" frameX="0" frameY="-13" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0036" x="5190" y="3877" width="1299" height="951" frameX="0" frameY="-13" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0037" x="6499" y="3877" width="1300" height="962" frameX="0" frameY="-6" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0038" x="6499" y="3877" width="1300" height="962" frameX="0" frameY="-6" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0039" x="10" y="4849" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0040" x="10" y="4849" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0041" x="10" y="4849" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0042" x="10" y="4849" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0043" x="10" y="4849" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0044" x="10" y="4849" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0045" x="1322" y="4849" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0046" x="2634" y="4849" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0047" x="2634" y="4849" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0048" x="3946" y="4849" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0049" x="3946" y="4849" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0050" x="5258" y="4849" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0051" x="5258" y="4849" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0052" x="6570" y="4849" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0053" x="6570" y="4849" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0054" x="10" y="5828" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0055" x="10" y="5828" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0056" x="5258" y="4849" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0057" x="1322" y="5828" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0058" x="6570" y="4849" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
-	<SubTexture name="Maritza GAMEOVER0059" x="6570" y="4849" width="1302" height="969" frameX="0" frameY="0" frameWidth="1474" frameHeight="969"/>
+	<SubTexture name="Maritza GAMEOVER0000" x="10" y="2174" width="1474" height="969" pivotX="150" pivotY="207.05"/>
+	<SubTexture name="Maritza GAMEOVER0001" x="10" y="2174" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0002" x="1494" y="2174" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0003" x="1494" y="2174" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0004" x="2978" y="2174" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0005" x="2978" y="2174" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0006" x="4462" y="2174" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0007" x="5946" y="2174" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0008" x="10" y="3153" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0009" x="1494" y="3153" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0010" x="2978" y="3153" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0011" x="4462" y="3153" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0012" x="5946" y="3153" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0013" x="10" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0014" x="10" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0015" x="10" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0016" x="10" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0017" x="10" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0018" x="10" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0019" x="10" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0020" x="10" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0021" x="10" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0022" x="10" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0023" x="10" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0024" x="10" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0025" x="10" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0026" x="10" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0027" x="1494" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0028" x="1494" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0029" x="2978" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0030" x="2978" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0031" x="4462" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0032" x="4462" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0033" x="5946" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0034" x="5946" y="4132" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0035" x="10" y="5111" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0036" x="10" y="5111" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0037" x="1494" y="5111" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0038" x="1494" y="5111" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0039" x="2978" y="5111" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0040" x="2978" y="5111" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0041" x="2978" y="5111" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0042" x="2978" y="5111" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0043" x="2978" y="5111" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0044" x="2978" y="5111" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0045" x="4462" y="5111" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0046" x="5946" y="5111" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0047" x="5946" y="5111" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0048" x="10" y="6090" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0049" x="10" y="6090" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0050" x="1494" y="6090" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0051" x="1494" y="6090" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0052" x="2978" y="6090" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0053" x="2978" y="6090" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0054" x="4462" y="6090" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0055" x="4462" y="6090" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0056" x="1494" y="6090" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0057" x="5946" y="6090" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0058" x="2978" y="6090" width="1474" height="969"/>
+	<SubTexture name="Maritza GAMEOVER0059" x="2978" y="6090" width="1474" height="969"/>
 </TextureAtlas>

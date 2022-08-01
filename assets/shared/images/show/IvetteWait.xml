@@ -2,60 +2,60 @@
 <TextureAtlas imagePath="IvetteWait.png">
 	<!-- Created with Adobe Animate version 18.0.2.126 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="IvetteWait0000" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0001" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0002" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0003" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0004" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0005" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0006" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0007" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0008" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0009" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0010" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0011" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0012" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0013" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0014" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0015" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0016" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0017" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0018" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0019" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0020" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0021" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0022" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0023" x="15" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0024" x="290" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0025" x="290" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0026" x="290" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0027" x="290" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0028" x="290" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0029" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0030" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0031" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0032" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0033" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0034" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0035" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0036" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0037" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0038" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0039" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0040" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0041" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0042" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0043" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0044" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0045" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0046" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0047" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0048" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0049" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0050" x="565" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0051" x="290" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0052" x="290" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0053" x="290" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0054" x="290" y="15" width="274" height="660"/>
-	<SubTexture name="IvetteWait0055" x="290" y="15" width="274" height="660"/>
+	<SubTexture name="IvetteWait instance 10000" x="10" y="10" width="275" height="661" pivotX="-289" pivotY="455"/>
+	<SubTexture name="IvetteWait instance 10001" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10002" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10003" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10004" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10005" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10006" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10007" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10008" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10009" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10010" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10011" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10012" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10013" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10014" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10015" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10016" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10017" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10018" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10019" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10020" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10021" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10022" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10023" x="10" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10024" x="295" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10025" x="295" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10026" x="295" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10027" x="295" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10028" x="295" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10029" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10030" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10031" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10032" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10033" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10034" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10035" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10036" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10037" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10038" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10039" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10040" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10041" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10042" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10043" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10044" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10045" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10046" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10047" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10048" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10049" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10050" x="580" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10051" x="295" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10052" x="295" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10053" x="295" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10054" x="295" y="10" width="275" height="661"/>
+	<SubTexture name="IvetteWait instance 10055" x="295" y="10" width="275" height="661"/>
 </TextureAtlas>

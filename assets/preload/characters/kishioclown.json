@@ -112,46 +112,13 @@
 		},
 		{
 			"offsets": [
-				-117,
-				1230
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "intro3",
-			"indices": [],
-			"name": "ronaldINTRO3"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-350,
-				-332
-			],
-			"anim": "spark",
-			"fps": 24,
-			"name": "hyperspark",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				380,
-				0
-			],
-			"anim": "hyperportrait",
-			"fps": 60,
-			"name": "hyperportrait",
-			"indices": []
-		},
-		{
-			"offsets": [
 				-94,
 				-374
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 20,
 			"anim": "singLEFT",
-			"loop": false,
+			"indices": [],
 			"name": "ronaldLEFT"
 		},
 		{
@@ -159,18 +126,29 @@
 				-137,
 				53
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 20,
 			"anim": "singUP",
-			"loop": false,
+			"indices": [],
 			"name": "ronaldUP"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-117,
+				1230
+			],
+			"anim": "intro3",
+			"fps": 60,
+			"name": "ronaldINTRO3",
+			"indices": []
 		}
 	],
 	"no_antialiasing": true,
 	"image": "characters/clown",
 	"position": [
-		300,
-		215
+		220,
+		-105
 	],
 	"healthicon": "nothing",
 	"flip_x": false,
@@ -180,8 +158,8 @@
 		0
 	],
 	"camera_position": [
-		-1100,
-		-490
+		-460,
+		300
 	],
 	"sing_duration": 6.1,
 	"scale": 2.85
