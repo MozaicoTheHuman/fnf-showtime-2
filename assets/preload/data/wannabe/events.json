@@ -1,7 +1,7 @@
 {
 	"song": {
 		"speed": 2.6,
-		"stage": "maavoshow",
+		"stage": "show",
 		"player1": "bf",
 		"player2": "maavo",
 		"player3": "gf",
@@ -326,25 +326,11 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						59496.4285714286,
+						59678.5714285715,
 						-1,
 						"Play Animation",
 						"showtime",
 						"0"
-					],
-					[
-						59504.4642857143,
-						-1,
-						"Camera Follow Pos",
-						"485",
-						"350"
-					],
-					[
-						59500,
-						-1,
-						"Set Camera Zoom",
-						"0.8",
-						""
 					]
 				],
 				"bpm": 0,
@@ -357,24 +343,10 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						60406.25,
-						-1,
-						"Camera Follow Pos",
-						"485",
-						"385"
-					],
-					[
 						61705.3571428572,
 						-1,
 						"Camera Follow Pos",
 						"",
-						""
-					],
-					[
-						60405.2455357143,
-						-1,
-						"Set Camera Zoom",
-						"0.9",
 						""
 					],
 					[
@@ -19800,12 +19772,48 @@
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
 			}
 		],
 		"splashSkin": null,
 		"validScore": false,
 		"bpm": 140,
-		"arrowSkin": null,
+		"arrowSkin": "",
 		"needsVoices": true,
 		"song": "Wannabe"
 	}
