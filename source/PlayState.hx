@@ -281,10 +281,7 @@ class PlayState extends MusicBeatState
 		if (SONG == null)
 			SONG = Song.loadFromJson('tutorial');
 
-		if (SONG.song == 'mugen')
-			isMugen = true;
-		else
-			isMugen = false;
+		isMugen = SONG.song == 'mugen';
 
 		Conductor.mapBPMChanges(SONG);
 		Conductor.changeBPM(SONG.bpm);
@@ -799,7 +796,7 @@ class PlayState extends MusicBeatState
 		}
 		RecalculateRating();
 
-		//PRECACHING MISS SOUNDS BECAUSE I THINK THEY CAN LAG PEOPLE AND FUCK THEM UP IDK HOW HAXE WORKS
+		// PRECACHING MISS SOUNDS BECAUSE I THINK THEY CAN LAG PEOPLE AND FUCK THEM UP IDK HOW HAXE WORKS
 		CoolUtil.precacheSound('missnote1');
 		CoolUtil.precacheSound('missnote2');
 		CoolUtil.precacheSound('missnote3');
@@ -852,8 +849,8 @@ class PlayState extends MusicBeatState
 
 	public function reloadHealthBarColors()
 	{
-		healthBarBG.color = FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]);
-		healthBar.createFilledBar(0xFF737373, FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
+		healthBarBG.color = FlxColor.BLACK;
+		healthBar.createFilledBar(CoolUtil.dominantColor(iconP2), CoolUtil.dominantColor(iconP1));
 		healthBar.updateBar();
 	}
 
@@ -1659,9 +1656,12 @@ class PlayState extends MusicBeatState
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
 		if (!isMugen)
 		{
-			iconP1.setGraphicSize(Std.int(FlxMath.lerp(150, iconP1.width, CoolUtil.boundTo(1 - (elapsed * 30), 0, 1))));
-			iconP2.setGraphicSize(Std.int(FlxMath.lerp(150, iconP2.width, CoolUtil.boundTo(1 - (elapsed * 30), 0, 1))));
+			var mult:Float = FlxMath.lerp(1, iconP1.scale.x, CoolUtil.boundTo(1 - (elapsed * 9), 0, 1));
+			iconP1.scale.set(mult, mult);
 			iconP1.updateHitbox();
+
+			var mult:Float = FlxMath.lerp(1, iconP2.scale.x, CoolUtil.boundTo(1 - (elapsed * 9), 0, 1));
+			iconP2.scale.set(mult, mult);
 			iconP2.updateHitbox();
 		}
 
@@ -1897,20 +1897,20 @@ class PlayState extends MusicBeatState
 					}
 
 					switch (Math.abs(daNote.noteData))
-						{
-							case 0:
-								camX = -camMvmntSpd;
-								camY = 0;
-							case 1:
-								camY = camMvmntSpd;
-								camX = 0;
-							case 2:
-								camY = -camMvmntSpd;
-								camX = 0;
-							case 3:
-								camX = camMvmntSpd;
-								camY = 0;
-						}
+					{
+						case 0:
+							camX = -camMvmntSpd;
+							camY = 0;
+						case 1:
+							camY = camMvmntSpd;
+							camX = 0;
+						case 2:
+							camY = -camMvmntSpd;
+							camX = 0;
+						case 3:
+							camX = camMvmntSpd;
+							camY = 0;
+					}
 
 					if (!daNote.noAnimation)
 					{
@@ -2930,6 +2930,15 @@ class PlayState extends MusicBeatState
 
 	private function keyShit():Void
 	{
+		if (FlxG.keys.justPressed.SPACE)
+		{
+			if (boyfriend.animOffsets.exists('hey'))
+			{
+				boyfriend.playAnim('hey', true);
+				boyfriend.specialAnim = true;
+				boyfriend.heyTimer = 0.6;
+			}
+		}
 		// HOLDING
 		var up = controls.NOTE_UP;
 		var right = controls.NOTE_RIGHT;
@@ -3089,7 +3098,8 @@ class PlayState extends MusicBeatState
 		totalPlayed++;
 		RecalculateRating();
 
-		if(!boyfriend.stunned){
+		if (!boyfriend.stunned)
+		{
 			var animToPlay:String = '';
 			switch (Math.abs(daNote.noteData) % 4)
 			{
@@ -3112,11 +3122,11 @@ class PlayState extends MusicBeatState
 				var daAlt = '';
 				if (daNote.noteType == 'Alt Animation')
 					daAlt = '-alt';
-			
+
 				boyfriend.playAnim(animToPlay + daAlt, true);
 			}
 		}
-		
+
 		callOnLuas('noteMiss', [
 			notes.members.indexOf(daNote),
 			daNote.noteData,
@@ -3197,19 +3207,19 @@ class PlayState extends MusicBeatState
 							boyfriend.playAnim('hurt', true);
 							boyfriend.specialAnim = true;
 						}
-					
+
 					case 'stun note': // Stun note
-					{
-						triggerEventNote('Screen Shake', '0.2,0.01', '');
-						FlxG.sound.play(Paths.sound('stunsound'), 1);
-						boyfriend.playAnim('stun', true);
-						boyfriend.specialAnim = true;
-						boyfriend.stunned = true;
-						new FlxTimer().start(1.5, function(tmr:FlxTimer)
 						{
-							boyfriend.stunned = false;
-						});
-					}
+							triggerEventNote('Screen Shake', '0.2,0.01', '');
+							FlxG.sound.play(Paths.sound('stunsound'), 1);
+							boyfriend.playAnim('stun', true);
+							boyfriend.specialAnim = true;
+							boyfriend.stunned = true;
+							new FlxTimer().start(1.5, function(tmr:FlxTimer)
+							{
+								boyfriend.stunned = false;
+							});
+						}
 				}
 
 				note.wasGoodHit = true;
@@ -3232,20 +3242,20 @@ class PlayState extends MusicBeatState
 			health += note.hitHealth;
 
 			switch (Math.abs(note.noteData))
-				{
-					case 0:
-						bfcamX = -camMvmntSpd;
-						bfcamY = 0;
-					case 1:
-						bfcamY = camMvmntSpd;
-						bfcamX = 0;
-					case 2:
-						bfcamY = -camMvmntSpd;
-						bfcamX = 0;
-					case 3:
-						bfcamX = camMvmntSpd;
-						bfcamY = 0;
-				}
+			{
+				case 0:
+					bfcamX = -camMvmntSpd;
+					bfcamY = 0;
+				case 1:
+					bfcamY = camMvmntSpd;
+					bfcamX = 0;
+				case 2:
+					bfcamY = -camMvmntSpd;
+					bfcamX = 0;
+				case 3:
+					bfcamX = camMvmntSpd;
+					bfcamY = 0;
+			}
 
 			if (!note.noAnimation)
 			{
@@ -3466,8 +3476,9 @@ class PlayState extends MusicBeatState
 		}
 		if (!isMugen)
 		{
-			iconP1.setGraphicSize(Std.int(iconP1.width + 30));
-			iconP2.setGraphicSize(Std.int(iconP2.width + 30));
+			iconP1.scale.set(1.2, 1.2);
+			iconP2.scale.set(1.2, 1.2);
+
 			iconP1.updateHitbox();
 			iconP2.updateHitbox();
 		}

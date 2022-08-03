@@ -17,21 +17,20 @@ using StringTools;
 class CoolUtil
 {
 	// [Difficulty name, Chart file suffix]
-	public static var difficultyStuff:Array<Dynamic> = [
-		['Easy', '-easy'],
-		['Normal', ''],
-		['Hard', '-hard']
-	];
+	public static var difficultyStuff:Array<Dynamic> = [['Easy', '-easy'], ['Normal', ''], ['Hard', '-hard']];
 
 	public static function difficultyString():String
 	{
 		return difficultyStuff[PlayState.storyDifficulty][0].toUpperCase();
 	}
 
-	public static function boundTo(value:Float, min:Float, max:Float):Float {
+	public static function boundTo(value:Float, min:Float, max:Float):Float
+	{
 		var newValue:Float = value;
-		if(newValue < min) newValue = min;
-		else if(newValue > max) newValue = max;
+		if (newValue < min)
+			newValue = min;
+		else if (newValue > max)
+			newValue = max;
 		return newValue;
 	}
 
@@ -39,9 +38,11 @@ class CoolUtil
 	{
 		var daList:Array<String> = [];
 		#if sys
-		if(FileSystem.exists(path)) daList = File.getContent(path).trim().split('\n');
+		if (FileSystem.exists(path))
+			daList = File.getContent(path).trim().split('\n');
 		#else
-		if(Assets.exists(path)) daList = Assets.getText(path).trim().split('\n');
+		if (Assets.exists(path))
+			daList = Assets.getText(path).trim().split('\n');
 		#end
 
 		for (i in 0...daList.length)
@@ -50,6 +51,41 @@ class CoolUtil
 		}
 
 		return daList;
+	}
+
+	public static function dominantColor(sprite:flixel.FlxSprite):Int
+	{
+		var countByColor:Map<Int, Int> = [];
+		for (col in 0...sprite.frameWidth)
+		{
+			for (row in 0...sprite.frameHeight)
+			{
+				var colorOfThisPixel:Int = sprite.pixels.getPixel32(col, row);
+				if (colorOfThisPixel != 0)
+				{
+					if (countByColor.exists(colorOfThisPixel))
+					{
+						countByColor[colorOfThisPixel] = countByColor[colorOfThisPixel] + 1;
+					}
+					else if (countByColor[colorOfThisPixel] != 13520687 - (2 * 13520687))
+					{
+						countByColor[colorOfThisPixel] = 1;
+					}
+				}
+			}
+		}
+		var maxCount = 0;
+		var maxKey:Int = 0; // after the loop this will store the max color
+		countByColor[flixel.util.FlxColor.BLACK] = 0;
+		for (key in countByColor.keys())
+		{
+			if (countByColor[key] >= maxCount)
+			{
+				maxCount = countByColor[key];
+				maxKey = key;
+			}
+		}
+		return maxKey;
 	}
 
 	public static function numberArray(max:Int, ?min = 0):Array<Int>
@@ -62,21 +98,25 @@ class CoolUtil
 		return dumbArray;
 	}
 
-	//uhhhh does this even work at all? i'm starting to doubt
-	public static function precacheSound(sound:String, ?library:String = null):Void {
+	// uhhhh does this even work at all? i'm starting to doubt
+	public static function precacheSound(sound:String, ?library:String = null):Void
+	{
 		precacheSoundFile(Paths.sound(sound, library));
 	}
 
-	public static function precacheMusic(sound:String, ?library:String = null):Void {
+	public static function precacheMusic(sound:String, ?library:String = null):Void
+	{
 		precacheSoundFile(Paths.music(sound, library));
 	}
 
-	private static function precacheSoundFile(file:Dynamic):Void {
+	private static function precacheSoundFile(file:Dynamic):Void
+	{
 		if (Assets.exists(file, SOUND) || Assets.exists(file, MUSIC))
 			Assets.getSound(file, true);
 	}
 
-	public static function browserLoad(site:String) {
+	public static function browserLoad(site:String)
+	{
 		#if linux
 		Sys.command('/usr/bin/xdg-open', [site, "&"]);
 		#else
