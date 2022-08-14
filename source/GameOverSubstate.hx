@@ -17,6 +17,7 @@ class GameOverSubstate extends MusicBeatSubstate
 	var camFollow:FlxPoint;
 	var camFollowPos:FlxObject;
 	var updateCamera:Bool = false;
+	var martinCam:Float = 0;
 
 	var stageSuffix:String = "";
 
@@ -44,6 +45,8 @@ class GameOverSubstate extends MusicBeatSubstate
 		lePlayState = state;
 		state.setOnLuas('inGameOver', true);
 		super();
+		
+		martinCam = x;
 
 		Conductor.songPosition = 0;
 
@@ -115,16 +118,14 @@ class GameOverSubstate extends MusicBeatSubstate
 			}
 		}
 
-		if(PlayState.SONG.song.toLowerCase() == "light-on")
+		if (bf.animation.curAnim.name == 'deathLoop' && PlayState.SONG.song.toLowerCase() == "light-on")
 		{
-			if (bf.animation.curAnim.name == 'deathLoop')
-			{
-				martin.playAnim('victorydance');
-				martin.x = -100;
-		        martin.y = 250;
-				martin.scale.set(3.0, 3.0);
-		        add(martin);
-			}
+		    martin.playAnim('victorydance');
+			martin.x = -150;
+		    martin.y = 400;
+			martin.scale.set(3.0, 3.0);
+		    add(martin);
+			camFollowPos.x = martinCam - 100;
 		}
 
 		if (FlxG.sound.music.playing)
