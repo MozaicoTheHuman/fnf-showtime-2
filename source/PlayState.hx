@@ -161,6 +161,9 @@ class PlayState extends MusicBeatState
 	public var health:Float = 1;
 	public var combo:Int = 0;
 
+
+	public var barra:Float = 0;
+
 	private var healthBarBG:FlxSprite;
 
 	public var healthBar:FlxBar;
@@ -668,6 +671,8 @@ class PlayState extends MusicBeatState
 		}
 		add(camFollowPos);
 
+		
+
 		FlxG.camera.follow(camFollowPos, LOCKON, 1);
 		// FlxG.camera.setScrollBounds(0, FlxG.width, 0, FlxG.height);
 		FlxG.camera.zoom = defaultCamZoom;
@@ -681,7 +686,16 @@ class PlayState extends MusicBeatState
 		healthBarBG.scrollFactor.set();
 		healthBarBG.visible = !ClientPrefs.hideHud;
 
-		healthBar = new FlxBar(healthBarBG.x + 178, 0, RIGHT_TO_LEFT, 575, 26, this, 'health', 0, 2);
+		if (isMugen)
+		{
+				barra = Std.int(healthBarBG.width - 8);
+		}
+		else
+		{
+				barra = 575;
+		}
+
+		healthBar = new FlxBar(healthBarBG.x + 178, 0, RIGHT_TO_LEFT, Std.int(barra), 26, this, 'health', 0, 2);
 		healthBar.scrollFactor.set();
 		healthBar.visible = !ClientPrefs.hideHud;
 
@@ -849,9 +863,15 @@ class PlayState extends MusicBeatState
 
 	public function reloadHealthBarColors()
 	{
-		healthBarBG.color = FlxColor.BLACK;
-		healthBar.createFilledBar(CoolUtil.dominantColor(iconP2), CoolUtil.dominantColor(iconP1));
-		healthBar.updateBar();
+		if (isMugen){
+			healthBar.createImageBar(Paths.image(hudFolder + 'redbar'),Paths.image(hudFolder + 'yellowbar'));
+			healthBar.updateBar();
+		}else{
+			healthBarBG.color = FlxColor.BLACK;
+			healthBar.createFilledBar(CoolUtil.dominantColor(iconP2), CoolUtil.dominantColor(iconP1));
+			healthBar.updateBar();
+		}
+		
 	}
 
 	public function addCharacterToList(newCharacter:String, type:Int)
@@ -2608,7 +2628,7 @@ class PlayState extends MusicBeatState
 					{
 						CustomFadeTransition.nextCamera = null;
 					}
-					MusicBeatState.switchState(new StoryMenuState());
+					MusicBeatState.switchState(new MainMenuState());
 
 					// if ()
 					if (!usedPractice)
