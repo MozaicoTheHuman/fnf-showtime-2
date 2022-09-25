@@ -33,12 +33,14 @@ class FreeplayState extends MusicBeatState
 	var lerpRating:Float = 0;
 	var intendedScore:Int = 0;
 	var intendedRating:Float = 0;
+	var increasedcamera: Float = 0;
 
 	private var grpSongs:FlxTypedGroup<FlxSprite>;
 	private var curPlaying:Bool = false;
 
 	private var iconArray:Array<HealthIcon> = [];
 
+	var songIsSelected:Bool;
 	var bg:FlxSprite;
 	var griddiffs:FlxSprite;
 	var gridcenter:FlxSprite;
@@ -46,9 +48,11 @@ class FreeplayState extends MusicBeatState
 	var album:FlxSprite;
 	var star:FlxSprite;
 	var songsBG:FlxSprite;
+	var selectedBG:FlxSprite;
 	var diffText:FlxSprite;
 	var arrLeft:FlxSprite;
 	var arrRight:FlxSprite;
+	var songText:FlxSprite;
 
 	var waveA:FlxBackdrop;
 	var waveB:FlxBackdrop;
@@ -159,6 +163,11 @@ class FreeplayState extends MusicBeatState
 		songsBG.scrollFactor.set();
 		add(songsBG);
 
+		selectedBG = new FlxSprite(455, 105).loadGraphic(Paths.image('freeplaymenu/selectedBG'));
+		selectedBG.antialiasing = ClientPrefs.globalAntialiasing;
+		selectedBG.scrollFactor.set();
+		add(selectedBG);
+
 		grpSongs = new FlxTypedGroup<FlxSprite>();
 		add(grpSongs);
 
@@ -166,18 +175,22 @@ class FreeplayState extends MusicBeatState
 		{
 			Paths.currentModDirectory = songs[i].folder;
 
-			var offset:Float = 108 - (Math.max(songs.length, 4) - 4) * 80;
+			var offset:Float = 108 - (Math.max(songs.length, 4) - 2) * 80;
 			var songSprite = songs[i].songName;
-			var songText:FlxSprite = new FlxSprite(800 - (i * 65) - offset, 80 + (i * 130)  + offset).loadGraphic(Paths.image('freeplaymenu/songs/$songSprite'));
+			//Change song name distance here
+			songText = new FlxSprite(800 - (i * 60) - offset, 80 + (i * 110)  + offset).loadGraphic(Paths.image('freeplaymenu/songs/$songSprite'));
 			songText.ID = i;
 			grpSongs.add(songText);
+			songText.color = 0x0084FF;
+
+			
 
 			var icon:HealthIcon = new HealthIcon(songs[i].songCharacter);
 			icon.sprTracker = songText;
 			iconArray.push(icon);
 			add(icon);
 
-			var scr:Float = (songs.length - 4) * 0.135;
+			var scr:Float = (songs.length - 3) * 0.135;
 			if(songs.length < 6) scr = 0;
 			songText.scrollFactor.set(scr / 2, scr);
 			songText.antialiasing = ClientPrefs.globalAntialiasing;
@@ -185,7 +198,11 @@ class FreeplayState extends MusicBeatState
 			icon.scrollFactor.set(scr / 2, scr);
 			icon.antialiasing = ClientPrefs.globalAntialiasing;
 			icon.updateHitbox();
+
 		}
+
+		
+
 		WeekData.setDirectoryFromWeek();
 		
 		FlxG.camera.follow(camFollowPos, null, 1);
@@ -259,7 +276,7 @@ class FreeplayState extends MusicBeatState
 		textBG.scrollFactor.set();
 		add(textBG);
 		#if PRELOAD_ALL
-		var leText:String = "P para abrir el skin selector/SPACE to listen the Song / RESET to Reset the Score";
+		var leText:String = "P para abrir el skin selector/SPACE to listen the Song / RESET to Reset the Score: " + songIsSelected;
 		#else
 		var leText:String = "Press RESET to Reset your Score and Accuracy.";
 		#end
@@ -301,7 +318,8 @@ class FreeplayState extends MusicBeatState
 	private static var vocals:FlxSound = null;
 
 	override function update(elapsed:Float)
-	{
+{
+
 		var upP = controls.UI_UP_P;
 		var downP = controls.UI_DOWN_P;
 		var accepted = controls.ACCEPT;
@@ -473,7 +491,6 @@ class FreeplayState extends MusicBeatState
 	function changeSelection(change:Int = 0)
 	{
 		FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
-
 		curSelected += change;
 
 		if (curSelected < 0)
@@ -487,17 +504,26 @@ class FreeplayState extends MusicBeatState
 		intendedRating = Highscore.getRating(songs[curSelected].songName, curDifficulty);
 		#end
 
+
 		grpSongs.forEach(function(spr:FlxSprite)
 			{
+				
 				spr.updateHitbox();
 	
 				if (spr.ID == curSelected)
 				{
+					
 					var add:Float = 0;
 					if(grpSongs.length > 4) {
 						add = grpSongs.length * 8;
 					}
-					camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y - add);
+					if (curSelected > 4) {
+						songIsSelected = true;
+					}
+					else{
+						songIsSelected = false;
+					}
+					camFollow.setPosition(spr.getGraphicMidpoint().x - (curSelected * 70) , spr.getGraphicMidpoint().y - add);
 					spr.centerOffsets();
 				}
 			});
