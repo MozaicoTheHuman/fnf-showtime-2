@@ -51,7 +51,7 @@ function goodNoteHit(id,d,t,s)
 		marising = true
 		cancelTimer('cantaadenuevo')
 		runTimer('cantaadenuevo',0.16)
-		objectPlayAnimation('mari', lastNote[1]);
+		objectPlayAnimation('mari', lastNote[1], true);
     end
 end
 function noteMiss(id,d,t,s)
@@ -67,7 +67,7 @@ function opponentNoteHit(id,d,t,s)
 	    focasing = true
 		cancelTimer('bailaafoca')
 		runTimer('bailaafoca',0.1)
-		objectPlayAnimation('foca', lastNote2[1]);
+		objectPlayAnimation('foca', lastNote2[1], true);
     end
 end
 
