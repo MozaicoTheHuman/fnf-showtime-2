@@ -5,6 +5,14 @@ local baila = false
 local manten = false
 function onCreate()
 
+	makeLuaSprite('flash', '', -400, 0);
+    makeGraphic('flash',2800,1800,'000000')
+	addLuaSprite('flash', true);
+	setLuaSpriteScrollFactor('flash',0,0)
+	setProperty('flash.scale.x',2)
+	setProperty('flash.scale.y',2)
+	setProperty('flash.alpha',0)
+
     makeLuaSprite('redSky','mabosolo/sky',-1300 , -750);
     addLuaSprite('redSky',false);
 	setProperty('redSky.alpha', 0)
@@ -80,6 +88,8 @@ end
 
 function onStepHit()
 	if curStep == 895 then
+		setProperty('flash.alpha',1)
+		doTweenAlpha('flTw','flash',0,1.3,'linear')
         marising = true
 		manten = true
 		ivdance = true
@@ -132,14 +142,14 @@ function opponentNoteHit(id,d,t,s)
 		marising = true
 		cancelTimer('cantaadenuevo')
 		runTimer('cantaadenuevo',0.16)
-		objectPlayAnimation('mari', lastNote[1])
+		objectPlayAnimation('mari', lastNote[1],true)
     end
 	
-	if lastNote[2] == "MainAndThirdCharacter" or lastNote[2] == "ThirdCharacter" or lastNote[2] == "AllCharacters" or lastNote[2] == "SecondAndThirdCharacter" or lastNote[2] == "All" then
+	if lastNote[2] == "MainAndThirdCharacter " or lastNote[2] == "ThirdCharacter" or lastNote[2] == "AllCharacters" or lastNote[2] == "SecondAndThirdCharacter" or lastNote[2] == "All" then
 		ivdance = true
 		cancelTimer('ivdancin')
 		runTimer('ivdancin',0.16)
-		objectPlayAnimation('iv', lastNote[1])
+		objectPlayAnimation('iv', lastNote[1],true)
     end
 end
 
