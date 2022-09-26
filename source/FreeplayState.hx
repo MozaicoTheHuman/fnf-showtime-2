@@ -36,6 +36,8 @@ class FreeplayState extends MusicBeatState
 	var increasedcamera: Float = 0;
 
 	private var grpSongs:FlxTypedGroup<FlxSprite>;
+	private var staricons:FlxTypedGroup<FlxSprite>;
+	private var songBG:FlxTypedGroup<FlxSprite>;
 	private var curPlaying:Bool = false;
 
 	private var iconArray:Array<HealthIcon> = [];
@@ -48,6 +50,7 @@ class FreeplayState extends MusicBeatState
 	var album:FlxSprite;
 	var star:FlxSprite;
 	var songsBG:FlxSprite;
+	var starIcon:FlxSprite;
 	var selectedBG:FlxSprite;
 	var diffText:FlxSprite;
 	var arrLeft:FlxSprite;
@@ -163,34 +166,54 @@ class FreeplayState extends MusicBeatState
 		songsBG.scrollFactor.set();
 		add(songsBG);
 
-		selectedBG = new FlxSprite(455, 105).loadGraphic(Paths.image('freeplaymenu/selectedBG'));
-		selectedBG.antialiasing = ClientPrefs.globalAntialiasing;
-		selectedBG.scrollFactor.set();
-		add(selectedBG);
+		songBG = new FlxTypedGroup<FlxSprite>();
+		add(songBG);
 
 		grpSongs = new FlxTypedGroup<FlxSprite>();
 		add(grpSongs);
+
+		staricons = new FlxTypedGroup<FlxSprite>();
+		add(staricons);
 
 		for (i in 0...songs.length)
 		{
 			Paths.currentModDirectory = songs[i].folder;
 
 			var offset:Float = 108 - (Math.max(songs.length, 4) - 2) * 80;
+			var offsetBG:Float = 80 - (Math.max(songs.length, 4) - 2) * 80;
 			var songSprite = songs[i].songName;
 			//Change song name distance here
+
+
+			selectedBG = new FlxSprite(590 - (i * 64) - offsetBG, 80 + (i * 110)  + offset).loadGraphic(Paths.image('freeplaymenu/selectedsong'));
+			selectedBG.antialiasing = ClientPrefs.globalAntialiasing;
+			selectedBG.scrollFactor.set();
+			selectedBG.ID = i;
+			songBG.add(selectedBG);
+			selectedBG.visible = false;
+
 			songText = new FlxSprite(800 - (i * 60) - offset, 80 + (i * 110)  + offset).loadGraphic(Paths.image('freeplaymenu/songs/$songSprite'));
 			songText.ID = i;
 			grpSongs.add(songText);
 			songText.color = 0x0084FF;
 
-			
+			starIcon = new FlxSprite(660 - (i * 60) - offset, 95 + (i * 110)  + offset);
+			starIcon.loadGraphic(Paths.image('freeplaymenu/iconstar'));
+			starIcon.antialiasing = ClientPrefs.globalAntialiasing;
+			starIcon.scrollFactor.set();
+			starIcon.ID = i;
+			staricons.add(starIcon);
 
 			var icon:HealthIcon = new HealthIcon(songs[i].songCharacter);
 			icon.sprTracker = songText;
 			iconArray.push(icon);
 			add(icon);
 
+			
+
+
 			var scr:Float = (songs.length - 3) * 0.135;
+			var scr2:Float = (songs.length - 3) * 0.132;
 			if(songs.length < 6) scr = 0;
 			songText.scrollFactor.set(scr / 2, scr);
 			songText.antialiasing = ClientPrefs.globalAntialiasing;
@@ -198,7 +221,13 @@ class FreeplayState extends MusicBeatState
 			icon.scrollFactor.set(scr / 2, scr);
 			icon.antialiasing = ClientPrefs.globalAntialiasing;
 			icon.updateHitbox();
+			starIcon.scrollFactor.set(scr / 2, scr);
+			starIcon.antialiasing = ClientPrefs.globalAntialiasing;
+			starIcon.updateHitbox();
 
+			selectedBG.scrollFactor.set(scr2 / 2, scr);
+			selectedBG.antialiasing = ClientPrefs.globalAntialiasing;
+			selectedBG.updateHitbox();
 		}
 
 		
@@ -507,12 +536,12 @@ class FreeplayState extends MusicBeatState
 
 		grpSongs.forEach(function(spr:FlxSprite)
 			{
-				
+				spr.color = 0xFFFFFF;
 				spr.updateHitbox();
 	
 				if (spr.ID == curSelected)
 				{
-					
+					spr.color = 0x000000;
 					var add:Float = 0;
 					if(grpSongs.length > 4) {
 						add = grpSongs.length * 8;
@@ -526,6 +555,23 @@ class FreeplayState extends MusicBeatState
 					camFollow.setPosition(spr.getGraphicMidpoint().x - (curSelected * 70) , spr.getGraphicMidpoint().y - add);
 					spr.centerOffsets();
 				}
+			});
+		staricons.forEach(function(spr:FlxSprite)
+			{
+				spr.color = 0xFFFFFF;
+				if (spr.ID == curSelected)
+					{
+						spr.color = 0x000000;
+					}
+			});
+		songBG.forEach(function(spr:FlxSprite)
+			{
+				spr.visible = false;
+				if (spr.ID == curSelected)
+				{
+					spr.visible = true;
+				}
+	
 			});
 
 
