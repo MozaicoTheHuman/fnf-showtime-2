@@ -65,7 +65,7 @@ class CreditsState extends MusicBeatState
 				'https://www.youtube.com/user/ElRinconAntiEstres',
 				'FFDD33'
 			],
-			['Joan Atlas', 'joan', 'Musician', 'https://twitter.com/joan_atlas', 'FFDD33'],
+			['Joan Atlas', 'juancitoatlantis', 'Musician', 'https://twitter.com/joan_atlas', 'FFDD33'],
 			['Ejsu Multimedia', 'ejsu', 'Musician', 'https://www.youtube.com/channel/UCIW8uHlBQ8ZOaxuo3PzpTig', 'FFDD33'],
 			[
 				'Vtroy Jerof',
@@ -81,9 +81,11 @@ class CreditsState extends MusicBeatState
 				'https://www.youtube.com/channel/UC6QSZk8SYmTm_VoZAPOW6NQ',
 				'FFDD33'
 			],
+			['DIA', 'dia', 'UTAU Soundbanks', 'https://www.youtube.com/channel/UCIW8uHlBQ8ZOaxuo3PzpTig', 'FFDD33'],
 			['Gabriel ML', 'gabo', 'Musician', 'https://www.youtube.com/channel/UCIW8uHlBQ8ZOaxuo3PzpTig', 'FFDD33'],
+			['Krimson', 'krimson', 'Musician', 'https://www.youtube.com/channel/UCIW8uHlBQ8ZOaxuo3PzpTig', 'FFDD33'],
 			['Sandwich', 'sandwich', 'Coder', 'https://twitter.com/randomguyhere0', 'FFDD33'],
-			['Ben Sanchez', 'ben', 'Coder', 'https://twitter.com/art_keny', 'FFDD33'],
+			['Beru', 'beru', 'Coder', 'https://twitter.com/art_keny', 'FFDD33'],
 			['YOUK', 'youkdev', 'Coder', 'https://twitter.com/YOUKdev', 'FFDD33'],
 			['GenoX', 'genox', 'Coder and Main Chromatic Scales', 'https://twitter.com/GenoXACT2', 'FFDD33'],
 			['SrPerez', 'penez', 'Coder', 'https://twitter.com/YOUKdev', 'FFDD33'],
@@ -127,6 +129,13 @@ class CreditsState extends MusicBeatState
 				'tzen',
 				'Storyboard Artist',
 				'https://twitter.com/AbZoule',
+				'FFDD33'
+			],
+			[
+				'Shey Pancake',
+				'sheicita',
+				'Cutscene Artist',
+				'https://twitter.com/shey_pancake',
 				'FFDD33'
 			],
 			['Sulayre', 'sul', 'Cutscene Animator', 'https://twitter.com/YOUKdev', 'FFDD33'],
@@ -187,6 +196,22 @@ class CreditsState extends MusicBeatState
 				'Light On chromatic scales',
 				'https://twitter.com/Koixis_',
 				'FFDD33'
+			],
+			[
+				'Andere',
+				'andere',
+				'Tokyo Charter',
+				'https://www.youtube.com/c/Andere27',
+				'FFDD33'
+			],
+			[''],
+			['SPECIAL THANKS'],
+			[
+				'CompotaHyper',
+				'compota',
+				'For streaming Showtime early development build',
+				'https://www.youtube.com/channel/UCZOBgWVv1Scf_1s5g8gkjQQ',
+				'444444'
 			],
 			[''],
 			['Psych Engine Team'],

@@ -317,7 +317,7 @@ class MainMenuState extends MusicBeatState
 
         line2 = new FlxSprite(-20,-40);
         line2.frames = Paths.getSparrowAtlas('mainmenu/difficultyred');
-		line2.animation.addByPrefix('idle', "Symbol 1 instance 1", 24, false);
+		line2.animation.addByPrefix('idle', "Symbol 1 instance 1", 60, false);
 		line2.animation.play('idle',false);
 		line2.screenCenter(X);
         
@@ -332,9 +332,9 @@ class MainMenuState extends MusicBeatState
             var offset:Float = 108 - (Math.max(difficultyOption.length, 4) - 4) * 80;
 			var diff:FlxSprite = new FlxSprite(0, (i * 140)  + offset);
 			diff.frames = Paths.getSparrowAtlas('mainmenu/option_' + difficultyOption[i]);
-			diff.animation.addByPrefix('idle', difficultyOption[i] + " basic", 24);
-			diff.animation.addByPrefix('selected', difficultyOption[i] + " white", 24);
-            diff.animation.addByPrefix('pressed', difficultyOption[i] + " selected", 24);
+			diff.animation.addByPrefix('idle', difficultyOption[i] + " basic", 60);
+			diff.animation.addByPrefix('selected', difficultyOption[i] + " white", 60);
+            diff.animation.addByPrefix('pressed', difficultyOption[i] + " selected", 60);
 			diff.animation.play('idle');
 			diff.ID = i;
 			diff.screenCenter(X);
