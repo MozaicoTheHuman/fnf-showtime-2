@@ -334,7 +334,7 @@ class MainMenuState extends MusicBeatState
 			diff.frames = Paths.getSparrowAtlas('mainmenu/option_' + difficultyOption[i]);
 			diff.animation.addByPrefix('idle', difficultyOption[i] + " basic", 60);
 			diff.animation.addByPrefix('selected', difficultyOption[i] + " white", 60);
-            diff.animation.addByPrefix('pressed', difficultyOption[i] + " selected", 60);
+            diff.animation.addByPrefix('pressed', difficultyOption[i] + " selected", 60,false);
 			diff.animation.play('idle');
 			diff.ID = i;
 			diff.screenCenter(X);
@@ -476,6 +476,8 @@ class MainMenuState extends MusicBeatState
 						ease: FlxEase.quadOut,
 						onComplete: function(twn:FlxTween)
 						{
+							FlxFlicker.flicker(char, 0.1, 0.06, true);
+							FlxFlicker.flicker(charshadow, 0.1, 0.06, true);
 							gray.kill();
 						}
 						});
