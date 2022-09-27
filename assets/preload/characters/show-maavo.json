@@ -1,14 +1,36 @@
 {
 	"animations": [
 		{
+			"loop": false,
+			"offsets": [
+				-50,
+				72
+			],
+			"anim": "danceRight",
+			"fps": 29,
+			"name": "Maavo IDLE",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				72
+			],
+			"anim": "danceLeft",
+			"fps": 29,
+			"name": "Maavo IDLE",
+			"indices": []
+		},
+		{
 			"offsets": [
 				-38,
 				42
 			],
-			"loop": false,
-			"fps": 33,
-			"anim": "singRIGHT-alt",
 			"indices": [],
+			"fps": 38,
+			"anim": "singRIGHT-alt",
+			"loop": false,
 			"name": "Maavo DERECHA"
 		},
 		{
@@ -16,10 +38,10 @@
 				279,
 				118
 			],
-			"loop": false,
-			"fps": 33,
-			"anim": "singDOWN-alt",
 			"indices": [],
+			"fps": 38,
+			"anim": "singDOWN-alt",
+			"loop": false,
 			"name": "Maavo ABAJO"
 		},
 		{
@@ -27,10 +49,10 @@
 				24,
 				274
 			],
-			"loop": false,
-			"fps": 33,
-			"anim": "singUP-alt",
 			"indices": [],
+			"fps": 38,
+			"anim": "singUP-alt",
+			"loop": false,
 			"name": "Maavo ARRIBA"
 		},
 		{
@@ -38,65 +60,32 @@
 				125,
 				166
 			],
-			"loop": false,
-			"fps": 33,
+			"indices": [],
+			"fps": 38,
 			"anim": "singLEFT-alt",
-			"indices": [],
+			"loop": false,
 			"name": "Maavo IZQUIERDA"
-		},
-		{
-			"offsets": [
-				-50,
-				72
-			],
-			"loop": false,
-			"fps": 29,
-			"anim": "danceRight",
-			"indices": [],
-			"name": "Maavo IDLE"
-		},
-		{
-			"offsets": [
-				-50,
-				72
-			],
-			"loop": false,
-			"fps": 29,
-			"anim": "danceLeft",
-			"indices": [],
-			"name": "Maavo IDLE"
 		},
 		{
 			"offsets": [
 				124,
 				-21
 			],
-			"loop": false,
-			"fps": 28,
+			"indices": [],
+			"fps": 30,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Left"
-		},
-		{
-			"offsets": [
-				4,
-				121
-			],
 			"loop": false,
-			"fps": 28,
-			"anim": "singUP",
-			"indices": [],
-			"name": "Up"
+			"name": "Left"
 		},
 		{
 			"offsets": [
 				80,
 				-133
 			],
-			"loop": false,
-			"fps": 28,
-			"anim": "singDOWN",
 			"indices": [],
+			"fps": 30,
+			"anim": "singDOWN",
+			"loop": false,
 			"name": "Down"
 		},
 		{
@@ -104,11 +93,22 @@
 				84,
 				8
 			],
-			"loop": false,
-			"fps": 28,
-			"anim": "singRIGHT",
 			"indices": [],
+			"fps": 30,
+			"anim": "singRIGHT",
+			"loop": false,
 			"name": "Right"
+		},
+		{
+			"offsets": [
+				4,
+				121
+			],
+			"indices": [],
+			"fps": 30,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Up"
 		}
 	],
 	"no_antialiasing": false,

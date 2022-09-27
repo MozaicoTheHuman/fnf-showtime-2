@@ -3,155 +3,155 @@
 		{
 			"loop": false,
 			"offsets": [
-				-3,
-				5
-			],
-			"anim": "hey",
-			"fps": 24,
-			"name": "BF HEY",
-			"indices": []
-		},
-		{
-			"offsets": [
 				112,
 				148
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "BF SHOWTIME izquierda"
+			"fps": 24,
+			"name": "BF SHOWTIME izquierda",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				93,
 				153
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "BF SHOWTIME abajo"
+			"fps": 24,
+			"name": "BF SHOWTIME abajo",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				101,
 				150
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUPmiss",
-			"indices": [],
-			"name": "BF SHOWTIME arriba"
+			"fps": 24,
+			"name": "BF SHOWTIME arriba",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				102,
 				148
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "BF SHOWTIME derecha"
-		},
-		{
-			"offsets": [
-				207,
-				231
-			],
-			"loop": false,
 			"fps": 24,
-			"anim": "firstDeath",
-			"indices": [],
-			"name": "BF SHOWTIME RIP"
+			"name": "BF SHOWTIME derecha",
+			"indices": []
 		},
 		{
-			"offsets": [
-				207,
-				231
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "deathLoop",
-			"indices": [],
-			"name": "BF SHOWTIME cocos"
-		},
-		{
-			"offsets": [
-				207,
-				231
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "deathConfirm",
-			"indices": [],
-			"name": "BF SHOWTIME coquimbo"
-		},
-		{
-			"loop": false,
 			"offsets": [
 				77,
 				150
 			],
-			"anim": "stun",
+			"loop": false,
 			"fps": 24,
-			"name": "BF SHOWTIME STUN",
-			"indices": []
+			"anim": "stun",
+			"indices": [],
+			"name": "BF SHOWTIME STUN"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				116,
 				150
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "BF SHOWTIME IDLE",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "BF SHOWTIME IDLE"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				117,
 				149
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 25,
-			"name": "BF SHOWTIME LEFT",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "BF SHOWTIME LEFT"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				105,
 				153
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 25,
-			"name": "BF SHOWTIME DOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "BF SHOWTIME DOWN"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				111,
 				150
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 25,
-			"name": "BF SHOWTIME UP",
+			"anim": "singUP",
+			"indices": [],
+			"name": "BF SHOWTIME UP"
+		},
+		{
+			"offsets": [
+				112,
+				147
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "BF SHOWTIME RIGHT"
+		},
+		{
+			"offsets": [
+				116,
+				150
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "BF SHOWTIME HEY"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				197,
+				201
+			],
+			"anim": "firstDeath",
+			"fps": 24,
+			"name": "BF SHOWTIME c mamut",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				197,
+				201
+			],
+			"anim": "deathLoop",
+			"fps": 24,
+			"name": "BF SHOWTIME coquimbo loop",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				112,
-				147
+				197,
+				201
 			],
-			"anim": "singRIGHT",
-			"fps": 25,
-			"name": "BF SHOWTIME RIGHT",
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "BF SHOWTIME death confirm",
 			"indices": []
 		}
 	],

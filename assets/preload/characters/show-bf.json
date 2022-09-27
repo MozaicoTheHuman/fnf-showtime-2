@@ -2,58 +2,91 @@
 	"animations": [
 		{
 			"offsets": [
-				-3,
-				5
+				112,
+				148
 			],
 			"loop": false,
 			"fps": 24,
-			"anim": "hey",
+			"anim": "singLEFTmiss",
 			"indices": [],
-			"name": "BF HEY"
+			"name": "BF SHOWTIME izquierda"
 		},
 		{
+			"offsets": [
+				93,
+				153
+			],
 			"loop": false,
-			"offsets": [
-				207,
-				231
-			],
-			"anim": "firstDeath",
 			"fps": 24,
-			"name": "BF SHOWTIME RIP",
-			"indices": []
-		},
-		{
-			"loop": true,
-			"offsets": [
-				207,
-				231
-			],
-			"anim": "deathLoop",
-			"fps": 24,
-			"name": "BF SHOWTIME cocos",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				207,
-				231
-			],
-			"anim": "deathConfirm",
-			"fps": 24,
-			"name": "BF SHOWTIME coquimbo",
-			"indices": []
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "BF SHOWTIME abajo"
 		},
 		{
 			"offsets": [
-				77,
+				101,
 				150
 			],
 			"loop": false,
 			"fps": 24,
-			"anim": "stun",
+			"anim": "singUPmiss",
 			"indices": [],
-			"name": "BF SHOWTIME STUN"
+			"name": "BF SHOWTIME arriba"
+		},
+		{
+			"offsets": [
+				102,
+				148
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "BF SHOWTIME derecha"
+		},
+		{
+			"offsets": [
+				207,
+				231
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "BF SHOWTIME RIP"
+		},
+		{
+			"offsets": [
+				207,
+				231
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "BF SHOWTIME cocos"
+		},
+		{
+			"offsets": [
+				207,
+				231
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "BF SHOWTIME coquimbo"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				77,
+				150
+			],
+			"anim": "stun",
+			"fps": 24,
+			"name": "BF SHOWTIME STUN",
+			"indices": []
 		},
 		{
 			"loop": false,
@@ -63,62 +96,7 @@
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "idle",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				112,
-				148
-			],
-			"anim": "singLEFTmiss",
-			"fps": 24,
-			"name": "izquierda",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				93,
-				153
-			],
-			"anim": "singDOWNmiss",
-			"fps": 24,
-			"name": "abajo",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				101,
-				150
-			],
-			"anim": "singUPmiss",
-			"fps": 24,
-			"name": "arriba",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				102,
-				148
-			],
-			"anim": "singRIGHTmiss",
-			"fps": 24,
-			"name": "derecha",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				112,
-				147
-			],
-			"anim": "singRIGHT",
-			"fps": 30,
-			"name": "right",
+			"name": "BF SHOWTIME IDLE",
 			"indices": []
 		},
 		{
@@ -128,19 +106,8 @@
 				149
 			],
 			"anim": "singLEFT",
-			"fps": 30,
-			"name": "left",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				111,
-				150
-			],
-			"anim": "singUP",
-			"fps": 30,
-			"name": "up",
+			"fps": 25,
+			"name": "BF SHOWTIME LEFT",
 			"indices": []
 		},
 		{
@@ -150,8 +117,41 @@
 				153
 			],
 			"anim": "singDOWN",
-			"fps": 30,
-			"name": "down",
+			"fps": 25,
+			"name": "BF SHOWTIME DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				111,
+				150
+			],
+			"anim": "singUP",
+			"fps": 25,
+			"name": "BF SHOWTIME UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				112,
+				147
+			],
+			"anim": "singRIGHT",
+			"fps": 25,
+			"name": "BF SHOWTIME RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				116,
+				150
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "BF SHOWTIME HEY",
 			"indices": []
 		}
 	],
@@ -169,7 +169,7 @@
 		255
 	],
 	"camera_position": [
-		180,
+		100,
 		-160
 	],
 	"sing_duration": 4,

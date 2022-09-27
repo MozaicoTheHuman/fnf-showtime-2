@@ -1,202 +1,202 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-60,
 				49
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUPmiss",
-			"indices": [],
-			"name": "MaavoMUGENHighHit"
+			"fps": 24,
+			"name": "MaavoMUGENHighHit",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-60,
 				50
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "MaavoMUGENHighHit"
+			"fps": 24,
+			"name": "MaavoMUGENHighHit",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				19,
 				-30
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "MaavoMUGENLowHit"
+			"fps": 24,
+			"name": "MaavoMUGENLowHit",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				17
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "MaavoMUGENLowHit"
+			"fps": 24,
+			"name": "MaavoMUGENLowHit",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				90,
 				-133
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "MaavoMUGENDown"
+			"fps": 24,
+			"name": "MaavoMUGENDown",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				210,
 				-30
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "MaavoMUGENRight",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "MaavoMUGENRight"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				10,
 				-123
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "MaavoMUGENLeft",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "MaavoMUGENLeft"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				7,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "MaavoMUGENStand"
+			"fps": 24,
+			"name": "MaavoMUGENStand",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				136,
 				39
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "hey",
-			"indices": [],
-			"name": "MaavoMUGENHey"
+			"fps": 24,
+			"name": "MaavoMUGENHey",
+			"indices": []
 		},
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				10
 			],
-			"anim": "idle-alt",
+			"loop": true,
 			"fps": 24,
-			"name": "MaavoMUGENidle-alt",
-			"indices": []
+			"anim": "idle-alt",
+			"indices": [],
+			"name": "MaavoMUGENidle-alt"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				26
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "MaavoMUGENUp"
+			"fps": 24,
+			"name": "MaavoMUGENUp",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				294,
 				89
 			],
-			"loop": false,
-			"fps": 36,
 			"anim": "singUP-alt",
-			"indices": [],
-			"name": "MaavoMUGENArriba"
+			"fps": 36,
+			"name": "MaavoMUGENArriba",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				270,
 				5
 			],
-			"loop": false,
-			"fps": 29,
 			"anim": "singDOWN-alt",
-			"indices": [],
-			"name": "MaavoMUGENAbajo"
+			"fps": 29,
+			"name": "MaavoMUGENAbajo",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				390,
 				-34
 			],
-			"loop": false,
-			"fps": 32,
 			"anim": "singLEFT-alt",
-			"indices": [],
-			"name": "MaavoMUGENIzquierda"
+			"fps": 32,
+			"name": "MaavoMUGENIzquierda",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				170,
 				-21
 			],
-			"loop": false,
-			"fps": 30,
 			"anim": "singRIGHT-alt",
-			"indices": [],
-			"name": "MaavoMUGENDerecha"
+			"fps": 30,
+			"name": "MaavoMUGENDerecha",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				180,
 				-26
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "firstDeath",
-			"indices": [],
-			"name": "DEAD"
+			"fps": 24,
+			"name": "DEAD",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				19,
 				-30
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "deathLoop",
-			"indices": [],
-			"name": "dizzy"
+			"fps": 24,
+			"name": "dizzy",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				158,
 				3
 			],
-			"anim": "deathConfirm",
+			"loop": false,
 			"fps": 24,
-			"name": "MaavoMUGENHey",
-			"indices": []
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "MaavoMUGENHey"
 		}
 	],
 	"no_antialiasing": true,
@@ -205,7 +205,7 @@
 		200,
 		340
 	],
-	"healthicon": "nothing",
+	"healthicon": "bf-maavoMUGEN",
 	"flip_x": false,
 	"healthbar_colors": [
 		255,

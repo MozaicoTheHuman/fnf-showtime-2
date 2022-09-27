@@ -57,53 +57,53 @@
 		},
 		{
 			"offsets": [
-				-251,
-				125
+				-237,
+				142
 			],
-			"loop": false,
-			"fps": 28,
-			"anim": "singRIGHT-alt",
 			"indices": [],
-			"name": "Derecha"
-		},
-		{
-			"offsets": [
-				-250,
-				113
-			],
+			"fps": 27,
+			"anim": "singUP-alt",
 			"loop": false,
-			"fps": 29,
-			"anim": "singDOWN-alt",
-			"indices": [],
-			"name": "Abajo"
+			"name": "Arriba"
 		},
 		{
 			"offsets": [
 				-330,
 				121
 			],
-			"loop": false,
-			"fps": 29,
-			"anim": "singLEFT-alt",
 			"indices": [],
+			"fps": 27,
+			"anim": "singLEFT-alt",
+			"loop": false,
 			"name": "Izquierda"
 		},
 		{
 			"offsets": [
-				-237,
-				142
+				-250,
+				113
 			],
-			"loop": false,
-			"fps": 29,
-			"anim": "singUP-alt",
 			"indices": [],
-			"name": "Arriba"
+			"fps": 27,
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "Abajo"
+		},
+		{
+			"offsets": [
+				-251,
+				125
+			],
+			"indices": [],
+			"fps": 27,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "Derecha"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/IvetteNEW",
 	"position": [
-		-620,
+		-580,
 		55
 	],
 	"healthicon": "ivette",
