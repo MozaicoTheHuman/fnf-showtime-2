@@ -24,20 +24,20 @@ function onCreate()
 	makeAnimatedLuaSprite('mari', 'maritzamasterpiece',160, 140); 
 	addAnimationByPrefix('mari', 'idle', 'danceleft', 24, false); 
 	addAnimationByPrefix('mari', 'show', 'show', 24, true)
-    addAnimationByPrefix('mari', '0', 'left', 24, false); 
-    addAnimationByPrefix('mari', '1', 'down', 24, false); 
-    addAnimationByPrefix('mari', '2', 'up', 24, false); 
-    addAnimationByPrefix('mari', '3', 'right', 24, false); 
+    addAnimationByPrefix('mari', '0', 'left', 26, false); 
+    addAnimationByPrefix('mari', '1', 'down', 26, false); 
+    addAnimationByPrefix('mari', '2', 'up', 26, false); 
+    addAnimationByPrefix('mari', '3', 'right', 26, false); 
 	objectPlayAnimation('mari', 'idle'); 
 	addLuaSprite('mari', false); 
 	
 	makeAnimatedLuaSprite('iv', 'ivettemasterpiece', -650, 65); 
-	addAnimationByPrefix('iv', 'idle', 'idle', 24, false); 
+	addAnimationByPrefix('iv', 'idle', 'IvetteIdle', 24, false); 
 	addAnimationByPrefix('iv', 'shuo', 'shuo', 24, true)
-    addAnimationByPrefix('iv', '0', 'left', 24, false); 
-    addAnimationByPrefix('iv', '1', 'down', 24, false); 
-    addAnimationByPrefix('iv', '2', 'up', 24, false); 
-    addAnimationByPrefix('iv', '3', 'right', 24, false); 
+    addAnimationByPrefix('iv', '0', 'Izquierda', 26, false); 
+    addAnimationByPrefix('iv', '1', 'Abajo', 26, false); 
+    addAnimationByPrefix('iv', '2', 'Arriba', 26, false); 
+    addAnimationByPrefix('iv', '3', 'Derecha', 26, false); 
 	objectPlayAnimation('iv', 'idle'); 
 	addLuaSprite('iv', false); 
 	

@@ -179,25 +179,25 @@ class FreeplayState extends MusicBeatState
 		{
 			Paths.currentModDirectory = songs[i].folder;
 
-			var offset:Float = 108 - (Math.max(songs.length, 4) - 2) * 80;
+			var offset:Float = 30 - (Math.max(songs.length, 4) - 2) * 80;
 			var offsetBG:Float = 80 - (Math.max(songs.length, 4) - 2) * 80;
 			var songSprite = songs[i].songName;
 			//Change song name distance here
 
 
-			selectedBG = new FlxSprite(590 - (i * 64) - offsetBG, 80 + (i * 110)  + offset).loadGraphic(Paths.image('freeplaymenu/selectedsong'));
+			selectedBG = new FlxSprite(554 - (i * 64) - offsetBG, 80 + (i * 110)  + offset).loadGraphic(Paths.image('freeplaymenu/selectedsong'));
 			selectedBG.antialiasing = ClientPrefs.globalAntialiasing;
 			selectedBG.scrollFactor.set();
 			selectedBG.ID = i;
 			songBG.add(selectedBG);
 			selectedBG.visible = false;
 
-			songText = new FlxSprite(800 - (i * 60) - offset, 80 + (i * 110)  + offset).loadGraphic(Paths.image('freeplaymenu/songs/$songSprite'));
+			songText = new FlxSprite(690 - (i * 60) - offset, 80 + (i * 110)  + offset).loadGraphic(Paths.image('freeplaymenu/songs/$songSprite'));
 			songText.ID = i;
 			grpSongs.add(songText);
 			songText.color = 0x0084FF;
 
-			starIcon = new FlxSprite(660 - (i * 60) - offset, 95 + (i * 110)  + offset);
+			starIcon = new FlxSprite(550 - (i * 60) - offset, 95 + (i * 110)  + offset);
 			starIcon.loadGraphic(Paths.image('freeplaymenu/iconstar'));
 			starIcon.antialiasing = ClientPrefs.globalAntialiasing;
 			starIcon.scrollFactor.set();
@@ -300,20 +300,20 @@ class FreeplayState extends MusicBeatState
 		changeSelection();
 		changeDiff();
 
-		var textBG:FlxSprite = new FlxSprite(0, FlxG.height - 26).makeGraphic(FlxG.width, 26, 0xFF000000);
-		textBG.alpha = 0.6;
-		textBG.scrollFactor.set();
-		add(textBG);
-		#if PRELOAD_ALL
-		var leText:String = "P para abrir el skin selector/SPACE to listen the Song / RESET to Reset the Score: " + songIsSelected;
-		#else
-		var leText:String = "Press RESET to Reset your Score and Accuracy.";
-		#end
-		var text:FlxText = new FlxText(textBG.x + 4, textBG.y + 4, FlxG.width, leText, 18);
-		text.setFormat(Paths.font("vcr.ttf"), 18, FlxColor.WHITE, LEFT);
-		text.scrollFactor.set();
-		add(text);
-		super.create();
+		//var textBG:FlxSprite = new FlxSprite(0, FlxG.height - 26).makeGraphic(FlxG.width, 26, 0xFF000000);
+		//textBG.alpha = 0.6;
+		//textBG.scrollFactor.set();
+		//add(textBG);
+		//#if PRELOAD_ALL
+		//var leText:String = "P para abrir el skin selector/SPACE to listen the Song / RESET to Reset the Score: " + songIsSelected;
+		//#else
+		//var leText:String = "Press RESET to Reset your Score and Accuracy.";
+		//#end
+		//var text:FlxText = new FlxText(textBG.x + 4, textBG.y + 4, FlxG.width, leText, 18);
+		//text.setFormat(Paths.font("vcr.ttf"), 18, FlxColor.WHITE, LEFT);
+		//text.scrollFactor.set();
+		//add(text);
+		//super.create();
 	}
 
 	override function closeSubState()
@@ -552,7 +552,7 @@ class FreeplayState extends MusicBeatState
 					else{
 						songIsSelected = false;
 					}
-					camFollow.setPosition(spr.getGraphicMidpoint().x - (curSelected * 70) , spr.getGraphicMidpoint().y - add);
+					camFollow.setPosition(spr.getGraphicMidpoint().x - (curSelected * 56) , spr.getGraphicMidpoint().y - add);
 					spr.centerOffsets();
 				}
 			});
