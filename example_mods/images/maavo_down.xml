@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="maavo_down.png">
-	<!-- Created with Adobe Animate version 21.0.1.37179 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="down instancia 10000" x="43" y="43" width="651" height="628" pivotX="33" pivotY="11" frameX="-33" frameY="-11" frameWidth="695" frameHeight="644"/>
-	<SubTexture name="down instancia 10001" x="736" y="43" width="695" height="642" frameX="0" frameY="0" frameWidth="695" frameHeight="644"/>
-	<SubTexture name="down instancia 10002" x="43" y="727" width="654" height="633" frameX="-23" frameY="-11" frameWidth="695" frameHeight="644"/>
-</TextureAtlas>

@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "piante",
+			"indices": [],
+			"name": "walalapiante"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "walalaidle"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "warioriff",
+			"indices": [],
+			"name": "walalariff"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				62,
+				0
+			],
+			"anim": "ha",
+			"fps": 24,
+			"name": "walalaha",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				74,
+				4
+			],
+			"anim": "LECHE",
+			"fps": 30,
+			"name": "walalaLECHE",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "ha2",
+			"loop": false,
+			"name": "walalaha2"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/waaalalla",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
