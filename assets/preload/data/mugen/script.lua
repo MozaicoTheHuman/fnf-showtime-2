@@ -1,4 +1,6 @@
-
+math.randomseed(os.time()) -- random initialize
+math.random(); math.random(); math.random() 
+local a = math.random(1,3)
 
 function onCreate()
 	makeLuaSprite('icon1', 'mugenHud/maavoMUGEN', 900, 560)
@@ -21,6 +23,25 @@ function onCreate()
 	makeAnimatedLuaSprite('gfx', 'kfm/gfx', 700, 115); 
 	addAnimationByPrefix('gfx', 'idle', 'SSBUportrait', 24, false); 
 	objectPlayAnimation('gfx', 'idle')
+	
+	makeAnimatedLuaSprite('spark', 'kfm/gfx', 505, 300); 
+	addAnimationByPrefix('spark', 'idle', 'hyperspark', 24, true); 
+	objectPlayAnimation('spark', 'idle')
+	scaleObject('spark', 1.2, 1.2);
+
+	
+end
+
+local allowCountdown = false
+function onStartCountdown()
+	if not allowCountdown then
+		runTimer('startText', 0.1);
+		runTimer('countdown', 2)
+		allowCountdown = true;
+		--startCountdown()
+		return Function_Stop;
+	end
+	return Function_Continue;
 end
 
 function onUpdate()
@@ -46,5 +67,25 @@ function onUpdate()
 		setProperty('healthBar.scale.y', 1.5)	
 		setProperty('healthBarBG.y', 60)
 		setProperty('healthBar.y', 66)
+	end
+end
+
+function onTimerCompleted(tag, loops, loopsLeft)
+	if tag == 'startText' then
+		if a == 1 then
+			playSound('payaso1')
+			characterPlayAnim('dad','intro1')
+		end
+		if a == 2 then
+			playSound('payaso2')
+			characterPlayAnim('dad','intro2')
+		end
+		if a == 3 then
+			playSound('payaso3')
+			characterPlayAnim('dad','intro3')
+		end
+	end
+	if tag == 'countdown' then
+		startCountdown()
 	end
 end
