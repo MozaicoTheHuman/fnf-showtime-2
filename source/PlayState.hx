@@ -423,21 +423,15 @@ class PlayState extends MusicBeatState
 				GameOverSubstate.deathSoundName = 'fnf_loss_mugen';
 				GameOverSubstate.characterName = 'maavomugen';
 
-				var skyyyy:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('kfm/stageblissKFM', 'shared'));
+				var skyyyy:FlxSprite = new FlxSprite(-800, -350).loadGraphic(Paths.image('kfm/stageblissKFM', 'shared'));
 				skyyyy.active = false;
 				skyyyy.scrollFactor.set(0.7, 0.8);
-				skyyyy.setGraphicSize(Std.int(skyyyy.width * 1.1));
+				skyyyy.setGraphicSize(Std.int(skyyyy.width * 1.2));
 				skyyyy.updateHitbox();
 				add(skyyyy);
 
-				var walsss:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('kfm/stagefrontKFM', 'shared'));
-				walsss.active = false;
-				walsss.scrollFactor.set(1, 1);
-				walsss.setGraphicSize(Std.int(walsss.width * 1.1));
-				walsss.updateHitbox();
-				add(walsss);
-
 				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('kfm/stagebackKFM', 'shared'));
+				bg.setGraphicSize(Std.int(bg.width * 1.2));
 				bg.active = true;
 				add(bg);
 			case 'ponderingmall': // Pondering

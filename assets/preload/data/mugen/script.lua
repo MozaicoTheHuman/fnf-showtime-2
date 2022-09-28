@@ -35,7 +35,6 @@ end
 local allowCountdown = false
 function onStartCountdown()
 	if not allowCountdown then
-		setProperty('inCutscene', true);
 		runTimer('startText', 0.1);
 		runTimer('countdown', 2)
 		allowCountdown = true;
@@ -87,7 +86,6 @@ function onTimerCompleted(tag, loops, loopsLeft)
 		end
 	end
 	if tag == 'countdown' then
-		setProperty('inCutscene', false);
 		startCountdown()
 	end
 end

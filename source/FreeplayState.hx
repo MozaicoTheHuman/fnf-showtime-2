@@ -185,7 +185,7 @@ class FreeplayState extends MusicBeatState
 			//Change song name distance here
 
 
-			selectedBG = new FlxSprite(554 - (i * 58) - offsetBG, 80 + (i * 110)  + offset).loadGraphic(Paths.image('freeplaymenu/selectedsong'));
+			selectedBG = new FlxSprite(554 - (i * 59) - offsetBG, 80 + (i * 110)  + offset).loadGraphic(Paths.image('freeplaymenu/selectedsong'));
 			selectedBG.antialiasing = ClientPrefs.globalAntialiasing;
 			selectedBG.scrollFactor.set();
 			selectedBG.ID = i;

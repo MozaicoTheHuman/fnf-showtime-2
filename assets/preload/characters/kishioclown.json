@@ -147,7 +147,7 @@
 	"no_antialiasing": true,
 	"image": "characters/clown",
 	"position": [
-		220,
+		0,
 		-105
 	],
 	"healthicon": "nothing",
@@ -158,7 +158,7 @@
 		0
 	],
 	"camera_position": [
-		-460,
+		-480,
 		300
 	],
 	"sing_duration": 6.1,
