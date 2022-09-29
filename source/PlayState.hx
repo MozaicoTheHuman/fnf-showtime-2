@@ -1168,7 +1168,7 @@ class PlayState extends MusicBeatState
 
 		if (paused)
 		{
-			 trace('Oopsie doopsie! Paused sound');
+			//trace('Oopsie doopsie! Paused sound');
 			FlxG.sound.music.pause();
 			vocals.pause();
 		}
@@ -1460,14 +1460,14 @@ class PlayState extends MusicBeatState
 			{
 				resyncVocals();
 			}
-			trace(paused);
+			
 			if (!startTimer.finished)
 				startTimer.active = true;
 			if (finishTimer != null && !finishTimer.finished)
 				finishTimer.active = true;
 			if (songSpeedTween != null)
 				songSpeedTween.active = true;
-			trace(paused);
+			
 			var chars:Array<Character> = [boyfriend, gf, dad];
 			for (i in 0...chars.length)
 			{
