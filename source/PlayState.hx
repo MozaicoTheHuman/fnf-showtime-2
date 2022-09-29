@@ -222,6 +222,7 @@ class PlayState extends MusicBeatState
 	public var defaultCamZoom:Float = 1.05;
 
 	public var inCutscene:Bool = false;
+	
 
 	var songLength:Float = 0;
 
@@ -250,6 +251,11 @@ class PlayState extends MusicBeatState
 	public var introSoundsSuffix:String = '';
 	public var hudFolder:String = 'hud/default/';
 
+
+	// ayua no se hacer esto aaaaaaaaa
+	var nomate:FlxTimer;
+	public var porfanomate:Bool = true;
+
 	override public function create()
 	{
 		#if MODS_ALLOWED
@@ -260,6 +266,8 @@ class PlayState extends MusicBeatState
 
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
+
+	
 
 		practiceMode = false;
 		// var gameCam:FlxCamera = FlxG.camera;
@@ -429,6 +437,7 @@ class PlayState extends MusicBeatState
 				skyyyy.setGraphicSize(Std.int(skyyyy.width * 1.2));
 				skyyyy.updateHitbox();
 				add(skyyyy);
+
 
 				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('kfm/stagebackKFM', 'shared'));
 				bg.setGraphicSize(Std.int(bg.width * 1.2));
@@ -1159,7 +1168,7 @@ class PlayState extends MusicBeatState
 
 		if (paused)
 		{
-			// trace('Oopsie doopsie! Paused sound');
+			 trace('Oopsie doopsie! Paused sound');
 			FlxG.sound.music.pause();
 			vocals.pause();
 		}
@@ -1451,14 +1460,14 @@ class PlayState extends MusicBeatState
 			{
 				resyncVocals();
 			}
-
+			trace(paused);
 			if (!startTimer.finished)
 				startTimer.active = true;
 			if (finishTimer != null && !finishTimer.finished)
 				finishTimer.active = true;
 			if (songSpeedTween != null)
 				songSpeedTween.active = true;
-
+			trace(paused);
 			var chars:Array<Character> = [boyfriend, gf, dad];
 			for (i in 0...chars.length)
 			{
@@ -1477,6 +1486,7 @@ class PlayState extends MusicBeatState
 				timer.active = true;
 			}
 			paused = false;
+			trace(paused);
 			callOnLuas('onResume', []);
 
 			#if desktop
@@ -1564,6 +1574,10 @@ class PlayState extends MusicBeatState
 
 		callOnLuas('onUpdate', [elapsed]);
 
+		nomate = new FlxTimer().start(2,function(tmr:FlxTimer)
+			porfanomate = false
+		);
+
 		switch (curStage)
 		{
 			case 'show':
@@ -1645,6 +1659,7 @@ class PlayState extends MusicBeatState
 					}
 					PauseSubState.transCamera = camOther;
 					openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+					
 				}
 
 				#if desktop
@@ -1764,11 +1779,29 @@ class PlayState extends MusicBeatState
 		FlxG.watch.addQuick("beatShit", curBeat);
 		FlxG.watch.addQuick("stepShit", curStep);
 
+
+		
 		// RESET = Quick Game Over Screen
 		if (controls.RESET && !inCutscene && !endingSong)
 		{
-			health = 0;
-			trace("RESET = True");
+			if (isMugen == true && porfanomate == false)
+				{
+					
+					health = 0;
+					trace("RESET = True");
+					trace(isMugen);
+					trace(nomate);
+					trace(porfanomate);
+				}
+			else if (!isMugen)
+				{
+					health = 0;
+					trace("RESET = True");
+					trace(isMugen);
+					trace(nomate.finished);
+					trace(porfanomate);
+				}
+			
 		}
 		doDeathCheck();
 
