@@ -87,26 +87,27 @@ function onBeatHit()
 end
 
 function onStepHit()
+	if curStep == 889 then 
+		doTweenY('cutscenemoment', 'black1',-393, 1.1,'linear') 
+		doTweenY('cutscenemoment2', 'black2',699, 1.1,'linear')
+	end
+	
 	if curStep == 895 then
 		setProperty('flash.alpha',1)
-		doTweenAlpha('flTw','flash',0,1.3,'linear')
-        marising = true
+		doTweenAlpha('flTw','flash',0,1,'linear')
+       		marising = true
 		manten = true
 		ivdance = true
 		objectPlayAnimation('iv', 'shuo',true);
 		doTweenColor('mariColorTween', 'mari', '000000', 0.01, 'linear')
 		doTweenAlpha('appearredsky','redSky',1, 0.4)
-		doTweenAlpha('suelo','suelodarks',1, 0.4)
-		doTweenY('cutscenemoment', 'black1',-393, 0.4,'expoIn')
-		doTweenY('cutscenemoment2', 'black2',859, 0.4,'expoIn')
-		
-    end
+		doTweenAlpha('suelo','suelodarks',1, 0.4)	
+   	 end
 	
 	if curStep == 1024 then
 		baila = true
 		objectPlayAnimation('mari','show',true)
-	
-    end
+    	end
 	
 	if curStep == 1408 then
 		manten = false
@@ -116,7 +117,7 @@ function onStepHit()
 		doTweenY('cutscenemoment', 'black1',-900, 0.4,'expoOut')
 		doTweenY('cutscenemoment2', 'black2',1200, 0.4,'expoOut')
 		doTweenColor('2ndmariColorTween', 'mari', 'ffffff', 0.01, 'linear')
-    end
+    	end
 end
 
 function goodNoteHit(id,d,t,s)
