@@ -1,120 +1,120 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-50,
 				72
 			],
+			"loop": false,
+			"fps": 29,
 			"anim": "danceRight",
-			"fps": 29,
-			"name": "Maavo IDLE",
-			"indices": []
+			"indices": [],
+			"name": "Maavo IDLE"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-50,
 				72
 			],
-			"anim": "danceLeft",
+			"loop": false,
 			"fps": 29,
-			"name": "Maavo IDLE",
-			"indices": []
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "Maavo IDLE"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-38,
 				42
 			],
-			"indices": [],
-			"fps": 38,
 			"anim": "singRIGHT-alt",
-			"loop": false,
-			"name": "Maavo DERECHA"
+			"fps": 38,
+			"name": "Maavo DERECHA",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				279,
 				118
 			],
-			"indices": [],
-			"fps": 38,
 			"anim": "singDOWN-alt",
-			"loop": false,
-			"name": "Maavo ABAJO"
+			"fps": 38,
+			"name": "Maavo ABAJO",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				24,
 				274
 			],
-			"indices": [],
-			"fps": 38,
 			"anim": "singUP-alt",
-			"loop": false,
-			"name": "Maavo ARRIBA"
+			"fps": 38,
+			"name": "Maavo ARRIBA",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				125,
 				166
 			],
-			"indices": [],
-			"fps": 38,
 			"anim": "singLEFT-alt",
-			"loop": false,
-			"name": "Maavo IZQUIERDA"
+			"fps": 38,
+			"name": "Maavo IZQUIERDA",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				124,
 				-21
 			],
-			"indices": [],
-			"fps": 30,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "Left"
+			"fps": 30,
+			"name": "Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				80,
 				-133
 			],
-			"indices": [],
-			"fps": 30,
 			"anim": "singDOWN",
-			"loop": false,
-			"name": "Down"
+			"fps": 30,
+			"name": "Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				84,
 				8
 			],
-			"indices": [],
-			"fps": 30,
 			"anim": "singRIGHT",
-			"loop": false,
-			"name": "Right"
+			"fps": 30,
+			"name": "Right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				4,
 				121
 			],
-			"indices": [],
-			"fps": 30,
 			"anim": "singUP",
-			"loop": false,
-			"name": "Up"
+			"fps": 30,
+			"name": "Up",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/show-maavo",
 	"position": [
-		-180,
+		-300,
 		35
 	],
 	"healthicon": "maavoSHOW",

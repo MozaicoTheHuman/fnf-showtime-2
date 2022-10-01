@@ -202,7 +202,7 @@
 	"no_antialiasing": true,
 	"image": "characters/bf-maavoMUGEN",
 	"position": [
-		0,
+		200,
 		340
 	],
 	"healthicon": "bf-maavoMUGEN",
@@ -213,7 +213,7 @@
 		0
 	],
 	"camera_position": [
-		340,
+		360,
 		-280
 	],
 	"sing_duration": 4,

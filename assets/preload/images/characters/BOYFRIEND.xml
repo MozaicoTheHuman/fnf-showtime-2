@@ -4,282 +4,228 @@
 	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="BF SHOWTIME DOWN0000" x="10" y="10" width="464" height="497"/>
 	<SubTexture name="BF SHOWTIME DOWN0001" x="10" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME DOWN0002" x="475" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME DOWN0003" x="475" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME DOWN0004" x="940" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME DOWN0005" x="940" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME DOWN0006" x="940" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME DOWN0007" x="940" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME DOWN0008" x="940" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME DOWN0009" x="940" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME DOWN0010" x="940" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME DOWN0011" x="940" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME DOWN0012" x="940" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME DOWN0013" x="940" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME DOWN0014" x="940" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME IDLE0000" x="1405" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME IDLE0001" x="1405" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME IDLE0002" x="1870" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME IDLE0003" x="1870" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME IDLE0004" x="2335" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME IDLE0005" x="2335" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME IDLE0006" x="2800" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME IDLE0007" x="2800" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME IDLE0008" x="3265" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME IDLE0009" x="3265" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME IDLE0010" x="3265" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME IDLE0011" x="3265" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME IDLE0012" x="3265" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME IDLE0013" x="3265" y="10" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME LEFT0000" x="10" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME LEFT0001" x="10" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME LEFT0002" x="475" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME LEFT0003" x="475" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME LEFT0004" x="940" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME LEFT0005" x="940" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME LEFT0006" x="940" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME LEFT0007" x="940" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME LEFT0008" x="940" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME LEFT0009" x="940" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME LEFT0010" x="940" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME LEFT0011" x="940" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME LEFT0012" x="940" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME LEFT0013" x="940" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME LEFT0014" x="940" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME RIGHT0000" x="1405" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME RIGHT0001" x="1405" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME RIGHT0002" x="1870" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME RIGHT0003" x="1870" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME RIGHT0004" x="2335" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME RIGHT0005" x="2335" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME RIGHT0006" x="2335" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME RIGHT0007" x="2335" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME RIGHT0008" x="2335" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME RIGHT0009" x="2335" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME RIGHT0010" x="2335" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME RIGHT0011" x="2335" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME RIGHT0012" x="2335" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME RIGHT0013" x="2335" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME RIGHT0014" x="2335" y="508" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME RIP0000" x="2800" y="508" width="498" height="510" frameX="-79" frameY="-86" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0001" x="2800" y="508" width="498" height="510" frameX="-79" frameY="-86" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0002" x="2800" y="508" width="498" height="510" frameX="-79" frameY="-86" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0003" x="2800" y="508" width="498" height="510" frameX="-79" frameY="-86" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0004" x="2800" y="508" width="498" height="510" frameX="-79" frameY="-86" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0005" x="3299" y="508" width="498" height="588" frameX="-79" frameY="-37" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0006" x="3299" y="508" width="498" height="588" frameX="-79" frameY="-37" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0007" x="10" y="1097" width="498" height="541" frameX="-79" frameY="-69" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0008" x="10" y="1097" width="498" height="541" frameX="-79" frameY="-69" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0009" x="509" y="1097" width="498" height="551" frameX="-79" frameY="-63" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0010" x="509" y="1097" width="498" height="551" frameX="-79" frameY="-63" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0011" x="1008" y="1097" width="498" height="553" frameX="-79" frameY="-62" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0012" x="1008" y="1097" width="498" height="553" frameX="-79" frameY="-62" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0013" x="1008" y="1097" width="498" height="553" frameX="-79" frameY="-62" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0014" x="1008" y="1097" width="498" height="553" frameX="-79" frameY="-62" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0015" x="1008" y="1097" width="498" height="553" frameX="-79" frameY="-62" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0016" x="1008" y="1097" width="498" height="553" frameX="-79" frameY="-62" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0017" x="1008" y="1097" width="498" height="553" frameX="-79" frameY="-62" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0018" x="1008" y="1097" width="498" height="553" frameX="-79" frameY="-62" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0019" x="1008" y="1097" width="498" height="553" frameX="-79" frameY="-62" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0020" x="1008" y="1097" width="498" height="553" frameX="-79" frameY="-62" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0021" x="1008" y="1097" width="498" height="553" frameX="-79" frameY="-62" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0022" x="1008" y="1097" width="498" height="553" frameX="-79" frameY="-62" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0023" x="1507" y="1097" width="612" height="631" frameX="-24" frameY="-21" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0024" x="1507" y="1097" width="612" height="631" frameX="-24" frameY="-21" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0025" x="2120" y="1097" width="654" height="663" frameX="-5" frameY="-6" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0026" x="2120" y="1097" width="654" height="663" frameX="-5" frameY="-6" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0027" x="2775" y="1097" width="660" height="668" frameX="-2" frameY="-3" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0028" x="2775" y="1097" width="660" height="668" frameX="-2" frameY="-3" frameWidth="665" frameHeight="673"/>
-	<SubTexture name="BF SHOWTIME RIP0029" x="10" y="1766" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0030" x="10" y="1766" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0031" x="10" y="1766" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0032" x="10" y="1766" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0033" x="10" y="1766" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0034" x="10" y="1766" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0035" x="10" y="1766" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0036" x="10" y="1766" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0037" x="10" y="1766" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0038" x="10" y="1766" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0039" x="10" y="1766" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0040" x="10" y="1766" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0041" x="10" y="1766" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0042" x="676" y="1766" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0043" x="676" y="1766" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0044" x="1405" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0045" x="1405" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0046" x="2071" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0047" x="2071" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0048" x="2071" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0049" x="2071" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0050" x="2071" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0051" x="2071" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0052" x="2071" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0053" x="2071" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0054" x="2071" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0055" x="2071" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0056" x="2071" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME RIP0057" x="2071" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME STUN0000" x="1342" y="1766" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0001" x="1342" y="1766" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0002" x="1823" y="1766" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0003" x="1823" y="1766" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0004" x="2304" y="1766" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0005" x="2304" y="1766" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0006" x="2785" y="1766" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0007" x="3266" y="1766" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0008" x="3266" y="1766" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0009" x="10" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0010" x="10" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0011" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0012" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0013" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0014" x="491" y="2440" width="480" height="497"/>
-	<!-- from here on out i looped frames 11-14 to make the animation last 1.5 seconds for the stun thingy at 24 fps(36 frames) -->
-	<SubTexture name="BF SHOWTIME STUN0015" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0016" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0017" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0018" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0019" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0020" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0021" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0022" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0023" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0024" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0025" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0026" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0027" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0028" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0029" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0030" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0031" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0032" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0033" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0034" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0035" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME STUN0036" x="491" y="2440" width="480" height="497"/>
-	<SubTexture name="BF SHOWTIME UP0000" x="972" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME UP0001" x="972" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME UP0002" x="1437" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME UP0003" x="1437" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME UP0004" x="1902" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME UP0005" x="1902" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME UP0006" x="1902" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME UP0007" x="1902" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME UP0008" x="1902" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME UP0009" x="1902" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME UP0010" x="1902" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME UP0011" x="1902" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME UP0012" x="1902" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME UP0013" x="1902" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME UP0014" x="1902" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME abajo0000" x="2367" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME abajo0001" x="2367" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME abajo0002" x="2832" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME abajo0003" x="2832" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME abajo0004" x="3297" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME abajo0005" x="3297" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME abajo0006" x="3297" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME abajo0007" x="3297" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME abajo0008" x="3297" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME abajo0009" x="3297" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME abajo0010" x="3297" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME abajo0011" x="3297" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME abajo0012" x="3297" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME abajo0013" x="3297" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME abajo0014" x="3297" y="2440" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME arriba0000" x="10" y="2938" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME arriba0001" x="10" y="2938" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME arriba0002" x="475" y="2938" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME arriba0003" x="475" y="2938" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME arriba0004" x="940" y="2938" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME arriba0005" x="940" y="2938" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME arriba0006" x="940" y="2938" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME arriba0007" x="940" y="2938" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME arriba0008" x="940" y="2938" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME arriba0009" x="940" y="2938" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME arriba0010" x="940" y="2938" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME arriba0011" x="940" y="2938" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME arriba0012" x="940" y="2938" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME arriba0013" x="940" y="2938" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME arriba0014" x="940" y="2938" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME cocos0000" x="1405" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME cocos0001" x="1405" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME cocos0002" x="2071" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME cocos0003" x="2071" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME cocos0004" x="2737" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME cocos0005" x="2737" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME cocos0006" x="2737" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME cocos0007" x="2737" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME cocos0008" x="2737" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME cocos0009" x="2737" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME cocos0010" x="2737" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME cocos0011" x="2737" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME cocos0012" x="2737" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME cocos0013" x="2737" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME cocos0014" x="2737" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME cocos0015" x="2737" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0000" x="3403" y="2938" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0001" x="10" y="3612" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0002" x="676" y="3612" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0003" x="1342" y="3612" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0004" x="2008" y="3612" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0005" x="2674" y="3612" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0006" x="3340" y="3612" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0007" x="10" y="4286" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0008" x="676" y="4286" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0009" x="1342" y="4286" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0010" x="2008" y="4286" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0011" x="2674" y="4286" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0012" x="3340" y="4286" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0013" x="10" y="4960" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0014" x="676" y="4960" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0015" x="1342" y="4960" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0016" x="2008" y="4960" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0017" x="2674" y="4960" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0018" x="3340" y="4960" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0019" x="10" y="5634" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0020" x="676" y="5634" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0021" x="1342" y="5634" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0022" x="2008" y="5634" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0023" x="2674" y="5634" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0024" x="2674" y="5634" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0025" x="2674" y="5634" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0026" x="2674" y="5634" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0027" x="2674" y="5634" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0028" x="2674" y="5634" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0029" x="2674" y="5634" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0030" x="2674" y="5634" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0031" x="2674" y="5634" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0032" x="2674" y="5634" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME coquimbo0033" x="2674" y="5634" width="665" height="673"/>
-	<SubTexture name="BF SHOWTIME derecha0000" x="3340" y="5634" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME derecha0001" x="3340" y="5634" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME derecha0002" x="10" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME derecha0003" x="10" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME derecha0004" x="475" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME derecha0005" x="475" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME derecha0006" x="475" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME derecha0007" x="475" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME derecha0008" x="475" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME derecha0009" x="475" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME derecha0010" x="475" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME derecha0011" x="475" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME derecha0012" x="475" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME derecha0013" x="475" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME derecha0014" x="475" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME izquierda0000" x="940" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME izquierda0001" x="940" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME izquierda0002" x="1405" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME izquierda0003" x="1405" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME izquierda0004" x="1870" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME izquierda0005" x="1870" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME izquierda0006" x="1870" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME izquierda0007" x="1870" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME izquierda0008" x="1870" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME izquierda0009" x="1870" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME izquierda0010" x="1870" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME izquierda0011" x="1870" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME izquierda0012" x="1870" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME izquierda0013" x="1870" y="6308" width="464" height="497"/>
-	<SubTexture name="BF SHOWTIME izquierda0014" x="1870" y="6308" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME DOWN0002" x="484" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME DOWN0003" x="484" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME DOWN0004" x="958" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME DOWN0005" x="958" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME HEY0000" x="1432" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME HEY0001" x="1432" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME HEY0002" x="1906" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME HEY0003" x="1906" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME HEY0004" x="2380" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME HEY0005" x="2380" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME HEY0006" x="2380" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME HEY0007" x="2380" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME HEY0008" x="2380" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME HEY0009" x="2380" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME HEY0010" x="2380" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME HEY0011" x="2380" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME HEY0012" x="2380" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME HEY0013" x="2380" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME IDLE0000" x="2854" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME IDLE0001" x="2854" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME IDLE0002" x="3328" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME IDLE0003" x="3328" y="10" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME IDLE0004" x="10" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME IDLE0005" x="10" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME IDLE0006" x="484" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME IDLE0007" x="484" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME IDLE0008" x="958" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME IDLE0009" x="958" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME IDLE0010" x="958" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME IDLE0011" x="958" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME IDLE0012" x="958" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME IDLE0013" x="958" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME IDLE0014" x="958" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME LEFT0000" x="1432" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME LEFT0001" x="1432" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME LEFT0002" x="1906" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME LEFT0003" x="1906" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME LEFT0004" x="2380" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME LEFT0005" x="2380" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME RIGHT0000" x="2854" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME RIGHT0001" x="2854" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME RIGHT0002" x="3328" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME RIGHT0003" x="3328" y="517" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME RIGHT0004" x="10" y="1024" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME RIGHT0005" x="10" y="1024" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0000" x="484" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0001" x="484" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0002" x="974" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0003" x="1464" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0004" x="1464" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0005" x="1954" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0006" x="2444" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0007" x="2444" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0008" x="2934" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0009" x="2934" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0010" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0011" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0012" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0013" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0014" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0015" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0016" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0017" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0018" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0019" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0020" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0021" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0022" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0023" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0024" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0025" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0026" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0027" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0028" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0029" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0030" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0031" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0032" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0033" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0034" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME STUN0035" x="3424" y="1024" width="480" height="497"/>
+	<SubTexture name="BF SHOWTIME UP0000" x="10" y="1531" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME UP0001" x="10" y="1531" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME UP0002" x="484" y="1531" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME UP0003" x="484" y="1531" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME UP0004" x="958" y="1531" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME UP0005" x="958" y="1531" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME abajo0000" x="1432" y="1531" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME abajo0001" x="1432" y="1531" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME abajo0002" x="1906" y="1531" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME abajo0003" x="1906" y="1531" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME abajo0004" x="2380" y="1531" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME abajo0005" x="2380" y="1531" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME arriba0000" x="2854" y="1531" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME arriba0001" x="2854" y="1531" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME arriba0002" x="3328" y="1531" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME arriba0003" x="3328" y="1531" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME arriba0004" x="10" y="2038" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME arriba0005" x="10" y="2038" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME c mamut0000" x="484" y="2038" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0001" x="484" y="2038" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0002" x="1107" y="2038" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0003" x="1107" y="2038" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0004" x="1730" y="2038" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0005" x="1730" y="2038" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0006" x="2353" y="2038" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0007" x="2353" y="2038" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0008" x="2976" y="2038" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0009" x="10" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0010" x="10" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0011" x="10" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0012" x="10" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0013" x="10" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0014" x="10" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0015" x="10" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0016" x="10" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0017" x="10" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0018" x="10" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0019" x="10" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0020" x="10" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0021" x="10" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0022" x="10" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0023" x="10" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0024" x="10" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0025" x="10" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0026" x="10" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0027" x="633" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0028" x="633" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0029" x="1256" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0030" x="1256" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0031" x="1879" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0032" x="1879" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0033" x="2502" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0034" x="2502" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0035" x="3125" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0036" x="3125" y="2688" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0037" x="10" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0038" x="10" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0039" x="633" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0040" x="633" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0041" x="633" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0042" x="633" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0043" x="633" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0044" x="633" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0045" x="633" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0046" x="633" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0047" x="1256" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0048" x="1256" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0049" x="1256" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0050" x="1256" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0051" x="1256" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0052" x="1256" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0053" x="1256" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0054" x="1256" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0055" x="1879" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0056" x="1879" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0057" x="1879" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0058" x="1879" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME c mamut0059" x="1879" y="3338" width="613" height="640"/>
+	<SubTexture name="BF SHOWTIME coquimbo loop0000" x="2502" y="3338" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME coquimbo loop0001" x="2502" y="3338" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME coquimbo loop0002" x="3124" y="3338" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME coquimbo loop0003" x="3124" y="3338" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME coquimbo loop0004" x="10" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME coquimbo loop0005" x="10" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME coquimbo loop0006" x="10" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME coquimbo loop0007" x="10" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME coquimbo loop0008" x="10" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME coquimbo loop0009" x="10" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME coquimbo loop0010" x="10" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME coquimbo loop0011" x="10" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME coquimbo loop0012" x="10" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME coquimbo loop0013" x="10" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME coquimbo loop0014" x="10" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME coquimbo loop0015" x="10" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME coquimbo loop0016" x="10" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME coquimbo loop0017" x="10" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0000" x="632" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0001" x="1254" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0002" x="1876" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0003" x="1876" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0004" x="2498" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0005" x="3120" y="3988" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0006" x="10" y="4638" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0007" x="632" y="4638" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0008" x="1254" y="4638" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0009" x="1876" y="4638" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0010" x="2498" y="4638" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0011" x="3120" y="4638" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0012" x="10" y="5288" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0013" x="632" y="5288" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0014" x="1254" y="5288" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0015" x="1876" y="5288" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0016" x="2498" y="5288" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0017" x="3120" y="5288" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0018" x="10" y="5938" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0019" x="632" y="5938" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0020" x="1254" y="5938" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0021" x="1876" y="5938" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0022" x="2498" y="5938" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0023" x="3120" y="5938" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0024" x="3120" y="5938" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0025" x="10" y="6588" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0026" x="10" y="6588" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0027" x="10" y="6588" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0028" x="10" y="6588" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0029" x="10" y="6588" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0030" x="10" y="6588" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0031" x="10" y="6588" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0032" x="10" y="6588" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0033" x="10" y="6588" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME death confirm0034" x="10" y="6588" width="612" height="640"/>
+	<SubTexture name="BF SHOWTIME derecha0000" x="632" y="6588" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME derecha0001" x="632" y="6588" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME derecha0002" x="1106" y="6588" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME derecha0003" x="1106" y="6588" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME derecha0004" x="1580" y="6588" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME derecha0005" x="1580" y="6588" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME izquierda0000" x="2054" y="6588" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME izquierda0001" x="2054" y="6588" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME izquierda0002" x="2528" y="6588" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME izquierda0003" x="2528" y="6588" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME izquierda0004" x="3002" y="6588" width="464" height="497"/>
+	<SubTexture name="BF SHOWTIME izquierda0005" x="3002" y="6588" width="464" height="497"/>
 </TextureAtlas>
