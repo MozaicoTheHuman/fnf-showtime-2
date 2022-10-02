@@ -53,7 +53,7 @@ function onCreate()
 	scaleObject('black2', 4, 2);	
 	
 	setObjectOrder('gfGroup',5)
-	setObjectOrder('mari',10)
+	
 end
 
 function onUpdate()
