@@ -133,7 +133,8 @@ class PlayState extends MusicBeatState
 	public var dad:Character;
 	public var gf:Character;
 	public var boyfriend:Boyfriend;
-
+	public var boyfriend2:Boyfriend;
+	
 	public var notes:FlxTypedGroup<Note>;
 	public var unspawnNotes:Array<Note> = [];
 	public var eventNotes:Array<Dynamic> = [];
@@ -566,6 +567,13 @@ class PlayState extends MusicBeatState
 		startCharacterPos(dad, true);
 		dadGroup.add(dad);
 
+		if (SONG.song.toLowerCase() == "light-on")
+		{
+			boyfriend2 = new Boyfriend(-70, 0, "MaritzaPlayable");
+			startCharacterPos(boyfriend2);
+			boyfriendGroup.add(boyfriend2);
+		}
+		
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
@@ -1044,6 +1052,13 @@ class PlayState extends MusicBeatState
 					if (boyfriend.animation.curAnim != null && !boyfriend.animation.curAnim.name.startsWith('sing'))
 					{
 						boyfriend.dance();
+					}
+					if (SONG.song.toLowerCase() == "light-on")
+					{
+						if (boyfriend2.animation.curAnim != null && !boyfriend2.animation.curAnim.name.startsWith('sing'))
+						{
+							boyfriend2.dance();
+						}
 					}
 					if (dad.animation.curAnim != null && !dad.animation.curAnim.name.startsWith('sing') && !dad.stunned)
 					{
@@ -2069,6 +2084,15 @@ class PlayState extends MusicBeatState
 			{
 				boyfriend.dance();
 			}
+			if (SONG.song.toLowerCase() == 'light-on')
+			{
+				if (boyfriend2.holdTimer > Conductor.stepCrochet * 0.001 * boyfriend2.singDuration
+				&& boyfriend2.animation.curAnim.name.startsWith('sing')
+				&& !boyfriend2.animation.curAnim.name.endsWith('miss'))
+				{
+					boyfriend2.dance();
+				}
+			}
 		}
 
 		#if debug
@@ -3092,6 +3116,13 @@ class PlayState extends MusicBeatState
 				&& boyfriend.animation.curAnim.name.startsWith('sing')
 				&& !boyfriend.animation.curAnim.name.endsWith('miss'))
 				boyfriend.dance();
+			if (SONG.song.toLowerCase() == 'light-on')
+			{
+				if (boyfriend2.holdTimer > Conductor.stepCrochet * 0.001 * boyfriend2.singDuration
+					&& boyfriend2.animation.curAnim.name.startsWith('sing')
+					&& !boyfriend2.animation.curAnim.name.endsWith('miss'))
+						boyfriend2.dance();
+			}
 		}
 
 		playerStrums.forEach(function(spr:StrumNote)
@@ -3163,6 +3194,23 @@ class PlayState extends MusicBeatState
 			if (daNote.noteType == 'GF Sing')
 			{
 				gf.playAnim(animToPlay, true);
+			}
+			else if (daNote.noteType == 'SecondCharacter')
+				{
+					var daAlt = '';
+					if (daNote.noteType == 'Alt Animation')
+						daAlt = '-alt';
+
+					boyfriend2.playAnim(animToPlay + daAlt, true);
+				}
+			else if (daNote.noteType == 'MainAndSecondCharacter')
+			{
+				var daAlt = '';
+				if (daNote.noteType == 'Alt Animation')
+					daAlt = '-alt';
+
+				boyfriend.playAnim(animToPlay + daAlt, true);
+				boyfriend2.playAnim(animToPlay + daAlt, true);
 			}
 			else
 			{
@@ -3328,6 +3376,16 @@ class PlayState extends MusicBeatState
 					gf.playAnim(animToPlay + daAlt, true);
 					gf.holdTimer = 0;
 				}
+				else if (note.noteType == 'MainAndSecondCharacter')
+				{
+					boyfriend.playAnim(animToPlay + daAlt, true);
+					boyfriend.holdTimer = 0;
+					if (SONG.song.toLowerCase() == 'light-on')
+						{
+							boyfriend2.playAnim(animToPlay + daAlt, true);
+							boyfriend2.holdTimer = 0;
+						}
+				}
 				else
 				{
 					boyfriend.playAnim(animToPlay + daAlt, true);
@@ -3351,7 +3409,34 @@ class PlayState extends MusicBeatState
 					}
 				}
 			}
+			else
+			{
+				if (SONG.song.toLowerCase() == 'light-on')
+				{
+					var animToPlay:String = '';
+					switch (Std.int(Math.abs(note.noteData)))
+					{
+						case 0:
+							animToPlay = 'singLEFT';
+						case 1:
+							animToPlay = 'singDOWN';
+						case 2:
+							animToPlay = 'singUP';
+						case 3:
+							animToPlay = 'singRIGHT';
+					}
+						if (note.noteType == 'SecondCharacter')
+						{
+							trace(note.noteType);
+							boyfriend2.playAnim(animToPlay, true);
+							boyfriend2.holdTimer = 0;
+						}			
+							
 
+				}
+				
+
+			}
 			if (cpuControlled)
 			{
 				var time:Float = 0.15;
@@ -3544,6 +3629,14 @@ class PlayState extends MusicBeatState
 			{
 				boyfriend.dance();
 			}
+			if (SONG.song.toLowerCase() == "light-on")
+				{
+					if (boyfriend2.animation.curAnim.name != null && !boyfriend2.animation.curAnim.name.startsWith("sing"))
+					{
+						boyfriend2.dance();
+					}
+
+				}	
 			if (dad.animation.curAnim.name != null && !dad.animation.curAnim.name.startsWith("sing") && !dad.stunned)
 			{
 				dad.dance();
