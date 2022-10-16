@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				390,
+				2
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "danceleft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				389,
+				7
+			],
+			"anim": "singUP",
+			"fps": 25,
+			"name": "up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				401,
+				10
+			],
+			"anim": "singDOWN",
+			"fps": 25,
+			"name": "down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				391,
+				3
+			],
+			"anim": "singUPmiss",
+			"fps": 25,
+			"name": "arriba",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				400,
+				8
+			],
+			"anim": "singDOWNmiss",
+			"fps": 25,
+			"name": "abajo",
+			"indices": []
+		},
+		{
+			"offsets": [
+				268,
+				16
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "derecha"
+		},
+		{
+			"offsets": [
+				483,
+				9
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "izquierda"
+		},
+		{
+			"offsets": [
+				483,
+				9
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				268,
+				16
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/MaritzaPlayable",
+	"position": [
+		100,
+		0
+	],
+	"healthicon": "2022",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		255,
+		255
+	],
+	"camera_position": [
+		290,
+		-30
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
