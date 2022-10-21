@@ -1,17 +1,6 @@
 {
 	"animations": [
 		{
-			"loop": true,
-			"offsets": [
-				390,
-				2
-			],
-			"anim": "idle",
-			"fps": 24,
-			"name": "danceleft",
-			"indices": []
-		},
-		{
 			"loop": false,
 			"offsets": [
 				389,
@@ -47,8 +36,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				400,
-				8
+				401,
+				10
 			],
 			"anim": "singDOWNmiss",
 			"fps": 25,
@@ -57,7 +46,7 @@
 		},
 		{
 			"offsets": [
-				268,
+				368,
 				16
 			],
 			"loop": false,
@@ -68,7 +57,7 @@
 		},
 		{
 			"offsets": [
-				483,
+				413,
 				9
 			],
 			"loop": false,
@@ -79,7 +68,7 @@
 		},
 		{
 			"offsets": [
-				483,
+				413,
 				9
 			],
 			"loop": false,
@@ -90,7 +79,7 @@
 		},
 		{
 			"offsets": [
-				268,
+				368,
 				16
 			],
 			"loop": false,
@@ -98,6 +87,17 @@
 			"anim": "singLEFT",
 			"indices": [],
 			"name": "right"
+		},
+		{
+			"offsets": [
+				390,
+				2
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "danceleft"
 		}
 	],
 	"no_antialiasing": false,

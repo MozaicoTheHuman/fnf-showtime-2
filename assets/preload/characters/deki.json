@@ -1,206 +1,206 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				180,
 				150
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				180,
 				150
 			],
-			"anim": "idle-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "idle",
+			"anim": "idle-loop",
 			"indices": [
 				10,
 				11,
 				12,
 				13
-			]
+			],
+			"name": "idle"
 		},
 		{
+			"offsets": [
+				135,
+				104
+			],
 			"loop": false,
-			"offsets": [
-				135,
-				104
-			],
-			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "left",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "left"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				135,
 				104
 			],
-			"anim": "singRIGHT-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "left",
+			"anim": "singRIGHT-loop",
 			"indices": [
 				3,
 				4
-			]
+			],
+			"name": "left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				171,
 				127
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				170,
 				127
 			],
+			"loop": true,
+			"fps": 24,
 			"anim": "singUP-loop",
-			"fps": 24,
-			"name": "up",
-			"indices": []
+			"indices": [],
+			"name": "up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				202,
 				83
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "right",
-			"indices": []
+			"indices": [],
+			"name": "right"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				202,
 				83
 			],
-			"anim": "singLEFT-loop",
-			"fps": 24,
-			"name": "right",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				170,
-				80
-			],
-			"anim": "singDOWN",
-			"fps": 24,
-			"name": "down",
-			"indices": []
-		},
-		{
 			"loop": true,
+			"fps": 24,
+			"anim": "singLEFT-loop",
+			"indices": [],
+			"name": "right"
+		},
+		{
 			"offsets": [
 				170,
 				80
 			],
-			"anim": "singDOWN-loop",
+			"loop": false,
 			"fps": 24,
-			"name": "down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
 		},
 		{
-			"loop": false,
+			"offsets": [
+				170,
+				80
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singDOWN-loop",
+			"indices": [],
+			"name": "down"
+		},
+		{
 			"offsets": [
 				162,
 				84
 			],
-			"anim": "singLEFTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "izquierda",
-			"indices": []
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "izquierda"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				139,
 				71
 			],
-			"anim": "singDOWNmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "abajo",
-			"indices": []
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "abajo"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				191,
 				107
 			],
-			"anim": "singUPmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "arriba",
-			"indices": []
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "arriba"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				140,
 				81
 			],
-			"anim": "singRIGHTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "derecha",
-			"indices": []
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "derecha"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				969,
 				709
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "firstDeath",
-			"indices": [],
-			"name": "gameover"
+			"fps": 24,
+			"name": "gameover",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				1000,
 				300
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "deathLoop",
-			"indices": [],
-			"name": "ded"
+			"fps": 24,
+			"name": "ded",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				990,
 				299
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "deathConfirm",
-			"indices": [],
-			"name": "calamardo"
+			"fps": 24,
+			"name": "calamardo",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/deki_assets",
 	"position": [
 		0,
-		350
+		400
 	],
 	"healthicon": "deki",
 	"flip_x": true,
