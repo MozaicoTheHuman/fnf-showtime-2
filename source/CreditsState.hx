@@ -65,7 +65,7 @@ class CreditsState extends MusicBeatState
 				'https://www.youtube.com/user/ElRinconAntiEstres',
 				'FFDD33'
 			],
-			['Joan Atlas', 'juancitoatlantis', 'Musician', 'https://twitter.com/joan_atlas', 'FFDD33'],
+			['Joan Atlas', 'joancitoatlantis', 'Musician', 'https://twitter.com/joan_atlas', 'FFDD33'],
 			['Ejsu Multimedia', 'ejsu', 'Musician', 'https://www.youtube.com/channel/UCIW8uHlBQ8ZOaxuo3PzpTig', 'FFDD33'],
 			[
 				'Vtroy Jerof',
@@ -81,14 +81,14 @@ class CreditsState extends MusicBeatState
 				'https://www.youtube.com/channel/UC6QSZk8SYmTm_VoZAPOW6NQ',
 				'FFDD33'
 			],
-			['DIA', 'dia', 'UTAU Soundbanks', 'https://www.youtube.com/channel/UCIW8uHlBQ8ZOaxuo3PzpTig', 'FFDD33'],
-			['Gabriel ML', 'gabo', 'Musician', 'https://www.youtube.com/channel/UCIW8uHlBQ8ZOaxuo3PzpTig', 'FFDD33'],
-			['Krimson', 'krimson', 'Musician', 'https://www.youtube.com/channel/UCIW8uHlBQ8ZOaxuo3PzpTig', 'FFDD33'],
-			['Sandwich', 'sandwich', 'Coder', 'https://twitter.com/randomguyhere0', 'FFDD33'],
+			['Gabriel ML', 'gabo', 'Musician', 'https://www.youtube.com/channel/UCi3ibK4Z7HEXiPQsNTLOaZg', 'FFDD33'],
+			['Krimson', 'krimson', 'Musician', 'https://www.youtube.com/channel/UCpcLjVqgiEaYMmgADVbXZVw', 'FFDD33'],
+			['Sandwich', 'sandwich', 'Coder', 'https://www.google.com/search?q=sandwich&client=opera-gx&hs=tJN&source=lnms&tbm=isch&sa=X&ved=2ahUKEwih3afKpOT6AhXrLrkGHc9lBfUQ_AUoAnoECAEQBA&biw=1879&bih=939&dpr=1', 'FFDD33'],
 			['Beru', 'beru', 'Coder', 'https://twitter.com/art_keny', 'FFDD33'],
 			['YOUK', 'youkdev', 'Coder', 'https://twitter.com/YOUKdev', 'FFDD33'],
+			['Shiroko', 'shiroko', 'Coder', 'https://twitter.com/Shiroko_dev', 'FFDD33'],
 			['GenoX', 'genox', 'Coder and Main Chromatic Scales', 'https://twitter.com/GenoXACT2', 'FFDD33'],
-			['SrPerez', 'penez', 'Coder', 'https://twitter.com/YOUKdev', 'FFDD33'],
+			['SrPerez', 'penez', 'Coder', 'https://twitter.com/NewSrPerez/', 'FFDD33'],
 			[
 				'Akai',
 				'elpepe',
@@ -138,8 +138,8 @@ class CreditsState extends MusicBeatState
 				'https://twitter.com/shey_pancake',
 				'FFDD33'
 			],
-			['Sulayre', 'sul', 'Cutscene Animator', 'https://twitter.com/YOUKdev', 'FFDD33'],
-			['Cote', 'cote', 'Cutscene Animator', 'https://twitter.com/YOUKdev', 'FFDD33'],
+			['Sulayre', 'sul', 'Cutscene Animator', 'https://twitter.com/Sulayre', 'FFDD33'],
+			['Cote', 'cote', 'Cutscene Animator', 'https://twitter.com/Sulayre', 'FFDD33'],
 			[
 				'Nautical',
 				'nautical',
@@ -179,7 +179,7 @@ class CreditsState extends MusicBeatState
 				'Wach',
 				'wach',
 				'Animation Assistant',
-				'https://media.discordapp.net/attachments/853518667270979606/883515823791149066/image0.gif',
+				'https://twitter.com/Wachine_Machine',
 				'FFDD33'
 			],
 			['Poncho', 'poncho', 'Logo', 'https://twitter.com/mrneedIemouse', 'FFDD33'],
@@ -205,105 +205,13 @@ class CreditsState extends MusicBeatState
 				'FFDD33'
 			],
 			[''],
-			['SPECIAL THANKS'],
+			["SPECIAL THANKS"],
 			[
 				'CompotaHyper',
-				'compota',
-				'For streaming Showtime early development build',
-				'https://www.youtube.com/channel/UCZOBgWVv1Scf_1s5g8gkjQQ',
-				'444444'
-			],
-			[''],
-			['Psych Engine Team'],
-			[
-				'Shadow Mario',
-				'shadowmario',
-				'Main Programmer of Psych Engine',
-				'https://twitter.com/Shadow_Mario_',
-				'444444'
-			],
-			[
-				'RiverOaken',
-				'riveroaken',
-				'Main Artist/Animator of Psych Engine',
-				'https://twitter.com/RiverOaken',
-				'C30085'
-			],
-			[
-				'shubs',
-				'shubs',
-				'Additional Programmer of Psych Engine',
-				'https://twitter.com/yoshubs',
-				'279ADC'
-			],
-			[''],
-			['Former Engine Members'],
-			[
-				'bb-panzu',
-				'bb-panzu',
-				'Ex-Programmer of Psych Engine',
-				'https://twitter.com/bbsub3',
-				'389A58'
-			],
-			[''],
-			['Engine Contributors'],
-			[
-				'iFlicky',
-				'iflicky',
-				'Made the Dialogue Sounds',
-				'https://twitter.com/flicky_i',
-				'AA32FE'
-			],
-			[
-				'SqirraRNG',
-				'gedehari',
-				'Chart Editor\'s Sound Waveform base',
-				'https://twitter.com/gedehari',
-				'FF9300'
-			],
-			[
-				'PolybiusProxy',
-				'polybiusproxy',
-				'.MP4 Video Loader Extension',
-				'https://twitter.com/polybiusproxy',
-				'FFEAA6'
-			],
-			[
-				'Keoiki',
-				'keoiki',
-				'Note Splash Animations',
-				'https://twitter.com/Keoiki_',
-				'FFFFFF'
-			],
-			[''],
-			["Funkin' Crew"],
-			[
-				'ninjamuffin99',
-				'ninjamuffin99',
-				"Programmer of Friday Night Funkin'",
-				'https://twitter.com/ninja_muffin99',
+				'compotito',
+				"For testing the mod's beta on stream",
+				'https://www.youtube.com/channel/UCZOBgWVv1Scf_1s5g8gkjQQ/',
 				'F73838'
-			],
-			[
-				'PhantomArcade',
-				'phantomarcade',
-				"Animator of Friday Night Funkin'",
-				'https://twitter.com/PhantomArcade3K',
-				'FFBB1B'
-			],
-			[
-				'evilsk8r',
-				'evilsk8r',
-				"Artist of Friday Night Funkin'",
-				'https://twitter.com/evilsk8r',
-				'53E52C'
-			],
-			[
-				'kawaisprite',
-				'kawaisprite',
-				"Composer of Friday Night Funkin'",
-				'https://twitter.com/kawaisprite',
-				'6475F3'
 			]
 		];
 

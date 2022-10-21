@@ -170,13 +170,8 @@ class TitleState extends MusicBeatState
 		Conductor.changeBPM(102);
 		persistentUpdate = true;
 
-		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
-		// bg.antialiasing = ClientPrefs.globalAntialiasing;
-		// bg.setGraphicSize(Std.int(bg.width * 0.6));
-		// bg.updateHitbox();
-		add(bg);
 
-		logoBl = new FlxSprite(-150, -100);
+		logoBl = new FlxSprite(-13, -23);
 		logoBl.frames = Paths.getSparrowAtlas('titlescreen/logoBumpin');
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
@@ -185,43 +180,52 @@ class TitleState extends MusicBeatState
 		// logoBl.screenCenter();
 		// logoBl.color = FlxColor.BLACK;
 
-		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
-		versionShit.scrollFactor.set();
-		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		add(versionShit);
-		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "Friday Night Funkin' v" + Application.current.meta.get('version'), 12);
-		versionShit.scrollFactor.set();
-		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		add(versionShit);
+		var redbg:FlxSprite = new FlxSprite(0, 0);
+		redbg.frames = Paths.getSparrowAtlas('titlescreen/TITLE SCREEN');
+		redbg.animation.addByPrefix('idle', "bg instance 1", 60);
+		redbg.animation.play('idle');
+		redbg.antialiasing = ClientPrefs.globalAntialiasing;
 
-		swagShader = new ColorSwap();
+		var edificio:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('titlescreen/edificios'));
+		edificio.active = false;
+		edificio.setGraphicSize(Std.int(edificio.width * 1.0));
+		edificio.updateHitbox();
+
+		var SHOU1:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('titlescreen/2'));
+		SHOU1.active = false;
+		SHOU1.setGraphicSize(Std.int(edificio.width * 1.0));
+		SHOU1.updateHitbox();	
+
+		var SHOU2:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('titlescreen/3'));
+		SHOU2.active = false;
+		SHOU2.setGraphicSize(Std.int(edificio.width * 1.0));
+		SHOU2.updateHitbox();	
+
+		var pressstart:FlxSprite = new FlxSprite(0, 480);
+		pressstart.frames = Paths.getSparrowAtlas('titlescreen/titleEnter');
+		pressstart.animation.addByPrefix('idle', "start instance 1", 40);
+		pressstart.animation.play('idle');
+		pressstart.antialiasing = ClientPrefs.globalAntialiasing;
+
 		gfDance = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
 		gfDance.frames = Paths.getSparrowAtlas('titlescreen/gfDanceTitle');
 		gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 		gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 		gfDance.antialiasing = ClientPrefs.globalAntialiasing;
-		add(gfDance);
-		gfDance.shader = swagShader.shader;
+		add(redbg);
+		add(edificio);
+		add(SHOU1);
+		add(SHOU2);	
 		add(logoBl);
-		// logoBl.shader = swagShader.shader;
-
-		titleText = new FlxSprite(100, FlxG.height * 0.8);
-		titleText.frames = Paths.getSparrowAtlas('titlescreen/titleEnter');
-		titleText.animation.addByPrefix('idle', "Press Enter to Begin", 24);
-		titleText.animation.addByPrefix('press', "ENTER PRESSED", 24);
-		titleText.antialiasing = ClientPrefs.globalAntialiasing;
-		titleText.animation.play('idle');
-		titleText.updateHitbox();
-		// titleText.screenCenter(X);
-		add(titleText);
+		add(pressstart);
 
 		var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('logo'));
 		logo.screenCenter();
 		logo.antialiasing = ClientPrefs.globalAntialiasing;
 		// add(logo);
 
-		// FlxTween.tween(logoBl, {y: logoBl.y + 50}, 0.6, {ease: FlxEase.quadInOut, type: PINGPONG});
-		// FlxTween.tween(logo, {y: logoBl.y + 50}, 0.6, {ease: FlxEase.quadInOut, type: PINGPONG, startDelay: 0.1});
+		FlxTween.tween(logoBl, {y: logoBl.y + 30}, 0.9, {ease: FlxEase.quadInOut, type: PINGPONG});
+		FlxTween.tween(logo, {y: logoBl.y + 30}, 0.9, {ease: FlxEase.quadInOut, type: PINGPONG, startDelay: 0.1});
 
 		credGroup = new FlxGroup();
 		add(credGroup);
@@ -512,8 +516,8 @@ class TitleState extends MusicBeatState
 		{
 			remove(logoSpr);
 
-			FlxG.camera.flash(FlxColor.WHITE, 4);
-			remove(credGroup);
+			FlxG.camera.flash(FlxColor.WHITE, 2);
+			remove(credGroup);					
 			skippedIntro = true;
 		}
 	}
