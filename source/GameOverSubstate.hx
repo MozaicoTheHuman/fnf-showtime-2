@@ -3,6 +3,7 @@ package;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSubState;
+import flixel.FlxSprite;
 import flixel.math.FlxMath;
 import flixel.math.FlxPoint;
 import flixel.util.FlxColor;
@@ -19,6 +20,15 @@ class GameOverSubstate extends MusicBeatSubstate
 	var updateCamera:Bool = false;
 
 	var stageSuffix:String = "";
+
+	var effect:FlxSprite;
+	var effectsuelo:FlxSprite;
+
+	var effectx:Float = 0;
+	var effecty:Float = 0;
+
+	var effectsuelox:Float = 0;
+	var effectsueloy:Float = 0;
 
 	var lePlayState:PlayState;
 
@@ -38,6 +48,28 @@ class GameOverSubstate extends MusicBeatSubstate
 		loopSoundName2 = 'gameOverLightOn';
 		endSoundName2 = 'gameOverLightOnEnd';
 	}
+	override function create()
+		{
+			
+
+			if (PlayState.SONG.song.toLowerCase() == "mugen")
+			{
+					
+				effect = new FlxSprite(1300,400);
+				effect.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
+				effect.animation.addByPrefix('ko', "keiou", 24);
+				effect.animation.addByPrefix('continue', "continiu", 24, true);
+				effect.antialiasing = ClientPrefs.globalAntialiasing;
+				
+				effectsuelo = new FlxSprite(1300,400);
+				effectsuelo.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
+				effectsuelo.animation.addByPrefix('waaa', "gameoverland", 24);
+				effectsuelo.antialiasing = ClientPrefs.globalAntialiasing;
+				effectsuelo.visible = false;
+				add(effectsuelo);
+			}
+			super.create();
+		}
 
 	public function new(x:Float, y:Float, camX:Float, camY:Float, state:PlayState)
 	{
@@ -45,14 +77,37 @@ class GameOverSubstate extends MusicBeatSubstate
 		state.setOnLuas('inGameOver', true);
 		super();
 
+
 		Conductor.songPosition = 0;
-
 		bf = new Boyfriend(x, y, characterName);
-		add(bf);
+			add(bf);
+	
+		if (PlayState.SONG.song.toLowerCase() == "light-on")
+		{
+			martin = new Character(x, y, characterName2);
+			martin.alpha = 0;
+			add(martin);
+	
+			effectx = x - 700;
+			effecty = bf.getGraphicMidpoint().y;
+			effectsuelox = x - 100;
+		}
 
-		martin = new Character(x, y, characterName2);
 
-		camFollow = new FlxPoint(bf.getGraphicMidpoint().x, bf.getGraphicMidpoint().y);
+		if (PlayState.SONG.song.toLowerCase() == "mugen")
+		{
+			effectsuelox = x - 300;
+			effectsueloy = y + 210;
+
+			effectx = x - 150;
+			effecty = y - 250;
+			camFollow = new FlxPoint(650,380);
+		}
+		else
+		{
+			camFollow = new FlxPoint(bf.getGraphicMidpoint().x, bf.getGraphicMidpoint().y);
+		}
+		
 
 		FlxG.sound.play(Paths.sound(deathSoundName));
 		Conductor.changeBPM(100);
@@ -74,6 +129,8 @@ class GameOverSubstate extends MusicBeatSubstate
 	{
 		super.update(elapsed);
 
+
+
 		lePlayState.callOnLuas('onUpdate', [elapsed]);
 		if(updateCamera) {
 			var lerpVal:Float = CoolUtil.boundTo(elapsed * 0.6, 0, 1);
@@ -83,6 +140,10 @@ class GameOverSubstate extends MusicBeatSubstate
 		if (controls.ACCEPT)
 		{
 			endBullshit();
+			if (PlayState.SONG.song.toLowerCase() == "mugen")
+				{
+					FlxTween.tween(effect,{alpha :0},0.2,{ease: FlxEase.linear});
+				}
 		}
 
 		if (controls.BACK)
@@ -100,29 +161,74 @@ class GameOverSubstate extends MusicBeatSubstate
 			lePlayState.callOnLuas('onGameOverConfirm', [false]);
 		}
 
-		if (bf.animation.curAnim.name == 'firstDeath')
-		{
-			if(bf.animation.curAnim.curFrame == 12)
+		
+		if (bf.animation.curAnim.name == 'firstDeath' && PlayState.SONG.song.toLowerCase() == "mugen")
 			{
-				FlxG.camera.follow(camFollowPos, LOCKON, 1);
-				updateCamera = true;
+				add(effect);
+				effect.scale.set(3, 3);
+				effect.animation.play("ko");
+				effectsuelo.x = effectsuelox;
+				effectsuelo.y = effectsueloy;
+				if(bf.animation.curAnim.curFrame == 4)
+					{
+						effectsuelo.visible = true;
+						effectsuelo.animation.play("waaa");
+					}
+					if(bf.animation.curAnim.curFrame == 15)
+						{
+							effectsuelo.visible = false;
+						}
+		
+					if (bf.animation.curAnim.finished)
+					{
+						
+						coolStartDeath();
+						bf.startedDeath = true;
+					}
+					new FlxTimer().start(0.5, function(tmr:FlxTimer)
+						{
+							FlxTween.tween(effect,{alpha :0},0.5,{ease: FlxEase.linear});
+						});
+			
 			}
-
-			if (bf.animation.curAnim.finished)
-			{
-				coolStartDeath();
-				bf.startedDeath = true;
-			}
-		}
+			if (bf.animation.curAnim.name == 'firstDeath' && PlayState.SONG.song.toLowerCase() == "light-on")
+				{
+					
+				
+				}
+			if (bf.animation.curAnim.name == 'firstDeath')
+				{
+					if(bf.animation.curAnim.curFrame == 12)
+					{
+						FlxG.camera.follow(camFollowPos, LOCKON, 1);
+						updateCamera = true;
+					}
+		
+					if (bf.animation.curAnim.finished)
+					{
+						coolStartDeath();
+						bf.startedDeath = true;
+					}
+				}
 
 		if (bf.animation.curAnim.name == 'deathLoop' && PlayState.SONG.song.toLowerCase() == "light-on")
 		{
 		    martin.playAnim('victorydance');
-			martin.x = 900;
-		    martin.y = 400;
+			martin.x = effectx;
+		    martin.y = effecty;
 			martin.scale.set(3.0, 3.0);
-			add(martin);
+			FlxTween.tween(martin,{alpha : 1},0.5,{ease: FlxEase.linear});
+		    FlxTween.tween(camFollow,{x : effectsuelox},0.5,{ease: FlxEase.linear});
 		}
+		if (bf.animation.curAnim.name == 'deathLoop' && PlayState.SONG.song.toLowerCase() == "mugen")
+			{
+				effect.alpha = 1;
+				effect.scale.set(1, 1);
+				effect.animation.play("continue");
+				effect.x = effectx;
+				effect.y = effecty;
+				
+			}
 
 		if (FlxG.sound.music.playing)
 		{
@@ -162,5 +268,6 @@ class GameOverSubstate extends MusicBeatSubstate
 			});
 			lePlayState.callOnLuas('onGameOverConfirm', [true]);
 		}
+	
 	}
 }
