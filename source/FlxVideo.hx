@@ -13,14 +13,22 @@ import flixel.FlxG;
 class FlxVideo extends FlxBasic {
 	#if VIDEOS_ALLOWED
 	public var finishCallback:Void->Void = null;
-	
+	public var videoPathName:String;
+	public static var realPause:Bool = false;
+    public var muted:Bool = false;
+
 	#if desktop
 	public static var vlcBitmap:VlcBitmap;
 	#end
 
-	public function new(name:String) {
+	var repeats = 0;
+
+	public function new(name:String, ?isChild:Bool = false, ?repito:Int = 0, ?mute:Bool = false) {
 		super();
 
+        if (mute == true){
+            muted = true;
+        }
 		#if web
 		var player:Video = new Video();
 		player.x = 0;
@@ -60,18 +68,39 @@ class FlxVideo extends FlxBasic {
 		vlcBitmap.repeat = 0;
 		vlcBitmap.inWindow = false;
 		vlcBitmap.fullscreen = false;
-		fixVolume(null);
 
-		FlxG.addChildBelowMouse(vlcBitmap);
-		vlcBitmap.play(checkFile(name));
+       		fixVolume(null); 
+       
+		
+
+		videoPathName = name;
+
+		var child = FlxG.addChildBelowMouse(vlcBitmap);
+		if (isChild) child.visible = false;
+		vlcBitmap.play(checkFile(name), repito);
+
+		repeats = repito;
+
+		/*
+		finishCallback = function() {
+            if (repeats > 0) {
+                vlcBitmap.play(checkFile(videoPathName));
+                repeats -= 1;
+            } else if (repeats < 0) {
+                trace('cock');
+                vlcBitmap.play(checkFile(videoPathName));
+            } else return;
+        }
+		*/
 		#end
 	}
 
 	#if desktop
-	function checkFile(fileName:String):String
+	public function checkFile(fileName:String):String
 	{
 		var pDir = "";
-		var appDir = "file:///" + Sys.getCwd() + "/";
+		var normPath = haxe.io.Path.normalize(Sys.getCwd());
+		var appDir = "file:///" + normPath + "/";
 
 		if (fileName.indexOf(":") == -1) // Not a path
 			pDir = appDir;
@@ -82,24 +111,43 @@ class FlxVideo extends FlxBasic {
 	}
 	
 	public static function onFocus() {
-		if(vlcBitmap != null) {
+		if(vlcBitmap != null && !realPause) {
 			vlcBitmap.resume();
 		}
 	}
 	
 	public static function onFocusLost() {
-		if(vlcBitmap != null) {
+		if(vlcBitmap != null && !realPause) {
 			vlcBitmap.pause();
 		}
 	}
+
+	public function pauseVideo()
+	{
+		if(vlcBitmap != null) {
+			vlcBitmap.pause();
+			realPause = true;
+		}
+	}
+	public function resumeVideo()
+	{
+		if(vlcBitmap != null) {
+			vlcBitmap.resume();
+			realPause = false;
+		}
+	}
+
 
 	function fixVolume(e:Event)
 	{
 		// shitty volume fix
 		vlcBitmap.volume = 0;
-		if(!FlxG.sound.muted && FlxG.sound.volume > 0.01) { //Kind of fixes the volume being too low when you decrease it
-			vlcBitmap.volume = FlxG.sound.volume * 0.5 + 0.5;
-		}
+        if (muted == false){
+            if(!FlxG.sound.muted && FlxG.sound.volume > 0.01) { //Kind of fixes the volume being too low when you decrease it
+                vlcBitmap.volume = FlxG.sound.volume * 0.5 + 0.5;
+            }
+        }
+        
 	}
 
 	public function onVLCComplete()
