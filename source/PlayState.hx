@@ -1187,6 +1187,7 @@ class PlayState extends MusicBeatState
 			{
 				tokyoVideo = new FlxSpriteVideo(0,0, Paths.video('tokio'));
 				tokyoVideo.cameras = [camHUD];
+				tokyoVideo.antialiasing = ClientPrefs.globalAntialiasing;				
 				videogrp.add(tokyoVideo);
 				antibug = true;	
 			}
