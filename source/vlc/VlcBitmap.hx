@@ -16,7 +16,7 @@ import openfl.errors.Error;
 import openfl.events.Event;
 import openfl.geom.Rectangle;
 import vlc.LibVLC;
-
+ 
 /**
  * ...
  * @author Tommy S
@@ -120,10 +120,13 @@ class VlcBitmap extends Bitmap
 
 	/////////////////////////////////////////////////////////////////////////////////////
 
-	public function play(?source:String)
+	public function play(?source:String, ?repito:Int = 0)
 	{
 		#if (cpp && !mobile)
-		libvlc.setRepeat(repeat);
+		var rep = repeat;
+		if (repito != 0) rep = repito;
+
+		libvlc.setRepeat(rep);
 
 		if (!inWindow)
 		{
