@@ -224,6 +224,10 @@ class PlayState extends MusicBeatState
 
 	public var inCutscene:Bool = false;
 	
+	//Video Tokyo
+	var antibug:Bool = false;
+	var videogrp:FlxTypedGroup<FlxSprite>;	
+	var tokyoVideo:FlxSpriteVideo;
 
 	var songLength:Float = 0;
 
@@ -516,6 +520,11 @@ class PlayState extends MusicBeatState
 		add(dadGroup);
 		add(boyfriendGroup);
 
+		if (SONG.song.toLowerCase() == 'tokyo')
+			{
+				videogrp = new FlxTypedGroup<FlxSprite>();
+				add(videogrp);				
+			}
 		#if LUA_ALLOWED
 		luaDebugGroup = new FlxTypedGroup<DebugLuaText>();
 		luaDebugGroup.cameras = [camOther];
@@ -1174,6 +1183,13 @@ class PlayState extends MusicBeatState
 
 	function startSong():Void
 	{
+		if (SONG.song.toLowerCase() == 'tokyo')
+			{
+				tokyoVideo = new FlxSpriteVideo(0,0, Paths.video('tokio'));
+				tokyoVideo.cameras = [camHUD];
+				videogrp.add(tokyoVideo);
+				antibug = true;	
+			}
 		startingSong = false;
 
 		previousFrameTime = FlxG.game.ticks;
@@ -1475,6 +1491,10 @@ class PlayState extends MusicBeatState
 		{
 			if (FlxG.sound.music != null && !startingSong)
 			{
+				if (SONG.song.toLowerCase() == 'tokyo')
+				{
+					tokyoVideo.resume();
+				}
 				resyncVocals();
 			}
 			
@@ -1532,6 +1552,9 @@ class PlayState extends MusicBeatState
 		#if desktop
 		if (health > 0 && !paused)
 		{
+			if (antibug == true){
+				tokyoVideo.resume();
+			}
 			if (Conductor.songPosition > 0.0)
 			{
 				DiscordClient.changePresence(detailsText, SONG.song
@@ -1557,6 +1580,9 @@ class PlayState extends MusicBeatState
 		#if desktop
 		if (health > 0 && !paused)
 		{
+			if (antibug == true){
+				tokyoVideo.pause();
+			}
 			DiscordClient.changePresence(detailsPausedText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 		}
 		#end
@@ -1671,6 +1697,12 @@ class PlayState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('pauseMenu'), 0.4);
 					if (FlxG.sound.music != null)
 					{
+						if (SONG.song.toLowerCase() == 'tokyo')
+						{
+							if (antibug == true){
+								tokyoVideo.pause();
+							}	
+						}
 						FlxG.sound.music.pause();
 						vocals.pause();
 					}
@@ -1687,6 +1719,8 @@ class PlayState extends MusicBeatState
 
 		if (FlxG.keys.justPressed.SEVEN && !endingSong && !inCutscene)
 		{
+			if (antibug == true)
+				tokyoVideo.stop();
 			persistentUpdate = false;
 			paused = true;
 			cancelFadeTween();
@@ -1731,6 +1765,8 @@ class PlayState extends MusicBeatState
 
 		if (FlxG.keys.justPressed.EIGHT && !endingSong && !inCutscene)
 		{
+			if (antibug == true)
+				tokyoVideo.stop();
 			persistentUpdate = false;
 			paused = true;
 			cancelFadeTween();
@@ -2171,7 +2207,8 @@ class PlayState extends MusicBeatState
 
 				vocals.stop();
 				FlxG.sound.music.stop();
-
+				if (SONG.song.toLowerCase() == 'tokyo')
+					tokyoVideo.stop();
 				openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y, this));
 				for (tween in modchartTweens)
 				{
