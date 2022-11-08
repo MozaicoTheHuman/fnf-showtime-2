@@ -30825,15 +30825,6 @@
 				"bpm": 204,
 				"changeBPM": false,
 				"mustHitSection": true
-			},
-			{
-				"lengthInSteps": 16,
-				"altAnim": false,
-				"typeOfSection": 0,
-				"sectionNotes": [],
-				"bpm": 204,
-				"changeBPM": false,
-				"mustHitSection": true
 			}
 		],
 		"player2": "nothing",
@@ -30852,6 +30843,6 @@
 		"needsVoices": true,
 		"validScore": true,
 		"bpm": 204,
-		"speed": 3.2
+		"speed": 3.5
 	}
 }
