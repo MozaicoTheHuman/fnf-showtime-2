@@ -5,7 +5,7 @@ import openfl.events.NetStatusEvent;
 import openfl.media.Video;
 #else
 import openfl.events.Event;
-import vlc.VlcBitmap;
+import vlc.VLCBitmap;
 #end
 import flixel.FlxBasic;
 import flixel.FlxSprite;
@@ -59,7 +59,7 @@ class FlxSpriteVideo extends FlxSprite {
     override function update(elapsed:Float) {
         #if desktop
         fetchTimer ++;
-        if (firstFetch || fetchTimer % Math.round(ClientPrefs.framerate / 30) == 0)
+        if (firstFetch || fetchTimer % Math.round(ClientPrefs.framerate / 60) == 0)
         {
             if (FlxVideo.vlcBitmap != null) {
                 if (pixels != FlxVideo.vlcBitmap.bitmapData) {

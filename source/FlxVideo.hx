@@ -5,20 +5,26 @@ import openfl.events.NetStatusEvent;
 import openfl.media.Video;
 #else
 import openfl.events.Event;
-import vlc.VlcBitmap;
+import vlc.VLCBitmap;
 #end
 import flixel.FlxBasic;
 import flixel.FlxG;
+import lime.app.Application;
 
 class FlxVideo extends FlxBasic {
 	#if VIDEOS_ALLOWED
+	public var isPlaying:Bool = false;
+	public var canSkip:Bool = true;
+	public var canUseSound:Bool = true;
+	public var canUseAutoResize:Bool = true;
+	public var readyCallback:Void->Void = null;	
 	public var finishCallback:Void->Void = null;
 	public var videoPathName:String;
 	public static var realPause:Bool = false;
     public var muted:Bool = false;
 
 	#if desktop
-	public static var vlcBitmap:VlcBitmap;
+	public static var vlcBitmap:VLCBitmap;
 	#end
 
 	var repeats = 0;
@@ -57,17 +63,11 @@ class FlxVideo extends FlxBasic {
 		#elseif desktop
 		// by Polybius, check out PolyEngine! https://github.com/polybiusproxy/PolyEngine
 
-		vlcBitmap = new VlcBitmap();
+		vlcBitmap = new VLCBitmap();
 		vlcBitmap.set_height(FlxG.stage.stageHeight);
 		vlcBitmap.set_width(FlxG.stage.stageHeight * (16 / 9));
 
-		vlcBitmap.onComplete = onVLCComplete;
-		vlcBitmap.onError = onVLCError;
-
 		FlxG.stage.addEventListener(Event.ENTER_FRAME, fixVolume);
-		vlcBitmap.repeat = 0;
-		vlcBitmap.inWindow = false;
-		vlcBitmap.fullscreen = false;
 
        		fixVolume(null); 
        
@@ -77,7 +77,7 @@ class FlxVideo extends FlxBasic {
 
 		var child = FlxG.addChildBelowMouse(vlcBitmap);
 		if (isChild) child.visible = false;
-		vlcBitmap.play(checkFile(name), repito);
+		vlcBitmap.playFile(checkFile(name));
 
 		repeats = repito;
 
@@ -171,7 +171,7 @@ class FlxVideo extends FlxBasic {
 	
 	function onVLCError()
 		{
-			trace("An error has occured while trying to load the video.\nPlease, check if the file you're loading exists.");
+			trace("oe q wea no me carga el video xd");
 			if (finishCallback != null) {
 				finishCallback();
 			}
