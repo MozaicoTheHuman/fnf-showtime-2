@@ -163,7 +163,7 @@ class TitleState extends MusicBeatState
 			{
 				FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 
-				FlxG.sound.music.fadeIn(4, 0, 0.7);
+				FlxG.sound.music.fadeIn(2, 0, 0.7);
 			}
 		}
 
@@ -207,11 +207,6 @@ class TitleState extends MusicBeatState
 		pressstart.animation.play('idle');
 		pressstart.antialiasing = ClientPrefs.globalAntialiasing;
 
-		gfDance = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
-		gfDance.frames = Paths.getSparrowAtlas('titlescreen/gfDanceTitle');
-		gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-		gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
-		gfDance.antialiasing = ClientPrefs.globalAntialiasing;
 		add(redbg);
 		add(edificio);
 		add(SHOU1);
@@ -241,10 +236,10 @@ class TitleState extends MusicBeatState
 
 		credTextShit.visible = false;
 
-		logoSpr = new FlxSprite(0, FlxG.height * 0.4).loadGraphic(Paths.image('titlelogo'));
+		logoSpr = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('titlelogo'));
 		add(logoSpr);
 		logoSpr.visible = false;
-		logoSpr.setGraphicSize(Std.int(logoSpr.width * 0.55));
+		logoSpr.setGraphicSize(Std.int(logoSpr.width * 0.8));
 		logoSpr.updateHitbox();
 		logoSpr.screenCenter(X);
 		logoSpr.antialiasing = ClientPrefs.globalAntialiasing;
@@ -457,11 +452,10 @@ class TitleState extends MusicBeatState
 			switch (curBeat)
 			{
 				case 1:
-					createCoolText(['Psych Engine by'], 45);
+					createCoolText(['ninjamuffin99', 'phantomArcade', 'kawaisprite', 'evilsk8er']);
 				// credTextShit.visible = true;
 				case 3:
-					addMoreText('Shadow Mario', 45);
-					addMoreText('RiverOaken', 45);
+					addMoreText('present');
 				// credTextShit.text += '\npresent...';
 				// credTextShit.addText();
 				case 4:
@@ -470,9 +464,9 @@ class TitleState extends MusicBeatState
 				// credTextShit.text = 'In association \nwith';
 				// credTextShit.screenCenter();
 				case 5:
-					createCoolText(['This is a mod to'], -60);
+					createCoolText(['In association', 'with'], -60);
 				case 7:
-					addMoreText('This game right below lol', -60);
+					addMoreText('newgrounds', -60);
 					logoSpr.visible = true;
 				// credTextShit.text += '\nNewgrounds';
 				case 8:
