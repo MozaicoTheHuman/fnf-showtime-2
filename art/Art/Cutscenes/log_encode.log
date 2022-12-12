@@ -1,0 +1,297 @@
+ffmpeg version 4.2 Copyright (c) 2000-2019 the FFmpeg developers
+  built with gcc 9.1.1 (GCC) 20190807
+  configuration: --enable-gpl --enable-version3 --enable-sdl2 --enable-fontconfig --enable-gnutls --enable-iconv --enable-libass --enable-libdav1d --enable-libbluray --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libopus --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libtheora --enable-libtwolame --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libzimg --enable-lzma --enable-zlib --enable-gmp --enable-libvidstab --enable-libvorbis --enable-libvo-amrwbenc --enable-libmysofa --enable-libspeex --enable-libxvid --enable-libaom --enable-libmfx --enable-amf --enable-ffnvcodec --enable-cuvid --enable-d3d11va --enable-nvenc --enable-nvdec --enable-dxva2 --enable-avisynth --enable-libopenmpt
+  libavutil      56. 31.100 / 56. 31.100
+  libavcodec     58. 54.100 / 58. 54.100
+  libavformat    58. 29.100 / 58. 29.100
+  libavdevice    58.  8.100 / 58.  8.100
+  libavfilter     7. 57.100 /  7. 57.100
+  libswscale      5.  5.100 /  5.  5.100
+  libswresample   3.  5.100 /  3.  5.100
+  libpostproc    55.  5.100 / 55.  5.100
+Splitting the commandline.
+Reading option '-v' ... matched as option 'v' (set logging level) with argument 'debug'.
+Reading option '-nostdin' ... matched as option 'stdin' (enable or disable interaction on standard input) with argument 0.
+Reading option '-progress' ... matched as option 'progress' (write program-readable progress information) with argument 'C:/Users/Maavo/AppData/Local/Temp/KritaFFmpegProgress.dcaMOc'.
+Reading option '-r' ... matched as option 'r' (set frame rate (Hz value, fraction or abbreviation)) with argument '12'.
+Reading option '-start_number' ... matched as AVOption 'start_number' with argument '0'.
+Reading option '-i' ... matched as input url with argument 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle%04d.png'.
+Reading option '-crf' ... matched as AVOption 'crf' with argument '23'.
+Reading option '-preset' ... matched as AVOption 'preset' with argument 'medium'.
+Reading option '-profile:v' ... matched as option 'profile' (set profile) with argument 'baseline'.
+Reading option '-pix_fmt' ... matched as option 'pix_fmt' (set pixel format) with argument 'yuv420p'.
+Reading option '-y' ... matched as option 'y' (overwrite output files) with argument '1'.
+Reading option 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/24.mp4' ... matched as output url.
+Finished splitting the commandline.
+Parsing a group of options: global .
+Applying option v (set logging level) with argument debug.
+Applying option nostdin (enable or disable interaction on standard input) with argument 0.
+Applying option progress (write program-readable progress information) with argument C:/Users/Maavo/AppData/Local/Temp/KritaFFmpegProgress.dcaMOc.
+[file @ 000001e4b942e840] Setting default whitelist 'file,crypto'
+Applying option y (overwrite output files) with argument 1.
+Successfully parsed a group of options.
+Parsing a group of options: input url C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle%04d.png.
+Applying option r (set frame rate (Hz value, fraction or abbreviation)) with argument 12.
+Successfully parsed a group of options.
+Opening an input file: C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle%04d.png.
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0000.png' for reading
+[file @ 000001e4b9472280] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b947a440] Statistics: 343751 bytes read, 0 seeks
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0001.png' for reading
+[file @ 000001e4b94ce640] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b947a0c0] Statistics: 343751 bytes read, 0 seeks
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0002.png' for reading
+[file @ 000001e4b947a0c0] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b947a1c0] Statistics: 321016 bytes read, 0 seeks
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0003.png' for reading
+[file @ 000001e4b947a400] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b947a0c0] Statistics: 321016 bytes read, 0 seeks
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0004.png' for reading
+[file @ 000001e4b947a400] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472280] Statistics: 311713 bytes read, 0 seeks
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0005.png' for reading
+[file @ 000001e4b947a400] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472440] Statistics: 311713 bytes read, 0 seeks
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0006.png' for reading
+[file @ 000001e4b947a400] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472600] Statistics: 311179 bytes read, 0 seeks
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0007.png' for reading
+[file @ 000001e4b947a400] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b94727c0] Statistics: 311179 bytes read, 0 seeks
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0008.png' for reading
+[file @ 000001e4b947a400] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472980] Statistics: 308111 bytes read, 0 seeks
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0009.png' for reading
+[file @ 000001e4b947a400] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472b40] Statistics: 308111 bytes read, 0 seeks
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0010.png' for reading
+[file @ 000001e4b947a400] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9473d00] Statistics: 308149 bytes read, 0 seeks
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0011.png' for reading
+[file @ 000001e4b947a400] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9473d00] Statistics: 308149 bytes read, 0 seeks
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0012.png' for reading
+[file @ 000001e4b947a400] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9473d00] Statistics: 311179 bytes read, 0 seeks
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0013.png' for reading
+[file @ 000001e4b947a400] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9473d00] Statistics: 311179 bytes read, 0 seeks
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0014.png' for reading
+[file @ 000001e4b947a400] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9473d00] Statistics: 311524 bytes read, 0 seeks
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0015.png' for reading
+[file @ 000001e4b947a400] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9473d00] Statistics: 311524 bytes read, 0 seeks
+[image2 @ 000001e4b946eac0] Probe buffer size limit of 5000000 bytes reached
+Input #0, image2, from 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle%04d.png':
+  Duration: 00:00:01.64, start: 0.000000, bitrate: N/A
+    Stream #0:0, 16, 1/25: Video: png, 1 reference frame, rgba(pc), 1920x1080 [SAR 2834:2834 DAR 16:9], 0/1, 25 fps, 25 tbr, 25 tbn, 25 tbc
+Successfully opened the file.
+Parsing a group of options: output url C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/24.mp4.
+Applying option profile:v (set profile) with argument baseline.
+Applying option pix_fmt (set pixel format) with argument yuv420p.
+Successfully parsed a group of options.
+Opening an output file: C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/24.mp4.
+[file @ 000001e4ba1f6a80] Setting default whitelist 'file,crypto'
+Successfully opened the file.
+detected 8 logical cores
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+cur_dts is invalid st:0 (0) [init:0 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+    Last message repeated 8 times
+[graph 0 input from stream 0:0 @ 000001e4b9472740] Setting 'video_size' to value '1920x1080'
+[graph 0 input from stream 0:0 @ 000001e4b9472740] Setting 'pix_fmt' to value '26'
+[graph 0 input from stream 0:0 @ 000001e4b9472740] Setting 'time_base' to value '1/12'
+[graph 0 input from stream 0:0 @ 000001e4b9472740] Setting 'pixel_aspect' to value '2834/2834'
+[graph 0 input from stream 0:0 @ 000001e4b9472740] Setting 'sws_param' to value 'flags=2'
+[graph 0 input from stream 0:0 @ 000001e4b9472740] Setting 'frame_rate' to value '12/1'
+[graph 0 input from stream 0:0 @ 000001e4b9472740] w:1920 h:1080 pixfmt:rgba tb:1/12 fr:12/1 sar:2834/2834 sws_param:flags=2
+[format @ 000001e4b9479c80] Setting 'pix_fmts' to value 'yuv420p'
+[auto_scaler_0 @ 000001e4ba587e40] Setting 'flags' to value 'bicubic'
+[auto_scaler_0 @ 000001e4ba587e40] w:iw h:ih flags:'bicubic' interl:0
+[format @ 000001e4b9479c80] auto-inserting filter 'auto_scaler_0' between the filter 'Parsed_null_0' and the filter 'format'
+[AVFilterGraph @ 000001e4ba34e700] query_formats: 4 queried, 2 merged, 1 already done, 0 delayed
+[auto_scaler_0 @ 000001e4ba587e40] w:1920 h:1080 fmt:rgba sar:2834/2834 -> w:1920 h:1080 fmt:yuv420p sar:1/1 flags:0x4
+[libx264 @ 000001e4ba1f5a80] using mv_range_thread = 40
+[libx264 @ 000001e4ba1f5a80] using SAR=1/1
+[libx264 @ 000001e4ba1f5a80] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000001e4ba1f5a80] profile Constrained Baseline, level 4.0, 4:2:0, 8-bit
+[libx264 @ 000001e4ba1f5a80] 264 - core 158 r2984 3759fcb - H.264/MPEG-4 AVC codec - Copyleft 2003-2019 - http://www.videolan.org/x264.html - options: cabac=0 ref=3 deblock=1:0:0 analyse=0x1:0x111 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=0 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=0 weightp=0 keyint=250 keyint_min=12 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/24.mp4':
+  Metadata:
+    encoder         : Lavf58.29.100
+    Stream #0:0, 0, 1/12288: Video: h264 (libx264), 1 reference frame (avc1 / 0x31637661), yuv420p, 1920x1080 [SAR 1:1 DAR 16:9], 0/1, q=-1--1, 12 fps, 12288 tbn, 12 tbc
+    Metadata:
+      encoder         : Lavc58.54.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: -1
+Clipping frame in rate conversion by 0.000008
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+    Last message repeated 7 times
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0016.png' for reading
+[file @ 000001e4ba5f6440] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b94df280] Statistics: 310789 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0017.png' for reading
+[file @ 000001e4ba5f5bc0] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4ba21eac0] Statistics: 310789 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0018.png' for reading
+[file @ 000001e4ba5f5ac0] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4ba21eac0] Statistics: 311179 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0019.png' for reading
+[file @ 000001e4ba5f6100] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 311179 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0020.png' for reading
+[file @ 000001e4ba5f6100] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 311179 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0021.png' for reading
+[file @ 000001e4ba5f6680] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 325233 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0022.png' for reading
+[file @ 000001e4ba5f6440] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 325233 bytes read, 0 seeks
+frame=   15 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0023.png' for reading
+[file @ 000001e4ba5f6680] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 324444 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0024.png' for reading
+[file @ 000001e4ba5f6440] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 324444 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0025.png' for reading
+[file @ 000001e4ba5f6780] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 324444 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0026.png' for reading
+[file @ 000001e4ba5f5cc0] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 324444 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0027.png' for reading
+[file @ 000001e4ba5f5ac0] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 324444 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0028.png' for reading
+[file @ 000001e4ba5f6440] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 324444 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0029.png' for reading
+[file @ 000001e4ba5f6240] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 324444 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0030.png' for reading
+[file @ 000001e4ba5f6780] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 324444 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0031.png' for reading
+[file @ 000001e4ba5f6100] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 324444 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0032.png' for reading
+[file @ 000001e4ba5f6680] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 324444 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0033.png' for reading
+[file @ 000001e4ba5f6240] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 324444 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0034.png' for reading
+[file @ 000001e4ba5f6100] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 324444 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0035.png' for reading
+[file @ 000001e4ba5f5f00] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 324444 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0036.png' for reading
+[file @ 000001e4ba5f5f00] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 324444 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0037.png' for reading
+[file @ 000001e4ba5f6000] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 324444 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0038.png' for reading
+[file @ 000001e4ba5f6680] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 324444 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0039.png' for reading
+[file @ 000001e4ba5f6540] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 324444 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[image2 @ 000001e4b946eac0] Opening 'C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle0040.png' for reading
+[file @ 000001e4ba5f6880] Setting default whitelist 'file,crypto'
+[AVIOContext @ 000001e4b9472a00] Statistics: 324444 bytes read, 0 seeks
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+    Last message repeated 5 times
+frame=   39 fps= 38 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+    Last message repeated 3 times
+[out_0_0 @ 000001e4b9472580] EOF on sink link out_0_0:default.
+No more output streams to write to, finishing.
+[libx264 @ 000001e4ba1f5a80] frame=   0 QP=13.44 NAL=3 Slice:I Poc:0   I:8160 P:0    SKIP:0    size=87646 bytes
+[libx264 @ 000001e4ba1f5a80] frame=   1 QP=19.83 NAL=2 Slice:P Poc:2   I:22   P:169  SKIP:7969 size=1387 bytes
+[libx264 @ 000001e4ba1f5a80] frame=   2 QP=18.17 NAL=2 Slice:P Poc:4   I:1789 P:194  SKIP:6177 size=40058 bytes
+[libx264 @ 000001e4ba1f5a80] frame=   3 QP=17.55 NAL=2 Slice:P Poc:6   I:13   P:97   SKIP:8050 size=603 bytes
+[libx264 @ 000001e4ba1f5a80] frame=   4 QP=17.53 NAL=2 Slice:P Poc:8   I:683  P:685  SKIP:6792 size=33447 bytes
+[libx264 @ 000001e4ba1f5a80] frame=   5 QP=16.64 NAL=2 Slice:P Poc:10  I:12   P:84   SKIP:8064 size=679 bytes
+[libx264 @ 000001e4ba1f5a80] frame=   6 QP=17.98 NAL=2 Slice:P Poc:12  I:262  P:313  SKIP:7585 size=14558 bytes
+[libx264 @ 000001e4ba1f5a80] frame=   7 QP=16.05 NAL=2 Slice:P Poc:14  I:4    P:39   SKIP:8117 size=370 bytes
+[libx264 @ 000001e4ba1f5a80] frame=   8 QP=16.01 NAL=2 Slice:P Poc:16  I:28   P:21   SKIP:8111 size=687 bytes
+[libx264 @ 000001e4ba1f5a80] frame=   9 QP=14.62 NAL=2 Slice:P Poc:18  I:0    P:9    SKIP:8151 size=61 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  10 QP=20.03 NAL=2 Slice:P Poc:20  I:10   P:11   SKIP:8139 size=338 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  11 QP=9.00 NAL=2 Slice:P Poc:22  I:0    P:1    SKIP:8159 size=16 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  12 QP=12.28 NAL=2 Slice:P Poc:24  I:31   P:15   SKIP:8114 size=1381 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  13 QP=6.08 NAL=2 Slice:P Poc:26  I:2    P:1    SKIP:8157 size=22 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  14 QP=14.62 NAL=2 Slice:P Poc:28  I:24   P:39   SKIP:8097 size=1714 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  15 QP=18.61 NAL=2 Slice:P Poc:30  I:1    P:4    SKIP:8155 size=41 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  16 QP=16.28 NAL=2 Slice:P Poc:32  I:14   P:46   SKIP:8100 size=1365 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  17 QP=4.56 NAL=2 Slice:P Poc:34  I:5    P:1    SKIP:8154 size=35 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  18 QP=8.41 NAL=2 Slice:P Poc:36  I:16   P:35   SKIP:8109 size=1503 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  19 QP=7.72 NAL=2 Slice:P Poc:38  I:2    P:11   SKIP:8147 size=105 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  20 QP=7.12 NAL=2 Slice:P Poc:40  I:1    P:2    SKIP:8157 size=25 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  21 QP=12.61 NAL=2 Slice:P Poc:42  I:612  P:683  SKIP:6865 size=24920 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  22 QP=11.60 NAL=2 Slice:P Poc:44  I:19   P:38   SKIP:8103 size=317 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  23 QP=16.86 NAL=2 Slice:P Poc:46  I:143  P:950  SKIP:7067 size=23323 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  24 QP=14.12 NAL=2 Slice:P Poc:48  I:17   P:43   SKIP:8100 size=370 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  25 QP=9.22 NAL=2 Slice:P Poc:50  I:1    P:2    SKIP:8157 size=24 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  26 QP=9.00 NAL=2 Slice:P Poc:52  I:0    P:0    SKIP:8160 size=12 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  27 QP=9.00 NAL=2 Slice:P Poc:54  I:0    P:0    SKIP:8160 size=12 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  28 QP=9.00 NAL=2 Slice:P Poc:56  I:0    P:0    SKIP:8160 size=12 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  29 QP=9.00 NAL=2 Slice:P Poc:58  I:0    P:0    SKIP:8160 size=12 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  30 QP=9.00 NAL=2 Slice:P Poc:60  I:0    P:0    SKIP:8160 size=12 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  31 QP=9.00 NAL=2 Slice:P Poc:62  I:0    P:0    SKIP:8160 size=12 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  32 QP=9.00 NAL=2 Slice:P Poc:64  I:0    P:0    SKIP:8160 size=12 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  33 QP=9.00 NAL=2 Slice:P Poc:66  I:0    P:0    SKIP:8160 size=12 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  34 QP=9.00 NAL=2 Slice:P Poc:68  I:0    P:0    SKIP:8160 size=12 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  35 QP=9.00 NAL=2 Slice:P Poc:70  I:0    P:0    SKIP:8160 size=12 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  36 QP=9.00 NAL=2 Slice:P Poc:72  I:0    P:0    SKIP:8160 size=12 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  37 QP=9.00 NAL=2 Slice:P Poc:74  I:0    P:0    SKIP:8160 size=12 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  38 QP=9.00 NAL=2 Slice:P Poc:76  I:0    P:0    SKIP:8160 size=12 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  39 QP=10.00 NAL=2 Slice:P Poc:78  I:0    P:0    SKIP:8160 size=12 bytes
+[libx264 @ 000001e4ba1f5a80] frame=  40 QP=11.00 NAL=2 Slice:P Poc:80  I:0    P:0    SKIP:8160 size=12 bytes
+frame=   41 fps= 28 q=-1.0 Lsize=     231kB time=00:00:03.33 bitrate= 568.3kbits/s speed=2.28x    
+[AVIOContext @ 000001e4b946e980] Statistics: 0 seeks, 3 writeouts
+video:230kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.424081%
+Input file #0 (C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/idle%04d.png):
+  Input stream #0:0 (video): 41 packets read (13098817 bytes); 41 frames decoded; 
+  Total: 41 packets (13098817 bytes) demuxed
+Output file #0 (C:/Users/Maavo/Documents/FNF MODS/showtime2/fnf-showtime-2/art/Art/Cutscenes/24.mp4):
+  Output stream #0:0 (video): 41 frames encoded; 41 packets muxed (235804 bytes); 
+  Total: 41 packets (235804 bytes) muxed
+41 frames successfully decoded, 0 decoding errors
+[AVIOContext @ 000001e4ba1f6b80] Statistics: 2 seeks, 4 writeouts
+[libx264 @ 000001e4ba1f5a80] frame I:1     Avg QP:13.44  size: 87646
+[libx264 @ 000001e4ba1f5a80] frame P:40    Avg QP:12.04  size:  3688
+[libx264 @ 000001e4ba1f5a80] mb I  I16..4: 72.2%  0.0% 27.8%
+[libx264 @ 000001e4ba1f5a80] mb P  I16..4:  0.5%  0.0%  0.6%  P16..4:  0.5%  0.3%  0.2%  0.0%  0.0%    skip:97.8%
+[libx264 @ 000001e4ba1f5a80] coded y,uvDC,uvAC intra: 24.4% 0.0% 0.0% inter: 0.5% 0.0% 0.0%
+[libx264 @ 000001e4ba1f5a80] i16 v,h,dc,p: 93%  4%  3%  0%
+[libx264 @ 000001e4ba1f5a80] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 28% 16% 26%  7%  3%  4%  4%  7%  4%
+[libx264 @ 000001e4ba1f5a80] i8c dc,h,v,p: 100%  0%  0%  0%
+[libx264 @ 000001e4ba1f5a80] ref P L0: 75.4% 13.5% 11.0%
+[libx264 @ 000001e4ba1f5a80] kb/s:550.65

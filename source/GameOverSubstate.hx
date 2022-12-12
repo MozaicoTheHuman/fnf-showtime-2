@@ -57,13 +57,13 @@ class GameOverSubstate extends MusicBeatSubstate
 					
 				effect = new FlxSprite(1300,400);
 				effect.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
-				effect.animation.addByPrefix('ko', "keiou", 24);
+				effect.animation.addByPrefix('ko', "keiou", 60);
 				effect.animation.addByPrefix('continue', "continiu", 24, true);
 				effect.antialiasing = ClientPrefs.globalAntialiasing;
 				
 				effectsuelo = new FlxSprite(1300,400);
 				effectsuelo.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
-				effectsuelo.animation.addByPrefix('waaa', "gameoverland", 24);
+				effectsuelo.animation.addByPrefix('waaa', "gameoverland", 60);
 				effectsuelo.antialiasing = ClientPrefs.globalAntialiasing;
 				effectsuelo.visible = false;
 				add(effectsuelo);

@@ -1552,7 +1552,10 @@ class PlayState extends MusicBeatState
 	{
 		#if desktop
 		if (health > 0 && !paused)
-			tokyoVideo.resume();
+			if (SONG.song.toLowerCase() == 'tokyo')
+				{
+					tokyoVideo.resume();
+				}
 		{
 			if (antibug == true){
 				tokyoVideo.resume();

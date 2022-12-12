@@ -386,11 +386,11 @@ class MainMenuState extends MusicBeatState
 		add(new AchievementObject(id, camAchievement));
 		if (id == 16)
 		{
-			FlxG.sound.play(Paths.sound('stunsound'), 0.7);
+			FlxG.sound.play(Paths.sound('secretSound'), 0.7);
 		}
 		else
 		{
-			FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+			FlxG.sound.play(Paths.sound('awardMenu'), 0.8);
 		}
 
 		trace('Giving achievement ' + id);
@@ -612,7 +612,7 @@ class MainMenuState extends MusicBeatState
 				else
 				{
 					selectedSomethin = true;
-					FlxG.sound.play(Paths.sound('confirmMenu'));
+					FlxG.sound.play(Paths.sound('confirmMenuStory'));
 					diffItems.forEach(function(spr:FlxSprite)
 					{
 														 
