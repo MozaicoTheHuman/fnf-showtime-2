@@ -819,8 +819,18 @@ class PlayState extends MusicBeatState
 		var daSong:String = Paths.formatToSongPath(curSong);
 		if (isStoryMode && !seenCutscene)
 		{
+			var lan:String = Language.giveLan();
 			switch (daSong)
 			{
+				// Los videos deben tener -eng o -esp al final
+				case 'lovely':
+					startVideo('cutscene-LOVELY-'+lan);
+				case 'wannabe':
+					startVideo('cutscene-WANNABE-'+lan);
+				case 'finale':
+					startVideo('cutscene-FINALE-'+lan);
+				case 'showtime':
+					startVideo('cutscene-SHOWTIME-'+lan);
 				default:
 					startCountdown();
 			}

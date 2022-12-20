@@ -22,6 +22,7 @@ class ClientPrefs
 	public static var camZooms:Bool = true;
 	public static var hideHud:Bool = false;
 	public static var noteOffset:Int = 0;
+	public static var language:String = "english";
 	public static var arrowHSV:Array<Array<Int>> = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
 	public static var imagesPersist:Bool = false;
 	public static var ghostTapping:Bool = true;
@@ -101,6 +102,7 @@ class ClientPrefs
 		FlxG.save.data.havePlayedDerker = havePlayedDerker;
 		FlxG.save.data.unlockedMenus = unlockedMenus;
 		FlxG.save.data.dynamicCamera = dynamicCamera;
+		FlxG.save.data.language = language;
 
 		var achieves:Array<String> = [];
 		for (i in 0...Achievements.achievementsUnlocked.length)
@@ -142,6 +144,10 @@ class ClientPrefs
 			{
 				Main.fpsVar.visible = showFPS;
 			}
+		}
+		if (FlxG.save.data.language != null)
+		{
+			language = FlxG.save.data.language;
 		}
 		if (FlxG.save.data.flashing != null)
 		{

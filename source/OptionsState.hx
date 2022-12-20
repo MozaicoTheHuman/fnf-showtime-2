@@ -24,6 +24,7 @@ import flixel.util.FlxSave;
 import flixel.util.FlxTimer;
 import haxe.Json;
 import lime.utils.Assets;
+import Language;
 
 using StringTools;
 
@@ -792,9 +793,11 @@ class PreferencesSubstate extends MusicBeatSubstate
 {
 	private static var curSelected:Int = 0;
 	static var unselectableOptions:Array<String> = ['GRAPHICS', 'GAMEPLAY'];
-	static var noCheckbox:Array<String> = ['Framerate'];
-
+	static var noCheckbox:Array<String> = ['Framerate','Language'];
+	private static var lanSelect:Int = 0;
+	
 	static var options:Array<String> = [
+		'Language',
 		'GRAPHICS',
 		'Dynamic Camera',
 		'Low Quality',
@@ -1059,6 +1062,16 @@ class PreferencesSubstate extends MusicBeatSubstate
 								FlxG.drawFramerate = ClientPrefs.framerate;
 								FlxG.updateFramerate = ClientPrefs.framerate;
 							}
+						case 'Language':
+
+							lanSelect += add;
+
+							if (lanSelect < 0)
+								lanSelect = Language.languages.length-1;
+							if (lanSelect >= Language.languages.length)
+								lanSelect = 0;
+
+							ClientPrefs.language = Language.languages[lanSelect];
 					}
 				reloadValues();
 
@@ -1133,6 +1146,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 				daText = "If checked, hides most HUD elements.";
 			case 'Hide Song Length':
 				daText = "If checked, the bar showing how much time is left\nwill be hidden.";
+			case 'Language':
+				daText = "Change the language.";
 		}
 		descText.text = daText;
 
@@ -1235,6 +1250,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 				{
 					case 'Framerate':
 						daText = '' + ClientPrefs.framerate;
+					case 'Language':
+						daText = '' + ClientPrefs.language;
 				}
 				var lastTracker:FlxSprite = text.sprTracker;
 				text.sprTracker = null;
