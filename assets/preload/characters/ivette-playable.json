@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-228,
+				100
+			],
+			"anim": "singUP",
+			"fps": 25,
+			"name": "IvetteUp",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-229,
+				100
+			],
+			"anim": "singDOWN",
+			"fps": 25,
+			"name": "IvetteDown",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-228,
+				100
+			],
+			"loop": false,
+			"fps": 23,
+			"anim": "idle",
+			"indices": [],
+			"name": "IvetteIdle"
+		},
+		{
+			"offsets": [
+				-237,
+				142
+			],
+			"loop": false,
+			"fps": 27,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "Arriba"
+		},
+		{
+			"offsets": [
+				-250,
+				113
+			],
+			"loop": false,
+			"fps": 27,
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "Abajo"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-228,
+				100
+			],
+			"anim": "singRIGHT",
+			"fps": 25,
+			"name": "IvetteLeft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-225,
+				100
+			],
+			"anim": "singLEFT",
+			"fps": 25,
+			"name": "IvetteRight",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-210,
+				125
+			],
+			"anim": "singLEFT-alt",
+			"fps": 27,
+			"name": "Derecha",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-140,
+				120
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 27,
+			"name": "Izquierda",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/IvetteNEW",
+	"position": [
+		-600,
+		55
+	],
+	"healthicon": "ivette",
+	"flip_x": false,
+	"healthbar_colors": [
+		131,
+		89,
+		218
+	],
+	"camera_position": [
+		-280,
+		-80
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

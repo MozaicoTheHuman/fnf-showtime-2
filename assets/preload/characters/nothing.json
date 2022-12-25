@@ -93,10 +93,10 @@
 				7,
 				0
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "idle",
-			"loop": false,
+			"indices": [],
 			"name": "ronaldLEFT"
 		}
 	],
@@ -109,9 +109,9 @@
 	"healthicon": "nothing",
 	"flip_x": true,
 	"healthbar_colors": [
-		123,
-		214,
-		246
+		255,
+		255,
+		255
 	],
 	"camera_position": [
 		-310,

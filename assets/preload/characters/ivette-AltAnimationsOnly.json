@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-228,
+				100
+			],
+			"anim": "idle",
+			"fps": 23,
+			"name": "IvetteIdle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-237,
+				142
+			],
+			"anim": "singUP",
+			"fps": 27,
+			"name": "Arriba",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-330,
+				121
+			],
+			"anim": "singLEFT",
+			"fps": 27,
+			"name": "Izquierda",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-250,
+				113
+			],
+			"anim": "singDOWN",
+			"fps": 27,
+			"name": "Abajo",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-251,
+				125
+			],
+			"anim": "singRIGHT",
+			"fps": 27,
+			"name": "Derecha",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/IvetteNEW",
+	"position": [
+		-580,
+		55
+	],
+	"healthicon": "ivette",
+	"flip_x": false,
+	"healthbar_colors": [
+		131,
+		89,
+		218
+	],
+	"camera_position": [
+		140,
+		-80
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

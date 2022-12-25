@@ -86,6 +86,8 @@ function onBeatHit()
 	end
 end
 
+
+
 function onStepHit()
 	if curStep == 889 then 
 		doTweenY('cutscenemoment', 'black1',-393, 1.1,'linear') 

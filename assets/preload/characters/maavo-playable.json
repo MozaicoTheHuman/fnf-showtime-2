@@ -1,136 +1,150 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-50,
 				72
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "Maavo IDLE",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Maavo IDLE"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-11,
 				123
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 25,
-			"name": "Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				40,
 				-136
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 25,
-			"name": "Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-1,
 				80
 			],
-			"anim": "singUPmiss",
+			"loop": false,
 			"fps": 25,
-			"name": "Arriba",
-			"indices": []
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "Arriba"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				40,
 				-62
 			],
-			"anim": "singDOWNmiss",
+			"loop": false,
 			"fps": 25,
-			"name": "Abajo",
-			"indices": []
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "Abajo"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				198,
 				6
 			],
-			"loop": false,
-			"fps": 25,
 			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "Derecha"
+			"fps": 25,
+			"name": "Derecha",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				91,
 				-24
 			],
-			"loop": false,
-			"fps": 25,
 			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "Izquierda"
+			"fps": 25,
+			"name": "Izquierda",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				91,
 				-22
 			],
-			"loop": false,
-			"fps": 25,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Left"
+			"fps": 25,
+			"name": "Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				221,
+				7
+			],
+			"anim": "singLEFT",
+			"fps": 25,
+			"name": "Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				207,
+				81
+			],
+			"anim": "firstDeath",
+			"fps": 25,
+			"name": "Maavo GAMEOVER",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				207,
+				81
+			],
+			"anim": "deathLoop",
+			"fps": 25,
+			"name": "Maavo dead",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				207,
+				81
+			],
+			"anim": "deathConfirm",
+			"fps": 25,
+			"name": "Maavo retry",
+			"indices": []
 		},
 		{
 			"offsets": [
 				221,
 				7
 			],
-			"loop": false,
-			"fps": 25,
-			"anim": "singLEFT",
-			"indices": [],
+			"indices": [
+				4,
+				5
+			],
+			"fps": 4,
+			"anim": "ponderingEnd",
+			"loop": true,
 			"name": "Right"
-		},
-		{
-			"offsets": [
-				207,
-				81
-			],
-			"indices": [],
-			"fps": 25,
-			"anim": "firstDeath",
-			"loop": false,
-			"name": "Maavo GAMEOVER"
-		},
-		{
-			"offsets": [
-				207,
-				81
-			],
-			"indices": [],
-			"fps": 25,
-			"anim": "deathLoop",
-			"loop": false,
-			"name": "Maavo dead"
-		},
-		{
-			"offsets": [
-				207,
-				81
-			],
-			"indices": [],
-			"fps": 25,
-			"anim": "deathConfirm",
-			"loop": false,
-			"name": "Maavo retry"
 		}
 	],
 	"no_antialiasing": false,
