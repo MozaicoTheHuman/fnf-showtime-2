@@ -9,7 +9,6 @@ class Language{
 
     public static function giveLan():String{
         //ClientPrefs.saveSettings();
-        updateLang();
         var st:String = 'eng';
         if (ClientPrefs.language == "english"){
             st = 'eng';
