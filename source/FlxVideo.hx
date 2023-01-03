@@ -7,6 +7,7 @@ import openfl.media.Video;
 import openfl.events.Event;
 import vlc.VLCBitmap;
 #end
+
 import flixel.FlxBasic;
 import flixel.FlxG;
 import lime.app.Application;
@@ -59,7 +60,7 @@ class FlxVideo extends FlxBasic {
 			}
 		});
 		netStream.play(name);
-
+		
 		#elseif desktop
 		// by Polybius, check out PolyEngine! https://github.com/polybiusproxy/PolyEngine
 
@@ -67,9 +68,12 @@ class FlxVideo extends FlxBasic {
 		vlcBitmap.set_height(FlxG.stage.stageHeight);
 		vlcBitmap.set_width(FlxG.stage.stageHeight * (16 / 9));
 
-		FlxG.stage.addEventListener(Event.ENTER_FRAME, fixVolume);
+		vlcBitmap.onComplete = onVLCComplete;
+		
 
-       		fixVolume(null); 
+		FlxG.stage.addEventListener(Event.ENTER_FRAME, fixVolume);
+	
+       	fixVolume(null); 
        
 		
 
@@ -159,6 +163,7 @@ class FlxVideo extends FlxBasic {
 
 		if (FlxG.game.contains(vlcBitmap))
 		{
+	
 			FlxG.game.removeChild(vlcBitmap);
 		}
 

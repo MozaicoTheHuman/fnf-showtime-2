@@ -48,7 +48,7 @@ class VLCBitmap extends Bitmap
 	public var onResume:Void->Void = null;
 	public var onBuffer:Void->Void = null;
 	public var onOpening:Void->Void = null;
-	public var onComplete:Void->Void = null;
+	public var onComplete:Void->Void;
 	public var onError:String->Void = null;
 	public var onTimeChanged:Int->Void = null;
 	public var onPositionChanged:Int->Void = null;
@@ -251,7 +251,6 @@ class VLCBitmap extends Bitmap
 			#if HXC_DEBUG_TRACE
 			trace("The Video got done!");
 			#end
-
 			if (onComplete != null) onComplete();
 		}
 		if (untyped __cpp__('libvlc -> flags[4]') != -1)
@@ -259,7 +258,7 @@ class VLCBitmap extends Bitmap
 			var newTime:Int = untyped __cpp__('libvlc -> flags[4]');
 
 			#if HXC_DEBUG_TRACE
-			trace("video time now is: " + newTime);
+//			trace("video time now is: " + newTime);
 			#end
 
 			if (onTimeChanged != null) onTimeChanged(newTime);
@@ -269,7 +268,7 @@ class VLCBitmap extends Bitmap
 			var newPos:Int = untyped __cpp__('libvlc -> flags[5]');
 
 			#if HXC_DEBUG_TRACE
-			trace("the position of the video now is: " + newPos);
+			//trace("the position of the video now is: " + newPos);
 			#end
 
 			if (onPositionChanged != null) onPositionChanged(newPos);
@@ -279,7 +278,7 @@ class VLCBitmap extends Bitmap
 			var newPos:Int = untyped __cpp__('libvlc -> flags[6]');
 
 			#if HXC_DEBUG_TRACE
-			trace("the seeked pos of the video now is: " + newPos);
+			//trace("the seeked pos of the video now is: " + newPos);
 			#end
 
 			if (onSeekableChanged != null) onSeekableChanged(newPos);
