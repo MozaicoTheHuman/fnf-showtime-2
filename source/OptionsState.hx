@@ -31,7 +31,7 @@ using StringTools;
 // TO DO: Redo the menu creation system for not being as dumb
 class OptionsState extends MusicBeatState
 {
-	var options:Array<String> = ['Note Colors', 'Controls', 'Adjust Delay and Combo', 'Preferences'];
+	var options:Array<String> = ['Controls', 'Adjust Delay and Combo', 'Preferences'];
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 
 	private static var curSelected:Int = 0;
@@ -1113,9 +1113,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 		switch (options[curSelected])
 		{
 			case 'Dynamic Camera':
-				daText = "The camera will move in the note direction.";
+				daText = "If checked, the camera will move in the note direction.";
 			case 'Framerate':
-				daText = "Pretty self explanatory, isn't it?\nDefault value is 60.";
+				daText = "Changes the game's framerate.\nDefault value is 60.";
 			case 'FPS Counter':
 				daText = "If unchecked, hides FPS Counter.";
 			case 'Low Quality':
@@ -1123,19 +1123,19 @@ class PreferencesSubstate extends MusicBeatSubstate
 			case 'Persistent Cached Data':
 				daText = "If checked, images loaded will stay in memory\nuntil the game is closed, this increases memory usage,\nbut basically makes reloading times instant.";
 			case 'Anti-Aliasing':
-				daText = "If unchecked, disables anti-aliasing, increases performance\nat the cost of the graphics not looking as smooth.";
+				daText = "If unchecked, makes graphics a little sharper, increasing performance at the cost of the graphics\nlooking more jagged.";
 			case 'Downscroll':
-				daText = "If checked, notes go Down instead of Up, simple enough.";
+				daText = "If checked, notes go Down instead of Up.";
 			case 'Middlescroll':
 				daText = "If checked, hides Opponent's notes and your notes get centered.";
 			case 'Ghost Tapping':
-				daText = "If checked, you won't get misses from pressing keys\nwhile there are no notes able to be hit.";
+				daText = "TU MAMAAAA CONCHETUMAREE.";
 			case 'Swearing':
 				daText = "If unchecked, your mom won't be angry at you.";
 			case 'Violence':
 				daText = "If unchecked, you won't get disgusted as frequently.";
 			case 'Note Quantization':
-				daText = "If checked, the note colors will depend on\ntheir beat quantization instead of their direction.";
+				daText = "If checked, the note colors will depend on\ntheir beat quantization instead of their direction.\n(Highly recommended)";
 			case 'Note Splashes':
 				daText = "If unchecked, hitting \"Sick!\" notes won't show particles.";
 			case 'Flashing Lights':
@@ -1147,7 +1147,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 			case 'Hide Song Length':
 				daText = "If checked, the bar showing how much time is left\nwill be hidden.";
 			case 'Language':
-				daText = "Change the language.";
+				daText = "Choose the game's language / Elige el idioma del juego.";
 		}
 		descText.text = daText;
 

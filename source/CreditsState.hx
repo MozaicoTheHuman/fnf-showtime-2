@@ -54,7 +54,7 @@ class CreditsState extends MusicBeatState
 			[
 				'Mozaico',
 				'mozaico',
-				'Director, Main Artist/Animator,\nCoder, Charter, Maavo VA',
+				'Director, Main Artist/Animator,\nCoder, Charter, Maavo VA,\nMaavo PDFMM+ Model Port',
 				'https://www.youtube.com/c/MaavoTheHuman/',
 				'FFDD33'
 			],
@@ -66,7 +66,7 @@ class CreditsState extends MusicBeatState
 				'FFDD33'
 			],
 			['Joan Atlas', 'joancitoatlantis', 'Musician', 'https://twitter.com/joan_atlas', 'FFDD33'],
-			['Ejsu Multimedia', 'ejsu', 'Musician', 'https://www.youtube.com/channel/UCIW8uHlBQ8ZOaxuo3PzpTig', 'FFDD33'],
+			['Ejsu Multimedia', 'ejsu', 'Musician', 'https://www.youtube.com/@EjsuMultimedia/', 'FFDD33'],
 			[
 				'Vtroy Jerof',
 				'vtroy',
@@ -77,22 +77,27 @@ class CreditsState extends MusicBeatState
 			[
 				'Hanzo Santiago',
 				'hanzo',
-				'Musician, Artist, Animator, Hanzo VA',
-				'https://www.youtube.com/channel/UC6QSZk8SYmTm_VoZAPOW6NQ',
+				'Musician, Hanzo VA',
+				'https://www.youtube.com/@HanzoSantiagoGharbanzo/',
 				'FFDD33'
 			],
+			['FlameMind', 'flamemind', 'Musician', 'https://twitter.com/flamemind10', 'FFDD33'],			
 			['Gabriel ML', 'gabo', 'Musician', 'https://www.youtube.com/channel/UCi3ibK4Z7HEXiPQsNTLOaZg', 'FFDD33'],
-			['Krimson', 'krimson', 'Musician', 'https://www.youtube.com/channel/UCpcLjVqgiEaYMmgADVbXZVw', 'FFDD33'],
+			['Krimson', 'krimson', 'Musician', 'https://www.youtube.com/@krimson7430', 'FFDD33'],
+			['Vzer', 'vzer', 'Musician', 'https://www.youtube.com/@TheVzer', 'FFDD33'],		
+			['NaxoAtWork', 'naxo', 'Musician', 'https://www.youtube.com/@NaxoAtWork', 'FFDD33'],	
+			['DIA', 'dia', 'UTAU Voicebanks', 'https://www.youtube.com/channel/UCpcLjVqgiEaYMmgADVbXZVw', 'FFDD33'],									
 			['Sandwich', 'sandwich', 'Coder', 'https://www.google.com/search?q=sandwich&client=opera-gx&hs=tJN&source=lnms&tbm=isch&sa=X&ved=2ahUKEwih3afKpOT6AhXrLrkGHc9lBfUQ_AUoAnoECAEQBA&biw=1879&bih=939&dpr=1', 'FFDD33'],
 			['Beru', 'beru', 'Coder', 'https://twitter.com/art_keny', 'FFDD33'],
 			['YOUK', 'youkdev', 'Coder', 'https://twitter.com/YOUKdev', 'FFDD33'],
 			['Shiroko', 'shiroko', 'Coder', 'https://twitter.com/Shiroko_dev', 'FFDD33'],
 			['GenoX', 'genox', 'Coder and Main Chromatic Scales', 'https://twitter.com/GenoXACT2', 'FFDD33'],
 			['SrPerez', 'penez', 'Coder', 'https://twitter.com/NewSrPerez/', 'FFDD33'],
+			['Stzr', 'stzr', 'Coder', 'https://twitter.com/stzr_real', 'FFDD33'],			
 			[
 				'Akai',
 				'elpepe',
-				'Coder Lol (Dont Press Me)',
+				'Coder Lol',
 				'estovademasiadodificilhermanosientaselibresdedispararlealapantalla',
 				'FFFFFF'
 			],
@@ -100,9 +105,16 @@ class CreditsState extends MusicBeatState
 				'EsoMarx',
 				'elchavoballistic',
 				'Background Artist',
-				'https://www.youtube.com/channel/UCeQKrBu2HeKOw2EnlL4BKNg',
+				'https://www.youtube.com/@esomarx3074/',
 				'FFDD33'
 			],
+			[
+				'Teeth',
+				'tetasmasculinasdefurrotes avecesmepreocupascandace',
+				'Background Artist',
+				'https://twitter.com/teethlust',
+				'FFDD33'
+			],			
 			[
 				'Natu',
 				'natu',
@@ -127,19 +139,19 @@ class CreditsState extends MusicBeatState
 			[
 				'TzenZoule',
 				'tzen',
-				'Storyboard Artist',
+				'Storyboard and Cover Artist',
 				'https://twitter.com/AbZoule',
 				'FFDD33'
 			],
 			[
 				'Shey Pancake',
 				'sheicita',
-				'Cutscene Artist',
+				'Cutscene Artist and Ivette VA',
 				'https://twitter.com/shey_pancake',
 				'FFDD33'
 			],
-			['Sulayre', 'sul', 'Cutscene Animator', 'https://twitter.com/Sulayre', 'FFDD33'],
-			['Cote', 'cote', 'Cutscene Animator', 'https://twitter.com/Sulayre', 'FFDD33'],
+			['Cote', 'cote', 'Cutscene Animator', 'https://cdn.discordapp.com/attachments/893308970213720065/1062570173489483786/maZmDeNx_400x400.jpg', 'FFDD33'],
+			['TatoxicLG', 'tatoxic', 'Cutscene Animator', 'https://twitter.com/tatoxicLg', 'FFDD33'],
 			[
 				'Nautical',
 				'nautical',
@@ -162,23 +174,16 @@ class CreditsState extends MusicBeatState
 				'FFDD33'
 			],
 			[
-				'Miki',
-				'miki',
-				'Ivette VA',
-				'https://cdn.discordapp.com/attachments/885208632533348433/887917996977299476/miki.gif',
-				'FFDD33'
-			],
-			[
-				'Riusaki',
-				'Riusaki',
+				'thixie',
+				'thixie',
 				'Maritza VA',
-				'https://media.discordapp.net/attachments/893307883415023616/967080071619833917/c-mamoe.png',
+				'https://twitter.com/thixieedy',
 				'FFDD33'
 			],
 			[
 				'Wach',
 				'wach',
-				'Animation Assistant',
+				'Animation Assistant, Maavo 3D model',
 				'https://twitter.com/Wachine_Machine',
 				'FFDD33'
 			],
@@ -191,10 +196,10 @@ class CreditsState extends MusicBeatState
 				'FFDD33'
 			],
 			[
-				'KoichiM4',
+				'KoiM4',
 				'koichi',
 				'Light On chromatic scales',
-				'https://twitter.com/Koixis_',
+				'https://twitter.com/koim4_',
 				'FFDD33'
 			],
 			[
@@ -207,8 +212,8 @@ class CreditsState extends MusicBeatState
 			[
 				'AndresLoquendero0',
 				'andres',
-				'Maavo PDFTA model port',
-				'https://www.youtube.com/c/Andere27',
+				'Maavo PDFTA model port help',
+				'https://www.youtube.com/@AndresELLoquendero0',
 				'FFDD33'
 			],	
 			[''],
@@ -217,9 +222,51 @@ class CreditsState extends MusicBeatState
 				'CompotaHyper',
 				'compotito',
 				"For testing the mod's beta on stream",
-				'https://www.youtube.com/channel/UCZOBgWVv1Scf_1s5g8gkjQQ/',
+				'https://www.youtube.com/@compotahyperlol6245/',
 				'F73838'
-			]
+			],
+			[
+				'Sulayre',
+				'sul',
+				'For bringing Chilean modders together\nto make the best mod ever <3 ',
+				'https://twitter.com/Sulayre',
+				'FFDD33'
+			],
+			[
+				'Miki',
+				'miki',
+				'For voicing Ivette on past projects,\nand providing the samples for the FNF chromatic',
+				'https://cdn.discordapp.com/attachments/885208632533348433/887917996977299476/miki.gif',
+				'FFDD33'
+			],					
+			[
+				'Neru',
+				'nada',
+				'Original Tokyo Teddy Bear composer',
+				'https://twitter.com/Neru_Sleep',
+				'FFDD33'
+			],	
+			[
+				'Tanjiro Taidana',
+				'nada',
+				'Original Tokyo Teddy Bear UST file',
+				'https://www.youtube.com/@tanjirotaidana',
+				'FFDD33'
+			],			
+			[
+				'PointyyESM',
+				'nada',
+				'For introducing me to FNF modding',
+				'https://twitter.com/PointyyESM',
+				'FFDD33'
+			],	
+			[
+				'Los Basuros',
+				'nada',
+				'For being the best friend group ever <3',
+				'https://cdn.discordapp.com/attachments/899372708851249282/990441090333159474/unknown.png',
+				'FFDD33'
+			]																
 		];
 
 		for (i in pisspoop)

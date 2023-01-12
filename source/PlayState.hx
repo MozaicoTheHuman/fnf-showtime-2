@@ -1711,7 +1711,12 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
-					FlxG.sound.play(Paths.sound('pauseMenu'), 0.4);
+					if (PlayState.SONG.song.toLowerCase() == "tokyo")					
+						FlxG.sound.play(Paths.sound('pauseTokyo'), 0.4);
+					if(PlayState.SONG.stage == "kfm")					
+						FlxG.sound.play(Paths.sound('pauseMUGEN'), 0.4);
+					if(PlayState.SONG.stage == "ponderingmall" || PlayState.SONG.stage == "show" || PlayState.SONG.stage == "callejon")					
+						FlxG.sound.play(Paths.sound('pauseMenu'), 0.4);	
 					if (FlxG.sound.music != null)
 					{
 						if (SONG.song.toLowerCase() == 'tokyo')
