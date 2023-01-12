@@ -1855,10 +1855,6 @@ class PlayState extends MusicBeatState
 		FlxG.watch.addQuick("stepShit", curStep);
 
 
-		if (FlxG.keys.anyJustPressed && inCutscene && isStoryMode)
-		{
-			
-		}
 		// RESET = Quick Game Over Screen
 		if (controls.RESET && !inCutscene && !endingSong)
 		{
