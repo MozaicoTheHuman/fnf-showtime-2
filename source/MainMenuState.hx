@@ -756,13 +756,13 @@ class MainMenuState extends MusicBeatState
 	{
 		var path:String = Sys.getEnv("AppData") + "/ninjamuffin99/Friday Night Funkin' - Derker Bluer Edition/ninjamuffin99/funkin.sol";
 		trace(path);
-		var idAward = 16;
+		var idAward = 11;
 		if (FileSystem.exists(path) && !ClientPrefs.havePlayedDerker)
 		{
 			#if ACHIEVEMENTS_ALLOWED
 			Achievements.loadAchievements();
 			Achievements.achievementsUnlocked[idAward][1] = true;
-			giveAchievement(16);
+			giveAchievement(11);
 			ClientPrefs.havePlayedDerker = true;
 			ClientPrefs.saveSettings();
 			FlxG.sound.playMusic(Paths.music('easterEgg'), 0);

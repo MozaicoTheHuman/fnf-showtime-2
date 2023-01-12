@@ -4,13 +4,14 @@ import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSubState;
 import flixel.FlxSprite;
+import flixel.FlxCamera;
 import flixel.math.FlxMath;
 import flixel.math.FlxPoint;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
-
+import Achievements;
 class GameOverSubstate extends MusicBeatSubstate
 {
 	var bf:Boyfriend;
@@ -32,6 +33,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	var lePlayState:PlayState;
 
+	private var camAchievement:FlxCamera;
 	public static var characterName:String = 'bf';
 	public static var characterName2:String = 'victorydance';
 	public static var deathSoundName:String = 'fnf_loss_sfx';
@@ -49,27 +51,65 @@ class GameOverSubstate extends MusicBeatSubstate
 		endSoundName2 = 'gameOverLightOnEnd';
 	}
 	override function create()
-		{
-			
+	{
+		camAchievement = new FlxCamera();
+		camAchievement.bgColor.alpha = 0;
 
-			if (PlayState.SONG.song.toLowerCase() == "mugen")
-			{
-					
-				effect = new FlxSprite(1300,400);
-				effect.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
-				effect.animation.addByPrefix('ko', "keiou", 60);
-				effect.animation.addByPrefix('continue', "continiu", 24, true);
-				effect.antialiasing = ClientPrefs.globalAntialiasing;
-				
-				effectsuelo = new FlxSprite(1300,400);
-				effectsuelo.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
-				effectsuelo.animation.addByPrefix('waaa', "gameoverland", 60);
-				effectsuelo.antialiasing = ClientPrefs.globalAntialiasing;
-				effectsuelo.visible = false;
-				add(effectsuelo);
-			}
-			super.create();
+		FlxG.cameras.add(camAchievement);
+
+		#if ACHIEVEMENTS_ALLOWED
+		Achievements.loadAchievements();
+		var death10:Int = 8;
+		var death:Int = 4;
+		var lovely:Int = 9;
+		if (!Achievements.achievementsUnlocked[lovely][1] && PlayState.SONG.song.toLowerCase() == 'lovely')
+		{ 
+			Achievements.achievementsUnlocked[lovely][1] = true;
+			giveAchievement(lovely);
+			ClientPrefs.saveSettings();
 		}
+		if (!Achievements.achievementsUnlocked[death][1] && PlayState.deathCounter == 3)
+		{ 
+			Achievements.achievementsUnlocked[death][1] = true;
+			giveAchievement(death);
+			ClientPrefs.saveSettings();
+		}
+		if (!Achievements.achievementsUnlocked[death10][1] && PlayState.deathCounter == 10)
+		{ 
+			Achievements.achievementsUnlocked[death10][1] = true;
+			giveAchievement(death10);
+			ClientPrefs.saveSettings();
+		}
+		#end
+		if (PlayState.SONG.song.toLowerCase() == "mugen")
+		{
+					
+			effect = new FlxSprite(1300,400);
+			effect.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
+			effect.animation.addByPrefix('ko', "keiou", 60);
+			effect.animation.addByPrefix('continue', "continiu", 24, true);
+			effect.antialiasing = ClientPrefs.globalAntialiasing;
+				
+			effectsuelo = new FlxSprite(1300,400);
+			effectsuelo.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
+			effectsuelo.animation.addByPrefix('waaa', "gameoverland", 60);
+			effectsuelo.antialiasing = ClientPrefs.globalAntialiasing;
+			effectsuelo.visible = false;
+			add(effectsuelo);
+		}
+		super.create();
+	}
+
+		
+	#if ACHIEVEMENTS_ALLOWED
+	function giveAchievement(id:Int)
+	{
+		FlxG.log.add('Completed achievement "' + id +'"');
+		add(new AchievementObject(id, camAchievement));
+		FlxG.sound.play(Paths.sound('awardMenu'), 0.7);
+		trace('Giving achievement ' + id);
+	}
+	#end
 
 	public function new(x:Float, y:Float, camX:Float, camY:Float, state:PlayState)
 	{

@@ -12,44 +12,34 @@ using StringTools;
 class Achievements {
 	public static var achievementsStuff:Array<Dynamic> = [ //Name, Description, Hidden achievement
 		["Freaky on a Friday Night",	"Play on a Friday... Night.",							 true],
-		["She Calls Me Daddy Too",		"Beat Week 1 on Hard with no Misses.",					false],
-		["No More Tricks",				"Beat Week 2 on Hard with no Misses.",					false],
-		["Call Me The Hitman",			"Beat Week 3 on Hard with no Misses.",					false],
-		["Lady Killer",					"Beat Week 4 on Hard with no Misses.",					false],
-		["Missless Christmas",			"Beat Week 5 on Hard with no Misses.",					false],
-		["Highscore!!",					"Beat Week 6 on Hard with no Misses.",					false],
-		["You'll Pay For That...",		"Beat Week 7 on Hard with no Misses.",					true],
-		["What a Funkin' Disaster!",	"Complete a Song with a rating lower than 20%.",		false],
-		["Perfectionist",				"Complete a Song with a rating of 100%.",				false],
-		["Roadkill Enthusiast",			"Watch the Henchmen die over 100 times.",				false],
-		["Oversinging Much...?",		"Hold down a note for 20 seconds.",						false],
-		["Hyperactive",					"Finish a Song without going Idle.",					false],
-		["Just the Two of Us",			"Finish a Song pressing only two keys.",				false],
-		["Toaster Gamer",				"Have you tried to run the game on a toaster?",			false],
-		["Debugger",					"Beat the \"Test\" Stage from the Chart Editor.",		 true],
-		["Good Taste for Music",		"Play a song on Friday Night Funkin - Derker Bluer Edition once",			true],
-		["WTF SOS RE PRO",		"Payaso culiao te partieron la raja brigido",			false]
+		["The full OST",		"Completa todas las canciones",									false],
+		["Game Set",		"Completa 'Showtime' sin fallos",									false],
+		["Flippy",		"Completa todas las canciones sin fallos",								false],
+		["Simply a difference in skill",		"Pierde 3 veces seguidas",						false],
+		["Stunning Performance",		"Termina la Week con mas del 90% de acurracy en hard",	false],
+		["MUGEN",		"Accede a la cancion de Ronald con el menu Debug",						false],
+		["El Maaverso",		"Termina la cancion 'Light On' sin fallos y en hard",				false],
+		["manco",		"Pierde 10 veces en total",												false],
+		["WIII GANE!",		"Pierde en Lovely",													false],
+		["Y los telones se cierran",		"Consigue todos los logros",						false],
+		["Good Taste for Music",		"Play a song on Friday Night Funkin - Derker Bluer Edition once",	true],
+		["WTF SOS RE PRO",		"Payaso culiao te partieron la raja brigido",					false]
 	];
 
 	public static var achievementsUnlocked:Array<Dynamic> = [ //Save string and Achievement tag + is it unlocked?
-		['friday_night_play', false],	//0
-		['week1_nomiss', false],		//1
-		['week2_nomiss', false],		//2
-		['week3_nomiss', false],		//3
-		['week4_nomiss', false],		//4
-		['week5_nomiss', false],		//5
-		['week6_nomiss', false],		//6
-		['week7_nomiss', false],		//7
-		['ur_bad', false],				//8
-		['ur_good', false],				//9
-		['roadkill_enthusiast', false],	//10
-		['oversinging', false],			//11
-		['hype', false],				//12
-		['two_keys', false],			//13
-		['toastie', false],				//14
-		['debugger', false], 			//15
-		['good_taste', false], 			//16
-		['mugen', false] 			//17
+		['friday_night_play', 	false],		//0
+		['fullost', 			false],		//1
+		['game', 				false],		//2
+		['flippy', 				false],		//3
+		['skill', 				false],		//4
+		['perform', 			false],		//5
+		['ronal', 				false],		//6
+		['maaverse', 			false],		//7
+		['manco', 				false],		//8
+		['gane', 				false],		//9
+		['telones', 			false],		//10
+		['good_taste', 			false], 	//11
+		['mugen', 				false] 		//12
 	];
 
 	public static var henchmenDeath:Int = 0;

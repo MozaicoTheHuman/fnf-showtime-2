@@ -217,6 +217,7 @@ class PlayState extends MusicBeatState
 
 	public static var campaignScore:Int = 0;
 	public static var campaignMisses:Int = 0;
+	public static var campaignPercent:Float = 0;
 	public static var seenCutscene:Bool = false;
 	public static var deathCounter:Int = 0;
 
@@ -988,19 +989,20 @@ class PlayState extends MusicBeatState
 			bg.scrollFactor.set();
 			bg.cameras = [camHUD];
 			add(bg);
+			
 
 			(new FlxVideo(fileName)).finishCallback = function()
-			{
-				remove(bg);
-				if (endingSong)
 				{
-					endSong();
+					remove(bg);
+					if (endingSong)
+					{
+						endSong();
+					}
+					else
+					{
+						startCountdown();
+					}
 				}
-				else
-				{
-					startCountdown();
-				}
-			}
 			return;
 		}
 		else
@@ -1017,7 +1019,7 @@ class PlayState extends MusicBeatState
 			startCountdown();
 		}
 	}
-
+	
 	// You don't have to add a song, just saying. You can just do "startDialogue(dialogueJson);" and it should work
 	var startTimer:FlxTimer;
 	var finishTimer:FlxTimer = null;
@@ -1848,7 +1850,10 @@ class PlayState extends MusicBeatState
 		FlxG.watch.addQuick("stepShit", curStep);
 
 
-		
+		if (FlxG.keys.anyJustPressed && inCutscene && isStoryMode)
+		{
+			
+		}
 		// RESET = Quick Game Over Screen
 		if (controls.RESET && !inCutscene && !endingSong)
 		{
@@ -2678,7 +2683,7 @@ class PlayState extends MusicBeatState
 		}
 		else
 		{
-			var achieve:Int = checkForAchievement([1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14, 15, 17]);
+			var achieve:Int = checkForAchievement([1, 2, 3, 5, 7, 12]);
 			var charToUnlock:String = null;
 			if (achieve > -1)
 			{
@@ -2718,6 +2723,7 @@ class PlayState extends MusicBeatState
 
 			if (isStoryMode)
 			{
+				campaignPercent += ratingPercent;
 				campaignScore += songScore;
 				campaignMisses += songMisses;
 
@@ -3159,11 +3165,11 @@ class PlayState extends MusicBeatState
 				}
 
 				#if ACHIEVEMENTS_ALLOWED
-				var achieve:Int = checkForAchievement([11]);
+				/*var achieve:Int = checkForAchievement([11]);
 				if (achieve > -1)
 				{
 					startAchievement(achieve);
-				}
+				}*/
 				#end
 			}
 			else if (boyfriend.holdTimer > Conductor.stepCrochet * 0.001 * boyfriend.singDuration
@@ -3837,7 +3843,7 @@ class PlayState extends MusicBeatState
 			{
 				switch (arrayIDs[i])
 				{
-					case 1 | 2 | 3 | 4 | 5 | 6 | 7:
+					case 1:
 						if (isStoryMode
 							&& campaignMisses + songMisses < 1
 							&& CoolUtil.difficultyString() == 'HARD'
@@ -3849,65 +3855,43 @@ class PlayState extends MusicBeatState
 							Achievements.unlockAchievement(arrayIDs[i]);
 							return arrayIDs[i];
 						}
-					case 8:
-						if (ratingPercent < 0.2 && !practiceMode && !cpuControlled)
+					case 2:
+						if (Paths.formatToSongPath(SONG.song) == 'showtime' && songMisses < 1 && !usedPractice)
 						{
 							Achievements.unlockAchievement(arrayIDs[i]);
 							return arrayIDs[i];
 						}
-					case 9:
-						if (ratingPercent >= 1 && !usedPractice && !cpuControlled)
+					case 3:
+						if (isStoryMode
+							&& campaignMisses + songMisses < 1
+							&& CoolUtil.difficultyString() == 'HARD'
+							&& storyPlaylist.length <= 1
+							&& WeekData.getWeekFileName() == ('week' + arrayIDs[i])
+							&& !changedDifficulty
+							&& !usedPractice)
 						{
 							Achievements.unlockAchievement(arrayIDs[i]);
 							return arrayIDs[i];
 						}
-					case 10:
-						if (Achievements.henchmenDeath >= 100)
+					case 5:
+						if (isStoryMode
+							&& campaignPercent >= 3.6
+							&& CoolUtil.difficultyString() == 'HARD'
+							&& storyPlaylist.length <= 1
+							&& WeekData.getWeekFileName() == ('artweek')
+							&& !changedDifficulty
+							&& !usedPractice)
 						{
 							Achievements.unlockAchievement(arrayIDs[i]);
 							return arrayIDs[i];
 						}
-					case 11:
-						if (boyfriend.holdTimer >= 20 && !usedPractice)
+					case 7:
+						if (Paths.formatToSongPath(SONG.song) == 'light-on' && CoolUtil.difficultyString() == 'HARD' &&  songMisses < 1 && !usedPractice) 
 						{
 							Achievements.unlockAchievement(arrayIDs[i]);
 							return arrayIDs[i];
 						}
 					case 12:
-						if (!boyfriendIdled && !usedPractice)
-						{
-							Achievements.unlockAchievement(arrayIDs[i]);
-							return arrayIDs[i];
-						}
-					case 13:
-						if (!usedPractice)
-						{
-							var howManyPresses:Int = 0;
-							for (j in 0...keysPressed.length)
-							{
-								if (keysPressed[j])
-									howManyPresses++;
-							}
-
-							if (howManyPresses <= 2)
-							{
-								Achievements.unlockAchievement(arrayIDs[i]);
-								return arrayIDs[i];
-							}
-						}
-					case 14:
-						if (/*ClientPrefs.framerate <= 60 &&*/ ClientPrefs.lowQuality && !ClientPrefs.globalAntialiasing && !ClientPrefs.imagesPersist)
-						{
-							Achievements.unlockAchievement(arrayIDs[i]);
-							return arrayIDs[i];
-						}
-					case 15:
-						if (Paths.formatToSongPath(SONG.song) == 'test' && !usedPractice)
-						{
-							Achievements.unlockAchievement(arrayIDs[i]);
-							return arrayIDs[i];
-						}
-					case 17:
 						if (Paths.formatToSongPath(SONG.song) == 'mugen' && CoolUtil.difficultyString() == 'HARD' && !usedPractice)
 						{
 							Achievements.unlockAchievement(arrayIDs[i]);
