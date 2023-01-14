@@ -1,0 +1,41 @@
+{
+	"achievements": [
+					"Great Show", 
+					"Damn Expert",
+					"Detective",
+					"Perfect Round",
+					"Skill Issue",
+					"You literally have no hands",
+					"YAAAY I WON!",
+					"Perfeccionist",
+					"Sick",
+					"Friday Night Funkin'",
+					"And the curtain falls",
+					"An OG"
+					],
+	"achievements_desc": 
+					[
+					"Beat the Week on Hard with 90% of acurracy", 
+					"Beat the song Showtime with no misses",
+					"Put the secret code on debug mode. \nHint: Fighting Game Engine, Maavo's first Appearance, Ronald McDonald.",
+					"Beat the song kfm.mid with no misses",
+					"Die 3 times consecutively",
+					"Die 10 times in total",
+					"Die on 'Lovely'",
+					"Beat all the songs on Hard with no misses",
+					"Beat 'Tokyo Teddy Bear' on Extreme with no misses",
+					"Play on a Friday Night",
+					"Complete every achievement",
+					"Play any song on FNF Derker Bluer Edition"
+					],
+	"achievements_song_unlock":
+					[
+					"Complete 'Great Show' achievement \nto unlock this song",
+					"Complete 'YAAAY I WON!' achievement \nto unlock this song",
+					"Complete 'Detective' achievement \nto unlock this song",
+					"Complete 'Damn Expert' achievement \nto unlock this song"
+					]
+	
+	
+	
+}

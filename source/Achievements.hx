@@ -11,35 +11,33 @@ using StringTools;
 
 class Achievements {
 	public static var achievementsStuff:Array<Dynamic> = [ //Name, Description, Hidden achievement
-		["Freaky on a Friday Night",	"Play on a Friday... Night.",							 true],
-		["The full OST",		"Completa todas las canciones",									false],
-		["Game Set",		"Completa 'Showtime' sin fallos",									false],
-		["Flippy",		"Completa todas las canciones sin fallos",								false],
-		["Simply a difference in skill",		"Pierde 3 veces seguidas",						false],
-		["Stunning Performance",		"Termina la Week con mas del 90% de acurracy en hard",	false],
-		["MUGEN",		"Accede a la cancion de Ronald con el menu Debug",						false],
-		["El Maaverso",		"Termina la cancion 'Light On' sin fallos y en hard",				false],
-		["manco",		"Pierde 10 veces en total",												false],
+		["Gran Espectaculo",		"Termina la Week con mas del 90% de acurracy en hard",	false],
+		["Maldito Experto",		"Completa 'Showtime' sin fallos",									false],
+		["Detective",		"Pon el codigo secreto en el menu debug. \nPistas: Motor de videojuegos de lucha, primera aparicion de Maavo, Ronald McDonald",						false],
+		["Partida Perfecta",		"Completa la cancion 'kfm.mid' sin fallos",				false],
+		["Manco",		"Pierde 3 veces seguidas",						false],
+		["Literal no tienes manos",		"Pierde 10 veces en total",												false],
 		["WIII GANE!",		"Pierde en Lovely",													false],
+		["Perfeccionista",		"Completa todas las canciones sin fallos en Hard",								false],
+		["Enfermo",		"Completa 'Tokyo Teddy Bear' en dificultad Extrema sin fallos	",									false],
+		["Friday Night Funkin'",	"Juega un viernes por la noche xd",							 true],
 		["Y los telones se cierran",		"Consigue todos los logros",						false],
-		["Good Taste for Music",		"Play a song on Friday Night Funkin - Derker Bluer Edition once",	true],
-		["WTF SOS RE PRO",		"Payaso culiao te partieron la raja brigido",					false]
+		["Le sabes",		"Savedata del mod del Derker",	true]
 	];
 
 	public static var achievementsUnlocked:Array<Dynamic> = [ //Save string and Achievement tag + is it unlocked?
-		['friday_night_play', 	false],		//0
-		['fullost', 			false],		//1
-		['game', 				false],		//2
-		['flippy', 				false],		//3
-		['skill', 				false],		//4
-		['perform', 			false],		//5
-		['ronal', 				false],		//6
-		['maaverse', 			false],		//7
-		['manco', 				false],		//8
-		['gane', 				false],		//9
-		['telones', 			false],		//10
-		['good_taste', 			false], 	//11
-		['mugen', 				false] 		//12
+		['great_show', 	false],					//0
+		['expert', 			false],				//1
+		['detective', 				false],		//2
+		['perfect', 				false],		//3
+		['manco', 				false],			//4
+		['no_hands', 			false],			//5
+		['gane', 				false],			//6
+		['perfeccionist', 			false],		//7
+		['sick', 				false],			//8
+		['friday_night_play', 			false],	//9
+		['telones', 			false], 		//10
+		['good_taste', 				false] 		//11
 	];
 
 	public static var henchmenDeath:Int = 0;
@@ -48,7 +46,47 @@ class Achievements {
 		achievementsUnlocked[id][1] = true;
 		FlxG.sound.play(Paths.sound('awardMenu'), 0.7);
 	}
+	public static function changeLang(){
+		if (ClientPrefs.language == "English")
+		{
+			for (i in 0...achievementsUnlocked.length)
+				{
+					achievementsStuff[i][0] = Language.achievementsnames[i];
+					achievementsStuff[i][1] = Language.achievementsdescnames[i];
+				}
+		}
+		else if (ClientPrefs.language == "Spanish")
+		{
+			for (i in 0...achievementsUnlocked.length)
+				{
+					achievementsStuff[i][0] = Language.achievementsnames[i];
+					achievementsStuff[i][1] = Language.achievementsdescnames[i];
+				}
+		}
+	}
+	public static function allAchievements(){
+		var logros:Array<Bool> = [];
+		var x:Int = 0;
+		for (i in 0...10)
+		{
+			trace(i);
+			if (achievementsUnlocked[i][1])
+			{
+				logros[x] = true;
+				x++;
+				trace(achievementsUnlocked[i][1]);
 
+			}
+			
+		}
+		trace(logros);
+		trace(logros.length);
+		if (logros.length == 10)
+		{
+			return true;
+		}
+		return false;
+	}
 	public static function loadAchievements():Void {
 		if(FlxG.save.data != null) {
 			if(FlxG.save.data.achievementsUnlocked != null) {
@@ -65,6 +103,7 @@ class Achievements {
 			if(henchmenDeath == 0 && FlxG.save.data.henchmenDeath != null) {
 				henchmenDeath = FlxG.save.data.henchmenDeath;
 			}
+			changeLang();
 		}
 
 		// You might be asking "Why didn't you just fucking load it directly dumbass??"

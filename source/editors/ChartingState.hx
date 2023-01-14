@@ -1,5 +1,6 @@
 package editors;
 
+import flixel.util.FlxTimer;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -8,6 +9,7 @@ import Section.SwagSection;
 import Song.SwagSong;
 import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.FlxCamera;
 import flixel.FlxObject;
 import flixel.input.keyboard.FlxKey;
 import flixel.addons.display.FlxGridOverlay;
@@ -46,7 +48,8 @@ import sys.io.File;
 import sys.FileSystem;
 import flash.media.Sound;
 #end
-
+import Achievements;
+import Characters.CharacterUnlocker;
 using StringTools;
 
 class ChartingState extends MusicBeatState
@@ -95,7 +98,7 @@ class ChartingState extends MusicBeatState
 	private static var lastSong:String = '';
 
 	var bpmTxt:FlxText;
-
+	var songUnlocked:CharacterUnlocker;
 	var camPos:FlxObject;
 	var strumLine:FlxSprite;
 	var curSong:String = 'Dadbattle';
@@ -163,12 +166,19 @@ class ChartingState extends MusicBeatState
 
 	private var blockPressWhileTypingOn:Array<FlxUIInputText> = [];
 	private var blockPressWhileScrolling:Array<FlxUIDropDownMenuCustom> = [];
-
+	private var camAchievement:FlxCamera;
 	var waveformSprite:FlxSprite;
 	var gridLayer:FlxTypedGroup<FlxSprite>;
 
 	override function create()
 	{
+		#if ACHIEVEMENTS_ALLOWED
+		Achievements.loadAchievements();
+		//camAchievement = new FlxCamera();
+		//camAchievement.bgColor.alpha = 0;
+
+		//FlxG.cameras.add(camAchievement);
+		#end
 		#if MODS_ALLOWED
 		Paths.destroyLoadedImages();
 		#end
@@ -177,6 +187,8 @@ class ChartingState extends MusicBeatState
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("Chart Editor", StringTools.replace(PlayState.SONG.song, '-', ' '));
 		#end
+
+		
 
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 		bg.scrollFactor.set();
@@ -330,6 +342,24 @@ class ChartingState extends MusicBeatState
 		super.create();
 	}
 
+	#if ACHIEVEMENTS_ALLOWED
+	function giveAchievement(id:Int)
+	{
+		var logro:AchievementObject = new AchievementObject(id);
+		logro.scrollFactor.set();
+		FlxG.log.add('Completed achievement "' + id +'"');
+		add(logro);
+		FlxG.sound.play(Paths.sound('awardMenu'), 0.7);
+		trace('Giving achievement ' + id);
+		if (id == 2)
+		{
+			songUnlocked = new CharacterUnlocker("mugen");
+			songUnlocked.scrollFactor.set();
+			add(songUnlocked);
+		}
+	}
+	#end
+
 	var check_mute_inst:FlxUICheckBox = null;
 	var playSoundBf:FlxUICheckBox = null;
 	var playSoundDad:FlxUICheckBox = null;
@@ -366,7 +396,35 @@ class ChartingState extends MusicBeatState
 
 		var reloadSongJson:FlxButton = new FlxButton(reloadSong.x, saveButton.y + 30, "Reload JSON", function()
 		{
-			loadJson(_song.song.toLowerCase());
+			#if ACHIEVEMENTS_ALLOWED
+			if (_song.song.toLowerCase() == "mugen" && !Achievements.achievementsUnlocked[2][1])
+			{					
+				Achievements.achievementsUnlocked[2][1] = true;
+				giveAchievement(2);
+				ClientPrefs.saveSettings();
+				if (!Achievements.achievementsUnlocked[10][1] && Achievements.allAchievements() == true)
+				{
+					Achievements.achievementsUnlocked[10][1] = true;
+					giveAchievement(10);
+					ClientPrefs.saveSettings();
+					new FlxTimer().start(4, function(tmr:FlxTimer)
+						{
+							loadJson(_song.song.toLowerCase());
+						});	
+				}
+				else{
+					new FlxTimer().start(4, function(tmr:FlxTimer)
+						{
+							loadJson(_song.song.toLowerCase());
+						});	
+				}
+				
+			}
+			#end
+			else
+			{
+				loadJson(_song.song.toLowerCase());
+			}
 		});
 
 		var loadAutosaveBtn:FlxButton = new FlxButton(reloadSongJson.x, reloadSongJson.y + 30, 'Load Autosave', function()
@@ -1130,7 +1188,7 @@ class ChartingState extends MusicBeatState
 		}
 		Conductor.songPosition = FlxG.sound.music.time;
 		_song.song = UI_songTitle.text;
-
+		//trace(_song.song);
 		strumLine.y = getYfromStrum((Conductor.songPosition - sectionStartTime()) / zoomList[curZoom] % (Conductor.stepCrochet * _song.notes[curSection].lengthInSteps));
 		camPos.y = strumLine.y;
 

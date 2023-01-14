@@ -75,24 +75,37 @@ class CharacterUnlocker extends FlxSpriteGroup
 	public var publicId:Int;
 
 	public var bg:FlxSprite;
+	public var songIcon:FlxSprite;
+	public var songName:FlxSprite;
 	public var charIcon:HealthIcon;
 	public var charName:FlxText;
 
-	public function new(name:String, ?camera:FlxCamera = null)
+	public function new(name:String, ?camera:FlxCamera = null, ?gameover:Bool = false)
 	{
 		super(x, y);
 		ClientPrefs.saveSettings();
 
-		var id:Int = Characters.getCharacterIndex(name);
+		//var id:Int = Characters.getCharacterIndex(name);
 
-		publicId = id;
-
-		bg = new FlxSprite(1280, 167.5).loadGraphic(Paths.image('characterUnlocked'));
+		//publicId = id;
+		bg = new FlxSprite(1280, 167.5).loadGraphic(Paths.image('songUnlocked'));
 		bg.scrollFactor.set();
 		bg.updateHitbox();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 
-		charIcon = new HealthIcon(Characters.charactersData[id][1], true);
+		// sI.y = 70
+		songIcon = new FlxSprite(20, 20).loadGraphic(Paths.image('songunlock/'+ name));
+		songIcon.scale.set(0.9, 0.9);
+		songIcon.alpha = 0;
+		songIcon.antialiasing = ClientPrefs.globalAntialiasing;
+
+		//sN.y = 280
+		songName = new FlxSprite(-20, 200).loadGraphic(Paths.image('songunlock/names/'+ name + '-' + Language.giveLan()));
+		songName.alpha = 0;
+		songName.antialiasing = ClientPrefs.globalAntialiasing;
+		
+		
+		/*charIcon = new HealthIcon(Characters.charactersData[id][1], true);
 		charIcon.alpha = 0;
 		charIcon.x = 565;
 		charIcon.y = 265;
@@ -108,10 +121,10 @@ class CharacterUnlocker extends FlxSpriteGroup
 		charName.screenCenter(X);
 		charName.updateHitbox();
 		charName.antialiasing = ClientPrefs.globalAntialiasing;
-
+*/
 		add(bg);
-		add(charName);
-		add(charIcon);
+		add(songName);
+		add(songIcon);
 
 		var cam:Array<FlxCamera> = FlxCamera.defaultCameras;
 		if (camera != null)
@@ -119,23 +132,23 @@ class CharacterUnlocker extends FlxSpriteGroup
 			cam = [camera];
 		}
 		bg.cameras = cam;
-		charName.cameras = cam;
-		charIcon.cameras = cam;
+		songName.cameras = cam;
+		songIcon.cameras = cam;
 		ultraTween();
 	}
 
 	public function ultraTween()
 	{
 		FlxTween.tween(bg, {x: 0}, 0.3, {onComplete: function(twn:FlxTween){
-				FlxTween.tween(charIcon, {alpha: 1}, 0.2, {onComplete: function(twn:FlxTween){
+				FlxTween.tween(songIcon, {alpha: 1}, 0.2, {onComplete: function(twn:FlxTween){
 					FlxTween.tween(this, {alpha: 0}, 0.5, {startDelay: 2.5,onComplete: function(twn:FlxTween){if (onFinish != null) onFinish();}});
-					FlxTween.tween(charName, {alpha: 0}, 0.5, {startDelay: 2.5});
+					FlxTween.tween(songName, {alpha: 0}, 0.5, {startDelay: 2.5});
 					FlxTween.tween(bg, {alpha: 0}, 0.5, {startDelay: 2.5});
 				}});
-				FlxTween.tween(charIcon, {y: 285}, 0.2);
+				FlxTween.tween(songIcon, {y: 70}, 0.2);
 
-				FlxTween.tween(charName, {y: charName.y + 20}, 0.2, {startDelay: 0.2});
-				FlxTween.tween(charName, {alpha: 1}, 0.2, {startDelay: 0.2});
+				FlxTween.tween(songName, {y: 280}, 0.2, {startDelay: 0.2});
+				FlxTween.tween(songName, {alpha: 1}, 0.2, {startDelay: 0.2});
 		}});
 	}
 }

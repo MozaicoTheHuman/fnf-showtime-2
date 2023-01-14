@@ -1,0 +1,42 @@
+{
+	"achievements": [
+					"Gran Espectaculo", 
+					"Maldito Experto",
+					"Detective",
+					"Partida Perfecta",
+					"Manco",
+					"Literal no tienes manos",
+					"WIII GANE!",
+					"Perfeccionista",
+					"Enfermo",
+					"Friday Night Funkin'",
+					"Y los telones se cierran",
+					"Le sabes"
+					],
+	"achievements_desc": 
+					[
+					"Termina la Week con mas del 90% de acurracy en hard", 
+					"Completa 'Showtime' sin fallos",
+					"Pon el codigo secreto en el menu debug. \nPistas: Motor de videojuegos de lucha, primera aparicion de Maavo, Ronald McDonald",
+					"Completa la cancion 'kfm.mid' sin fallos",
+					"Pierde 3 veces seguidas",
+					"Pierde 10 veces en total",
+					"Pierde en Lovely",
+					"Completa todas las canciones sin fallos en Hard",
+					"Completa 'Tokyo Teddy Bear' en dificultad Extrema sin fallos",
+					"Juega un viernes por la noche",
+					"Completa todos los logros",
+					"Savedata del mod del Derker"
+					],
+	"achievements_song_unlock":
+					[
+					"Completa el logro 'Gran Espectaculo' \npara desbloquear esta canción",
+					"Completa el logro 'WIII GANE!' \npara desbloquear esta canción",
+					"Completa el logro 'Detective' \npara desbloquear esta canción",
+					"Completa el logro 'Maldito Experto' \npara desbloquear esta canción"
+					]
+	
+	
+	
+	
+}

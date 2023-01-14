@@ -11,6 +11,8 @@ import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
 import lime.utils.Assets;
 import flixel.FlxSubState;
 import Achievements;
@@ -25,7 +27,8 @@ class AchievementsMenuState extends MusicBeatState
 	private var achievementArray:Array<AttachedAchievement> = [];
 	private var achievementIndex:Array<Int> = [];
 	private var descText:FlxText;
-
+	private var foto:Bool = false;
+	private var fotosprite:FlxSprite;
 	override function create() {
 		#if desktop
 		DiscordClient.changePresence("Achievements Menu", null);
@@ -67,6 +70,13 @@ class AchievementsMenuState extends MusicBeatState
 		descText.scrollFactor.set();
 		descText.borderSize = 2.4;
 		add(descText);
+
+		fotosprite = new FlxSprite().loadGraphic(Paths.image('maavo2023'));
+		fotosprite.scrollFactor.set();
+		fotosprite.screenCenter();
+		fotosprite.alpha = 0;
+		add(fotosprite);
+
 		changeSelection();
 
 		super.create();
@@ -76,15 +86,36 @@ class AchievementsMenuState extends MusicBeatState
 		super.update(elapsed);
 
 		if (controls.UI_UP_P) {
+			if (foto != true)
 			changeSelection(-1);
 		}
 		if (controls.UI_DOWN_P) {
+			if (foto != true)
 			changeSelection(1);
 		}
-
+		if (controls.ACCEPT)
+		{
+			if (Achievements.achievementsUnlocked[10][1] == true && curSelected == 10)
+			{
+				foto = true;
+				FlxTween.tween(fotosprite, {alpha: 1}, 0.3);
+			
+			}
+		}
 		if (controls.BACK) {
-			FlxG.sound.play(Paths.sound('cancelMenu'));
-			FlxG.switchState(new MainMenuState());
+			if (foto != true)
+			{
+				FlxG.sound.play(Paths.sound('cancelMenu'));
+				FlxG.switchState(new MainMenuState());
+			}
+			else
+			{
+				FlxG.sound.play(Paths.sound('cancelMenu'));
+				FlxTween.tween(fotosprite, {alpha: 0}, 0.3,  {onComplete: function(twn:FlxTween){
+					foto = false;
+				}});
+			}
+			
 		}
 	}
 

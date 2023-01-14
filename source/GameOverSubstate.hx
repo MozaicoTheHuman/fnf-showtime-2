@@ -12,6 +12,7 @@ import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import Achievements;
+import Characters.CharacterUnlocker;
 class GameOverSubstate extends MusicBeatSubstate
 {
 	var bf:Boyfriend;
@@ -32,6 +33,8 @@ class GameOverSubstate extends MusicBeatSubstate
 	var effectsueloy:Float = 0;
 
 	var lePlayState:PlayState;
+
+	var songUnlocked:CharacterUnlocker;
 
 	private var camAchievement:FlxCamera;
 	public static var characterName:String = 'bf';
@@ -58,28 +61,34 @@ class GameOverSubstate extends MusicBeatSubstate
 		FlxG.cameras.add(camAchievement);
 
 		#if ACHIEVEMENTS_ALLOWED
-		Achievements.loadAchievements();
-		var death10:Int = 8;
-		var death:Int = 4;
-		var lovely:Int = 9;
-		if (!Achievements.achievementsUnlocked[lovely][1] && PlayState.SONG.song.toLowerCase() == 'lovely')
-		{ 
-			Achievements.achievementsUnlocked[lovely][1] = true;
-			giveAchievement(lovely);
-			ClientPrefs.saveSettings();
-		}
-		if (!Achievements.achievementsUnlocked[death][1] && PlayState.deathCounter == 3)
-		{ 
-			Achievements.achievementsUnlocked[death][1] = true;
-			giveAchievement(death);
-			ClientPrefs.saveSettings();
-		}
-		if (!Achievements.achievementsUnlocked[death10][1] && PlayState.deathCounter == 10)
-		{ 
-			Achievements.achievementsUnlocked[death10][1] = true;
-			giveAchievement(death10);
-			ClientPrefs.saveSettings();
-		}
+			Achievements.loadAchievements();
+			var death10:Int = 5;
+			var death:Int = 4;
+			var lovely:Int = 6;
+			if (!Achievements.achievementsUnlocked[lovely][1] && PlayState.SONG.song.toLowerCase() == 'lovely')
+			{ 
+				Achievements.achievementsUnlocked[lovely][1] = true;
+				giveAchievement(lovely);
+				ClientPrefs.saveSettings();
+			}
+			if (!Achievements.achievementsUnlocked[death][1] && PlayState.deathCounter == 3)
+			{ 
+				Achievements.achievementsUnlocked[death][1] = true;
+				giveAchievement(death);
+				ClientPrefs.saveSettings();
+			}
+			if (!Achievements.achievementsUnlocked[death10][1] && PlayState.deathCounter == 10)
+			{ 
+				Achievements.achievementsUnlocked[death10][1] = true;
+				giveAchievement(death10);
+				ClientPrefs.saveSettings();
+			}
+			if (!Achievements.achievementsUnlocked[10][1] && Achievements.allAchievements() == true)
+			{ 
+				Achievements.achievementsUnlocked[10][1] = true;
+				giveAchievement(10);
+				ClientPrefs.saveSettings();
+			}
 		#end
 		if (PlayState.SONG.song.toLowerCase() == "mugen")
 		{
@@ -108,6 +117,11 @@ class GameOverSubstate extends MusicBeatSubstate
 		add(new AchievementObject(id, camAchievement));
 		FlxG.sound.play(Paths.sound('awardMenu'), 0.7);
 		trace('Giving achievement ' + id);
+		if (id == 6)
+		{
+			songUnlocked = new CharacterUnlocker("lighton", camAchievement);
+			add(songUnlocked);
+		}
 	}
 	#end
 

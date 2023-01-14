@@ -92,6 +92,7 @@ class MainMenuState extends MusicBeatState
 
 		menuUnlocked = ClientPrefs.unlockedMenus[random];
 		checkDerker();
+		Language.startJson();
 
 		if (menuUnlocked == "derker" && ClientPrefs.havePlayedDerker)
 		{
@@ -240,7 +241,7 @@ class MainMenuState extends MusicBeatState
 		if (!Achievements.achievementsUnlocked[achievementID][1] && leDate.getDay() == 5 && leDate.getHours() >= 18)
 		{ // It's a friday night. WEEEEEEEEEEEEEEEEEE
 			Achievements.achievementsUnlocked[achievementID][1] = true;
-			giveAchievement(0);
+			giveAchievement(9);
 			ClientPrefs.saveSettings();
 		}
 		#end

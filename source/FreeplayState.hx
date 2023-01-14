@@ -14,15 +14,20 @@ import flixel.math.FlxMath;
 import flixel.system.FlxSound;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
 import openfl.utils.Assets as OpenFlAssets;
 
 using StringTools;
 
-class FreeplayState extends MusicBeatState
+class FreeplayState extends MusicBeatState	
 {
 	var songs:Array<SongMetadata> = [];
 
 	var selector:FlxText;
+
+	var descText:FlxText;
+	var descBox:AttachedSprite;
 
 	private static var curSelected:Int = 0;
 	private static var curDifficulty:Int = 1;
@@ -31,8 +36,10 @@ class FreeplayState extends MusicBeatState
 	var scoreText:FlxText;
 	var lerpScore:Int = 0;
 	var lerpRating:Float = 0;
+	var lerpMisses:Int = 0;
 	var intendedScore:Int = 0;
-	var intendedRating:Float = 0;
+	var intendedRating:Float = 0; 
+	var intendedMisses:Int = 0;
 	var increasedcamera: Float = 0;
 
 	private var grpSongs:FlxTypedGroup<FlxSprite>;
@@ -64,12 +71,22 @@ class FreeplayState extends MusicBeatState
 	var waveB2:FlxBackdrop;
 	var waveC2:FlxBackdrop;
 	
+	var moveTween:FlxTween = null;
 	private var camGame:FlxCamera;
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
+	
+	var descUnlock:Array<String> = ["Completa el logro 'Gran Espectaculo' \npara desbloquear esta canción", "Completa el logro 'Gran Espectaculo' \npara desbloquear esta canción", "", ""];
+	var locked:Array<Bool> = [false, false, false, false];
+	var unlockableSongs:Array<String> = ["Pondering","Light-On","MUGEN","Tokyo"];
+	var achievementsarray:Array<Int> = [0, 6, 2, 1];
+	var test:Bool = false;
 
 	override function create()
 	{
+		#if ACHIEVEMENTS_ALLOWED
+		Achievements.loadAchievements();
+		#end
 		#if MODS_ALLOWED
 		Paths.destroyLoadedImages();
 		#end
@@ -79,6 +96,8 @@ class FreeplayState extends MusicBeatState
 		DiscordClient.changePresence("In Freeplay", null);
 		#end
 
+		//trace(Achievements.achievementsUnlocked[6][1]);
+	//	trace(Achievements.achievementsUnlocked[0][1]);
 		camGame = new FlxCamera();
 		FlxG.cameras.reset(camGame);
 		FlxCamera.defaultCameras = [camGame];
@@ -109,8 +128,8 @@ class FreeplayState extends MusicBeatState
 		{
 			if (initSonglist[i] != null && initSonglist[i].length > 0)
 			{
-				var songArray:Array<String> = initSonglist[i].split(":");
-				addSong(songArray[0], 0, songArray[1], songArray[2]);
+				var songArray:Array<String> = initSonglist[i].split(":");	
+				addSong(songArray[0], 0, songArray[1], songArray[2]);	
 			}
 		}
 
@@ -118,6 +137,8 @@ class FreeplayState extends MusicBeatState
 		camFollowPos = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
 		add(camFollowPos);
+
+		songLocked();
 
 		bg = new FlxSprite().loadGraphic(Paths.image('freeplaymenu/bg'));
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
@@ -166,6 +187,7 @@ class FreeplayState extends MusicBeatState
 		songsBG.scrollFactor.set();
 		add(songsBG);
 
+
 		songBG = new FlxTypedGroup<FlxSprite>();
 		add(songBG);
 
@@ -178,14 +200,18 @@ class FreeplayState extends MusicBeatState
 		for (i in 0...songs.length)
 		{
 			Paths.currentModDirectory = songs[i].folder;
+			//trace(songs.length);
+	
+			var icon:HealthIcon;
 
 			var offset:Float = 30 - (Math.max(songs.length, 4) - 2) * 80;
 			var offsetBG:Float = 80 - (Math.max(songs.length, 4) - 2) * 80;
 			var songSprite = songs[i].songName;
 			//Change song name distance here
+		
+			
 
-
-			selectedBG = new FlxSprite(554 - (i * 59) - offsetBG, 80 + (i * 110)  + offset).loadGraphic(Paths.image('freeplaymenu/selectedsong'));
+			selectedBG = new FlxSprite(554 - (i * 59) - offsetBG, 80 + (i * 110) + offset).loadGraphic(Paths.image('freeplaymenu/selectedsong'));
 			selectedBG.antialiasing = ClientPrefs.globalAntialiasing;
 			selectedBG.scrollFactor.set();
 			selectedBG.ID = i;
@@ -204,13 +230,56 @@ class FreeplayState extends MusicBeatState
 			starIcon.ID = i;
 			staricons.add(starIcon);
 
-			var icon:HealthIcon = new HealthIcon(songs[i].songCharacter);
-			icon.sprTracker = songText;
-			iconArray.push(icon);
-			add(icon);
-
 			
-
+			
+			
+			if (locked[0] == false && songSprite == "Pondering")
+			{
+				trace('a');
+				icon = new HealthIcon('locked');
+				icon.sprTracker = songText;
+				iconArray.push(icon);
+				add(icon);	
+			}
+			else if (locked[1] == false && songSprite == "Light-On")
+			{
+				trace('b');
+				icon = new HealthIcon('locked');
+				icon.sprTracker = songText;
+				iconArray.push(icon);
+				add(icon);	
+					
+					
+			
+			}
+			else if (locked[2] == false  && songSprite == "MUGEN")
+			{
+				trace('c');
+				icon = new HealthIcon('locked');
+				icon.sprTracker = songText;
+				iconArray.push(icon);
+				add(icon);		
+					
+			}
+			else if (locked[3] == false && songSprite == "Tokyo")
+			{
+				trace('d');
+				icon = new HealthIcon('locked');
+				icon.sprTracker = songText;
+				iconArray.push(icon);
+				add(icon);	
+			}
+			else 
+			{
+				trace('e');
+				icon = new HealthIcon(songs[i].songCharacter);
+				icon.sprTracker = songText;
+				iconArray.push(icon);
+				add(icon);	
+				
+			}
+			
+			
 
 			var scr:Float = (songs.length - 3) * 0.135;
 			var scr2:Float = (songs.length - 3) * 0.132;
@@ -228,6 +297,8 @@ class FreeplayState extends MusicBeatState
 			selectedBG.scrollFactor.set(scr2 / 2, scr);
 			selectedBG.antialiasing = ClientPrefs.globalAntialiasing;
 			selectedBG.updateHitbox();
+
+			
 		}
 
 		
@@ -243,7 +314,7 @@ class FreeplayState extends MusicBeatState
 
 		diffText = new FlxSprite(870, 25);
 		diffText.loadGraphic(Paths.image('freeplaymenu/diffs'), true, 370, 45);
-		diffText.animation.add('diffficult', [2, 1, 0], 0, false);
+		diffText.animation.add('diffficult', [2, 1, 0, 3], 0, false);
 		diffText.animation.play('diffficult');
 		diffText.scrollFactor.set();
 		add(diffText);
@@ -295,6 +366,21 @@ class FreeplayState extends MusicBeatState
 
 		add(scoreText);
 
+		descBox = new AttachedSprite();
+		descBox.makeGraphic(1, 1, FlxColor.BLACK);
+		descBox.xAdd = -10;
+		descBox.yAdd = -10;
+		descBox.alphaMult = 0.6;
+		descBox.alpha = 0.6;
+		add(descBox);
+
+		descText = new FlxText(50, FlxG.height + -75 - 25, 1180, "", 32);
+		descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER /*, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK*/);
+		descText.scrollFactor.set();
+		// descText.borderSize = 2.4;
+		descBox.sprTracker = descText;
+		add(descText);
+
 		if (curSelected >= songs.length)
 			curSelected = 0;
 		changeSelection();
@@ -322,6 +408,26 @@ class FreeplayState extends MusicBeatState
 		super.closeSubState();
 	}
 
+	function songLocked() {
+			
+		if (Achievements.achievementsUnlocked[0][1])
+		{
+			locked[0] = true;			
+		}
+		if (Achievements.achievementsUnlocked[6][1])
+		{
+			locked[1] = true;
+		}
+		if (Achievements.achievementsUnlocked[2][1])
+		{
+			locked[2] = true;
+		}
+		if (Achievements.achievementsUnlocked[1][1])
+		{
+			locked[3] = true;
+		}
+		
+	}
 	public function addSong(songName:String, weekNum:Int, songCharacter:String, album:String)
 	{
 		songs.push(new SongMetadata(songName, weekNum, songCharacter, album));
@@ -348,7 +454,7 @@ class FreeplayState extends MusicBeatState
 
 	override function update(elapsed:Float)
 {
-
+		songLocked();
 		var upP = controls.UI_UP_P;
 		var downP = controls.UI_DOWN_P;
 		var accepted = controls.ACCEPT;
@@ -363,6 +469,7 @@ class FreeplayState extends MusicBeatState
 
 		lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, CoolUtil.boundTo(elapsed * 24, 0, 1)));
 		lerpRating = FlxMath.lerp(lerpRating, intendedRating, CoolUtil.boundTo(elapsed * 12, 0, 1));
+		lerpMisses = intendedMisses;
 
 		if (Math.abs(lerpScore - intendedScore) <= 10)
 			lerpScore = intendedScore;
@@ -383,7 +490,7 @@ class FreeplayState extends MusicBeatState
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 
-		scoreText.text = 'PERSONAL BEST: ' + lerpScore + ' (' + ratingSplit.join('.') + '%)';
+		scoreText.text = 'PERSONAL BEST: ' + lerpScore + ' (' + ratingSplit.join('.') + '%) MISSES: '+ lerpMisses;
 		positionHighscore();
 
 		waveA.x -= 0.125;
@@ -449,20 +556,34 @@ class FreeplayState extends MusicBeatState
 		}
 		else
 		#end if (accepted)
+	{		
+		 if (!unlockedPlay(curSelected))
+			{
+				FlxTween.tween(descText, {alpha: 1}, 0.3);
+				FlxTween.tween(descBox, {alpha: 1}, 0.3);
+				descText.text = Language.achievementsUnlockDesc[curSelected - 4];
+				descText.y = FlxG.height - descText.height + -75 - 60;
+				moveTween = FlxTween.tween(descText, {y: descText.y + 75}, 0.25, {ease: FlxEase.sineOut});
+				descBox.setGraphicSize(Std.int(descText.width + 20), Std.int(descText.height + 25));
+				descBox.updateHitbox();
+				FlxTween.tween(descText, {alpha: 0}, 0.2, {startDelay: 1});
+			
+			}
+	else
 	{
-			var songLowercase:String = Paths.formatToSongPath(songs[curSelected].songName);
-			var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
-			#if MODS_ALLOWED
-			if (!sys.FileSystem.exists(Paths.modsJson(songLowercase + '/' + poop))
-				&& !sys.FileSystem.exists(Paths.json(songLowercase + '/' + poop)))
-			{
-			#else
-			if (!OpenFlAssets.exists(Paths.json(songLowercase + '/' + poop)))
-			{
-			#end
-				poop = songLowercase;
-				curDifficulty = 1;
-				trace('Couldnt find file');
+		var songLowercase:String = Paths.formatToSongPath(songs[curSelected].songName);
+		var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
+		#if MODS_ALLOWED
+		if (!sys.FileSystem.exists(Paths.modsJson(songLowercase + '/' + poop))
+			&& !sys.FileSystem.exists(Paths.json(songLowercase + '/' + poop)))
+		{
+		#else
+		if (!OpenFlAssets.exists(Paths.json(songLowercase + '/' + poop)))
+		{
+		#end
+			poop = songLowercase;
+			curDifficulty = 1;
+			trace('Couldnt find file');
 		}
 			trace(poop);
 
@@ -478,6 +599,9 @@ class FreeplayState extends MusicBeatState
 
 			destroyFreeplayVocals();
 		}
+		
+	
+	}
 	else if (controls.RESET)
 	{
 		openSubState(new ResetScoreSubState(songs[curSelected].songName, curDifficulty, songs[curSelected].songCharacter));
@@ -486,8 +610,31 @@ class FreeplayState extends MusicBeatState
 		if (chars)
 			MusicBeatState.switchState(new CharactersMenuState());
 		super.update(elapsed);
-	}
+}
 
+	public function unlockedPlay(num:Int):Bool
+	{
+		var number:Int = num - 4;
+		switch (number)
+		{
+			case 0:
+				if (locked[number] == false)
+				return false;
+			case 1:
+				if (locked[number] == false)
+				return false;
+			case 2:
+				if (locked[number] == false)
+				return false;
+			case 3:
+				if (locked[number] == false)
+				return false;
+			
+		}	
+		return true;
+
+		
+	}
 	public static function destroyFreeplayVocals()
 	{
 		if (vocals != null)
@@ -510,6 +657,7 @@ class FreeplayState extends MusicBeatState
 		#if !switch
 		intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);
 		intendedRating = Highscore.getRating(songs[curSelected].songName, curDifficulty);
+		intendedMisses = Highscore.getMisses(songs[curSelected].songName, curDifficulty);
 		#end
 
 		PlayState.storyDifficulty = curDifficulty;
@@ -531,6 +679,7 @@ class FreeplayState extends MusicBeatState
 		#if !switch
 		intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);
 		intendedRating = Highscore.getRating(songs[curSelected].songName, curDifficulty);
+		intendedMisses = Highscore.getMisses(songs[curSelected].songName, curDifficulty);
 		#end
 
 
@@ -574,12 +723,24 @@ class FreeplayState extends MusicBeatState
 	
 			});
 
-
+		//trace(curSelected);
+		//trace(locked);
 		if (OpenFlAssets.exists(Paths.image('freeplaymenu/albums/' + songs[curSelected].album)))
-			album.loadGraphic(Paths.image('freeplaymenu/albums/' + songs[curSelected].album));
+			
+				if (curSelected >= 4 && locked[curSelected - 4] == false)
+				{
+					album.loadGraphic(Paths.image('freeplaymenu/albums/locked'));
+				}
+				else 
+				{
+					album.loadGraphic(Paths.image('freeplaymenu/albums/' + songs[curSelected].album));
+				}
+			
 		else
 			album.loadGraphic(Paths.image('freeplaymenu/albums/'));
 
+		if (moveTween != null)
+			moveTween.cancel();
 		changeDiff();
 		Paths.currentModDirectory = songs[curSelected].folder;
 	}

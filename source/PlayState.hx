@@ -294,7 +294,8 @@ class PlayState extends MusicBeatState
 
 		persistentUpdate = true;
 		persistentDraw = true;
-
+		trace(checkAllSongs());
+		trace(Achievements.allAchievements());
 		if (SONG == null)
 			SONG = Song.loadFromJson('tutorial');
 
@@ -2684,17 +2685,26 @@ class PlayState extends MusicBeatState
 		}
 		else
 		{
-			var achieve:Int = checkForAchievement([1, 2, 3, 5, 7, 12]);
+			
+			var achieve:Int = checkForAchievement([0, 1, 3, 7, 8, 10]);
 			var charToUnlock:String = null;
 			if (achieve > -1)
 			{
 				switch (achieve)
 				{
-					case 17:
+					/*case 17:
 						charToUnlock = 'maavo';
 						startChar(charToUnlock);
 						startAchievement(achieve);
 						Characters.unlockCharacter(charToUnlock);
+						return;*/
+					case 0:
+						startChar("pondering");
+						startAchievement(achieve);
+						return;
+					case 1:
+						startChar("tokyo");
+						startAchievement(achieve);
 						return;
 					default:
 						startAchievement(achieve);
@@ -2718,7 +2728,8 @@ class PlayState extends MusicBeatState
 				var percent:Float = ratingPercent;
 				if (Math.isNaN(percent))
 					percent = 0;
-				Highscore.saveScore(SONG.song, songScore, storyDifficulty, percent);
+				Highscore.saveScore(SONG.song, songScore, storyDifficulty, percent, songMisses);
+				trace(songMisses);
 				#end
 			}
 
@@ -2728,6 +2739,7 @@ class PlayState extends MusicBeatState
 				campaignScore += songScore;
 				campaignMisses += songMisses;
 
+				trace(campaignPercent);
 				storyPlaylist.remove(storyPlaylist[0]);
 
 				if (storyPlaylist.length <= 0)
@@ -3834,7 +3846,53 @@ class PlayState extends MusicBeatState
 		setOnLuas('ratingName', ratingName);
 		setOnLuas('ratingFC', ratingFC);
 	}
-
+	function checkAllSongs(){
+		if (Highscore.getMisses('Lovely', 2) != 0)
+		{
+			trace('a');
+			return false;
+		}
+		if (Highscore.getMisses('Wannabe', 2) != 0)
+		{
+			trace('b');
+			return false;
+		}
+		if (Highscore.getMisses('Finale', 2) != 0)
+		{
+			trace('c');
+			return false;
+		}
+		if (Highscore.getMisses('Showtime', 2) != 0)
+		{
+			trace('d');
+			return false;
+		}
+		if (Highscore.getMisses('Pondering', 2) != 0)
+		{
+			trace(Highscore.getMisses('Pondering', 2));
+			trace('e');
+			return false;
+		}
+		if (Highscore.getMisses('Light-On', 2) != 0)
+		{
+			trace(Highscore.getMisses('Light-On', 2));
+			trace('f');
+			return false;
+		}
+		if (Highscore.getMisses('MUGEN', 2) != 0)
+		{
+			trace('g');
+			trace(Highscore.getMisses('MUGEN', 2));
+			return false;
+		}
+		if (Highscore.getMisses('Tokyo', 2) != 0)
+		{
+			trace('h');
+			trace(Highscore.getMisses('Tokyo', 2));
+			return false;
+		}
+		return true;
+	}
 	#if ACHIEVEMENTS_ALLOWED
 	private function checkForAchievement(arrayIDs:Array<Int>):Int
 	{
@@ -3844,37 +3902,8 @@ class PlayState extends MusicBeatState
 			{
 				switch (arrayIDs[i])
 				{
-					case 1:
-						if (isStoryMode
-							&& campaignMisses + songMisses < 1
-							&& CoolUtil.difficultyString() == 'HARD'
-							&& storyPlaylist.length <= 1
-							&& WeekData.getWeekFileName() == ('week' + arrayIDs[i])
-							&& !changedDifficulty
-							&& !usedPractice)
-						{
-							Achievements.unlockAchievement(arrayIDs[i]);
-							return arrayIDs[i];
-						}
-					case 2:
-						if (Paths.formatToSongPath(SONG.song) == 'showtime' && songMisses < 1 && !usedPractice)
-						{
-							Achievements.unlockAchievement(arrayIDs[i]);
-							return arrayIDs[i];
-						}
-					case 3:
-						if (isStoryMode
-							&& campaignMisses + songMisses < 1
-							&& CoolUtil.difficultyString() == 'HARD'
-							&& storyPlaylist.length <= 1
-							&& WeekData.getWeekFileName() == ('week' + arrayIDs[i])
-							&& !changedDifficulty
-							&& !usedPractice)
-						{
-							Achievements.unlockAchievement(arrayIDs[i]);
-							return arrayIDs[i];
-						}
-					case 5:
+					//0, 1, 3, 8
+					case 0:
 						if (isStoryMode
 							&& campaignPercent >= 3.6
 							&& CoolUtil.difficultyString() == 'HARD'
@@ -3886,18 +3915,38 @@ class PlayState extends MusicBeatState
 							Achievements.unlockAchievement(arrayIDs[i]);
 							return arrayIDs[i];
 						}
-					case 7:
-						if (Paths.formatToSongPath(SONG.song) == 'light-on' && CoolUtil.difficultyString() == 'HARD' &&  songMisses < 1 && !usedPractice) 
+					case 1:
+						if (Paths.formatToSongPath(SONG.song) == 'showtime' && songMisses < 1 && !usedPractice)
 						{
 							Achievements.unlockAchievement(arrayIDs[i]);
 							return arrayIDs[i];
 						}
-					case 12:
+					case 3:
 						if (Paths.formatToSongPath(SONG.song) == 'mugen' && CoolUtil.difficultyString() == 'HARD' && !usedPractice)
 						{
+								Achievements.unlockAchievement(arrayIDs[i]);
+								return arrayIDs[i];
+						}
+					case 7:
+						if (checkAllSongs() == true)
+						{
 							Achievements.unlockAchievement(arrayIDs[i]);
 							return arrayIDs[i];
 						}
+					case 8:
+						if (Paths.formatToSongPath(SONG.song) == 'tokyo' && CoolUtil.difficultyString() == 'HARD' &&  songMisses < 1 && !usedPractice) 
+						{
+							Achievements.unlockAchievement(arrayIDs[i]);
+							return arrayIDs[i];
+						}
+					case 10:
+						if (Achievements.allAchievements() == true)
+						{
+							Achievements.unlockAchievement(arrayIDs[i]);
+							return arrayIDs[i];
+						}
+		
+						
 				}
 			}
 		}

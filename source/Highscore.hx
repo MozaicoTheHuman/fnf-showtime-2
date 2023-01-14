@@ -10,10 +10,12 @@ class Highscore
 	public static var weekScores:Map<String, Int> = new Map();
 	public static var songScores:Map<String, Int> = new Map();
 	public static var songRating:Map<String, Float> = new Map();
+	public static var songMisses:Map<String, Int> = new Map();
 	#else
 	public static var weekScores:Map<String, Int> = new Map();
 	public static var songScores:Map<String, Int> = new Map<String, Int>();
 	public static var songRating:Map<String, Float> = new Map<String, Float>();
+	public static var songMisses:Map<String, Int> = new Map<String, Int>();
 	#end
 
 
@@ -46,7 +48,7 @@ class Highscore
 			return newValue / tempMult;
 		}
 		
-	public static function saveScore(song:String, score:Int = 0, ?diff:Int = 0, ?rating:Float = -1):Void
+	public static function saveScore(song:String, score:Int = 0, ?diff:Int = 0, ?rating:Float = -1, ?misses:Int = 2):Void
 	{
 		var daSong:String = formatSong(song, diff);
 
@@ -54,11 +56,13 @@ class Highscore
 			if (songScores.get(daSong) < score) {
 				setScore(daSong, score);
 				if(rating >= 0) setRating(daSong, rating);
+				if (misses <= 999) setMisses(daSong, misses);
 			}
 		}
 		else {
 			setScore(daSong, score);
 			if(rating >= 0) setRating(daSong, rating);
+			if (misses <= 999) setMisses(daSong, misses);
 		}
 	}
 
@@ -83,6 +87,13 @@ class Highscore
 		// Reminder that I don't need to format this song, it should come formatted!
 		songScores.set(song, score);
 		FlxG.save.data.songScores = songScores;
+		FlxG.save.flush();
+	}
+	static function setMisses(song:String, misses:Int):Void
+	{
+			
+		songMisses.set(song, misses);
+		FlxG.save.data.songMisses = songMisses;
 		FlxG.save.flush();
 	}
 	static function setWeekScore(week:String, score:Int):Void
@@ -114,7 +125,14 @@ class Highscore
 
 		return songScores.get(daSong);
 	}
-
+	public static function getMisses(song:String, diff:Int):Int
+	{
+		var daSong:String = formatSong(song, diff);
+		if (!songMisses.exists(daSong))
+			setMisses(daSong, 999);
+	
+		return songMisses.get(daSong);
+	}
 	public static function getRating(song:String, diff:Int):Float
 	{
 		var daSong:String = formatSong(song, diff);
@@ -146,6 +164,10 @@ class Highscore
 		if (FlxG.save.data.songRating != null)
 		{
 			songRating = FlxG.save.data.songRating;
+		}
+		if (FlxG.save.data.songMisses != null)
+		{
+			songMisses = FlxG.save.data.songMisses;
 		}
 	}
 }

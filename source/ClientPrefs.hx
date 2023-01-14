@@ -30,6 +30,7 @@ class ClientPrefs
 	public static var noteQuant:Bool = false;
 	public static var havePlayedDerker:Bool = false;
 	public static var dynamicCamera:Bool = true;
+	public static var sinFallos:Array<Int> = [];
 	public static var unlockedMenus:Array<String> = ["maavo", "ivette", "maritza"];
 
 	public static var comboOffset:Array<Int> = [0, 0, 0, 0];
@@ -103,6 +104,7 @@ class ClientPrefs
 		FlxG.save.data.unlockedMenus = unlockedMenus;
 		FlxG.save.data.dynamicCamera = dynamicCamera;
 		FlxG.save.data.language = language;
+		FlxG.save.data.sinFallos = sinFallos;
 
 		var achieves:Array<String> = [];
 		for (i in 0...Achievements.achievementsUnlocked.length)
@@ -148,6 +150,10 @@ class ClientPrefs
 		if (FlxG.save.data.language != null)
 		{
 			language = FlxG.save.data.language;
+		}
+		if (FlxG.save.data.sinFallos != null)
+		{
+			sinFallos = FlxG.save.data.sinFallos;
 		}
 		if (FlxG.save.data.flashing != null)
 		{
