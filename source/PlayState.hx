@@ -2739,7 +2739,9 @@ class PlayState extends MusicBeatState
 				campaignScore += songScore;
 				campaignMisses += songMisses;
 
-				trace(campaignPercent);
+				trace('Porcentaje Decimal: ' + campaignPercent);
+				trace('Porcentaje :' + Highscore.floorDecimal(campaignPercent * 100, 2));
+				
 				storyPlaylist.remove(storyPlaylist[0]);
 
 				if (storyPlaylist.length <= 0)
@@ -3905,7 +3907,7 @@ class PlayState extends MusicBeatState
 					//0, 1, 3, 8
 					case 0:
 						if (isStoryMode
-							&& campaignPercent >= 3.6
+							&& Highscore.floorDecimal(campaignPercent * 100, 2) >= 360
 							&& CoolUtil.difficultyString() == 'HARD'
 							&& storyPlaylist.length <= 1
 							&& WeekData.getWeekFileName() == ('artweek')

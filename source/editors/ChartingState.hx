@@ -142,6 +142,7 @@ class ChartingState extends MusicBeatState
 	var zoomTxt:FlxText;
 	var curZoom:Int = 1;
 
+	var block:Bool = false;
 	#if !html5
 	var zoomList:Array<Float> = [
 		0.5,
@@ -398,7 +399,8 @@ class ChartingState extends MusicBeatState
 		{
 			#if ACHIEVEMENTS_ALLOWED
 			if (_song.song.toLowerCase() == "mugen" && !Achievements.achievementsUnlocked[2][1])
-			{					
+			{		
+				block = true;			
 				Achievements.achievementsUnlocked[2][1] = true;
 				giveAchievement(2);
 				ClientPrefs.saveSettings();
@@ -416,6 +418,11 @@ class ChartingState extends MusicBeatState
 					new FlxTimer().start(4, function(tmr:FlxTimer)
 						{
 							loadJson(_song.song.toLowerCase());
+							new FlxTimer().start(3, function(tmr:FlxTimer)
+								{
+									block = false;							
+								});
+							
 						});	
 				}
 				
@@ -1284,20 +1291,29 @@ class ChartingState extends MusicBeatState
 		{
 			if (FlxG.keys.justPressed.ESCAPE)
 			{
-				autosaveSong();
-				LoadingState.loadAndSwitchState(new editors.EditorPlayState(sectionStartTime()));
+				if (block != true)
+				{
+					autosaveSong();
+					LoadingState.loadAndSwitchState(new editors.EditorPlayState(sectionStartTime()));
+				}
+				
 			}
 			if (FlxG.keys.justPressed.ENTER)
 			{
-				autosaveSong();
-				FlxG.mouse.visible = false;
-				PlayState.SONG = _song;
-				FlxG.sound.music.stop();
-				if(vocals != null) vocals.stop();
-
-				//if(_song.stage == null) _song.stage = stageDropDown.selectedLabel;
-				StageData.loadDirectory(_song);
-				LoadingState.loadAndSwitchState(new PlayState());
+				//mugen
+				if (block != true)
+				{
+					autosaveSong();
+					FlxG.mouse.visible = false;
+					PlayState.SONG = _song;
+					FlxG.sound.music.stop();
+					if(vocals != null) vocals.stop();
+	
+					//if(_song.stage == null) _song.stage = stageDropDown.selectedLabel;
+					StageData.loadDirectory(_song);
+					LoadingState.loadAndSwitchState(new PlayState());
+				}
+				
 			}
 
 			if(curSelectedNote != null && curSelectedNote[1] > -1) {
