@@ -54,7 +54,7 @@ class CreditsState extends MusicBeatState
 			[
 				'Mozaico',
 				'mozaico',
-				'Director, Main Artist/Animator,\nCoder, Charter, Maavo VA,\nMaavo PDFMM+ Model Port',
+				'Director, Main Artist/Animator,\nCoder, Charter, Maavo VA,\nMaavo PDFMM+ Model Import',
 				'https://www.youtube.com/c/MaavoTheHuman/',
 				'FFDD33'
 			],
@@ -212,7 +212,7 @@ class CreditsState extends MusicBeatState
 			[
 				'AndresLoquendero0',
 				'andres',
-				'Maavo PDFTA model port help',
+				'Maavo PDMM+ Model Import help',
 				'https://www.youtube.com/@AndresELLoquendero0',
 				'FFDD33'
 			],	
