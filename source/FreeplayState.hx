@@ -76,11 +76,12 @@ class FreeplayState extends MusicBeatState
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
 	
-	var descUnlock:Array<String> = ["Completa el logro 'Gran Espectaculo' \npara desbloquear esta canción", "Completa el logro 'Gran Espectaculo' \npara desbloquear esta canción", "", ""];
-	var locked:Array<Bool> = [false, false, false, false];
-	var unlockableSongs:Array<String> = ["Pondering","Light-On","MUGEN","Tokyo"];
-	var achievementsarray:Array<Int> = [0, 6, 2, 1];
-	var test:Bool = false;
+	var lockStuff:Array<Dynamic> = [
+		["Pondering", false, 0],
+		["Light-On",  false, 6],
+		["MUGEN",     false, 2],
+		["Tokyo",     false, 1],
+	];
 
 	override function create()
 	{
@@ -146,15 +147,15 @@ class FreeplayState extends MusicBeatState
 		add(bg);
 
 		waveA = new FlxBackdrop(Paths.image('freeplaymenu/blackthingup'), X);
-		waveA.scrollFactor.set(0.25, 0.25);
+		waveA.scrollFactor.set();
 		add(waveA);
 
 		waveB = new FlxBackdrop(Paths.image('freeplaymenu/darkredthingup'), X);
-		waveB.scrollFactor.set(0.5, 0.5);
+		waveB.scrollFactor.set();
 		add(waveB);
 
 		waveC = new FlxBackdrop(Paths.image('freeplaymenu/redthingup'), X);
-		waveC.scrollFactor.set(1, 1);
+		waveC.scrollFactor.set();
 		add(waveC);
 
 		gridcenter = new FlxSprite(360, 210).loadGraphic(Paths.image('freeplaymenu/gridCenter'));
@@ -225,12 +226,9 @@ class FreeplayState extends MusicBeatState
 			starIcon.antialiasing = ClientPrefs.globalAntialiasing;
 			starIcon.scrollFactor.set();
 			starIcon.ID = i;
-			staricons.add(starIcon);
-
+			staricons.add(starIcon);	
 			
-			
-			
-			if (locked[0] == false && songSprite == "Pondering")
+			if (lockStuff[0][1] == false && songSprite == "Pondering")
 			{
 				trace('a');
 				icon = new HealthIcon('locked');
@@ -238,27 +236,23 @@ class FreeplayState extends MusicBeatState
 				iconArray.push(icon);
 				add(icon);	
 			}
-			else if (locked[1] == false && songSprite == "Light-On")
+			else if (lockStuff[1][1] == false && songSprite == "Light-On")
 			{
 				trace('b');
 				icon = new HealthIcon('locked');
 				icon.sprTracker = songText;
 				iconArray.push(icon);
 				add(icon);	
-					
-					
-			
 			}
-			else if (locked[2] == false  && songSprite == "MUGEN")
+			else if (lockStuff[2][1] == false  && songSprite == "MUGEN")
 			{
 				trace('c');
 				icon = new HealthIcon('locked');
 				icon.sprTracker = songText;
 				iconArray.push(icon);
 				add(icon);		
-					
 			}
-			else if (locked[3] == false && songSprite == "Tokyo")
+			else if (lockStuff[3][1] == false && songSprite == "Tokyo")
 			{
 				trace('d');
 				icon = new HealthIcon('locked');
@@ -275,8 +269,6 @@ class FreeplayState extends MusicBeatState
 				add(icon);	
 				
 			}
-			
-			
 
 			var scr:Float = (songs.length - 3) * 0.135;
 			var scr2:Float = (songs.length - 3) * 0.132;
@@ -336,17 +328,17 @@ class FreeplayState extends MusicBeatState
 
 		waveA2 = new FlxBackdrop(Paths.image('freeplaymenu/blackthing'), X);
 		waveA2.y = 630;
-		waveA2.scrollFactor.set(0.25, 0.25);
+		waveA2.scrollFactor.set();
 		add(waveA2);
 
 		waveB2 = new FlxBackdrop(Paths.image('freeplaymenu/darkredthing'), X);
 		waveB2.y = 660;
-		waveB2.scrollFactor.set(0.5, 0.5);
+		waveB2.scrollFactor.set();
 		add(waveB2);
 
 		waveC2 = new FlxBackdrop(Paths.image('freeplaymenu/redthing'), X);
 		waveC2.y = 660;
-		waveC2.scrollFactor.set(1, 1);
+		waveC2.scrollFactor.set();
 		add(waveC2);
 
 		scoreText = new FlxText(5, 5, 0, "", 32);
@@ -406,19 +398,19 @@ class FreeplayState extends MusicBeatState
 			
 		if (Achievements.achievementsUnlocked[0][1])
 		{
-			locked[0] = true;			
+			lockStuff[0][1] = true;			
 		}
 		if (Achievements.achievementsUnlocked[6][1])
 		{
-			locked[1] = true;
+			lockStuff[1][1]  = true;
 		}
 		if (Achievements.achievementsUnlocked[2][1])
 		{
-			locked[2] = true;
+			lockStuff[2][1]  = true;
 		}
 		if (Achievements.achievementsUnlocked[1][1])
 		{
-			locked[3] = true;
+			lockStuff[3][1]  = true;
 		}
 		
 	}
@@ -612,18 +604,17 @@ class FreeplayState extends MusicBeatState
 		switch (number)
 		{
 			case 0:
-				if (locked[number] == false)
+				if (lockStuff[number][1] == false)
 				return false;
 			case 1:
-				if (locked[number] == false)
+				if (lockStuff[number][1] == false)
 				return false;
 			case 2:
-				if (locked[number] == false)
+				if (lockStuff[number][1] == false)
 				return false;
 			case 3:
-				if (locked[number] == false)
+				if (lockStuff[number][1] == false)
 				return false;
-			
 		}	
 		return true;
 
@@ -719,9 +710,8 @@ class FreeplayState extends MusicBeatState
 
 		//trace(curSelected);
 		//trace(locked);
-		if (OpenFlAssets.exists(Paths.image('freeplaymenu/albums/' + songs[curSelected].album)))
-			
-				if (curSelected >= 4 && locked[curSelected - 4] == false)
+		if (OpenFlAssets.exists(Paths.image('freeplaymenu/albums/' + songs[curSelected].album))){
+				if (curSelected >= 4 && lockStuff[curSelected - 4][1] == false)
 				{
 					album.loadGraphic(Paths.image('freeplaymenu/albums/locked'));
 				}
@@ -729,9 +719,9 @@ class FreeplayState extends MusicBeatState
 				{
 					album.loadGraphic(Paths.image('freeplaymenu/albums/' + songs[curSelected].album));
 				}
-			
+		}
 		else
-			album.loadGraphic(Paths.image('freeplaymenu/albums/'));
+			album.loadGraphic(Paths.image('freeplaymenu/albums/placeholder'));
 
 		if (moveTween != null)
 			moveTween.cancel();

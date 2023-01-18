@@ -343,23 +343,18 @@ class MainMenuState extends MusicBeatState
 			diff.antialiasing = ClientPrefs.globalAntialiasing;
 			diff.updateHitbox();
 
-
             switch (i)
-           {
+           	{
                 case 0: 
                     diff.y = 0;
                     diff.x = 300;
-
                 case 1: 
                     diff.y = -800;
                     diff.x = 400;
-
                 case 2:
                     diff.y = -900;
                     diff.x = 550;
-               
-
-           }
+           	}
            
            if (firstStart)
             FlxTween.tween(diff,{y: 150 + (i * 160)},1 + (i * 0.25) ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 

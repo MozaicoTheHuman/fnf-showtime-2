@@ -48,7 +48,7 @@ class Highscore
 			return newValue / tempMult;
 		}
 		
-	public static function saveScore(song:String, score:Int = 0, ?diff:Int = 0, ?rating:Float = -1, ?misses:Int = 2):Void
+	public static function saveScore(song:String, score:Int = 0, ?diff:Int = 0, ?rating:Float = -1, ?misses:Int = 0):Void
 	{
 		var daSong:String = formatSong(song, diff);
 
@@ -129,7 +129,7 @@ class Highscore
 	{
 		var daSong:String = formatSong(song, diff);
 		if (!songMisses.exists(daSong))
-			setMisses(daSong, 999);
+			setMisses(daSong, 0);
 	
 		return songMisses.get(daSong);
 	}
