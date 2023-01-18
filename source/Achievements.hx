@@ -11,33 +11,33 @@ using StringTools;
 
 class Achievements {
 	public static var achievementsStuff:Array<Dynamic> = [ //Name, Description, Hidden achievement
-		["Gran Espectaculo",		"Termina la Week con mas del 90% de acurracy en hard",	false],
-		["Maldito Experto",		"Completa 'Showtime' sin fallos",									false],
-		["Detective",		"Pon el codigo secreto en el menu debug. \nPistas: Motor de videojuegos de lucha, primera aparicion de Maavo, Ronald McDonald",						false],
-		["Partida Perfecta",		"Completa la cancion 'kfm.mid' sin fallos",				false],
-		["Manco",		"Pierde 3 veces seguidas",						false],
-		["Literal no tienes manos",		"Pierde 10 veces en total",												false],
-		["WIII GANE!",		"Pierde en Lovely",													false],
-		["Perfeccionista",		"Completa todas las canciones sin fallos en Hard",								false],
-		["Enfermo",		"Completa 'Tokyo Teddy Bear' en dificultad Extrema sin fallos	",									false],
-		["Friday Night Funkin'",	"Juega un viernes por la noche xd",							 true],
-		["Y los telones se cierran",		"Consigue todos los logros",						false],
-		["Le sabes",		"Savedata del mod del Derker",	true]
+		["Gran Espectaculo",		 "Termina la Week con mas del 90% de acurracy en hard",																			 false],
+		["Maldito Experto",		     "Completa 'Showtime' sin fallos",																								 false],
+		["Detective",				 "Pon el codigo secreto en el menu debug. \nPistas: Motor de videojuegos de lucha, primera aparicion de Maavo, Ronald McDonald", false],
+		["Partida Perfecta",		 "Completa la cancion 'kfm.mid' sin fallos",																					 false],
+		["Manco",					 "Pierde 3 veces seguidas",																										 false],
+		["Literal no tienes manos",	 "Pierde 10 veces en total",																									 false],
+		["WIII GANE!",			 	 "Pierde en Lovely",																											 false],
+		["Perfeccionista",		 	 "Completa todas las canciones sin fallos en Hard",																				 false],
+		["Enfermo",				 	 "Completa 'Tokyo Teddy Bear' en dificultad Extrema sin fallos",																 false],
+		["Friday Night Funkin'", 	 "Juega un viernes por la noche xd",							 																  true],
+		["Y los telones se cierran", "Consigue todos los logros",																									 false],
+		["Le sabes",				 "Savedata del mod del Derker",																									  true]
 	];
 
 	public static var achievementsUnlocked:Array<Dynamic> = [ //Save string and Achievement tag + is it unlocked?
-		['great_show', 	false],					//0
-		['expert', 			false],				//1
-		['detective', 				false],		//2
-		['perfect', 				false],		//3
-		['manco', 				false],			//4
-		['no_hands', 			false],			//5
-		['gane', 				false],			//6
-		['perfeccionist', 			false],		//7
-		['sick', 				false],			//8
-		['friday_night_play', 			false],	//9
-		['telones', 			false], 		//10
-		['good_taste', 				false] 		//11
+		['great_show', 	      false],		//0
+		['expert', 			  false],		//1
+		['detective', 		  false],		//2
+		['perfect', 		  false],		//3
+		['manco', 			  false],		//4
+		['no_hands', 		  false],		//5
+		['gane', 			  false],		//6
+		['perfeccionist',     false],		//7
+		['sick', 			  false],		//8
+		['friday_night_play', false],		//9
+		['telones', 		  false], 		//10
+		['good_taste', 		  false] 		//11
 	];
 
 	public static var henchmenDeath:Int = 0;

@@ -51,7 +51,7 @@ class FlxSpriteVideo extends FlxSprite {
         FlxVideo.realPause = false;
         FlxVideo.vlcBitmap.visible = false;
         FlxVideo.vlcBitmap.volume = 0;
-        trace(FlxVideo.vlcBitmap.getVolume());
+        trace(FlxVideo.vlcBitmap.volume);
 		#end
         
 	}

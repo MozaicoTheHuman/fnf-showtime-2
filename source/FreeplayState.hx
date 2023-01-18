@@ -145,19 +145,16 @@ class FreeplayState extends MusicBeatState
 		bg.scrollFactor.set();
 		add(bg);
 
-		waveA = new FlxBackdrop(null, 0.25, 0.25, true, false);
-		waveA.loadGraphic(Paths.image('freeplaymenu/blackthingup'));
-		waveA.scrollFactor.set();
+		waveA = new FlxBackdrop(Paths.image('freeplaymenu/blackthingup'), X);
+		waveA.scrollFactor.set(0.25, 0.25);
 		add(waveA);
 
-		waveB = new FlxBackdrop(null, 0.50, 0.50, true, false);
-		waveB.loadGraphic(Paths.image('freeplaymenu/darkredthingup'));
-		waveB.scrollFactor.set();
+		waveB = new FlxBackdrop(Paths.image('freeplaymenu/darkredthingup'), X);
+		waveB.scrollFactor.set(0.5, 0.5);
 		add(waveB);
 
-		waveC = new FlxBackdrop(null, 1, 1, true, false);
-		waveC.loadGraphic(Paths.image('freeplaymenu/redthingup'));
-		waveC.scrollFactor.set();
+		waveC = new FlxBackdrop(Paths.image('freeplaymenu/redthingup'), X);
+		waveC.scrollFactor.set(1, 1);
 		add(waveC);
 
 		gridcenter = new FlxSprite(360, 210).loadGraphic(Paths.image('freeplaymenu/gridCenter'));
@@ -337,22 +334,19 @@ class FreeplayState extends MusicBeatState
 		arrLeft.scrollFactor.set();
 		add(arrLeft);
 
-		waveA2 = new FlxBackdrop(null, 0.25, 0.25, true, false);
+		waveA2 = new FlxBackdrop(Paths.image('freeplaymenu/blackthing'), X);
 		waveA2.y = 630;
-		waveA2.loadGraphic(Paths.image('freeplaymenu/blackthing'));
-		waveA2.scrollFactor.set();
+		waveA2.scrollFactor.set(0.25, 0.25);
 		add(waveA2);
 
-		waveB2 = new FlxBackdrop(null, 0.50, 0.50, true, false);
+		waveB2 = new FlxBackdrop(Paths.image('freeplaymenu/darkredthing'), X);
 		waveB2.y = 660;
-		waveB2.loadGraphic(Paths.image('freeplaymenu/darkredthing'));
-		waveB2.scrollFactor.set();
+		waveB2.scrollFactor.set(0.5, 0.5);
 		add(waveB2);
 
-		waveC2 = new FlxBackdrop(null, 1, 1, true, false);
+		waveC2 = new FlxBackdrop(Paths.image('freeplaymenu/redthing'), X);
 		waveC2.y = 660;
-		waveC2.loadGraphic(Paths.image('freeplaymenu/redthing'));
-		waveC2.scrollFactor.set();
+		waveC2.scrollFactor.set(1, 1);
 		add(waveC2);
 
 		scoreText = new FlxText(5, 5, 0, "", 32);

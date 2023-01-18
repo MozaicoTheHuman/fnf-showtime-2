@@ -30,7 +30,7 @@ class CharactersMenuState extends MusicBeatState
 	private var charactersIndex:Array<Int> = [];
 	private static var selectedChar:String;
 
-	var bg:FlxBackdrop = new FlxBackdrop(Paths.image('menuDesat'), 0.2, 0.2, true, true);
+	var bg:FlxBackdrop = new FlxBackdrop(Paths.image('menuDesat'), X);
 	var leftArrow:FlxSprite;
 	var rightArrow:FlxSprite;
 	var camFollow:FlxObject;

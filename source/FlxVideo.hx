@@ -65,10 +65,10 @@ class FlxVideo extends FlxBasic {
 		// by Polybius, check out PolyEngine! https://github.com/polybiusproxy/PolyEngine
 
 		vlcBitmap = new VLCBitmap();
-		vlcBitmap.set_height(FlxG.stage.stageHeight);
-		vlcBitmap.set_width(FlxG.stage.stageHeight * (16 / 9));
+		vlcBitmap.height = FlxG.stage.stageHeight;
+		vlcBitmap.width = FlxG.stage.stageHeight * (16 / 9);
 
-		vlcBitmap.onComplete = onVLCComplete;
+		vlcBitmap.onEndReached = onVLCComplete;
 		
 
 		FlxG.stage.addEventListener(Event.ENTER_FRAME, fixVolume);
@@ -81,7 +81,7 @@ class FlxVideo extends FlxBasic {
 
 		var child = FlxG.addChildBelowMouse(vlcBitmap);
 		if (isChild) child.visible = false;
-		vlcBitmap.playFile(checkFile(name));
+		vlcBitmap.play(checkFile(name));
 
 		repeats = repito;
 
@@ -148,7 +148,7 @@ class FlxVideo extends FlxBasic {
 		vlcBitmap.volume = 0;
         if (muted == false){
             if(!FlxG.sound.muted && FlxG.sound.volume > 0.01) { //Kind of fixes the volume being too low when you decrease it
-                vlcBitmap.volume = FlxG.sound.volume * 0.5 + 0.5;
+                vlcBitmap.volume = Std.int(FlxG.sound.volume * 100);
             }
         }
         
