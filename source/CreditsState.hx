@@ -252,7 +252,14 @@ class CreditsState extends MusicBeatState
 				'Original Tokyo Teddy Bear UST file',
 				'https://www.youtube.com/@tanjirotaidana',
 				'FFDD33'
-			],			
+			],
+			[
+				'Kishio',
+				'nada',
+				'Original creator of MUGEN Ronald McDonald',
+				'http://web.archive.org/web/20140214203506/http://www1.bbiq.jp/gdgdgdgd/',
+				'FFDD33'
+			],							
 			[
 				'PointyyESM',
 				'nada',
