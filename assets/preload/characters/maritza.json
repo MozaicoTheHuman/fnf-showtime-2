@@ -1,114 +1,114 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				128,
 				316
 			],
-			"loop": false,
-			"fps": 31,
 			"anim": "singUP-alt",
-			"indices": [],
-			"name": "maritza_up"
+			"fps": 31,
+			"name": "maritza_up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				128,
 				316
 			],
-			"loop": false,
-			"fps": 30,
 			"anim": "singDOWN-alt",
-			"indices": [],
-			"name": "maritza_down"
+			"fps": 30,
+			"name": "maritza_down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				159,
 				316
 			],
-			"loop": false,
-			"fps": 30,
 			"anim": "singLEFT-alt",
-			"indices": [],
-			"name": "maritza_left"
+			"fps": 30,
+			"name": "maritza_left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				107,
 				316
 			],
-			"loop": false,
-			"fps": 30,
 			"anim": "singRIGHT-alt",
-			"indices": [],
-			"name": "maritza_right"
+			"fps": 30,
+			"name": "maritza_right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				128,
 				316
 			],
-			"loop": false,
-			"fps": 25,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "maritza_down"
+			"fps": 25,
+			"name": "maritza_down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				128,
 				316
 			],
-			"loop": false,
-			"fps": 25,
 			"anim": "singUP",
-			"indices": [],
-			"name": "maritza_up"
+			"fps": 25,
+			"name": "maritza_up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				159,
 				316
 			],
-			"loop": false,
-			"fps": 25,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "maritza_left"
+			"fps": 25,
+			"name": "maritza_left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				107,
 				316
 			],
-			"loop": false,
-			"fps": 25,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "maritza_right"
+			"fps": 25,
+			"name": "maritza_right",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				180
 			],
+			"loop": false,
+			"fps": 23,
 			"anim": "danceLeft",
-			"fps": 23,
-			"name": "maritza_idle",
-			"indices": []
+			"indices": [],
+			"name": "maritza_idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				180
 			],
-			"anim": "danceRight",
+			"loop": false,
 			"fps": 23,
-			"name": "maritza_danceright",
-			"indices": []
+			"anim": "danceRight",
+			"indices": [],
+			"name": "maritza_danceright"
 		}
 	],
 	"no_antialiasing": false,
@@ -121,8 +121,8 @@
 	"flip_x": false,
 	"healthbar_colors": [
 		255,
-		82,
-		228
+		119,
+		218
 	],
 	"camera_position": [
 		-100,

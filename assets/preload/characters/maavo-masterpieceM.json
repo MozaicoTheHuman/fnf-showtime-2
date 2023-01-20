@@ -1,114 +1,114 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				124,
 				-21
 			],
+			"loop": false,
+			"fps": 30,
 			"anim": "singLEFT-alt",
-			"fps": 30,
-			"name": "Left",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				72
+			],
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "Maavo IDLE",
 			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-50,
 				72
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "danceLeft",
-			"indices": [],
-			"name": "Maavo IDLE"
-		},
-		{
-			"offsets": [
-				-50,
-				72
-			],
-			"loop": false,
-			"fps": 24,
 			"anim": "danceRight",
-			"indices": [],
-			"name": "Maavo IDLE"
+			"fps": 24,
+			"name": "Maavo IDLE",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				4,
 				121
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 26,
-			"name": "Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				124,
 				-21
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 26,
-			"name": "Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				80,
 				-133
 			],
+			"loop": false,
+			"fps": 26,
 			"anim": "singDOWN",
-			"fps": 26,
-			"name": "Down",
-			"indices": []
+			"indices": [],
+			"name": "Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				84,
 				8
 			],
+			"loop": false,
+			"fps": 26,
 			"anim": "singRIGHT",
-			"fps": 26,
-			"name": "Right",
-			"indices": []
+			"indices": [],
+			"name": "Right"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				84,
 				8
 			],
-			"anim": "singRIGHT-alt",
+			"loop": false,
 			"fps": 30,
-			"name": "Right",
-			"indices": []
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "Right"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				4,
 				121
 			],
-			"anim": "singUP-alt",
+			"loop": false,
 			"fps": 30,
-			"name": "Up",
-			"indices": []
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				80,
 				-133
 			],
-			"anim": "singDOWN-alt",
+			"loop": false,
 			"fps": 30,
-			"name": "Down",
-			"indices": []
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "Down"
 		}
 	],
 	"no_antialiasing": false,
@@ -120,9 +120,9 @@
 	"healthicon": "showtime",
 	"flip_x": false,
 	"healthbar_colors": [
-		219,
-		40,
-		29
+		255,
+		119,
+		218
 	],
 	"camera_position": [
 		90,

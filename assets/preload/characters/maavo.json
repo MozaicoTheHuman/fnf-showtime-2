@@ -1,114 +1,114 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-50,
 				72
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Maavo IDLE"
+			"fps": 24,
+			"name": "Maavo IDLE",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				124,
 				-21
 			],
-			"loop": false,
-			"fps": 25,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Left"
+			"fps": 25,
+			"name": "Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				4,
 				121
 			],
-			"loop": false,
-			"fps": 25,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Up"
+			"fps": 25,
+			"name": "Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				80,
 				-133
 			],
-			"loop": false,
-			"fps": 25,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Down"
-		},
-		{
-			"offsets": [
-				84,
-				8
-			],
-			"loop": false,
 			"fps": 25,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Right"
+			"name": "Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				84,
 				8
 			],
-			"loop": false,
-			"fps": 29,
-			"anim": "singRIGHT-alt",
-			"indices": [],
-			"name": "Right"
+			"anim": "singRIGHT",
+			"fps": 25,
+			"name": "Right",
+			"indices": []
 		},
 		{
+			"loop": false,
+			"offsets": [
+				84,
+				8
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 29,
+			"name": "Right",
+			"indices": []
+		},
+		{
+			"loop": false,
 			"offsets": [
 				124,
 				-21
 			],
-			"loop": false,
-			"fps": 30,
 			"anim": "singLEFT-alt",
-			"indices": [],
-			"name": "Left"
+			"fps": 30,
+			"name": "Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				4,
 				121
 			],
-			"loop": false,
-			"fps": 29,
 			"anim": "singUP-alt",
-			"indices": [],
-			"name": "Up"
+			"fps": 29,
+			"name": "Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				80,
 				-133
 			],
-			"loop": false,
-			"fps": 29,
 			"anim": "singDOWN-alt",
-			"indices": [],
-			"name": "Down"
+			"fps": 29,
+			"name": "Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				101,
 				118
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "showtime",
-			"loop": false,
-			"name": "showtime"
+			"fps": 24,
+			"name": "showtime",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -120,7 +120,7 @@
 	"healthicon": "maavo",
 	"flip_x": false,
 	"healthbar_colors": [
-		219,
+		255,
 		40,
 		29
 	],

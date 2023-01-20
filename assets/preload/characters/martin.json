@@ -49,10 +49,10 @@
 				0,
 				0
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "danceLeft",
-			"loop": false,
+			"indices": [],
 			"name": "idle"
 		},
 		{
@@ -60,10 +60,10 @@
 				0,
 				0
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "danceRight",
-			"loop": false,
+			"indices": [],
 			"name": "idle"
 		}
 	],
@@ -76,9 +76,9 @@
 	"healthicon": "2016",
 	"flip_x": false,
 	"healthbar_colors": [
-		97,
-		100,
-		169
+		215,
+		40,
+		40
 	],
 	"camera_position": [
 		180,
