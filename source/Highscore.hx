@@ -56,13 +56,13 @@ class Highscore
 			if (songScores.get(daSong) < score) {
 				setScore(daSong, score);
 				if(rating >= 0) setRating(daSong, rating);
-				if (misses <= 999) setMisses(daSong, misses);
+				if (misses >= 0) setMisses(daSong, misses);
 			}
 		}
 		else {
 			setScore(daSong, score);
 			if(rating >= 0) setRating(daSong, rating);
-			if (misses <= 999) setMisses(daSong, misses);
+			if (misses >= 0) setMisses(daSong, misses);
 		}
 	}
 
@@ -91,7 +91,6 @@ class Highscore
 	}
 	static function setMisses(song:String, misses:Int):Void
 	{
-			
 		songMisses.set(song, misses);
 		FlxG.save.data.songMisses = songMisses;
 		FlxG.save.flush();

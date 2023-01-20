@@ -273,8 +273,6 @@ class PlayState extends MusicBeatState
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
 
-	
-
 		practiceMode = false;
 		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FlxCamera();
@@ -710,14 +708,7 @@ class PlayState extends MusicBeatState
 		healthBarBG.scrollFactor.set();
 		healthBarBG.visible = !ClientPrefs.hideHud;
 
-		if (isMugen)
-		{
-				barra = Std.int(healthBarBG.width - 8);
-		}
-		else
-		{
-				barra = 575;
-		}
+		barra = isMugen ? Std.int(healthBarBG.width - 8) : 575;
 
 		healthBar = new FlxBar(healthBarBG.x + 178, 0, RIGHT_TO_LEFT, Std.int(barra), 26, this, 'health', 0, 2);
 		healthBar.scrollFactor.set();
@@ -901,11 +892,10 @@ class PlayState extends MusicBeatState
 			healthBar.createImageBar(Paths.image(hudFolder + 'redbar'),Paths.image(hudFolder + 'yellowbar'));
 			healthBar.updateBar();
 		}else{
-			healthBarBG.color = FlxColor.BLACK;
-			healthBar.createFilledBar(CoolUtil.dominantColor(iconP2), CoolUtil.dominantColor(iconP1));
+			healthBarBG.color = CoolUtil.dominantColor(iconP2);
+			healthBar.createFilledBar(FlxColor.BLACK, CoolUtil.dominantColor(iconP1));
 			healthBar.updateBar();
 		}
-		
 	}
 
 	public function addCharacterToList(newCharacter:String, type:Int)
