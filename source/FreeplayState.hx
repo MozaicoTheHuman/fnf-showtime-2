@@ -550,7 +550,7 @@ class FreeplayState extends MusicBeatState
 		var tokyoInt:Int = songs[curSelected].songName == "Tokyo" ? 0 : 1;
 
 		if (curDifficulty < 0)
-			curDifficulty = CoolUtil.difficultyStuff.length - 1 + tokyoInt;
+			curDifficulty = CoolUtil.difficultyStuff.length - (1 + tokyoInt);
 		if (curDifficulty >= CoolUtil.difficultyStuff.length - tokyoInt)
 			curDifficulty = 0;
 

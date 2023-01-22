@@ -650,6 +650,11 @@ class MainMenuState extends MusicBeatState
 					});
 				}
 			}
+			if(FlxG.keys.justPressed.SEVEN){
+				for(i in 0...Achievements.achievementsUnlocked.length){
+					Achievements.unlockAchievement(i);
+				}
+			}
 		}
 
 		super.update(elapsed);
