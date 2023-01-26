@@ -36,7 +36,8 @@ class PauseSubState extends MusicBeatSubstate
 
 		for (i in 0...CoolUtil.difficultyStuff.length) {
 			var diff:String = '' + CoolUtil.difficultyStuff[i][0];
-			difficultyChoices.push(diff);
+			if(CoolUtil.difficultyStuff[i][0] != 'Extreme')
+				difficultyChoices.push(diff);
 		}
 		difficultyChoices.push('BACK');
 

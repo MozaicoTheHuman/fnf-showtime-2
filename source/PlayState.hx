@@ -51,6 +51,11 @@ import openfl.utils.Assets as OpenFlAssets;
 
 using StringTools;
 
+#if VIDEOS_ALLOWED
+import video.VideoHandler;
+import video.VideoSprite;
+#end
+
 #if sys
 import sys.FileSystem;
 #end
@@ -226,9 +231,9 @@ class PlayState extends MusicBeatState
 	public var inCutscene:Bool = false;
 	
 	//Video Tokyo
-	var antibug:Bool = false;
-	var videogrp:FlxTypedGroup<FlxSprite>;	
-	var tokyoVideo:FlxSpriteVideo;
+	#if VIDEOS_ALLOWED
+	var tokyoVideo:VideoSprite;
+	#end
 
 	var songLength:Float = 0;
 
@@ -520,11 +525,6 @@ class PlayState extends MusicBeatState
 		add(dadGroup);
 		add(boyfriendGroup);
 
-		if (SONG.song.toLowerCase() == 'tokyo')
-			{
-				videogrp = new FlxTypedGroup<FlxSprite>();
-				add(videogrp);				
-			}
 		#if LUA_ALLOWED
 		luaDebugGroup = new FlxTypedGroup<DebugLuaText>();
 		luaDebugGroup.cameras = [camOther];
@@ -600,6 +600,13 @@ class PlayState extends MusicBeatState
 		}
 
 		Conductor.songPosition = -5000;
+
+		if (SONG.song == 'Tokyo'){
+			tokyoVideo = new VideoSprite(0, 0);
+			tokyoVideo.antialiasing = ClientPrefs.globalAntialiasing;
+			tokyoVideo.bitmap.canUseSound = false;
+			add(tokyoVideo);
+		}
 
 		strumLine = new FlxSprite(ClientPrefs.middleScroll || SONG.song.toLowerCase() == 'tokyo' ? STRUM_X_MIDDLESCROLL : STRUM_X, 50).makeGraphic(FlxG.width, 10);
 		if (ClientPrefs.downScroll)
@@ -767,6 +774,10 @@ class PlayState extends MusicBeatState
 			botplayTxt.y = timeBarBG.y - 78;
 		}
 
+		if(SONG.song == 'Tokyo'){
+			tokyoVideo.cameras = [camHUD];
+		}
+
 		strumLineNotes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
 		notes.cameras = [camHUD];
@@ -892,8 +903,8 @@ class PlayState extends MusicBeatState
 			healthBar.createImageBar(Paths.image(hudFolder + 'redbar'),Paths.image(hudFolder + 'yellowbar'));
 			healthBar.updateBar();
 		}else{
-			healthBarBG.color = CoolUtil.dominantColor(iconP2);
-			healthBar.createFilledBar(FlxColor.BLACK, CoolUtil.dominantColor(iconP1));
+			healthBarBG.color = FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]);
+			healthBar.createFilledBar(FlxColor.fromRGB(140, 140, 140), FlxColor.fromRGB(0, 255, 255));
 			healthBar.updateBar();
 		}
 	}
@@ -949,66 +960,43 @@ class PlayState extends MusicBeatState
 		char.y += char.positionArray[1];
 	}
 
-	public function startVideo(name:String):Void
+	public function startVideo(name:String)
 	{
-	#if VIDEOS_ALLOWED
-	var foundFile:Bool = false;
-	var fileName:String = #if MODS_ALLOWED Paths.modFolders('videos/' + name + '.' + Paths.VIDEO_EXT); #else ''; #end
-	#if sys
-	if (FileSystem.exists(fileName))
-	{
-		foundFile = true;
-	}
-	#end
+		#if VIDEOS_ALLOWED
+		inCutscene = true;
 
-	if (!foundFile)
-	{
-		fileName = Paths.video(name);
+		var filepath:String = Paths.video(name);
 		#if sys
-		if (FileSystem.exists(fileName))
-		{
+		if (!FileSystem.exists(filepath))
 		#else
-		if (OpenFlAssets.exists(fileName))
-		{
+		if (!OpenFlAssets.exists(filepath))
 		#end
-			foundFile = true;
-		}
-		} if (foundFile)
 		{
-			inCutscene = true;
-			var bg = new FlxSprite(-FlxG.width, -FlxG.height).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
-			bg.scrollFactor.set();
-			bg.cameras = [camHUD];
-			add(bg);
-			
-
-			(new FlxVideo(fileName)).finishCallback = function()
-				{
-					remove(bg);
-					if (endingSong)
-					{
-						endSong();
-					}
-					else
-					{
-						startCountdown();
-					}
-				}
+			FlxG.log.warn('Couldnt find video file: ' + name);
+			startAndEnd();
 			return;
 		}
-		else
-		{
-			FlxG.log.warn('Couldnt find video file: ' + fileName);
-		}
+
+		var video:VideoHandler = new VideoHandler();
+		video.playVideo(filepath);
+		video.onEndReached = function(){
+			video.dispose();
+			startAndEnd();
+			return;
+		};
+		#else
+		FlxG.log.warn('Platform not supported!');
+		startAndEnd();
+		return;
 		#end
+	}
+
+	function startAndEnd()
+	{
 		if (endingSong)
-		{
 			endSong();
-		}
 		else
-		{
 			startCountdown();
-		}
 	}
 	
 	// You don't have to add a song, just saying. You can just do "startDialogue(dialogueJson);" and it should work
@@ -1186,14 +1174,10 @@ class PlayState extends MusicBeatState
 
 	function startSong():Void
 	{
-		if (SONG.song.toLowerCase() == 'tokyo')
-			{
-				tokyoVideo = new FlxSpriteVideo(0,0, Paths.video('tokio'));
-				tokyoVideo.cameras = [camHUD];
-				tokyoVideo.antialiasing = ClientPrefs.globalAntialiasing;				
-				videogrp.add(tokyoVideo);
-				antibug = true;	
-			}
+		if (SONG.song.toLowerCase() == 'tokyo'){
+			tokyoVideo.playVideo(Paths.video('tokio'));
+		}
+
 		startingSong = false;
 
 		previousFrameTime = FlxG.game.ticks;
@@ -1496,9 +1480,8 @@ class PlayState extends MusicBeatState
 			if (FlxG.sound.music != null && !startingSong)
 			{
 				if (SONG.song.toLowerCase() == 'tokyo')
-				{
-					tokyoVideo.resume();
-				}
+					tokyoVideo.bitmap.resume();
+
 				resyncVocals();
 			}
 			
@@ -1554,15 +1537,7 @@ class PlayState extends MusicBeatState
 	override public function onFocus():Void
 	{
 		#if desktop
-		if (health > 0 && !paused)
-			if (SONG.song.toLowerCase() == 'tokyo')
-				{
-					tokyoVideo.resume();
-				}
-		{
-			if (antibug == true){
-				tokyoVideo.resume();
-			}
+		if (health > 0 && !paused){
 			if (Conductor.songPosition > 0.0)
 			{
 				DiscordClient.changePresence(detailsText, SONG.song
@@ -1588,9 +1563,6 @@ class PlayState extends MusicBeatState
 		#if desktop
 		if (health > 0 && !paused)
 		{
-			if (antibug == true){
-				tokyoVideo.pause();
-			}
 			DiscordClient.changePresence(detailsPausedText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 		}
 		#end
@@ -1711,11 +1683,8 @@ class PlayState extends MusicBeatState
 					if (FlxG.sound.music != null)
 					{
 						if (SONG.song.toLowerCase() == 'tokyo')
-						{
-							if (antibug == true){
-								tokyoVideo.pause();
-							}	
-						}
+							tokyoVideo.bitmap.pause();
+
 						FlxG.sound.music.pause();
 						vocals.pause();
 					}
@@ -1732,8 +1701,9 @@ class PlayState extends MusicBeatState
 
 		if (FlxG.keys.justPressed.SEVEN && !endingSong && !inCutscene)
 		{
-			if (antibug == true)
-				tokyoVideo.stop();
+			if (SONG.song.toLowerCase() == 'tokyo')
+				tokyoVideo.bitmap.stop();
+
 			persistentUpdate = false;
 			paused = true;
 			cancelFadeTween();
@@ -1778,8 +1748,9 @@ class PlayState extends MusicBeatState
 
 		if (FlxG.keys.justPressed.EIGHT && !endingSong && !inCutscene)
 		{
-			if (antibug == true)
-				tokyoVideo.stop();
+			if (SONG.song.toLowerCase() == 'tokyo')
+				tokyoVideo.bitmap.stop();
+
 			persistentUpdate = false;
 			paused = true;
 			cancelFadeTween();
@@ -2220,7 +2191,8 @@ class PlayState extends MusicBeatState
 				vocals.stop();
 				FlxG.sound.music.stop();
 				if (SONG.song.toLowerCase() == 'tokyo')
-					tokyoVideo.stop();
+					tokyoVideo.bitmap.stop();
+				
 				openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y, this));
 				for (tween in modchartTweens)
 				{
