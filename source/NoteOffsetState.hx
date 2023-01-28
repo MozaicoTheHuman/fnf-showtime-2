@@ -144,7 +144,9 @@ class NoteOffsetState extends MusicBeatState
 
 		// Note delay stuff
 
-		beatText = new Alphabet(0, 0, 'Beat Hit!', true, false, 0.05, 0.6);
+		beatText = new Alphabet(0, 0, 'Beat Hit!', true);
+		beatText.scaleX = 0.6;
+		beatText.scaleY = 0.6;
 		beatText.x += 260;
 		beatText.alpha = 0;
 		beatText.acceleration.y = 250;
@@ -160,7 +162,7 @@ class NoteOffsetState extends MusicBeatState
 
 		barPercent = ClientPrefs.noteOffset;
 		updateNoteDelay();
-
+		
 		timeBarBG = new FlxSprite(0, timeTxt.y + 8).loadGraphic(Paths.image('timeBar'));
 		timeBarBG.setGraphicSize(Std.int(timeBarBG.width * 1.2));
 		timeBarBG.updateHitbox();
@@ -168,12 +170,11 @@ class NoteOffsetState extends MusicBeatState
 		timeBarBG.screenCenter(X);
 		timeBarBG.visible = false;
 
-		timeBar = new FlxBar(0, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this, 'barPercent', delayMin,
-			delayMax);
+		timeBar = new FlxBar(0, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this, 'barPercent', delayMin, delayMax);
 		timeBar.scrollFactor.set();
 		timeBar.screenCenter(X);
 		timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
-		timeBar.numDivisions = 800; // How much lag this causes?? Should i tone it down to idk, 400 or 200?
+		timeBar.numDivisions = 800; //How much lag this causes?? Should i tone it down to idk, 400 or 200?
 		timeBar.visible = false;
 		timeBar.cameras = [camHUD];
 

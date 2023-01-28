@@ -28,6 +28,7 @@ using StringTools;
 // daaaa
 class MainMenuState extends MusicBeatState
 {
+	public static var weekCompleted:Map<String, Bool> = new Map<String, Bool>();
 	public static var psychEngineVersion:String = '0.4.2'; // This is also used for Discord RPC
 	public static var curSelected:Int = 0;
 	private static var curWeek:Int = 0;
@@ -92,7 +93,6 @@ class MainMenuState extends MusicBeatState
 
 		menuUnlocked = ClientPrefs.unlockedMenus[random];
 		checkDerker();
-		Language.startJson();
 
 		if (menuUnlocked == "derker" && ClientPrefs.havePlayedDerker)
 		{
@@ -598,7 +598,7 @@ class MainMenuState extends MusicBeatState
 										case 'credits':
 											MusicBeatState.switchState(new CreditsState());
 										case 'options':
-											MusicBeatState.switchState(new OptionsState());
+											LoadingState.loadAndSwitchState(new options.OptionsState());
 									}
 								});
 							}

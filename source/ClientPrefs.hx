@@ -8,104 +8,88 @@ import Controls;
 
 class ClientPrefs
 {
-	// TO DO: Redo ClientPrefs in a way that isn't too stupid
+	//Achievements
+	public static var unlockedMenus:Array<String> = ["maavo", "ivette", "maritza"];
+	public static var havePlayedDerker:Bool = false;
+
+	//Controls
+	public static var keyBinds:Map<String, Array<FlxKey>> = [
+		//Key Bind, Name for ControlsSubState
+		'note_left'		=> [A, LEFT],
+		'note_down'		=> [S, DOWN],
+		'note_up'		=> [W, UP],
+		'note_right'	=> [D, RIGHT],
+		
+		'ui_left'		=> [A, LEFT],
+		'ui_down'		=> [S, DOWN],
+		'ui_up'			=> [W, UP],
+		'ui_right'		=> [D, RIGHT],
+		
+		'accept'		=> [SPACE, ENTER],
+		'back'			=> [BACKSPACE, ESCAPE],
+		'pause'			=> [ENTER, ESCAPE],
+		'reset'			=> [R, NONE],
+		
+		'volume_mute'	=> [ZERO, NONE],
+		'volume_up'		=> [NUMPADPLUS, PLUS],
+		'volume_down'	=> [NUMPADMINUS, MINUS],
+		
+		'debug_1'		=> [SEVEN, NONE],
+		'debug_2'		=> [EIGHT, NONE]
+	];
+	public static var defaultKeys:Map<String, Array<FlxKey>> = null;
+
+	public static function loadDefaultKeys() {
+		defaultKeys = keyBinds.copy();
+		//trace(defaultKeys);
+	}
+
+	//Graphics
+	public static var fullScreen:Bool = false;
+	public static var resList:Array<Dynamic> = [
+		["640x360", 640, 360],
+		["768x432", 768, 432],
+		["896x504", 896, 504],
+		["1024x576", 1024, 576],
+		["1152x648", 1152, 648],
+		["1280x720", 1280, 720],
+		["1366x768", 1366, 768],
+		["1600x900", 1600, 900],
+		["1920x1080", 1920, 1080],
+		["2560x1440", 2560, 1440],
+		["3840x2160", 3840, 2160]
+	];
+	public static var resolution:String = "1280x720";
+	public static var framerate:Int = 60;
+	public static var showFPS:Bool = true;
+	public static var globalAntialiasing:Bool = true;
+	public static var lowQuality:Bool = false;
+
+	//Preferences
+	public static var language:String = "English";
 	public static var downScroll:Bool = false;
 	public static var middleScroll:Bool = false;
-	public static var showFPS:Bool = true;
-	public static var flashing:Bool = true;
-	public static var globalAntialiasing:Bool = true;
-	public static var noteSplashes:Bool = true;
-	public static var lowQuality:Bool = false;
-	public static var framerate:Int = 60;
-	public static var cursing:Bool = true;
-	public static var violence:Bool = true;
-	public static var camZooms:Bool = true;
-	public static var hideHud:Bool = false;
-	public static var noteOffset:Int = 0;
-	public static var language:String = "English";
-	public static var arrowHSV:Array<Array<Int>> = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
-	public static var imagesPersist:Bool = false;
 	public static var ghostTapping:Bool = true;
-	public static var hideTime:Bool = false;
 	public static var noteQuant:Bool = false;
-	public static var havePlayedDerker:Bool = false;
-	public static var dynamicCamera:Bool = true;
-	public static var sinFallos:Array<Int> = [];
-	public static var unlockedMenus:Array<String> = ["maavo", "ivette", "maritza"];
 
+	//Visuals
+	public static var flashing:Bool = true;
+	public static var noteSplashes:Bool = true;
+	public static var camZooms:Bool = true;
+	public static var dynamicCamera:Bool = true;
+	public static var hideHud:Bool = false;
+	public static var hideTime:Bool = false;
+
+	//Note Offset
+	public static var noteOffset:Int = 0;
 	public static var comboOffset:Array<Int> = [0, 0, 0, 0];
 
-	public static var defaultKeys:Array<FlxKey> = [
-		A,
-		LEFT, // Note Left
-		S,
-		DOWN, // Note Down
-		W,
-		UP, // Note Up
-		D,
-		RIGHT, // Note Right
-		A,
-		LEFT, // UI Left
-		S,
-		DOWN, // UI Down
-		W,
-		UP, // UI Up
-		D,
-		RIGHT, // UI Right
-		R,
-		NONE, // Reset
-		SPACE,
-		ENTER, // Accept
-		BACKSPACE,
-		ESCAPE, // Back
-		ENTER,
-		ESCAPE // Pause
-	];
-	// Every key has two binds, these binds are defined on defaultKeys! If you want your control to be changeable, you have to add it on ControlsSubState (inside OptionsState)'s list
-	public static var keyBinds:Array<Dynamic> = [
-		// Key Bind, Name for ControlsSubState
-		[Control.NOTE_LEFT, 'Left'],
-		[Control.NOTE_DOWN, 'Down'],
-		[Control.NOTE_UP, 'Up'],
-		[Control.NOTE_RIGHT, 'Right'],
-		[Control.UI_LEFT, 'Left '], // Added a space for not conflicting on ControlsSubState
-		[Control.UI_DOWN, 'Down '], // Added a space for not conflicting on ControlsSubState
-		[Control.UI_UP, 'Up '], // Added a space for not conflicting on ControlsSubState
-		[Control.UI_RIGHT, 'Right '], // Added a space for not conflicting on ControlsSubState
-		[Control.RESET, 'Reset'],
-		[Control.ACCEPT, 'Accept'],
-		[Control.BACK, 'Back'],
-		[Control.PAUSE, 'Pause']
-	];
-	public static var lastControls:Array<FlxKey> = defaultKeys.copy();
-
+	private static var save:FlxSave = new FlxSave();
+	
 	public static function saveSettings()
 	{
-		FlxG.save.data.downScroll = downScroll;
-		FlxG.save.data.middleScroll = middleScroll;
-		FlxG.save.data.showFPS = showFPS;
-		FlxG.save.data.flashing = flashing;
-		FlxG.save.data.globalAntialiasing = globalAntialiasing;
-		FlxG.save.data.noteSplashes = noteSplashes;
-		FlxG.save.data.lowQuality = lowQuality;
-		FlxG.save.data.framerate = framerate;
-		FlxG.save.data.cursing = cursing;
-		FlxG.save.data.violence = violence;
-		FlxG.save.data.camZooms = camZooms;
-		FlxG.save.data.noteOffset = noteOffset;
-		FlxG.save.data.comboOffset = comboOffset;
-		FlxG.save.data.hideHud = hideHud;
-		FlxG.save.data.arrowHSV = arrowHSV;
-		FlxG.save.data.imagesPersist = imagesPersist;
-		FlxG.save.data.ghostTapping = ghostTapping;
-		FlxG.save.data.hideTime = hideTime;
-		FlxG.save.data.noteQuant = noteQuant;
-		FlxG.save.data.havePlayedDerker = havePlayedDerker;
-		FlxG.save.data.unlockedMenus = unlockedMenus;
-		FlxG.save.data.dynamicCamera = dynamicCamera;
-		FlxG.save.data.language = language;
-		FlxG.save.data.sinFallos = sinFallos;
-
+		//Achievements
+		save.bind('achievements', 'Mozaico');
 		var achieves:Array<String> = [];
 		for (i in 0...Achievements.achievementsUnlocked.length)
 		{
@@ -114,181 +98,188 @@ class ClientPrefs
 				achieves.push(Achievements.achievementsUnlocked[i][0]);
 			}
 		}
-		FlxG.save.data.achievementsUnlocked = achieves;
-		FlxG.save.data.henchmenDeath = Achievements.henchmenDeath;
-		FlxG.save.flush();
-
-		var save:FlxSave = new FlxSave();
-		save.bind('controls', 'Mozaico'); // Placing this in a separate save so that it can be manually deleted without removing your Score and stuff
-		save.data.customControls = lastControls;
+		save.data.achievementsUnlocked = achieves;
+		save.data.havePlayedDerker = havePlayedDerker;
+		save.data.unlockedMenus = unlockedMenus;
 		save.flush();
-		FlxG.log.add("Settings saved!");
+
+		//Controls
+		save.bind('controls', 'Mozaico');
+		save.data.customControls = keyBinds;
+		save.flush();
+
+		//Graphics
+		save.bind('settings', 'Mozaico');
+		save.data.fullScreen = fullScreen;
+		save.data.resolution = resolution;
+		save.data.framerate = framerate;
+		save.data.showFPS = showFPS;
+		save.data.globalAntialiasing = globalAntialiasing;
+		save.data.lowQuality = lowQuality;
+
+		//Preferences
+		save.data.language = language;
+		save.data.downScroll = downScroll;
+		save.data.middleScroll = middleScroll;
+		save.data.ghostTapping = ghostTapping;
+		save.data.noteQuant = noteQuant;
+		//Visuals
+		save.data.flashing = flashing;
+		save.data.noteSplashes = noteSplashes;
+		save.data.camZooms = camZooms;
+		save.data.dynamicCamera = dynamicCamera;
+		save.data.hideHud = hideHud;
+		save.data.hideTime = hideTime;
+
+		//Note Offset
+		save.data.noteOffset = noteOffset;
+		save.data.comboOffset = comboOffset;
+
+		//Save
+		FlxG.save.flush();
+		FlxG.log.add("Achievements, Controls, Settings and Note Offsets saved!");
 	}
 
 	public static function loadPrefs()
 	{
-		if (FlxG.save.data.downScroll != null)
-		{
-			downScroll = FlxG.save.data.downScroll;
+		//Achievements
+		save.bind('achievements', 'Mozaico');
+		if (save.data.havePlayedDerker != null){
+			havePlayedDerker = save.data.havePlayedDerker;
 		}
-		if (FlxG.save.data.dynamicCamera != null)
-		{
-			dynamicCamera = FlxG.save.data.dynamicCamera;
+		if (save.data.unlockedMenus != null){
+			unlockedMenus = save.data.unlockedMenus;
 		}
-		if (FlxG.save.data.middleScroll != null)
-		{
-			middleScroll = FlxG.save.data.middleScroll;
+		//Controls
+		save.bind('controls', 'Mozaico');
+		if(save != null && save.data.customControls != null) {
+			var loadedControls:Map<String, Array<FlxKey>> = save.data.customControls;
+			for (control => keys in loadedControls) {
+				keyBinds.set(control, keys);
+			}
+			reloadControls();
 		}
-		if (FlxG.save.data.showFPS != null)
-		{
-			showFPS = FlxG.save.data.showFPS;
-			if (Main.fpsVar != null)
-			{
+
+		//Graphics
+		save.bind('settings', 'Mozaico');
+		if (save.data.fullScreen != null){
+			fullScreen = save.data.fullScreen;
+			FlxG.fullscreen = fullScreen;
+		}
+		if (save.data.resolution != null){
+			resolution = save.data.resolution;
+
+			for(i in 0...resList.length){
+				if(resolution == resList[i][0]){
+					if (!fullScreen)
+						FlxG.resizeWindow(resList[i][1], resList[i][2]);
+
+					FlxG.resizeGame(resList[i][1], resList[i][2]);
+				}
+			}
+		}
+		if (save.data.framerate != null){
+			framerate = save.data.framerate;
+			if (framerate > FlxG.drawFramerate){
+				FlxG.updateFramerate = framerate;
+				FlxG.drawFramerate = framerate;
+			}
+			else{
+				FlxG.updateFramerate = framerate;
+				FlxG.drawFramerate = framerate;
+			}
+		}
+		if (save.data.showFPS != null){
+			showFPS = save.data.showFPS;
+			if (Main.fpsVar != null){
 				Main.fpsVar.visible = showFPS;
 			}
 		}
-		if (FlxG.save.data.language != null)
-		{
-			language = FlxG.save.data.language;
+		if (save.data.globalAntialiasing != null){
+			globalAntialiasing = save.data.globalAntialiasing;
 		}
-		if (FlxG.save.data.sinFallos != null)
-		{
-			sinFallos = FlxG.save.data.sinFallos;
-		}
-		if (FlxG.save.data.flashing != null)
-		{
-			flashing = FlxG.save.data.flashing;
-		}
-		if (FlxG.save.data.globalAntialiasing != null)
-		{
-			globalAntialiasing = FlxG.save.data.globalAntialiasing;
-		}
-		if (FlxG.save.data.noteSplashes != null)
-		{
-			noteSplashes = FlxG.save.data.noteSplashes;
-		}
-		if (FlxG.save.data.lowQuality != null)
-		{
-			lowQuality = FlxG.save.data.lowQuality;
-		}
-		if (FlxG.save.data.framerate != null)
-		{
-			framerate = FlxG.save.data.framerate;
-			if (framerate > FlxG.drawFramerate)
-			{
-				FlxG.updateFramerate = framerate;
-				FlxG.drawFramerate = framerate;
-			}
-			else
-			{
-				FlxG.drawFramerate = framerate;
-				FlxG.updateFramerate = framerate;
-			}
-		}
-		/*if(FlxG.save.data.cursing != null) {
-				cursing = FlxG.save.data.cursing;
-			}
-			if(FlxG.save.data.violence != null) {
-				violence = FlxG.save.data.violence;
-		}*/
-		if (FlxG.save.data.camZooms != null)
-		{
-			camZooms = FlxG.save.data.camZooms;
-		}
-		if (FlxG.save.data.hideHud != null)
-		{
-			hideHud = FlxG.save.data.hideHud;
-		}
-		if (FlxG.save.data.noteOffset != null)
-		{
-			noteOffset = FlxG.save.data.noteOffset;
-		}
-		if (FlxG.save.data.comboOffset != null)
-		{
-			comboOffset = FlxG.save.data.comboOffset;
-		}
-		if (FlxG.save.data.arrowHSV != null)
-		{
-			arrowHSV = FlxG.save.data.arrowHSV;
-		}
-		if (FlxG.save.data.imagesPersist != null)
-		{
-			imagesPersist = FlxG.save.data.imagesPersist;
-			FlxGraphic.defaultPersist = ClientPrefs.imagesPersist;
-		}
-		if (FlxG.save.data.ghostTapping != null)
-		{
-			ghostTapping = FlxG.save.data.ghostTapping;
-		}
-		if (FlxG.save.data.hideTime != null)
-		{
-			hideTime = FlxG.save.data.hideTime;
-		}
-		if (FlxG.save.data.noteQuant != null)
-		{
-			noteQuant = FlxG.save.data.noteQuant;
-		}
-		if (FlxG.save.data.havePlayedDerker != null)
-		{
-			havePlayedDerker = FlxG.save.data.havePlayedDerker;
-		}
-		if (FlxG.save.data.unlockedMenus != null)
-		{
-			unlockedMenus = FlxG.save.data.unlockedMenus;
+		if (save.data.lowQuality != null){
+			lowQuality = save.data.lowQuality;
 		}
 
-		var save:FlxSave = new FlxSave();
-		save.bind('controls', 'Mozaico');
-		if (save != null && save.data.customControls != null)
-		{
-			reloadControls(save.data.customControls);
+		//Preferences
+		if (save.data.language != null){
+			language = save.data.language;
+		}
+		if (save.data.downScroll != null){
+			downScroll = save.data.downScroll;
+		}
+		if (save.data.middleScroll != null){
+			middleScroll = save.data.middleScroll;
+		}
+		if (save.data.ghostTapping != null){
+			ghostTapping = save.data.ghostTapping;
+		}
+		if (save.data.noteQuant != null){
+			noteQuant = save.data.noteQuant;
+		}
+
+		//Visuals
+		if (save.data.flashing != null){
+			flashing = save.data.flashing;
+		}
+		if (save.data.noteSplashes != null){
+			noteSplashes = save.data.noteSplashes;
+		}
+		if (save.data.camZooms != null){
+			camZooms = save.data.camZooms;
+		}
+		if (save.data.dynamicCamera != null){
+			dynamicCamera = save.data.dynamicCamera;
+		}
+		if (save.data.hideHud != null){
+			hideHud = save.data.hideHud;
+		}
+		if (save.data.hideTime != null){
+			hideTime = save.data.hideTime;
+		}
+
+		//Note Offset
+		if (save.data.noteOffset != null){
+			noteOffset = save.data.noteOffset;
+		}
+		if (save.data.comboOffset != null){
+			comboOffset = save.data.comboOffset;
+		}
+
+		//Sound
+		if(FlxG.save.data.volume != null){
+			FlxG.sound.volume = FlxG.save.data.volume;
+		}
+		if (FlxG.save.data.mute != null){
+			FlxG.sound.muted = FlxG.save.data.mute;
 		}
 	}
 
-	public static function reloadControls(newKeys:Array<FlxKey>)
-	{
-		ClientPrefs.removeControls(ClientPrefs.lastControls);
-		ClientPrefs.lastControls = newKeys.copy();
-		ClientPrefs.loadControls(ClientPrefs.lastControls);
-	}
+	public static function reloadControls() {
+		PlayerSettings.player1.controls.setKeyboardScheme(KeyboardScheme.Solo);
 
-	private static function removeControls(controlArray:Array<FlxKey>)
-	{
-		for (i in 0...keyBinds.length)
-		{
-			var controlValue:Int = i * 2;
-			var controlsToRemove:Array<FlxKey> = [];
-			for (j in 0...2)
-			{
-				if (controlArray[controlValue + j] != NONE)
-				{
-					controlsToRemove.push(controlArray[controlValue + j]);
-				}
-			}
-			if (controlsToRemove.length > 0)
-			{
-				PlayerSettings.player1.controls.unbindKeys(keyBinds[i][0], controlsToRemove);
-			}
-		}
+		TitleState.muteKeys = copyKey(keyBinds.get('volume_mute'));
+		TitleState.volumeDownKeys = copyKey(keyBinds.get('volume_down'));
+		TitleState.volumeUpKeys = copyKey(keyBinds.get('volume_up'));
+		FlxG.sound.muteKeys = TitleState.muteKeys;
+		FlxG.sound.volumeDownKeys = TitleState.volumeDownKeys;
+		FlxG.sound.volumeUpKeys = TitleState.volumeUpKeys;
 	}
+	
+	public static function copyKey(arrayToCopy:Array<FlxKey>):Array<FlxKey> {
+		var copiedArray:Array<FlxKey> = arrayToCopy.copy();
+		var i:Int = 0;
+		var len:Int = copiedArray.length;
 
-	private static function loadControls(controlArray:Array<FlxKey>)
-	{
-		for (i in 0...keyBinds.length)
-		{
-			var controlValue:Int = i * 2;
-			var controlsToAdd:Array<FlxKey> = [];
-			for (j in 0...2)
-			{
-				if (controlArray[controlValue + j] != NONE)
-				{
-					controlsToAdd.push(controlArray[controlValue + j]);
-				}
+		while (i < len) {
+			if(copiedArray[i] == NONE) {
+				copiedArray.remove(NONE);
+				--i;
 			}
-			if (controlsToAdd.length > 0)
-			{
-				PlayerSettings.player1.controls.bindKeys(keyBinds[i][0], controlsToAdd);
-			}
+			i++;
+			len = copiedArray.length;
 		}
+		return copiedArray;
 	}
 }

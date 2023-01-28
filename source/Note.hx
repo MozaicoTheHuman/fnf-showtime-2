@@ -33,7 +33,6 @@ class Note extends FlxSprite
 	public var eventVal1:String = '';
 	public var eventVal2:String = '';
 
-	public var colorSwap:ColorSwap;
 	public var inEditor:Bool = false;
 	private var earlyHitMult:Float = 0.5;
 
@@ -46,9 +45,6 @@ class Note extends FlxSprite
 	// Lua shit
 	public var noteSplashDisabled:Bool = false;
 	public var noteSplashTexture:String = null;
-	public var noteSplashHue:Float = 0;
-	public var noteSplashSat:Float = 0;
-	public var noteSplashBrt:Float = 0;
 
 	public var offsetX:Float = 0;
 	public var offsetY:Float = 0;
@@ -90,9 +86,6 @@ class Note extends FlxSprite
 
 	private function set_noteType(value:String):String {
 		noteSplashTexture = PlayState.SONG.splashSkin;
-		colorSwap.hue = ClientPrefs.arrowHSV[noteData % 4][0] / 360;
-		colorSwap.saturation = ClientPrefs.arrowHSV[noteData % 4][1] / 100;
-		colorSwap.brightness = ClientPrefs.arrowHSV[noteData % 4][2] / 100;
 
 		if(noteData > -1 && noteType != value) {
 			switch(value) {
@@ -100,9 +93,6 @@ class Note extends FlxSprite
 					ignoreNote = mustPress;
 					reloadNote('HURT');
 					noteSplashTexture = 'HURTnoteSplashes';
-					colorSwap.hue = 0;
-					colorSwap.saturation = 0;
-					colorSwap.brightness = 0;
 					if(isSustainNote) {
 						missHealth = 0.1;
 					} else {
@@ -120,9 +110,6 @@ class Note extends FlxSprite
 			noteType = value;
 			if (noteType == 'stun note') pointyAngle = 0;
 		}
-		noteSplashHue = colorSwap.hue;
-		noteSplashSat = colorSwap.saturation;
-		noteSplashBrt = colorSwap.brightness;
 		return value;
 	}
 
@@ -171,8 +158,6 @@ class Note extends FlxSprite
 
 		if(noteData > -1) {
 			texture = '';
-			colorSwap = new ColorSwap();
-			shader = colorSwap.shader;
 
 			x += swagWidth * (noteData % 4);
 			if(!isSustainNote) { //Doing this 'if' check to fix the warnings on Senpai songs

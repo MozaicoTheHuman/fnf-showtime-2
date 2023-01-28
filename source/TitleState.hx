@@ -24,6 +24,7 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
+import flixel.util.FlxSave;
 import lime.app.Application;
 import openfl.Assets;
 
@@ -49,8 +50,6 @@ class TitleState extends MusicBeatState
 
 	var wackyImage:FlxSprite;
 
-	var easterEggEnabled:Bool = true; // Disable this to hide the easter egg
-	var easterEggKeyCombination:Array<FlxKey> = [FlxKey.B, FlxKey.B]; // bb stands for bbpanzu cuz he wanted this lmao
 	var lastKeysPressed:Array<FlxKey> = [];
 
 	override public function create():Void
@@ -86,17 +85,17 @@ class TitleState extends MusicBeatState
 
 		// DEBUG BULLSHIT
 
-		swagShader = new ColorSwap();
 		super.create();
 
 		FlxG.save.bind('data', 'Mozaico');
+		
 		ClientPrefs.loadPrefs();
-
 		Highscore.load();
+		Language.loadJson();
 
 		if (FlxG.save.data.weekCompleted != null)
 		{
-			StoryMenuState.weekCompleted = FlxG.save.data.weekCompleted;
+			MainMenuState.weekCompleted = FlxG.save.data.weekCompleted;
 		}
 
 		FlxG.mouse.visible = false;
@@ -105,7 +104,11 @@ class TitleState extends MusicBeatState
 		#elseif CHARTING
 		MusicBeatState.switchState(new ChartingState());
 		#else
-		if (FlxG.save.data.flashing == null && !FlashingState.leftState)
+
+		var save:FlxSave = new FlxSave();
+		save.bind('settings', 'Mozaico');
+		
+		if (save.data.flashing == null && !FlashingState.leftState)
 		{
 			FlxTransitionableState.skipNextTransIn = true;
 			FlxTransitionableState.skipNextTransOut = true;
@@ -132,7 +135,6 @@ class TitleState extends MusicBeatState
 	var gfDance:FlxSprite;
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
-	var swagShader:ColorSwap = null;
 
 	function startIntro()
 	{
@@ -329,67 +331,11 @@ class TitleState extends MusicBeatState
 				});
 				// FlxG.sound.play(Paths.music('titleShoot'), 0.7);
 			}
-			else if (easterEggEnabled)
-			{
-				var finalKey:FlxKey = FlxG.keys.firstJustPressed();
-				if (finalKey != FlxKey.NONE)
-				{
-					lastKeysPressed.push(finalKey); // Convert int to FlxKey
-					if (lastKeysPressed.length > easterEggKeyCombination.length)
-					{
-						lastKeysPressed.shift();
-					}
-
-					if (lastKeysPressed.length == easterEggKeyCombination.length)
-					{
-						var isDifferent:Bool = false;
-						for (i in 0...lastKeysPressed.length)
-						{
-							if (lastKeysPressed[i] != easterEggKeyCombination[i])
-							{
-								isDifferent = true;
-								break;
-							}
-						}
-
-						if (!isDifferent)
-						{
-							trace('Easter egg triggered!');
-							FlxG.save.data.psykaEasterEgg = !FlxG.save.data.psykaEasterEgg;
-							FlxG.sound.play(Paths.sound('secretSound'));
-
-							var black:FlxSprite = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
-							black.alpha = 0;
-							add(black);
-
-							FlxTween.tween(black, {alpha: 1}, 1, {
-								onComplete: function(twn:FlxTween)
-								{
-									FlxTransitionableState.skipNextTransIn = true;
-									FlxTransitionableState.skipNextTransOut = true;
-									MusicBeatState.switchState(new TitleState());
-								}
-							});
-							lastKeysPressed = [];
-							closedState = true;
-							transitioning = true;
-						}
-					}
-				}
-			}
 		}
 
 		if (pressedEnter && !skippedIntro)
 		{
 			skipIntro();
-		}
-
-		if (swagShader != null)
-		{
-			if (controls.UI_LEFT)
-				swagShader.hue -= elapsed * 0.1;
-			if (controls.UI_RIGHT)
-				swagShader.hue += elapsed * 0.1;
 		}
 
 		super.update(elapsed);
@@ -399,19 +345,20 @@ class TitleState extends MusicBeatState
 	{
 		for (i in 0...textArray.length)
 		{
-			var money:Alphabet = new Alphabet(0, 0, textArray[i], true, false);
+			var money:Alphabet = new Alphabet(0, 0, textArray[i], true);
 			money.screenCenter(X);
 			money.y += (i * 60) + 200 + offset;
-			credGroup.add(money);
-			textGroup.add(money);
+			if(credGroup != null && textGroup != null) {
+				credGroup.add(money);
+				textGroup.add(money);
+			}
 		}
 	}
 
 	function addMoreText(text:String, ?offset:Float = 0)
 	{
-		if (textGroup != null)
-		{
-			var coolText:Alphabet = new Alphabet(0, 0, text, true, false);
+		if(textGroup != null && credGroup != null) {
+			var coolText:Alphabet = new Alphabet(0, 0, text, true);
 			coolText.screenCenter(X);
 			coolText.y += (textGroup.length * 60) + 200 + offset;
 			credGroup.add(coolText);

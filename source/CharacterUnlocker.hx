@@ -10,64 +10,6 @@ import flixel.addons.display.FlxBackdrop;
 
 using StringTools;
 
-class Characters
-{
-	public static var charactersData:Array<Dynamic> = [
-		// Character Name, Character InGame Name, DescripcionEpic, Unlocked by Default?
-		["BoyFriend", 'bf', "el pipopi",true],
-		["Maavo", 'maavo', "Conche tu madre es el que hizo el mod de Derker Azul",false]
-	];
-	public static var charactersMap:Map<String, Bool> = new Map<String, Bool>();
-
-	public static function unlockCharacter(name:String):Void
-	{
-		FlxG.log.add('Unlocked Character "' + name + '"');
-		charactersMap.set(name, true);
-		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-	}
-
-	public static function isCharacterUnlocked(name:String)
-	{
-		if (charactersMap.exists(name) && charactersMap.get(name))
-		{
-			return true;
-		}
-		return false;
-	}
-
-	public static function getCharacterIndex(name:String)
-	{
-		for (i in 0...charactersData.length)
-		{
-			if (charactersData[i][1] == name)
-			{
-				return i;
-			}
-		}
-		return -1;
-	}
-
-	public static function loadCharacters():Void
-	{
-		if (FlxG.save.data != null)
-		{
-			if (FlxG.save.data.charactersMap != null)
-			{
-				//charactersMap = FlxG.save.data.charactersMap;
-			}
-			if (FlxG.save.data.charUnlocked != null)
-			{
-				FlxG.log.add("Tratando de cargar laas weas");
-				var savedStuff:Array<String> = FlxG.save.data.charUnlocked;
-				for (i in 0...savedStuff.length)
-				{
-					charactersMap.set(savedStuff[i], true);
-				}
-			}
-		}
-	}
-}
-
 class CharacterUnlocker extends FlxSpriteGroup
 {
 	public var onFinish:Void->Void = null;
@@ -100,7 +42,7 @@ class CharacterUnlocker extends FlxSpriteGroup
 		songIcon.antialiasing = ClientPrefs.globalAntialiasing;
 
 		//sN.y = 280
-		songName = new FlxSprite(-20, 200).loadGraphic(Paths.image('songunlock/names/'+ name + '-' + Language.giveLan()));
+		songName = new FlxSprite(-20, 200).loadGraphic(Paths.image('songunlock/names/'+ name + '-' + Language.giveLanguage()));
 		songName.alpha = 0;
 		songName.antialiasing = ClientPrefs.globalAntialiasing;
 		

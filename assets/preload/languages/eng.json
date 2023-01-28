@@ -1,41 +1,178 @@
 {
-	"achievements": [
-					"Great Show", 
-					"Damn Expert",
-					"Detective",
-					"Perfect Round",
-					"Skill Issue",
-					"You literally have no hands",
-					"YAAAY I WON!",
-					"Perfeccionist",
-					"Sick",
-					"Friday Night Funkin'",
-					"And the curtain falls",
-					"An OG"
-					],
-	"achievements_desc": 
-					[
-					"Beat the Week on Hard with 90% of acurracy", 
-					"Beat the song Showtime with no misses",
-					"Put the secret code on debug mode. \nHint: Fighting Game Engine, Maavo's first Appearance, Ronald McDonald.",
-					"Beat the song kfm.mid with no misses",
-					"Die 3 times consecutively",
-					"Die 10 times in total",
-					"Die on 'Lovely'",
-					"Beat all the songs on Hard with no misses",
-					"Beat 'Tokyo Teddy Bear' on Extreme with no misses",
-					"Play on a Friday Night",
-					"Complete every achievement",
-					"Play any song on FNF Derker Bluer Edition"
-					],
-	"achievements_song_unlock":
-					[
-					"Complete 'Great Show' achievement \nto unlock this song",
-					"Complete 'YAAAY I WON!' achievement \nto unlock this song",
-					"Complete 'Detective' achievement \nto unlock this song",
-					"Complete 'Damn Expert' achievement \nto unlock this song"
-					]
-	
-	
-	
+	"achievements_names":[
+		"Great Show", 
+		"Damn Expert",
+		"Detective",
+		"Perfect Round",
+		"Skill Issue",
+		"You literally have no hands",
+		"YAAAY I WON!",
+		"Perfeccionist",
+		"Sick",
+		"Friday Night Funkin'",
+		"And the curtain falls",
+		"An OG"
+	],
+	"achievements_descriptions":[
+		"Beat the Week on Hard with 90% of acurracy", 
+		"Beat the song Showtime with no misses",
+		"Put the secret code on debug mode. \nHint: Fighting Game Engine, Maavo's first Appearance, Ronald McDonald.",
+		"Beat the song kfm.mid with no misses",
+		"Die 3 times consecutively",
+		"Die 10 times in total",
+		"Die on 'Lovely'",
+		"Beat all the songs on Hard with no misses",
+		"Beat 'Tokyo Teddy Bear' on Extreme with no misses",
+		"Play on a Friday Night",
+		"Complete every achievement",
+		"Play any song on FNF Derker Bluer Edition"
+	],
+	"achievements_song_unlock":[
+		"Complete 'Great Show' achievement \nto unlock this song",
+		"Complete 'YAAAY I WON!' achievement \nto unlock this song",
+		"Complete 'Detective' achievement \nto unlock this song",
+		"Complete 'Damn Expert' achievement \nto unlock this song"
+	],
+	"credits_categorys":[
+		"SHOWTIME TEAM",
+		"SPECIAL THANKS"
+	],
+	"credits_descriptions":[
+		"SHOWTIME TEAM",
+		"Director, Main Artist/Animator,\nCoder, Charter, Maavo VA,\nMaavo PDFMM+ Model Import",
+		"Musician",
+		"Musician",
+		"Musician",
+		"Musician",
+		"Musician, Hanzo VA",
+		"Musician",
+		"Musician",
+		"Musician",
+		"Musician",
+		"Musician",
+		"UTAU Voicebanks",
+		"Coder",
+		"Coder",
+		"Coder",
+		"Coder",
+		"Coder and Main Chromatic Scales",
+		"Coder",
+		"Coder",
+		"Coder and Tilin\n(Press Enter for a surprise)",
+		"Background Artist",
+		"Background Artist",
+		"Background Artist",
+		"Storyboard Artist",
+		"Storyboard Artist",
+		"Storyboard and Cover Artist",
+		"Cutscene Artist and Ivette VA",
+		"Cutscene Animator",
+		"Cutscene Animator",
+		"Menu Artist",
+		"Artist",
+		"Icon and Menu Artist",
+		"Maritza VA",
+		"Animation Assistant, Maavo 3D model",
+		"Title Artist",
+		"Menu Background Artist",
+		"Light On chromatic scales",
+		"Tokyo Charter (Extreme Difficulty)",
+		"Maavo PDMM+ Model Import help",
+		"SPECIAL THANKS",
+		"For testing the mod's beta on stream",
+		"For bringing Chilean modders together\nto make the best mod ever <3",
+		"For voicing Ivette on past projects,\nand providing the samples for the FNF chromatic",
+		"Original Tokyo Teddy Bear composer",
+		"Original Tokyo Teddy Bear UST file",
+		"Original creator of MUGEN Ronald McDonald",
+		"For introducing me to FNF modding",
+		"For being the best friend group ever <3"
+	],
+	"options_names":[
+		"Controls",
+		"Graphics and Performance",
+		"Preferences",
+		"Visuals and Ui",
+		"Delay and Combo"
+	],
+	"options_title_names":[
+		"Controls Settings",
+		"Graphics Settings",
+		"Preferences Settings",
+		"Visuals Settings",
+		"Delay and Combo Settings"
+	],
+	"options_rpc":[
+		"In Controls Menu",
+		"In Graphics Menu",
+		"In Preferences Menu",
+		"In Visuals Menu",
+		"In Delay and Combo Menu"
+	],
+	"options_sub_controls_names":[
+		"NOTES",
+		"Left",
+		"Down",
+		"Up",
+		"Right",
+		"UI",
+		"Reset",
+		"Accept",
+		"Back",
+		"Pause",
+		"VOLUME",
+		"Mute",
+		"Up",
+		"Down",
+		"DEBUG",
+		"Key 1",
+		"Key 2",
+		"Reset to Default Keys"
+	],
+	"options_sub_graphics_names":[
+		"Full Screen",
+		"Resolution:",
+		"FPS:",
+		"Show FPS",
+		"Anti-Aliasing",
+		"Low Detail"
+	],
+	"options_sub_graphics_descriptions":[
+		"If checked, the game will cover the entire screen",
+		"Refers to the level of screen definition in pixels,\na higher resolution may result in poorer performance",
+		"Pretty self explanatory, isn't it?",
+		"If unchecked, hides FPS Counter.",
+		"If unchecked, disables anti-aliasing, increases performance\nat the cost of sharper visuals.",
+		"If checked, disables some background details,\ndecreases loading times and improves performance."
+	],
+	"options_sub_preferences_names":[
+		"Language:",
+		"Downscroll",
+		"Middlescroll",
+		"Ghost Tapping",
+		"Note Quantization"
+	],
+	"options_sub_preferences_descriptions":[
+		"Choose the game's language",
+		"If checked, notes go Down instead of Up, simple enough.",
+		"If checked, your notes get centered.",
+		"If checked, you won't get misses from pressing keys\nwhile there are no notes able to be hit.",
+		"If checked, the note colors will depend on\ntheir beat quantization instead of their direction.\n(Highly recommended)"
+	],
+	"options_sub_visuals_names":[
+		"Flashing Lights",
+		"Note Splashes",
+		"Camera Zooms",
+		"Dynamic Camera",
+		"Hide HUD",
+		"Hide Song Length"
+	],
+	"options_sub_visuals_descriptions":[
+		"Uncheck this if you're sensitive to flashing lights!",
+		"If unchecked, hitting \"Sick!\" notes won't show particles.",
+		"If unchecked, the camera won't zoom in on a beat hit.",
+		"If checked, the camera will move in the note direction.",
+		"If checked, hides most HUD elements.",
+		"If checked, the bar showing how much time is left\nwill be hidden."
+	]
 }

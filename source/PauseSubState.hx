@@ -36,8 +36,12 @@ class PauseSubState extends MusicBeatSubstate
 
 		for (i in 0...CoolUtil.difficultyStuff.length) {
 			var diff:String = '' + CoolUtil.difficultyStuff[i][0];
-			if(CoolUtil.difficultyStuff[i][0] != 'Extreme')
+			if(CoolUtil.difficultyStuff[i][0] != 'Extreme'){
 				difficultyChoices.push(diff);
+			}
+			else if (PlayState.SONG.song.toLowerCase() == 'tokyo'){ // idk why this works but ok
+				difficultyChoices.push(diff);
+			}
 		}
 		difficultyChoices.push('BACK');
 
@@ -105,13 +109,7 @@ class PauseSubState extends MusicBeatSubstate
 		grpMenuShit = new FlxTypedGroup<Alphabet>();
 		add(grpMenuShit);
 
-		for (i in 0...menuItems.length)
-		{
-			var songText:Alphabet = new Alphabet(0, (70 * i) + 30, menuItems[i], true, false);
-			songText.isMenuItem = true;
-			songText.targetY = i;
-			grpMenuShit.add(songText);
-		}
+		regenMenu();
 
 		changeSelection();
 
@@ -141,6 +139,9 @@ class PauseSubState extends MusicBeatSubstate
 		if (accepted)
 		{
 			var daSelected:String = menuItems[curSelected];
+
+			CoolUtil.playSoundMenu('select');
+
 			for (i in 0...difficultyChoices.length-1) {
 				if(difficultyChoices[i] == daSelected) {
 					var name:String = PlayState.SONG.song.toLowerCase();
@@ -155,66 +156,29 @@ class PauseSubState extends MusicBeatSubstate
 					return;
 				}
 			} 
-
 			switch (daSelected)
 			{
 				case "Resume":
-					if (PlayState.SONG.song.toLowerCase() == "tokyo")					
-						FlxG.sound.play(Paths.sound('selectTokyo'), 0.4);
-					if(PlayState.SONG.stage == "kfm")					
-						FlxG.sound.play(Paths.sound('selectMUGEN'), 0.4);
-					if(PlayState.SONG.stage == "ponderingmall" || PlayState.SONG.stage == "show" || PlayState.SONG.stage == "callejon")					
-						FlxG.sound.play(Paths.sound('selectMenu'), 0.4);
 					close();
 				case 'Change Difficulty':
 					menuItems = difficultyChoices;
-					if (PlayState.SONG.song.toLowerCase() == "tokyo")					
-						FlxG.sound.play(Paths.sound('selectTokyo'), 0.4);
-					if(PlayState.SONG.stage == "kfm")					
-						FlxG.sound.play(Paths.sound('selectMUGEN'), 0.4);
-					if(PlayState.SONG.stage == "ponderingmall" || PlayState.SONG.stage == "show" || PlayState.SONG.stage == "callejon")					
-						FlxG.sound.play(Paths.sound('selectMenu'), 0.4);				
 					regenMenu();
 				case 'Toggle Practice Mode':
 					PlayState.practiceMode = !PlayState.practiceMode;
 					PlayState.usedPractice = true;
-					practiceText.visible = PlayState.practiceMode;
-					if (PlayState.SONG.song.toLowerCase() == "tokyo")					
-						FlxG.sound.play(Paths.sound('selectTokyo'), 0.4);
-					if(PlayState.SONG.stage == "kfm")					
-						FlxG.sound.play(Paths.sound('selectMUGEN'), 0.4);
-					if(PlayState.SONG.stage == "ponderingmall" || PlayState.SONG.stage == "show" || PlayState.SONG.stage == "callejon")					
-						FlxG.sound.play(Paths.sound('selectMenu'), 0.4);				
+					practiceText.visible = PlayState.practiceMode;			
 				case "Restart Song":
 					CustomFadeTransition.nextCamera = transCamera;
 					MusicBeatState.resetState();
 					FlxG.sound.music.volume = 0;
-					if (PlayState.SONG.song.toLowerCase() == "tokyo")					
-						FlxG.sound.play(Paths.sound('selectTokyo'), 0.4);
-					if(PlayState.SONG.stage == "kfm")					
-						FlxG.sound.play(Paths.sound('selectMUGEN'), 0.4);
-					if(PlayState.SONG.stage == "ponderingmall" || PlayState.SONG.stage == "show" || PlayState.SONG.stage == "callejon")					
-						FlxG.sound.play(Paths.sound('selectMenu'), 0.4);				
 				case 'Botplay':
 					PlayState.cpuControlled = !PlayState.cpuControlled;
 					PlayState.usedPractice = true;
 					botplayText.visible = PlayState.cpuControlled;
-					if (PlayState.SONG.song.toLowerCase() == "tokyo")					
-						FlxG.sound.play(Paths.sound('selectTokyo'), 0.4);
-					if(PlayState.SONG.stage == "kfm")					
-						FlxG.sound.play(Paths.sound('selectMUGEN'), 0.4);
-					if(PlayState.SONG.stage == "ponderingmall" || PlayState.SONG.stage == "show" || PlayState.SONG.stage == "callejon")					
-						FlxG.sound.play(Paths.sound('selectMenu'), 0.4);				
 				case "Exit to menu":
 					PlayState.deathCounter = 0;
 					PlayState.seenCutscene = false;
 					CustomFadeTransition.nextCamera = transCamera;
-					if (PlayState.SONG.song.toLowerCase() == "tokyo")					
-						FlxG.sound.play(Paths.sound('selectTokyo'), 0.4);
-					if(PlayState.SONG.stage == "kfm")					
-						FlxG.sound.play(Paths.sound('selectMUGEN'), 0.4);
-					if(PlayState.SONG.stage == "ponderingmall" || PlayState.SONG.stage == "show" || PlayState.SONG.stage == "callejon")					
-						FlxG.sound.play(Paths.sound('selectMenu'), 0.4);				
 					if(PlayState.isStoryMode) {
 						MusicBeatState.switchState(new MainMenuState());
 					} else {
@@ -224,7 +188,6 @@ class PauseSubState extends MusicBeatSubstate
 					PlayState.usedPractice = false;
 					PlayState.changedDifficulty = false;
 					PlayState.cpuControlled = false;
-
 				case 'BACK':
 					menuItems = menuItemsOG;
 					regenMenu();
@@ -243,12 +206,7 @@ class PauseSubState extends MusicBeatSubstate
 	{
 		curSelected += change;
 
-		if (PlayState.SONG.song.toLowerCase() == "tokyo")					
-			FlxG.sound.play(Paths.sound('scrollTokyo'), 0.4);
-		if(PlayState.SONG.stage == "kfm")					
-			FlxG.sound.play(Paths.sound('scrollMUGEN'), 0.4);
-		if(PlayState.SONG.stage == "ponderingmall" || PlayState.SONG.stage == "show" || PlayState.SONG.stage == "callejon")					
-			FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);	
+		CoolUtil.playSoundMenu('scroll');
 
 		if (curSelected < 0)
 			curSelected = menuItems.length - 1;
@@ -275,10 +233,13 @@ class PauseSubState extends MusicBeatSubstate
 
 	function regenMenu():Void {
 		for (i in 0...grpMenuShit.members.length) {
-			this.grpMenuShit.remove(this.grpMenuShit.members[0], true);
+			var obj = grpMenuShit.members[0];
+			obj.kill();
+			grpMenuShit.remove(obj, true);
+			obj.destroy();
 		}
 		for (i in 0...menuItems.length) {
-			var item = new Alphabet(0, 70 * i + 30, menuItems[i], true, false);
+			var item = new Alphabet(90, 320, menuItems[i], true);
 			item.isMenuItem = true;
 			item.targetY = i;
 			grpMenuShit.add(item);

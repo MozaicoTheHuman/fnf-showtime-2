@@ -16,7 +16,7 @@ import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
-import openfl.utils.Assets as OpenFlAssets;
+import openfl.utils.Assets;
 
 using StringTools;
 
@@ -84,9 +84,6 @@ class FreeplayState extends MusicBeatState
 	{
 		#if ACHIEVEMENTS_ALLOWED
 		Achievements.loadAchievements();
-		#end
-		#if MODS_ALLOWED
-		Paths.destroyLoadedImages();
 		#end
 		WeekData.reloadWeekFiles(false);
 		#if desktop
@@ -378,7 +375,6 @@ class FreeplayState extends MusicBeatState
 		var downP = controls.UI_DOWN_P;
 		var accepted = controls.ACCEPT;
 		var space = FlxG.keys.justPressed.SPACE;
-		var chars = FlxG.keys.justPressed.P;
 		var shiftMult:Int = 1;
 
 		if (FlxG.sound.music.volume < 0.7)
@@ -483,7 +479,7 @@ class FreeplayState extends MusicBeatState
 				descBox.alpha = 0;
 				FlxTween.tween(descText, {alpha: 1}, 0.3);
 				FlxTween.tween(descBox, {alpha: 1}, 0.3);
-				descText.text = Language.achievementsUnlockDesc[curSelected - 4];
+				descText.text = Language.achievements_song_unlock[curSelected - 4];
 				descText.y = FlxG.height - descText.height + -75 - 60;
 				moveTween = FlxTween.tween(descText, {y: descText.y + 75}, 0.25, {ease: FlxEase.sineOut});
 				descBox.setGraphicSize(Std.int(descText.width + 20), Std.int(descText.height + 25));
@@ -499,7 +495,7 @@ class FreeplayState extends MusicBeatState
 					&& !sys.FileSystem.exists(Paths.json(songLowercase + '/' + poop)))
 				{
 				#else
-				if (!OpenFlAssets.exists(Paths.json(songLowercase + '/' + poop)))
+				if (!Assets.exists(Paths.json(songLowercase + '/' + poop)))
 				{
 				#end
 					poop = songLowercase;
@@ -528,8 +524,6 @@ class FreeplayState extends MusicBeatState
 				openSubState(new ResetScoreSubState(songs[curSelected].songName, curDifficulty, songs[curSelected].songCharacter));
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 			}
-			if (chars)
-				MusicBeatState.switchState(new CharactersMenuState());
 			super.update(elapsed);
 		}
 
@@ -617,7 +611,7 @@ class FreeplayState extends MusicBeatState
 	
 			});
 
-		if (OpenFlAssets.exists(Paths.image('freeplaymenu/albums/' + songs[curSelected].album))){
+		if (Assets.exists(Paths.getPath('freeplaymenu/albums/' + songs[curSelected].album + '.png', IMAGE), IMAGE)){
 			if (curSelected > 3 && !lockStuff[curSelected - 4][1])
 				album.loadGraphic(Paths.image('freeplaymenu/albums/locked'));
 			else 

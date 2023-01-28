@@ -12,7 +12,7 @@ import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import Achievements;
-import Characters.CharacterUnlocker;
+import CharacterUnlocker;
 class GameOverSubstate extends MusicBeatSubstate
 {
 	var bf:Boyfriend;

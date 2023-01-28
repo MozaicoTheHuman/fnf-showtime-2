@@ -4,7 +4,7 @@ package;
 import Discord.DiscordClient;
 #end
 import Achievements;
-import Characters;
+import CharacterUnlocker;
 import FunkinLua;
 import Section.SwagSection;
 import Song.SwagSong;
@@ -269,9 +269,6 @@ class PlayState extends MusicBeatState
 
 	override public function create()
 	{
-		#if MODS_ALLOWED
-		Paths.destroyLoadedImages(resetSpriteCache);
-		#end
 		resetSpriteCache = false;
 		instance = this;
 
@@ -823,7 +820,7 @@ class PlayState extends MusicBeatState
 		var daSong:String = Paths.formatToSongPath(curSong);
 		if (isStoryMode && !seenCutscene)
 		{
-			var lan:String = Language.giveLan();
+			var lan:String = Language.giveLanguage();
 			switch (daSong)
 			{
 				// Los videos deben tener -eng o -esp al final
@@ -1674,12 +1671,7 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
-					if (PlayState.SONG.song.toLowerCase() == "tokyo")					
-						FlxG.sound.play(Paths.sound('pauseTokyo'), 0.4);
-					if(PlayState.SONG.stage == "kfm")					
-						FlxG.sound.play(Paths.sound('pauseMUGEN'), 0.4);
-					if(PlayState.SONG.stage == "ponderingmall" || PlayState.SONG.stage == "show" || PlayState.SONG.stage == "callejon")					
-						FlxG.sound.play(Paths.sound('pauseMenu'), 0.4);	
+					CoolUtil.playSoundMenu('pause');
 					if (FlxG.sound.music != null)
 					{
 						if (SONG.song.toLowerCase() == 'tokyo')
@@ -2721,14 +2713,14 @@ class PlayState extends MusicBeatState
 					// if ()
 					if (!usedPractice)
 					{
-						StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
+						MainMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
 
 						if (SONG.validScore)
 						{
 							Highscore.saveWeekScore(WeekData.getWeekFileName(), campaignScore, storyDifficulty);
 						}
 
-						FlxG.save.data.weekCompleted = StoryMenuState.weekCompleted;
+						FlxG.save.data.weekCompleted = MainMenuState.weekCompleted;
 						FlxG.save.flush();
 					}
 					usedPractice = false;
@@ -3528,19 +3520,13 @@ class PlayState extends MusicBeatState
 		if (PlayState.SONG.splashSkin != null && PlayState.SONG.splashSkin.length > 0)
 			skin = PlayState.SONG.splashSkin;
 
-		var hue:Float = ClientPrefs.arrowHSV[data % 4][0] / 360;
-		var sat:Float = ClientPrefs.arrowHSV[data % 4][1] / 100;
-		var brt:Float = ClientPrefs.arrowHSV[data % 4][2] / 100;
 		if (note != null)
 		{
 			skin = note.noteSplashTexture;
-			hue = note.noteSplashHue;
-			sat = note.noteSplashSat;
-			brt = note.noteSplashBrt;
 		}
 
 		var splash:NoteSplash = grpNoteSplashes.recycle(NoteSplash);
-		splash.setupNoteSplash(x, y, data, skin, hue, sat, brt);
+		splash.setupNoteSplash(x, y, data, skin);
 		grpNoteSplashes.add(splash);
 	}
 

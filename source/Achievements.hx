@@ -6,6 +6,7 @@ import flixel.tweens.FlxTween;
 import flixel.group.FlxSpriteGroup;
 import flixel.util.FlxColor;
 import flixel.text.FlxText;
+import flixel.util.FlxSave;
 
 using StringTools;
 
@@ -40,30 +41,34 @@ class Achievements {
 		['good_taste', 		  false] 		//11
 	];
 
-	public static var henchmenDeath:Int = 0;
 	public static function unlockAchievement(id:Int):Void {
 		FlxG.log.add('Completed achievement "' + achievementsStuff[id][0] +'"');
 		achievementsUnlocked[id][1] = true;
 		FlxG.sound.play(Paths.sound('awardMenu'), 0.7);
 	}
-	public static function changeLang(){
-		if (ClientPrefs.language == "English")
-		{
-			for (i in 0...achievementsUnlocked.length)
-				{
-					achievementsStuff[i][0] = Language.achievementsnames[i];
-					achievementsStuff[i][1] = Language.achievementsdescnames[i];
-				}
+	
+	/* Esto puede causar que los archivos de guardado se corrompan
+
+		public static function changeLang(){
+			if (ClientPrefs.language == "English")
+			{
+				for (i in 0...achievementsUnlocked.length)
+					{
+						achievementsStuff[i][0] = Language.achievementsnames[i];
+						achievementsStuff[i][1] = Language.achievementsdescnames[i];
+					}
+			}
+			else if (ClientPrefs.language == "Spanish")
+			{
+				for (i in 0...achievementsUnlocked.length)
+					{
+						achievementsStuff[i][0] = Language.achievementsnames[i];
+						achievementsStuff[i][1] = Language.achievementsdescnames[i];
+					}
+			}
 		}
-		else if (ClientPrefs.language == "Spanish")
-		{
-			for (i in 0...achievementsUnlocked.length)
-				{
-					achievementsStuff[i][0] = Language.achievementsnames[i];
-					achievementsStuff[i][1] = Language.achievementsdescnames[i];
-				}
-		}
-	}
+	*/
+
 	public static function allAchievements(){
 		var logros:Array<Bool> = [];
 		var x:Int = 0;
@@ -88,10 +93,14 @@ class Achievements {
 		return false;
 	}
 	public static function loadAchievements():Void {
-		if(FlxG.save.data != null) {
-			if(FlxG.save.data.achievementsUnlocked != null) {
+
+		var save:FlxSave = new FlxSave();
+		save.bind('achievements', 'Mozaico');
+
+		if(save.data != null) {
+			if(save.data.achievementsUnlocked != null) {
 				FlxG.log.add("Trying to load stuff");
-				var savedStuff:Array<String> = FlxG.save.data.achievementsUnlocked;
+				var savedStuff:Array<String> = save.data.achievementsUnlocked;
 				for (i in 0...achievementsUnlocked.length) {
 					for (j in 0...savedStuff.length) {
 						if(achievementsUnlocked[i][0] == savedStuff[j]) {
@@ -100,23 +109,7 @@ class Achievements {
 					}
 				}
 			}
-			if(henchmenDeath == 0 && FlxG.save.data.henchmenDeath != null) {
-				henchmenDeath = FlxG.save.data.henchmenDeath;
-			}
-			changeLang();
 		}
-
-		// You might be asking "Why didn't you just fucking load it directly dumbass??"
-		// Well, Mr. Smartass, consider that this class was made for Mind Games Mod's demo,
-		// i'm obviously going to change the "Psyche" achievement's objective so that you have to complete the entire week
-		// with no misses instead of just Psychic once the full release is out. So, for not having the rest of your achievements lost on
-		// the full release, we only save the achievements' tag names instead. This also makes me able to rename
-		// achievements later as long as the tag names aren't changed of course.
-
-		// Edit: Oh yeah, just thought that this also makes me able to change the achievements orders easier later if i want to.
-		// So yeah, if you didn't thought about that i'm smarter than you, i think
-
-		// buffoon
 	}
 }
 
@@ -163,11 +156,11 @@ class AchievementObject extends FlxSpriteGroup {
 		achievementIcon.updateHitbox();
 		achievementIcon.antialiasing = ClientPrefs.globalAntialiasing;
 
-		var achievementName:FlxText = new FlxText(achievementIcon.x + achievementIcon.width + 20, achievementIcon.y + 16, 280, Achievements.achievementsStuff[id][0], 16);
+		var achievementName:FlxText = new FlxText(achievementIcon.x + achievementIcon.width + 20, achievementIcon.y + 16, 280, Language.achievements_names[id], 16);
 		achievementName.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT);
 		achievementName.scrollFactor.set();
 
-		var achievementText:FlxText = new FlxText(achievementName.x, achievementName.y + 32, 280, Achievements.achievementsStuff[id][1], 16);
+		var achievementText:FlxText = new FlxText(achievementName.x, achievementName.y + 32, 280, Language.achievements_descriptions[id], 16);
 		achievementText.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT);
 		achievementText.scrollFactor.set();
 

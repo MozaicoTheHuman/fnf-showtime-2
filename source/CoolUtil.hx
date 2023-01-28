@@ -24,6 +24,17 @@ class CoolUtil
 		return difficultyStuff[PlayState.storyDifficulty][0].toUpperCase();
 	}
 
+	public static function playSoundMenu(sound:String){
+		var suffixList:Array<String> = ['tokyo', 'mugen'];
+
+		for(i in 0...suffixList.length){
+			if(PlayState.SONG.song.toLowerCase() == suffixList[i])				
+				FlxG.sound.play(Paths.sound(sound + '_' + suffixList[i]), 0.4);
+			else
+				FlxG.sound.play(Paths.sound(sound + 'Menu'), 0.4);
+		}
+	}
+
 	public static function boundTo(value:Float, min:Float, max:Float):Float
 	{
 		var newValue:Float = value;

@@ -40,7 +40,7 @@ class MasterEditorMenu extends MusicBeatState
 
 		for (i in 0...options.length)
 		{
-			var leText:Alphabet = new Alphabet(0, (70 * i) + 30, options[i], true, false);
+			var leText:Alphabet = new Alphabet(0, (70 * i) + 30, options[i], true);
 			leText.isMenuItem = true;
 			leText.targetY = i;
 			grpTexts.add(leText);
@@ -72,8 +72,6 @@ class MasterEditorMenu extends MusicBeatState
 			{
 				case 'Character Editor':
 					LoadingState.loadAndSwitchState(new CharacterEditorState(Character.DEFAULT_CHARACTER, false));
-				case 'Week Editor':
-					MusicBeatState.switchState(new WeekEditorState());
 				case 'Menu Character Editor':
 					MusicBeatState.switchState(new MenuCharacterEditorState());
 			}

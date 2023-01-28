@@ -49,7 +49,7 @@ import sys.FileSystem;
 import flash.media.Sound;
 #end
 import Achievements;
-import Characters.CharacterUnlocker;
+import CharacterUnlocker;
 using StringTools;
 
 class ChartingState extends MusicBeatState
@@ -175,13 +175,6 @@ class ChartingState extends MusicBeatState
 	{
 		#if ACHIEVEMENTS_ALLOWED
 		Achievements.loadAchievements();
-		//camAchievement = new FlxCamera();
-		//camAchievement.bgColor.alpha = 0;
-
-		//FlxG.cameras.add(camAchievement);
-		#end
-		#if MODS_ALLOWED
-		Paths.destroyLoadedImages();
 		#end
 
 		#if desktop

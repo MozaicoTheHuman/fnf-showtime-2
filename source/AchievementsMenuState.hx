@@ -52,11 +52,10 @@ class AchievementsMenuState extends MusicBeatState
 		}
 
 		for (i in 0...options.length) {
-			var optionText:Alphabet = new Alphabet(0, (100 * i) + 210, Achievements.achievementsUnlocked[achievementIndex[i]][1] ? Achievements.achievementsStuff[achievementIndex[i]][0] : '?', false, false);
+			var optionText:Alphabet = new Alphabet(280, 300, Achievements.achievementsUnlocked[achievementIndex[i]][1] ? Language.achievements_names[i] : '?', false);
 			optionText.isMenuItem = true;
-			optionText.x += 280;
-			optionText.xAdd = 200;
-			optionText.targetY = i;
+			optionText.targetY = i - curSelected;
+			optionText.snapToPosition();
 			grpOptions.add(optionText);
 
 			var icon:AttachedAchievement = new AttachedAchievement(optionText.x - 105, optionText.y, achievementIndex[i]);
@@ -144,6 +143,6 @@ class AchievementsMenuState extends MusicBeatState
 				achievementArray[i].alpha = 1;
 			}
 		}
-		descText.text = Achievements.achievementsStuff[achievementIndex[curSelected]][1];
+		descText.text = Language.achievements_descriptions[curSelected];
 	}
 }
