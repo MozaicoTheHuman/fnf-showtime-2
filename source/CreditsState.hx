@@ -81,9 +81,9 @@ class CreditsState extends MusicBeatState
 				'FFDD33'
 			],
 			[
-				'Hanzo Santiago',
+				'Soga Celeste',
 				'hanzo',
-				'Musician, Hanzo VA',
+				'Musician, Animator, Hanzo VA',
 				'https://www.youtube.com/@HanzoSantiagoGharbanzo/',
 				'FFDD33'
 			],
