@@ -89,7 +89,6 @@ class TitleState extends MusicBeatState
 
 		FlxG.save.bind('data', 'Mozaico');
 		
-		ClientPrefs.loadPrefs();
 		Highscore.load();
 		Language.loadJson();
 
@@ -116,13 +115,6 @@ class TitleState extends MusicBeatState
 		}
 		else
 		{
-			#if desktop
-			DiscordClient.initialize();
-			Application.current.onExit.add(function(exitCode)
-			{
-				DiscordClient.shutdown();
-			});
-			#end
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
 				startIntro();

@@ -112,6 +112,8 @@ class Main extends Sprite
 			});
 		}
 		#end
+		
+		ClientPrefs.loadPrefs();
 	}
 
 	// Code was entirely made by sqirra-rng for their fnf engine named "Izzy Engine", big props to them!!!
