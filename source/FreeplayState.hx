@@ -611,7 +611,7 @@ class FreeplayState extends MusicBeatState
 	
 			});
 
-		if (Assets.exists(Paths.getPath('freeplaymenu/albums/' + songs[curSelected].album + '.png', IMAGE), IMAGE)){
+		if (Assets.exists(Paths.getPath('images/freeplaymenu/albums/' + songs[curSelected].album + '.png', IMAGE), IMAGE)){
 			if (curSelected > 3 && !lockStuff[curSelected - 4][1])
 				album.loadGraphic(Paths.image('freeplaymenu/albums/locked'));
 			else 
