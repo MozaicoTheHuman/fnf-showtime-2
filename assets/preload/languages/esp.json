@@ -131,7 +131,6 @@
 		"Reiniciar a las\nTeclas Predeterminadas"
 	],
 	"options_sub_graphics_names":[
-		"Pantalla Completa",
 		"Resolucion:",
 		"FPS:",
 		"Mostrar FPS",
@@ -139,7 +138,6 @@
 		"Pocos Detalles"
 	],
 	"options_sub_graphics_descriptions":[
-		"Si lo activas, el juego ocupara toda la pantalla",
 		"Se refiere al nivel de definición de la pantalla en píxeles\nuna resolución más alta puede dar lugar a un peor",
 		"Se explica por sí solo, ¿no? ",
 		"Si lo desactivas, oculta el contador de Cuadros por Segundo.",

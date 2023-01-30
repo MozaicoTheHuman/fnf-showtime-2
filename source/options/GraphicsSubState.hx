@@ -6,26 +6,22 @@ import flixel.text.FlxText;
 
 class GraphicsSubState extends BaseOptionsMenu
 {
+	var lastOption:Dynamic = "1280x720";
+	var name:String = "";
+
 	public function new()
 	{
 		languageName = Language.options_sub_graphics_names;
 		languageDesc = Language.options_sub_graphics_descriptions;
-		
+
+		name = languageName[0];
+
 		title = Language.options_title_names[1];
 		rpcTitle = Language.options_rpc[1]; //for Discord Rich Presence
 
 		#if desktop
 		var option:Option = new Option(languageName[0],
 			languageDesc[0],
-			'fullScreen',
-			'bool',
-			false
-		);
-		option.onChange = onChangeFullscreen;
-		addOption(option);
-
-		var option:Option = new Option(languageName[1],
-			languageDesc[1],
 			'resolution',
 			'string',
 			'1280x720',
@@ -36,8 +32,8 @@ class GraphicsSubState extends BaseOptionsMenu
 		#end
 
 		#if !html5 //Apparently other framerates isn't correctly supported on Browser? Probably it has some V-Sync shit enabled by default, idk
-		var option:Option = new Option(languageName[2],
-			languageDesc[2],
+		var option:Option = new Option(languageName[1],
+			languageDesc[1],
 			'framerate',
 			'int',
 			60
@@ -51,8 +47,8 @@ class GraphicsSubState extends BaseOptionsMenu
 		#end
 
 		#if !mobile
-		var option:Option = new Option(languageName[3],
-			languageDesc[3],
+		var option:Option = new Option(languageName[2],
+			languageDesc[2],
 			'showFPS',
 			'bool',
 			true
@@ -61,8 +57,8 @@ class GraphicsSubState extends BaseOptionsMenu
 		option.onChange = onChangeFPSCounter;
 		#end
 
-		var option:Option = new Option(languageName[4],
-			languageDesc[4],
+		var option:Option = new Option(languageName[3],
+			languageDesc[3],
 			'globalAntialiasing',
 			'bool',
 			true
@@ -71,8 +67,8 @@ class GraphicsSubState extends BaseOptionsMenu
 		option.onChange = onChangeAntiAliasing; 
 		addOption(option);
 
-		var option:Option = new Option(languageName[5], //Name
-			languageDesc[5], //Description
+		var option:Option = new Option(languageName[4], //Name
+			languageDesc[4], //Description
 			'lowQuality', //Save data variable name
 			'bool', //Variable type
 			false
@@ -90,17 +86,17 @@ class GraphicsSubState extends BaseOptionsMenu
 		return resListStrings;
 	}
 
-	function onChangeFullscreen(){
-		FlxG.fullscreen = ClientPrefs.fullScreen;
-	}
-
 	function onChangeResolution(){
 		for(i in 0...ClientPrefs.resList.length){
 			if(ClientPrefs.resolution == ClientPrefs.resList[i][0]){
-				if(!ClientPrefs.fullScreen)
+				if(ClientPrefs.resolution != "Full Screen"){
+					if(FlxG.fullscreen) FlxG.fullscreen = false;
 					FlxG.resizeWindow(ClientPrefs.resList[i][1], ClientPrefs.resList[i][2]);
-
-				FlxG.resizeGame(ClientPrefs.resList[i][1], ClientPrefs.resList[i][2]);
+					FlxG.resizeGame(ClientPrefs.resList[i][1], ClientPrefs.resList[i][2]);
+				}
+				else{
+					FlxG.fullscreen = true;
+				}
 			}
 		}
 	}
@@ -129,6 +125,35 @@ class GraphicsSubState extends BaseOptionsMenu
 				sprite.antialiasing = ClientPrefs.globalAntialiasing;
 			}
 		}
+	}
+
+	function fixResolution(){
+		for (i in 0...optionsArray.length){
+			var leOption:Option = optionsArray[i];
+			if(leOption.name == name){
+				if (leOption.getValue() != leOption.options[11]){
+					trace('Update to Full Screen');
+					lastOption = leOption.getValue();
+					leOption.setValue(leOption.options[11]);
+				} 
+				else{
+					trace('Update to Window');
+					if (lastOption != 11)
+						leOption.setValue(lastOption);
+					else
+						leOption.setValue(leOption.defaultValue);
+				}
+				leOption.curOption = leOption.options.indexOf(leOption.getValue());
+				updateTextFrom(leOption);
+			}
+		}
+	}
+
+	override function update(elapsed:Float){
+		if(FlxG.keys.justPressed.F11){
+			fixResolution();
+		}
+		super.update(elapsed);
 	}
 
 }

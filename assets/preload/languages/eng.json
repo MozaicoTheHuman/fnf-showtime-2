@@ -131,7 +131,6 @@
 		"Reset to Default Keys"
 	],
 	"options_sub_graphics_names":[
-		"Full Screen",
 		"Resolution:",
 		"FPS:",
 		"Show FPS",
@@ -139,7 +138,6 @@
 		"Low Detail"
 	],
 	"options_sub_graphics_descriptions":[
-		"If checked, the game will cover the entire screen",
 		"Refers to the level of screen definition in pixels,\na higher resolution may result in poorer performance",
 		"Pretty self explanatory, isn't it?",
 		"If unchecked, hides FPS Counter.",

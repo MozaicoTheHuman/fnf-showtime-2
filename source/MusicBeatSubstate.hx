@@ -35,8 +35,8 @@ class MusicBeatSubstate extends FlxSubState
 			stepHit();
 
 		if(FlxG.keys.justPressed.F11){
-			ClientPrefs.fullScreen = !FlxG.fullscreen;
-			FlxG.fullscreen = ClientPrefs.fullScreen;
+			ClientPrefs.resolution = "Full Screen";
+			FlxG.fullscreen = !FlxG.fullscreen;
 		}
 
 		super.update(elapsed);

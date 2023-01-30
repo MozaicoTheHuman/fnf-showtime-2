@@ -45,7 +45,6 @@ class ClientPrefs
 	}
 
 	//Graphics
-	public static var fullScreen:Bool = false;
 	public static var resList:Array<Dynamic> = [
 		["640x360", 640, 360],
 		["768x432", 768, 432],
@@ -57,7 +56,8 @@ class ClientPrefs
 		["1600x900", 1600, 900],
 		["1920x1080", 1920, 1080],
 		["2560x1440", 2560, 1440],
-		["3840x2160", 3840, 2160]
+		["3840x2160", 3840, 2160],
+		["Full Screen"]
 	];
 	public static var resolution:String = "1280x720";
 	public static var framerate:Int = 60;
@@ -110,7 +110,6 @@ class ClientPrefs
 
 		//Graphics
 		save.bind('settings', 'Mozaico');
-		save.data.fullScreen = fullScreen;
 		save.data.resolution = resolution;
 		save.data.framerate = framerate;
 		save.data.showFPS = showFPS;
@@ -162,19 +161,18 @@ class ClientPrefs
 
 		//Graphics
 		save.bind('settings', 'Mozaico');
-		if (save.data.fullScreen != null){
-			fullScreen = save.data.fullScreen;
-			FlxG.fullscreen = fullScreen;
-		}
 		if (save.data.resolution != null){
 			resolution = save.data.resolution;
 
 			for(i in 0...resList.length){
 				if(resolution == resList[i][0]){
-					if (!fullScreen)
+					if (resolution != "Full Screen"){
 						FlxG.resizeWindow(resList[i][1], resList[i][2]);
-
-					FlxG.resizeGame(resList[i][1], resList[i][2]);
+						FlxG.resizeGame(resList[i][1], resList[i][2]);
+					}
+					else{
+						FlxG.fullscreen = true;
+					}
 				}
 			}
 		}
