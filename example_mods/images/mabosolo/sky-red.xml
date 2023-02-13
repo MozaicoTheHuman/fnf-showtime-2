@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sky-red.png">
+	<!-- Created with Adobe Animate version 20.5.1.31044 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="intro instancia 10000" x="5" y="5" width="1892" height="649"/>
+	<SubTexture name="intro instancia 10001" x="1902" y="5" width="1892" height="649"/>
+	<SubTexture name="intro instancia 10002" x="3799" y="5" width="1892" height="649"/>
+	<SubTexture name="intro instancia 10003" x="5696" y="5" width="1892" height="649"/>
+	<SubTexture name="intro instancia 10004" x="5" y="659" width="1892" height="649"/>
+	<SubTexture name="intro instancia 10005" x="1902" y="659" width="1892" height="649"/>
+	<SubTexture name="intro instancia 10006" x="3799" y="659" width="1892" height="649"/>
+	<SubTexture name="intro instancia 10007" x="5696" y="659" width="1892" height="649"/>
+	<SubTexture name="intro instancia 10008" x="5" y="1313" width="1892" height="649"/>
+	<SubTexture name="intro instancia 10009" x="1902" y="1313" width="1892" height="649"/>
+	<SubTexture name="intro instancia 10010" x="3799" y="1313" width="1892" height="649"/>
+	<SubTexture name="intro instancia 10011" x="5696" y="1313" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10000" x="5696" y="1313" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10001" x="5" y="1967" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10002" x="1902" y="1967" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10003" x="3799" y="1967" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10004" x="5696" y="1967" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10005" x="5" y="2621" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10006" x="1902" y="2621" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10007" x="3799" y="2621" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10008" x="5696" y="2621" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10009" x="5" y="3275" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10010" x="1902" y="3275" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10011" x="3799" y="3275" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10012" x="5696" y="3275" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10013" x="5" y="3929" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10014" x="1902" y="3929" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10015" x="3799" y="3929" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10016" x="5696" y="3929" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10017" x="5" y="4583" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10018" x="1902" y="4583" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10019" x="3799" y="4583" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10020" x="5696" y="4583" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10021" x="5" y="5237" width="1892" height="649"/>
+	<SubTexture name="loop instancia 10022" x="1902" y="5237" width="1892" height="649"/>
+</TextureAtlas>

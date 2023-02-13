@@ -1414,6 +1414,11 @@
 						60673.2095490716,
 						1,
 						115.384615384615
+					],
+					[
+						59057.824933687,
+						5,
+						0
 					]
 				],
 				"lengthInSteps": 16,
@@ -2533,7 +2538,32 @@
 					[
 						98750.1326259946,
 						2,
-						807.692307692308
+						115.384615384615
+					],
+					[
+						99096.2864721485,
+						2,
+						0
+					],
+					[
+						99442.4403183023,
+						0,
+						0
+					],
+					[
+						99557.8249336869,
+						1,
+						0
+					],
+					[
+						99327.0557029177,
+						3,
+						0
+					],
+					[
+						98980.9018567639,
+						3,
+						0
 					]
 				],
 				"altAnim": false,
@@ -2861,14 +2891,39 @@
 						115.384615384615
 					],
 					[
-						113519.363395225,
-						2,
-						807.692307692308
-					],
-					[
 						112827.055702918,
 						3,
 						115.384615384615
+					],
+					[
+						113519.363395225,
+						2,
+						115.384615384615
+					],
+					[
+						113865.517241379,
+						2,
+						0
+					],
+					[
+						113750.132625995,
+						0,
+						0
+					],
+					[
+						114096.286472148,
+						2,
+						0
+					],
+					[
+						114211.671087533,
+						1,
+						0
+					],
+					[
+						114327.055702918,
+						3,
+						0
 					]
 				],
 				"altAnim": false,
@@ -6717,12 +6772,12 @@
 					],
 					[
 						239057.824933687,
-						3,
+						1,
 						230.769230769231
 					],
 					[
 						239519.363395225,
-						1,
+						2,
 						230.769230769231
 					]
 				],
@@ -6890,8 +6945,8 @@
 				"typeOfSection": 0,
 				"sectionNotes": [],
 				"altAnim": false,
-				"bpm": 145,
-				"changeBPM": false,
+				"bpm": 1,
+				"changeBPM": true,
 				"mustHitSection": true
 			},
 			{
@@ -6902,6 +6957,51 @@
 				"bpm": 145,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 145
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"bpm": 145,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 145
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 145
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 145
 			},
 			{
 				"sectionNotes": [],
@@ -6925,10 +7025,10 @@
 		"player2": "hanzo",
 		"player3": "nothing",
 		"song": "Pondering",
-		"sections": 0,
 		"needsVoices": true,
-		"validScore": true,
+		"sections": 0,
 		"stage": "ponderingmall",
+		"validScore": true,
 		"speed": 2.6,
 		"bpm": 145
 	}

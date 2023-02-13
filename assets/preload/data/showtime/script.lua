@@ -15,7 +15,19 @@ function onCreate()
 
     makeLuaSprite('redSky','mabosolo/sky',-1300 , -750);
     addLuaSprite('redSky',false);
+	setLuaSpriteScrollFactor('redSky',0,0)
+	setProperty('redSky.scale.x',999)
+	setProperty('redSky.scale.y',999)
 	setProperty('redSky.alpha', 0)
+	
+	makeAnimatedLuaSprite('redloop', 'mabosolo/sky-red', -150, -40); 
+	addAnimationByPrefix('redloop', 'intro', 'intro', 56, false); 
+	addAnimationByPrefix('redloop', 'loop', 'loop', 60, true)
+	objectPlayAnimation('redloop', 'loop'); 
+	addLuaSprite('redloop', false);
+	setProperty('redloop.scale.x',2)
+	setProperty('redloop.scale.y',2)	
+	setProperty('redloop.alpha', 0)	
 	
     makeLuaSprite('suelodarks','mabosolo/bg',-1300 , -750);
     addLuaSprite('suelodarks',false);
@@ -102,20 +114,27 @@ function onStepHit()
 		ivdance = true
 		objectPlayAnimation('iv', 'shuo',true);
 		doTweenColor('mariColorTween', 'mari', '000000', 0.01, 'linear')
-		doTweenAlpha('appearredsky','redSky',1, 0.4)
-		doTweenAlpha('suelo','suelodarks',1, 0.4)	
+		doTweenAlpha('appearredsky','redSky',1, 0.3)		
+		doTweenAlpha('suelo','suelodarks',1, 0.3)	
    	 end
+
+	if curStep == 1022 then
+		objectPlayAnimation('redloop','intro',true)
+		doTweenAlpha('appearredloop','redloop',1, 0.1)
+    	end
 	
 	if curStep == 1024 then
 		baila = true
 		objectPlayAnimation('mari','show',true)
+		objectPlayAnimation('redloop','loop',true)		
     	end
 	
 	if curStep == 1408 then
 		manten = false
 		baila = false
-		doTweenAlpha('dissapearsky','redSky',0, 0.4)
-		doTweenAlpha('chaosuelo','suelodarks',0, 0.4)
+		doTweenAlpha('dissapearsky','redSky',0, 0.3)
+		doTweenAlpha('dissapearloop','redloop',0, 0.3)		
+		doTweenAlpha('chaosuelo','suelodarks',0, 0.3)
 		doTweenY('cutscenemoment', 'black1',-900, 0.4,'expoOut')
 		doTweenY('cutscenemoment2', 'black2',1200, 0.4,'expoOut')
 		doTweenColor('2ndmariColorTween', 'mari', 'ffffff', 0.01, 'linear')
