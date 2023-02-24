@@ -171,7 +171,6 @@ class PlayState extends MusicBeatState
 	public var barra:Float = 0;
 
 	private var healthBarBG:FlxSprite;
-
 	public var healthBar:FlxBar;
 
 	var songPercent:Float = 0;
@@ -210,7 +209,11 @@ class PlayState extends MusicBeatState
 	var maavoBopper:BGSprite;
 	var maritzaFondoDanzante:BackgroundDancer;
 	var heyTimer:Float;
-
+	var vfx:FlxSprite;
+	var vfxR:FlxSprite;
+	var bg2:FlxSprite;
+	var maavoportrait:FlxSprite;
+	var ronalportrait:FlxSprite;
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
 	public var songMisses:Int = 0;
@@ -450,6 +453,61 @@ class PlayState extends MusicBeatState
 				bg.setGraphicSize(Std.int(bg.width * 1.2));
 				bg.active = true;
 				add(bg);
+
+				bg2 = new FlxSprite(-516, -310);
+				bg2.scale.set(4.2, 4);
+				bg2.alpha = 0;
+				bg2.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
+				bg2.animation.addByPrefix('effect', "bg", 60, true);
+				bg2.animation.play('effect');
+				bg2.antialiasing = ClientPrefs.globalAntialiasing;
+				bg2.updateHitbox();
+				add(bg2);
+
+				maavoportrait = new FlxSprite(670, 0);
+				maavoportrait.flipX = true;
+				maavoportrait.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
+				maavoportrait.animation.addByPrefix('wow', "SSBUportrait", 60, false);
+				maavoportrait.alpha = 0;
+				maavoportrait.antialiasing = ClientPrefs.globalAntialiasing;
+				maavoportrait.cameras = [camHUD];
+				add(maavoportrait);
+				
+				ronalportrait = new FlxSprite(0, 124);
+				ronalportrait.scale.set(1.6, 1.6);
+				ronalportrait.updateHitbox();
+				ronalportrait.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
+				ronalportrait.animation.addByPrefix('clown', "hyperportrait", 60, false);
+				ronalportrait.alpha = 0;
+				ronalportrait.antialiasing = ClientPrefs.globalAntialiasing;
+				ronalportrait.cameras = [camHUD];
+				add(ronalportrait);
+
+				vfx = new FlxSprite(0, 0);
+				vfx.scale.set(3, 3);
+				vfx.alpha = 0;
+				vfx.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
+				vfx.animation.addByPrefix('punch', "maavohit", 60, false);
+				vfx.animation.play('punch');
+				vfx.antialiasing = ClientPrefs.globalAntialiasing;
+				vfx.centerOrigin();
+				vfx.updateHitbox();
+				add(vfx);
+
+				vfxR = new FlxSprite(0, 0);
+				vfxR.scale.set(3, 3);
+				vfxR.alpha = 0;
+				vfxR.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
+				vfxR.animation.addByPrefix('punchR', "ronaldhit1", 60, false);
+				vfxR.animation.addByPrefix('punchR2', "ronaldhit2", 60, false);
+				vfxR.animation.addByPrefix('spark', "hyperspark", 60, true);
+				vfxR.animation.play('spark');
+				vfxR.antialiasing = ClientPrefs.globalAntialiasing;
+				vfxR.updateHitbox();
+				add(vfxR);
+				
+				
+
 			case 'ponderingmall': // Pondering
 				GameOverSubstate.deathSoundName = 'fnf_loss_maavo';
 				GameOverSubstate.characterName = 'maavo-playable';
@@ -1817,17 +1875,11 @@ class PlayState extends MusicBeatState
 					
 					health = 0;
 					trace("RESET = True");
-					trace(isMugen);
-					trace(nomate);
-					trace(porfanomate);
 				}
 			else if (!isMugen)
 				{
 					health = 0;
-					trace("RESET = True");
-					trace(isMugen);
-					trace(nomate.finished);
-					trace(porfanomate);
+					trace("RESET = True");	
 				}
 			
 		}
@@ -2010,6 +2062,38 @@ class PlayState extends MusicBeatState
 								animToPlay = 'singUP';
 							case 3:
 								animToPlay = 'singRIGHT';
+						}
+						switch (daNote.noteType)
+						{
+							case 'vfx note':
+						
+							if (isMugen){
+								vfxR.alpha = 1;
+								new FlxTimer().start(0.8 ,function(tmr:FlxTimer){
+									vfxR.alpha = 0;
+								});
+							
+								switch (Math.abs(daNote.noteData))
+								{
+									case 0:
+							
+										vfxR.x = 1011;
+										vfxR.y = 449;
+										vfxR.animation.play('punchR', true);
+									case 1:
+										vfxR.x = 1052;
+										vfxR.y = 730;
+										vfxR.animation.play('punchR', true);
+									case 2:
+										vfxR.x = 590;
+										vfxR.y = -52;
+										vfxR.animation.play('punchR2', true);
+									case 3:
+										vfxR.x = 889;
+										vfxR.y = 426;
+										vfxR.animation.play('punchR2', true);
+								}	
+							}
 						}
 						if (daNote.noteType == 'GF Sing')
 						{
@@ -2357,7 +2441,32 @@ class PlayState extends MusicBeatState
 				}
 				char.idleSuffix = value2;
 				char.recalculateDanceIdle();
-
+			case 'Ronald Portrait':
+				if (isMugen)	
+				{	
+					ronalportrait.alpha = 1;
+					ronalportrait.animation.play('clown');
+					FlxTween.tween(ronalportrait, {alpha: 0}, 0.5, {startDelay: 1.5});
+				}	
+						
+			case 'Maavo Portrait':
+				var value:Int = Std.parseInt(value1);	
+				if (isMugen)
+				{		
+					if (Math.isNaN(value))
+						value = 0;
+					switch (value)
+					{
+						case 0:
+							maavoportrait.alpha = 1;
+							bg2.alpha = 1;
+							maavoportrait.animation.play('wow');
+							if (maavoportrait.animation.finished)
+								maavoportrait.alpha = 0;			
+						case 1:
+							bg2.alpha = 0;
+					}		
+				}
 			case 'Screen Shake':
 				var valuesArray:Array<String> = [value1, value2];
 				var targetsArray:Array<FlxCamera> = [camGame, camHUD];
@@ -2631,7 +2740,9 @@ class PlayState extends MusicBeatState
 
 		deathCounter = 0;
 		seenCutscene = false;
-
+		if (SONG.song.toLowerCase() == 'tokyo')
+			tokyoVideo.bitmap.stop();
+		
 		#if ACHIEVEMENTS_ALLOWED
 		if (achievementObj != null)
 		{
@@ -3344,6 +3455,9 @@ class PlayState extends MusicBeatState
 								boyfriend.stunned = false;
 							});
 						}
+					
+						
+					
 				}
 
 				note.wasGoodHit = true;
@@ -3400,6 +3514,42 @@ class PlayState extends MusicBeatState
 						animToPlay = 'singRIGHT';
 				}
 
+				switch (note.noteType)
+				{
+					case 'vfx note':
+						
+						if (isMugen){
+							vfx.alpha = 1;
+							new FlxTimer().start(0.8 ,function(tmr:FlxTimer){
+								vfx.alpha = 0;
+							});
+
+						
+							switch (Math.abs(note.noteData))
+							{
+								case 0:
+									vfx.angle = 95;
+									vfx.x = 201;
+									vfx.y = 62;
+									vfx.animation.play('punch', true);
+								case 1:
+									vfx.angle = 85;
+									vfx.x = 332;
+									vfx.y = 493;
+									vfx.animation.play('punch', true);
+								case 2:
+									vfx.angle = 65;
+									vfx.x = 353;
+									vfx.y = -43;
+									vfx.animation.play('punch', true);
+								case 3:
+									vfx.angle = 30;
+									vfx.x = 507;
+									vfx.y = 92;
+									vfx.animation.play('punch', true);
+							}	
+						}
+				}
 				if (note.noteType == 'GF Sing')
 				{
 					gf.playAnim(animToPlay + daAlt, true);
