@@ -1,8 +1,0 @@
-Este es el evento q activa el modo shou
-
-Solo funciona en "Showtime", asi q ponerlo
-en cualquier otra cancion no sirve de nada xdxd
-
-Value 1: Show (1) o Shown't (0)
-
-Value 2: Esto no hace nada elemao
