@@ -94,12 +94,6 @@ class MainMenuState extends MusicBeatState
 		menuUnlocked = ClientPrefs.unlockedMenus[random];
 		checkDerker();
 
-		if (menuUnlocked == "derker" && ClientPrefs.havePlayedDerker)
-		{
-			FlxG.sound.playMusic(Paths.music('easterEgg'), 0);
-			FlxG.sound.music.fadeIn(4, 0, 0.7);
-		}
-
 		bg = new FlxSprite(0, 0).loadGraphic(Paths.image('mainmenu/' + menuUnlocked + '/bg'));
 		bg.screenCenter();
 		bg.scale.x = 0.7;

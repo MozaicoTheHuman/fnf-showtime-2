@@ -92,7 +92,7 @@ class CreditsState extends MusicBeatState
 			['Krimson', 'krimson', 'Musician', 'https://www.youtube.com/@krimson7430', 'FFDD33'],
 			['Vzer', 'vzer', 'Musician', 'https://www.youtube.com/@TheVzer', 'FFDD33'],		
 			['NaxoAtWork', 'naxo', 'Musician', 'https://www.youtube.com/@NaxoAtWork', 'FFDD33'],	
-			['DIA', 'dia', 'UTAU Voicebanks', 'https://www.youtube.com/channel/UCpcLjVqgiEaYMmgADVbXZVw', 'FFDD33'],									
+			['DIA', 'dia', 'UTAU Voicebanks', 'https://twitter.com/YanKitiCats', 'FFDD33'],									
 			['Sandwich', 'sandwich', 'Coder', 'https://www.google.com/search?q=sandwich&client=opera-gx&hs=tJN&source=lnms&tbm=isch&sa=X&ved=2ahUKEwih3afKpOT6AhXrLrkGHc9lBfUQ_AUoAnoECAEQBA&biw=1879&bih=939&dpr=1', 'FFDD33'],
 			['Beru', 'beru', 'Coder', 'https://twitter.com/art_keny', 'FFDD33'],
 			['YOUK', 'youkdev', 'Coder', 'https://twitter.com/YOUKdev', 'FFDD33'],
@@ -120,7 +120,14 @@ class CreditsState extends MusicBeatState
 				'Background Artist',
 				'https://twitter.com/teethlust',
 				'FFDD33'
-			],			
+			],
+			[
+				'Koi',
+				'koi',
+				'Background Artist',
+				'https://twitter.com/_Sir_Koi_',
+				'FFDD33'
+			],								
 			[
 				'Natu',
 				'natu',
@@ -152,7 +159,7 @@ class CreditsState extends MusicBeatState
 			[
 				'Shey Pancake',
 				'sheicita',
-				'Cutscene Artist and Ivette VA',
+				'Cutscene Artist, Icon Artist, and Ivette VA',
 				'https://twitter.com/shey_pancake',
 				'FFDD33'
 			],
@@ -193,7 +200,7 @@ class CreditsState extends MusicBeatState
 				'https://twitter.com/Wachine_Machine',
 				'FFDD33'
 			],
-			['Poncho', 'poncho', 'Logo', 'https://twitter.com/mrneedIemouse', 'FFDD33'],
+			['Poncho', 'poncho', 'Logo', 'https://twitter.com/ElPonchitoPio', 'FFDD33'],
 			[
 				'DegoDraws',
 				'dego',
@@ -225,6 +232,20 @@ class CreditsState extends MusicBeatState
 			[''],
 			[Language.credits_categorys[1]],
 			[
+				'ShaminBECA',
+				'nada',
+				'Tokyo Teddy Bear album cover',
+				'https://twitter.com/ShaminBECA',
+				'FFDD33'
+			],
+			[
+				'InukoExo',
+				'nada',
+				'kfm.mid album cover',
+				'https://twitter.com/InukoExo',
+				'FFDD33'
+			],								
+			[
 				'CompotaHyper',
 				'compotito',
 				"For testing the mod's beta on stream",
@@ -244,7 +265,14 @@ class CreditsState extends MusicBeatState
 				'For voicing Ivette on past projects,\nand providing the samples for the FNF chromatic',
 				'https://cdn.discordapp.com/attachments/885208632533348433/887917996977299476/miki.gif',
 				'FFDD33'
-			],					
+			],
+			[
+				'Riusaki Fujioka',
+				'nada',
+				'For voicing Maritza on past projects,\nand providing the samples for the FNF chromatic',
+				'https://cdn.discordapp.com/attachments/885208632533348433/887917996977299476/miki.gif',
+				'FFDD33'
+			],									
 			[
 				'Neru',
 				'nada',
@@ -256,7 +284,7 @@ class CreditsState extends MusicBeatState
 				'Tanjiro Taidana',
 				'nada',
 				'Original Tokyo Teddy Bear UST file',
-				'https://www.youtube.com/@tanjirotaidana',
+				'https://twitter.com/tanjirotaidana',
 				'FFDD33'
 			],
 			[
