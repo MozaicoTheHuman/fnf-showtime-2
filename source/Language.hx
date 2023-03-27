@@ -23,6 +23,7 @@ typedef LanguageData =
     var options_sub_preferences_descriptions:Array<String>;
     var options_sub_visuals_names:Array<String>;
     var options_sub_visuals_descriptions:Array<String>;
+    var cutscene_text:Array<String>;
 }
 
 class Language{
@@ -51,7 +52,7 @@ class Language{
     public static var options_sub_preferences_descriptions:Array<String> = [];
     public static var options_sub_visuals_names:Array<String> = [];
     public static var options_sub_visuals_descriptions:Array<String> = [];
-
+    public static var cutscene_text:Array<String> = [];
     //Devuelve la abreviatura del lenguaje actual
     public static function giveLanguage():String{
         var fileName:String = '';
@@ -86,6 +87,7 @@ class Language{
         options_sub_preferences_descriptions = languageData.options_sub_preferences_descriptions;
         options_sub_visuals_names = languageData.options_sub_visuals_names;
         options_sub_visuals_descriptions = languageData.options_sub_visuals_descriptions;
+        cutscene_text = languageData.cutscene_text;
     }
 
 }

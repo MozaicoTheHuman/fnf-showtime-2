@@ -176,5 +176,11 @@
 		"Si lo activas, la camara se movera a la direccion de la nota presionada",
 		"Si lo activas, se ocultara gran parte de la interfaz",
 		"Si lo activas, se ocultara el temporizador de la cancion"
+	],
+	"cutscene_text":[
+		"Era una noche tranquila, \ny Boyfriend y Girlfriend estaban \nen una cita... \n\nencima de un edificio",
+		"ya que tienen 1 neurona y la \ncomparten por turnos, se cayeron \ndel edificio, aterrizando en un \nbasurero que amortiguo su caída",
+		"Girlfriend al caer, se encuentra \nen la basura un cuaderno, con \nvarias hojas arrancadas \ny llena de borrones.",	
+		"Al estar mareada por la caída, \naccidentalmente usa sus poderes, \nentrando junto a BF al cuaderno en \nla única hoja que estaba casi intacta."
 	]
 }

@@ -176,5 +176,11 @@
 		"If checked, the camera will move in the note direction.",
 		"If checked, hides most HUD elements.",
 		"If checked, the bar showing how much time is left\nwill be hidden."
+	],
+	"cutscene_text":[
+		"It was a quiet night, \nand Boyfriend and Girlfriend \nwere on a date... \non top of a building.",
+		"Since they have 1 neuron \nand share it in turns, \nthey fell off the building, landing on a \ndumpster that broke their fall.",
+		"Girlfriend, upon falling \ninto the trash, finds a notebook, \nwith several pages torn out \nand full of erasures.",
+		"Dizzy from the fall, \nshe accidentally uses her powers, \nentering the notebook with BF on \nthe only sheet that was almost intact."
 	]
 }

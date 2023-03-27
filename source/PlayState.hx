@@ -50,6 +50,7 @@ import openfl.filters.ShaderFilter;
 import openfl.utils.Assets as OpenFlAssets;
 
 using StringTools;
+import Intro;
 
 #if VIDEOS_ALLOWED
 import video.VideoHandler;
@@ -233,6 +234,13 @@ class PlayState extends MusicBeatState
 
 	public var inCutscene:Bool = false;
 	
+	var finishedText:Bool = true;
+	public var text1:FlxText;
+	public var text2:FlxText;
+	public var bgIntro:FlxSprite;
+	public var nextText:Int = 0;
+	public var triangleText:FlxSprite;
+	var lan:String;
 	//Video Tokyo
 	#if VIDEOS_ALLOWED
 	var tokyoVideo:VideoSprite;
@@ -878,12 +886,13 @@ class PlayState extends MusicBeatState
 		var daSong:String = Paths.formatToSongPath(curSong);
 		if (isStoryMode && !seenCutscene)
 		{
-			var lan:String = Language.giveLanguage();
+			lan = Language.giveLanguage();
 			switch (daSong)
 			{
 				// Los videos deben tener -eng o -esp al final
 				case 'lovely':
-					startVideo('cutscene-LOVELY-'+lan);
+					introCutscene();
+					//startVideo('cutscene-LOVELY-'+lan);
 				case 'wannabe':
 					startVideo('cutscene-WANNABE-'+lan);
 				case 'finale':
@@ -1013,6 +1022,81 @@ class PlayState extends MusicBeatState
 		}
 		char.x += char.positionArray[0];
 		char.y += char.positionArray[1];
+	}
+
+	function introCutscene(){
+		finishedText = false;
+
+		bgIntro = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK); 
+		bgIntro.screenCenter();
+		bgIntro.cameras = [camHUD];
+		add(bgIntro);
+		
+		text1 = new FlxText(400 , 306);
+        text1.setFormat(Paths.font("frank.ttf"), 38, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        add(text1);
+		text1.cameras = [camHUD];
+		text1.updateHitbox();
+		add(text1);
+
+		text2 = new FlxText(400 , 306);
+        text2.setFormat(Paths.font("frank.ttf"), 38, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		text2.cameras = [camHUD];
+		text2.updateHitbox();
+        add(text2);
+
+		triangleText = new FlxSprite(861, 472).loadGraphic(Paths.image('triangulito'));
+		triangleText.cameras = [camHUD];
+		triangleText.updateHitbox();
+		add(triangleText);
+
+
+		
+	}
+	function nextPage(num:Int, text:String = 'pi pi pi'){
+        switch (num){
+            case 0:
+                text1.text = text;
+            case 1:
+                introTween();
+                text2.text = text;
+			case 2:
+				introTween(1);
+				text1.text = text;
+			case 3:
+				introTween();
+				text2.text = text;
+				triangleText.x = 933;
+				triangleText.y = 456;
+        }
+    }
+	public function introTween(next:Int = 0)
+	{
+		if (next == 0)
+		{
+			text1.color = FlxColor.GRAY;
+			text2.color = FlxColor.WHITE;
+			text2.x = 400;
+			text2.y = 306;
+			text2.angle = 0;
+			FlxTween.tween(text1, {angle: -10}, 0.3, {onComplete: function(twn:FlxTween){					
+			}});
+			FlxTween.tween(text1, {x: 66}, 0.3);
+			FlxTween.tween(text1, {y: 94}, 0.3);
+		}
+		else
+		{
+			text1.color = FlxColor.WHITE;
+			text1.x = 400;
+			text1.y = 306;
+			text1.angle = 0;
+			text2.color = FlxColor.GRAY;	
+			FlxTween.tween(text2, {angle: -10}, 0.3, {onComplete: function(twn:FlxTween){					
+			}});
+			FlxTween.tween(text2, {x: 66}, 0.3);
+			FlxTween.tween(text2, {y: 94}, 0.3);
+		}
+		
 	}
 
 	public function startVideo(name:String)
@@ -1642,14 +1726,38 @@ class PlayState extends MusicBeatState
 	var startedCountdown:Bool = false;
 	var canPause:Bool = true;
 	var limoSpeed:Float = 0;
-
+	
 	override public function update(elapsed:Float)
 	{
+		//var lan:String = Language.giveLanguage();
 		/*if (FlxG.keys.justPressed.NINE)
 		{
 			iconP1.swapOldIcon();
 	}*/
-
+		if (finishedText == false)
+		{
+			if (nextText <= 3)
+			{
+				nextPage(nextText, Language.cutscene_text[nextText]);
+				//text1.text = Language.cutscene_text[nextText];
+				if (controls.ACCEPT)
+				{
+					FlxG.sound.play(Paths.sound('storyIntroNext'));
+					nextText++;
+				}
+			}
+			else
+			{
+				finishedText = true;
+				//startCountdown();
+				startVideo('cutscene-LOVELY-'+lan);
+				text1.destroy();
+				text2.destroy();
+				triangleText.destroy();
+				bgIntro.destroy();
+			}
+		}
+		
 		callOnLuas('onUpdate', [elapsed]);
 
 		nomate = new FlxTimer().start(2,function(tmr:FlxTimer)
