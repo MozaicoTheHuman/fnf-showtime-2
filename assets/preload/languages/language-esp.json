@@ -1,0 +1,220 @@
+{
+	"achievements":[{
+			"name": "Gran Espectaculo",
+			"description": "Termina la Week con mas del 90% de acurracy en hard"
+		},{
+			"name": "Maldito Experto",
+			"description": "Completa 'Showtime' sin fallos"
+		},{
+			"name": "Detective",
+			"description": "Pon el codigo secreto en el menu debug. \nPistas: Motor de videojuegos de lucha, primera aparicion de Maavo, Ronald McDonald"
+		},{
+			"name": "Partida Perfecta",
+			"description": "Completa la cancion 'kfm.mid' sin fallos"
+		},{
+			"name": "Manco",
+			"description": "Pierde 3 veces seguidas"
+		},{
+			"name": "Literal no tienes manos",
+			"description": "Pierde 10 veces en total"
+		},{
+			"name": "WIII GANE!",
+			"description": "Pierde en Lovely"
+		},{
+			"name": "Perfeccionista",
+			"description": "Completa todas las canciones sin fallos en Hard"
+		},{
+			"name": "Enfermo",
+			"description": "Completa 'Tokyo Teddy Bear' en dificultad Extrema sin fallos"
+		},{
+			"name": "Y los telones se cierran",
+			"description": "Completa todos los logros"
+		},{
+			"name": "Friday Night Funkin'",
+			"description": "Juega un viernes por la noche"
+		},{
+			"name": "Le sabes",
+			"description": "Juega cualquier cancion de\nFNF Derker Bluer Edition"
+		}
+	],
+	"unlockguide":[
+		"Completa el logro 'Gran Espectaculo' \npara desbloquear esta canción",
+		"Completa el logro 'Maldito Experto' \npara desbloquear esta canción",
+		"Completa el logro 'Detective' \npara desbloquear esta canción",
+		"Completa el logro 'WIII GANE!'\npara desbloquear esta canción"
+	],
+	"credits":[{
+		"category": "SHOWTIME TEAM",
+		"part":[
+			"",
+			"Director, artista y animador principal,\nprogramador, charter, actor de voz de Maavo, y\nPort de Maavo a Project Diva Megamix+",
+			"Musico",
+			"Musico",
+			"Musico",
+			"Musico",
+			"Musico, Animador, y voz de Hanzo",
+			"Musico",
+			"Musico",
+			"Musico",
+			"Musico",
+			"Musico",
+			"Voicebanks de UTAU",
+			"Programador",
+			"Programador",
+			"Programador",
+			"Programador",
+			"Programador y creador de\nlas escalas cromaticas principales",
+			"Programador",
+			"Programador",
+			"Programador y Tilin\n(Presiona Enter para una sorpresa)",
+			"Artista de fondos",
+			"Artista de fondos",
+			"Artista de fondos",		
+			"Artista de fondos",
+			"Artista de storyboards",
+			"Artista de storyboards",
+			"Artista de storyboards y del Freeplay",
+			"Artista de cutscenes y \nvoz de Ivette",
+			"Animador de cutscenes",
+			"Animador de cutscenes",
+			"Artista del menu",
+			"Artista",
+			"Artista de iconos y del menu",
+			"Actriz de voz de Maritza",
+			"Asistente de animacion \ny creador del Maavo 3D",
+			"Artista del logo",
+			"Artista de los fondos en los menus",
+			"Creador de las escalas cromaticas en Light On",
+			"Charter de Tokyo (Dificultad Extrema)",
+			"Ayuda con el port de Maavo a \nProject Diva Megamix+",
+			""
+		]
+	},{
+		"category": "GRACIAS ESPECIALES",
+		"part":[
+			"Portada de Tokyo Teddy Bear",	
+			"Portada de kfm.mid",			
+			"Por testear la Beta del mod en stream",
+			"Por unir a la comunidad chilena\npara hacer el mejor mod <3",
+			"Por dar voz a Ivette en proyectos pasados\ny aportar para las cromaticas de ivette",
+			"Compositor original de Tokyo Teddy Bear",
+			"Creador del archivo UST de Tokyo Teddy Bear",
+			"Creador original de Ronald McDonald MUGEN",
+			"Little Coding Help",
+			"Por introducirme al modding de FNF",
+			"Por ser el mejor grupo de todos <3"
+		]
+	}],
+	"options":[{
+			"name": "Controles",
+			"title": "Ajustes de Controles",
+			"rpc": "En el Menu de Controles",
+			"options":[
+				{"name": "NOTAS"},
+				{"name": "Izquierda"},
+				{"name": "Abajo"},
+				{"name": "Arriba"},
+				{"name": "Derecha"},
+				{"name": "UI"},
+				{"name": "Reiniciar"},
+				{"name": "Aceptar"},
+				{"name": "Volver"},
+				{"name": "Pausar"},
+				{"name": "VOLUMEN"},
+				{"name": "Silenciar"},
+				{"name": "Subir"},
+				{"name": "Bajar"},
+				{"name": "DEBUG"},
+				{"name": "Tecla 1"},
+				{"name": "Tecla 2"},
+				{"name": "Reiniciar las teclas"}
+			]
+		},{
+			"name": "Ajustes de Video",
+			"title": "Ajustes de Video",
+			"rpc": "En 'Ajustes de video'",
+			"options":[{
+					"name": "Resolucion:",
+					"description": "Se refiere al nivel de definición de la pantalla en píxeles\nuna resolución más alta puede dar lugar a un peor"
+				},{
+					"name": "FPS:",
+					"description": "Se explica por sí solo, ¿no? "
+				},{
+					"name": "Mostrar FPS",
+					"description": "Si lo desactivas, oculta el contador de Cuadros por Segundo."
+				},{
+					"name": "Anti-Aliasing",
+					"description": "Si lo desactivas, mejorara el rendimiento a cambio de texturas menos suavizadas"
+				},{
+					"name": "Pocos Detalles",
+					"description": "Si lo activas, los detalles de fondo se veran reducidos\na cambio de tiempos de carga reducidos y mejor rendimiento"
+				}
+			]
+		},{
+			"name": "Preferencias",
+			"title": "Ajustes de Preferencias",
+			"rpc": "En 'Preferencias'",
+			"options":[{
+					"name": "Idioma:",
+					"description": "Elige el idioma del juego."
+				},{
+					"name": "Down-Scroll",
+					"description": "Si lo activas, las notas se moveran hacia abajo"
+				},{
+					"name": "Middle-Scroll",
+					"description": "Si lo activas, las notas se centraran"
+				},{
+					"name": "Ghost-Tapping",
+					"description": "Si lo activas, no recibiras fallos al presionar las teclas\nmientras que no hayan notas"
+				},{
+					"name": "Quantizacion de Notas",
+					"description": "Si lo activas, el color de las notas cambiara con su ritmo\nen lugar de la direccion, haciendo que sean mas faciles de distinguir. (Recomendado)."
+				}
+			]
+		},{
+			"name": "Ajustes Visuales",
+			"title": "Ajustes Visuales",
+			"rpc": "En 'Visuales'",
+			"options":[{
+					"name": "Luces intermitentes",
+					"description": "Desactiva esto si eres sensible a las luces intermitentes"
+				},{
+					"name": "Notas salpicantes",
+					"description": "Si lo desactivas, al lograr un Sick, no se mostraran particulas"
+				},{
+					"name": "Zooms de Camara",
+					"description": "Si lo desactivas, la camara no se movera al ritmo de la cancion"
+				},{
+					"name": "Camara Dinamica",
+					"description": "Si lo activas, la camara se movera a la direccion de la nota presionada"
+				},{
+					"name": "Esconder Interfaz",
+					"description": "Si lo activas, se ocultara gran parte de la interfaz"
+				},{
+					"name": "Esconder Temporizador",
+					"description": "Si lo activas, se ocultara el temporizador de la cancion"
+				}
+			]
+		},{
+			"name": "Offset y Combo",
+			"title": "Ajustes de Offset y Combo",
+			"rpc": "En Offset y Combo",
+			"options":[{
+					"name": "Combo Offset (Presiona Aceptar para Cambiar)"
+				},{
+					"name": "Offset de Rating",
+					"description": "Offset de Nota"
+				},{
+					"name": "Beat Delay (Presiona Aceptar para Cambiar)",
+					"description": "Offset actual"
+				}
+			]
+		}
+	],
+	"cutscene":[
+		"Era una noche tranquila, \ny Boyfriend y Girlfriend estaban \nen una cita... \n\nencima de un edificio",
+		"ya que tienen 1 neurona y la \ncomparten por turnos, se cayeron \ndel edificio, aterrizando en un \nbasurero que amortiguo su caída",
+		"Girlfriend al caer, se encuentra \nen la basura un cuaderno, con \nvarias hojas arrancadas \ny llena de borrones.",	
+		"Al estar mareada por la caída, \naccidentalmente usa sus poderes, \nentrando junto a BF al cuaderno en \nla única hoja que estaba casi intacta."
+	]
+}

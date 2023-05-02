@@ -26785,7 +26785,7 @@
 		],
 		"player3": "nothing",
 		"song": "Tokyo",
-		"stage": "stage",
+		"stage": "void",
 		"needsVoices": true,
 		"validScore": true,
 		"bpm": 204,

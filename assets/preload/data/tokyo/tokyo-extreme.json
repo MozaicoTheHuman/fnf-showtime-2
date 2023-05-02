@@ -30858,7 +30858,7 @@
 		"song": "Tokyo",
 		"validScore": true,
 		"needsVoices": true,
-		"stage": "stage",
+		"stage": "void",
 		"speed": 3.5,
 		"bpm": 204
 	}

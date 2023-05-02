@@ -25159,7 +25159,7 @@
 		"song": "Tokyo",
 		"validScore": true,
 		"needsVoices": true,
-		"stage": "stage",
+		"stage": "void",
 		"speed": 1.8,
 		"bpm": 204
 	}

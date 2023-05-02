@@ -1,29 +1,27 @@
 package;
 
-import flixel.graphics.FlxGraphic;
 import flixel.FlxG;
-import flixel.FlxGame;
-import flixel.FlxState;
-import openfl.Assets;
-import openfl.Lib;
-import openfl.display.FPS;
-import openfl.display.Sprite;
-import openfl.events.Event;
-import openfl.display.StageScaleMode;
-import lime.app.Application;
-
-#if desktop
-import Discord.DiscordClient;
-#end
-
-import openfl.events.UncaughtErrorEvent;
+import flixel.FlxNewGame;
+import fnf.menus.TitleState;
+import fnf.system.ClientPrefs;
 import haxe.CallStack;
 import haxe.io.Path;
+import lime.app.Application;
+import openfl.FPS;
+import openfl.Lib;
+import openfl.MemoryManagement;
+import openfl.display.Sprite;
+import openfl.display.StageScaleMode;
+import openfl.events.Event;
+import openfl.events.UncaughtErrorEvent;
 import sys.FileSystem;
 import sys.io.File;
-import sys.io.Process;
 
 using StringTools;
+
+#if desktop
+import fnf.system.Discord.DiscordClient;
+#end
 
 class Main extends Sprite
 {
@@ -83,16 +81,17 @@ class Main extends Sprite
 			game.width = Math.ceil(stageWidth / game.zoom);
 			game.height = Math.ceil(stageHeight / game.zoom);
 		}
-	
+
 		ClientPrefs.loadDefaultKeys();
-		addChild(new FlxGame(game.width, game.height, game.initialState, game.framerate, game.framerate, game.skipSplash, game.startFullscreen));
+		addChild(new FlxNewGame(game.width, game.height, game.initialState, game.framerate, game.framerate, game.skipSplash, game.startFullscreen));
 
 		#if !mobile
 		fpsVar = new FPS(10, 3, 0xFFFFFF);
 		addChild(fpsVar);
 		Lib.current.stage.align = "tl";
 		Lib.current.stage.scaleMode = StageScaleMode.NO_SCALE;
-		if(fpsVar != null) {
+		if (fpsVar != null)
+		{
 			fpsVar.visible = ClientPrefs.showFPS;
 		}
 		#end
@@ -101,18 +100,26 @@ class Main extends Sprite
 		FlxG.autoPause = false;
 		FlxG.mouse.visible = false;
 		#end
-
+		FlxG.signals.postStateSwitch.add(function()
+		{
+			trace("Running garbage colector");
+			MemoryManagement.garbageColectorMinor();
+			MemoryManagement.garbageColectorMajor();
+			MemoryManagement.garbageColectorMinor();
+		});
 		Lib.current.loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, onCrash);
 
 		#if desktop
-		if (!DiscordClient.isInitialized) {
+		if (!DiscordClient.isInitialized)
+		{
 			DiscordClient.initialize();
-			Application.current.window.onClose.add(function() {
+			Application.current.window.onClose.add(function()
+			{
 				DiscordClient.shutdown();
 			});
 		}
 		#end
-		
+
 		ClientPrefs.loadPrefs();
 	}
 

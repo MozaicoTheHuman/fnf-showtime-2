@@ -36,7 +36,7 @@ local allowCountdown = false
 function onStartCountdown()
 	if not allowCountdown then
 		runTimer('startText', 0.1);
-		runTimer('countdown', 2)
+		runTimer('countdown', 2.25)
 		allowCountdown = true;
 		--startCountdown()
 		return Function_Stop;
@@ -56,7 +56,6 @@ function onUpdate()
 		setProperty('healthBar.scale.y', 1.5)	
 		setProperty('healthBarBG.y', 630)
 		setProperty('healthBar.y', 636)
-		
 	else
 		setProperty('icon1.y',-10)
 		setProperty('icon2.y',-10)
@@ -72,18 +71,8 @@ end
 
 function onTimerCompleted(tag, loops, loopsLeft)
 	if tag == 'startText' then
-		if a == 1 then
-			playSound('payaso1')
-			characterPlayAnim('dad','intro1')
-		end
-		if a == 2 then
-			playSound('payaso2')
-			characterPlayAnim('dad','intro2')
-		end
-		if a == 3 then
-			playSound('payaso3')
-			characterPlayAnim('dad','intro3')
-		end
+		playSound('payaso'..tostring(a))
+		characterPlayAnim('dad','intro'..tostring(a))
 	end
 	if tag == 'countdown' then
 		startCountdown()
