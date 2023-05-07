@@ -44,6 +44,14 @@ class GameOverSubstate extends MusicBeatSubstate
 	public static var loopSoundName:String = 'gameOver';
 	public static var endSoundName:String = 'gameOverEnd';
 
+	function resetGameOver()
+	{
+		characterName = 'bf';
+		deathSoundName = 'fnf_loss_sfx';
+		loopSoundName = 'gameOver';
+		endSoundName = 'gameOverEnd';
+	}
+
 	public function new(x:Float, y:Float, camX:Float, camY:Float, state:PlayState)
 	{
 		lePlayState = state;
@@ -54,22 +62,18 @@ class GameOverSubstate extends MusicBeatSubstate
 		bf = new Boyfriend(x, y, characterName);
 		add(bf);
 
-		if (PlayState.SONG.song.toLowerCase() == "light-on")
+		switch (PlayState.SONG.song.toLowerCase())
 		{
-			extra.x = x - 700;
-			extra.y = bf.getGraphicMidpoint().y;
-		}
-
-		if (PlayState.SONG.song.toLowerCase() == "mugen")
-		{
-			extra.x = x - 150;
-			effectFloor.x = x - 300;
-			effectFloor.y = y + 210;
-			camFollow = new FlxPoint(650, 380);
-		}
-		else
-		{
-			camFollow = new FlxPoint(bf.getGraphicMidpoint().x, bf.getGraphicMidpoint().y);
+			case "light-on":
+				extra.x = x - 700;
+				extra.y = bf.getGraphicMidpoint().y;
+			case "mugen":
+				extra.x = x - 150;
+				effectFloor.x = x - 300;
+				effectFloor.y = y + 210;
+				camFollow = new FlxPoint(650, 380);
+			default:
+				camFollow = new FlxPoint(bf.getGraphicMidpoint().x, bf.getGraphicMidpoint().y);
 		}
 
 		FlxG.sound.play(Paths.sound(deathSoundName));
@@ -95,34 +99,33 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		FlxG.cameras.add(camAchievement);
 
-		if (PlayState.SONG.song.toLowerCase() == "light-on")
+		switch (PlayState.SONG.song.toLowerCase())
 		{
-			extra = new FlxSprite(1300, 400);
-			extra.frames = Paths.getSparrowAtlas('lighton/victorydance', 'shared');
-			extra.animation.addByPrefix('victorydance', "el baile del troleo0169", 60);
-			extra.scale.set(3, 3);
-			extra.animation.play('victorydance');
-			add(extra);
+			case "light-on":
+				extra = new FlxSprite(1300, 400);
+				extra.frames = Paths.getSparrowAtlas('lighton/victorydance', 'shared');
+				extra.animation.addByPrefix('victorydance', "el baile del troleo0169", 60);
+				extra.scale.set(3, 3);
+				extra.animation.play('victorydance');
+				add(extra);
+			case "mugen":
+				extra = new FlxSprite(1300, 400);
+				extra.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
+				extra.animation.addByPrefix('ko', "keiou", 60);
+				extra.animation.addByPrefix('continue', "continiu", 24, true);
+				extra.antialiasing = ClientPrefs.globalAntialiasing;
+				extra.scale.set(3, 3);
+				extra.animation.play("ko");
+				add(extra);
+
+				effectFloor = new FlxSprite(1300, 400);
+				effectFloor.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
+				effectFloor.animation.addByPrefix('waaa', "gameoverland", 60);
+				effectFloor.antialiasing = ClientPrefs.globalAntialiasing;
+				effectFloor.visible = false;
+				add(effectFloor);
 		}
 
-		if (PlayState.SONG.song.toLowerCase() == "mugen")
-		{
-			extra = new FlxSprite(1300, 400);
-			extra.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
-			extra.animation.addByPrefix('ko', "keiou", 60);
-			extra.animation.addByPrefix('continue', "continiu", 24, true);
-			extra.antialiasing = ClientPrefs.globalAntialiasing;
-			extra.scale.set(3, 3);
-			extra.animation.play("ko");
-			add(extra);
-
-			effectFloor = new FlxSprite(1300, 400);
-			effectFloor.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
-			effectFloor.animation.addByPrefix('waaa', "gameoverland", 60);
-			effectFloor.antialiasing = ClientPrefs.globalAntialiasing;
-			effectFloor.visible = false;
-			add(effectFloor);
-		}
 		super.create();
 	}
 
@@ -144,6 +147,7 @@ class GameOverSubstate extends MusicBeatSubstate
 			{
 				FlxTween.tween(extra, {alpha: 0}, 0.2, {ease: FlxEase.linear});
 			}
+			resetGameOver();
 		}
 
 		if (controls.BACK)
@@ -159,6 +163,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			lePlayState.callOnLuas('onGameOverConfirm', [false]);
+			resetGameOver();
 		}
 
 		if (bf.animation.curAnim.name == 'firstDeath')

@@ -15,6 +15,11 @@ import java.vm.Gc;
 import neko.vm.Gc;
 #end
 
+/*
+ *	This code is from Codename Engine
+ *	
+ *	The Repo Link is: https://github.com/FNF-CNE-Devs/CodenameEngine
+ */
 class MemoryManagement
 {
 	public static var disableCount:Int = 0;

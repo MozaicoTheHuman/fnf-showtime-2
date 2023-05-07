@@ -8,6 +8,7 @@ import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.input.keyboard.FlxKey;
 import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
@@ -155,13 +156,14 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
 			menuItem.scale.set(0.5, 0.5);
-			menuItem.centerOrigin();
-			menuItem.setPosition(250 - (i * 50), 300 + (i * 80));
+			menuItem.setPosition(150 - (i * 35), 240 + (i * 80));
+			if (i != 0)
+				menuItem.x += 35;
 			menuItem.ID = i;
-			menuItems.add(menuItem);
 			menuItem.scrollFactor.set();
 			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
 			menuItem.alpha = 0;
+			menuItems.add(menuItem);
 			FlxTween.tween(menuItem, {alpha: 1}, 2, {
 				ease: FlxEase.quadOut,
 			});
@@ -216,12 +218,10 @@ class MainMenuState extends MusicBeatState
 			diff.animation.addByPrefix('idle', difficultyOption[i] + " basic", 60);
 			diff.animation.addByPrefix('selected', difficultyOption[i] + " selec", 60);
 			diff.animation.addByPrefix('pressed', difficultyOption[i] + " press", 60, false);
-			diff.animation.play('idle');
 			diff.antialiasing = ClientPrefs.globalAntialiasing;
 			diff.alpha = 0;
 			diff.scrollFactor.set();
-			diff.scale.x = 0.2;
-			diff.scale.y = 0.2;
+			diff.scale.set(0.2, 0.2);
 			diff.ID = i;
 			diffItems.add(diff);
 			diff.kill();
@@ -237,6 +237,7 @@ class MainMenuState extends MusicBeatState
 
 	var selectedSomethin:Bool = false;
 	var diffmenu:Bool = false;
+	var scalVal:Float = 0.2;
 
 	override function update(elapsed:Float)
 	{
@@ -247,7 +248,6 @@ class MainMenuState extends MusicBeatState
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
-		var scalVal:Float = 0.2;
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 5.6, 0, 1);
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 		bg.scale.set(FlxMath.lerp(bg.scale.x, 1, lerpVal), FlxMath.lerp(bg.scale.y, 1, lerpVal));
@@ -287,11 +287,22 @@ class MainMenuState extends MusicBeatState
 				}
 				else
 				{
+					FlxG.sound.play(Paths.sound('cancelMenu'));
 					diffmenu = false;
 					scalVal = 0.2;
-					FlxG.sound.play(Paths.sound('cancelMenu'));
+					FlxTween.tween(black, {alpha: 0}, 0.4, {ease: FlxEase.quadOut});
 					line.animation.play('idle', false, true);
-					var diss:Array<Dynamic> = [black];
+					char.revive();
+					charshadow.revive();
+					MultiTween.alpha([char, charshadow], 1, 0.4, {
+						ease: FlxEase.quadOut,
+						onComplete: function(twn:FlxTween)
+						{
+							line.kill();
+							black.kill();
+							selectedSomethin = false;
+						}
+					});
 					diffItems.forEach(function(spr:FlxSprite)
 					{
 						FlxTween.tween(spr, {alpha: 0}, 0.4, {
@@ -301,17 +312,6 @@ class MainMenuState extends MusicBeatState
 								spr.kill();
 							}
 						});
-					});
-					MultiTween.alpha(diss, 0, 0.4, {ease: FlxEase.quadOut});
-					char.revive();
-					charshadow.revive();
-					MultiTween.alpha([char, charshadow], 1, 0.4, {
-						ease: FlxEase.quadOut,
-						onComplete: function(twn:FlxTween)
-						{
-							line.kill();
-							selectedSomethin = false;
-						}
 					});
 					menuItems.forEach(function(spr:FlxSprite)
 					{
@@ -357,18 +357,18 @@ class MainMenuState extends MusicBeatState
 										diffmenu = true;
 										black.revive();
 										line.revive();
+										line.animation.play('idle');
 										diffItems.forEach(function(spr:FlxSprite)
 										{
 											spr.revive();
-											changeItem();
 											FlxTween.tween(spr, {alpha: 1}, 0.3, {ease: FlxEase.quadIn});
 										});
+										changeItem();
 										FlxTween.tween(black, {alpha: 0.5}, 0.4, {
 											ease: FlxEase.quadIn,
 											onComplete: function(twn:FlxTween)
 											{
 												selectedSomethin = false;
-												line.animation.play('idle', false);
 											}
 										});
 									case 'freeplay':
@@ -403,6 +403,7 @@ class MainMenuState extends MusicBeatState
 						}
 						else
 						{
+							spr.offset.set(50, 20);
 							spr.animation.play('pressed');
 							selectWeek();
 						}
@@ -415,6 +416,10 @@ class MainMenuState extends MusicBeatState
 				{
 					Achievements.unlockAchievement(Achievements.achievementsStuff[i][2]);
 				}
+			}
+			if (FlxG.keys.justPressed.EIGHT)
+			{
+				add(new AchievementObject('great_show', camAchievement));
 			}
 		}
 
@@ -433,9 +438,11 @@ class MainMenuState extends MusicBeatState
 
 			menuItems.forEach(function(spr:FlxSprite)
 			{
+				spr.offset.set(0, 0);
 				spr.animation.play('idle');
 				if (spr.ID == curSelected)
 				{
+					spr.offset.set(38.4, 22.65);
 					spr.animation.play('selected');
 					camFollow.setPosition(0, 0);
 					camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y);

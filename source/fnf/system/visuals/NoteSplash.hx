@@ -21,6 +21,7 @@ class NoteSplash extends FlxSprite
 
 		setupNoteSplash(x, y, note);
 		antialiasing = ClientPrefs.globalAntialiasing;
+		this.drawComplex(FlxG.camera);
 	}
 
 	public function setupNoteSplash(x:Float, y:Float, note:Int = 0, texture:String = null)

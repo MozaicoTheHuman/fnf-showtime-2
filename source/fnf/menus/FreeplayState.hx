@@ -238,7 +238,7 @@ class FreeplayState extends MusicBeatState
 			starIcon.ID = i;
 			staricons.add(starIcon);
 
-			if (i > 3 && !lockStuff[i - 4][1])
+			if (i > 3 && !lockStuff[i - 4][2])
 			{
 				icon = new HealthIcon('locked');
 				icon.sprTracker = songText;
@@ -491,7 +491,7 @@ class FreeplayState extends MusicBeatState
 		else
 		#end if (accepted)
 	{
-			if (curSelected > 3 && !lockStuff[curSelected - 4][1])
+			if (curSelected > 3 && !lockStuff[curSelected - 4][2])
 			{
 				FlxG.sound.play(Paths.sound('pageMenu'));
 				lockedScreen();
@@ -563,10 +563,12 @@ class FreeplayState extends MusicBeatState
 
 	function lockedScreen()
 	{
-		descBox.alpha = 0;
+		var newText:String = unlockGuide[curSelected - 4];
 		descText.alpha = 0;
 		descText.y = FlxG.height - descText.height - 135;
-		var newText:String = unlockGuide[curSelected - 4];
+		descBox.alpha = 0;
+		descBox.setGraphicSize(Std.int(descText.width + 20), Std.int(descText.height + 25));
+		descBox.updateHitbox();
 		if (newText != descText.text)
 		{
 			descText.text = newText;
@@ -582,7 +584,7 @@ class FreeplayState extends MusicBeatState
 				ease: FlxEase.sineOut,
 				onComplete: function(twn:FlxTween)
 				{
-					textTween = FlxTween.tween(textTween, {alpha: 0}, 0.2, {
+					textTween = FlxTween.tween(descText, {alpha: 0}, 0.2, {
 						startDelay: 2,
 						onComplete: function(twn:FlxTween)
 						{
@@ -591,11 +593,11 @@ class FreeplayState extends MusicBeatState
 					});
 				}
 			});
-			bgTextTween = FlxTween.tween(bgTextTween, {alpha: 0.5}, 0.3, {
+			bgTextTween = FlxTween.tween(descBox, {alpha: 0.5}, 0.3, {
 				ease: FlxEase.sineOut,
 				onComplete: function(twn:FlxTween)
 				{
-					bgTextTween = FlxTween.tween(bgTextTween, {alpha: 0}, 0.2, {
+					bgTextTween = FlxTween.tween(descBox, {alpha: 0}, 0.2, {
 						startDelay: 2.5,
 						onComplete: function(twn:FlxTween)
 						{
@@ -605,8 +607,6 @@ class FreeplayState extends MusicBeatState
 				}
 			});
 		}
-		descBox.setGraphicSize(Std.int(descText.width + 20), Std.int(descText.height + 25));
-		descBox.updateHitbox();
 	}
 
 	function changeDiff(change:Int = 0)
@@ -682,9 +682,9 @@ class FreeplayState extends MusicBeatState
 			}
 		});
 
-		if (OpenFLAssets.exists(Paths.getPath('images/freeplaymenu/albums/' + songs[curSelected].album + '.png', IMAGE), IMAGE))
+		if (Paths.fileExists('images/freeplaymenu/albums/${songs[curSelected].album}.png', IMAGE))
 		{
-			if (curSelected > 3 && !lockStuff[curSelected - 4][1])
+			if (curSelected > 3 && !lockStuff[curSelected - 4][2])
 				album.loadGraphic(Paths.image('freeplaymenu/albums/locked'));
 			else
 				album.loadGraphic(Paths.image('freeplaymenu/albums/' + songs[curSelected].album));

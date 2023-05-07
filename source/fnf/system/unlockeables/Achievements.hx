@@ -5,10 +5,10 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.group.FlxSpriteGroup;
 import flixel.text.FlxText;
-import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxSave;
+import openfl.OpenFLAssets;
 
 using StringTools;
 
@@ -33,12 +33,22 @@ class Achievements
 
 	public static function unlockAchievement(name:String):Void
 	{
-		FlxG.log.add('Completed achievement "' + name + '"');
+		FlxG.log.add('Completed achievement "$name"');
 		achievementsMap.set(name, true);
 		if (name == 'good_taste')
 			FlxG.sound.play(Paths.sound('secretSound'), 0.7);
 		else
 			FlxG.sound.play(Paths.sound('awardMenu'), 0.7);
+	}
+
+	public static function getAchievementImage(name:String):flixel.graphics.FlxGraphic
+	{
+		var image:flixel.graphics.FlxGraphic = Paths.image('achievements/placeholder');
+		if (Paths.fileExists('images/achievements/$name.png', IMAGE))
+		{
+			image = Paths.image('achievements/$name');
+		}
+		return image;
 	}
 
 	public static function isAchievementUnlocked(name:String)
@@ -107,7 +117,9 @@ class AttachedAchievement extends FlxSprite
 	public function reloadAchievementImage()
 	{
 		if (Achievements.isAchievementUnlocked(tag))
-			loadGraphic(Paths.image('achievements/' + tag));
+		{
+			loadGraphic(Achievements.getAchievementImage(tag));
+		}
 		else
 			loadGraphic(Paths.image('achievements/lockedachievement'));
 
@@ -137,11 +149,7 @@ class AchievementObject extends FlxSpriteGroup
 
 		var id:Int = Achievements.getAchievementIndex(name);
 
-		var bgOutline:FlxSprite = new FlxSprite(0, 0).makeGraphic(420, 120, FlxColor.RED);
-		bgOutline.screenCenter(X);
-		bgOutline.scrollFactor.set();
-
-		var achievementBG:FlxSprite = new FlxSprite(bgOutline.x + 10, bgOutline.y + 10).makeGraphic(400, 100, FlxColor.BLACK);
+		var achievementBG:FlxSprite = new FlxSprite(0, 0).makeGraphic(400, 100, FlxColor.BLACK);
 		achievementBG.scrollFactor.set();
 
 		var achievementName:FlxText = new FlxText(achievementBG.x + 20, achievementBG.y + 26, 280, Language.achievements[id].name, 16);
@@ -152,14 +160,13 @@ class AchievementObject extends FlxSpriteGroup
 		achievementText.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT);
 		achievementText.scrollFactor.set();
 
-		var achievementIcon:FlxSprite = new FlxSprite(0, achievementBG.y).loadGraphic(Paths.image('achievements/' + name));
+		var achievementIcon:FlxSprite = new FlxSprite(0, achievementBG.y).loadGraphic(Achievements.getAchievementImage(name));
 		achievementIcon.scrollFactor.set();
 		achievementIcon.setGraphicSize(Std.int(achievementIcon.width * (2 / 3)));
 		achievementIcon.x = achievementBG.x + achievementBG.width - achievementIcon.width;
 		achievementIcon.updateHitbox();
 		achievementIcon.antialiasing = ClientPrefs.globalAntialiasing;
 
-		add(bgOutline);
 		add(achievementBG);
 		add(achievementName);
 		add(achievementText);
@@ -171,6 +178,7 @@ class AchievementObject extends FlxSpriteGroup
 			cam = [camera];
 		}
 		y -= 120;
+		x = FlxG.width / 2 - width / 2;
 		alpha = 0;
 		achievementBG.cameras = cam;
 		achievementName.cameras = cam;

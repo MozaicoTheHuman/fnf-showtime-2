@@ -102,7 +102,6 @@ class Main extends Sprite
 		#end
 		FlxG.signals.postStateSwitch.add(function()
 		{
-			trace("Running garbage colector");
 			MemoryManagement.garbageColectorMinor();
 			MemoryManagement.garbageColectorMajor();
 			MemoryManagement.garbageColectorMinor();

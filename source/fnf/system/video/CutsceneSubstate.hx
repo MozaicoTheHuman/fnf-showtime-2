@@ -39,7 +39,6 @@ class CutsceneSubstate extends MusicBeatSubstate
 	var subs:Array<SubtitleStructure> = [];
 	var subsAlreadyShowed:Array<Float> = [];
 
-	var subBG:FlxSprite;
 	var subText:FlxText;
 	var subDiscard:FlxSprite;
 	var head:FlxSprite;
@@ -72,7 +71,7 @@ class CutsceneSubstate extends MusicBeatSubstate
 		FlxG.cameras.add(uiCamera, false);
 
 		// VIDEO
-		spriteOut = new FlxSprite();
+		spriteOut = new FlxSprite().makeGraphic(1, 1, FlxColor.TRANSPARENT);
 		spriteOut.cameras = [videoCamera];
 		spriteOut.antialiasing = ClientPrefs.globalAntialiasing;
 		add(spriteOut);
@@ -94,15 +93,8 @@ class CutsceneSubstate extends MusicBeatSubstate
 		if (ClientPrefs.language == "English" && subsPath != null)
 		{
 			loadSubtitles();
-			subBG = new FlxSprite().makeGraphic(1, 1, FlxColor.BLACK);
-			subBG.alpha = 0;
-			subBG.scale.set(0.8, 0.8);
-			subBG.scrollFactor.set();
-			subBG.cameras = [uiCamera];
-			add(subBG);
-
 			subText = new FlxText(50, 600, 1180, "", 32);
-			subText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			subText.setFormat(Paths.font("arial.ttf"), 32, FlxColor.YELLOW, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			subText.scrollFactor.set();
 			subText.borderSize = 2.4;
 			subText.cameras = [uiCamera];
@@ -150,7 +142,7 @@ class CutsceneSubstate extends MusicBeatSubstate
 					if (!paused)
 					{
 						video.pause();
-						skipTweem = FlxTween.tween(skip, {y: 20}, 0.5, {ease: FlxEase.cubeIn});
+						skipTweem = FlxTween.tween(skip, {y: 20}, 0.5, {ease: FlxEase.cubeOut});
 					}
 					else
 					{
@@ -170,13 +162,6 @@ class CutsceneSubstate extends MusicBeatSubstate
 		subText.text = text;
 		subText.screenCenter(Y);
 		subText.y += 270;
-
-		if (subBG.alpha == 0)
-			FlxTween.tween(subBG, {alpha: 0.5}, 0.25, {ease: FlxEase.quadIn});
-
-		subBG.setPosition(subText.x - 10, subText.y - 10);
-		subBG.setGraphicSize(Std.int(subText.width + 20), Std.int(subText.height + 25));
-		subBG.updateHitbox();
 	}
 
 	function itsTime(check:Float):Bool

@@ -20,7 +20,7 @@ class UnlockObject extends FlxSpriteGroup
 		super(x, y);
 		ClientPrefs.saveSettings();
 
-		bg = new FlxSprite(1280, 167.5).loadGraphic(Paths.image('songUnlocked'));
+		bg = new FlxSprite(1280, 167.5).loadGraphic(Paths.image('songunlock/bg'));
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 
 		songIcon = new FlxSprite(20, 20).loadGraphic(Paths.image('songunlock/albums/$name'));

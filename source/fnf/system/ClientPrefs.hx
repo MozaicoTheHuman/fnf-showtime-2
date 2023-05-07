@@ -39,8 +39,11 @@ class ClientPrefs
 
 	// Graphics
 	public static var resList:Array<Dynamic> = [
-		["640x360", 640, 360], ["768x432", 768, 432], ["896x504", 896, 504], ["1024x576", 1024, 576], ["1152x648", 1152, 648], ["1280x720", 1280, 720],
-		["1366x768", 1366, 768], ["1600x900", 1600, 900], ["1920x1080", 1920, 1080], ["2560x1440", 2560, 1440], ["3840x2160", 3840, 2160], ["Full Screen"]];
+		  ["640x360", 640, 360],   ["768x432", 768, 432],     ["896x504", 896, 504],   ["1024x576", 1024, 576],   ["1152x648", 1152, 648],
+		["1280x720", 1280, 720],
+		["1366x768", 1366, 768], ["1600x900", 1600, 900], ["1920x1080", 1920, 1080], ["2560x1440", 2560, 1440], ["3840x2160", 3840, 2160],
+		        ["Full Screen"]
+	];
 	public static var resolution:String = "1280x720";
 	public static var framerate:Int = 60;
 	public static var showFPS:Bool = true;
@@ -106,10 +109,8 @@ class ClientPrefs
 		// Note Offset
 		save.data.noteOffset = noteOffset;
 		save.data.comboOffset = comboOffset;
-
-		// Save
+		save.flush();
 		FlxG.save.flush();
-		FlxG.log.add("Achievements, Controls, Settings and Note Offsets saved!");
 	}
 
 	public static function loadPrefs()

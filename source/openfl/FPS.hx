@@ -1,5 +1,6 @@
 package openfl;
 
+import flixel.FlxG;
 import flixel.math.FlxMath;
 import fnf.system.ClientPrefs;
 import openfl.events.Event;
@@ -30,6 +31,8 @@ class FPS extends TextField
 		The current frame rate, expressed using frames-per-second
 	**/
 	public var currentFPS(default, null):Int;
+
+	public var memoryPeak:Float = 0;
 
 	@:noCompletion private var cacheCount:Int;
 	@:noCompletion private var currentTime:Float;
@@ -87,7 +90,10 @@ class FPS extends TextField
 
 			#if openfl
 			memoryMegas = Math.abs(FlxMath.roundDecimal(System.totalMemory / 1000000, 1));
+			if (memoryMegas > memoryPeak)
+				memoryPeak = memoryMegas;
 			text += "\nMemory: " + memoryMegas + " MB";
+			text += "\nMemory Peak: " + memoryPeak + " MB";
 			#end
 
 			textColor = 0xFFFFFFFF;
@@ -102,9 +108,21 @@ class FPS extends TextField
 			text += "\nstage3DDC: " + Context3DStats.contextDrawCalls(DrawCallContext.STAGE3D);
 			#end
 
-			text += "\n";
-		}
+			@:privateAccess {
+				var c:Int = 0;
+				for (_ in FlxG.bitmap._cache.keys())
+					c++;
 
-		cacheCount = currentCount;
+				text += '\nState: ${Type.getClassName(Type.getClass(FlxG.state))}';
+				text += '\nObject Count: ${FlxG.state.members.length}';
+				text += '\nCamera Count: ${FlxG.cameras.list.length}';
+				text += '\nBitmaps Count: ${c}';
+				text += '\nSounds Count: ${FlxG.sound.list.length}';
+				text += '\nFlxG.game Childs Count: ${FlxG.game.numChildren}';
+				text += "\n";
+			}
+
+			cacheCount = currentCount;
+		}
 	}
 }

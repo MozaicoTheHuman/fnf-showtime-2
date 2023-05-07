@@ -3,16 +3,20 @@ package fnf.system;
 import flixel.FlxBasic;
 import flixel.FlxG;
 import flixel.FlxState;
+import flixel.FlxSubState;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.addons.ui.FlxUIState;
 import flixel.tweens.FlxTween;
 import fnf.system.Conductor.BPMChangeEvent;
 import fnf.system.visuals.CustomFadeTransition;
+import openfl.MemoryManagement;
 
 class MusicBeatState extends FlxUIState
 {
 	private var lastBeat:Float = 0;
 	private var lastStep:Float = 0;
+
+	public var graphicCache:GraphicCacheSprite = new GraphicCacheSprite();
 
 	private var curStep:Int = 0;
 	private var curBeat:Int = 0;
@@ -125,5 +129,17 @@ class MusicBeatState extends FlxUIState
 	public function beatHit():Void
 	{
 		// do literally nothing dumbass
+	}
+
+	public override function destroy()
+	{
+		super.destroy();
+		graphicCache.destroy();
+	}
+
+	public override function draw()
+	{
+		graphicCache.draw();
+		super.draw();
 	}
 }

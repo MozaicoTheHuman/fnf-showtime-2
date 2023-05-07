@@ -195,11 +195,6 @@ class Paths
 		return getPath('videos/$key.mp4', BINARY, library);
 	}
 
-	inline static public function subs(key:String, language:String, ?library:String)
-	{
-		return getPath('videos/$key-$language.txt', TEXT, library);
-	}
-
 	static public function sound(key:String, ?library:String):Sound
 	{
 		var sound:Sound = returnSound('sounds', key, library);

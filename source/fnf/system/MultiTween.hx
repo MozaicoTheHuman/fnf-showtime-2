@@ -4,18 +4,13 @@ import flixel.tweens.FlxTween;
 
 class MultiTween
 {
+	static var ultraTween:FlxTween;
+
 	public static function tween(twns:Array<Dynamic>, vals:Dynamic, time:Float, ?option:TweenOptions)
 	{
 		for (t in 0...twns.length)
 		{
-			if (vals.alpha == 0)
-			{
-				option.onComplete = function(twn:FlxTween)
-				{
-					twns[t].kill();
-				};
-			}
-			FlxTween.tween(twns[t], vals, time, option);
+			ultraTween = FlxTween.tween(twns[t], vals, time, option);
 		}
 	}
 
@@ -40,9 +35,9 @@ class MultiTween
 		{
 			if (X.length > 1)
 			{
-				FlxTween.tween(twns[t], {x: X[t]}, time, option);
+				ultraTween = FlxTween.tween(twns[t], {x: X[t]}, time, option);
 			}
-			FlxTween.tween(twns[t], {x: X[0]}, time, option);
+			ultraTween = FlxTween.tween(twns[t], {x: X[0]}, time, option);
 		}
 	}
 }

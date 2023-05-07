@@ -1,6 +1,7 @@
 package openfl;
 
 import lime.app.Future;
+import openfl.OptimizedBitmapData;
 import openfl.display.BitmapData;
 import openfl.display.MovieClip;
 import openfl.display.Sprite;
@@ -40,6 +41,11 @@ import lime.media.vorbis.VorbisFile;
 	and specifying a custom preloader using <window preloader="" />
 	in the project file.
 **/
+/*
+ *	This code is from Codename Engine
+ *	
+ *	The Repo Link is: https://github.com/FNF-CNE-Devs/CodenameEngine
+ */
 #if !openfl_debug
 @:fileXml('tags="haxe,release"')
 @:noDebug
@@ -116,7 +122,15 @@ class OpenFLAssets
 			var bitmapData = image.src;
 			#else
 			var bitmapData:BitmapData = null;
-			bitmapData = BitmapData.fromImage(image);
+			if (pushToGPU)
+			{
+				bitmapData = new OptimizedBitmapData(0, 0, true, 0);
+				bitmapData.__fromImage(image);
+			}
+			else
+			{
+				bitmapData = BitmapData.fromImage(image);
+			}
 			#end
 
 			if (useCache && cache.enabled)
@@ -499,7 +513,8 @@ class OpenFLAssets
 				var bitmapData = image.src;
 				#else
 				var bitmapData:BitmapData = null;
-				bitmapData = BitmapData.fromImage(image);
+				bitmapData = new OptimizedBitmapData(0, 0, true, 0);
+				bitmapData.__fromImage(image);
 				#end
 
 				if (useCache && cache.enabled)

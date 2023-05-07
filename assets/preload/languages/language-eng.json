@@ -1,16 +1,13 @@
 {
 	"achievements":[{
 			"name": "Great Show",
-			"description": "Beat the Week on Hard with 90% of acurracy",
-			"unlockguide": "Complete 'Great Show' achievement \nto unlock this song"
+			"description": "Beat the Week on Hard with 90% of acurracy"
 		},{
 			"name": "Damn Expert",
-			"description": "Beat the song Showtime with no misses",
-			"unlockguide": "Complete 'Damn Expert' achievement \nto unlock this song"
+			"description": "Beat the song Showtime without being stunned"
 		},{
 			"name": "Detective",
-			"description": "Put the secret code on debug mode. \nHint: Fighting Game Engine, Maavo's first Appearance, Ronald McDonald.",
-			"unlockguide": "Complete 'Detective' achievement \nto unlock this song"
+			"description": "Put the secret code on debug mode. \nHint: Fighting Game Engine, Maavo's first Appearance, Ronald McDonald."
 		},{
 			"name": "Perfect Round",
 			"description": "Beat the song kfm.mid with no misses"
@@ -22,8 +19,7 @@
 			"description": "Die 10 times in total"
 		},{
 			"name": "YAAAY I WON!",
-			"description": "Die on 'Lovely'",
-			"unlockguide": "Complete 'YAAAY I WON!' achievement \nto unlock this song"
+			"description": "Die on 'Lovely'"
 		},{
 			"name": "Perfeccionist",
 			"description": "Beat all the songs on Hard with no misses"

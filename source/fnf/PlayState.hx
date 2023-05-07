@@ -274,6 +274,8 @@ class PlayState extends MusicBeatState
 
 	public static var goTo:String = null;
 
+	var timesStunned:Int = 0;
+
 	override public function create()
 	{
 		goTo = null;
@@ -390,26 +392,25 @@ class PlayState extends MusicBeatState
 				var stage:BGSprite = new BGSprite('show/bg', -1300, -750);
 				add(stage);
 
-				var changes:Array<String> = ["Lovely", "Wannabe", "Finale"];
-
 				if (!ClientPrefs.lowQuality)
 				{
+					var changes:Array<String> = ["Lovely", "Wannabe", "Finale"];
 					for (i in 0...changes.length)
 					{
 						if (changes[i] == SONG.song)
 						{
-							if (i != 1)
+							if (changes[i] != "Wannabe")
 							{
-								if (i == 0)
+								if (changes[i] == "Lovely") // Lovely Maavo
 									maavoBopper = new BGSprite('show/MaavoWait', -159, 60, 1, 1, ['MaavoWait']);
-								else
+								else // Finale Maavo
 									maavoBopper = new BGSprite('show/MaavoFINALE', -600, 60, 1, 1, ['FinaleIDLE']);
 
 								maavoBopper.updateHitbox();
 								maavoBopper.antialiasing = ClientPrefs.globalAntialiasing;
 								add(maavoBopper);
 							}
-							if (i < 2)
+							if (changes[i] != "Finale")
 							{
 								var ivette:FlxSprite = new FlxSprite(-600, 205);
 								ivette.frames = Paths.getSparrowAtlas('show/IvetteWait');
@@ -535,21 +536,14 @@ class PlayState extends MusicBeatState
 
 		add(gfGroup);
 
-		if (!ClientPrefs.lowQuality && curStage == 'show')
+		if (!ClientPrefs.lowQuality && curStage == 'show' && (SONG.song == "Wannabe" || SONG.song == "Finale"))
 		{
-			var changes:Array<String> = ["Wannabe", "Finale"];
-			for (i in 0...changes.length)
-			{
-				if (changes[i] == SONG.song && i > 0)
-				{
-					if (i == 0)
-						maritzaDancer = new BGDancer(-260, 310);
-					else
-						maritzaDancer = new BGDancer(428, 310);
+			if (SONG.song == "Wannabe") // Wannabe Maritza
+				maritzaDancer = new BGDancer(-260, 310);
+			else // Finale Maritza
+				maritzaDancer = new BGDancer(428, 310);
 
-					add(maritzaDancer);
-				}
-			}
+			add(maritzaDancer);
 		}
 
 		// Shitty layering but whatev it works LOL
@@ -1812,11 +1806,9 @@ class PlayState extends MusicBeatState
 		{
 			var mult:Float = FlxMath.lerp(1, iconP1.scale.x, CoolUtil.boundTo(1 - (elapsed * 9), 0, 1));
 			iconP1.scale.set(mult, mult);
-			iconP1.updateHitbox();
 
 			var mult:Float = FlxMath.lerp(1, iconP2.scale.x, CoolUtil.boundTo(1 - (elapsed * 9), 0, 1));
 			iconP2.scale.set(mult, mult);
-			iconP2.updateHitbox();
 		}
 
 		var iconOffset:Int = 26;
@@ -2807,8 +2799,8 @@ class PlayState extends MusicBeatState
 					percent = 0;
 				Highscore.saveScore(SONG.song, songScore, storyDifficulty, percent, songMisses);
 				trace('Song Accuracy: ' + Highscore.floorDecimal(percent * 100, 2));
-				trace('Song Score: ' + songScore);
-				trace('Song Misses: ' + songMisses);
+				trace('Song Score: $songScore');
+				trace('Song Misses: $songMisses');
 				#end
 			}
 
@@ -2818,9 +2810,9 @@ class PlayState extends MusicBeatState
 				campaignScore += songScore;
 				campaignMisses += songMisses;
 
-				trace('Week Accuracy: ' + Highscore.floorDecimal(campaignPercent * 100, 2));
-				trace('Week Score: ' + Highscore.floorDecimal(campaignScore * 100, 2));
-				trace('Week Misses: ' + Highscore.floorDecimal(campaignMisses * 100, 2));
+				trace('Week Accuracy: ' + Highscore.floorDecimal(campaignPercent * 100, storyDifficulty));
+				trace('Week Score: $campaignScore');
+				trace('Week Misses: $songMisses');
 
 				storyPlaylist.remove(storyPlaylist[0]);
 
@@ -3425,6 +3417,7 @@ class PlayState extends MusicBeatState
 
 					case 'stun note': // Stun note
 						{
+							timesStunned++;
 							triggerEventNote('Screen Shake', '0.2,0.01', '');
 							FlxG.sound.play(Paths.sound('stunsound'), 1);
 							boyfriend.playAnim('stun', true);
@@ -3523,47 +3516,42 @@ class PlayState extends MusicBeatState
 							vfx.animation.play('punch', true);
 					}
 				}
-				if (note.noteType == 'GF Sing')
-				{
-					gf.playAnim(animToPlay + daAlt, true);
-					gf.holdTimer = 0;
-				}
-				else if (note.noteType == 'MainAndSecondCharacter')
-				{
-					boyfriend.playAnim(animToPlay + daAlt, true);
-					boyfriend.holdTimer = 0;
-					if (SONG.song.toLowerCase() == 'light-on')
-					{
-						boyfriend2.playAnim(animToPlay + daAlt, true);
-						boyfriend2.holdTimer = 0;
-					}
-				}
-				else
-				{
-					boyfriend.playAnim(animToPlay + daAlt, true);
-					boyfriend.holdTimer = 0;
-				}
 
-				if (note.noteType == 'Hey!')
+				switch (note.noteType)
 				{
-					if (boyfriend.animOffsets.exists('hey'))
-					{
-						boyfriend.playAnim('hey', true);
-						boyfriend.specialAnim = true;
-						boyfriend.heyTimer = 0.6;
-					}
+					case 'Hey':
+						if (boyfriend.animOffsets.exists('hey'))
+						{
+							boyfriend.playAnim('hey', true);
+							boyfriend.specialAnim = true;
+							boyfriend.heyTimer = 0.6;
+						}
 
-					if (gf.animOffsets.exists('cheer'))
-					{
-						gf.playAnim('cheer', true);
-						gf.specialAnim = true;
-						gf.heyTimer = 0.6;
-					}
+						if (gf.animOffsets.exists('cheer'))
+						{
+							gf.playAnim('cheer', true);
+							gf.specialAnim = true;
+							gf.heyTimer = 0.6;
+						}
+					case 'GF Sing':
+						gf.playAnim(animToPlay + daAlt, true);
+						gf.holdTimer = 0;
+					case 'MainAndSecondCharacter':
+						boyfriend.playAnim(animToPlay + daAlt, true);
+						boyfriend.holdTimer = 0;
+						if (SONG.song.toLowerCase() == 'light-on')
+						{
+							boyfriend2.playAnim(animToPlay + daAlt, true);
+							boyfriend2.holdTimer = 0;
+						}
+					default:
+						boyfriend.playAnim(animToPlay + daAlt, true);
+						boyfriend.holdTimer = 0;
 				}
 			}
 			else
 			{
-				if (SONG.song.toLowerCase() == 'light-on')
+				if (SONG.song.toLowerCase() == 'light-on' && note.noteType == 'SecondCharacter')
 				{
 					var animToPlay:String = '';
 					switch (Std.int(Math.abs(note.noteData)))
@@ -3577,12 +3565,8 @@ class PlayState extends MusicBeatState
 						case 3:
 							animToPlay = 'singRIGHT';
 					}
-					if (note.noteType == 'SecondCharacter')
-					{
-						trace(note.noteType);
-						boyfriend2.playAnim(animToPlay, true);
-						boyfriend2.holdTimer = 0;
-					}
+					boyfriend2.playAnim(animToPlay, true);
+					boyfriend2.holdTimer = 0;
 				}
 			}
 			if (cpuControlled)
@@ -3752,9 +3736,6 @@ class PlayState extends MusicBeatState
 		{
 			iconP1.scale.set(1.2, 1.2);
 			iconP2.scale.set(1.2, 1.2);
-
-			iconP1.updateHitbox();
-			iconP2.updateHitbox();
 		}
 
 		if (curBeat % gfSpeed == 0
@@ -3928,16 +3909,16 @@ class PlayState extends MusicBeatState
 			'mugen',
 			'Tokyo'
 		];
+		var allPerfect:Bool = false;
 		for (i in 0...songsNames.length)
 		{
-			if (Highscore.getMisses(songsNames[i], 2) > 0)
+			if (Highscore.songMisses.exists(songsNames[i]) && Highscore.getMisses(songsNames[i], 2) > 0)
 			{
-				trace('${songsNames[i]} is NOT perfect');
-				return false;
+				allPerfect = true;
 			}
+			trace('En ${songsNames[i]} tienes ${Highscore.getMisses(songsNames[i], 2)}');
 		}
-		trace("All is perfect");
-		return true;
+		return allPerfect;
 	}
 
 	private function checkForAchievement(achievesToCheck:Array<String> = null):String
@@ -3953,18 +3934,17 @@ class PlayState extends MusicBeatState
 				{
 					case 'great_show':
 						if (isStoryMode
-							&& (Highscore.floorDecimal(campaignPercent * 100,
-								2) / 4) >= 90.0
-								&& CoolUtil.difficultyString() == 'HARD'
-								&& storyPlaylist.length <= 1
-								&& WeekData.getWeekFileName() == ('showtime')
-								&& !changedDifficulty
-								&& !usedPractice)
+
+							&& CoolUtil.difficultyString() == 'HARD'
+							&& storyPlaylist.length <= 1
+							&& WeekData.getWeekFileName() == ('showtime')
+							&& !changedDifficulty
+							&& !usedPractice)
 						{
 							unlock = true;
 						}
 					case 'expert':
-						if (Paths.formatToSongPath(SONG.song) == 'showtime' && songMisses < 1 && !usedPractice)
+						if (Paths.formatToSongPath(SONG.song) == 'showtime' && timesStunned < 1 && !usedPractice)
 						{
 							unlock = true;
 						}

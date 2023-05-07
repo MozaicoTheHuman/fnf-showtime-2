@@ -9,6 +9,11 @@ import openfl.utils.AssetCache;
 import lime.utils.Assets as LimeAssets;
 #end
 
+/*
+ *	This code is from Codename Engine
+ *	
+ *	The Repo Link is: https://github.com/FNF-CNE-Devs/CodenameEngine
+ */
 class CacheManagement extends AssetCache
 {
 	public static var instance:CacheManagement;

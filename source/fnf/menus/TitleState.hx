@@ -54,13 +54,10 @@ class TitleState extends MusicBeatState
 		MemoryManagement.init();
 		CacheManagement.init();
 
-		FlxGraphic.defaultPersist = true;
 		FlxG.game.focusLostFramerate = 24;
-
 		FlxG.sound.muteKeys = muteKeys;
 		FlxG.sound.volumeDownKeys = volumeDownKeys;
 		FlxG.sound.volumeUpKeys = volumeUpKeys;
-
 		FlxG.mouse.visible = false;
 
 		PlayerSettings.init();
