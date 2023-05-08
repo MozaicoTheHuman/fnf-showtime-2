@@ -1,7 +1,7 @@
 {
 	"song": {
 		"sectionLengths": [],
-		"player1": "maavo-playable",
+		"player1": "maavo-light",
 		"notes": [
 			{
 				"sectionNotes": [],
@@ -6933,6 +6933,26 @@
 						"Play Animation",
 						"ponderingEnd",
 						"1"
+					],
+					[
+						245516.478779841,
+						0,
+						0
+					],
+					[
+						245516.478779841,
+						1,
+						0
+					],
+					[
+						245516.478779841,
+						2,
+						0
+					],
+					[
+						245507.824933687,
+						3,
+						0
 					]
 				],
 				"altAnim": false,
@@ -7014,6 +7034,42 @@
 			},
 			{
 				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"bpm": 145,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 145
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"bpm": 145,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 145
+			},
+			{
+				"lengthInSteps": 16,
 				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
@@ -7022,12 +7078,12 @@
 				"mustHitSection": true
 			}
 		],
-		"player2": "hanzo",
+		"player2": "hanzo2",
 		"player3": "nothing",
 		"song": "Pondering",
 		"needsVoices": true,
 		"sections": 0,
-		"stage": "ponderingmall",
+		"stage": "ponderingmall2",
 		"validScore": true,
 		"speed": 2.6,
 		"bpm": 145
