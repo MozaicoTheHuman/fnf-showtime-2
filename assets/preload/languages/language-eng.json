@@ -43,8 +43,8 @@
 		"Complete 'Detective' achievement \nto unlock this song",
 		"Complete 'YAAAY I WON!' achievement \nto unlock this song"
 	],
-	"credits":[{
-		"category": "SHOWTIME TEAM",
+	"credits":{
+		"categorys": ["SHOWTIME TEAM", "SPECIAL THANKS"],
 		"part":[
 			"",
 			"Director, Main Artist/Animator,\nCoder, Charter, Maavo VA,\nMaavo PDFMM+ Model Import",
@@ -87,16 +87,13 @@
 			"Light On chromatic scales",
 			"Tokyo Charter (Extreme Difficulty)",
 			"Maavo PDMM+ Model Import help",
-			""
-		]
-	},{
-		"category": "SPECIAL THANKS",
-		"part":[
+			"",
 			"Tokyo Teddy Bear album cover",
 			"kfm.mid album cover",
 			"For testing the mod's beta on stream",
 			"For bringing Chilean modders together\nto make the best mod ever <3",
 			"For voicing Ivette on past projects,\nand providing the samples for the FNF chromatic",
+			"For voicing Maritza on past projects,\nand providing the samples for the FNF chromatic",
 			"Original Tokyo Teddy Bear composer",
 			"Original Tokyo Teddy Bear UST file",
 			"Original creator of MUGEN Ronald McDonald",
@@ -104,7 +101,7 @@
 			"For introducing me to FNF modding",
 			"For being the best friend group ever <3"
 		]
-	}],
+	},
 	"options":[{
 			"name": "Controls",
 			"title": "Controls Settings",

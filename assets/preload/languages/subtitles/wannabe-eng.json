@@ -2,26 +2,18 @@
     "subtitles":[
         {
             "time": 5.542,
-            "speed": 1.0,
-            "character": "hanzo",
             "text": "What is love?"
         },
         {
             "time": 15.522,
-            "speed": 0.5,
-            "character": "hanzo",
             "text": "Baby dont hurt me."
         },
         {
             "time": 25.547,
-            "speed": 0.2,
-            "character": "maavo",
             "text": "Dont hurt me."
         },
         {
             "time": 35.742,
-            "speed": 2.0,
-            "character": "hanzo",
             "text": "No more."
         }
     ]

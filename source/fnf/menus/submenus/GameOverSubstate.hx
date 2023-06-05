@@ -39,17 +39,17 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	private var camAchievement:FlxCamera;
 
-	public static var characterName:String = 'bf';
-	public static var deathSoundName:String = 'fnf_loss_sfx';
-	public static var loopSoundName:String = 'gameOver';
-	public static var endSoundName:String = 'gameOverEnd';
+	public static var characterName:String;
+	public static var deathSoundName:String;
+	public static var loopSoundName:String;
+	public static var endSoundName:String;
 
-	function resetGameOver()
+	public static function setGameOver(char:String = 'bf', death:String = 'fnf_loss_sfx', loop:String = 'gameOver', end:String = 'gameOverEnd')
 	{
-		characterName = 'bf';
-		deathSoundName = 'fnf_loss_sfx';
-		loopSoundName = 'gameOver';
-		endSoundName = 'gameOverEnd';
+		characterName = char;
+		deathSoundName = death;
+		loopSoundName = loop;
+		endSoundName = end;
 	}
 
 	public function new(x:Float, y:Float, camX:Float, camY:Float, state:PlayState)
@@ -147,7 +147,6 @@ class GameOverSubstate extends MusicBeatSubstate
 			{
 				FlxTween.tween(extra, {alpha: 0}, 0.2, {ease: FlxEase.linear});
 			}
-			resetGameOver();
 		}
 
 		if (controls.BACK)
@@ -163,7 +162,6 @@ class GameOverSubstate extends MusicBeatSubstate
 
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			lePlayState.callOnLuas('onGameOverConfirm', [false]);
-			resetGameOver();
 		}
 
 		if (bf.animation.curAnim.name == 'firstDeath')

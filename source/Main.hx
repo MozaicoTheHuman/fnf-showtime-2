@@ -4,12 +4,12 @@ import flixel.FlxG;
 import flixel.FlxNewGame;
 import fnf.menus.TitleState;
 import fnf.system.ClientPrefs;
+import fnf.system.Paths;
 import haxe.CallStack;
 import haxe.io.Path;
 import lime.app.Application;
 import openfl.FPS;
 import openfl.Lib;
-import openfl.MemoryManagement;
 import openfl.display.Sprite;
 import openfl.display.StageScaleMode;
 import openfl.events.Event;
@@ -100,12 +100,7 @@ class Main extends Sprite
 		FlxG.autoPause = false;
 		FlxG.mouse.visible = false;
 		#end
-		FlxG.signals.postStateSwitch.add(function()
-		{
-			MemoryManagement.garbageColectorMinor();
-			MemoryManagement.garbageColectorMajor();
-			MemoryManagement.garbageColectorMinor();
-		});
+		FlxG.signals.postStateSwitch.add(Paths.runGc);
 		Lib.current.loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, onCrash);
 
 		#if desktop

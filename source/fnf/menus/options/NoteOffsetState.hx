@@ -99,7 +99,7 @@ class NoteOffsetState extends MusicBeatState
 		coolText.screenCenter();
 		coolText.x = FlxG.width * 0.35;
 
-		rating = new FlxSprite().loadGraphic(Paths.image('hud/default/sick'));
+		rating = new FlxSprite().loadGraphic(Paths.image('hud/sick'));
 		rating.cameras = [camHUD];
 		rating.setGraphicSize(Std.int(rating.width * 0.7));
 		rating.updateHitbox();
@@ -119,7 +119,7 @@ class NoteOffsetState extends MusicBeatState
 		var daLoop:Int = 0;
 		for (i in seperatedScore)
 		{
-			var numScore:FlxSprite = new FlxSprite(43 * daLoop).loadGraphic(Paths.image('hud/default/num' + i));
+			var numScore:FlxSprite = new FlxSprite(43 * daLoop).loadGraphic(Paths.image('hud/num' + i));
 			numScore.cameras = [camHUD];
 			numScore.setGraphicSize(Std.int(numScore.width * 0.5));
 			numScore.updateHitbox();
@@ -137,13 +137,13 @@ class NoteOffsetState extends MusicBeatState
 
 		// Note delay stuff
 
-		beatText = new Alphabet(0, 0, 'Beat Hit!', true);
+		beatText = new Alphabet(260, 0, 'Beat Hit!', true);
 		beatText.scaleX = 0.6;
 		beatText.scaleY = 0.6;
-		beatText.x += 260;
 		beatText.alpha = 0;
 		beatText.acceleration.y = 250;
 		beatText.visible = false;
+		beatText.cameras = [camHUD];
 		add(beatText);
 
 		timeTxt = new FlxText(0, 600, FlxG.width, "", 32);
@@ -191,7 +191,7 @@ class NoteOffsetState extends MusicBeatState
 		add(changeModeText);
 		updateMode();
 
-		var titleText:Alphabet = new Alphabet(0, -100, Language.options[4].title, true);
+		var titleText:Alphabet = new Alphabet(0, 260, Language.options[4].title, true);
 		titleText.scaleX = 0.6;
 		titleText.scaleY = 0.6;
 		titleText.alpha = 0.4;
@@ -440,7 +440,7 @@ class NoteOffsetState extends MusicBeatState
 	{
 		for (i in 0...4)
 		{
-			var text:FlxText = new FlxText(10, 200 + (i * 30), 0, '', 24);
+			var text:FlxText = new FlxText(10, 250 + (i * 30), 0, '', 24);
 			text.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			text.scrollFactor.set();
 			text.borderSize = 2;

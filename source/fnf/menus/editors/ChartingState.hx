@@ -94,6 +94,10 @@ class ChartingState extends MusicBeatState
 			"Sets GF head bopping speed,\nValue 1: 1 = Normal speed,\n2 = 1/2 speed, 4 = 1/4 speed etc.\nUsed on Fresh during the beatbox parts.\n\nWarning: Value must be integer!"
 		],
 		[
+			'Set Camera Zoom',
+			"Set camera Zoom value.\n\nValue 1: Zoom (If you type 0, it'll be 0.9)Value 2: Null, you can leave it\nin blank"
+		],
+		[
 			'Blammed Lights',
 			"Value 1: 0 = Turn off, 1 = Blue, 2 = Green,\n3 = Pink, 4 = Red, 5 = Orange, Anything else = Random."
 		],

@@ -13,7 +13,7 @@ typedef AchievementStructure =
 
 typedef CreditsStructure =
 {
-	var category:String;
+	var categorys:Array<String>;
 	var part:Array<String>;
 }
 
@@ -35,7 +35,7 @@ typedef LanguageData =
 {
 	var achievements:Array<AchievementStructure>;
 	var unlockguide:Array<String>;
-	var credits:Array<CreditsStructure>;
+	var credits:CreditsStructure;
 	var options:Array<OptionsMenuStructure>;
 	var cutscene:Array<String>;
 }
@@ -46,7 +46,10 @@ class Language
 	public static var languages:Array<Dynamic> = [['English', 'eng'], ['Spanish', 'esp']];
 	public static var achievements:Array<AchievementStructure> = [];
 	public static var unlockguide:Array<String> = [];
-	public static var credits:Array<CreditsStructure> = [];
+	public static var credits:CreditsStructure = {
+		categorys: [],
+		part: []
+	};
 	public static var options:Array<OptionsMenuStructure> = [];
 	public static var cutscene:Array<String> = [];
 

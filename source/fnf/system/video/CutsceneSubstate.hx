@@ -14,8 +14,6 @@ import openfl.OpenFLAssets;
 typedef SubtitleStructure =
 {
 	var time:Float;
-	var speed:Float;
-	var character:String;
 	var text:String;
 }
 
@@ -117,7 +115,7 @@ class CutsceneSubstate extends MusicBeatSubstate
 			{
 				if (itsTime(subs[i].time))
 				{
-					newSubtitle(subs[i].text, subs[i].character, subs[i].speed);
+					newSubtitle(subs[i].text);
 					subsAlreadyShowed.push(subs[i].time);
 				}
 			}
@@ -157,7 +155,7 @@ class CutsceneSubstate extends MusicBeatSubstate
 		}
 	}
 
-	function newSubtitle(text:String, char:String, sped:Float)
+	function newSubtitle(text:String)
 	{
 		subText.text = text;
 		subText.screenCenter(Y);

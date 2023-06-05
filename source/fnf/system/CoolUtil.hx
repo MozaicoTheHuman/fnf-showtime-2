@@ -1,6 +1,8 @@
 package fnf.system;
 
 import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.tweens.FlxTween;
 import lime.utils.AssetLibrary;
 import lime.utils.AssetManifest;
 import lime.utils.Assets as LimeAssets;
@@ -17,6 +19,25 @@ class CoolUtil
 {
 	// [Difficulty name, Chart file suffix]
 	public static var difficultyStuff:Array<Dynamic> = [['Easy', '-easy'], ['Normal', ''], ['Hard', '-hard'], ['Extreme', '-extreme']];
+
+	public static function resetSprite(spr:FlxSprite, x:Float, y:Float)
+	{
+		spr.reset(x, y);
+		spr.alpha = 1;
+		spr.visible = true;
+		spr.active = true;
+		spr.acceleration.set();
+		spr.drag.set();
+		spr.antialiasing = FlxSprite.defaultAntialiasing;
+		FlxTween.cancelTweensOf(spr);
+	}
+
+	public static inline function addZeros(str:String, num:Int)
+	{
+		while (str.length < num)
+			str = '0${str}';
+		return str;
+	}
 
 	public static function difficultyString():String
 	{

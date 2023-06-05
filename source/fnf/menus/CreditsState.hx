@@ -45,7 +45,7 @@ class CreditsState extends MusicBeatState
 
 	var offsetThing:Float = -75;
 
-	var isEasterEgg:Bool = false;
+	static var isEasterEgg:Bool = false;
 
 	override function create()
 	{
@@ -60,14 +60,10 @@ class CreditsState extends MusicBeatState
 		grpOptions = new FlxTypedGroup<Alphabet>();
 		add(grpOptions);
 
-		creditsDesc = Language.credits[0].part;
-		for (i in 0...Language.credits[1].part.length)
-		{
-			creditsDesc.push(Language.credits[0].part[i]);
-		}
+		creditsDesc = Language.credits.part;
 
 		var pisspoop:Array<Array<String>> = [
-			[Language.credits[0].category],
+			[Language.credits.categorys[0]],
 			['Mozaico', 'mozaico', '', 'https://youtube.com/@MozaicoTheHuman', 'FFDD33'],
 			['Derker Bluer', 'derki', '', 'https://youtube.com/@DerkerBluer', 'FFDD33'],
 			['Joan Atlas', 'joancitoatlantis', '', 'https://twitter.com/joan_atlas', 'FFDD33'],
@@ -168,7 +164,7 @@ class CreditsState extends MusicBeatState
 				'https://www.youtube.com/@AndresELLoquendero0',
 				'FFDD33'
 			],
-			[Language.credits[1].category],
+			[Language.credits.categorys[1]],
 			['ShaminBECA', 'nada', '', 'https://twitter.com/ShaminBECA', 'FFDD33'],
 			['InukoExo', 'nada', '', 'https://twitter.com/InukoExo', 'FFDD33'],
 			[
@@ -228,12 +224,12 @@ class CreditsState extends MusicBeatState
 		{
 			var isSelectable:Bool = !unselectableCheck(i);
 			var optionText:Alphabet = new Alphabet(FlxG.width / 2, 300, creditsStuff[i][0], !isSelectable);
+			optionText.screenCenter(X);
 			optionText.isMenuItem = true;
 			optionText.targetY = i;
 			optionText.changeX = false;
 			optionText.snapToPosition();
 			grpOptions.add(optionText);
-
 			if (isSelectable)
 			{
 				if (creditsStuff[i][5] != null)
@@ -249,6 +245,9 @@ class CreditsState extends MusicBeatState
 					iconArray.push(icon);
 					add(icon);
 				}
+
+				if (i == 20 && isEasterEgg)
+					iconArray[16].visible = false;
 
 				if (curSelected == -1)
 					curSelected = i;
@@ -280,16 +279,17 @@ class CreditsState extends MusicBeatState
 
 	var quitting:Bool = false;
 	var holdTime:Float = 0;
+	var lock:Bool = false;
 
 	override function update(elapsed:Float)
 	{
-		if (FlxG.sound.music.volume < 0.7 && !isEasterEgg)
+		if (FlxG.sound.music.volume < 0.7 && !lock)
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 
-		if (FlxG.sound.music.volume > 0 && isEasterEgg)
+		if (FlxG.sound.music.volume > 0 && lock)
 			FlxG.sound.music.volume -= 0.7 * FlxG.elapsed;
 
-		if (!quitting && !isEasterEgg)
+		if (!quitting && !lock)
 		{
 			if (creditsStuff.length > 1)
 			{
@@ -326,14 +326,10 @@ class CreditsState extends MusicBeatState
 
 			if (controls.ACCEPT)
 			{
-				if (curSelected == 20 && iconArray[19].alpha == 1)
-				{
-					changeDaWorld();
-				}
-				else if (curSelected != 20)
-				{
+				if (curSelected != 20)
 					CoolUtil.browserLoad(creditsStuff[curSelected][3]);
-				}
+				else if (!isEasterEgg)
+					changeDaWorld();
 			}
 			if (controls.BACK)
 			{
@@ -346,68 +342,37 @@ class CreditsState extends MusicBeatState
 				quitting = true;
 			}
 		}
-
-		for (item in grpOptions.members)
-		{
-			if (!item.bold)
-			{
-				var lerpVal:Float = CoolUtil.boundTo(elapsed * 12, 0, 1);
-				if (item.targetY == 0)
-				{
-					var lastX:Float = item.x;
-					item.screenCenter(X);
-					item.x = FlxMath.lerp(lastX, item.x - 70, lerpVal);
-				}
-				else
-				{
-					item.x = FlxMath.lerp(item.x, 200 + -40 * Math.abs(item.targetY), lerpVal);
-				}
-			}
-		}
 		super.update(elapsed);
 	}
 
 	// 0, 2, 4.5, 7.5, 10.5
 	function changeDaWorld()
 	{
-		isEasterEgg = true;
-
-		iconArray[19].loadGraphic(Paths.image('credits/' + creditsStuff[20][3]));
-		FlxG.sound.play(Paths.sound('goodbye'), 0.7);
-		FlxTween.color(bg, 1, bg.color, 0xFF000000, {
+		isEasterEgg = lock = true;
+		iconArray[16].loadGraphic(Paths.image('credits/estovademasiadodificilhermanosientaselibresdedispararlealapantalla'));
+		FlxG.sound.play(Paths.sound('easterEgg/goodbye'), 0.7);
+		FlxTween.color(bg, 1, bg.color, 0xFF252525, {
 			onComplete: function(twn:FlxTween)
 			{
-				FlxTween.tween(iconArray[19], {alpha: 0}, 3.5, {startDelay: 6.5});
-				FlxTween.color(bg, 3, bg.color, getCurrentBGColor(), {
-					startDelay: 9.5,
-					onComplete: function(twn:FlxTween)
-					{
-						isEasterEgg = false;
-					}
-				});
+				FlxTween.tween(iconArray[16], {alpha: 0}, 3.5, {startDelay: 6.5});
+				FlxTween.color(bg, 3, bg.color, getCurrentBGColor(), {startDelay: 9.5});
 			}
 		});
 
 		for (item in grpOptions.members)
 		{
-			if (!item.bold)
-			{
-				if (item.targetY != 0)
+			FlxTween.tween(item, {alpha: 0.2}, 1, {
+				onComplete: function(twn:FlxTween)
 				{
-					FlxTween.tween(item, {alpha: 0}, 1);
-					FlxTween.tween(item, {alpha: 1}, 3, {startDelay: 10.5});
-				}
-				else
-				{
-					FlxTween.tween(item, {alpha: 0}, 0.5, {
+					FlxTween.tween(item, {alpha: 1}, 3, {
+						startDelay: 9.5,
 						onComplete: function(twn:FlxTween)
 						{
-							item.bold = true;
-							FlxTween.tween(item, {alpha: 1}, 0.5);
+							lock = false;
 						}
 					});
 				}
-			}
+			});
 		}
 	}
 

@@ -3,6 +3,7 @@ package fnf.system.unlockeables;
 import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.graphics.FlxGraphic;
 import flixel.group.FlxSpriteGroup;
 import flixel.text.FlxText;
 import flixel.tweens.FlxTween;
@@ -35,6 +36,7 @@ class Achievements
 	{
 		FlxG.log.add('Completed achievement "$name"');
 		achievementsMap.set(name, true);
+		ClientPrefs.saveSettings();
 		if (name == 'good_taste')
 			FlxG.sound.play(Paths.sound('secretSound'), 0.7);
 		else
@@ -117,9 +119,7 @@ class AttachedAchievement extends FlxSprite
 	public function reloadAchievementImage()
 	{
 		if (Achievements.isAchievementUnlocked(tag))
-		{
 			loadGraphic(Achievements.getAchievementImage(tag));
-		}
 		else
 			loadGraphic(Paths.image('achievements/lockedachievement'));
 
@@ -156,14 +156,14 @@ class AchievementObject extends FlxSpriteGroup
 		achievementName.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT);
 		achievementName.scrollFactor.set();
 
-		var achievementText:FlxText = new FlxText(achievementName.x, achievementName.y + 32, 280, Language.achievements[id].description, 16);
+		var achievementText:FlxText = new FlxText(achievementName.x, achievementName.y + 28, 280, Language.achievements[id].description, 16);
 		achievementText.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT);
 		achievementText.scrollFactor.set();
 
 		var achievementIcon:FlxSprite = new FlxSprite(0, achievementBG.y).loadGraphic(Achievements.getAchievementImage(name));
 		achievementIcon.scrollFactor.set();
 		achievementIcon.setGraphicSize(Std.int(achievementIcon.width * (2 / 3)));
-		achievementIcon.x = achievementBG.x + achievementBG.width - achievementIcon.width;
+		achievementIcon.x = achievementBG.x + achievementBG.width - achievementIcon.width + 80;
 		achievementIcon.updateHitbox();
 		achievementIcon.antialiasing = ClientPrefs.globalAntialiasing;
 

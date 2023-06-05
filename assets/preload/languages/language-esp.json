@@ -43,8 +43,8 @@
 		"Completa el logro 'Detective' \npara desbloquear esta canción",
 		"Completa el logro 'WIII GANE!'\npara desbloquear esta canción"
 	],
-	"credits":[{
-		"category": "SHOWTIME TEAM",
+	"credits":{
+		"categorys": ["SHOWTIME TEAM", "GRACIAS ESPECIALES"],
 		"part":[
 			"",
 			"Director, artista y animador principal,\nprogramador, charter, actor de voz de Maavo, y\nPort de Maavo a Project Diva Megamix+",
@@ -87,16 +87,13 @@
 			"Creador de las escalas cromaticas en Light On",
 			"Charter de Tokyo (Dificultad Extrema)",
 			"Ayuda con el port de Maavo a \nProject Diva Megamix+",
-			""
-		]
-	},{
-		"category": "GRACIAS ESPECIALES",
-		"part":[
+			"",
 			"Portada de Tokyo Teddy Bear",	
 			"Portada de kfm.mid",			
 			"Por testear la Beta del mod en stream",
 			"Por unir a la comunidad chilena\npara hacer el mejor mod <3",
 			"Por dar voz a Ivette en proyectos pasados\ny aportar para las cromaticas de ivette",
+			"Por dar voz a Maritza en proyectos pasados\ny aportar para las cromaticas de ivette",
 			"Compositor original de Tokyo Teddy Bear",
 			"Creador del archivo UST de Tokyo Teddy Bear",
 			"Creador original de Ronald McDonald MUGEN",
@@ -104,7 +101,7 @@
 			"Por introducirme al modding de FNF",
 			"Por ser el mejor grupo de todos <3"
 		]
-	}],
+	},
 	"options":[{
 			"name": "Controles",
 			"title": "Ajustes de Controles",

@@ -77,8 +77,8 @@ class FreeplayState extends MusicBeatState
 	var waveB2:FlxBackdrop;
 	var waveC2:FlxBackdrop;
 
-	var bgTextTween:FlxTween;
-	var textTween:FlxTween;
+	var bgTextTween:FlxTween = null;
+	var textTween:FlxTween = null;
 
 	private var camGame:FlxCamera;
 	var camFollow:FlxObject;
@@ -283,7 +283,7 @@ class FreeplayState extends MusicBeatState
 
 		diffText = new FlxSprite(870, 25);
 		diffText.loadGraphic(Paths.image('freeplaymenu/diffs'), true, 370, 45);
-		diffText.animation.add('diffficult', [2, 1, 0, 3], 0, false);
+		diffText.animation.add('diffficult', [0, 1, 2, 3], 0, false);
 		diffText.animation.play('diffficult');
 		diffText.scrollFactor.set();
 		add(diffText);
@@ -564,22 +564,14 @@ class FreeplayState extends MusicBeatState
 	function lockedScreen()
 	{
 		var newText:String = unlockGuide[curSelected - 4];
-		descText.alpha = 0;
-		descText.y = FlxG.height - descText.height - 135;
-		descBox.alpha = 0;
-		descBox.setGraphicSize(Std.int(descText.width + 20), Std.int(descText.height + 25));
-		descBox.updateHitbox();
-		if (newText != descText.text)
+		if (newText != descText.text || textTween == null)
 		{
 			descText.text = newText;
-			if (textTween != null)
-			{
-				textTween.cancel();
-			}
-			if (bgTextTween != null)
-			{
-				bgTextTween.cancel();
-			}
+			descText.alpha = 0;
+			descBox.alpha = 0;
+			descText.y = FlxG.height - descText.height - 135;
+			descBox.setGraphicSize(Std.int(descText.width + 20), Std.int(descText.height + 25));
+			descBox.updateHitbox();
 			textTween = FlxTween.tween(descText, {alpha: 1, y: descText.y + 75}, 0.3, {
 				ease: FlxEase.sineOut,
 				onComplete: function(twn:FlxTween)

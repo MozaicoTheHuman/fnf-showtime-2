@@ -2,18 +2,13 @@ package fnf.system;
 
 import flash.media.Sound;
 import flixel.FlxG;
-import flixel.FlxSprite;
 import flixel.graphics.FlxGraphic;
 import flixel.graphics.frames.FlxAtlasFrames;
-import flixel.graphics.frames.FlxFrame.FlxFrameAngle;
-import flixel.math.FlxPoint;
-import flixel.math.FlxRect;
 import haxe.Json;
-import haxe.xml.Access;
 import lime.utils.Assets;
+import openfl.MemoryManagement;
 import openfl.OpenFLAssets;
 import openfl.display.BitmapData;
-import openfl.geom.Rectangle;
 import openfl.system.System;
 import openfl.utils.AssetType;
 
@@ -415,6 +410,13 @@ class Paths
 		return currentTrackedSounds.get(gottenPath);
 	}
 
+	public static function runGc()
+	{
+		MemoryManagement.garbageColectorMinor();
+		MemoryManagement.garbageColectorMajor();
+		MemoryManagement.garbageColectorMinor();
+	}
+
 	#if MODS_ALLOWED
 	inline static public function mods(key:String = '')
 	{
@@ -456,19 +458,6 @@ class Paths
 		return modFolders('images/' + key + '.txt');
 	}
 
-	/* Goes unused for now
-
-		inline static public function modsShaderFragment(key:String, ?library:String)
-		{
-			return modFolders('shaders/'+key+'.frag');
-		}
-		inline static public function modsShaderVertex(key:String, ?library:String)
-		{
-			return modFolders('shaders/'+key+'.vert');
-		}
-		inline static public function modsAchievements(key:String) {
-			return modFolders('achievements/' + key + '.json');
-	}*/
 	static public function modFolders(key:String)
 	{
 		if (currentModDirectory != null && currentModDirectory.length > 0)

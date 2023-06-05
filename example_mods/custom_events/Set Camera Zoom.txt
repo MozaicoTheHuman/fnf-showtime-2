@@ -1,6 +1,0 @@
-Set camera Zoom value.
-
-Value 1: Zoom (If you type 0, it'll
-be 0.9)
-Value 2: Null, you can leave it
-in blank
