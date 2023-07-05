@@ -11,7 +11,7 @@ import flixel.group.FlxSpriteGroup;
 import flixel.math.FlxMath;
 import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
-import flixel.system.FlxSound;
+import flixel.sound.FlxSound;
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
@@ -1196,11 +1196,9 @@ class PlayState extends MusicBeatState
 					case 0:
 						FlxG.sound.play(Paths.sound(songUiFolder + introSounds[swagCounter]), 0.6);
 					case 1 | 2 | 3:
-						var id:Int = swagCounter - 1;
-						var spr:FlxSprite = new FlxSprite().loadGraphic(Paths.image('hud/${songUiFolder}${introSprites[id]}'));
+						var spr:FlxSprite = new FlxSprite().loadGraphic(Paths.image('hud/${songUiFolder}${introSprites[swagCounter]}'));
 						spr.scrollFactor.set();
 						spr.updateHitbox();
-
 						spr.screenCenter();
 						spr.antialiasing = ClientPrefs.globalAntialiasing;
 						add(spr);
