@@ -1,6 +1,6 @@
 function onCreate()
 
-    makeLuaSprite('darkbg','pondering/darkbg',-130 , -750);
+   /* makeLuaSprite('darkbg','pondering/darkbg',-130 , -750);
     addLuaSprite('darkbg',true);
 	setLuaSpriteScrollFactor('darkbg',0,0)
 	setProperty('darkbg.scale.x',999)
@@ -8,7 +8,7 @@ function onCreate()
 	setProperty('darkbg.alpha', 0)
 	setObjectOrder('gfGroup',4)	
 	setBlendMode('darkbg', 'multiply')	
-
+*/
     makeLuaSprite('ponderinglight','pondering/Showtime_mall_night_lights',-300, -985);
     addLuaSprite('ponderinglight',true);
 	setProperty('ponderinglight.scale.x',1.4)

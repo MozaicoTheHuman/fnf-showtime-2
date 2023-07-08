@@ -123,7 +123,7 @@ class AttachedAchievement extends FlxSprite
 		else
 			loadGraphic(Paths.image('achievements/lockedachievement'));
 
-		scale.set(0.7, 0.7);
+		scale.set(0.3, 0.3);
 		updateHitbox();
 	}
 

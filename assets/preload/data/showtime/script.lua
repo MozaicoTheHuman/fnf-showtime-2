@@ -64,7 +64,7 @@ function onCreate()
 	setLuaSpriteScrollFactor('black2',0, 0);
 	scaleObject('black2', 4, 2);	
 	
-	setObjectOrder('gfGroup',5)
+	setObjectOrder('gfGroup',4)
 	
 end
 

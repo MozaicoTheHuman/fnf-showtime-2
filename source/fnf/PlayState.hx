@@ -449,6 +449,18 @@ class PlayState extends MusicBeatState
 				mall.setGraphicSize(Std.int(mall.width * 1.4));
 				mall.updateHitbox();
 				add(mall);
+			case 'ponderingmall2': // Pondering
+				GameOverSubstate.setGameOver('maavo-playable', 'fnf_loss_maavo');
+
+                var bg:BGSprite = new BGSprite('mall/Showtime_mall_night_sky', -1400, -1385, 0.7, 0.7);
+                bg.setGraphicSize(Std.int(bg.width * 1.4));
+                bg.updateHitbox();
+                add(bg);
+
+                var bgEscalator:BGSprite = new BGSprite('mall/Showtime_mall_night_nose_pero_lo_del_stage', -1400, -1385, 1, 1);
+                bgEscalator.setGraphicSize(Std.int(bgEscalator.width * 1.4));
+                bgEscalator.updateHitbox();
+                add(bgEscalator);
 			case 'callejon': // Light On
 				GameOverSubstate.setGameOver('maavo-playableL-GAMEOVER', 'fnf_loss_maavomaritza', 'gameOverLightOn', 'gameOverLightOnEnd');
 
