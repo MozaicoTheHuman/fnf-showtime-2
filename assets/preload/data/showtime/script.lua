@@ -15,7 +15,7 @@ function onCreate()
 	setProperty('flash.visible', false)
 	addLuaSprite('flash', true)
 
-	makeAnimatedLuaSprite('redloop', 'mabosolo/sky-red', -150, -40)
+	makeAnimatedLuaSprite('redloop', 'show/sky-red', -150, -40)
 	addAnimationByPrefix('redloop', 'intro', 'intro', 56, false)
 	addAnimationByPrefix('redloop', 'loop', 'loop', 60, true)
 	objectPlayAnimation('redloop', 'intro', false)
@@ -44,9 +44,15 @@ function onCreate()
     addAnimationByPrefix('iv', '3', 'Derecha', 26, false)
 	addAnimationByPrefix('iv', 'showIdle', 'shuo', 24, true)
 	objectPlayAnimation('iv', 'idle')
-	addLuaSprite('iv', false); 
+	addLuaSprite('iv', false)
 	
-	setObjectOrder('gfGroup',3)
+	local gfPosition = 5
+	
+	if getPropertyFromClass(ClientPrefs, lowQuality) == true then
+		gfPosition = 3
+	end
+	
+	setObjectOrder('gfGroup', gfPosition)
 end
 
 function onBeatHit()

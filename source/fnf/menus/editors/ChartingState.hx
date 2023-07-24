@@ -129,6 +129,10 @@ class ChartingState extends MusicBeatState
 			"Value 1: Character to change (Dad, BF, GF)\nValue 2: New character's name"
 		],
 		[
+			'Update Health Bar',
+			"Value 1: New Health Bar Color\n Value 2: New Opponent Icon"
+		],
+		[
 			'Change Scroll Speed',
 			"ESTE EVENTO MULTIPLICA LA SCROLL SPEED\nNO LA SETEA\n\nValue 1: Scroll Speed Multiplier (1 is default)\nValue 2: Time it takes to change fully in seconds."
 		],

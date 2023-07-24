@@ -2536,7 +2536,6 @@ class PlayState extends MusicBeatState
 							boyfriend.visible = true;
 							iconP1.changeIcon(boyfriend.healthIcon);
 						}
-
 					case 1:
 						if (dad.curCharacter != value2)
 						{
@@ -2567,7 +2566,79 @@ class PlayState extends MusicBeatState
 							dad.visible = true;
 							iconP2.changeIcon(dad.healthIcon);
 						}
+					case 2:
+						if (gf.curCharacter != value2)
+						{
+							if (!gfMap.exists(value2))
+							{
+								addCharacterToList(value2, charType);
+							}
 
+							gf.visible = false;
+							gf = gfMap.get(value2);
+							if (!gf.alreadyLoaded)
+							{
+								gf.alpha = 1;
+								gf.alreadyLoaded = true;
+							}
+						}
+				}
+				reloadHealthBarColors();
+			case 'Update Health Bar':
+				var charType:Int = Std.parseInt(value1);
+				if (Math.isNaN(charType))
+					charType = 0;
+
+				switch (charType)
+				{
+					case 0:
+						if (boyfriend.curCharacter != value2)
+						{
+							if (!boyfriendMap.exists(value2))
+							{
+								addCharacterToList(value2, charType);
+							}
+
+							boyfriend.visible = false;
+							boyfriend = boyfriendMap.get(value2);
+							if (!boyfriend.alreadyLoaded)
+							{
+								boyfriend.alpha = 1;
+								boyfriend.alreadyLoaded = true;
+							}
+							boyfriend.visible = true;
+							iconP1.changeIcon(boyfriend.healthIcon);
+						}
+					case 1:
+						if (dad.curCharacter != value2)
+						{
+							if (!dadMap.exists(value2))
+							{
+								addCharacterToList(value2, charType);
+							}
+
+							var wasGf:Bool = dad.curCharacter.startsWith('gf');
+							dad.visible = false;
+							dad = dadMap.get(value2);
+							if (!dad.curCharacter.startsWith('gf'))
+							{
+								if (wasGf)
+								{
+									gf.visible = true;
+								}
+							}
+							else
+							{
+								gf.visible = false;
+							}
+							if (!dad.alreadyLoaded)
+							{
+								dad.alpha = 1;
+								dad.alreadyLoaded = true;
+							}
+							dad.visible = true;
+							iconP2.changeIcon(dad.healthIcon);
+						}
 					case 2:
 						if (gf.curCharacter != value2)
 						{
