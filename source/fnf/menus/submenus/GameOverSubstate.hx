@@ -62,20 +62,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		bf = new Boyfriend(x, y, characterName);
 		add(bf);
 
-		switch (PlayState.SONG.song.toLowerCase())
-		{
-			case "light-on":
-				extra.x = x - 700;
-				extra.y = bf.getGraphicMidpoint().y;
-			case "mugen":
-				extra.x = x - 150;
-				effectFloor.x = x - 300;
-				effectFloor.y = y + 210;
-				camFollow = new FlxPoint(650, 380);
-			default:
-				camFollow = new FlxPoint(bf.getGraphicMidpoint().x, bf.getGraphicMidpoint().y);
-		}
-
+		camFollow = new FlxPoint(bf.getGraphicMidpoint().x, bf.getGraphicMidpoint().y);
 		FlxG.sound.play(Paths.sound(deathSoundName));
 		Conductor.changeBPM(100);
 		// FlxG.camera.followLerp = 1;
@@ -84,8 +71,6 @@ class GameOverSubstate extends MusicBeatSubstate
 		FlxG.camera.target = null;
 
 		bf.playAnim('firstDeath');
-
-		var exclude:Array<Int> = [];
 
 		camFollowPos = new FlxObject(0, 0, 1, 1);
 		camFollowPos.setPosition(FlxG.camera.scroll.x + (FlxG.camera.width / 2), FlxG.camera.scroll.y + (FlxG.camera.height / 2));
@@ -98,34 +83,6 @@ class GameOverSubstate extends MusicBeatSubstate
 		camAchievement.bgColor.alpha = 0;
 
 		FlxG.cameras.add(camAchievement);
-
-		switch (PlayState.SONG.song.toLowerCase())
-		{
-			case "light-on":
-				extra = new FlxSprite(1300, 400);
-				extra.frames = Paths.getSparrowAtlas('lighton/victorydance', 'shared');
-				extra.animation.addByPrefix('victorydance', "el baile del troleo0169", 60);
-				extra.scale.set(3, 3);
-				extra.animation.play('victorydance');
-				add(extra);
-			case "mugen":
-				extra = new FlxSprite(1300, 400);
-				extra.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
-				extra.animation.addByPrefix('ko', "keiou", 60);
-				extra.animation.addByPrefix('continue', "continiu", 24, true);
-				extra.antialiasing = ClientPrefs.globalAntialiasing;
-				extra.scale.set(3, 3);
-				extra.animation.play("ko");
-				add(extra);
-
-				effectFloor = new FlxSprite(1300, 400);
-				effectFloor.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
-				effectFloor.animation.addByPrefix('waaa', "gameoverland", 60);
-				effectFloor.antialiasing = ClientPrefs.globalAntialiasing;
-				effectFloor.visible = false;
-				add(effectFloor);
-		}
-
 		super.create();
 	}
 
@@ -143,10 +100,6 @@ class GameOverSubstate extends MusicBeatSubstate
 		if (controls.ACCEPT)
 		{
 			endBullshit();
-			if (PlayState.SONG.song.toLowerCase() == "mugen")
-			{
-				FlxTween.tween(extra, {alpha: 0}, 0.2, {ease: FlxEase.linear});
-			}
 		}
 
 		if (controls.BACK)
@@ -166,46 +119,15 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		if (bf.animation.curAnim.name == 'firstDeath')
 		{
-			if (PlayState.SONG.song.toLowerCase() == "mugen")
+			if (bf.animation.curAnim.curFrame == 12)
 			{
-				switch (bf.animation.curAnim.curFrame)
-				{
-					case 4:
-						effectFloor.visible = true;
-						effectFloor.animation.play("waaa");
-					case 15:
-						effectFloor.visible = false;
-				}
-
-				new FlxTimer().start(0.5, function(tmr:FlxTimer)
-				{
-					FlxTween.tween(extra, {alpha: 0}, 0.5, {ease: FlxEase.linear});
-				});
-			}
-			else
-			{
-				if (bf.animation.curAnim.curFrame == 12)
-				{
-					FlxG.camera.follow(camFollowPos, LOCKON, 1);
-					updateCamera = true;
-				}
+				FlxG.camera.follow(camFollowPos, LOCKON, 1);
+				updateCamera = true;
 			}
 			if (bf.animation.curAnim.finished)
 			{
 				coolStartDeath();
 				bf.startedDeath = true;
-			}
-		}
-
-		if (bf.animation.curAnim.name == 'deathLoop')
-		{
-			if (PlayState.SONG.song.toLowerCase() == "light-on")
-			{
-				if (extra.alpha == 0)
-				{
-					FlxTween.tween(extra, {alpha: 1}, 0.5, {ease: FlxEase.linear});
-					FlxTween.tween(camFollow, {x: bf.x - 100}, 0.5, {ease: FlxEase.linear});
-				}
 			}
 		}
 

@@ -113,6 +113,8 @@ class Note extends FlxSprite
 					reloadNote('DRAW');
 					noteSplashTexture = 'DRAWNOTE_splashes';
 					hitCausesMiss = true;
+				case 'vfx note':
+					hitHealth = 0.1;
 				case 'No Animation':
 					noAnimation = true;
 			}

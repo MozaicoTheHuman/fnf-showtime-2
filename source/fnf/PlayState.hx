@@ -452,15 +452,15 @@ class PlayState extends MusicBeatState
 			case 'ponderingmall2': // Pondering
 				GameOverSubstate.setGameOver('maavo-playable', 'fnf_loss_maavo');
 
-                var bg:BGSprite = new BGSprite('mall/Showtime_mall_night_sky', -1400, -1385, 0.7, 0.7);
-                bg.setGraphicSize(Std.int(bg.width * 1.4));
-                bg.updateHitbox();
-                add(bg);
+				var bg:BGSprite = new BGSprite('mall/Showtime_mall_night_sky', -1400, -1385, 0.7, 0.7);
+				bg.setGraphicSize(Std.int(bg.width * 1.4));
+				bg.updateHitbox();
+				add(bg);
 
-                var bgEscalator:BGSprite = new BGSprite('mall/Showtime_mall_night_nose_pero_lo_del_stage', -1400, -1385, 1, 1);
-                bgEscalator.setGraphicSize(Std.int(bgEscalator.width * 1.4));
-                bgEscalator.updateHitbox();
-                add(bgEscalator);
+				var bgEscalator:BGSprite = new BGSprite('mall/Showtime_mall_night_nose_pero_lo_del_stage', -1400, -1385, 1, 1);
+				bgEscalator.setGraphicSize(Std.int(bgEscalator.width * 1.4));
+				bgEscalator.updateHitbox();
+				add(bgEscalator);
 			case 'callejon': // Light On
 				GameOverSubstate.setGameOver('maavo-playableL-GAMEOVER', 'fnf_loss_maavomaritza', 'gameOverLightOn', 'gameOverLightOnEnd');
 
@@ -900,16 +900,33 @@ class PlayState extends MusicBeatState
 		}
 		RecalculateRating();
 
+		// Intro Stuff
 		for (spr in introSprites)
 			if (spr != null)
 				graphicCache.cache(Paths.getPath('images/${songUiFolder}${spr}.png', IMAGE));
+
 		for (snd in introSounds)
 			if (snd != null)
 				FlxG.sound.load(Paths.sound(songUiFolder + snd));
-		for (i in 1...4)
-			FlxG.sound.load(Paths.sound('missnote' + Std.string(i)));
 
-		#if desktop
+		// Misses
+		for (i in 1...3)
+			FlxG.sound.load(Paths.sound('missnote${i}'));
+
+		// MUGEN HITSOUNDS
+		if (isMugen)
+		{
+			var mugenSounds:Array<String> = ['left', 'down', 'up', 'right'];
+			for (i in 0...mugenSounds.length)
+			{
+				FlxG.sound.load(Paths.sound('mugen/maavohit_' + mugenSounds[i]));
+				FlxG.sound.load(Paths.sound('mugen/ronaldhit_' + mugenSounds[i]));
+			}
+		}
+
+		FlxG.sound.load(Paths.sound('stunsound'));
+
+		#if desktopMUGEN
 		// Updating Discord Rich Presence.
 		DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 		#end
@@ -2058,6 +2075,8 @@ class PlayState extends MusicBeatState
 						}
 						if (daNote.noteType == 'vfx note' && isMugen)
 						{
+							health -= daNote.hitHealth;
+
 							vfxR.alpha = 1;
 							new FlxTimer().start(0.8, function(tmr:FlxTimer)
 							{
@@ -2070,18 +2089,22 @@ class PlayState extends MusicBeatState
 									vfxR.x = 1011;
 									vfxR.y = 449;
 									vfxR.animation.play('punchR', true);
+									FlxG.sound.play(Paths.sound('mugen/ronaldhit_left'), 1);
 								case 1:
 									vfxR.x = 1052;
 									vfxR.y = 730;
 									vfxR.animation.play('punchR', true);
+									FlxG.sound.play(Paths.sound('mugen/ronaldhit_down'), 1);
 								case 2:
 									vfxR.x = 590;
 									vfxR.y = -52;
 									vfxR.animation.play('punchR2', true);
+									FlxG.sound.play(Paths.sound('mugen/ronaldhit_up'), 1);
 								case 3:
 									vfxR.x = 889;
 									vfxR.y = 426;
 									vfxR.animation.play('punchR2', true);
+									FlxG.sound.play(Paths.sound('mugen/ronaldhit_right'), 1);
 							}
 						}
 						if (daNote.noteType == 'GF Sing')
@@ -2442,6 +2465,7 @@ class PlayState extends MusicBeatState
 			case 'Ronald Portrait':
 				if (isMugen)
 				{
+					FlxG.sound.play(Paths.sound('mugen/ronaldHYPER'), 1);
 					ronalportrait.alpha = 1;
 					ronalportrait.animation.play('clown');
 					FlxTween.tween(ronalportrait, {alpha: 0}, 0.5, {startDelay: 1.5});
@@ -2451,6 +2475,8 @@ class PlayState extends MusicBeatState
 				var value:Int = Std.parseInt(value1);
 				if (isMugen)
 				{
+					FlxG.sound.play(Paths.sound('mugen/maavoHYPER'), 1);
+
 					if (Math.isNaN(value))
 						value = 0;
 					switch (value)
@@ -3356,13 +3382,6 @@ class PlayState extends MusicBeatState
 
 				switch (note.noteType)
 				{
-					case 'Hurt Note': // Hurt note
-						if (boyfriend.animation.getByName('hurt') != null)
-						{
-							boyfriend.playAnim('hurt', true);
-							boyfriend.specialAnim = true;
-						}
-
 					case 'stun note': // Stun note
 						{
 							timesStunned++;
@@ -3440,29 +3459,32 @@ class PlayState extends MusicBeatState
 						vfx.alpha = 0;
 					});
 
-					switch (Math.abs(note.noteData))
+					var noteNum = Math.abs(note.noteData);
+
+					switch (noteNum)
 					{
 						case 0:
 							vfx.angle = 95;
 							vfx.x = 201;
 							vfx.y = 62;
-							vfx.animation.play('punch', true);
+							FlxG.sound.play(Paths.sound('mugen/maavohit_left'), 1);
 						case 1:
 							vfx.angle = 85;
 							vfx.x = 332;
 							vfx.y = 493;
-							vfx.animation.play('punch', true);
+							FlxG.sound.play(Paths.sound('mugen/maavohit_down'), 1);
 						case 2:
 							vfx.angle = 65;
 							vfx.x = 353;
 							vfx.y = -43;
-							vfx.animation.play('punch', true);
+							FlxG.sound.play(Paths.sound('mugen/maavohit_up'), 1);
 						case 3:
 							vfx.angle = 30;
 							vfx.x = 507;
 							vfx.y = 92;
-							vfx.animation.play('punch', true);
+							FlxG.sound.play(Paths.sound('mugen/maavohit_right'), 1);
 					}
+					vfx.animation.play('punch', true);
 				}
 
 				switch (note.noteType)
