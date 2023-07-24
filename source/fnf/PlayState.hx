@@ -2055,7 +2055,9 @@ class PlayState extends MusicBeatState
 
 						if (SONG.notes[Math.floor(curStep / 16)] != null)
 						{
-							if (SONG.notes[Math.floor(curStep / 16)].altAnim || daNote.noteType == 'Alt Animation' || daNote.noteType == 'vfx note')
+							if (SONG.notes[Math.floor(curStep / 16)].altAnim
+								|| daNote.noteType == 'Alt Animation'
+								|| daNote.noteType == 'vfx note')
 							{
 								altAnim = '-alt';
 							}
@@ -3435,7 +3437,7 @@ class PlayState extends MusicBeatState
 			if (!note.noAnimation)
 			{
 				var daAlt = '';
-				if (note.noteType == 'Alt Animation')
+				if (note.noteType == 'Alt Animation' || note.noteType == 'vfx note')
 					daAlt = '-alt';
 
 				var animToPlay:String = '';
