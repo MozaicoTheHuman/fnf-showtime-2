@@ -1,0 +1,177 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				-367
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "ronaldDOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-52,
+				-322
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "ronaldRIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-94,
+				-404
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "ronaldHYPER",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-139,
+				-218
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "ronaldIDLE"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				18,
+				-218
+			],
+			"anim": "intro1",
+			"fps": 24,
+			"name": "ronaldINTRO1",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-139,
+				-218
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "intro2",
+			"indices": [],
+			"name": "ronaldINTRO2"
+		},
+		{
+			"offsets": [
+				-94,
+				-374
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "ronaldLEFT"
+		},
+		{
+			"offsets": [
+				-137,
+				53
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "singUP",
+			"indices": [],
+			"name": "ronaldUP"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-117,
+				1300
+			],
+			"anim": "intro3",
+			"fps": 60,
+			"name": "ronaldINTRO3",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-60,
+				-207
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "ronaldALT_ARRIBA",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-33,
+				-328
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "ronaldALT_DERECHA",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-145,
+				-230
+			],
+			"loop": false,
+			"fps": 32,
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "ronaldALT_ABAJO"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-90,
+				-20
+			],
+			"anim": "preizquierda",
+			"fps": 24,
+			"name": "ronaldALT_PRE-IZQUIERDA",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-125,
+				-310
+			],
+			"indices": [],
+			"fps": 16,
+			"anim": "singRIGHT-alt",
+			"loop": false,
+			"name": "ronaldALT_IZQUIERDA"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/clown",
+	"position": [
+		220,
+		-105
+	],
+	"healthicon": "clown",
+	"flip_x": false,
+	"healthbar_colors": [
+		220,
+		0,
+		0
+	],
+	"camera_position": [
+		-460,
+		300
+	],
+	"sing_duration": 6.1,
+	"scale": 2.85
+}

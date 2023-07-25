@@ -21,3 +21,25 @@ function onTimerCompleted(tag, loops, loopsLeft)
 		startCountdown()
 	end
 end
+
+function onCreate()
+
+	makeAnimatedLuaSprite('ko', 'koscreen', 300, 180);
+	addAnimationByPrefix('ko', 'ko', 'ko', 60, false); 
+	objectPlayAnimation('ko', 'ko'); 
+	addLuaSprite('ko', false);	
+	setLuaSpriteScrollFactor('ko',0,0)	
+	setProperty('ko.alpha', 0)	
+	setProperty('ko.scale.x',3.4)
+	setProperty('ko.scale.y',3.4)
+	
+end	
+function onStepHit()
+	
+	if curStep == 1552 then
+		doTweenAlpha('ko','ko',255, 0.01)	
+		objectPlayAnimation('ko','ko',true)	;		
+        setProperty('camHUD.visible', false)	
+   	 end
+end
+
