@@ -1,0 +1,103 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				26,
+				-11
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Hanzo_left instancia 1"
+		},
+		{
+			"offsets": [
+				0,
+				-13
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Hanzo_right instancia 1"
+		},
+		{
+			"offsets": [
+				13,
+				33
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Hanzo_up instancia 1"
+		},
+		{
+			"offsets": [
+				6,
+				-106
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "HanzoDown instancia 1"
+		},
+		{
+			"offsets": [
+				0,
+				-13
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "ponderingEnd",
+			"indices": [
+				4,
+				5
+			],
+			"name": "Hanzo_right instancia 1"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "danceLeft",
+			"loop": false,
+			"name": "HanzoIdle instancia 1"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "danceRight",
+			"loop": false,
+			"name": "HanzoIdle instancia 1"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/HanzoReSprite",
+	"position": [
+		0,
+		110
+	],
+	"healthicon": "hanzo",
+	"flip_x": false,
+	"healthbar_colors": [
+		55,
+		55,
+		55
+	],
+	"camera_position": [
+		-70,
+		-130
+	],
+	"sing_duration": 6.5,
+	"scale": 1.3
+}

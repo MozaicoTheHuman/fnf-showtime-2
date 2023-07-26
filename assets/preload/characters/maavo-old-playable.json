@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				85,
+				159
+			],
+			"anim": "showtime",
+			"fps": 24,
+			"name": "Maavo HORA DEL DOU",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-36,
+				94
+			],
+			"anim": "singUP",
+			"fps": 25,
+			"name": "Maavo Sing Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				3,
+				107
+			],
+			"anim": "singDOWN",
+			"fps": 25,
+			"name": "Maavo Sing Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-50,
+				72
+			],
+			"anim": "idle",
+			"fps": 25,
+			"name": "Maavo idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				123,
+				117
+			],
+			"indices": [],
+			"fps": 25,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Maavo Sing Right"
+		},
+		{
+			"offsets": [
+				-23,
+				105
+			],
+			"indices": [],
+			"fps": 25,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Maavo Sing Left"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Maavo_old",
+	"position": [
+		40,
+		35
+	],
+	"healthicon": "maavo",
+	"flip_x": false,
+	"healthbar_colors": [
+		219,
+		40,
+		29
+	],
+	"camera_position": [
+		-120,
+		-230
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

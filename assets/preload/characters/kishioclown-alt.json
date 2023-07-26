@@ -148,18 +148,18 @@
 				-125,
 				-310
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 16,
 			"anim": "singRIGHT-alt",
-			"loop": false,
+			"indices": [],
 			"name": "ronaldALT_IZQUIERDA"
 		}
 	],
 	"no_antialiasing": true,
 	"image": "characters/clown",
 	"position": [
-		220,
-		-105
+		200,
+		15
 	],
 	"healthicon": "clown",
 	"flip_x": false,
@@ -169,8 +169,8 @@
 		0
 	],
 	"camera_position": [
-		-460,
-		300
+		-390,
+		-30
 	],
 	"sing_duration": 6.1,
 	"scale": 2.85

@@ -1,77 +1,110 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
-				238,
-				316
+				389,
+				7
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 25,
-			"name": "maritza_down",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				236,
-				316
-			],
 			"anim": "singUP",
-			"fps": 25,
-			"name": "maritza_up",
-			"indices": []
-		},
-		{
-			"offsets": [
-				0,
-				180
-			],
-			"loop": false,
-			"fps": 23,
-			"anim": "danceLeft",
 			"indices": [],
-			"name": "maritza_idle"
+			"name": "up"
+		},
+		{
+			"offsets": [
+				401,
+				10
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				391,
+				3
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "arriba"
+		},
+		{
+			"offsets": [
+				401,
+				10
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "abajo"
 		},
 		{
 			"loop": false,
 			"offsets": [
-				259,
-				316
+				368,
+				16
 			],
-			"anim": "singLEFT",
+			"anim": "singLEFTmiss",
 			"fps": 25,
-			"name": "maritza_right",
+			"name": "derecha",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				147,
-				316
+				413,
+				9
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 25,
+			"name": "izquierda",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				413,
+				9
 			],
 			"anim": "singRIGHT",
 			"fps": 25,
-			"name": "maritza_left",
+			"name": "left",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				0,
-				180
+				368,
+				16
 			],
-			"anim": "danceRight",
-			"fps": 23,
-			"name": "maritza_danceright",
+			"anim": "singLEFT",
+			"fps": 25,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				390,
+				2
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "danceleft",
 			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/Maritza",
+	"image": "characters/MaritzaPlayable",
 	"position": [
-		-300,
-		335
+		0,
+		0
 	],
 	"healthicon": "maritza",
 	"flip_x": false,
@@ -81,9 +114,9 @@
 		255
 	],
 	"camera_position": [
-		-100,
-		-220
+		310,
+		60
 	],
-	"sing_duration": 4,
+	"sing_duration": 6.1,
 	"scale": 1
 }

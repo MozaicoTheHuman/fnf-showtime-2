@@ -66,36 +66,18 @@ class CreditsState extends MusicBeatState
 			[Language.credits.categorys[0]],
 			['Mozaico', 'mozaico', '', 'https://youtube.com/@MozaicoTheHuman', 'FFDD33'],
 			['Derker Bluer', 'derki', '', 'https://youtube.com/@DerkerBluer', 'FFDD33'],
+			['Shey Pancake', 'panquesito', '', 'https://twitter.com/shey_pancake', 'FFDD33'],
 			['Joan Atlas', 'joancitoatlantis', '', 'https://twitter.com/joan_atlas', 'FFDD33'],
 			['Ejsu Multimedia', 'ejsu', '', 'https://youtube.com/@EjsuMultimedia', 'FFDD33'],
 			['Vtroy Jerof', 'vtroy', '', 'https://youtube.com/@VtroyJerof', 'FFDD33'],
-			[
-				'Soga Celeste',
-				'hanzo',
-				'',
-				'https://youtube.com/@SogaCeleste.-HanzoSantiago-',
-				'FFDD33'
-			],
+			['Soga Celeste', 'hanzo', '', 'https://youtube.com/@SogaCeleste.-HanzoSantiago-', 'FFDD33'],
 			['FlameMind', 'flamemind', '', 'https://twitter.com/flamemind10', 'FFDD33'],
 			['Gabriel ML', 'gabo', '', 'https://youtube.com/@gabrielml4925', 'FFDD33'],
-			['Krimson', 'krimson', '', 'https://youtube.com/@krimson7430', 'FFDD33'],
 			['Vzer', 'nada', '', 'https://youtube.com/@TheVzer', 'FFDD33'],
 			['NaxoAtWork', 'nada', '', 'https://youtube.com/@NaxoAtWork', 'FFDD33'],
-			['DIA', 'dia', 'UTAU Voicebanks', 'https://twitter.com/YanKitiCats', 'FFDD33'],
-			[
-				'Sandwich',
-				'sandwich',
-				'',
-				'https://rare-gallery.com/mocahbig/26506-Sandwich-4k-Ultra-HD-Wallpaper.jpg',
-				'FFDD33'
-			],
-			[
-				'Beru',
-				'beru',
-				'',
-				'https://pbs.twimg.com/media/FBgr01CWUAInM9Q?format=jpg&name=large',
-				'FFDD33'
-			],
+			['DIA', 'dia', 'UTAU Voicebanks', 'https://twitter.com/JEVILFILIA', 'FFDD33'],
+			['Sandwich', 'sandwich', 'Coder', 'https://rare-gallery.com/mocahbig/26506-Sandwich-4k-Ultra-HD-Wallpaper.jpg', 'FFDD33'],
+			['Beru', 'beru', '', 'https://pbs.twimg.com/media/FBgr01CWUAInM9Q?format=jpg&name=large', 'FFDD33'],
 			[
 				'YOUK',
 				'youkdev',
@@ -112,7 +94,7 @@ class CreditsState extends MusicBeatState
 				'FFDD33'
 			],
 			['SrPerez', 'penez', '', 'https://twitter.com/NewSrPerez/', 'FFDD33'],
-			['Stzr', 'nada', '', 'https://twitter.com/stzr_real', 'FFDD33'],
+			['Stzr', 'stzr', '', 'https://twitter.com/stzr_real', 'FFDD33'],
 			[
 				'ValEnd',
 				'elpepe',
@@ -120,6 +102,7 @@ class CreditsState extends MusicBeatState
 				'estovademasiadodificilhermanosientaselibresdedispararlealapantalla',
 				'FFFFFF'
 			],
+			['PointyyESM', 'pointi', '', 'https://twitter.com/PointyyESM', 'FFDD33'],
 			['EsoMarx', 'elchavoballistic', '', 'https://youtube.com/@esomarx3074', 'FFDD33'],
 			['Teeth', 'nada', '', 'https://twitter.com/teethlust', 'FFDD33'],
 			['Koi', 'nada', '', 'https://twitter.com/_Sir_Koi_', 'FFDD33'],
@@ -133,18 +116,17 @@ class CreditsState extends MusicBeatState
 				'FFDD33'
 			],
 			[
-				'TzenZoule',
+				'YokuTzen',
 				'tzen',
 				'',
 				'https://pbs.twimg.com/media/FBgr01CWUAInM9Q?format=jpg&name=large',
 				'FFDD33'
 			],
-			['Shey Pancake', 'sheicita', '', 'https://twitter.com/shey_pancake', 'FFDD33'],
 			[
-				'Cote',
-				'cote',
+				'Fufi',
+				'fufi',
 				'',
-				'https://cdn.discordapp.com/attachments/893308970213720065/1062570173489483786/maZmDeNx_400x400.jpg',
+				'https://mrfoofy.newgrounds.com/',
 				'FFDD33'
 			],
 			['TatoxicLG', 'nada', '', 'https://twitter.com/tatoxicLg', 'FFDD33'],
@@ -205,7 +187,6 @@ class CreditsState extends MusicBeatState
 				'http://web.archive.org/web/20140214203506/http://www1.bbiq.jp/gdgdgdgd/',
 				'FFDD33'
 			],
-			['PointyyESM', 'nada', '', 'https://twitter.com/PointyyESM', 'FFDD33'],
 			[
 				'Los Basuros',
 				'nada',

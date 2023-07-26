@@ -16,7 +16,7 @@
 			"description": "Pierde 3 veces seguidas"
 		},{
 			"name": "Literal no tienes manos",
-			"description": "Pierde 10 veces en total"
+			"description": "Pierde 10 veces seguidas"
 		},{
 			"name": "WIII GANE!",
 			"description": "Pierde en Lovely"
@@ -38,22 +38,22 @@
 		}
 	],
 	"unlockguide":[
-		"Completa el logro 'Gran Espectaculo' \npara desbloquear esta canción",
-		"Completa el logro 'Maldito Experto' \npara desbloquear esta canción",
-		"Completa el logro 'Detective' \npara desbloquear esta canción",
-		"Completa el logro 'WIII GANE!'\npara desbloquear esta canción"
+		"Completa el logro 'Gran Espectaculo' \npara desbloquear esta canción",	
+		"Completa el logro 'WIII GANE!'\npara desbloquear esta canción",
+		"Completa el logro 'Detective' \npara desbloquear esta canción",		
+		"Completa el logro 'Maldito Experto' \npara desbloquear esta canción"
 	],
 	"credits":{
 		"categorys": ["SHOWTIME TEAM", "GRACIAS ESPECIALES"],
 		"part":[
 			"",
 			"Director, artista y animador principal,\nprogramador, charter, actor de voz de Maavo, y\nPort de Maavo a Project Diva Megamix+",
+			"Musico, y quien me inspiro a empezar\neste mod en primer lugar",
+			"Co-director, artista, artista de cutscenes,\nartista de icons, artista de fondos\ny voz de Ivette",			
 			"Musico",
 			"Musico",
-			"Musico",
-			"Musico",
+			"Musico, y artista de portada de Light On",
 			"Musico, Animador, y voz de Hanzo",
-			"Musico",
 			"Musico",
 			"Musico",
 			"Musico",
@@ -67,14 +67,14 @@
 			"Programador",
 			"Programador",
 			"Programador y Tilin\n(Presiona Enter para una sorpresa)",
+			"Charter, y quien me introdujo al\nmodding de FNF",			
 			"Artista de fondos",
 			"Artista de fondos",
 			"Artista de fondos",		
-			"Artista de fondos",
+			"Artista, artista de fondos,\nartista de Iconos y animador",
+			"Artista de storyboard y\nartista de portada de la Week principal",
 			"Artista de storyboards",
-			"Artista de storyboards",
-			"Artista de storyboards y del Freeplay",
-			"Artista de cutscenes y \nvoz de Ivette",
+			"Artista de storyboard y artista\nde portada de Pondering",
 			"Animador de cutscenes",
 			"Animador de cutscenes",
 			"Artista del menu",
@@ -92,13 +92,12 @@
 			"Portada de kfm.mid",			
 			"Por testear la Beta del mod en stream",
 			"Por unir a la comunidad chilena\npara hacer el mejor mod <3",
-			"Por dar voz a Ivette en proyectos pasados\ny aportar para las cromaticas de ivette",
-			"Por dar voz a Maritza en proyectos pasados\ny aportar para las cromaticas de ivette",
+			"Por dar voz a Ivette en proyectos pasados\ny aportar para las cromaticas de Ivette",
+			"Por dar voz a Maritza en proyectos pasados\ny aportar para las cromaticas de Maritza",
 			"Compositor original de Tokyo Teddy Bear",
 			"Creador del archivo UST de Tokyo Teddy Bear",
-			"Creador original de Ronald McDonald MUGEN",
-			"Little Coding Help",
-			"Por introducirme al modding de FNF",
+			"Creador original de Ronald McDonald para MUGEN\ny sus sprites",
+			"Por ayudar un poco en el coding",
 			"Por ser el mejor grupo de todos <3"
 		]
 	},

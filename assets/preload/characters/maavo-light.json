@@ -1,132 +1,143 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				180
 			],
-			"loop": false,
-			"fps": 23,
 			"anim": "danceLeft",
-			"indices": [],
-			"name": "mavoo idle"
+			"fps": 23,
+			"name": "mavoo idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				180
 			],
-			"loop": false,
-			"fps": 23,
 			"anim": "danceRight",
-			"indices": [],
-			"name": "mavoo dance2"
-		},
-		{
-			"offsets": [
-				78,
-				46
-			],
-			"loop": false,
-			"fps": 25,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "MAVO DOWN"
-		},
-		{
-			"offsets": [
-				46,
-				224
-			],
-			"loop": false,
-			"fps": 25,
-			"anim": "singUP",
-			"indices": [],
-			"name": "MAVO UP"
-		},
-		{
-			"offsets": [
-				299,
-				126
-			],
-			"loop": false,
-			"fps": 25,
-			"anim": "singLEFT",
-			"indices": [],
-			"name": "mavoo right"
-		},
-		{
-			"offsets": [
-				46,
-				133
-			],
-			"loop": false,
-			"fps": 25,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "mavo left"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				295,
-				126
-			],
-			"anim": "singLEFTmiss",
-			"fps": 25,
-			"name": "mavoo derecha",
+			"fps": 23,
+			"name": "mavoo dance2",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
 				48,
-				132
+				46
 			],
+			"anim": "singDOWN",
+			"fps": 25,
+			"name": "MAVO DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-34,
+				231
+			],
+			"anim": "singUP",
+			"fps": 25,
+			"name": "MAVO UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				269,
+				126
+			],
+			"anim": "singLEFT",
+			"fps": 25,
+			"name": "mavoo right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-17,
+				149
+			],
+			"anim": "singRIGHT",
+			"fps": 25,
+			"name": "mavo left",
+			"indices": []
+		},
+		{
+			"offsets": [
+				264,
+				125
+			],
+			"loop": false,
+			"fps": 25,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "mavoo derecha"
+		},
+		{
+			"offsets": [
+				-22,
+				152
+			],
+			"loop": false,
+			"fps": 25,
 			"anim": "singRIGHTmiss",
-			"fps": 25,
-			"name": "mavo izquierda",
-			"indices": []
+			"indices": [],
+			"name": "mavo izquierda"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				47,
-				224
+				-34,
+				232
 			],
+			"loop": false,
+			"fps": 25,
 			"anim": "singUPmiss",
-			"fps": 25,
-			"name": "MAVO arriba",
-			"indices": []
+			"indices": [],
+			"name": "MAVO arriba"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				86,
-				40
+				60,
+				33
 			],
-			"anim": "singDOWNmiss",
+			"loop": false,
 			"fps": 25,
-			"name": "MAVO abajo",
-			"indices": []
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "MAVO abajo"
+		},
+		{
+			"offsets": [
+				0,
+				180
+			],
+			"loop": false,
+			"fps": 23,
+			"anim": "idle",
+			"indices": [],
+			"name": "mavoo idle"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/MAVO",
 	"position": [
-		250,
-		195
+		200,
+		135
 	],
-	"healthicon": "2022",
+	"healthicon": "maavo",
 	"flip_x": true,
 	"healthbar_colors": [
-		0,
 		255,
-		255
+		0,
+		0
 	],
 	"camera_position": [
 		130,
-		-130
+		-230
 	],
 	"sing_duration": 7.5,
 	"scale": 1

@@ -60,13 +60,13 @@
 				-4,
 				-3
 			],
+			"loop": true,
+			"fps": 24,
+			"anim": "ponderingEnd",
 			"indices": [
 				4,
 				5
 			],
-			"fps": 24,
-			"anim": "ponderingEnd",
-			"loop": true,
 			"name": "hanzo_derecha"
 		}
 	],
@@ -74,7 +74,7 @@
 	"image": "characters/hanzo",
 	"position": [
 		0,
-		-10
+		0
 	],
 	"healthicon": "hanzo",
 	"flip_x": false,
@@ -84,8 +84,8 @@
 		55
 	],
 	"camera_position": [
-		0,
-		0
+		-20,
+		-70
 	],
 	"sing_duration": 6.5,
 	"scale": 1
