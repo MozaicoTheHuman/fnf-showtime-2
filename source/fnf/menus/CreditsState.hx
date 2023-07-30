@@ -139,6 +139,9 @@ class CreditsState extends MusicBeatState
 			['DegoDraws', 'dego', '', 'https://twitter.com/DegoDraws', 'FFDD33'],
 			['KoiM4', 'koichi', '', 'https://twitter.com/koim4_', 'FFDD33'],
 			['Andere', 'andere', '', 'https://youtube.com/@4ndere', 'FFDD33'],
+			[Language.credits.categorys[1]],
+			['ShaminBECA', 'nada', '', 'https://twitter.com/ShaminBECA', 'FFDD33'],
+			['InukoExo', 'nada', '', 'https://twitter.com/InukoExo', 'FFDD33'],
 			[
 				'AndresLoquendero0',
 				'nada',
@@ -146,9 +149,6 @@ class CreditsState extends MusicBeatState
 				'https://www.youtube.com/@AndresELLoquendero0',
 				'FFDD33'
 			],
-			[Language.credits.categorys[1]],
-			['ShaminBECA', 'nada', '', 'https://twitter.com/ShaminBECA', 'FFDD33'],
-			['InukoExo', 'nada', '', 'https://twitter.com/InukoExo', 'FFDD33'],
 			[
 				'CompotaHyper',
 				'compotito',

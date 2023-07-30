@@ -6,8 +6,22 @@ function onCreate()
 	setProperty('darkbg.scale.x',999)
 	setProperty('darkbg.scale.y',999)
 	setProperty('darkbg.alpha', 0)
-	setObjectOrder('gfGroup',4)	
+	setObjectOrder('gfGroup',2)	
 	setBlendMode('darkbg', 'multiply')	
+	
+    makeLuaSprite('blackbg2','pondering/darkbg',-130 , -750);
+    addLuaSprite('blackbg2',true);
+	setLuaSpriteScrollFactor('blackbg2',0,0)
+	setProperty('blackbg2.scale.x',999)
+	setProperty('blackbg2.scale.y',999)
+	setProperty('blackbg2.alpha', 0)		
+	
+    makeLuaSprite('dibujanzo','pondering/dibujanzo',0 , 0);
+    addLuaSprite('dibujanzo',true);
+	setLuaSpriteScrollFactor('dibujanzo',0,0)
+	setProperty('dibujanzo.scale.x',2.3)
+	setProperty('dibujanzo.scale.y',2.3)
+	setProperty('dibujanzo.alpha', 0)
 
     makeLuaSprite('ponderinglight','pondering/Showtime_mall_night_lights',-300, -985);
     addLuaSprite('ponderinglight',true);
@@ -16,7 +30,7 @@ function onCreate()
 	setProperty('ponderinglight.alpha', 80)		
 	setObjectOrder('gfGroup',5)
 	setBlendMode('ponderinglight', 'add')	
-	
+
     makeLuaSprite('light','pondering/light', 200 , -70);
     addLuaSprite('light',true);
 	setProperty('light.scale.x',1.5)
@@ -34,7 +48,7 @@ function onCreate()
 	setLuaSpriteScrollFactor('light2',1.05,1.05)	
 	setObjectOrder('gfGroup',5)
 	setBlendMode('light2', 'add')
-	
+
     makeLuaSprite('2light','pondering/lighttransition', 520 , 140);
     addLuaSprite('2light',true);
 	setProperty('2light.scale.x',3.0)
@@ -53,47 +67,13 @@ function onCreate()
 	setObjectOrder('gfGroup',5)
 	setBlendMode('2light2', 'add')	
 	
-    makeLuaSprite('blackbg2','pondering/darkbg',-130 , -750);
-    addLuaSprite('blackbg2',true);
-	setLuaSpriteScrollFactor('blackbg2',0,0)
-	setProperty('blackbg2.scale.x',999)
-	setProperty('blackbg2.scale.y',999)
-	setProperty('blackbg2.alpha', 0)		
-	
-    makeLuaSprite('dibujanzo','pondering/dibujanzo',0 , 0);
-    addLuaSprite('dibujanzo',true);
-	setLuaSpriteScrollFactor('dibujanzo',0,0)
-	setProperty('dibujanzo.scale.x',2.3)
-	setProperty('dibujanzo.scale.y',2.3)
-	setProperty('dibujanzo.alpha', 0)
-	
-	makeAnimatedLuaSprite('subs-eng', 'pondering/subs-eng', 0, 0);
-	addAnimationByPrefix('subs-eng', 'subs', 'subs', 30, false); 
-	objectPlayAnimation('subs-eng', 'subs'); 
-	addLuaSprite('subs-eng', true);	
-	setLuaSpriteScrollFactor('subs-eng',0,0)	
-	setProperty('subs-eng.alpha', 0)	
-	setProperty('subs-eng.scale.x',2.2)
-	setProperty('subs-eng.scale.y',2.2)	
-	setObjectOrder('gfGroup',5)	
-	
-	makeAnimatedLuaSprite('subs-esp', 'pondering/subs-esp', 0, 0);
-	addAnimationByPrefix('subs-esp', 'subs', 'subs', 30, false); 
-	objectPlayAnimation('subs-esp', 'subs'); 
-	addLuaSprite('subs-esp', true);	
-	setLuaSpriteScrollFactor('subs-esp',0,0)	
-	setProperty('subs-esp.alpha', 0)
-	setProperty('subs-esp.scale.x',2.2)
-	setProperty('subs-esp.scale.y',2.2)		
-	setObjectOrder('gfGroup',5)		
-	
 end
 
 function onStepHit()
 	
 	if curStep == 1660 then
-		doTweenAlpha('appearblackbg','darkbg',0.5, 0.01)
-		doTweenAlpha('when','ponderinglight',0.1, 0.01)			
+		doTweenAlpha('appearblackbg','darkbg',0.55, 0.01)		
+		doTweenAlpha('when','ponderinglight',0.5, 0.01)			
 		doTweenAlpha('luz','light',1, 0.01)		
 		doTweenAlpha('luz2','light2',1, 0.01)
 		doTweenAlpha('2luz','2light',1, 0.01)		
@@ -101,11 +81,20 @@ function onStepHit()
    	 end
 
 	if curStep == 1661 then	
-		doTweenAlpha('luzxd','light',0.8, 1.1)		
-		doTweenAlpha('luz2xd','light2',0.8, 1.1)
+		doTweenAlpha('luzxd','light',0.9, 1.1)		
+		doTweenAlpha('luz2xd','light2',0.9, 1.1)
 		doTweenAlpha('2luzxd','2light',0.1, 1.1)		
 		doTweenAlpha('2luz2xd','2light2',0.1, 1.1)		
    	 end		
+	
+	if curStep == 2048 then
+		doTweenAlpha('appearblackbg','darkbg',0.7, 0.02)		
+		doTweenAlpha('luz','light',0, 0.01)		
+		doTweenAlpha('luz2','light2',0, 0.01)
+		doTweenAlpha('2luz','2light',0, 0.3)		
+		doTweenAlpha('2luz2','2light2',0, 0.3)		
+   	 end
+	
 	
 	if curStep == 2122 then
 		doTweenAlpha('fondooscuro','blackbg2',1, 0.01)
