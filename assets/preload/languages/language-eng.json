@@ -1,13 +1,13 @@
 {
 	"achievements":[{
 			"name": "Great Show",
-			"description": "Beat the Week on Hard with 90% of acurracy"
+			"description": "Beat the Story Mode on Hard"
 		},{
 			"name": "Damn Expert",
 			"description": "Beat the song Showtime without being stunned"
 		},{
 			"name": "Detective",
-			"description": "Put the secret code on debug mode. \nHint: Fighting Game Engine, Maavo's first Appearance, Ronald McDonald."
+			"description": "Put the secret command on the Title Screen."
 		},{
 			"name": "Perfect Round",
 			"description": "Beat the song kfm.mid with no misses"
@@ -16,7 +16,7 @@
 			"description": "Die 3 times consecutively"
 		},{
 			"name": "You literally have no hands",
-			"description": "Die 10 times in total"
+			"description": "Die 10 times consecutively"
 		},{
 			"name": "YAAAY I WON!",
 			"description": "Die on 'Lovely'"
@@ -28,7 +28,7 @@
 			"description": "Beat 'Tokyo Teddy Bear' on Extreme with no misses"
 		},{
 			"name": "And the curtain falls",
-			"description": "Complete every achievement"
+			"description": "Complete every achievement\n(Press enter on this achievement if you completed it)"
 		},{
 			"name": "Friday Night Funkin'",
 			"description": "Play on a Friday Night"
@@ -44,7 +44,7 @@
 		"Complete 'Damn Expert' achievement \nto unlock this song"	
 	],
 	"credits":{
-		"categorys": ["SHOWTIME TEAM", "SPECIAL THANKS"],
+		"categorys": ["SHOWTIME TEAM", "BETA TESTERS", "SPECIAL THANKS"],
 		"part":[
 			"",
 			"Director, Main Artist/Animator,\nCoder, Charter, Maavo VA,\nMaavo PDFMM+ Model Import",
@@ -87,6 +87,14 @@
 			"Light On chromatic scales",
 			"Tokyo Charter (Extreme Difficulty)",
 			"",
+			"Beta tester",
+			"Beta tester",
+			"Beta tester",
+			"Beta tester",
+			"Beta tester",
+			"Beta tester",	
+			"Beta tester",				
+			"",			
 			"Tokyo Teddy Bear album cover",
 			"kfm.mid album cover",
 			"Maavo PDMM+ Model Import help",			
@@ -98,7 +106,11 @@
 			"Original Tokyo Teddy Bear UST file",
 			"Original creator of MUGEN Ronald McDonald",
 			"Little Coding help",
-			"For being the best friend group ever <3"
+			"For being the best friend group ever <3",
+			"For making the original game, y'all are GOATED",	
+			"For making the original game, y'all are GOATED",	
+			"For making the original game, y'all are GOATED",	
+			"For making the original game, y'all are GOATED"				
 		]
 	},
 	"options":[{

@@ -140,6 +140,14 @@ class CreditsState extends MusicBeatState
 			['KoiM4', 'koichi', '', 'https://twitter.com/koim4_', 'FFDD33'],
 			['Andere', 'andere', '', 'https://youtube.com/@4ndere', 'FFDD33'],
 			[Language.credits.categorys[1]],
+			['Vtroy Jerof', 'vtroy', '', 'https://youtube.com/@VtroyJerof', 'FFDD33'],
+			['cristo-ball', 'cristobola', '', 'https://twitter.com/Cristob88244965', 'FFDD33'],
+			['Beezy', 'beezy', '', 'https://www.twitter.com/BeezyLoove', 'FFDD33'],
+			['Shey Pancake', 'panquesito', '', 'https://twitter.com/shey_pancake', 'FFDD33'],
+			['Soga Celeste', 'hanzo', '', 'https://youtube.com/@SogaCeleste.-HanzoSantiago-', 'FFDD33'],
+			['_j.meta', 'javi', '', 'https://www.instagram.com/_j.meta/', 'FFDD33'],
+			['Suabruh', 'suabruh', '', 'https://twitter.com/suabruh', 'FFDD33'],
+			[Language.credits.categorys[2]],
 			['ShaminBECA', 'nada', '', 'https://twitter.com/ShaminBECA', 'FFDD33'],
 			['InukoExo', 'nada', '', 'https://twitter.com/InukoExo', 'FFDD33'],
 			[
@@ -166,7 +174,7 @@ class CreditsState extends MusicBeatState
 			],
 			[
 				'Riusaki Fujioka',
-				'nada',
+				'thixie',
 				'',
 				'https://cdn.discordapp.com/attachments/885208632533348433/887917996977299476/miki.gif',
 				'FFDD33'
@@ -193,7 +201,11 @@ class CreditsState extends MusicBeatState
 				'',
 				'https://cdn.discordapp.com/attachments/899372708851249282/990441090333159474/unknown.png',
 				'FFDD33'
-			]
+			],
+			['ninjamuffin99', 'nada', '', 'https://ninjamuffin99.newgrounds.com/', 'FFDD33'],
+			['PhantomArcade', 'nada', '', 'https://phantomarcade.newgrounds.com/', 'FFDD33'],
+			['kawaisprite', 'nada', '', 'https://drugpop.bandcamp.com/', 'FFDD33'],
+			['evilsk8r', 'nada', '', 'https://evilsk8r.newgrounds.com/', 'FFDD33']
 		];
 
 		for (i in pisspoop)

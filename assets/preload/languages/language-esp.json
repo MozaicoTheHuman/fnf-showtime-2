@@ -1,13 +1,13 @@
 {
 	"achievements":[{
 			"name": "Gran Espectaculo",
-			"description": "Termina la Week con mas del 90% de acurracy en hard"
+			"description": "Termina el Modo Historia en hard"
 		},{
 			"name": "Maldito Experto",
 			"description": "Completa 'Showtime' sin ser stuneado"
 		},{
 			"name": "Detective",
-			"description": "Pon el codigo secreto en el menu debug. \nPistas: Motor de videojuegos de lucha, primera aparicion de Maavo, Ronald McDonald"
+			"description": "Pon el comando secreto en la pantalla de titulo."
 		},{
 			"name": "Partida Perfecta",
 			"description": "Completa la cancion 'kfm.mid' sin fallos"
@@ -28,7 +28,7 @@
 			"description": "Completa 'Tokyo Teddy Bear' en dificultad Extrema sin fallos"
 		},{
 			"name": "Y los telones se cierran",
-			"description": "Completa todos los logros"
+			"description": "Completa todos los logros\n(Tras completarlo, apreta enter en este logro)"
 		},{
 			"name": "Friday Night Funkin'",
 			"description": "Juega un viernes por la noche"
@@ -44,7 +44,7 @@
 		"Completa el logro 'Maldito Experto' \npara desbloquear esta canción"
 	],
 	"credits":{
-		"categorys": ["SHOWTIME TEAM", "GRACIAS ESPECIALES"],
+		"categorys": ["SHOWTIME TEAM", "BETA TESTERS", "AGRADECIMIENTOS ESPECIALES"],
 		"part":[
 			"",
 			"Director, artista y animador principal,\nprogramador, charter, actor de voz de Maavo, y\nPort de Maavo a Project Diva Megamix+",
@@ -87,6 +87,14 @@
 			"Creador de las escalas cromaticas en Light On",
 			"Charter de Tokyo (Dificultad Extrema)",
 			"",
+			"Beta tester",
+			"Beta tester",
+			"Beta tester",
+			"Beta tester",			
+			"Beta tester",
+			"Beta tester",	
+			"Beta tester",				
+			"",		
 			"Portada de Tokyo Teddy Bear",	
 			"Portada de kfm.mid",			
 			"Ayuda con el port de Maavo a \nProject Diva Megamix+",			
@@ -98,7 +106,11 @@
 			"Creador del archivo UST de Tokyo Teddy Bear",
 			"Creador original de Ronald McDonald para MUGEN\ny sus sprites",
 			"Por ayudar un poco en el coding",
-			"Por ser el mejor grupo de todos <3"
+			"Por ser el mejor grupo de todos <3",
+			"Por crear el juego original, ustedes son la leche",	
+			"Por crear el juego original, ustedes son la leche",	
+			"Por crear el juego original, ustedes son la leche",	
+			"Por crear el juego original, ustedes son la leche"				
 		]
 	},
 	"options":[{
