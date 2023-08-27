@@ -3949,16 +3949,23 @@ class PlayState extends MusicBeatState
 			'mugen',
 			'tokyo'
 		];
-		var allPerfect:Bool = false;
 		for (i in 0...songsNames.length)
 		{
-			if (Highscore.songMisses.exists(songsNames[i]) && Highscore.getMisses(songsNames[i], 2) < 1)
+			if (Highscore.getScore(songsNames[i], 2) > 0)
 			{
-				allPerfect = true;
+				if (Highscore.getMisses(songsNames[i], 2) > 0)
+				{
+					trace(songsNames[i] + ' tiene ${Highscore.getMisses(songsNames[i], 2)} misses');
+					return false;
+				}
 			}
-			trace('En ${songsNames[i]} tienes ${Highscore.getMisses(songsNames[i], 2)}');
+			else
+			{
+				trace(songsNames[i] + ' no se jugo todavia');
+				return false;
+			}
 		}
-		return allPerfect;
+		return true;
 	}
 
 	private function checkForAchievement(achievesToCheck:Array<String> = null):String
