@@ -380,48 +380,6 @@ class ChartingState extends MusicBeatState
 		super.create();
 	}
 
-	#if ACHIEVEMENTS_ALLOWED
-	function checkAchievement()
-	{
-		var checkThis:Array<String> = ['detective', 'telones'];
-		for (i in 0...checkThis.length)
-		{
-			var achievementName:String = checkThis[i];
-			if (!Achievements.isAchievementUnlocked(achievementName))
-			{
-				var unlock:Bool = false;
-				switch (achievementName)
-				{
-					case 'detective':
-						if (_song.song.toLowerCase() == "mugen")
-						{
-							unlock = true;
-						}
-					case 'telones':
-						if (Achievements.isAllUnlocked())
-						{
-							unlock = true;
-						}
-				}
-
-				if (unlock)
-				{
-					block = true;
-					Achievements.unlockAchievement(achievementName);
-					achieveObj(achievementName);
-				}
-			}
-		}
-	}
-
-	function achieveObj(achieve:String)
-	{
-		add(new AchievementObject(achieve));
-		if (achieve == 'detective')
-			add(new UnlockObject("mugen"));
-	}
-	#end
-
 	var check_mute_inst:FlxUICheckBox = null;
 	var playSoundBf:FlxUICheckBox = null;
 	var playSoundDad:FlxUICheckBox = null;
@@ -673,8 +631,6 @@ class ChartingState extends MusicBeatState
 
 		var tab_group_song = new FlxUI(null, UI_box);
 		tab_group_song.name = "Song";
-		tab_group_song.add(UI_songTitle);
-
 		tab_group_song.add(check_voices);
 		tab_group_song.add(clear_events);
 		tab_group_song.add(clear_notes);
@@ -2350,9 +2306,6 @@ class ChartingState extends MusicBeatState
 
 	function loadJson(song:String):Void
 	{
-		#if ACHIEVEMENTS_ALLOWED
-		checkAchievement();
-		#end
 		PlayState.SONG = Song.loadFromJson(song.toLowerCase(), song.toLowerCase());
 		if (block)
 		{

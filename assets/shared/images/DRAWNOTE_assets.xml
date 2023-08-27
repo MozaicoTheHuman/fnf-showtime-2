@@ -2,16 +2,16 @@
 <TextureAtlas imagePath="DRAWNOTE_assets.png">
 	<!-- Created with Adobe Animate version 23.0.2.103 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="blue instance 10000" x="3" y="3" width="179" height="190"/>
-	<SubTexture name="blue instance 10001" x="185" y="3" width="179" height="190"/>
-	<SubTexture name="blue instance 10002" x="367" y="3" width="179" height="190"/>
-	<SubTexture name="green instance 10000" x="549" y="3" width="179" height="190"/>
-	<SubTexture name="green instance 10001" x="731" y="3" width="179" height="190"/>
-	<SubTexture name="green instance 10002" x="3" y="196" width="179" height="190"/>
-	<SubTexture name="red instance 10000" x="185" y="196" width="190" height="179"/>
-	<SubTexture name="red instance 10001" x="378" y="196" width="190" height="179"/>
-	<SubTexture name="red instance 10002" x="571" y="196" width="190" height="179"/>
-	<SubTexture name="purple instance 10000" x="764" y="196" width="190" height="179"/>
-	<SubTexture name="purple instance 10001" x="3" y="389" width="190" height="179"/>
-	<SubTexture name="purple instance 10002" x="196" y="389" width="190" height="179"/>
+	<SubTexture name="blue0000" x="3" y="3" width="179" height="190"/>
+	<SubTexture name="blue0001" x="185" y="3" width="179" height="190"/>
+	<SubTexture name="blue0002" x="367" y="3" width="179" height="190"/>
+	<SubTexture name="green0000" x="549" y="3" width="179" height="190"/>
+	<SubTexture name="green0001" x="731" y="3" width="179" height="190"/>
+	<SubTexture name="green0002" x="3" y="196" width="179" height="190"/>
+	<SubTexture name="red0000" x="185" y="196" width="190" height="179"/>
+	<SubTexture name="red0001" x="378" y="196" width="190" height="179"/>
+	<SubTexture name="red0002" x="571" y="196" width="190" height="179"/>
+	<SubTexture name="purple0000" x="764" y="196" width="190" height="179"/>
+	<SubTexture name="purple0001" x="3" y="389" width="190" height="179"/>
+	<SubTexture name="purple0002" x="196" y="389" width="190" height="179"/>
 </TextureAtlas>

@@ -818,7 +818,7 @@ class PlayState extends MusicBeatState
 		reloadHealthBarColors();
 
 		scoreTxt = new FlxText(0, 0, FlxG.width, "", 20);
-		scoreTxt.setFormat(Paths.font("p5.ttf"), 25, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreTxt.setFormat(Paths.font("p5.ttf"), 28, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.45;
 		scoreTxt.visible = !ClientPrefs.hideHud;
@@ -2876,7 +2876,7 @@ class PlayState extends MusicBeatState
 				var percent:Float = ratingPercent;
 				if (Math.isNaN(percent))
 					percent = 0;
-				Highscore.saveScore(SONG.song, songScore, storyDifficulty, percent, songMisses);
+				Highscore.saveScore(SONG.song.toLowerCase(), songScore, storyDifficulty, percent, songMisses);
 				trace('Song Accuracy: ' + Highscore.floorDecimal(percent * 100, 2));
 				trace('Song Score: $songScore');
 				trace('Song Misses: $songMisses');
@@ -3169,14 +3169,11 @@ class PlayState extends MusicBeatState
 
 	private function keyShit():Void
 	{
-		if (FlxG.keys.justPressed.SPACE)
+		if (FlxG.keys.justPressed.SPACE && !boyfriend.stunned && boyfriend.animOffsets.exists('hey'))
 		{
-			if (boyfriend.animOffsets.exists('hey'))
-			{
-				boyfriend.playAnim('hey', true);
-				boyfriend.specialAnim = true;
-				boyfriend.heyTimer = 0.6;
-			}
+			boyfriend.playAnim('hey', true);
+			boyfriend.specialAnim = true;
+			boyfriend.heyTimer = 0.6;
 		}
 		// HOLDING
 		var up = controls.NOTE_UP;
@@ -3943,19 +3940,19 @@ class PlayState extends MusicBeatState
 	function checkPerfect():Bool
 	{
 		var songsNames:Array<String> = [
-			'Lovely',
-			'Wannabe',
-			'Finale',
-			'Showtime',
-			'Pondering',
-			'Light-On',
+			'lovely',
+			'wannabe',
+			'finale',
+			'showtime',
+			'pondering',
+			'light-on',
 			'mugen',
-			'Tokyo'
+			'tokyo'
 		];
 		var allPerfect:Bool = false;
 		for (i in 0...songsNames.length)
 		{
-			if (Highscore.songMisses.exists(songsNames[i]) && Highscore.getMisses(songsNames[i], 2) > 0)
+			if (Highscore.songMisses.exists(songsNames[i]) && Highscore.getMisses(songsNames[i], 2) < 1)
 			{
 				allPerfect = true;
 			}

@@ -63,7 +63,7 @@ class NoteOffsetState extends MusicBeatState
 
 		FlxG.cameras.setDefaultDrawTarget(camGame, true);
 		CustomFadeTransition.nextCamera = camOther;
-		FlxG.camera.scroll.set(120, 130);
+		FlxG.camera.scroll.set(240, 130);
 
 		persistentUpdate = true;
 		FlxG.sound.pause();
@@ -189,17 +189,15 @@ class NoteOffsetState extends MusicBeatState
 		changeModeText.scrollFactor.set();
 		changeModeText.cameras = [camHUD];
 		add(changeModeText);
-		updateMode();
 
-		var titleText:Alphabet = new Alphabet(0, 260, Language.options[4].title, true);
-		titleText.scaleX = 0.6;
-		titleText.scaleY = 0.6;
+		var titleText:Alphabet = new Alphabet(0, 40, Language.options[4].title, true);
+		titleText.scale.set(0.6, 0.6);
 		titleText.alpha = 0.4;
-		titleText.scrollFactor.set();
-		titleText.screenCenter();
+		titleText.screenCenter(X);
 		titleText.cameras = [camHUD];
 		add(titleText);
 
+		updateMode();
 		Conductor.changeBPM(74);
 		FlxG.sound.playMusic(Paths.music('offsetSong'), 1, true);
 

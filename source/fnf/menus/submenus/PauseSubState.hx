@@ -43,13 +43,9 @@ class PauseSubState extends MusicBeatSubstate
 		{
 			var diff:String = '' + CoolUtil.difficultyStuff[i][0];
 			if (CoolUtil.difficultyStuff[i][0] != 'Extreme')
-			{
 				difficultyChoices.push(diff);
-			}
 			else if (PlayState.SONG.song.toLowerCase() == 'tokyo')
-			{
 				difficultyChoices.push(diff);
-			}
 		}
 		difficultyChoices.push('BACK');
 

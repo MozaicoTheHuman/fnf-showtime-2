@@ -313,7 +313,7 @@ class Note extends FlxSprite
 		var blahblah:String = arraySkin.join('/');
 
 		frames = Paths.getSparrowAtlas(blahblah);
-		loadNoteAnims();
+		loadNoteAnims(prefix == 'DRAW');
 		antialiasing = ClientPrefs.globalAntialiasing;
 		if (isSustainNote)
 		{
@@ -331,12 +331,13 @@ class Note extends FlxSprite
 		}
 	}
 
-	function loadNoteAnims()
+	function loadNoteAnims(hasAnim:Bool = false)
 	{
-		animation.addByPrefix('greenScroll', 'green0');
-		animation.addByPrefix('redScroll', 'red0');
-		animation.addByPrefix('blueScroll', 'blue0');
-		animation.addByPrefix('purpleScroll', 'purple0');
+		var z:String = !hasAnim ? '0' : '';
+		animation.addByPrefix('greenScroll', 'green$z', 24, true);
+		animation.addByPrefix('redScroll', 'red$z', 24, true);
+		animation.addByPrefix('blueScroll', 'blue$z', 24, true);
+		animation.addByPrefix('purpleScroll', 'purple$z', 24, true);
 
 		if (isSustainNote)
 		{

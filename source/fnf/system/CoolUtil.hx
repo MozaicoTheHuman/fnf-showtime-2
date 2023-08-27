@@ -18,7 +18,7 @@ import sys.io.File;
 class CoolUtil
 {
 	// [Difficulty name, Chart file suffix]
-	public static var difficultyStuff:Array<Dynamic> = [['Easy', '-easy'], ['Normal', ''], ['Hard', '-hard'], ['Extreme', '-extreme']];
+	public static var difficultyStuff:Array<Array<String>> = [['Easy', '-easy'], ['Normal', ''], ['Hard', '-hard'], ['Extreme', '-extreme']];
 
 	public static function resetSprite(spr:FlxSprite, x:Float, y:Float)
 	{
