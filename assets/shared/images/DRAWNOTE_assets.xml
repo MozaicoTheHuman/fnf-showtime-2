@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="DRAWNOTES_assets.png">
-	<!-- Created with Adobe Animate version 18.0.2.126 -->
+<TextureAtlas imagePath="DRAWNOTE_assets.png">
+	<!-- Created with Adobe Animate version 23.0.2.103 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="blue instance 10000" x="10" y="10" width="184" height="173"/>
-	<SubTexture name="blue instance 10001" x="204" y="10" width="184" height="173"/>
-	<SubTexture name="blue instance 10002" x="398" y="10" width="184" height="173"/>
-	<SubTexture name="green instance 10000" x="592" y="10" width="184" height="173"/>
-	<SubTexture name="green instance 10001" x="786" y="10" width="184" height="173"/>
-	<SubTexture name="green instance 10002" x="10" y="193" width="184" height="173"/>
-	<SubTexture name="red instance 10000" x="204" y="193" width="173" height="184"/>
-	<SubTexture name="red instance 10001" x="387" y="193" width="173" height="184"/>
-	<SubTexture name="red instance 10002" x="570" y="193" width="173" height="184"/>
-	<SubTexture name="purple instance 10000" x="753" y="193" width="173" height="184"/>
-	<SubTexture name="purple instance 10001" x="10" y="387" width="173" height="184"/>
-	<SubTexture name="purple instance 10002" x="193" y="387" width="173" height="184"/>
+	<SubTexture name="blue instance 10000" x="3" y="3" width="179" height="190"/>
+	<SubTexture name="blue instance 10001" x="185" y="3" width="179" height="190"/>
+	<SubTexture name="blue instance 10002" x="367" y="3" width="179" height="190"/>
+	<SubTexture name="green instance 10000" x="549" y="3" width="179" height="190"/>
+	<SubTexture name="green instance 10001" x="731" y="3" width="179" height="190"/>
+	<SubTexture name="green instance 10002" x="3" y="196" width="179" height="190"/>
+	<SubTexture name="red instance 10000" x="185" y="196" width="190" height="179"/>
+	<SubTexture name="red instance 10001" x="378" y="196" width="190" height="179"/>
+	<SubTexture name="red instance 10002" x="571" y="196" width="190" height="179"/>
+	<SubTexture name="purple instance 10000" x="764" y="196" width="190" height="179"/>
+	<SubTexture name="purple instance 10001" x="3" y="389" width="190" height="179"/>
+	<SubTexture name="purple instance 10002" x="196" y="389" width="190" height="179"/>
 </TextureAtlas>
