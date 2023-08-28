@@ -2200,13 +2200,6 @@
 						"Add Camera Zoom",
 						"0.005",
 						"0.03"
-					],
-					[
-						105493.990384615,
-						-1,
-						"Play Animation",
-						"hey",
-						"0"
 					]
 				],
 				"bpm": 0,
@@ -2218,20 +2211,6 @@
 				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
-					[
-						105494.505494506,
-						-1,
-						"Ronald Portrait",
-						"",
-						""
-					],
-					[
-						105576.923076923,
-						-1,
-						"Toggle Trail",
-						"1",
-						""
-					],
 					[
 						106483.516483517,
 						-1,
@@ -2252,6 +2231,27 @@
 						"Add Camera Zoom",
 						"0.005",
 						"0.03"
+					],
+					[
+						105989.010989011,
+						-1,
+						"Ronald Portrait",
+						"",
+						""
+					],
+					[
+						105985.576923077,
+						-1,
+						"Toggle Trail",
+						"1",
+						""
+					],
+					[
+						105992.445054945,
+						-1,
+						"Play Animation",
+						"hey",
+						"0"
 					]
 				],
 				"bpm": 0,
@@ -2269,6 +2269,13 @@
 						"Add Camera Zoom",
 						"0.005",
 						"0.03"
+					],
+					[
+						106813.186813187,
+						-1,
+						"Change Scroll Speed",
+						"1.09",
+						"0.2"
 					]
 				],
 				"bpm": 0,
@@ -2771,6 +2778,42 @@
 						"0.05"
 					]
 				],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 0,
+				"changeBPM": false,
+				"mustHitSection": false
+			},
+			{
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
 				"bpm": 0,
 				"changeBPM": false,
 				"mustHitSection": false
