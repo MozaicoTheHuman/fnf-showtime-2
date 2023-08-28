@@ -18,14 +18,16 @@ class Achievements
 	public static var achievementsStuff:Array<Dynamic> = [
 		// Name, Description, ID Name, Hidden achievement
 		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'great_show', false],
+		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'gane', false],
 		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'expert', false],
 		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'detective', false],
+		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'pondering', false],
+		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'maavo_generations', false],
 		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'perfect', false],
+		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'sick', false],
 		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'manco', false],
 		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'no_hands', false],
-		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'gane', false],
 		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'perfeccionist', false],
-		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'sick', false],
 		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'telones', false],
 		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'friday_night_play', true],
 		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'good_taste', true]
@@ -45,7 +47,7 @@ class Achievements
 
 	public static function getAchievementImage(name:String):flixel.graphics.FlxGraphic
 	{
-		var image:flixel.graphics.FlxGraphic = Paths.image('achievements/placeholder');
+		var image:flixel.graphics.FlxGraphic = new FlxSprite().makeGraphic(437, 352, FlxColor.MAGENTA).graphic;
 		if (Paths.fileExists('images/achievements/$name.png', IMAGE))
 		{
 			image = Paths.image('achievements/$name');
@@ -64,12 +66,12 @@ class Achievements
 
 	public static function isAllUnlocked():Bool
 	{
-		for (i in 0...achievementsStuff.length)
+		for (i in 0...achievementsStuff.length - 3)
 		{
-			if (!achievementsMap.exists(achievementsStuff[i][2]) && i < 9)
-			{
+			trace("Checking: " + achievementsStuff[i][2]);
+
+			if (!achievementsMap.exists(achievementsStuff[i][2]))
 				return false;
-			}
 		}
 		return true;
 	}
@@ -149,24 +151,28 @@ class AchievementObject extends FlxSpriteGroup
 
 		var id:Int = Achievements.getAchievementIndex(name);
 
-		var achievementBG:FlxSprite = new FlxSprite(0, 0).makeGraphic(400, 100, FlxColor.BLACK);
+		var achievementBGR:FlxSprite = new FlxSprite(0, 0).makeGraphic(410, 110, FlxColor.RED);
+		achievementBGR.scrollFactor.set();
+
+		var achievementBG:FlxSprite = new FlxSprite(5, 5).makeGraphic(400, 100, FlxColor.BLACK);
 		achievementBG.scrollFactor.set();
 
-		var achievementName:FlxText = new FlxText(achievementBG.x + 20, achievementBG.y + 26, 280, Language.achievements[id].name, 16);
-		achievementName.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT);
+		var achievementName:FlxText = new FlxText(achievementBG.x + 10, achievementBG.y + 10, 280, Language.achievements[id].name, 24);
+		achievementName.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, LEFT);
 		achievementName.scrollFactor.set();
 
-		var achievementText:FlxText = new FlxText(achievementName.x, achievementName.y + 28, 280, Language.achievements[id].description, 16);
-		achievementText.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT);
+		var achievementText:FlxText = new FlxText(achievementName.x, achievementName.y + 32, 280, Language.achievements[id].description, 16);
+		achievementText.setFormat(Paths.font("vcr.ttf"), 16, 0xA4A4A4, LEFT);
 		achievementText.scrollFactor.set();
 
-		var achievementIcon:FlxSprite = new FlxSprite(0, achievementBG.y).loadGraphic(Achievements.getAchievementImage(name));
+		var achievementIcon:FlxSprite = new FlxSprite(achievementBG.x + achievementBG.width - 140,
+			achievementBG.y - 10).loadGraphic(Achievements.getAchievementImage(name));
 		achievementIcon.scrollFactor.set();
-		achievementIcon.setGraphicSize(Std.int(achievementIcon.width * (2 / 3)));
-		achievementIcon.x = achievementBG.x + achievementBG.width - achievementIcon.width + 80;
+		achievementIcon.setGraphicSize(Std.int(achievementIcon.width * (1 / 3)));
 		achievementIcon.updateHitbox();
 		achievementIcon.antialiasing = ClientPrefs.globalAntialiasing;
 
+		add(achievementBGR);
 		add(achievementBG);
 		add(achievementName);
 		add(achievementText);
@@ -180,6 +186,7 @@ class AchievementObject extends FlxSpriteGroup
 		y -= 120;
 		x = FlxG.width / 2 - width / 2;
 		alpha = 0;
+		achievementBGR.cameras = cam;
 		achievementBG.cameras = cam;
 		achievementName.cameras = cam;
 		achievementText.cameras = cam;

@@ -3,14 +3,26 @@
 			"name": "Gran Espectaculo",
 			"description": "Termina el Modo Historia en hard"
 		},{
+			"name": "WIII GANE!",
+			"description": "Pierde en Lovely"
+		},{
 			"name": "Maldito Experto",
 			"description": "Completa 'Showtime' sin ser stuneado"
 		},{
 			"name": "Detective",
 			"description": "Pon el comando secreto en la pantalla de titulo."
 		},{
+			"name": "Nueva Amistad",
+			"description": "Completa la cancion 'Pondering (Showtime Mix)' en dificultad Hard sin fallos"
+		},{
+			"name": "Maavo Generations",
+			"description": "Completa la cancion 'Light On!' en dificultad Hard sin fallos"
+		},{
 			"name": "Partida Perfecta",
-			"description": "Completa la cancion 'kfm.mid' sin fallos"
+			"description": "Completa la cancion 'kfm.mid' en dificultad Hard sin fallos"
+		},{
+			"name": "Enfermo",
+			"description": "Completa 'Tokyo Teddy Bear' en dificultad Extreme sin fallos"
 		},{
 			"name": "Manco",
 			"description": "Pierde 3 veces seguidas"
@@ -18,14 +30,8 @@
 			"name": "Literal no tienes manos",
 			"description": "Pierde 10 veces seguidas"
 		},{
-			"name": "WIII GANE!",
-			"description": "Pierde en Lovely"
-		},{
 			"name": "Perfeccionista",
 			"description": "Completa todas las canciones sin fallos en Hard"
-		},{
-			"name": "Enfermo",
-			"description": "Completa 'Tokyo Teddy Bear' en dificultad Extrema sin fallos"
 		},{
 			"name": "Y los telones se cierran",
 			"description": "Completa todos los logros\n(Tras completarlo, apreta enter en este logro)"

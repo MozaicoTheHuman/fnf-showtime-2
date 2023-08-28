@@ -19,6 +19,7 @@ import fnf.menus.editors.MasterEditorMenu;
 import fnf.system.ClientPrefs;
 import fnf.system.Conductor;
 import fnf.system.CoolUtil;
+import fnf.system.Language;
 import fnf.system.LoadingState;
 import fnf.system.MultiTween;
 import fnf.system.MusicBeatState;
@@ -82,6 +83,7 @@ class MainMenuState extends MusicBeatState
 		#end
 		WeekData.reloadWeekFiles();
 		Conductor.changeBPM(120);
+		Language.loadJson();
 
 		camGame = new FlxCamera();
 		camAchievement = new FlxCamera();

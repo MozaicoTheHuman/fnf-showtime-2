@@ -15,7 +15,6 @@ import flixel.util.FlxTimer;
 import fnf.system.ClientPrefs;
 import fnf.system.Conductor;
 import fnf.system.Highscore;
-import fnf.system.Language;
 import fnf.system.MusicBeatState;
 import fnf.system.Paths;
 import fnf.system.PlayerSettings;
@@ -64,7 +63,6 @@ class TitleState extends MusicBeatState
 		curWacky = FlxG.random.getObject(getIntroTextShit());
 		FlxG.save.bind('data', 'Mozaico');
 		Highscore.load();
-		Language.loadJson();
 
 		if (FlxG.save.data.weekCompleted != null)
 		{

@@ -3,14 +3,26 @@
 			"name": "Great Show",
 			"description": "Beat the Story Mode on Hard"
 		},{
+			"name": "YAAAY I WON!",
+			"description": "Die on 'Lovely'"
+		},{
 			"name": "Damn Expert",
 			"description": "Beat the song Showtime without being stunned"
 		},{
 			"name": "Detective",
 			"description": "Put the secret command on the Title Screen."
 		},{
+			"name": "New Friend",
+			"description": "Beat the song 'Pondering (Showtime Mix)' on Hard with no misses"
+		},{
+			"name": "Maavo Generations",
+			"description": "Beat the song 'Light On!' on Hard with no misses"
+		},{
 			"name": "Perfect Round",
-			"description": "Beat the song kfm.mid with no misses"
+			"description": "Beat the song 'kfm.mid' on Hard with no misses"
+		},{
+			"name": "Sick",
+			"description": "Beat 'Tokyo Teddy Bear' on Extreme with no misses"
 		},{
 			"name": "Skill Issue",
 			"description": "Die 3 times consecutively"
@@ -18,14 +30,8 @@
 			"name": "You literally have no hands",
 			"description": "Die 10 times consecutively"
 		},{
-			"name": "YAAAY I WON!",
-			"description": "Die on 'Lovely'"
-		},{
 			"name": "Perfeccionist",
 			"description": "Beat all the songs on Hard with no misses"
-		},{
-			"name": "Sick",
-			"description": "Beat 'Tokyo Teddy Bear' on Extreme with no misses"
 		},{
 			"name": "And the curtain falls",
 			"description": "Complete every achievement\n(Press enter on this achievement if you completed it)"

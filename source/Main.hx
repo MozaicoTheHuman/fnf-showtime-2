@@ -113,7 +113,6 @@ class Main extends Sprite
 			});
 		}
 		#end
-
 		ClientPrefs.loadPrefs();
 	}
 

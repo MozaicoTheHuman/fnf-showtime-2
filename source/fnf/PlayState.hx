@@ -3981,7 +3981,6 @@ class PlayState extends MusicBeatState
 				{
 					case 'great_show':
 						if (isStoryMode
-
 							&& CoolUtil.difficultyString() == 'HARD'
 							&& storyPlaylist.length <= 1
 							&& WeekData.getWeekFileName() == ('showtime')
@@ -3995,6 +3994,22 @@ class PlayState extends MusicBeatState
 						{
 							unlock = true;
 						}
+					case 'pondering':
+						if (Paths.formatToSongPath(SONG.song) == 'pondering'
+							&& CoolUtil.difficultyString() == 'HARD'
+							&& songMisses < 1
+							&& !usedPractice)
+						{
+							unlock = true;
+						}
+					case 'maavo_generations':
+						if (Paths.formatToSongPath(SONG.song) == 'light-on'
+							&& CoolUtil.difficultyString() == 'HARD'
+							&& songMisses < 1
+							&& !usedPractice)
+						{
+							unlock = true;
+						}
 					case 'perfect':
 						if (Paths.formatToSongPath(SONG.song) == 'mugen'
 							&& CoolUtil.difficultyString() == 'HARD'
@@ -4003,16 +4018,16 @@ class PlayState extends MusicBeatState
 						{
 							unlock = true;
 						}
-					case 'perfeccionist':
-						if (checkPerfect())
-						{
-							unlock = true;
-						}
 					case 'sick':
 						if (Paths.formatToSongPath(SONG.song) == 'tokyo'
 							&& CoolUtil.difficultyString() == 'EXTREME'
 							&& songMisses < 1
 							&& !usedPractice)
+						{
+							unlock = true;
+						}
+					case 'perfeccionist':
+						if (checkPerfect())
 						{
 							unlock = true;
 						}
