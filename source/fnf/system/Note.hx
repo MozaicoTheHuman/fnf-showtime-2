@@ -96,8 +96,8 @@ class Note extends FlxSprite
 			switch (value)
 			{
 				case 'Hurt Note':
-					ignoreNote = mustPress;
 					reloadNote('HURT');
+					ignoreNote = mustPress;
 					noteSplashTexture = 'HURTnoteSplashes';
 					if (isSustainNote)
 					{
@@ -108,18 +108,19 @@ class Note extends FlxSprite
 						missHealth = 0.3;
 					}
 					hitCausesMiss = true;
-				case 'stun note':
-					ignoreNote = true;
+				case 'Stun Note':
 					reloadNote('DRAW');
+					ignoreNote = true;
 					noteSplashTexture = 'DRAWNOTE_splashes';
 					hitCausesMiss = true;
-				case 'vfx note':
+				case 'VFX Note':
+					reloadNote('VFX', 'NOTE_assets');
 					hitHealth = 0.06;
-				case 'No Animation':
+				case 'No Animation' | 'SecondCharacter' | 'SecondAndThirdCharacter' | 'ThirdCharacter':
 					noAnimation = true;
 			}
 			noteType = value;
-			if (noteType == 'stun note')
+			if (noteType == 'Stun Note')
 				pointyAngle = 0;
 		}
 		return value;
@@ -152,7 +153,7 @@ class Note extends FlxSprite
 	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?inEditor:Bool = false, ?sec:Float = 0)
 	{
 		super();
-
+	
 		if (prevNote == null)
 			prevNote = this;
 
@@ -195,6 +196,7 @@ class Note extends FlxSprite
 
 		// trace(prevNote);
 		noteColor = noteData;
+		
 		quantCalc();
 
 		if (isSustainNote && prevNote != null)
@@ -273,12 +275,11 @@ class Note extends FlxSprite
 			else
 			{
 				noteColor = prevNote.noteColor;
-				// animation.play(dataColor[0] + 'Scroll');
-				// colorSwap.saturation = 255;
 			}
 			// originAngle = localAngle;
 			// originColor = col;
 		}
+		
 	}
 
 	function reloadNote(?prefix:String = '', ?texture:String = '', ?suffix:String = '')
@@ -294,7 +295,7 @@ class Note extends FlxSprite
 		if (texture.length < 1)
 		{
 			skin = PlayState.SONG.arrowSkin;
-			if (skin == null || skin.length < 1)
+			if (skin == null || skin.length < 1 || (skin == "MUGENNOTE_assets" && prefix == "DRAW"))
 			{
 				skin = 'NOTE_assets';
 			}
@@ -386,7 +387,7 @@ class Note extends FlxSprite
 				alpha = 0.3;
 		}
 
-		if (noteType == 'stun note')
+		if (noteType == 'Stun Note')
 		{
 			pointyAngle -= elapsed * 20 * 16;
 		}

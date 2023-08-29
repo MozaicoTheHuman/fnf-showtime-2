@@ -121,14 +121,3 @@ end
     	end
 
 end
-
-function goodNoteHit(id,d,t,s)
-    if t == 'stun note' then
-        triggerEvent('Screen Shake','0.2,0.01','')
-        playSound('stunsound', 1);
-        triggerEvent('Play Animation','stun','1')
-    	setProperty('boyfriend.stunned', true);
-    	stuneao = true;
-    	runTimer('nostuneao', 1.4);
-    end
-end

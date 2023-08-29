@@ -75,9 +75,15 @@ class ChartingState extends MusicBeatState
 			'Hey!',
 			'Hurt Note',
 			'GF Sing',
+			'Stun Note',
+			'VFX Note',
 			'No Animation',
-			'stun note',
-			'vfx note'
+			'MainAndSecondCharacter',
+			'MainAndThirdCharacter',
+			'SecondCharacter',
+			'SecondAndThirdCharacter',
+			'ThirdCharacter',
+			'AllCharacters'
 		];
 
 	private var noteTypeIntMap:Map<Int, String> = new Map<Int, String>();

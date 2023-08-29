@@ -2057,7 +2057,7 @@ class PlayState extends MusicBeatState
 						{
 							if (SONG.notes[Math.floor(curStep / 16)].altAnim
 								|| daNote.noteType == 'Alt Animation'
-								|| daNote.noteType == 'vfx note')
+								|| daNote.noteType == 'VFX Note')
 							{
 								altAnim = '-alt';
 							}
@@ -2075,7 +2075,7 @@ class PlayState extends MusicBeatState
 							case 3:
 								animToPlay = 'singRIGHT';
 						}
-						if (daNote.noteType == 'vfx note' && isMugen)
+						if (daNote.noteType == 'VFX Note' && isMugen)
 						{
 							health -= daNote.hitHealth;
 
@@ -2088,23 +2088,19 @@ class PlayState extends MusicBeatState
 							switch (Math.abs(daNote.noteData))
 							{
 								case 0:
-									vfxR.x = 1011;
-									vfxR.y = 449;
+									vfx.setPosition(861, 449);
 									vfxR.animation.play('punchR', true);
 									FlxG.sound.play(Paths.sound('mugen/ronaldhit_left'), 1);
 								case 1:
-									vfxR.x = 1052;
-									vfxR.y = 730;
+									vfx.setPosition(902, 730);
 									vfxR.animation.play('punchR', true);
 									FlxG.sound.play(Paths.sound('mugen/ronaldhit_down'), 1);
 								case 2:
-									vfxR.x = 590;
-									vfxR.y = -52;
+									vfx.setPosition(440, -52);
 									vfxR.animation.play('punchR2', true);
 									FlxG.sound.play(Paths.sound('mugen/ronaldhit_up'), 1);
 								case 3:
-									vfxR.x = 889;
-									vfxR.y = 426;
+									vfx.setPosition(739, 426);
 									vfxR.animation.play('punchR2', true);
 									FlxG.sound.play(Paths.sound('mugen/ronaldhit_right'), 1);
 							}
@@ -3452,7 +3448,7 @@ class PlayState extends MusicBeatState
 
 				switch (note.noteType)
 				{
-					case 'stun note': // Stun note
+					case 'Stun Note': // Stun Note
 						{
 							timesStunned++;
 							triggerEventNote('Screen Shake', '0.2,0.01', '');
@@ -3505,7 +3501,7 @@ class PlayState extends MusicBeatState
 			if (!note.noAnimation)
 			{
 				var daAlt = '';
-				if (note.noteType == 'Alt Animation' || note.noteType == 'vfx note')
+				if (note.noteType == 'Alt Animation' || note.noteType == 'VFX Note')
 					daAlt = '-alt';
 
 				var animToPlay:String = '';
@@ -3521,7 +3517,7 @@ class PlayState extends MusicBeatState
 						animToPlay = 'singRIGHT';
 				}
 
-				if (isMugen && note.noteType == 'vfx note')
+				if (isMugen && note.noteType == 'VFX Note')
 				{
 					vfx.alpha = 1;
 					new FlxTimer().start(0.8, function(tmr:FlxTimer)
@@ -3535,23 +3531,19 @@ class PlayState extends MusicBeatState
 					{
 						case 0:
 							vfx.angle = 95;
-							vfx.x = 201;
-							vfx.y = 62;
+							vfx.setPosition(-51, 62);
 							FlxG.sound.play(Paths.sound('mugen/maavohit_left'), 1);
 						case 1:
 							vfx.angle = 85;
-							vfx.x = 332;
-							vfx.y = 493;
+							vfx.setPosition(82, 493);
 							FlxG.sound.play(Paths.sound('mugen/maavohit_down'), 1);
 						case 2:
 							vfx.angle = 65;
-							vfx.x = 353;
-							vfx.y = -43;
+							vfx.setPosition(103, -43);
 							FlxG.sound.play(Paths.sound('mugen/maavohit_up'), 1);
 						case 3:
 							vfx.angle = 30;
-							vfx.x = 507;
-							vfx.y = 92;
+							vfx.setPosition(357, 92);
 							FlxG.sound.play(Paths.sound('mugen/maavohit_right'), 1);
 					}
 					vfx.animation.play('punch', true);
