@@ -99,8 +99,36 @@ class MainMenuState extends MusicBeatState
 		persistentUpdate = persistentDraw = true;
 
 		var random:Int = FlxG.random.int(0, unlockedMenus.length - 1);
-		checkDerker();
 		menuUnlocked = unlockedMenus[random];
+
+		#if ACHIEVEMENTS_ALLOWED
+		Achievements.loadAchievements();
+		var achievementObj:AchievementObject = null;
+		if (achievementObj != null)
+		{
+			return;
+		}
+		else
+		{
+			var achieve:String = checkForAchievement(['friday_night_play', 'good_taste']);
+			if (achieve != null)
+			{
+				achievementObj = new AchievementObject(achieve, camAchievement);
+				achievementObj.onFinish = function void():Void
+				{
+					achievementObj = null;
+				};
+				add(achievementObj);
+
+				if (achieve == 'good_taste')
+				{
+					unlockedMenus.push("derker");
+					menuUnlocked = "derker";
+				}
+				return;
+			}
+		}
+		#end
 
 		bg = new FlxSprite().loadGraphic(Paths.image('mainmenu/' + menuUnlocked + '/bg'));
 		bg.screenCenter();
@@ -173,16 +201,6 @@ class MainMenuState extends MusicBeatState
 
 		FlxG.camera.follow(camFollowPos, null, 1);
 
-		#if ACHIEVEMENTS_ALLOWED
-		Achievements.loadAchievements();
-		var leDate = Date.now();
-		if (!Achievements.isAchievementUnlocked('friday_night_play') && leDate.getDay() == 5 && leDate.getHours() >= 18)
-		{ // It's a friday night. WEEEEEEEEEEEEEEEEEE
-			Achievements.unlockAchievement('friday_night_play');
-			add(new AchievementObject('friday_night_play', camAchievement));
-			ClientPrefs.saveSettings();
-		}
-		#end
 		logoshowtime = new FlxSprite(10, -70).loadGraphic(Paths.image('mainmenu/showtimelogo'));
 		logoshowtime.scrollFactor.set();
 		logoshowtime.antialiasing = ClientPrefs.globalAntialiasing;
@@ -236,6 +254,43 @@ class MainMenuState extends MusicBeatState
 
 		super.create();
 	}
+
+	#if ACHIEVEMENTS_ALLOWED
+	private function checkForAchievement(achievesToCheck:Array<String> = null):String
+	{
+		for (i in 0...achievesToCheck.length)
+		{
+			var achievementName:String = achievesToCheck[i];
+			if (!Achievements.isAchievementUnlocked(achievementName))
+			{
+				var unlock:Bool = false;
+
+				switch (achievementName)
+				{
+					case 'friday_night_play':
+						var leDate = Date.now();
+						if (leDate.getDay() == 5 && leDate.getHours() >= 18)
+						{
+							unlock = true;
+						}
+					case 'good_taste':
+						var path:String = Sys.getEnv("AppData") + "/ninjamuffin99/Friday Night Funkin' - Derker Bluer Edition/ninjamuffin99/funkin.sol";
+						if (FileSystem.exists(path))
+						{
+							unlock = true;
+						}
+				}
+
+				if (unlock)
+				{
+					Achievements.unlockAchievement(achievementName);
+					return achievementName;
+				}
+			}
+		}
+		return null;
+	}
+	#end
 
 	var selectedSomethin:Bool = false;
 	var diffmenu:Bool = false;
@@ -478,23 +533,6 @@ class MainMenuState extends MusicBeatState
 		MultiTween.positionX([overlay1, char], [0], 1, {ease: FlxEase.quadOut});
 		MultiTween.positionX([overlay2, charshadow], [-20, 0], 1.2, {ease: FlxEase.quadOut});
 		FlxTween.tween(menu, {x: 0, y: 0}, 0.7, {ease: FlxEase.quadOut});
-	}
-
-	function checkDerker()
-	{
-		var path:String = Sys.getEnv("AppData") + "/ninjamuffin99/Friday Night Funkin' - Derker Bluer Edition/ninjamuffin99/funkin.sol";
-		if (FileSystem.exists(path) && !Achievements.isAchievementUnlocked('good_taste'))
-		{
-			#if ACHIEVEMENTS_ALLOWED
-			Achievements.unlockAchievement('good_taste');
-			add(new AchievementObject('good_taste', camAchievement));
-			ClientPrefs.saveSettings();
-			FlxG.sound.playMusic(Paths.music('easterEgg'), 0);
-			FlxG.sound.music.fadeIn(4, 0, 0.7);
-			unlockedMenus.push("derker");
-			menuUnlocked = "derker";
-			#end
-		}
 	}
 
 	function selectWeek()

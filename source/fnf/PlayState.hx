@@ -138,6 +138,8 @@ class PlayState extends MusicBeatState
 	public var boyfriend:Boyfriend;
 	public var boyfriend2:Boyfriend;
 
+	var eventChar:Character;
+
 	public var notes:FlxTypedGroup<Note>;
 	public var unspawnNotes:Array<Note> = [];
 	public var eventNotes:Array<Dynamic> = [];
@@ -623,6 +625,7 @@ class PlayState extends MusicBeatState
 		dad = new Character(0, 0, SONG.player2);
 		startCharacterPos(dad, true);
 		dadGroup.add(dad);
+		eventChar = dad;
 
 		if (isLightOn)
 		{
@@ -2535,6 +2538,7 @@ class PlayState extends MusicBeatState
 					case 1:
 						if (dad.curCharacter != value2)
 						{
+							eventChar = dad;
 							if (!dadMap.exists(value2))
 							{
 								addCharacterToList(value2, charType);
@@ -2580,79 +2584,20 @@ class PlayState extends MusicBeatState
 						}
 				}
 				reloadHealthBarColors();
-			case 'Update Health Bar':
+			case 'Update Bar':
 				var charType:Int = Std.parseInt(value1);
 				if (Math.isNaN(charType))
 					charType = 0;
 
+				eventChar = new Character(0, 0, value2);
 				switch (charType)
 				{
 					case 0:
-						if (boyfriend.curCharacter != value2)
-						{
-							if (!boyfriendMap.exists(value2))
-							{
-								addCharacterToList(value2, charType);
-							}
-
-							boyfriend.visible = false;
-							boyfriend = boyfriendMap.get(value2);
-							if (!boyfriend.alreadyLoaded)
-							{
-								boyfriend.alpha = 1;
-								boyfriend.alreadyLoaded = true;
-							}
-							boyfriend.visible = true;
-							iconP1.changeIcon(boyfriend.healthIcon);
-						}
+						iconP1.changeIcon(eventChar.healthIcon);
 					case 1:
-						if (dad.curCharacter != value2)
-						{
-							if (!dadMap.exists(value2))
-							{
-								addCharacterToList(value2, charType);
-							}
-
-							var wasGf:Bool = dad.curCharacter.startsWith('gf');
-							dad.visible = false;
-							dad = dadMap.get(value2);
-							if (!dad.curCharacter.startsWith('gf'))
-							{
-								if (wasGf)
-								{
-									gf.visible = true;
-								}
-							}
-							else
-							{
-								gf.visible = false;
-							}
-							if (!dad.alreadyLoaded)
-							{
-								dad.alpha = 1;
-								dad.alreadyLoaded = true;
-							}
-							dad.visible = true;
-							iconP2.changeIcon(dad.healthIcon);
-						}
-					case 2:
-						if (gf.curCharacter != value2)
-						{
-							if (!gfMap.exists(value2))
-							{
-								addCharacterToList(value2, charType);
-							}
-
-							gf.visible = false;
-							gf = gfMap.get(value2);
-							if (!gf.alreadyLoaded)
-							{
-								gf.alpha = 1;
-								gf.alreadyLoaded = true;
-							}
-						}
+						iconP2.changeIcon(eventChar.healthIcon);
 				}
-				reloadHealthBarColors();
+				FlxTween.color(healthBarBG, 0.75, healthBarBG.color, FlxColor.fromRGB(eventChar.healthColorArray[0], eventChar.healthColorArray[1], eventChar.healthColorArray[2]));
 			case 'Change Scroll Speed':
 				var val1:Float = Std.parseFloat(value1);
 				var val2:Float = Std.parseFloat(value2);
@@ -2705,8 +2650,16 @@ class PlayState extends MusicBeatState
 		if (isDad)
 		{
 			camFollow.set(dad.getMidpoint().x + 150, dad.getMidpoint().y - 100);
-			camFollow.x += dad.cameraPosition[0];
-			camFollow.y += dad.cameraPosition[1];
+			if (eventChar.curCharacter == dad.curCharacter)
+			{
+				camFollow.x += dad.cameraPosition[0];
+				camFollow.y += dad.cameraPosition[1];
+			}
+			else
+			{
+				camFollow.x += eventChar.cameraPosition[0];
+				camFollow.y += eventChar.cameraPosition[1];
+			}
 
 			if (ClientPrefs.dynamicCamera)
 			{

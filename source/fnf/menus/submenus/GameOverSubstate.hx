@@ -85,6 +85,8 @@ class GameOverSubstate extends MusicBeatSubstate
 		FlxG.cameras.add(camAchievement);
 		super.create();
 	}
+	
+	var selectedSmthg:Bool = false;
 
 	override function update(elapsed:Float)
 	{
@@ -96,26 +98,30 @@ class GameOverSubstate extends MusicBeatSubstate
 			var lerpVal:Float = CoolUtil.boundTo(elapsed * 0.6, 0, 1);
 			camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 		}
+		
+		if (!selectedSmthg){
+			if (controls.ACCEPT && !selectedSmthg)
+			{
+				selectedSmthg = true;
+				endBullshit();
+			}
+			if (controls.BACK)
+			{
+				selectedSmthg = true;
+				FlxG.sound.music.stop();
+				PlayState.deathCounter = 0;
+				PlayState.seenCutscene = false;
 
-		if (controls.ACCEPT)
-		{
-			endBullshit();
+				if (PlayState.isStoryMode)
+					MusicBeatState.switchState(new MainMenuState());
+				else
+					MusicBeatState.switchState(new FreeplayState());
+
+				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				lePlayState.callOnLuas('onGameOverConfirm', [false]);
+			}
 		}
-
-		if (controls.BACK)
-		{
-			FlxG.sound.music.stop();
-			PlayState.deathCounter = 0;
-			PlayState.seenCutscene = false;
-
-			if (PlayState.isStoryMode)
-				MusicBeatState.switchState(new MainMenuState());
-			else
-				MusicBeatState.switchState(new FreeplayState());
-
-			FlxG.sound.playMusic(Paths.music('freakyMenu'));
-			lePlayState.callOnLuas('onGameOverConfirm', [false]);
-		}
+		
 
 		if (bf.animation.curAnim.name == 'firstDeath')
 		{

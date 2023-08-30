@@ -7,14 +7,9 @@ local stuned = false
 
 local solo = false
 
-function onCreate()
-	makeLuaSprite('flash', '', 0, 0)
-    makeGraphic('flash',1286,724,'000000')
-	setLuaSpriteScrollFactor('flash',0,0)
-	setObjectCamera('flash', 'camhud')
-	setProperty('flash.visible', false)
-	addLuaSprite('flash', true)
+local danceDir = false
 
+function onCreate()
 	makeAnimatedLuaSprite('redloop', 'show/sky-red', -150, -40)
 	addAnimationByPrefix('redloop', 'intro', 'intro', 56, false)
 	addAnimationByPrefix('redloop', 'loop', 'loop', 60, true)
@@ -25,18 +20,19 @@ function onCreate()
 	setProperty('redloop.visible', false)
 	setObjectOrder('redloop', 1)
 	
-	makeAnimatedLuaSprite('mari', 'maritzamasterpiece', 260, 100)
-	addAnimationByPrefix('mari', 'idle', 'danceleft', 24, false)
-    addAnimationByPrefix('mari', '0', 'left', 26, false)
-    addAnimationByPrefix('mari', '1', 'down', 26, false)
-    addAnimationByPrefix('mari', '2', 'up', 26, false)
-    addAnimationByPrefix('mari', '3', 'right', 26, false)
+	makeAnimatedLuaSprite('mari', 'characters/maritzamasterpiece', 260, 100)
+	addAnimationByIndices('mari', 'danceLeft', 'maritza_danceright', '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21', 24)
+	addAnimationByIndices('mari', 'danceRight', 'maritza_danceright', '21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7 ,6, 5, 4, 3, 2, 1, 0', 24)
+    addAnimationByPrefix('mari', '0', 'maritza_left', 26, false)
+    addAnimationByPrefix('mari', '1', 'maritza_down', 26, false)
+    addAnimationByPrefix('mari', '2', 'maritza_up', 26, false)
+    addAnimationByPrefix('mari', '3', 'maritza_right', 26, false)
 	addAnimationByPrefix('mari', 'showIdle', 'shou', 24, false)
-	addAnimationByPrefix('mari', 'showDance', 'show', 24, true)
-	objectPlayAnimation('mari', 'idle')
+	addAnimationByPrefix('mari', 'showDance', 'show2', 24, true)
+	objectPlayAnimation('mari', 'danceLeft')
 	addLuaSprite('mari', false)
 	
-	makeAnimatedLuaSprite('iv', 'ivettemasterpiece', -580, 15)
+	makeAnimatedLuaSprite('iv', 'characters/ivettemasterpiece', -580, 15)
 	addAnimationByPrefix('iv', 'idle', 'IvetteIdle', 24, false)
     addAnimationByPrefix('iv', '0', 'Izquierda', 26, false)
     addAnimationByPrefix('iv', '1', 'Abajo', 26, false) 
@@ -60,8 +56,14 @@ function onBeatHit()
 		if 	ivDance == false then
 			objectPlayAnimation('iv', 'idle', true)
 		end
-		if 	maDance == false and curBeat % 2 == 0 then
-			objectPlayAnimation('mari', 'idle', true)
+		if 	maDance == false then
+			if danceDir == true then
+				danceDir = false; 
+				objectPlayAnimation('mari', 'danceLeft', true)
+			else 
+				danceDir = true; 
+				objectPlayAnimation('mari', 'danceRight', true) 
+			end
 		end
 	else
 		if dancin == false then
@@ -74,28 +76,23 @@ end
 
 function onStepHit()
 	if curStep == 895 then
-		setProperty('flash.visible', true)
 		setProperty('gf.alpha', 0)
 		setProperty('redloop.visible', true)		
 		setProperty('redloop.animation.curAnim.curFrame', 0)
-		doTweenAlpha('FLASH','flash',0,1,'linear')
        	maDance = true
 		solo = true
 		ivDance = false
 		objectPlayAnimation('mari', 'showIdle',true)
 		objectPlayAnimation('iv', 'showIdle',true)
-   	 end
-
+   	end
 	if curStep == 1022 then
 		objectPlayAnimation('redloop','intro',true)
     end
-	
 	if curStep == 1024 then
 		dancin = true
 		objectPlayAnimation('mari','showDance',true)
 		objectPlayAnimation('redloop','loop',true)		
     end
-	
 	if curStep == 1408 then
 		solo = false
 		dancin = false
@@ -131,8 +128,4 @@ function onTimerCompleted(tag)
 	if tag == 'ivNote' then
 		ivDance = false
 	end
-	if tag == 'nostuneao' then
-        stuned = false;
-        setProperty('boyfriend.stunned', false);
-    end
 end

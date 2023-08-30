@@ -151,13 +151,6 @@
 				"typeOfSection": 0,
 				"sectionNotes": [
 					[
-						17142.8571428571,
-						-1,
-						"Change Character",
-						"0",
-						"bf-masterpiece"
-					],
-					[
 						17619.0476190476,
 						-1,
 						"Add Camera Zoom",
@@ -191,7 +184,7 @@
 					[
 						19047.619047619,
 						-1,
-						"Change Character",
+						"Update Bar",
 						"1",
 						"maavo-masterpieceI"
 					],
@@ -384,7 +377,7 @@
 					[
 						30476.1904761905,
 						-1,
-						"Change Character",
+						"Update Bar",
 						"1",
 						"maavo-masterpieceM"
 					],
@@ -453,7 +446,7 @@
 					[
 						34285.7142857143,
 						-1,
-						"Change Character",
+						"Update Bar",
 						"1",
 						"maavo-masterpiece"
 					],
@@ -699,7 +692,7 @@
 					[
 						55238.0952380953,
 						-1,
-						"Change Character",
+						"Update Bar",
 						"1",
 						"maavo-masterpieceI"
 					]
@@ -734,7 +727,7 @@
 					[
 						60952.380952381,
 						-1,
-						"Change Character",
+						"Update Bar",
 						"1",
 						"maavo-masterpieceM"
 					],
@@ -871,7 +864,7 @@
 					[
 						72380.9523809525,
 						-1,
-						"Change Character",
+						"Update Bar",
 						"1",
 						"maavo-masterpiece"
 					],
@@ -1062,7 +1055,7 @@
 					[
 						78095.2380952382,
 						-1,
-						"Change Character",
+						"Update Bar",
 						"1",
 						"maavo-masterpieceI"
 					],
@@ -1100,7 +1093,7 @@
 					[
 						80000.0000000001,
 						-1,
-						"Change Character",
+						"Update Bar",
 						"1",
 						"maavo-masterpieceM"
 					],
@@ -1138,7 +1131,7 @@
 					[
 						81904.7619047621,
 						-1,
-						"Change Character",
+						"Update Bar",
 						"1",
 						"maavo-masterpiece"
 					],
@@ -1331,7 +1324,7 @@
 					[
 						93333.3333333334,
 						-1,
-						"Change Character",
+						"Update Bar",
 						"1",
 						"maavo-masterpieceI"
 					],
@@ -1369,7 +1362,7 @@
 					[
 						95238.0952380954,
 						-1,
-						"Change Character",
+						"Update Bar",
 						"1",
 						"maavo-masterpieceM"
 					],
@@ -1407,7 +1400,7 @@
 					[
 						97142.8571428573,
 						-1,
-						"Change Character",
+						"Update Bar",
 						"1",
 						"maavo-masterpiece"
 					],
@@ -2592,6 +2585,13 @@
 						-1,
 						"Change Character",
 						"1",
+						"maavo-masterpiece"
+					],
+					[
+						167618.675595239,
+						-1,
+						"Update Bar",
+						"1",
 						"maavo-masterpiece2"
 					],
 					[
@@ -2677,13 +2677,6 @@
 				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [
-					[
-						169523.809523809,
-						-1,
-						"Change Character",
-						"0",
-						"bf-masterpiece"
-					],
 					[
 						170000,
 						-1,
