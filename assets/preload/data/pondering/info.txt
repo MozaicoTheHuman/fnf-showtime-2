@@ -1,2 +1,1 @@
-name = Pondering (Showtime Mix)
-artist = Soga Celeste ft. FlameMind
+Soga Celeste ft. FlameMind:Pondering (Showtime Mix)

@@ -1,2 +1,1 @@
-name = kfm.mid
-artist = JustDemianAgain ft. NaxoAtWork
+JustDemianAgain ft. NaxoAtWork:kfm.mid

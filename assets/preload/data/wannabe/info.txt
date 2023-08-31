@@ -1,2 +1,1 @@
-name = Wannabe
-artist = Derker Bluer
+Derker Bluer:Wannabe

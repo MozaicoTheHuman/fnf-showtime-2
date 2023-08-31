@@ -1,2 +1,1 @@
-name = Showtime
-artist = Joan Atlas ft. Ejsu Multimedia
+Joan Atlas ft. Ejsu Multimedia:Showtime

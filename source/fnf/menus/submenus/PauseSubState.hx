@@ -60,26 +60,30 @@ class PauseSubState extends MusicBeatSubstate
 		bg.scrollFactor.set();
 		add(bg);
 
-		var levelInfo:FlxText = new FlxText(20, 15, 0, "", 32);
+		var infoArray:Array<String> = Song.loadInfoTXT(Paths.formatToSongPath(PlayState.SONG.song));
 
-		if (PlayState.SONG.song.toLowerCase() == "mugen")
-			levelInfo.text += PlayState.SONG.song.toUpperCase();
-		else
-			levelInfo.text += PlayState.SONG.song;
+		var levelName:FlxText = new FlxText(20, 15, 0, "", 32);
+		levelName.text += infoArray[1];
+		levelName.scrollFactor.set();
+		levelName.setFormat(Paths.font("vcr.ttf"), 32);
+		levelName.updateHitbox();
+		add(levelName);
 
-		levelInfo.scrollFactor.set();
-		levelInfo.setFormat(Paths.font("vcr.ttf"), 32);
-		levelInfo.updateHitbox();
-		add(levelInfo);
+		var levelArtist:FlxText = new FlxText(20, 47, 0, "", 24);
+		levelArtist.text += "By: " + infoArray[0];
+		levelArtist.scrollFactor.set();
+		levelArtist.setFormat(Paths.font("vcr.ttf"), 24);
+		levelArtist.updateHitbox();
+		add(levelArtist);
 
-		var levelDifficulty:FlxText = new FlxText(20, 15 + 32, 0, "", 32);
+		var levelDifficulty:FlxText = new FlxText(20, 15, 0, "", 32);
 		levelDifficulty.text += CoolUtil.difficultyString();
 		levelDifficulty.scrollFactor.set();
 		levelDifficulty.setFormat(Paths.font('vcr.ttf'), 32);
 		levelDifficulty.updateHitbox();
 		add(levelDifficulty);
 
-		var blueballedTxt:FlxText = new FlxText(20, 15 + 64, 0, "", 32);
+		var blueballedTxt:FlxText = new FlxText(20, 47, 0, "", 32);
 		blueballedTxt.text = "Blueballed: " + PlayState.deathCounter;
 		blueballedTxt.scrollFactor.set();
 		blueballedTxt.setFormat(Paths.font('vcr.ttf'), 32);
@@ -102,18 +106,19 @@ class PauseSubState extends MusicBeatSubstate
 		botplayText.visible = PlayState.cpuControlled;
 		add(botplayText);
 
-		blueballedTxt.alpha = 0;
+		levelName.alpha = 0;
+		levelArtist.alpha = 0;
 		levelDifficulty.alpha = 0;
-		levelInfo.alpha = 0;
+		blueballedTxt.alpha = 0;
 
-		levelInfo.x = FlxG.width - (levelInfo.width + 20);
 		levelDifficulty.x = FlxG.width - (levelDifficulty.width + 20);
 		blueballedTxt.x = FlxG.width - (blueballedTxt.width + 20);
 
 		FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.quartInOut});
-		FlxTween.tween(levelInfo, {alpha: 1, y: 20}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
-		FlxTween.tween(levelDifficulty, {alpha: 1, y: levelDifficulty.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
-		FlxTween.tween(blueballedTxt, {alpha: 1, y: blueballedTxt.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.7});
+		FlxTween.tween(levelName, {alpha: 1, y: 20}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
+		FlxTween.tween(levelArtist, {alpha: 1, y: 52}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
+		FlxTween.tween(levelDifficulty, {alpha: 1, y: 20}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
+		FlxTween.tween(blueballedTxt, {alpha: 1, y: 52}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
 
 		grpMenuShit = new FlxTypedGroup<Alphabet>();
 		add(grpMenuShit);

@@ -1,2 +1,1 @@
-name = Tokyo Teddy Bear
-artist = Neru (Cover by DIA, UST by Tanjiro Taidana)
+Neru (Cover by DIA, UST by Tanjiro Taidana):Tokyo Teddy Bear

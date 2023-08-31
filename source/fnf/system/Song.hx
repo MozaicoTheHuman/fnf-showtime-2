@@ -51,6 +51,13 @@ class Song
 		this.bpm = bpm;
 	}
 
+	public static function loadInfoTXT(input:String):Array<String>
+	{
+		var file:String = File.getContent(Paths.txt(input + '/info'));
+		var info:Array<String> = file.split(":");
+		return info;
+	}
+
 	public static function loadFromJson(jsonInput:String, ?folder:String):SwagSong
 	{
 		var rawJson = null;

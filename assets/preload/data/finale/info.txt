@@ -1,2 +1,1 @@
-name = Finale
-artist = Derker Bluer
+Derker Bluer:Finale

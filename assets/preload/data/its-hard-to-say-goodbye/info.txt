@@ -1,2 +1,1 @@
-name = It's Hard to say Goodbye
-artist = Ejsu Multimedia
+Ejsu Multimedia:It's Hard to say Goodbye

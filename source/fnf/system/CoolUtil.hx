@@ -77,7 +77,6 @@ class CoolUtil
 		if (OpenFLAssets.exists(path))
 			daList = OpenFLAssets.getText(path).trim().split('\n');
 		#end
-		trace(daList);
 
 		for (i in 0...daList.length)
 		{

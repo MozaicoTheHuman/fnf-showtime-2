@@ -1,2 +1,1 @@
-name = Light On!
-artist = Vtroy Jerof
+Vtroy Jerof:Light On!

@@ -457,7 +457,7 @@ class Paths
 
 	inline static public function modsTxt(key:String)
 	{
-		return modFolders('images/' + key + '.txt');
+		return modFolders('data/' + key + '.txt');
 	}
 
 	static public function modFolders(key:String)
