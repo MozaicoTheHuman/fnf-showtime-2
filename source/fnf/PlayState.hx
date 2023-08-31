@@ -138,7 +138,8 @@ class PlayState extends MusicBeatState
 	public var boyfriend:Boyfriend;
 	public var boyfriend2:Boyfriend;
 
-	var eventChar:Character;
+	var dadEventChar:Character;
+	var bfEventChar:Character;
 
 	public var notes:FlxTypedGroup<Note>;
 	public var unspawnNotes:Array<Note> = [];
@@ -625,7 +626,7 @@ class PlayState extends MusicBeatState
 		dad = new Character(0, 0, SONG.player2);
 		startCharacterPos(dad, true);
 		dadGroup.add(dad);
-		eventChar = dad;
+		dadEventChar = dad;
 
 		if (isLightOn)
 		{
@@ -637,6 +638,7 @@ class PlayState extends MusicBeatState
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
+		bfEventChar = boyfriend;
 
 		var camPos:FlxPoint = new FlxPoint(gf.getGraphicMidpoint().x, gf.getGraphicMidpoint().y);
 		camPos.x += gf.cameraPosition[0];
@@ -2534,11 +2536,12 @@ class PlayState extends MusicBeatState
 							}
 							boyfriend.visible = true;
 							iconP1.changeIcon(boyfriend.healthIcon);
+							
+							bfEventChar = boyfriend;
 						}
 					case 1:
 						if (dad.curCharacter != value2)
 						{
-							eventChar = dad;
 							if (!dadMap.exists(value2))
 							{
 								addCharacterToList(value2, charType);
@@ -2565,6 +2568,8 @@ class PlayState extends MusicBeatState
 							}
 							dad.visible = true;
 							iconP2.changeIcon(dad.healthIcon);
+							
+							dadEventChar = dad;
 						}
 					case 2:
 						if (gf.curCharacter != value2)
@@ -2589,15 +2594,17 @@ class PlayState extends MusicBeatState
 				if (Math.isNaN(charType))
 					charType = 0;
 
-				eventChar = new Character(0, 0, value2);
+				var eventChar:Character = new Character(0, 0, value2);
 				switch (charType)
 				{
 					case 0:
+						bfEventChar = eventChar;
 						iconP1.changeIcon(eventChar.healthIcon);
 					case 1:
+						dadEventChar = eventChar;
 						iconP2.changeIcon(eventChar.healthIcon);
+						FlxTween.color(healthBarBG, 0.75, healthBarBG.color, FlxColor.fromRGB(eventChar.healthColorArray[0], eventChar.healthColorArray[1], eventChar.healthColorArray[2]));
 				}
-				FlxTween.color(healthBarBG, 0.75, healthBarBG.color, FlxColor.fromRGB(eventChar.healthColorArray[0], eventChar.healthColorArray[1], eventChar.healthColorArray[2]));
 			case 'Change Scroll Speed':
 				var val1:Float = Std.parseFloat(value1);
 				var val2:Float = Std.parseFloat(value2);
@@ -2650,15 +2657,15 @@ class PlayState extends MusicBeatState
 		if (isDad)
 		{
 			camFollow.set(dad.getMidpoint().x + 150, dad.getMidpoint().y - 100);
-			if (eventChar.curCharacter == dad.curCharacter)
+			if (dadEventChar.curCharacter == dad.curCharacter)
 			{
 				camFollow.x += dad.cameraPosition[0];
 				camFollow.y += dad.cameraPosition[1];
 			}
 			else
 			{
-				camFollow.x += eventChar.cameraPosition[0];
-				camFollow.y += eventChar.cameraPosition[1];
+				camFollow.x += dadEventChar.cameraPosition[0];
+				camFollow.y += dadEventChar.cameraPosition[1];
 			}
 
 			if (ClientPrefs.dynamicCamera)
@@ -2672,8 +2679,16 @@ class PlayState extends MusicBeatState
 		else
 		{
 			camFollow.set(boyfriend.getMidpoint().x - 100, boyfriend.getMidpoint().y - 100);
-			camFollow.x -= boyfriend.cameraPosition[0];
-			camFollow.y += boyfriend.cameraPosition[1];
+			if (bfEventChar.curCharacter == boyfriend.curCharacter)
+			{
+				camFollow.x -= boyfriend.cameraPosition[0];
+				camFollow.y += boyfriend.cameraPosition[1];
+			}
+			else
+			{
+				camFollow.x += bfEventChar.cameraPosition[0];
+				camFollow.y += bfEventChar.cameraPosition[1];
+			}
 
 			if (ClientPrefs.dynamicCamera)
 			{

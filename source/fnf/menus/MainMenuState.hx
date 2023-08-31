@@ -68,6 +68,7 @@ class MainMenuState extends MusicBeatState
 
 	var unlockedMenus:Array<String> = ["maritza", "maavo", "ivette"];
 	var menuUnlocked:String;
+	var achievementObj:AchievementObject = null;
 
 	private static var curDifficulty:Int = 1;
 
@@ -98,36 +99,15 @@ class MainMenuState extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
+		if (Achievements.isAchievementUnlocked('good_taste'))
+			unlockedMenus.push("derker");
+
 		var random:Int = FlxG.random.int(0, unlockedMenus.length - 1);
 		menuUnlocked = unlockedMenus[random];
 
 		#if ACHIEVEMENTS_ALLOWED
 		Achievements.loadAchievements();
-		var achievementObj:AchievementObject = null;
-		if (achievementObj != null)
-		{
-			return;
-		}
-		else
-		{
-			var achieve:String = checkForAchievement(['friday_night_play', 'good_taste']);
-			if (achieve != null)
-			{
-				achievementObj = new AchievementObject(achieve, camAchievement);
-				achievementObj.onFinish = function void():Void
-				{
-					achievementObj = null;
-				};
-				add(achievementObj);
-
-				if (achieve == 'good_taste')
-				{
-					unlockedMenus.push("derker");
-					menuUnlocked = "derker";
-				}
-				return;
-			}
-		}
+		tryAchievement();
 		#end
 
 		bg = new FlxSprite().loadGraphic(Paths.image('mainmenu/' + menuUnlocked + '/bg'));
@@ -253,6 +233,31 @@ class MainMenuState extends MusicBeatState
 		tweenLoop();
 
 		super.create();
+	}
+
+	function tryAchievement()
+	{
+		if (achievementObj != null)
+		{
+			return;
+		}
+		else
+		{
+			var achieve:String = checkForAchievement(['friday_night_play', 'good_taste']);
+			if (achieve != null)
+			{
+				achievementObj = new AchievementObject(achieve, camAchievement);
+				achievementObj.onFinish = function()
+				{
+					achievementObj = null;
+					tryAchievement();
+				};
+				add(achievementObj);
+
+				if (achieve == 'good_taste')
+					menuUnlocked = "derker";
+			}
+		}
 	}
 
 	#if ACHIEVEMENTS_ALLOWED

@@ -85,7 +85,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		FlxG.cameras.add(camAchievement);
 		super.create();
 	}
-	
+
 	var selectedSmthg:Bool = false;
 
 	override function update(elapsed:Float)
@@ -98,8 +98,9 @@ class GameOverSubstate extends MusicBeatSubstate
 			var lerpVal:Float = CoolUtil.boundTo(elapsed * 0.6, 0, 1);
 			camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 		}
-		
-		if (!selectedSmthg){
+
+		if (!selectedSmthg)
+		{
 			if (controls.ACCEPT && !selectedSmthg)
 			{
 				selectedSmthg = true;
@@ -121,7 +122,6 @@ class GameOverSubstate extends MusicBeatSubstate
 				lePlayState.callOnLuas('onGameOverConfirm', [false]);
 			}
 		}
-		
 
 		if (bf.animation.curAnim.name == 'firstDeath')
 		{
@@ -144,13 +144,11 @@ class GameOverSubstate extends MusicBeatSubstate
 		lePlayState.callOnLuas('onUpdatePost', [elapsed]);
 	}
 
-	#if ACHIEVEMENTS_ALLOWED
-	function checkAchievement()
+	function checkForAchievement(achievesToCheck:Array<String> = null)
 	{
-		var checkThis:Array<String> = ['manco', 'no_hands', 'gane', 'telones'];
-		for (i in 0...checkThis.length)
+		for (i in 0...achievesToCheck.length)
 		{
-			var achievementName:String = checkThis[i];
+			var achievementName:String = achievesToCheck[i];
 			if (!Achievements.isAchievementUnlocked(achievementName))
 			{
 				var unlock:Bool = false;
@@ -181,26 +179,44 @@ class GameOverSubstate extends MusicBeatSubstate
 				if (unlock)
 				{
 					Achievements.unlockAchievement(achievementName);
-					achieveObj(achievementName);
+					return achievementName;
 				}
+			}
+		}
+		return null;
+	}
+
+	var achievementObj:AchievementObject = null;
+
+	function tryAchievement()
+	{
+		if (achievementObj != null)
+		{
+			return;
+		}
+		else
+		{
+			var achieve:String = checkForAchievement(['manco', 'no_hands', 'gane', 'telones']);
+			if (achieve != null)
+			{
+				achievementObj = new AchievementObject(achieve, camAchievement);
+				achievementObj.onFinish = function()
+				{
+					achievementObj = null;
+					tryAchievement();
+				};
+				add(achievementObj);
+
+				if (achieve == 'gane')
+					add(new UnlockObject("lighton", camAchievement));
 			}
 		}
 	}
 
-	function achieveObj(achieve:String)
-	{
-		add(new AchievementObject(achieve, camAchievement));
-		if (achieve == 'gane')
-		{
-			add(new UnlockObject("lighton", camAchievement));
-		}
-	}
-	#end
-
 	function coolStartDeath(?volume:Float = 1):Void
 	{
 		#if ACHIEVEMENTS_ALLOWED
-		checkAchievement();
+		tryAchievement();
 		#end
 		FlxG.sound.playMusic(Paths.music(loopSoundName), volume);
 	}

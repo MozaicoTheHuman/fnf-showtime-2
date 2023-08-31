@@ -60,7 +60,7 @@ class AchievementsMenuState extends MusicBeatState
 		for (i in 0...options.length)
 		{
 			var achieveName:String = Achievements.achievementsStuff[achievementIndex[i]][2];
-			var optionText:Alphabet = new Alphabet(280, 300, Language.achievements[i].name, false);
+			var optionText:Alphabet = new Alphabet(280, 300, Language.achievements[achievementIndex[i]].name, false);
 			optionText.isMenuItem = true;
 			optionText.targetY = i - curSelected;
 			optionText.snapToPosition();
