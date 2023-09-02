@@ -50,7 +50,7 @@ class AchievementsMenuState extends MusicBeatState
 		Achievements.loadAchievements();
 		for (i in 0...Achievements.achievementsStuff.length)
 		{
-			if (!Achievements.achievementsStuff[i][3] || Achievements.achievementsMap.exists(Achievements.achievementsStuff[i][2]))
+			if (!Achievements.achievementsStuff[i][1] || Achievements.achievementsMap.exists(Achievements.achievementsStuff[i][0]))
 			{
 				options.push(Achievements.achievementsStuff[i]);
 				achievementIndex.push(i);
@@ -59,7 +59,7 @@ class AchievementsMenuState extends MusicBeatState
 
 		for (i in 0...options.length)
 		{
-			var achieveName:String = Achievements.achievementsStuff[achievementIndex[i]][2];
+			var achieveName:String = Achievements.achievementsStuff[achievementIndex[i]][0];
 			var optionText:Alphabet = new Alphabet(280, 300, Language.achievements[achievementIndex[i]].name, false);
 			optionText.isMenuItem = true;
 			optionText.targetY = i - curSelected;

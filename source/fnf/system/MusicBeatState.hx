@@ -1,6 +1,7 @@
 package fnf.system;
 
 import flixel.FlxBasic;
+import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxState;
 import flixel.FlxSubState;
@@ -9,7 +10,6 @@ import flixel.addons.ui.FlxUIState;
 import flixel.tweens.FlxTween;
 import fnf.system.Conductor.BPMChangeEvent;
 import fnf.system.visuals.CustomFadeTransition;
-import openfl.MemoryManagement;
 
 class MusicBeatState extends FlxUIState
 {

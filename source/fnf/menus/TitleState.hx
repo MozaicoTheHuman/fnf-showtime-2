@@ -49,11 +49,12 @@ class TitleState extends MusicBeatState
 
 	override public function create():Void
 	{
-		super.create();
 		MemoryManagement.init();
 		CacheManagement.init();
 
-		FlxG.game.focusLostFramerate = 24;
+		FlxG.fixedTimestep = false;
+		FlxG.game.focusLostFramerate = 60;
+		FlxG.keys.preventDefaultKeys = [TAB];
 		FlxG.sound.muteKeys = muteKeys;
 		FlxG.sound.volumeDownKeys = volumeDownKeys;
 		FlxG.sound.volumeUpKeys = volumeUpKeys;
@@ -61,6 +62,11 @@ class TitleState extends MusicBeatState
 
 		PlayerSettings.init();
 		curWacky = FlxG.random.getObject(getIntroTextShit());
+
+		super.create();
+
+		ClientPrefs.loadPrefs();
+		FlxG.mouse.visible = false;
 		FlxG.save.bind('data', 'Mozaico');
 		Highscore.load();
 
@@ -80,10 +86,15 @@ class TitleState extends MusicBeatState
 		}
 		else
 		{
-			new FlxTimer().start(1, function(tmr:FlxTimer)
-			{
+			if (initialized)
 				startIntro();
-			});
+			else
+			{
+				new FlxTimer().start(1, function(tmr:FlxTimer)
+				{
+					startIntro();
+				});
+			}
 		}
 	}
 

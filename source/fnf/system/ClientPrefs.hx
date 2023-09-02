@@ -48,6 +48,7 @@ class ClientPrefs
 
 	// Preferences
 	public static var language:String = "English";
+	public static var showSubs:Bool = false;
 	public static var downScroll:Bool = false;
 	public static var middleScroll:Bool = false;
 	public static var ghostTapping:Bool = true;
@@ -89,6 +90,7 @@ class ClientPrefs
 
 		// Preferences
 		save.data.language = language;
+		save.data.showSubs = showSubs;
 		save.data.downScroll = downScroll;
 		save.data.middleScroll = middleScroll;
 		save.data.ghostTapping = ghostTapping;
@@ -180,6 +182,10 @@ class ClientPrefs
 		if (save.data.language != null)
 		{
 			language = save.data.language;
+		}
+		if (save.data.showSubs != null)
+		{
+			showSubs = save.data.showSubs;
 		}
 		if (save.data.downScroll != null)
 		{

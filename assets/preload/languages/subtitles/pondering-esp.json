@@ -1,0 +1,28 @@
+{
+    "subtitles":[
+        {
+            "time": 2122,
+            "text": "Example A"
+        },
+        {
+            "time": 2132,
+            "text": "Example B"
+        },
+        {
+            "time": 2142,
+            "text": "Example C"
+        },
+        {
+            "time": 2152,
+            "text": "Example D"
+        },
+        {
+            "time": 2162,
+            "text": "Example E"
+        },
+        {
+            "time": 2172,
+            "text": "Example F"
+        }
+    ]
+}

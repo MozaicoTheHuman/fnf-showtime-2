@@ -12,6 +12,9 @@
 			"name": "Detective",
 			"description": "Put the secret command on the Title Screen."
 		},{
+			"name": "The Perfect Show",
+			"description": "Beat the song 'Showtime' on Hard with no misses"
+		},{
 			"name": "New Friend",
 			"description": "Beat the song 'Pondering (Showtime Mix)' on Hard with no misses"
 		},{
@@ -171,6 +174,9 @@
 			"options":[{
 					"name": "Language:",
 					"description": "Choose the game's language"
+				},{
+					"name": "Subtitles",
+					"description": "If checked, subtitles will show in cutscenes"
 				},{
 					"name": "Downscroll",
 					"description": "If checked, notes go Down instead of Up, simple enough."

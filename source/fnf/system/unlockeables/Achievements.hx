@@ -16,21 +16,22 @@ using StringTools;
 class Achievements
 {
 	public static var achievementsStuff:Array<Dynamic> = [
-		// Name, Description, ID Name, Hidden achievement
-		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'great_show', false],
-		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'gane', false],
-		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'expert', false],
-		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'detective', false],
-		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'pondering', false],
-		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'maavo_generations', false],
-		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'perfect', false],
-		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'sick', false],
-		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'manco', false],
-		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'no_hands', false],
-		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'perfeccionist', false],
-		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'telones', false],
-		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'friday_night_play', true],
-		["NAME IN LANGUAGE FILE", "DESC IN LANGUAGE FILE", 'good_taste', true]
+		// ID Name, Hidden achievement
+		['great_show', false],
+		['gane', false],
+		['expert', false],
+		['detective', false],
+		['showtime_perfect', false],
+		['pondering', false],
+		['maavo_generations', false],
+		['perfect', false],
+		['sick', false],
+		['manco', false],
+		['no_hands', false],
+		['perfeccionist', false],
+		['telones', false],
+		['friday_night_play', true],
+		['good_taste', true]
 	];
 	public static var achievementsMap:Map<String, Bool> = new Map<String, Bool>();
 
@@ -68,9 +69,9 @@ class Achievements
 	{
 		for (i in 0...achievementsStuff.length - 3)
 		{
-			trace("Checking: " + achievementsStuff[i][2]);
+			trace("Checking: " + achievementsStuff[i][0]);
 
-			if (!achievementsMap.exists(achievementsStuff[i][2]))
+			if (!achievementsMap.exists(achievementsStuff[i][0]))
 				return false;
 		}
 		return true;
@@ -80,7 +81,7 @@ class Achievements
 	{
 		for (i in 0...achievementsStuff.length)
 		{
-			if (achievementsStuff[i][2] == name)
+			if (achievementsStuff[i][0] == name)
 			{
 				return i;
 			}

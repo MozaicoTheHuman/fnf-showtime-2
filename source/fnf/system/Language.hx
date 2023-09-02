@@ -40,6 +40,17 @@ typedef LanguageData =
 	var cutscene:Array<String>;
 }
 
+typedef SubtitleStructure =
+{
+	var time:Float;
+	var text:String;
+}
+
+typedef SubtitlesData =
+{
+	var subtitles:Array<SubtitleStructure>;
+}
+
 class Language
 {
 	// All Avaiable Languages
@@ -52,6 +63,7 @@ class Language
 	};
 	public static var options:Array<OptionsMenuStructure> = [];
 	public static var cutscene:Array<String> = [];
+	public static var subtitles:Array<SubtitleStructure> = [];
 
 	public static function getLAN():String
 	{
@@ -77,5 +89,13 @@ class Language
 		credits = languageData.credits;
 		options = languageData.options;
 		cutscene = languageData.cutscene;
+	}
+
+	public static function getSubtitles(name:String):Array<SubtitleStructure>
+	{
+		var path:String = Paths.getPreloadPath('languages/subtitles/$name-${getLAN()}.json');
+		var rawJson = OpenFLAssets.getText(path);
+		var subsData:SubtitlesData = cast Json.parse(rawJson);
+		return subsData.subtitles;
 	}
 }

@@ -16,9 +16,7 @@ end
 function onBeatHit()
 	
 	if focasing == false then
-	    if curBeat % 2 == 0 then
-		    objectPlayAnimation('foca', 'idle', true)
-	    end
+		objectPlayAnimation('foca', 'idle', true)
 	end
 	
 end

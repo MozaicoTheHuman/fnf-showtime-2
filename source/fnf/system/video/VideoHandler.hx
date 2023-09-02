@@ -12,6 +12,7 @@ class VideoHandler
 {
 	public var path:String;
 	public var bitmap:VLCBitmap;
+	public var isVideoPlaying:Bool = false;
 
 	public var sprite:FlxSprite;
 	public var spriteWidth:Null<Int> = null;
@@ -66,13 +67,14 @@ class VideoHandler
 		{
 			bitmap.alpha = 0;
 		}
+		isVideoPlaying = true;
 	}
 
 	private function onVLCOpening():Void
 	{
 		trace("the video is opening!");
 
-		bitmap.volume = Std.int(#if FLX_SOUND_SYSTEM ((FlxG.sound.muted || !canUseSound) ? 0 : 1) * #end FlxG.sound.volume * 100);
+		bitmap.volume = Std.int((FlxG.sound.muted ? 0 : 1) * (FlxG.sound.volume * 100));
 
 		if (openingCallback != null)
 			openingCallback();
@@ -134,7 +136,7 @@ class VideoHandler
 			bitmap.height = calcSize(1);
 		}
 
-		bitmap.volume = Std.int(#if FLX_SOUND_SYSTEM ((FlxG.sound.muted || !canUseSound) ? 0 : 1) * #end FlxG.sound.volume * 100);
+		bitmap.volume = Std.int((FlxG.sound.muted ? 0 : 1) * (FlxG.sound.volume * 100));
 	}
 
 	function pauseFocus():Void

@@ -133,6 +133,7 @@ class PlayState extends MusicBeatState
 	public static var storyDifficulty:Int = 1;
 
 	public var vocals:FlxSound;
+
 	public var dad:Character;
 	public var gf:Character;
 	public var boyfriend:Boyfriend;
@@ -243,9 +244,9 @@ class PlayState extends MusicBeatState
 
 	var comboGroup:FlxSpriteGroup;
 
-	var isLightOn:Bool = false;
-	var isTokyo:Bool = false;
-	var isMugen:Bool = false;
+	public static var isLightOn:Bool = false;
+	public static var isTokyo:Bool = false;
+	public static var isMugen:Bool = false;
 
 	var lan:String;
 	// Tokyo
@@ -892,12 +893,15 @@ class PlayState extends MusicBeatState
 
 		if (isStoryMode && !seenCutscene)
 		{
-			if (daSong == 'lovely')
-				introCutscene();
-			else
-				startVideo(daSong);
-
-			seenCutscene = true;
+			switch (daSong)
+			{
+				case 'lovely':
+					introCutscene();
+				case 'wannabe' | 'finale':
+					startVideo(daSong);
+				case 'showtime':
+					showtimeCutscene();
+			}
 		}
 		else
 		{
@@ -1042,6 +1046,31 @@ class PlayState extends MusicBeatState
 		char.y += char.positionArray[1];
 	}
 
+	function showtimeCutscene()
+	{
+		var blackFade:FlxSprite = new FlxSprite(0, 0).makeGraphic(1286, 726, FlxColor.BLACK);
+		blackFade.cameras = [camHUD];
+		add(blackFade);
+
+		var subs:Array<SubtitleStructure> = Language.getSubtitles(Paths.formatToSongPath(SONG.song));
+		var subText:FlxText = new FlxText(50, 600, 1180, "", 32);
+		subText.setFormat(Paths.font("arial.ttf"), 32, FlxColor.YELLOW, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		subText.scrollFactor.set();
+		subText.borderSize = 2.4;
+		subText.cameras = [camHUD];
+		subText.text = subs[0].text;
+		add(subText);
+
+		FlxG.sound.play(Paths.sound('showtime-cutscene'));
+
+		FlxTween.tween(blackFade, {alpha: 0}, 10, {startDelay: 4});
+		new FlxTimer().start(4, function(tmr:FlxTimer)
+		{
+			remove(subText);
+			startCountdown(true);
+		});
+	}
+
 	function introCutscene()
 	{
 		finishedText = false;
@@ -1152,13 +1181,14 @@ class PlayState extends MusicBeatState
 	// For being able to mess with the sprites on Lua
 	public var countDownSprites:Array<FlxSprite> = [];
 
-	public function startCountdown():Void
+	public function startCountdown(skipTimer:Bool = false):Void
 	{
 		if (startedCountdown)
 		{
 			callOnLuas('onStartCountdown', []);
 			return;
 		}
+		seenCutscene = true;
 
 		inCutscene = false;
 		var ret:Dynamic = callOnLuas('onStartCountdown', []);
@@ -1181,12 +1211,13 @@ class PlayState extends MusicBeatState
 
 			startedCountdown = true;
 			Conductor.songPosition = 0;
-			Conductor.songPosition -= Conductor.crochet * 5;
+			Conductor.songPosition -= skipTimer ? 0 : Conductor.crochet * 5;
 			setOnLuas('startedCountdown', true);
 
-			var swagCounter:Int = 0;
+			var swagCounter:Int = skipTimer ? 4 : 0;
+			var timeTimer:Float = skipTimer ? 0.01 : Conductor.crochet / 1000;
 
-			startTimer = new FlxTimer().start(Conductor.crochet / 1000, function(tmr:FlxTimer)
+			startTimer = new FlxTimer().start(timeTimer, function(tmr:FlxTimer)
 			{
 				if (tmr.loopsLeft % gfSpeed == 0
 					&& !gf.stunned
@@ -1763,7 +1794,7 @@ class PlayState extends MusicBeatState
 				CoolUtil.playSoundMenu('pause');
 				if (FlxG.sound.music != null)
 				{
-					if (isTokyo && !ClientPrefs.lowQuality)
+					if (isTokyo && !ClientPrefs.lowQuality && tokyoVideo.isVideoPlaying)
 						tokyoVideo.pause();
 					FlxG.sound.music.pause();
 					vocals.pause();
@@ -2284,7 +2315,7 @@ class PlayState extends MusicBeatState
 				if (isTokyo && !ClientPrefs.lowQuality)
 					tokyoVideo.bitmap.stop();
 
-				openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y, this));
+				openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, dad.x, dad.y, this));
 				for (tween in modchartTweens)
 				{
 					tween.active = true;
@@ -2536,7 +2567,7 @@ class PlayState extends MusicBeatState
 							}
 							boyfriend.visible = true;
 							iconP1.changeIcon(boyfriend.healthIcon);
-							
+
 							bfEventChar = boyfriend;
 						}
 					case 1:
@@ -2568,7 +2599,7 @@ class PlayState extends MusicBeatState
 							}
 							dad.visible = true;
 							iconP2.changeIcon(dad.healthIcon);
-							
+
 							dadEventChar = dad;
 						}
 					case 2:
@@ -2603,7 +2634,8 @@ class PlayState extends MusicBeatState
 					case 1:
 						dadEventChar = eventChar;
 						iconP2.changeIcon(eventChar.healthIcon);
-						FlxTween.color(healthBarBG, 0.75, healthBarBG.color, FlxColor.fromRGB(eventChar.healthColorArray[0], eventChar.healthColorArray[1], eventChar.healthColorArray[2]));
+						FlxTween.color(healthBarBG, 0.75, healthBarBG.color,
+							FlxColor.fromRGB(eventChar.healthColorArray[0], eventChar.healthColorArray[1], eventChar.healthColorArray[2]));
 				}
 			case 'Change Scroll Speed':
 				var val1:Float = Std.parseFloat(value1);
@@ -3944,45 +3976,32 @@ class PlayState extends MusicBeatState
 							&& CoolUtil.difficultyString() == 'HARD'
 							&& storyPlaylist.length <= 1
 							&& WeekData.getWeekFileName() == ('showtime')
-							&& !changedDifficulty
-							&& !usedPractice)
+							&& !changedDifficulty)
 						{
 							unlock = true;
 						}
 					case 'expert':
-						if (Paths.formatToSongPath(SONG.song) == 'showtime' && timesStunned < 1 && !usedPractice)
+						if (Paths.formatToSongPath(SONG.song) == 'showtime' && timesStunned < 1)
 						{
 							unlock = true;
 						}
 					case 'pondering':
-						if (Paths.formatToSongPath(SONG.song) == 'pondering'
-							&& CoolUtil.difficultyString() == 'HARD'
-							&& songMisses < 1
-							&& !usedPractice)
+						if (Paths.formatToSongPath(SONG.song) == 'pondering' && CoolUtil.difficultyString() == 'HARD' && songMisses < 1)
 						{
 							unlock = true;
 						}
 					case 'maavo_generations':
-						if (Paths.formatToSongPath(SONG.song) == 'light-on'
-							&& CoolUtil.difficultyString() == 'HARD'
-							&& songMisses < 1
-							&& !usedPractice)
+						if (Paths.formatToSongPath(SONG.song) == 'light-on' && CoolUtil.difficultyString() == 'HARD' && songMisses < 1)
 						{
 							unlock = true;
 						}
 					case 'perfect':
-						if (Paths.formatToSongPath(SONG.song) == 'mugen'
-							&& CoolUtil.difficultyString() == 'HARD'
-							&& songMisses < 1
-							&& !usedPractice)
+						if (Paths.formatToSongPath(SONG.song) == 'mugen' && CoolUtil.difficultyString() == 'HARD' && songMisses < 1)
 						{
 							unlock = true;
 						}
 					case 'sick':
-						if (Paths.formatToSongPath(SONG.song) == 'tokyo'
-							&& CoolUtil.difficultyString() == 'EXTREME'
-							&& songMisses < 1
-							&& !usedPractice)
+						if (Paths.formatToSongPath(SONG.song) == 'tokyo' && CoolUtil.difficultyString() == 'EXTREME' && songMisses < 1)
 						{
 							unlock = true;
 						}

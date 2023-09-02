@@ -105,14 +105,10 @@ function onStepHit()
 
 	if curStep == 2122 then
 		if getPropertyFromClass('ClientPrefs', 'language')	== 'English' then
-			doTweenAlpha('dibujanzo','dibujanzo',1, 6.5)			
-			doTweenAlpha('subs-eng','subs-eng',1, 0.3)	
-			objectPlayAnimation('subs-eng','subs',true)	
+			doTweenAlpha('dibujanzo','dibujanzo',1, 6.5)
 			
 		else
-			doTweenAlpha('dibujanzo','dibujanzo',1, 6.5)			
-			doTweenAlpha('subs-esp','subs-esp',1, 0.3)	
-			objectPlayAnimation('subs-esp','subs',true)		
+			doTweenAlpha('dibujanzo','dibujanzo',1, 6.5)	
     	end
 end	
 

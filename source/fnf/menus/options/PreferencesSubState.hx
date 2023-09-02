@@ -14,16 +14,19 @@ class PreferencesSubState extends BaseOptionsMenu
 		option.onChange = onChangeLanguage;
 		addOption(option);
 
-		var option:Option = new Option(translation[1].name, translation[1].description, 'downScroll', 'bool', false);
+		var option:Option = new Option(translation[1].name, translation[1].description, 'showSubs', 'bool', false);
 		addOption(option);
 
-		var option:Option = new Option(translation[2].name, translation[2].description, 'middleScroll', 'bool', false);
+		var option:Option = new Option(translation[2].name, translation[2].description, 'downScroll', 'bool', false);
 		addOption(option);
 
-		var option:Option = new Option(translation[3].name, translation[3].description, 'ghostTapping', 'bool', true);
+		var option:Option = new Option(translation[3].name, translation[3].description, 'middleScroll', 'bool', false);
 		addOption(option);
 
-		var option:Option = new Option(translation[4].name, translation[4].description, 'noteQuant', 'bool', false);
+		var option:Option = new Option(translation[4].name, translation[4].description, 'ghostTapping', 'bool', true);
+		addOption(option);
+
+		var option:Option = new Option(translation[5].name, translation[5].description, 'noteQuant', 'bool', false);
 		addOption(option);
 
 		super();

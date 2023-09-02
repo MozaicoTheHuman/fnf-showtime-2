@@ -26,7 +26,6 @@ class GameOverSubstate extends MusicBeatSubstate
 	var bf:Boyfriend;
 	var camFollow:FlxPoint;
 	var camFollowPos:FlxObject;
-	var updateCamera:Bool = false;
 
 	var stageSuffix:String = "";
 
@@ -52,7 +51,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		endSoundName = end;
 	}
 
-	public function new(x:Float, y:Float, camX:Float, camY:Float, state:PlayState)
+	public function new(x:Float, y:Float, dadX:Float, dadY:Float, state:PlayState)
 	{
 		lePlayState = state;
 		state.setOnLuas('inGameOver', true);
@@ -73,8 +72,23 @@ class GameOverSubstate extends MusicBeatSubstate
 		bf.playAnim('firstDeath');
 
 		camFollowPos = new FlxObject(0, 0, 1, 1);
-		camFollowPos.setPosition(FlxG.camera.scroll.x + (FlxG.camera.width / 2), FlxG.camera.scroll.y + (FlxG.camera.height / 2));
+		camFollowPos.setPosition(camFollow.x, camFollow.y);
 		add(camFollowPos);
+
+		FlxG.camera.follow(camFollowPos, LOCKON, 1);
+
+		if (PlayState.isLightOn)
+		{
+			var martin:FlxSprite = new FlxSprite(dadX, dadY + 250);
+			martin.frames = Paths.getSparrowAtlas('lighton/victorydance', 'shared');
+			martin.animation.addByPrefix('dance', "el baile del troleo", 24, true);
+			martin.animation.play('dance');
+			martin.scale.set(3.2, 3.2);
+			add(martin);
+		}
+
+		if (!PlayState.isMugen)
+			FlxTween.tween(FlxG.camera, {zoom: 0.6}, 1.75, {ease: FlxEase.expoOut});
 	}
 
 	override function create()
@@ -93,11 +107,9 @@ class GameOverSubstate extends MusicBeatSubstate
 		super.update(elapsed);
 
 		lePlayState.callOnLuas('onUpdate', [elapsed]);
-		if (updateCamera)
-		{
-			var lerpVal:Float = CoolUtil.boundTo(elapsed * 0.6, 0, 1);
-			camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
-		}
+
+		var lerpVal:Float = CoolUtil.boundTo(elapsed * 0.8, 0, 1);
+		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 
 		if (!selectedSmthg)
 		{
@@ -117,7 +129,6 @@ class GameOverSubstate extends MusicBeatSubstate
 					MusicBeatState.switchState(new MainMenuState());
 				else
 					MusicBeatState.switchState(new FreeplayState());
-
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				lePlayState.callOnLuas('onGameOverConfirm', [false]);
 			}
@@ -125,11 +136,6 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		if (bf.animation.curAnim.name == 'firstDeath')
 		{
-			if (bf.animation.curAnim.curFrame == 12)
-			{
-				FlxG.camera.follow(camFollowPos, LOCKON, 1);
-				updateCamera = true;
-			}
 			if (bf.animation.curAnim.finished)
 			{
 				coolStartDeath();
@@ -218,6 +224,9 @@ class GameOverSubstate extends MusicBeatSubstate
 		#if ACHIEVEMENTS_ALLOWED
 		tryAchievement();
 		#end
+		if (PlayState.isLightOn)
+			camFollow.x = camFollow.x / 2;
+
 		FlxG.sound.playMusic(Paths.music(loopSoundName), volume);
 	}
 

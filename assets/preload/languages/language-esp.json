@@ -12,6 +12,9 @@
 			"name": "Detective",
 			"description": "Pon el comando secreto en la pantalla de titulo."
 		},{
+			"name": "El chow perfecto",
+			"description": "Completa la cancion 'Showtime' en dificultad Hard sin fallos"
+		},{
 			"name": "Nueva Amistad",
 			"description": "Completa la cancion 'Pondering (Showtime Mix)' en dificultad Hard sin fallos"
 		},{
@@ -171,6 +174,9 @@
 			"options":[{
 					"name": "Idioma:",
 					"description": "Elige el idioma del juego."
+				},{
+					"name": "Subtitulos",
+					"description": "Si lo activas, se mostraran subtitulos en las cinematicas"
 				},{
 					"name": "Down-Scroll",
 					"description": "Si lo activas, las notas se moveran hacia abajo"

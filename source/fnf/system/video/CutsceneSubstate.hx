@@ -8,22 +8,13 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
+import fnf.system.Language.SubtitleStructure;
 import haxe.Json;
 import openfl.OpenFLAssets;
 
-typedef SubtitleStructure =
-{
-	var time:Float;
-	var text:String;
-}
-
-typedef SubtitlesData =
-{
-	var subtitles:Array<SubtitleStructure>;
-}
-
 class CutsceneSubstate extends MusicBeatSubstate
 {
+	var name:String;
 	var videoPath:String;
 	var callback:Void->Void;
 
@@ -31,10 +22,6 @@ class CutsceneSubstate extends MusicBeatSubstate
 	var spriteOut:FlxSprite;
 
 	var skip:FlxSprite;
-
-	var subsPath:String = null;
-
-	var subs:Array<SubtitleStructure> = [];
 	var subsAlreadyShowed:Array<Float> = [];
 
 	var subText:FlxText;
@@ -47,11 +34,8 @@ class CutsceneSubstate extends MusicBeatSubstate
 	public function new(name:String, endCallback:Void->Void)
 	{
 		super();
+		this.name = name;
 		videoPath = Paths.video(name);
-
-		if (OpenFLAssets.exists(Paths.getPreloadPath('languages/subtitles/$name-eng.json')))
-			subsPath = Paths.getPreloadPath('languages/subtitles/$name-eng.json');
-
 		callback = endCallback;
 	}
 
@@ -88,9 +72,8 @@ class CutsceneSubstate extends MusicBeatSubstate
 		skip.cameras = [uiCamera];
 		add(skip);
 
-		if (ClientPrefs.language == "English" && subsPath != null)
+		if (ClientPrefs.showSubs)
 		{
-			loadSubtitles();
 			subText = new FlxText(50, 600, 1180, "", 32);
 			subText.setFormat(Paths.font("arial.ttf"), 32, FlxColor.YELLOW, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			subText.scrollFactor.set();
@@ -109,8 +92,9 @@ class CutsceneSubstate extends MusicBeatSubstate
 	{
 		super.update(elapsed);
 
-		if (ClientPrefs.language == "English" && subsPath != null)
+		if (ClientPrefs.showSubs)
 		{
+			var subs:Array<SubtitleStructure> = Language.getSubtitles(name);
 			for (i in 0...subs.length)
 			{
 				if (itsTime(subs[i].time))
@@ -166,13 +150,6 @@ class CutsceneSubstate extends MusicBeatSubstate
 	{
 		var time:Float = check * 1000;
 		return video.bitmap.time >= time && !subsAlreadyShowed.contains(check);
-	}
-
-	function loadSubtitles()
-	{
-		var rawJson = OpenFLAssets.getText(subsPath);
-		var subsData:SubtitlesData = cast Json.parse(rawJson);
-		subs = subsData.subtitles;
 	}
 
 	override function close()

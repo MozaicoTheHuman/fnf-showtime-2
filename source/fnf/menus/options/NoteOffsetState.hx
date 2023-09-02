@@ -488,9 +488,13 @@ class NoteOffsetState extends MusicBeatState
 		beatText.visible = !onComboMenu;
 
 		if (onComboMenu)
+		{
 			changeModeText.text = '< ${Language.options[4].options[0].name} >';
+		}
 		else
+		{
 			changeModeText.text = '< ${Language.options[4].options[2].name} >';
+		}
 
 		changeModeText.text = changeModeText.text.toUpperCase();
 		FlxG.mouse.visible = onComboMenu;
