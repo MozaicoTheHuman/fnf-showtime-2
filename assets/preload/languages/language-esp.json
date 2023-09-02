@@ -165,9 +165,6 @@
 				},{
 					"name": "Pocos Detalles",
 					"description": "Si lo activas, los detalles de fondo se veran reducidos\na cambio de tiempos de carga reducida y mejor rendimiento"
-				},{
-					"name": "Cache en GPU",
-					"description": "Si lo activas, permite que se almacenen texturas en la gpu, disminuyendo el uso de RAM.\nNo lo actives si tienes mala tarjeta grafica"
 				}
 			]
 		},{

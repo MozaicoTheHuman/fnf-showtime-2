@@ -45,7 +45,6 @@ class ClientPrefs
 	public static var showFPS:Bool = true;
 	public static var globalAntialiasing:Bool = true;
 	public static var lowQuality:Bool = false;
-	public static var cacheOnGPU:Bool = false;
 
 	// Preferences
 	public static var language:String = "English";
@@ -88,7 +87,6 @@ class ClientPrefs
 		save.data.showFPS = showFPS;
 		save.data.globalAntialiasing = globalAntialiasing;
 		save.data.lowQuality = lowQuality;
-		save.data.cacheOnGPU = cacheOnGPU;
 
 		// Preferences
 		save.data.language = language;
@@ -178,11 +176,6 @@ class ClientPrefs
 		if (save.data.lowQuality != null)
 		{
 			lowQuality = save.data.lowQuality;
-		}
-
-		if (save.data.cacheOnGPU != null)
-		{
-			cacheOnGPU = save.data.cacheOnGPU;
 		}
 
 		// Preferences

@@ -161,6 +161,8 @@ class AchievementsMenuState extends MusicBeatState
 				achievementArray[i].alpha = 1;
 			}
 		}
-		descText.text = Language.achievements[curSelected].description;
+
+		var curIndex:Int = achievementIndex[curSelected];
+		descText.text = Language.achievements[curIndex].description;
 	}
 }

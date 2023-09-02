@@ -13,12 +13,12 @@ class HealthIcon extends FlxSprite
 	private var isPlayer:Bool = false;
 	private var char:String = '';
 
-	public function new(char:String = 'bf', isPlayer:Bool = false, ?allowGPU:Bool = true)
+	public function new(char:String = 'bf', isPlayer:Bool = false)
 	{
 		super();
 		isOldIcon = (char == 'bf-old');
 		this.isPlayer = isPlayer;
-		changeIcon(char, allowGPU);
+		changeIcon(char);
 		scrollFactor.set();
 	}
 
@@ -27,7 +27,7 @@ class HealthIcon extends FlxSprite
 		super.update(elapsed);
 
 		if (sprTracker != null)
-			setPosition(sprTracker.x + sprTracker.width + 12, sprTracker.y - 30);
+			setPosition(sprTracker.x - width + 10, sprTracker.y + (sprTracker.height / 2) - (height / 2));
 	}
 
 	public function swapOldIcon()
@@ -40,7 +40,7 @@ class HealthIcon extends FlxSprite
 
 	private var iconOffsets:Array<Float> = [0, 0];
 
-	public function changeIcon(char:String, ?allowGPU:Bool = true)
+	public function changeIcon(char:String)
 	{
 		if (this.char != char)
 		{
@@ -50,7 +50,7 @@ class HealthIcon extends FlxSprite
 			if (!Paths.fileExists('images/' + name + '.png', IMAGE))
 				name = 'icons/icon-face'; // Prevents crash from missing icon
 
-			var graphic = Paths.image(name, allowGPU);
+			var graphic = Paths.image(name);
 			loadGraphic(graphic, true, Math.floor(graphic.width / 2), Math.floor(graphic.height));
 			iconOffsets[0] = (width - 150) / 2;
 			iconOffsets[1] = (height - 150) / 2;

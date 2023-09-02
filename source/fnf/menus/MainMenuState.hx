@@ -246,7 +246,7 @@ class MainMenuState extends MusicBeatState
 		}
 		else
 		{
-			var achieve:String = checkForAchievement(['friday_night_play', 'good_taste']);
+			var achieve:String = checkForAchievement(['good_taste', 'friday_night_play']);
 			if (achieve != null)
 			{
 				achievementObj = new AchievementObject(achieve, camAchievement);
@@ -479,7 +479,7 @@ class MainMenuState extends MusicBeatState
 			{
 				for (i in 0...Achievements.achievementsStuff.length)
 				{
-					Achievements.unlockAchievement(Achievements.achievementsStuff[i][2]);
+					Achievements.unlockAchievement(Achievements.achievementsStuff[i][0]);
 				}
 			}
 			if (FlxG.keys.justPressed.EIGHT)
