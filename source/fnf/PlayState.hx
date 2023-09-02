@@ -290,8 +290,9 @@ class PlayState extends MusicBeatState
 
 	override public function create()
 	{
+		Paths.clearStoredMemory();
+
 		goTo = null;
-		// resetSpriteCache = false;
 		instance = this;
 
 		if (FlxG.sound.music != null)
@@ -909,11 +910,6 @@ class PlayState extends MusicBeatState
 		}
 		RecalculateRating();
 
-		// Intro Stuff
-		for (spr in introSprites)
-			if (spr != null)
-				graphicCache.cache(Paths.getPath('images/${songUiFolder}${spr}.png', IMAGE));
-
 		for (snd in introSounds)
 			if (snd != null)
 				FlxG.sound.load(Paths.sound(songUiFolder + snd));
@@ -940,6 +936,7 @@ class PlayState extends MusicBeatState
 		DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 		#end
 		super.create();
+		Paths.clearUnusedMemory();
 	}
 
 	function set_songSpeed(value:Float):Float

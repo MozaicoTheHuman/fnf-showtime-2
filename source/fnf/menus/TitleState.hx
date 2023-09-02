@@ -19,8 +19,6 @@ import fnf.system.MusicBeatState;
 import fnf.system.Paths;
 import fnf.system.PlayerSettings;
 import fnf.system.visuals.Alphabet;
-import openfl.CacheManagement;
-import openfl.MemoryManagement;
 import openfl.OpenFLAssets;
 
 using StringTools;
@@ -49,8 +47,8 @@ class TitleState extends MusicBeatState
 
 	override public function create():Void
 	{
-		MemoryManagement.init();
-		CacheManagement.init();
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
 
 		FlxG.fixedTimestep = false;
 		FlxG.game.focusLostFramerate = 60;

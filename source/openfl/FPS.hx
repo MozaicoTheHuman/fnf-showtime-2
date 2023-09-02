@@ -4,7 +4,6 @@ import flixel.FlxG;
 import flixel.math.FlxMath;
 import fnf.system.ClientPrefs;
 import fnf.system.Conductor;
-import openfl.MemoryManagement;
 import openfl.events.KeyboardEvent;
 import openfl.text.TextField;
 import openfl.text.TextFormat;
@@ -34,7 +33,6 @@ class FPS extends TextField
 
 	public var currentFPS(default, null):Int;
 	public var memoryPeak:Float = 0;
-	public var memoryType:String;
 
 	@:noCompletion private var cacheCount:Int;
 	@:noCompletion private var currentTime:Float;
@@ -48,7 +46,6 @@ class FPS extends TextField
 		this.y = y;
 
 		currentFPS = 0;
-		memoryType = MemoryManagement.getMemType();
 		selectable = false;
 		textColor = 0xFFFFFFFF;
 		mouseEnabled = false;
@@ -95,9 +92,8 @@ class FPS extends TextField
 				var memoryMegas = Math.abs(FlxMath.roundDecimal(System.totalMemory / 1000000, 1));
 				if (memoryMegas > memoryPeak)
 					memoryPeak = memoryMegas;
-				text += '\nMemory: ${FlxMath.roundDecimal(memoryMegas / 1024, 2)} GB / ${FlxMath.roundDecimal(memoryPeak / 1024, 2)} GB (Type: $memoryType)';
+				text += '\nMemory: ${FlxMath.roundDecimal(memoryMegas / 1024, 2)} GB / ${FlxMath.roundDecimal(memoryPeak / 1024, 2)} GB';
 				#end
-				text += '\nGarbage Collector: ${MemoryManagement.disableCount > 0 ? "OFF" : "ON"} (${MemoryManagement.disableCount})';
 
 				if (currentFPS < 25 || memoryMegas > 3000)
 					textColor = 0xFFFF0000;

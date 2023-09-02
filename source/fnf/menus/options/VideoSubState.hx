@@ -56,6 +56,9 @@ class VideoSubState extends BaseOptionsMenu
 		var option:Option = new Option(translation[4].name, translation[4].description, 'lowQuality', 'bool', false);
 		addOption(option);
 
+		var option:Option = new Option(translation[5].name, translation[5].description, 'cacheOnGPU', 'bool', false);
+		addOption(option);
+
 		super();
 		insert(1, boyfriend);
 	}

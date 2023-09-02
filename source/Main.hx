@@ -1,7 +1,7 @@
 package;
 
 import flixel.FlxG;
-import flixel.FlxNewGame;
+import flixel.FlxGame;
 import fnf.menus.TitleState;
 import fnf.system.ClientPrefs;
 import fnf.system.Paths;
@@ -83,7 +83,7 @@ class Main extends Sprite
 		}
 
 		ClientPrefs.loadDefaultKeys();
-		addChild(new FlxNewGame(game.width, game.height, game.initialState, game.framerate, game.framerate, game.skipSplash, game.startFullscreen));
+		addChild(new FlxGame(game.width, game.height, game.initialState, game.framerate, game.framerate, game.skipSplash, game.startFullscreen));
 
 		#if !mobile
 		fpsVar = new FPS(10, 3, 0xFFFFFF);
@@ -100,7 +100,6 @@ class Main extends Sprite
 		FlxG.autoPause = false;
 		FlxG.mouse.visible = false;
 		#end
-		FlxG.signals.postStateSwitch.add(Paths.runGc);
 		Lib.current.loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, onCrash);
 
 		#if desktop
