@@ -1,92 +1,92 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "singUP-alt",
+			"loop": false,
 			"fps": 31,
-			"name": "maritza_up",
-			"indices": []
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "maritza_up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 30,
 			"anim": "singDOWN-alt",
-			"fps": 30,
-			"name": "maritza_down",
-			"indices": []
+			"indices": [],
+			"name": "maritza_down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 30,
 			"anim": "singLEFT-alt",
-			"fps": 30,
-			"name": "maritza_left",
-			"indices": []
+			"indices": [],
+			"name": "maritza_left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 30,
 			"anim": "singRIGHT-alt",
-			"fps": 30,
-			"name": "maritza_right",
-			"indices": []
+			"indices": [],
+			"name": "maritza_right"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 25,
 			"anim": "singDOWN",
-			"fps": 25,
-			"name": "maritza_down",
-			"indices": []
+			"indices": [],
+			"name": "maritza_down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 25,
 			"anim": "singUP",
-			"fps": 25,
-			"name": "maritza_up",
-			"indices": []
+			"indices": [],
+			"name": "maritza_up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 25,
 			"anim": "singLEFT",
-			"fps": 25,
-			"name": "maritza_left",
-			"indices": []
+			"indices": [],
+			"name": "maritza_left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 25,
 			"anim": "singRIGHT",
-			"fps": 25,
-			"name": "maritza_right",
-			"indices": []
+			"indices": [],
+			"name": "maritza_right"
 		},
 		{
 			"offsets": [
@@ -94,9 +94,21 @@
 				0
 			],
 			"loop": false,
-			"fps": 23,
+			"fps": 32,
 			"anim": "danceLeft",
-			"indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			],
 			"name": "maritza_danceright"
 		},
 		{
@@ -105,9 +117,21 @@
 				0
 			],
 			"loop": false,
-			"fps": 23,
+			"fps": 32,
 			"anim": "danceRight",
-			"indices": [21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7 ,6, 5, 4, 3, 2, 1, 0],
+			"indices": [
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				118,
+				19,
+				20,
+				21
+			],
 			"name": "maritza_danceright"
 		}
 	],
@@ -115,7 +139,7 @@
 	"image": "characters/maritzamasterpiece",
 	"position": [
 		0,
-		0
+		30
 	],
 	"healthicon": "maritza",
 	"flip_x": false,
@@ -126,7 +150,7 @@
 	],
 	"camera_position": [
 		-100,
-		-320
+		30
 	],
 	"sing_duration": 4,
 	"scale": 1
