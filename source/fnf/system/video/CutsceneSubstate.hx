@@ -22,11 +22,9 @@ class CutsceneSubstate extends MusicBeatSubstate
 	var spriteOut:FlxSprite;
 
 	var skip:FlxSprite;
-	var subsAlreadyShowed:Array<Float> = [];
 
+	var subsAlreadyShowed:Array<Float> = [];
 	var subText:FlxText;
-	var subDiscard:FlxSprite;
-	var head:FlxSprite;
 
 	var videoCamera:FlxCamera;
 	var uiCamera:FlxCamera;
@@ -96,13 +94,8 @@ class CutsceneSubstate extends MusicBeatSubstate
 		{
 			var subs:Array<SubtitleStructure> = Language.getSubtitles(name);
 			for (i in 0...subs.length)
-			{
 				if (itsTime(subs[i].time))
-				{
-					newSubtitle(subs[i].text);
-					subsAlreadyShowed.push(subs[i].time);
-				}
-			}
+					newSubtitle(subs[i]);
 		}
 
 		if (canPressNow)
@@ -139,9 +132,10 @@ class CutsceneSubstate extends MusicBeatSubstate
 		}
 	}
 
-	function newSubtitle(text:String)
+	function newSubtitle(sub:SubtitleStructure)
 	{
-		subText.text = text;
+		subsAlreadyShowed.push(sub.time);
+		subText.text = sub.text;
 		subText.screenCenter(Y);
 		subText.y += 270;
 	}

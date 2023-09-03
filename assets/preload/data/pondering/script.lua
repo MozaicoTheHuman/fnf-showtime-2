@@ -78,14 +78,14 @@ function onStepHit()
 		doTweenAlpha('luz2','light2',1, 0.01)
 		doTweenAlpha('2luz','2light',1, 0.01)		
 		doTweenAlpha('2luz2','2light2',1, 0.01)		
-   	 end
+   	end
 
 	if curStep == 1661 then	
 		doTweenAlpha('luzxd','light',0.9, 1.1)		
 		doTweenAlpha('luz2xd','light2',0.9, 1.1)
 		doTweenAlpha('2luzxd','2light',0.1, 1.1)		
 		doTweenAlpha('2luz2xd','2light2',0.1, 1.1)		
-   	 end		
+   	end		
 	
 	if curStep == 2048 then
 		doTweenAlpha('appearblackbg','darkbg',0.7, 0.02)		
@@ -93,27 +93,16 @@ function onStepHit()
 		doTweenAlpha('luz2','light2',0, 0.01)
 		doTweenAlpha('2luz','2light',0, 0.3)		
 		doTweenAlpha('2luz2','2light2',0, 0.3)		
-   	 end
-	
+   	end
 	
 	if curStep == 2122 then
 		doTweenAlpha('fondooscuro','blackbg2',1, 0.01)
-		doTweenAlpha('dibujanzo','dibujanzo',1, 5)
+		doTweenAlpha('dibujanzo','dibujanzo',1, 6.5)
 		doTweenAlpha('ripluz','light',0, 0.01)	
-        setProperty('camHUD.visible', false);  	
-    	end
-
-	if curStep == 2122 then
-		if getPropertyFromClass('ClientPrefs', 'language')	== 'English' then
-			doTweenAlpha('dibujanzo','dibujanzo',1, 6.5)
-			
-		else
-			doTweenAlpha('dibujanzo','dibujanzo',1, 6.5)	
-    	end
-end	
+        setProperty('camHUD.visible', false);  		
+    end
 
 	if curStep == 2290 then
 		doTweenAlpha('dibujanzo','dibujanzo',0, 0.01)		
-    	end
-
+    end
 end
