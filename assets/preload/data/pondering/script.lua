@@ -97,6 +97,7 @@ function onStepHit()
 	
 	if curStep == 2122 then
 		doTweenAlpha('fondooscuro','blackbg2',1, 0.01)
+		doTweenAlpha('when2','ponderinglight',0.0, 8.01)			
 		doTweenAlpha('dibujanzo','dibujanzo',1, 6.5)
 		doTweenAlpha('ripluz','light',0, 0.01)	
         setProperty('camHUD.visible', false);  		

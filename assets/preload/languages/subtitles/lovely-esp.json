@@ -1,20 +1,65 @@
 {
     "subtitles":[
         {
-            "time": 5.542,
-            "text": "What is love?"
+            "time": 10.45,
+            "text": "¿Que... eres?"
         },
         {
-            "time": 15.522,
-            "text": "Baby dont hurt me."
+            "time": 13.00,
+            "text": "No parece muy fuerte."
         },
         {
-            "time": 25.547,
-            "text": "Dont hurt me."
+            "time": 14.50,
+            "character": "ivette",
+            "text": " "
+        },		
+        {
+            "time": 18.50,
+            "text": "¡Oh, mírenlo! ¡Es incluso más chico que yo!"
         },
         {
-            "time": 35.742,
-            "text": "No more."
-        }
+            "time": 22.50,
+            "text": " "
+        },		
+        {
+            "time": 25.04,
+            "text": "Hmmm... Un microfono..."
+        },
+        {
+            "time": 27.41,
+            "text": "Que, ¿Eres cantante o algo?"
+        },
+        {
+            "time": 29.75,
+            "text": "¡Oh verdad! Tiene un micrófono y ropa de rapero"
+        },
+        {
+            "time": 34.00,
+            "text": " "
+        },		
+        {
+            "time": 37.45,
+            "text": "¡¿Quieres rapear contra mí?! ¡Eso suena genial!"
+        },
+        {
+            "time": 41.54,
+            "text": "Puede ser peligroso, no parece ser de este mundo."
+        },
+        {
+            "time": 45.00,
+            "text": "¡Porfa Ivette! ¡Porfavor!"
+        },
+        {
+            "time": 48.50,
+            "text": " "
+        },		
+        {
+            "time": 53.54,
+            "text": "¡Si! ¡Gracias chicos!"
+        },		
+        {
+            "time": 55.87,
+            "text": "¡Prepárate, enano!"
+        }		
     ]
 }
