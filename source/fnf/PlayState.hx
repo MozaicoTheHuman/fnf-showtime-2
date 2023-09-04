@@ -785,18 +785,27 @@ class PlayState extends MusicBeatState
 		FlxG.fixedTimestep = false;
 		moveCameraSection(0);
 
-		var dadMugenPortrait:FlxSprite = isMugen ? new FlxSprite(10, 10) : null;
-		var bfMugenPortrait:FlxSprite = isMugen ? new FlxSprite(FlxG.width - 127, 10) : null;
+		var porDad:FlxPoint = new FlxPoint(0, 0);
+		var porBF:FlxPoint = new FlxPoint(0, 0);
 
 		if (isMugen)
 		{
+			var dadMugenPortrait:FlxSprite = new FlxSprite(10, 10);
 			dadMugenPortrait.loadGraphic(Paths.image('hud/${songUiFolder}mugenportrait'));
 			dadMugenPortrait.scrollFactor.set();
+			dadMugenPortrait.cameras = [camHUD];
 			dadMugenPortrait.visible = !ClientPrefs.hideHud;
+			add(dadMugenPortrait);
+			porDad.x = dadMugenPortrait.x;
+			porDad.y = dadMugenPortrait.y;
+			var bfMugenPortrait:FlxSprite = new FlxSprite(FlxG.width - 127, 10);
 			bfMugenPortrait.loadGraphic(Paths.image('hud/${songUiFolder}mugenportrait'));
 			bfMugenPortrait.scrollFactor.set();
-			bfMugenPortrait.flipX = true;
+			bfMugenPortrait.cameras = [camHUD];
 			bfMugenPortrait.visible = !ClientPrefs.hideHud;
+			add(bfMugenPortrait);
+			porBF.x = bfMugenPortrait.x;
+			porBF.y = bfMugenPortrait.y;
 		}
 
 		healthBarBG = new FlxSprite(172).loadGraphic(Paths.image('hud/${songUiFolder}healthBar'));
@@ -810,27 +819,27 @@ class PlayState extends MusicBeatState
 		healthBar.visible = !ClientPrefs.hideHud;
 
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
-		iconP1.x = isMugen ? bfMugenPortrait.x - 13 : healthBarBG.x + healthBarBG.width - 63;
+		iconP1.x = isMugen ? porBF.x - 13 : healthBarBG.x + healthBarBG.width - 63;
 		iconP1.visible = !ClientPrefs.hideHud;
 
 		iconP2 = new HealthIcon(dad.healthIcon, false);
-		iconP2.x = isMugen ? dadMugenPortrait.x - 20 : healthBarBG.x + 45;
+		iconP2.x = isMugen ? porDad.x - 20 : healthBarBG.x + 45;
 		iconP2.visible = !ClientPrefs.hideHud;
 
 		if (ClientPrefs.downScroll)
 		{
 			healthBarBG.scale.y = isMugen ? 1 : -1;
-			healthBarBG.y = isMugen ? dadMugenPortrait.y + dadMugenPortrait.height - 26 : 50;
+			healthBarBG.y = isMugen ? porDad.y + 117 - 36 : 50;
 			healthBar.y = healthBarBG.y + (isMugen ? 6 : 12);
-			iconP2.y = isMugen ? bfMugenPortrait.y - 21 : healthBarBG.y - 25;
-			iconP1.y = isMugen ? dadMugenPortrait.y - 21 : healthBarBG.y - 29;
+			iconP2.y = isMugen ? porBF.y - 21 : healthBarBG.y - 25;
+			iconP1.y = isMugen ? porDad.y - 21 : healthBarBG.y - 29;
 		}
 		else
 		{
-			healthBarBG.y = isMugen ? dadMugenPortrait.y + dadMugenPortrait.height - 26 : FlxG.height - healthBarBG.height - 50;
+			healthBarBG.y = isMugen ? porDad.y + 117 - 36 : FlxG.height - healthBarBG.height - 50;
 			healthBar.y = healthBarBG.y + (isMugen ? 6 : 119);
-			iconP2.y = isMugen ? bfMugenPortrait.y - 21 : healthBarBG.y + 32;
-			iconP1.y = isMugen ? dadMugenPortrait.y - 21 : healthBarBG.y + 36;
+			iconP2.y = isMugen ? porBF.y - 21 : healthBarBG.y + 32;
+			iconP1.y = isMugen ? porDad.y - 21 : healthBarBG.y + 36;
 		}
 
 		if (isMugen)
@@ -841,11 +850,6 @@ class PlayState extends MusicBeatState
 			iconP2.updateHitbox();
 		}
 
-		if (isMugen)
-		{
-			add(dadMugenPortrait);
-			add(bfMugenPortrait);
-		}
 		add(healthBar);
 		add(healthBarBG);
 		add(iconP1);
@@ -858,7 +862,7 @@ class PlayState extends MusicBeatState
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.45;
 		scoreTxt.visible = !ClientPrefs.hideHud;
-		scoreTxt.y = healthBarBG.y + 30;
+		scoreTxt.y = isMugen ? healthBarBG.y + 40 : FlxG.height - scoreTxt.height - 14;
 		scoreTxt.cameras = [camHUD];
 		add(scoreTxt);
 
@@ -877,8 +881,6 @@ class PlayState extends MusicBeatState
 		strumLineNotes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
 		notes.cameras = [camHUD];
-		dadMugenPortrait.cameras = [camHUD];
-		bfMugenPortrait.cameras = [camHUD];
 		healthBar.cameras = [camHUD];
 		healthBarBG.cameras = [camHUD];
 		iconP1.cameras = [camHUD];
@@ -3153,6 +3155,7 @@ class PlayState extends MusicBeatState
 			rating.y -= ClientPrefs.comboOffset[1];
 			rating.setGraphicSize(Std.int(rating.width * 0.7));
 			rating.updateHitbox();
+			insert(members.indexOf(strumLineNotes), rating);
 
 			comboSpr.screenCenter();
 			comboSpr.x = placement;
@@ -3165,7 +3168,6 @@ class PlayState extends MusicBeatState
 			comboSpr.setGraphicSize(Std.int(comboSpr.width * 0.7));
 			comboSpr.updateHitbox();
 		}
-		else {}
 
 		var seperatedScore:Array<Int> = [];
 
@@ -3177,31 +3179,42 @@ class PlayState extends MusicBeatState
 		seperatedScore.push(Math.floor(combo / 10) % 10);
 		seperatedScore.push(combo % 10);
 
+		var daLoop:Int = 0;
+		var xThing:Float = 0;
+
 		for (i in seperatedScore)
 		{
 			if (!isMugen)
 			{
 				var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image('hud/${songUiFolder}num${Std.int(i)}'));
-				numScore.antialiasing = ClientPrefs.globalAntialiasing;
+				numScore.cameras = [camHUD];
+				numScore.screenCenter();
+				numScore.x = placement + (43 * daLoop) - 90 + ClientPrefs.comboOffset[2];
+				numScore.y += 80 - ClientPrefs.comboOffset[3];
 				numScore.setGraphicSize(Std.int(numScore.width * 0.5));
 				numScore.updateHitbox();
 
 				numScore.acceleration.y = FlxG.random.int(200, 300);
 				numScore.velocity.y -= FlxG.random.int(140, 160);
 				numScore.velocity.x = FlxG.random.float(-5, 5);
-				numScore.cameras = [camHUD];
 				numScore.visible = !ClientPrefs.hideHud;
+				numScore.antialiasing = isMugen ? false : ClientPrefs.globalAntialiasing;
 
+				insert(members.indexOf(strumLineNotes), numScore);
 				FlxTween.tween(numScore, {alpha: 0}, 0.2, {
 					onComplete: function(tween:FlxTween)
 					{
-						numScore.exists = false;
+						numScore.destroy();
 					},
 					startDelay: Conductor.crochet * 0.002
 				});
+
+				daLoop++;
+				if (numScore.x > xThing)
+					xThing = numScore.x;
 			}
 		}
-
+		comboSpr.x = xThing + 50;
 		FlxTween.tween(rating, {alpha: 0}, 0.2, {
 			startDelay: Conductor.crochet * 0.001
 		});
@@ -3209,10 +3222,10 @@ class PlayState extends MusicBeatState
 		FlxTween.tween(comboSpr, {alpha: 0}, 0.2, {
 			onComplete: function(tween:FlxTween)
 			{
-				rating.exists = false;
-				comboSpr.exists = false;
+				comboSpr.destroy();
+				rating.destroy();
 			},
-			startDelay: Conductor.crochet * 0.001
+			startDelay: Conductor.crochet * 0.002
 		});
 	}
 
