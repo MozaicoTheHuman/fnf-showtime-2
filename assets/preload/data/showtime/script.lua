@@ -75,7 +75,7 @@ function onBeatHit()
 end
 
 function onStepHit()
-	if curStep == 895 then
+	if curStep == 896 then
 		setProperty('gf.alpha', 0)
 		setProperty('redloop.visible', true)		
 		setProperty('redloop.animation.curAnim.curFrame', 0)
