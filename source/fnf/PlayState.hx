@@ -204,11 +204,14 @@ class PlayState extends MusicBeatState
 	public var camOther:FlxCamera;
 	public var cameraSpeed:Float = 1;
 
+	var upBar:FlxSprite;
+	var dwBar:FlxSprite;
 	var subsAlreadyShowed:Array<Int> = [];
 	var subText:FlxText;
 	var subs:Array<SubtitleStructure> = [];
 
 	var maavoBopper:BGSprite;
+	var soloStage:BGSprite;
 	var maritzaDancer:BGDancer;
 	var heyTimer:Float;
 
@@ -416,6 +419,10 @@ class PlayState extends MusicBeatState
 
 				var stage:BGSprite = new BGSprite('show/bg', -1300, -750);
 				add(stage);
+
+				soloStage = new BGSprite('show/bgSolo', -1300, -750);
+				soloStage.alpha = 0;
+				add(soloStage);
 
 				if (!ClientPrefs.lowQuality)
 				{
@@ -681,6 +688,16 @@ class PlayState extends MusicBeatState
 			tokyoSprite.antialiasing = ClientPrefs.globalAntialiasing;
 			add(tokyoSprite);
 		}
+
+		upBar = new FlxSprite(0, 0 - (FlxG.height / 2)).makeGraphic(FlxG.width, Std.int(FlxG.height / 2), FlxColor.BLACK);
+		upBar.scrollFactor.set();
+		upBar.cameras = [camHUD];
+		add(upBar);
+
+		dwBar = new FlxSprite(0, FlxG.height).makeGraphic(FlxG.width, Std.int(FlxG.height / 2), FlxColor.BLACK);
+		dwBar.scrollFactor.set();
+		dwBar.cameras = [camHUD];
+		add(dwBar);
 
 		strumLine = new FlxSprite(ClientPrefs.middleScroll
 			|| isTokyo ? STRUM_X_MIDDLESCROLL : STRUM_X, isMugen ? 120 : 50).makeGraphic(FlxG.width, 10);
@@ -2413,6 +2430,30 @@ class PlayState extends MusicBeatState
 	{
 		switch (eventName)
 		{
+			case 'EPIC':
+				if (value1.toLowerCase() == "in")
+				{
+					upBar.y = 0;
+					dwBar.y = FlxG.height / 2;
+					FlxTween.tween(upBar, {y: -(FlxG.height / 2) + (FlxG.height / 7)}, 1.75, {ease: FlxEase.expoOut, startDelay: 0.1});
+					FlxTween.tween(dwBar, {y: FlxG.height - FlxG.height / 7}, 1.75, {ease: FlxEase.expoOut, startDelay: 0.1});
+					if (curStage == 'show')
+						soloStage.alpha = 1;
+				}
+				else
+				{
+					upBar.y = -(FlxG.height / 2) + (FlxG.height / 7);
+					dwBar.y = FlxG.height - FlxG.height / 7;
+					FlxTween.tween(upBar, {y: -(FlxG.height / 2)}, 1.75, {ease: FlxEase.expoOut});
+					FlxTween.tween(dwBar, {
+						y: FlxG.height
+					}, 1.75, {ease: FlxEase.expoOut});
+					if (curStage == 'show')
+					{
+						soloStage.alpha = 1;
+						FlxTween.tween(soloStage, {alpha: 0}, 1.75, {ease: FlxEase.expoOut, startDelay: 0.1});
+					}
+				}
 			case 'Hey!':
 				var value:Int = 2;
 				switch (value1.toLowerCase().trim())

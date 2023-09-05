@@ -70,20 +70,8 @@ class ChartingState extends MusicBeatState
 {
 	public static var noteTypeList:Array<String> = // Used for backwards compatibility with 0.1 - 0.3.2 charts, though, you should add your hardcoded custom note types here too.
 		[
-			'',
-			'Alt Animation',
-			'Hey!',
-			'Hurt Note',
-			'GF Sing',
-			'Stun Note',
-			'VFX Note',
-			'No Animation',
-			'MainAndSecondCharacter',
-			'MainAndThirdCharacter',
-			'SecondCharacter',
-			'SecondAndThirdCharacter',
-			'ThirdCharacter',
-			'AllCharacters'
+			'', 'Alt Animation', 'Hey!', 'Hurt Note', 'GF Sing', 'Stun Note', 'VFX Note', 'No Animation', 'MainAndSecondCharacter', 'MainAndThirdCharacter',
+			'SecondCharacter', 'SecondAndThirdCharacter', 'ThirdCharacter', 'AllCharacters'
 		];
 
 	private var noteTypeIntMap:Map<Int, String> = new Map<Int, String>();
@@ -91,6 +79,7 @@ class ChartingState extends MusicBeatState
 
 	var eventStuff:Array<Dynamic> = [
 		['', "Nothing. Yep, that's right."],
+		['EPIC', "Makes Showtime more EPIC"],
 		[
 			'Hey!',
 			"Plays the \"Hey!\" animation from Bopeebo,\nValue 1: BF = Only Boyfriend, GF = Only Girlfriend,\nSomething else = Both.\nValue 2: Custom animation duration,\nleave it blank for 0.6s"

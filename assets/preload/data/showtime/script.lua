@@ -18,7 +18,6 @@ function onCreate()
 	setProperty('redloop.scale.x',2)
 	setProperty('redloop.scale.y',2)
 	setProperty('redloop.visible', false)
-	setObjectOrder('redloop', 1)
 	
 	makeAnimatedLuaSprite('mari', 'characters/maritzamasterpiece', 260, 100)
 	addAnimationByIndices('mari', 'danceLeft', 'maritza_danceright', '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10', 24)
@@ -42,13 +41,14 @@ function onCreate()
 	objectPlayAnimation('iv', 'idle')
 	addLuaSprite('iv', false)
 	
-	local gfPosition = 5
+	local posOff = 2
 	
 	if getPropertyFromClass(ClientPrefs, lowQuality) == true then
-		gfPosition = 3
+		posOff = 0
 	end
 	
-	setObjectOrder('gfGroup', gfPosition)
+	setObjectOrder('redloop', 1 + posOff)
+	setObjectOrder('gfGroup', 3 + posOff)
 end
 
 function onBeatHit()
