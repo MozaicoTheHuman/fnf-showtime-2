@@ -996,24 +996,13 @@ class PlayState extends MusicBeatState
 
 	function set_songSpeed(value:Float):Float
 	{
-		if (generatedMusic)
+		if(generatedMusic)
 		{
-			var ratio:Float = value / songSpeed; // funny word huh
-			for (note in notes)
+			var ratio:Float = value / songSpeed; //funny word huh
+			if(ratio != 1)
 			{
-				if (note.isSustainNote && !note.animation.curAnim.name.endsWith('end'))
-				{
-					note.scale.y *= ratio;
-					note.updateHitbox();
-				}
-			}
-			for (note in unspawnNotes)
-			{
-				if (note.isSustainNote && !note.animation.curAnim.name.endsWith('end'))
-				{
-					note.scale.y *= ratio;
-					note.updateHitbox();
-				}
+				for (note in notes.members) note.resizeByRatio(ratio);
+				for (note in unspawnNotes) note.resizeByRatio(ratio);
 			}
 		}
 		songSpeed = value;

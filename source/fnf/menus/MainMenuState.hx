@@ -9,6 +9,7 @@ import flixel.effects.FlxFlicker;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.input.keyboard.FlxKey;
+import flixel.input.keyboard.FlxKeyboard;
 import flixel.math.FlxMath;
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
@@ -27,6 +28,7 @@ import fnf.system.Paths;
 import fnf.system.Song;
 import fnf.system.WeekData;
 import fnf.system.unlockeables.Achievements;
+import fnf.system.unlockeables.UnlockObject;
 import lime.app.Application;
 import sys.FileSystem;
 import sys.io.File;
@@ -75,6 +77,10 @@ class MainMenuState extends MusicBeatState
 	var difficultyOption:Array<String> = ["easy", "normal", "hard"];
 
 	var diffItems:FlxTypedGroup<FlxSprite>;
+
+	var code:Array<FlxKey> = [FlxKey.DOWN, FlxKey.RIGHT, FlxKey.DOWN, FlxKey.RIGHT, FlxKey.X];
+	var keysPressed:Array<FlxKey> = [];
+	var codeUnlocked:Bool = false;
 
 	override function create()
 	{
@@ -246,7 +252,7 @@ class MainMenuState extends MusicBeatState
 		}
 		else
 		{
-			var achieve:String = checkForAchievement(['good_taste', 'friday_night_play']);
+			var achieve:String = checkForAchievement(['good_taste', 'friday_night_play', 'detective']);
 			if (achieve != null)
 			{
 				achievementObj = new AchievementObject(achieve, camAchievement);
@@ -259,6 +265,9 @@ class MainMenuState extends MusicBeatState
 
 				if (achieve == 'good_taste')
 					menuUnlocked = "derker";
+
+				if (achieve == 'detective')
+					add(new UnlockObject("mugen", camAchievement));
 			}
 		}
 	}
@@ -275,6 +284,11 @@ class MainMenuState extends MusicBeatState
 
 				switch (achievementName)
 				{
+					case 'detective':
+						if (codeUnlocked)
+						{
+							unlock = true;
+						}
 					case 'friday_night_play':
 						var leDate = Date.now();
 						if (leDate.getDay() == 5 && leDate.getHours() >= 18)
@@ -304,6 +318,31 @@ class MainMenuState extends MusicBeatState
 	var diffmenu:Bool = false;
 	var scalVal:Float = 0.2;
 
+	function checkCode()
+	{
+		for (i in 0...code.length)
+		{
+			if (i >= keysPressed.length)
+			{
+				if (FlxG.keys.anyJustPressed([code[i]]) && keysPressed[i - 1] == code[i - 1])
+				{
+					if (code[i] == code[code.length - 1])
+					{
+						codeUnlocked = true;
+						tryAchievement();
+						keysPressed = [];
+					}
+
+					keysPressed.push(code[i]);
+					trace(keysPressed);
+					return;
+				}
+			}
+		}
+		trace(keysPressed + " CODE RESET");
+		keysPressed = [];
+	}
+
 	override function update(elapsed:Float)
 	{
 		if (FlxG.sound.music != null)
@@ -330,6 +369,11 @@ class MainMenuState extends MusicBeatState
 
 		if (!selectedSomethin)
 		{
+			if (FlxG.keys.justPressed.ANY && !Achievements.isAchievementUnlocked('detective'))
+			{
+				checkCode();
+			}
+
 			if (controls.UI_UP_P)
 			{
 				FlxG.sound.play(Paths.sound('pageMenu'));
