@@ -38,6 +38,8 @@ typedef LanguageData =
 	var credits:CreditsStructure;
 	var options:Array<OptionsMenuStructure>;
 	var cutscene:Array<String>;
+	var score:Array<String>;
+	var rating:Array<String>;
 }
 
 typedef SubtitleStructure =
@@ -63,6 +65,8 @@ class Language
 	};
 	public static var options:Array<OptionsMenuStructure> = [];
 	public static var cutscene:Array<String> = [];
+	public static var score:Array<String> = [];
+	public static var rating:Array<String> = [];
 	public static var subtitles:Array<SubtitleStructure> = [];
 
 	public static function getLAN():String
@@ -89,6 +93,8 @@ class Language
 		credits = languageData.credits;
 		options = languageData.options;
 		cutscene = languageData.cutscene;
+		score = languageData.score;
+		rating = languageData.rating;
 	}
 
 	public static function getSubtitles(name:String):Array<SubtitleStructure>

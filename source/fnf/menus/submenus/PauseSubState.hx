@@ -11,6 +11,7 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import fnf.system.CoolUtil;
 import fnf.system.Highscore;
+import fnf.system.Language;
 import fnf.system.MusicBeatState;
 import fnf.system.MusicBeatSubstate;
 import fnf.system.Paths;
@@ -23,7 +24,15 @@ class PauseSubState extends MusicBeatSubstate
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
 	var menuItems:Array<String> = [];
-	var menuItemsOG:Array<String> = ['Resume', 'Restart Song', 'Modifiers', 'Change Difficulty', 'Exit to menu'];
+	var menuItemsOG:Array<String> = [
+		'Resume',
+		'Restart Song',
+		'Modifiers',
+		'Change Difficulty',
+		'Options',
+		'Exit to menu'
+	];
+	var menuItemsTranslated:Array<String> = [];
 	var difficultyChoices = [];
 	var curSelected:Int = 0;
 
@@ -31,11 +40,23 @@ class PauseSubState extends MusicBeatSubstate
 	var practiceText:FlxText;
 	var botplayText:FlxText;
 
+	public var translation:Array<fnf.system.Language.OptionStructure> = [];
+
 	public static var transCamera:FlxCamera;
 
 	public function new(x:Float, y:Float)
 	{
 		super();
+		translation = Language.options[6].options;
+
+		menuItemsTranslated = [
+			translation[0].name,
+			translation[1].name,
+			translation[2].name,
+			translation[3].name,
+			translation[4].name,
+			translation[5].name
+		];
 
 		menuItems = menuItemsOG;
 
@@ -47,7 +68,7 @@ class PauseSubState extends MusicBeatSubstate
 			else if (PlayState.SONG.song.toLowerCase() == 'tokyo')
 				difficultyChoices.push(diff);
 		}
-		difficultyChoices.push('BACK');
+		difficultyChoices.push("BACK");
 
 		pauseMusic = new FlxSound().loadEmbedded(Paths.music('breakfast'), true, true);
 		pauseMusic.volume = 0;
@@ -183,6 +204,17 @@ class PauseSubState extends MusicBeatSubstate
 				case 'Change Difficulty':
 					menuItems = difficultyChoices;
 					regenMenu();
+				case 'Modifiers':
+					PlayState.onModifiers = "fromPause";
+					close();
+				case 'Options':
+					PlayState.instance.paused = true; // For lua
+					PlayState.instance.vocals.volume = 0;
+					MusicBeatState.switchState(new OptionsState());
+					FlxG.sound.playMusic(Paths.music('breakfast'), pauseMusic.volume);
+					FlxTween.tween(FlxG.sound.music, {volume: 1}, 0.8);
+					FlxG.sound.music.time = pauseMusic.time;
+					OptionsState.onPlayState = true;
 				case "Exit to menu":
 					PlayState.deathCounter = 0;
 					PlayState.seenCutscene = false;
@@ -199,8 +231,6 @@ class PauseSubState extends MusicBeatSubstate
 					PlayState.usedPractice = false;
 					PlayState.changedDifficulty = false;
 					PlayState.cpuControlled = false;
-				case 'Modifiers':
-					close();
 				case "BACK":
 					menuItems = menuItemsOG;
 					regenMenu();
@@ -246,6 +276,12 @@ class PauseSubState extends MusicBeatSubstate
 
 	function regenMenu():Void
 	{
+		if (PlayState.onModifiers == "toPause" && menuItems == menuItemsOG)
+		{
+			menuItems.remove('Resume');
+			menuItemsTranslated.remove(menuItemsTranslated[0]);
+		}
+
 		for (i in 0...grpMenuShit.members.length)
 		{
 			var obj = grpMenuShit.members[0];
@@ -255,7 +291,13 @@ class PauseSubState extends MusicBeatSubstate
 		}
 		for (i in 0...menuItems.length)
 		{
-			var item = new Alphabet(90, 320, menuItems[i], true);
+			var text:String = "";
+			if (menuItems == difficultyChoices)
+				text = menuItems[i] == "BACK" ? menuItemsTranslated[6] : menuItems[i];
+			else
+				text = menuItemsTranslated[i];
+
+			var item = new Alphabet(90, 320, text, true);
 			item.isMenuItem = true;
 			item.targetY = i;
 			grpMenuShit.add(item);

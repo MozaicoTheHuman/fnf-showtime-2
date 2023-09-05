@@ -66,16 +66,16 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
 	public static var ratingStuff:Array<Dynamic> = [
-		['You Suck!', 0.2], // From 0% to 19%
-		['Shit', 0.4], // From 20% to 39%
-		['Bad', 0.5], // From 40% to 49%
-		['Bruh', 0.6], // From 50% to 59%
-		['Meh', 0.69], // From 60% to 68%
-		['Nice', 0.7], // 69%
-		['Good', 0.8], // From 70% to 79%
-		['Great', 0.9], // From 80% to 89%
-		['Sick!', 1], // From 90% to 99%
-		['Perfect!!', 1] // The value on this one isn't used actually, since Perfect is always "1"
+		[Language.rating[0], 0.2], // From 0% to 19%
+		[Language.rating[1], 0.4], // From 20% to 39%
+		[Language.rating[2], 0.5], // From 40% to 49%
+		[Language.rating[3], 0.6], // From 50% to 59%
+		[Language.rating[4], 0.69], // From 60% to 68%
+		[Language.rating[5], 0.7], // 69%
+		[Language.rating[6], 0.8], // From 70% to 79%
+		[Language.rating[7], 0.9], // From 80% to 89%
+		[Language.rating[8], 1], // From 90% to 99%
+		[Language.rating[9], 1] // The value on this one isn't used actually, since Perfect is always "1"
 	];
 
 	#if (haxe >= "4.0.0")
@@ -119,6 +119,7 @@ class PlayState extends MusicBeatState
 
 	public var songSpeedTween:FlxTween;
 	public var songSpeed(default, set):Float = 1;
+	public var songSpeedType:String = "multiplicative";
 	public var noteKillOffset:Float = 350;
 
 	public var boyfriendGroup:FlxSpriteGroup;
@@ -191,10 +192,15 @@ class PlayState extends MusicBeatState
 	private var startingSong:Bool = false;
 	private var updateTime:Bool = false;
 
-	public static var practiceMode:Bool = false;
 	public static var usedPractice:Bool = false;
 	public static var changedDifficulty:Bool = false;
+	public static var chartingMode:Bool = false;
+
+	// Gameplay settings
+	public var instakillOnMiss:Bool = false;
+
 	public static var cpuControlled:Bool = false;
+	public static var practiceMode:Bool = false;
 
 	public var iconP1:HealthIcon;
 	public var iconP2:HealthIcon;
@@ -290,22 +296,26 @@ class PlayState extends MusicBeatState
 	var introSprites:Array<String> = [null, 'ready', "set", "go"];
 	var introSounds:Array<String> = ["intro3", "intro2", "intro1", "introGo"];
 
-	public static var goTo:String = null;
-
 	var timesStunned:Int = 0;
 	var stunTimer:FlxTimer = null;
+
+	public static var onModifiers:String = "";
 
 	override public function create()
 	{
 		Paths.clearStoredMemory();
 
-		goTo = null;
+		onModifiers = "";
 		instance = this;
 
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
 
-		practiceMode = false;
+		// Gameplay settings
+		instakillOnMiss = ClientPrefs.getGameplaySetting('instakill');
+		practiceMode = ClientPrefs.getGameplaySetting('practice');
+		cpuControlled = ClientPrefs.getGameplaySetting('botplay');
+
 		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FlxCamera();
 		camHUD = new FlxCamera();
@@ -1007,7 +1017,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 		songSpeed = value;
-		noteKillOffset = 350 / songSpeed;
+		noteKillOffset = Math.max(Conductor.stepCrochet, 350 / songSpeed);
 		return value;
 	}
 
@@ -1399,7 +1409,15 @@ class PlayState extends MusicBeatState
 	{
 		// FlxG.log.add(ChartParser.parse());
 
-		songSpeed = SONG.speed;
+		songSpeed = PlayState.SONG.speed;
+		songSpeedType = ClientPrefs.getGameplaySetting('scrolltype');
+		switch (songSpeedType)
+		{
+			case "multiplicative":
+				songSpeed = SONG.speed * ClientPrefs.getGameplaySetting('scrollspeed');
+			case "constant":
+				songSpeed = ClientPrefs.getGameplaySetting('scrollspeed');
+		}
 
 		var songData = SONG;
 		Conductor.changeBPM(songData.bpm);
@@ -1653,6 +1671,17 @@ class PlayState extends MusicBeatState
 	{
 		if (paused)
 		{
+			if (onModifiers == "fromPause")
+			{
+				openSubState(new ModifiersSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+				return;
+			}
+			else if (onModifiers == "toPause")
+			{
+				openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+				return;
+			}
+
 			if (FlxG.sound.music != null && !startingSong)
 			{
 				if (isTokyo && !ClientPrefs.lowQuality)
@@ -1761,7 +1790,7 @@ class PlayState extends MusicBeatState
 		vocals.play();
 	}
 
-	private var paused:Bool = false;
+	public var paused:Bool = false;
 	var startedCountdown:Bool = false;
 	var canPause:Bool = true;
 	var limoSpeed:Float = 0;
@@ -1822,7 +1851,7 @@ class PlayState extends MusicBeatState
 
 		super.update(elapsed);
 
-		scoreTxt.text = !cpuControlled ? 'Score: $songScore | Misses: $songMisses | Accuracy: $ratingName ${ratingName != '?' ? '(${Highscore.floorDecimal(ratingPercent * 100, 2)}%)' : ''}${isMugen ? '| Notes Combo: $combo' : ''}' : "--- BotPlay ---";
+		scoreTxt.text = !cpuControlled ? '${Language.score[0]}: $songScore | ${Language.score[1]}: $songMisses | ${Language.score[2]}: $ratingName ${ratingName != '?' ? '(${Highscore.floorDecimal(ratingPercent * 100, 2)}%)' : ''}${isMugen ? '| ${Language.score[3]}: $combo' : ''}' : "--- BotPlay ---";
 
 		if (controls.PAUSE && startedCountdown && canPause)
 		{
@@ -1864,6 +1893,8 @@ class PlayState extends MusicBeatState
 			persistentUpdate = false;
 			paused = true;
 			cancelFadeTween();
+			chartingMode = true;
+
 			CustomFadeTransition.nextCamera = camOther;
 			MusicBeatState.switchState(new ChartingState());
 
@@ -2353,9 +2384,9 @@ class PlayState extends MusicBeatState
 
 	var isDead:Bool = false;
 
-	function doDeathCheck()
+	function doDeathCheck(?skipHealthCheck:Bool = false)
 	{
-		if (health <= 0 && !practiceMode && !isDead)
+		if (((skipHealthCheck && instakillOnMiss) || health <= 0) && !practiceMode && !isDead)
 		{
 			var ret:Dynamic = callOnLuas('onGameOver', []);
 			if (ret != FunkinLua.Function_Stop)
@@ -2727,28 +2758,32 @@ class PlayState extends MusicBeatState
 							FlxColor.fromRGB(eventChar.healthColorArray[0], eventChar.healthColorArray[1], eventChar.healthColorArray[2]));
 				}
 			case 'Change Scroll Speed':
-				var val1:Float = Std.parseFloat(value1);
-				var val2:Float = Std.parseFloat(value2);
-				if (Math.isNaN(val1))
-					val1 = 1;
-				if (Math.isNaN(val2))
-					val2 = 0;
-
-				var newValue:Float = SONG.speed * val1;
-
-				if (val2 <= 0)
+				if (songSpeedType != "constant")
 				{
-					songSpeed = newValue;
-				}
-				else
-				{
-					songSpeedTween = FlxTween.tween(this, {songSpeed: newValue}, val2, {
-						ease: FlxEase.linear,
-						onComplete: function(twn:FlxTween)
-						{
-							songSpeedTween = null;
-						}
-					});
+					var val1:Null<Float> = Std.parseFloat(value1);
+					var val2:Null<Float> = Std.parseFloat(value2);
+
+					if (Math.isNaN(val1))
+						val1 = null;
+					if (Math.isNaN(val2))
+						val2 = null;
+
+					if (val1 == null)
+						val1 = 1;
+					if (val2 == null)
+						val2 = 0;
+
+					var newValue:Float = SONG.speed * ClientPrefs.getGameplaySetting('scrollspeed') * val1;
+					if (val2 <= 0)
+						songSpeed = newValue;
+					else
+						songSpeedTween = FlxTween.tween(this, {songSpeed: newValue}, val2, {
+							ease: FlxEase.linear,
+							onComplete: function(twn:FlxTween)
+							{
+								songSpeedTween = null;
+							}
+						});
 				}
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
@@ -2993,7 +3028,7 @@ class PlayState extends MusicBeatState
 					MusicBeatState.switchState(new MainMenuState());
 
 					// if ()
-					if (!usedPractice)
+					if (!ClientPrefs.getGameplaySetting('practice') && !ClientPrefs.getGameplaySetting('botplay'))
 					{
 						MainMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
 
@@ -3428,6 +3463,12 @@ class PlayState extends MusicBeatState
 		});
 
 		health -= daNote.missHealth; // For testing purposes
+
+		if (instakillOnMiss)
+		{
+			vocals.volume = 0;
+			doDeathCheck(true);
+		}
 		combo = 0;
 		songMisses++;
 		vocals.volume = 0;
@@ -4076,6 +4117,10 @@ class PlayState extends MusicBeatState
 
 	private function checkForAchievement(achievesToCheck:Array<String> = null):String
 	{
+		if (chartingMode)
+			return null;
+		var usedPractice:Bool = (ClientPrefs.getGameplaySetting('practice') || ClientPrefs.getGameplaySetting('botplay'));
+
 		for (i in 0...achievesToCheck.length)
 		{
 			var achievementName:String = achievesToCheck[i];
@@ -4090,32 +4135,45 @@ class PlayState extends MusicBeatState
 							&& CoolUtil.difficultyString() == 'HARD'
 							&& storyPlaylist.length <= 1
 							&& WeekData.getWeekFileName() == ('showtime')
-							&& !changedDifficulty)
+							&& !changedDifficulty
+							&& !usedPractice)
 						{
 							unlock = true;
 						}
 					case 'expert':
-						if (Paths.formatToSongPath(SONG.song) == 'showtime' && timesStunned < 1)
+						if (Paths.formatToSongPath(SONG.song) == 'showtime' && timesStunned < 1 && !usedPractice)
 						{
 							unlock = true;
 						}
 					case 'pondering':
-						if (Paths.formatToSongPath(SONG.song) == 'pondering' && CoolUtil.difficultyString() == 'HARD' && songMisses < 1)
+						if (Paths.formatToSongPath(SONG.song) == 'pondering'
+							&& CoolUtil.difficultyString() == 'HARD'
+							&& songMisses < 1
+							&& !usedPractice)
 						{
 							unlock = true;
 						}
 					case 'maavo_generations':
-						if (Paths.formatToSongPath(SONG.song) == 'light-on' && CoolUtil.difficultyString() == 'HARD' && songMisses < 1)
+						if (Paths.formatToSongPath(SONG.song) == 'light-on'
+							&& CoolUtil.difficultyString() == 'HARD'
+							&& songMisses < 1
+							&& !usedPractice)
 						{
 							unlock = true;
 						}
 					case 'perfect':
-						if (Paths.formatToSongPath(SONG.song) == 'mugen' && CoolUtil.difficultyString() == 'HARD' && songMisses < 1)
+						if (Paths.formatToSongPath(SONG.song) == 'mugen'
+							&& CoolUtil.difficultyString() == 'HARD'
+							&& songMisses < 1
+							&& !usedPractice)
 						{
 							unlock = true;
 						}
 					case 'sick':
-						if (Paths.formatToSongPath(SONG.song) == 'tokyo' && CoolUtil.difficultyString() == 'EXTREME' && songMisses < 1)
+						if (Paths.formatToSongPath(SONG.song) == 'tokyo'
+							&& CoolUtil.difficultyString() == 'EXTREME'
+							&& songMisses < 1
+							&& !usedPractice)
 						{
 							unlock = true;
 						}

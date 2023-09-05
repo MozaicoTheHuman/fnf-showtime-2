@@ -444,6 +444,7 @@ class MainMenuState extends MusicBeatState
 									case 'credits':
 										MusicBeatState.switchState(new CreditsState());
 									case 'options':
+										OptionsState.onPlayState = false;
 										LoadingState.loadAndSwitchState(new fnf.menus.OptionsState());
 								}
 							});
@@ -545,12 +546,12 @@ class MainMenuState extends MusicBeatState
 
 	function selectWeek()
 	{
+		PlayState.storyWeek = curWeek;
 		PlayState.storyPlaylist = ['Lovely', 'Wannabe', 'Finale', 'Showtime'];
 		PlayState.isStoryMode = true;
 		var diffic = CoolUtil.difficultyStuff[curDifficulty][1];
 		PlayState.storyDifficulty = curDifficulty;
 		PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
-		PlayState.storyWeek = curWeek;
 		PlayState.campaignScore = 0;
 		PlayState.campaignMisses = 0;
 		new FlxTimer().start(1, function(tmr:FlxTimer)

@@ -3,7 +3,6 @@ package fnf.system;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
-import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.math.FlxMath;
 import flixel.util.FlxTimer;
 import haxe.io.Path;
@@ -42,18 +41,18 @@ class LoadingState extends MusicBeatState
 	override function create()
 	{
 		var bg:FlxSprite = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, 0xffcaff4d);
+		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 		funkay = new FlxSprite(0, 0).loadGraphic(Paths.getPath('images/funkay.png', IMAGE));
 		funkay.setGraphicSize(0, FlxG.height);
 		funkay.updateHitbox();
-		funkay.antialiasing = ClientPrefs.globalAntialiasing;
 		add(funkay);
+		funkay.antialiasing = ClientPrefs.globalAntialiasing;
 		funkay.scrollFactor.set();
 		funkay.screenCenter();
 
 		loadBar = new FlxSprite(0, FlxG.height - 20).makeGraphic(FlxG.width, 10, 0xffff16d2);
 		loadBar.screenCenter(X);
-		loadBar.antialiasing = ClientPrefs.globalAntialiasing;
 		add(loadBar);
 
 		initSongsManifest().onComplete(function(lib)
@@ -69,7 +68,7 @@ class LoadingState extends MusicBeatState
 			checkLibrary("shared");
 			if (directory != null && directory.length > 0 && directory != 'shared')
 			{
-				checkLibrary(directory);
+				checkLibrary('week_assets');
 			}
 
 			var fadeTime = 0.5;
@@ -172,8 +171,7 @@ class LoadingState extends MusicBeatState
 		{
 			loaded = isSoundLoaded(getSongPath())
 				&& (!PlayState.SONG.needsVoices || isSoundLoaded(getVocalPath()))
-				&& isLibraryLoaded("shared")
-				&& isLibraryLoaded(directory);
+				&& isLibraryLoaded("shared");
 		}
 
 		if (!loaded)
@@ -188,6 +186,7 @@ class LoadingState extends MusicBeatState
 	#if NO_PRELOAD_ALL
 	static function isSoundLoaded(path:String):Bool
 	{
+		trace(path);
 		return OpenFLAssets.cache.hasSound(path);
 	}
 

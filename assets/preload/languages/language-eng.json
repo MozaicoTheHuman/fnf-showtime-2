@@ -229,6 +229,42 @@
 					"description": "Current offset"
 				}
 			]
+		},{
+			"name": "Modifiers",
+			"title": "Modifiers Settings",
+			"rpc": "In Modifiers",
+			"options":[{
+					"name": "Scroll Type"
+				},{
+					"name": "Scroll Speed"
+				},{
+					"name": "Instakill on Miss"
+				},{
+					"name": "Practice Mode"
+				},{
+					"name": "BotPlay"
+				}
+			]
+		},{
+			"name": "Pause Menu",
+			"title": "Pause Menu",
+			"rpc": "In Pause Menu",
+			"options":[{
+					"name": "Resume"
+				},{
+					"name": "Restart Song"
+				},{
+					"name": "Modifiers"
+				},{
+					"name": "Change Difficulty"
+				},{
+					"name": "Options"
+				},{
+					"name": "Exit to menu"
+				},{
+					"name": "Back"
+				}
+			]
 		}
 	],
 	"cutscene":[
@@ -236,5 +272,23 @@
 		"Since they have 1 neuron \nand share it in turns, \nthey fell off the building, landing on a \ndumpster that broke their fall.",
 		"Girlfriend, upon falling \ninto the trash, finds a notebook, \nwith several pages torn out \nand full of erasures.",
 		"Dizzy from the fall, \nshe accidentally uses her powers, \nentering the notebook with BF on \nthe only sheet that was almost intact."
+	],
+	"score":[
+		"Score",
+		"Misses",
+		"Accuracy",
+		"Note Combo"
+	],
+	"rating":[
+		"You Suck!",
+		"Shit",
+		"Bad",
+		"Bruh",
+		"Meh",
+		"Nice",
+		"Good",
+		"Great",
+		"Sick!",
+		"Perfect!!"
 	]
 }

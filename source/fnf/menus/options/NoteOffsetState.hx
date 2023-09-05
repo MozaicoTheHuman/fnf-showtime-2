@@ -198,7 +198,7 @@ class NoteOffsetState extends MusicBeatState
 		add(titleText);
 
 		updateMode();
-		Conductor.changeBPM(74);
+		Conductor.changeBPM(102);
 		FlxG.sound.playMusic(Paths.music('offsetSong'), 1, true);
 
 		super.create();
@@ -369,7 +369,12 @@ class NoteOffsetState extends MusicBeatState
 			persistentUpdate = false;
 			CustomFadeTransition.nextCamera = camOther;
 			MusicBeatState.switchState(new fnf.menus.OptionsState());
-			FlxG.sound.playMusic(Paths.music('freakyMenu'), 1, true);
+
+			if (OptionsState.onPlayState)
+				FlxG.sound.playMusic(Paths.music('breakfast'));
+			else
+				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+
 			FlxG.mouse.visible = false;
 		}
 

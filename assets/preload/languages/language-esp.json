@@ -229,6 +229,42 @@
 					"description": "Offset actual"
 				}
 			]
+		},{
+			"name": "Modificadores",
+			"title": "Ajustes de Modificadores",
+			"rpc": "En Modificadores",
+			"options":[{
+					"name": "Tipo de Scroll"
+				},{
+					"name": "Velocidad de Scroll"
+				},{
+					"name": "Instakill por Fallar"
+				},{
+					"name": "Modo Practica"
+				},{
+					"name": "BotPlay"
+				}
+			]
+		},{
+			"name": "Menu de Pausa",
+			"title": "Menu de Pausa",
+			"rpc": "En el Menu de Pausa",
+			"options":[{
+					"name": "Continuar"
+				},{
+					"name": "Reiniciar Cancion"
+				},{
+					"name": "Modificadores"
+				},{
+					"name": "Cambiar Dificultad"
+				},{
+					"name": "Opciones"
+				},{
+					"name": "Salir al Menu"
+				},{
+					"name": "Volver"
+				}
+			]
 		}
 	],
 	"cutscene":[
@@ -236,5 +272,23 @@
 		"ya que tienen 1 neurona y la \ncomparten por turnos, se cayeron \ndel edificio, aterrizando en un \nbasurero que amortiguo su caída",
 		"Girlfriend al caer, se encuentra \nen la basura un cuaderno, con \nvarias hojas arrancadas \ny llena de borrones.",	
 		"Al estar mareada por la caída, \naccidentalmente usa sus poderes, \nentrando junto a BF al cuaderno en \nla única hoja que estaba casi intacta."
+	],
+	"score":[
+		"Puntaje",
+		"Fallos",
+		"Precision",
+		"Combo de Notas"
+	],
+	"rating":[
+		"Apestas!",
+		"Mierda",
+		"Mal",
+		"Bruh",
+		"Mid",
+		"Bien",
+		"Muy Bien",
+		"Demasiado Bien",
+		"Enfermo!",
+		"Perfecto!!"
 	]
 }
