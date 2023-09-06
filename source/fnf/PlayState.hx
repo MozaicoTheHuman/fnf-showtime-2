@@ -492,12 +492,12 @@ class PlayState extends MusicBeatState
 				GameOverSubstate.setGameOver('maavo-playableL-GAMEOVER', 'fnf_loss_maavomaritza', 'gameOverLightOn', 'gameOverLightOnEnd');
 
 				var sky:BGSprite = new BGSprite('lighton/sky', -500, -290, 0.7, 0.7);
-				sky.setGraphicSize(Std.int(sky.width * 1.1));
+				sky.setGraphicSize(Std.int(sky.width * 1.2));
 				sky.updateHitbox();
 				add(sky);
 
 				var bg:BGSprite = new BGSprite('lighton/bg', -500, -130, 0.95, 0.95);
-				bg.setGraphicSize(Std.int(bg.width * 1.1));
+				bg.setGraphicSize(Std.int(bg.width * 1.2));
 				add(bg);
 
 				var trash:BGSprite = new BGSprite('lighton/trash', -1030, -130, 1.3, 1.3);
@@ -510,7 +510,7 @@ class PlayState extends MusicBeatState
 				trashT.updateHitbox();
 				add(trashT);
 			case 'kfm':
-				GameOverSubstate.setGameOver('maavomugen', 'fnf_loss_mugen');
+				GameOverSubstate.setGameOver('maavomugen', 'fnf_loss_mugen', 'gameOverMUGEN', 'gameOverEndMUGEN');
 
 				var skyyyy:FlxSprite = new FlxSprite(-800, -350).loadGraphic(Paths.image('kfm/stageblissKFM', 'shared'));
 				skyyyy.active = false;
@@ -2203,19 +2203,19 @@ class PlayState extends MusicBeatState
 							switch (Math.abs(daNote.noteData))
 							{
 								case 0:
-									vfxR.setPosition(861, 449);
+									vfxR.setPosition(681, 449);
 									vfxR.animation.play('punchR', true);
 									FlxG.sound.play(Paths.sound('mugen/ronaldhit_left'), 1);
 								case 1:
-									vfxR.setPosition(902, 730);
+									vfxR.setPosition(852, 730);
 									vfxR.animation.play('punchR', true);
 									FlxG.sound.play(Paths.sound('mugen/ronaldhit_down'), 1);
 								case 2:
-									vfxR.setPosition(440, -52);
+									vfxR.setPosition(630, 129);
 									vfxR.animation.play('punchR2', true);
 									FlxG.sound.play(Paths.sound('mugen/ronaldhit_up'), 1);
 								case 3:
-									vfxR.setPosition(739, 426);
+									vfxR.setPosition(689, 426);
 									vfxR.animation.play('punchR2', true);
 									FlxG.sound.play(Paths.sound('mugen/ronaldhit_right'), 1);
 							}
@@ -3681,19 +3681,19 @@ class PlayState extends MusicBeatState
 					{
 						case 0:
 							vfx.angle = 95;
-							vfx.setPosition(-51, 62);
+							vfx.setPosition(-81, 62);
 							FlxG.sound.play(Paths.sound('mugen/maavohit_left'), 1);
 						case 1:
 							vfx.angle = 85;
-							vfx.setPosition(82, 493);
+							vfx.setPosition(102, 493);
 							FlxG.sound.play(Paths.sound('mugen/maavohit_down'), 1);
 						case 2:
 							vfx.angle = 65;
-							vfx.setPosition(103, -43);
+							vfx.setPosition(163, -43);
 							FlxG.sound.play(Paths.sound('mugen/maavohit_up'), 1);
 						case 3:
 							vfx.angle = 30;
-							vfx.setPosition(357, 92);
+							vfx.setPosition(207, 92);
 							FlxG.sound.play(Paths.sound('mugen/maavohit_right'), 1);
 					}
 					vfx.animation.play('punch', true);
