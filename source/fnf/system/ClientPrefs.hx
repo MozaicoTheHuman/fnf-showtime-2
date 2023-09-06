@@ -154,12 +154,12 @@ class ClientPrefs
 
 			for (i in 0...resList.length)
 			{
-				if (resolution == resList[i][0])
+				if (resolution == resList[i][0] + "x" + resList[i][1])
 				{
 					if (resolution != "Full Screen")
 					{
-						FlxG.resizeWindow(resList[i][1], resList[i][2]);
-						FlxG.resizeGame(resList[i][1], resList[i][2]);
+						FlxG.resizeWindow(resList[i][0], resList[i][1]);
+						FlxG.resizeGame(resList[i][0], resList[i][1]);
 					}
 					else
 					{

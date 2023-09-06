@@ -128,6 +128,7 @@ class Main extends Sprite
 			if (FlxG.game != null)
 				resetSpriteCache(FlxG.game);
 		});
+		ClientPrefs.loadPrefs();
 	}
 
 	static function resetSpriteCache(sprite:Sprite):Void

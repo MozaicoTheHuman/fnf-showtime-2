@@ -68,7 +68,6 @@ class TitleState extends MusicBeatState
 
 		super.create();
 
-		ClientPrefs.loadPrefs();
 		FlxG.mouse.visible = false;
 		FlxG.save.bind('data', 'Mozaico');
 		Highscore.load();
@@ -111,6 +110,7 @@ class TitleState extends MusicBeatState
 				{
 					if (code[i] == code[code.length - 1])
 					{
+						FlxG.sound.play(Paths.sound('secretSound'), 0.7);
 						rata.visible = codeUnlocked = true;
 						keysPressed = [];
 					}
@@ -168,14 +168,15 @@ class TitleState extends MusicBeatState
 		rata = new FlxSprite(FlxG.width / 2, 0).loadGraphic(Paths.image('titlescreen/RATATIN'));
 		rata.visible = false;
 		rata.scale.set(1.5, 1.8);
+		rata.updateHitbox();
 
 		add(redbg);
 		add(building);
 		add(showWhite);
 		add(showTeam);
 		add(logoBl);
-		add(pressstart);
 		add(rata);
+		add(pressstart);
 
 		FlxTween.tween(logoBl, {y: logoBl.y + 30}, 0.9, {ease: FlxEase.quadInOut, type: PINGPONG});
 
