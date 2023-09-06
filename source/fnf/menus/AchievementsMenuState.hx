@@ -105,7 +105,7 @@ class AchievementsMenuState extends MusicBeatState
 		}
 		if (controls.ACCEPT)
 		{
-			if (Achievements.isAchievementUnlocked('telones') && curSelected == 11)
+			if (Achievements.isAchievementUnlocked('telones') && curSelected == 12)
 			{
 				foto = true;
 				FlxTween.tween(fotosprite, {alpha: 1}, 0.3);

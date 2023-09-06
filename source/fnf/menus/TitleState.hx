@@ -45,6 +45,11 @@ class TitleState extends MusicBeatState
 
 	var curWacky:Array<String> = [];
 
+	var code:Array<FlxKey> = [FlxKey.R, FlxKey.A, FlxKey.T, FlxKey.A, FlxKey.T, FlxKey.I, FlxKey.N];
+	var keysPressed:Array<FlxKey> = [];
+	var codeUnlocked:Bool = false;
+	var rata:FlxSprite;
+
 	override public function create():Void
 	{
 		Paths.clearStoredMemory();
@@ -96,6 +101,30 @@ class TitleState extends MusicBeatState
 		}
 	}
 
+	function checkCode()
+	{
+		for (i in 0...code.length)
+		{
+			if (i >= keysPressed.length)
+			{
+				if (FlxG.keys.anyJustPressed([code[i]]) && keysPressed[i - 1] == code[i - 1])
+				{
+					if (code[i] == code[code.length - 1])
+					{
+						rata.visible = codeUnlocked = true;
+						keysPressed = [];
+					}
+
+					keysPressed.push(code[i]);
+					trace(keysPressed);
+					return;
+				}
+			}
+		}
+		trace(keysPressed + " CODE RESET");
+		keysPressed = [];
+	}
+
 	var logoBl:FlxSprite;
 	var titleText:FlxSprite;
 
@@ -136,12 +165,17 @@ class TitleState extends MusicBeatState
 		pressstart.animation.play('idle');
 		pressstart.antialiasing = ClientPrefs.globalAntialiasing;
 
+		rata = new FlxSprite(FlxG.width / 2, 0).loadGraphic(Paths.image('titlescreen/RATATIN'));
+		rata.visible = false;
+		rata.scale.set(1.5, 1.8);
+
 		add(redbg);
 		add(building);
 		add(showWhite);
 		add(showTeam);
 		add(logoBl);
 		add(pressstart);
+		add(rata);
 
 		FlxTween.tween(logoBl, {y: logoBl.y + 30}, 0.9, {ease: FlxEase.quadInOut, type: PINGPONG});
 
@@ -213,6 +247,11 @@ class TitleState extends MusicBeatState
 			if (gamepad.justPressed.B)
 				pressedEnter = true;
 			#end
+		}
+
+		if (FlxG.keys.justPressed.ANY && !codeUnlocked)
+		{
+			checkCode();
 		}
 
 		if (pressedEnter)

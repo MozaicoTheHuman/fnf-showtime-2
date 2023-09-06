@@ -996,13 +996,15 @@ class PlayState extends MusicBeatState
 
 	function set_songSpeed(value:Float):Float
 	{
-		if(generatedMusic)
+		if (generatedMusic)
 		{
-			var ratio:Float = value / songSpeed; //funny word huh
-			if(ratio != 1)
+			var ratio:Float = value / songSpeed; // funny word huh
+			if (ratio != 1)
 			{
-				for (note in notes.members) note.resizeByRatio(ratio);
-				for (note in unspawnNotes) note.resizeByRatio(ratio);
+				for (note in notes.members)
+					note.resizeByRatio(ratio);
+				for (note in unspawnNotes)
+					note.resizeByRatio(ratio);
 			}
 		}
 		songSpeed = value;
@@ -1840,7 +1842,7 @@ class PlayState extends MusicBeatState
 
 		super.update(elapsed);
 
-		scoreTxt.text = !cpuControlled ? '${Language.score[0]}: $songScore | ${Language.score[1]}: $songMisses | ${Language.score[2]}: $ratingName ${ratingName != '?' ? '(${Highscore.floorDecimal(ratingPercent * 100, 2)}%)' : ''}${isMugen ? '| ${Language.score[3]}: $combo' : ''}' : "--- BotPlay ---";
+		scoreTxt.text = !cpuControlled ? '${Language.score[0]}: $songScore | ${Language.score[1]}: $songMisses | $ratingName ${ratingName != '?' ? '(${Highscore.floorDecimal(ratingPercent * 100, 2)}%)' : ''}${isMugen ? '| ${Language.score[3]}: $combo' : ''}' : "--- BotPlay ---";
 
 		if (controls.PAUSE && startedCountdown && canPause)
 		{
@@ -2955,7 +2957,17 @@ class PlayState extends MusicBeatState
 		}
 		else
 		{
-			var achieve:String = checkForAchievement(['great_show', 'expert', 'perfect', 'perfeccionist', 'sick', 'telones']);
+			var achieve:String = checkForAchievement([
+				'great_show',
+				'expert',
+				'showtime_perfect',
+				'pondering',
+				'maavo_generations',
+				'perfect',
+				'sick',
+				'perfeccionist',
+				'telones'
+			]);
 			if (achieve != null)
 			{
 				switch (achieve)
@@ -4039,7 +4051,7 @@ class PlayState extends MusicBeatState
 				// Rating Name
 				if (ratingPercent >= 1)
 				{
-					ratingName = ratingStuff[ratingStuff.length - 1][0]; // Uses last string
+					ratingName = Language.rating[ratingStuff.length - 1]; // Uses last string
 				}
 				else
 				{
@@ -4047,7 +4059,7 @@ class PlayState extends MusicBeatState
 					{
 						if (ratingPercent < ratingStuff[i][1])
 						{
-							ratingName = ratingStuff[i][0];
+							ratingName = Language.rating[i];
 							break;
 						}
 					}
@@ -4106,6 +4118,7 @@ class PlayState extends MusicBeatState
 
 	private function checkForAchievement(achievesToCheck:Array<String> = null):String
 	{
+		trace(Paths.formatToSongPath(SONG.song) + " - " + CoolUtil.difficultyString() + " - " + songMisses + " - " + usedPractice);
 		if (chartingMode)
 			return null;
 		var usedPractice:Bool = (ClientPrefs.getGameplaySetting('practice') || ClientPrefs.getGameplaySetting('botplay'));
@@ -4131,6 +4144,14 @@ class PlayState extends MusicBeatState
 						}
 					case 'expert':
 						if (Paths.formatToSongPath(SONG.song) == 'showtime' && timesStunned < 1 && !usedPractice)
+						{
+							unlock = true;
+						}
+					case 'showtime_perfect':
+						if (Paths.formatToSongPath(SONG.song) == 'showtime'
+							&& CoolUtil.difficultyString() == 'HARD'
+							&& songMisses < 1
+							&& !usedPractice)
 						{
 							unlock = true;
 						}
