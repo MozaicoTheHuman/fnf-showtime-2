@@ -74,7 +74,7 @@ class VideoHandler
 	{
 		trace("the video is opening!");
 
-		bitmap.volume = Std.int((FlxG.sound.muted ? 0 : 1) * (FlxG.sound.volume * 100));
+		bitmap.volume = Std.int((FlxG.sound.muted || !canUseSound ? 0 : 1) * (FlxG.sound.volume * 150));
 
 		if (openingCallback != null)
 			openingCallback();
@@ -136,7 +136,7 @@ class VideoHandler
 			bitmap.height = calcSize(1);
 		}
 
-		bitmap.volume = Std.int((FlxG.sound.muted ? 0 : 1) * (FlxG.sound.volume * 100));
+		bitmap.volume = Std.int((FlxG.sound.muted || !canUseSound ? 0 : 1) * (FlxG.sound.volume * 150));
 	}
 
 	function pauseFocus():Void

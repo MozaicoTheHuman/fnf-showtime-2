@@ -1,16 +1,17 @@
 package openfl;
 
-import flixel.FlxG;
 import flixel.math.FlxMath;
 import fnf.system.ClientPrefs;
-import fnf.system.Conductor;
-import openfl.events.KeyboardEvent;
+import haxe.Timer;
+import openfl.events.Event;
 import openfl.text.TextField;
 import openfl.text.TextFormat;
-import openfl.ui.Keyboard;
 #if gl_stats
 import openfl.display._internal.stats.Context3DStats;
 import openfl.display._internal.stats.DrawCallContext;
+#end
+#if flash
+import openfl.Lib;
 #end
 #if openfl
 import openfl.system.System;
@@ -29,10 +30,7 @@ class FPS extends TextField
 	/**
 		The current frame rate, expressed using frames-per-second
 	**/
-	public var infoType:String = 'Benchmark';
-
 	public var currentFPS(default, null):Int;
-	public var memoryPeak:Float = 0;
 
 	@:noCompletion private var cacheCount:Int;
 	@:noCompletion private var currentTime:Float;
@@ -47,7 +45,6 @@ class FPS extends TextField
 
 		currentFPS = 0;
 		selectable = false;
-		textColor = 0xFFFFFFFF;
 		mouseEnabled = false;
 		defaultTextFormat = new TextFormat("_sans", 14, color);
 		autoSize = LEFT;
@@ -58,72 +55,57 @@ class FPS extends TextField
 		currentTime = 0;
 		times = [];
 
-		FlxG.stage.addEventListener(KeyboardEvent.KEY_UP, function(e:KeyboardEvent)
+		#if flash
+		addEventListener(Event.ENTER_FRAME, function(e)
 		{
-			switch (e.keyCode)
-			{
-				case #if web Keyboard.NUMBER_3 #else Keyboard.F3 #end: // 3 on web or F3 on windows, linux and other things that runs code
-					infoType = infoType == 'Benchmark' ? 'Flixel' : 'Benchmark';
-			}
+			var time = Lib.getTimer();
+			__enterFrame(time - currentTime);
 		});
+		#end
 	}
 
 	// Event Handlers
 	@:noCompletion
 	private #if !flash override #end function __enterFrame(deltaTime:Float):Void
 	{
-		text = "FNF Showtime V2 Beta Build 0.1.2";
-		text += '\n --- $infoType Info ---';
-		switch (infoType)
+		currentTime += deltaTime;
+		times.push(currentTime);
+
+		while (times[0] < currentTime - 1000)
 		{
-			case 'Benchmark':
-				currentTime += deltaTime;
-				times.push(currentTime);
-				while (times[0] < currentTime - 1000)
-				{
-					times.shift();
-				}
-				var currentCount = times.length;
-				currentFPS = Math.round((currentCount + cacheCount) / 2);
-				if (currentFPS > ClientPrefs.framerate)
-					currentFPS = ClientPrefs.framerate;
-				text += '\nFPS: ${currentFPS} / ${ClientPrefs.framerate}';
-				#if openfl
-				var memoryMegas = Math.abs(FlxMath.roundDecimal(System.totalMemory / 1000000, 1));
-				if (memoryMegas > memoryPeak)
-					memoryPeak = memoryMegas;
-				text += '\nMemory: ${FlxMath.roundDecimal(memoryMegas / 1024, 2)} GB / ${FlxMath.roundDecimal(memoryPeak / 1024, 2)} GB';
-				#end
-
-				if (currentFPS < 25 || memoryMegas > 3000)
-					textColor = 0xFFFF0000;
-				else
-					textColor = 0xFFFFFFFF;
-
-				if (currentCount != cacheCount)
-					cacheCount = currentCount;
-			case 'Flixel':
-				@:privateAccess
-				{
-					var c:Int = 0;
-					for (_ in FlxG.bitmap._cache.keys())
-						c++;
-
-					var objs = FlxG.state.members.length;
-
-					text += '\nState: ${Type.getClassName(Type.getClass(FlxG.state))}';
-					text += '\nObjects: ${objs}';
-					text += '\nCameras: ${FlxG.cameras.list.length}';
-					text += '\nBitmaps: ${c}';
-					text += '\nSounds: ${FlxG.sound.list.length}';
-					text += '\nFlixel Childs: ${FlxG.game.numChildren}';
-
-					if (objs > 100 || c > 800)
-						textColor = 0xFFFF0000;
-					else
-						textColor = 0xFFFFFFFF;
-				}
+			times.shift();
 		}
-		text += "\n";
+
+		var currentCount = times.length;
+		currentFPS = Math.round((currentCount + cacheCount) / 2);
+		if (currentFPS > ClientPrefs.framerate)
+			currentFPS = ClientPrefs.framerate;
+
+		if (currentCount != cacheCount /*&& visible*/)
+		{
+			text = "FPS: " + currentFPS;
+			var memoryMegas:Float = 0;
+
+			#if openfl
+			memoryMegas = Math.abs(FlxMath.roundDecimal(System.totalMemory / 1000000, 1));
+			text += "\nMemory: " + memoryMegas + " MB";
+			#end
+
+			textColor = 0xFFFFFFFF;
+			if (memoryMegas > 3000 || currentFPS <= ClientPrefs.framerate / 2)
+			{
+				textColor = 0xFFFF0000;
+			}
+
+			#if (gl_stats && !disable_cffi && (!html5 || !canvas))
+			text += "\ntotalDC: " + Context3DStats.totalDrawCalls();
+			text += "\nstageDC: " + Context3DStats.contextDrawCalls(DrawCallContext.STAGE);
+			text += "\nstage3DDC: " + Context3DStats.contextDrawCalls(DrawCallContext.STAGE3D);
+			#end
+
+			text += "\n";
+		}
+
+		cacheCount = currentCount;
 	}
 }

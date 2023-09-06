@@ -3,6 +3,7 @@ package fnf.system;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.tweens.FlxTween;
+import flixel.util.FlxColor;
 import lime.utils.AssetLibrary;
 import lime.utils.AssetManifest;
 import lime.utils.Assets as LimeAssets;
@@ -30,6 +31,19 @@ class CoolUtil
 		spr.drag.set();
 		spr.antialiasing = FlxSprite.defaultAntialiasing;
 		FlxTween.cancelTweensOf(spr);
+	}
+
+	inline public static function colorFromString(color:String):FlxColor
+	{
+		var hideChars = ~/[\t\n\r]/;
+		var color:String = hideChars.split(color).join('').trim();
+		if (color.startsWith('0x'))
+			color = color.substring(color.length - 6);
+
+		var colorNum:Null<FlxColor> = FlxColor.fromString(color);
+		if (colorNum == null)
+			colorNum = FlxColor.fromString('#$color');
+		return colorNum != null ? colorNum : FlxColor.WHITE;
 	}
 
 	public static inline function addZeros(str:String, num:Int)

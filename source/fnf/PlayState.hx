@@ -226,6 +226,7 @@ class PlayState extends MusicBeatState
 	var maavoportrait:FlxSprite;
 
 	var vfxR:FlxSprite;
+	var ronaldBG:FlxSprite;
 	var ronalportrait:FlxSprite;
 	var dissapearTime:FlxTimer = null;
 
@@ -552,29 +553,6 @@ class PlayState extends MusicBeatState
 				ronalportrait.antialiasing = false;
 				ronalportrait.cameras = [camHUD];
 				add(ronalportrait);
-
-				vfx = new FlxSprite(0, 0);
-				vfx.scale.set(3, 3);
-				vfx.alpha = 0;
-				vfx.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
-				vfx.animation.addByPrefix('punch', "maavohit", 60, false);
-				vfx.animation.play('punch');
-				vfx.antialiasing = ClientPrefs.globalAntialiasing;
-				vfx.centerOrigin();
-				vfx.updateHitbox();
-				add(vfx);
-
-				vfxR = new FlxSprite(0, 0);
-				vfxR.scale.set(3, 3);
-				vfxR.alpha = 0;
-				vfxR.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
-				vfxR.animation.addByPrefix('punchR', "ronaldhit1", 60, false);
-				vfxR.animation.addByPrefix('punchR2', "ronaldhit2", 60, false);
-				vfxR.animation.addByPrefix('spark', "hyperspark", 60, true);
-				vfxR.animation.play('spark');
-				vfxR.antialiasing = ClientPrefs.globalAntialiasing;
-				vfxR.updateHitbox();
-				add(vfxR);
 			case 'void': // Tokyo y la otra cancion secreta
 				GameOverSubstate.setGameOver('maavo-playable', 'fnf_loss_maavo');
 		}
@@ -596,8 +574,41 @@ class PlayState extends MusicBeatState
 
 		// Shitty layering but whatev it works LO
 		add(boyfriendGroup);
+
+		if (isMugen)
+		{
+			ronaldBG = new FlxSprite(-700, -400).makeGraphic(3840, 2160, 0xD804002B);
+			ronaldBG.scrollFactor.set();
+			ronaldBG.visible = false;
+			add(ronaldBG);
+		}
 		add(dadGroup);
 
+		if (isMugen)
+		{
+			vfx = new FlxSprite(0, 0);
+			vfx.scale.set(3, 3);
+			vfx.alpha = 0;
+			vfx.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
+			vfx.animation.addByPrefix('punch', "maavohit", 60, false);
+			vfx.animation.play('punch');
+			vfx.antialiasing = ClientPrefs.globalAntialiasing;
+			vfx.centerOrigin();
+			vfx.updateHitbox();
+			add(vfx);
+
+			vfxR = new FlxSprite(0, 0);
+			vfxR.scale.set(3, 3);
+			vfxR.alpha = 0;
+			vfxR.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
+			vfxR.animation.addByPrefix('punchR', "ronaldhit1", 60, false);
+			vfxR.animation.addByPrefix('punchR2', "ronaldhit2", 60, false);
+			vfxR.animation.addByPrefix('spark', "hyperspark", 60, true);
+			vfxR.animation.play('spark');
+			vfxR.antialiasing = ClientPrefs.globalAntialiasing;
+			vfxR.updateHitbox();
+			add(vfxR);
+		}
 		#if LUA_ALLOWED
 		luaDebugGroup = new FlxTypedGroup<DebugLuaText>();
 		luaDebugGroup.cameras = [camOther];
@@ -710,7 +721,7 @@ class PlayState extends MusicBeatState
 		add(dwBar);
 
 		strumLine = new FlxSprite(ClientPrefs.middleScroll
-			|| isTokyo ? STRUM_X_MIDDLESCROLL : STRUM_X, isMugen ? 120 : 50).makeGraphic(FlxG.width, 10);
+			|| isTokyo ? STRUM_X_MIDDLESCROLL : STRUM_X, isMugen ? 128 : 50).makeGraphic(FlxG.width, 10);
 		if (ClientPrefs.downScroll)
 			strumLine.y = FlxG.height - 150;
 		strumLine.scrollFactor.set();
@@ -1635,6 +1646,10 @@ class PlayState extends MusicBeatState
 				finishTimer.active = false;
 			if (songSpeedTween != null)
 				songSpeedTween.active = false;
+			if (stunTimer != null)
+				stunTimer.active = false;
+			if (dissapearTime != null)
+				dissapearTime.active = false;
 
 			var chars:Array<Character> = [boyfriend, gf, dad];
 			for (i in 0...chars.length)
@@ -2604,12 +2619,14 @@ class PlayState extends MusicBeatState
 				{
 					FlxG.sound.play(Paths.sound('mugen/ronaldHYPER'), 1);
 					ronalportrait.alpha = 1;
+					ronaldBG.visible = true;
 					ronalportrait.animation.play('clown');
 					vfxR.alpha = 1;
 					vfxR.setPosition(902, 730);
 					vfxR.animation.play('spark', true);
 					dissapearTime = new FlxTimer().start(1.5, function(tmr:FlxTimer)
 					{
+						ronaldBG.visible = false;
 						dissapearTime = null;
 						ronalportrait.alpha = 0;
 						vfxR.alpha = 0;
@@ -3214,37 +3231,32 @@ class PlayState extends MusicBeatState
 		rating.cameras = [camHUD];
 		rating.visible = !ClientPrefs.hideHud;
 		rating.antialiasing = isMugen ? false : ClientPrefs.globalAntialiasing;
+		rating.screenCenter();
+		rating.x = placement - 40;
+		rating.y -= 60;
+		rating.acceleration.y = 550;
+		rating.velocity.y -= FlxG.random.int(140, 175);
+		rating.velocity.x -= FlxG.random.int(0, 10);
+		rating.x += ClientPrefs.comboOffset[0];
+		rating.y -= ClientPrefs.comboOffset[1];
+		rating.setGraphicSize(Std.int(isMugen ? rating.width * 1.2 : rating.width * 0.7));
+		rating.updateHitbox();
+		insert(members.indexOf(strumLineNotes), rating);
 
 		var comboSpr:FlxSprite = new FlxSprite().makeGraphic(1, 1, FlxColor.TRANSPARENT);
 		comboSpr.cameras = [camHUD];
 		comboSpr.visible = !ClientPrefs.hideHud;
 		comboSpr.antialiasing = ClientPrefs.globalAntialiasing;
-
-		if (!isMugen)
-		{
-			rating.screenCenter();
-			rating.x = placement - 40;
-			rating.y -= 60;
-			rating.acceleration.y = 550;
-			rating.velocity.y -= FlxG.random.int(140, 175);
-			rating.velocity.x -= FlxG.random.int(0, 10);
-			rating.x += ClientPrefs.comboOffset[0];
-			rating.y -= ClientPrefs.comboOffset[1];
-			rating.setGraphicSize(Std.int(rating.width * 0.7));
-			rating.updateHitbox();
-			insert(members.indexOf(strumLineNotes), rating);
-
-			comboSpr.screenCenter();
-			comboSpr.x = placement;
-			comboSpr.acceleration.y = FlxG.random.int(200, 300);
-			comboSpr.velocity.y -= FlxG.random.int(140, 160);
-			comboSpr.x += ClientPrefs.comboOffset[0];
-			comboSpr.y -= ClientPrefs.comboOffset[1];
-			comboSpr.y += 60;
-			comboSpr.velocity.x += FlxG.random.int(1, 10);
-			comboSpr.setGraphicSize(Std.int(comboSpr.width * 0.7));
-			comboSpr.updateHitbox();
-		}
+		comboSpr.screenCenter();
+		comboSpr.x = placement;
+		comboSpr.acceleration.y = FlxG.random.int(200, 300);
+		comboSpr.velocity.y -= FlxG.random.int(140, 160);
+		comboSpr.x += ClientPrefs.comboOffset[0];
+		comboSpr.y -= ClientPrefs.comboOffset[1];
+		comboSpr.y += 60;
+		comboSpr.velocity.x += FlxG.random.int(1, 10);
+		comboSpr.setGraphicSize(Std.int(comboSpr.width * 0.7));
+		comboSpr.updateHitbox();
 
 		var seperatedScore:Array<Int> = [];
 
@@ -3258,10 +3270,9 @@ class PlayState extends MusicBeatState
 
 		var daLoop:Int = 0;
 		var xThing:Float = 0;
-
-		for (i in seperatedScore)
+		if (!isMugen)
 		{
-			if (!isMugen)
+			for (i in seperatedScore)
 			{
 				var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image('hud/${songUiFolder}num${Std.int(i)}'));
 				numScore.cameras = [camHUD];
@@ -3295,7 +3306,6 @@ class PlayState extends MusicBeatState
 		FlxTween.tween(rating, {alpha: 0}, 0.2, {
 			startDelay: Conductor.crochet * 0.001
 		});
-
 		FlxTween.tween(comboSpr, {alpha: 0}, 0.2, {
 			onComplete: function(tween:FlxTween)
 			{
