@@ -196,6 +196,7 @@ class PauseSubState extends MusicBeatSubstate
 			switch (daSelected)
 			{
 				case "Resume":
+					pauseMusic.volume = 0;
 					close();
 				case "Restart Song":
 					CustomFadeTransition.nextCamera = transCamera;

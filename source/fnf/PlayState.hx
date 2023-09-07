@@ -526,12 +526,12 @@ class PlayState extends MusicBeatState
 				add(bg);
 
 				bgM = new FlxSprite(-516, -310);
-				bgM.scale.set(4.2, 4);
+				bgM.scale.set(4.2, 7);
 				bgM.alpha = 0;
 				bgM.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
 				bgM.animation.addByPrefix('effect', "bg", 60, true);
 				bgM.animation.play('effect');
-				bgM.antialiasing = ClientPrefs.globalAntialiasing;
+				bgM.antialiasing = false;
 				bgM.updateHitbox();
 				add(bgM);
 
@@ -540,19 +540,10 @@ class PlayState extends MusicBeatState
 				maavoportrait.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
 				maavoportrait.animation.addByPrefix('wow', "SSBUportrait", 60, false);
 				maavoportrait.alpha = 0;
-				maavoportrait.antialiasing = ClientPrefs.globalAntialiasing;
+				maavoportrait.antialiasing = false;
 				maavoportrait.cameras = [camHUD];
 				add(maavoportrait);
 
-				ronalportrait = new FlxSprite(0, 124);
-				ronalportrait.scale.set(1.6, 1.6);
-				ronalportrait.updateHitbox();
-				ronalportrait.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
-				ronalportrait.animation.addByPrefix('clown', "hyperportrait", 60, false);
-				ronalportrait.alpha = 0;
-				ronalportrait.antialiasing = false;
-				ronalportrait.cameras = [camHUD];
-				add(ronalportrait);
 			case 'void': // Tokyo y la otra cancion secreta
 				GameOverSubstate.setGameOver('maavo-playable', 'fnf_loss_maavo');
 		}
@@ -581,6 +572,15 @@ class PlayState extends MusicBeatState
 			ronaldBG.scrollFactor.set();
 			ronaldBG.visible = false;
 			add(ronaldBG);
+
+			ronalportrait = new FlxSprite(0, 74);
+			ronalportrait.scale.set(3.6, 3.6);
+			ronalportrait.updateHitbox();
+			ronalportrait.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
+			ronalportrait.animation.addByPrefix('clown', "hyperportrait", 60, false);
+			ronalportrait.alpha = 0;
+			ronalportrait.antialiasing = false;
+			add(ronalportrait);
 		}
 		add(dadGroup);
 
@@ -592,7 +592,7 @@ class PlayState extends MusicBeatState
 			vfx.frames = Paths.getSparrowAtlas('kfm/gfx', 'shared');
 			vfx.animation.addByPrefix('punch', "maavohit", 60, false);
 			vfx.animation.play('punch');
-			vfx.antialiasing = ClientPrefs.globalAntialiasing;
+			vfx.antialiasing = false;
 			vfx.centerOrigin();
 			vfx.updateHitbox();
 			add(vfx);
@@ -605,7 +605,7 @@ class PlayState extends MusicBeatState
 			vfxR.animation.addByPrefix('punchR2', "ronaldhit2", 60, false);
 			vfxR.animation.addByPrefix('spark', "hyperspark", 60, true);
 			vfxR.animation.play('spark');
-			vfxR.antialiasing = ClientPrefs.globalAntialiasing;
+			vfxR.antialiasing = false;
 			vfxR.updateHitbox();
 			add(vfxR);
 		}
@@ -2618,13 +2618,13 @@ class PlayState extends MusicBeatState
 				if (isMugen && curStage == 'kfm')
 				{
 					FlxG.sound.play(Paths.sound('mugen/ronaldHYPER'), 1);
-					ronalportrait.alpha = 1;
 					ronaldBG.visible = true;
+					ronalportrait.alpha = 1;
 					ronalportrait.animation.play('clown');
 					vfxR.alpha = 1;
-					vfxR.setPosition(902, 730);
+					vfxR.setPosition(559, 200);
 					vfxR.animation.play('spark', true);
-					dissapearTime = new FlxTimer().start(1.5, function(tmr:FlxTimer)
+					dissapearTime = new FlxTimer().start(0.8, function(tmr:FlxTimer)
 					{
 						ronaldBG.visible = false;
 						dissapearTime = null;

@@ -64,12 +64,12 @@ class CreditsState extends MusicBeatState
 
 		var pisspoop:Array<Array<String>> = [
 			[Language.credits.categorys[0]],
-			['Mozaico', 'mozaico', 'https://youtube.com/@MozaicoTheHuman', 'FF0000'],
-			['Derker Bluer', 'derki', 'https://youtube.com/@DerkerBluer', '2E48E6'],
-			['Shey Pancake', 'panquesito', 'https://twitter.com/shey_pancake', '9400Ff'],
-			['Joan Atlas', 'joancitoatlantis', 'https://twitter.com/joan_atlas', 'FBA4FF'],
-			['Ejsu Multimedia', 'ejsu', 'https://youtube.com/@EjsuMultimedia', 'FF9F2A'],
-			['Vtroy Jerof', 'vtroy', 'https://youtube.com/@VtroyJerof', '2A91FF'],
+			['Mozaico', 'mozaico','', 'https://youtube.com/@MozaicoTheHuman', 'FF0000'],
+			['Derker Bluer', 'derki','', 'https://youtube.com/@DerkerBluer', '2E48E6'],
+			['Shey Pancake', 'panquesito','', 'https://twitter.com/shey_pancake', '9400Ff'],
+			['Joan Atlas', 'joancitoatlantis','', 'https://twitter.com/joan_atlas', 'FBA4FF'],
+			['Ejsu Multimedia', 'ejsu','', 'https://youtube.com/@EjsuMultimedia', 'FF9F2A'],
+			['Vtroy Jerof', 'vtroy','', 'https://youtube.com/@VtroyJerof', '2A91FF'],
 			[
 				'Soga Celeste',
 				'hanzo',
@@ -77,11 +77,11 @@ class CreditsState extends MusicBeatState
 				'https://youtube.com/@SogaCeleste.-HanzoSantiago-',
 				'FF2A4C'
 			],
-			['FlameMind', 'flamemind', 'https://twitter.com/flamemind10', '5BD1F0'],
-			['Gabriel ML', 'gabo', 'https://gabitoml.newgrounds.com/', '5B7AF0'],
-			['Vzer', 'vzer', 'https://youtube.com/@TheVzer', 'AF5D5D'],
-			['JustDemianAgain', 'demian', 'https://twitter.com/justdemianagain', 'F0A9C0'],
-			['NaxoAtWork', 'naxo', 'https://youtube.com/@NaxoAtWork', 'D16533'],
+			['FlameMind', 'flamemind','', 'https://twitter.com/flamemind10', '5BD1F0'],
+			['Gabriel ML', 'gabo','', 'https://gabitoml.newgrounds.com/', '5B7AF0'],
+			['Vzer', 'vzer','', 'https://youtube.com/@TheVzer', 'AF5D5D'],
+			['JustDemianAgain', 'demian','', 'https://twitter.com/justdemianagain', 'F0A9C0'],
+			['NaxoAtWork', 'naxo','', 'https://youtube.com/@NaxoAtWork', 'D16533'],
 			['DIA', 'dia', 'UTAU Voicebanks', 'https://twitter.com/JEVILLOVER', 'B069F5'],
 			[
 				'Sandwich',
@@ -97,7 +97,7 @@ class CreditsState extends MusicBeatState
 				'https://pbs.twimg.com/media/FBgr01CWUAInM9Q?format=jpg&name=large',
 				'D1718A'
 			],
-			['Shiroko', 'shiroko', 'https://twitter.com/Shiroko_dev', 'FFBEF9'],
+			['Shiroko', 'shiroko','', 'https://twitter.com/Shiroko_dev', 'FFBEF9'],
 			[
 				'GenoX',
 				'genox',
@@ -105,8 +105,8 @@ class CreditsState extends MusicBeatState
 				'https://i.pinimg.com/474x/90/23/5c/90235c8967171e76274234c3fd8aac03.jpg',
 				'BED7FF'
 			],
-			['SrPerez', 'penez', 'https://twitter.com/NewSrPerez/', '465CE1'],
-			['Stzr', 'stzr', 'https://twitter.com/stzr_real', '46E1CC'],
+			['SrPerez', 'penez','', 'https://twitter.com/NewSrPerez/', '465CE1'],
+			['Stzr', 'stzr','', 'https://twitter.com/stzr_real', '46E1CC'],
 			[
 				'ValEnd',
 				'elpepe',
@@ -114,8 +114,8 @@ class CreditsState extends MusicBeatState
 				'estovademasiadodificilhermanosientaselibresdedispararlealapantalla',
 				'FFFFFF'
 			],
-			['PointyyESM', 'pointi', 'https://twitter.com/PointyyESM', '001BFF'],
-			['EsoMarx', 'elchavoballistic', 'https://youtube.com/@esomarx3074', 'FFCDF9'],
+			['PointyyESM', 'pointi','', 'https://twitter.com/PointyyESM', '001BFF'],
+			['EsoMarx', 'elchavoballistic','', 'https://youtube.com/@esomarx3074', 'FFCDF9'],
 			[
 				'Teeth',
 				'tetasmasculinasdefurrotesavecesmepreocupascandace',
@@ -123,9 +123,9 @@ class CreditsState extends MusicBeatState
 				'https://twitter.com/teethlust',
 				'00F014'
 			],
-			['Koi', 'koi', 'https://twitter.com/_Sir_Koi_', 'F369B8'],
-			['Natu', 'natu', 'https://twitter.com/nataliofag', 'B4E6F3'],
-			['LeBasth', 'lebasth', 'https://twitter.com/Le_Basth', '434EE1'],
+			['Koi', 'koi','', 'https://twitter.com/_Sir_Koi_', 'F369B8'],
+			['Natu', 'natu','', 'https://twitter.com/nataliofag', 'B4E6F3'],
+			['LeBasth', 'lebasth','', 'https://twitter.com/Le_Basth', '434EE1'],
 			[
 				'Maris',
 				'maris',
@@ -140,22 +140,22 @@ class CreditsState extends MusicBeatState
 				'https://pbs.twimg.com/media/FBgr01CWUAInM9Q?format=jpg&name=large',
 				'A5FCF4'
 			],
-			['Fufi', 'fufi', 'https://mrfoofy.newgrounds.com/', '33BAE6'],
-			['TatoxicLG', 'tatoxic', 'https://twitter.com/tatoxicLg', '725AEB'],
-			['Nautical', 'nautical', 'https://twitter.com/nauticallll', 'EB5A5A'],
-			['Valenn', 'valenn', 'https://twitter.com/oh_pls_jsjss', 'CE3A3A'],
-			['Beezy', 'beezy', 'https://www.twitter.com/BeezyLoove', '423F92'],
-			['thixie', 'thixie', 'https://twitter.com/thixieedy', 'F8B491'],
-			['Wach', 'wach', 'https://twitter.com/Wachine_Machine', '3132C2'],
-			['Poncho', 'poncho', 'https://twitter.com/ElPonchitoPio', 'C23131'],
-			['DegoDraws', 'dego', 'https://twitter.com/DegoDraws', 'C6308A'],
-			['KoiM4', 'koichi', 'https://twitter.com/koim4_', '3088C6'],
-			['Andere', 'andere', 'https://youtube.com/@4ndere', 'FF00F9'],
+			['Fufi', 'fufi','', 'https://mrfoofy.newgrounds.com/', '33BAE6'],
+			['TatoxicLG', 'tatoxic','', 'https://twitter.com/tatoxicLg', '725AEB'],
+			['Nautical', 'nautical','', 'https://twitter.com/nauticallll', 'EB5A5A'],
+			['Valenn', 'valenn','', 'https://twitter.com/oh_pls_jsjss', 'CE3A3A'],
+			['Beezy', 'beezy','', 'https://www.twitter.com/BeezyLoove', '423F92'],
+			['thixie', 'thixie','', 'https://twitter.com/thixieedy', 'F8B491'],
+			['Wach', 'wach','', 'https://twitter.com/Wachine_Machine', '3132C2'],
+			['Poncho', 'poncho','', 'https://twitter.com/ElPonchitoPio', 'C23131'],
+			['DegoDraws', 'dego','', 'https://twitter.com/DegoDraws', 'C6308A'],
+			['KoiM4', 'koichi','', 'https://twitter.com/koim4_', '3088C6'],
+			['Andere', 'andere','', 'https://youtube.com/@4ndere', 'FF00F9'],
 			[Language.credits.categorys[1]],
-			['Vtroy Jerof', 'vtroy', 'https://youtube.com/@VtroyJerof', '2A91FF'],
-			['cristo-ball', 'cristobola', 'https://twitter.com/Cristob88244965', 'FFFFFF'],
-			['Beezy', 'beezy', 'https://www.twitter.com/BeezyLoove', '423F92'],
-			['Shey Pancake', 'panquesito', 'https://twitter.com/shey_pancake', '9400Ff'],
+			['Vtroy Jerof', 'vtroy','', 'https://youtube.com/@VtroyJerof', '2A91FF'],
+			['cristo-ball', 'cristobola','', 'https://twitter.com/Cristob88244965', 'FFFFFF'],
+			['Beezy', 'beezy','', 'https://www.twitter.com/BeezyLoove', '423F92'],
+			['Shey Pancake', 'panquesito','', 'https://twitter.com/shey_pancake', '9400Ff'],
 			[
 				'Soga Celeste',
 				'hanzo',
@@ -163,11 +163,11 @@ class CreditsState extends MusicBeatState
 				'https://youtube.com/@SogaCeleste.-HanzoSantiago-',
 				'FF2A4C'
 			],
-			['_j.meta', 'javi', 'https://www.instagram.com/_j.meta/', '64CCC9'],
-			['Suabruh', 'suabruh', 'https://twitter.com/suabruh', '0040FF'],
+			['_j.meta', 'javi','', 'https://www.instagram.com/_j.meta/', '64CCC9'],
+			['Suabruh', 'suabruh','', 'https://twitter.com/suabruh', '0040FF'],
 			[Language.credits.categorys[2]],
-			['ShaminBECA', 'nada', 'https://twitter.com/ShaminBECA', 'FFDD33'],
-			['InukoExo', 'nada', 'https://twitter.com/InukoExo', 'F01E6A'],
+			['ShaminBECA', 'nada','', 'https://twitter.com/ShaminBECA', 'FFDD33'],
+			['InukoExo', 'nada','', 'https://twitter.com/InukoExo', 'F01E6A'],
 			[
 				'AndresLoquendero0',
 				'nada',
@@ -178,11 +178,11 @@ class CreditsState extends MusicBeatState
 			[
 				'CompotaHyper',
 				'compotito',
-				"",
+				'',
 				'https://youtube.com/@compotahyperlol6245',
 				'3759FF'
 			],
-			['Sulayre', 'sul', 'https://twitter.com/Sulayre', 'E96719'],
+			['Sulayre', 'sul','', 'https://twitter.com/Sulayre', 'E96719'],
 			[
 				'Miki',
 				'miki',
@@ -197,8 +197,8 @@ class CreditsState extends MusicBeatState
 				'https://cdn.discordapp.com/attachments/885208632533348433/887917996977299476/miki.gif',
 				'DF69D0'
 			],
-			['Neru', 'nada', 'https://twitter.com/Neru_Sleep', 'FFFFFF'],
-			['Tanjiro Taidana', 'nada', 'https://twitter.com/tanjirotaidana', 'DB43B8'],
+			['Neru', 'nada','', 'https://twitter.com/Neru_Sleep', 'FFFFFF'],
+			['Tanjiro Taidana', 'nada','', 'https://twitter.com/tanjirotaidana', 'DB43B8'],
 			[
 				'Kishio',
 				'nada',
@@ -206,7 +206,7 @@ class CreditsState extends MusicBeatState
 				'http://web.archive.org/web/20140214203506/http://www1.bbiq.jp/gdgdgdgd/',
 				'FEB600'
 			],
-			['Matriculaso', 'nada', 'https://twitter.com/Matriculaso/', '0094FE'],
+			['Matriculaso', 'nada','', 'https://twitter.com/Matriculaso/', '0094FE'],
 			[
 				'Los Basuros',
 				'nada',
@@ -214,10 +214,10 @@ class CreditsState extends MusicBeatState
 				'https://cdn.discordapp.com/attachments/899372708851249282/990441090333159474/unknown.png',
 				'FFDD33'
 			],
-			['ninjamuffin99', 'nada', 'https://ninjamuffin99.newgrounds.com/', 'CF2D2D'],
-			['PhantomArcade', 'nada', 'https://phantomarcade.newgrounds.com/', 'FADC45'],
-			['kawaisprite', 'nada', 'https://drugpop.bandcamp.com/', '378FC7'],
-			['evilsk8r', 'nada', 'https://evilsk8r.newgrounds.com/', '5ABD4B']
+			['ninjamuffin99', 'nada','', 'https://ninjamuffin99.newgrounds.com/', 'CF2D2D'],
+			['PhantomArcade', 'nada','', 'https://phantomarcade.newgrounds.com/', 'FADC45'],
+			['kawaisprite', 'nada','', 'https://drugpop.bandcamp.com/', '378FC7'],
+			['evilsk8r', 'nada','', 'https://evilsk8r.newgrounds.com/', '5ABD4B']
 		];
 
 		for (i in pisspoop)
