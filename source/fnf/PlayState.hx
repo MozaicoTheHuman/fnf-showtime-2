@@ -901,6 +901,7 @@ class PlayState extends MusicBeatState
 		scoreTxt.borderSize = 1.45;
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		scoreTxt.y = isMugen ? healthBarBG.y + 40 : FlxG.height - scoreTxt.height - 14;
+		if (ClientPrefs.downScroll && !isMugen) scoreTxt.y = !isMugen ? healthBarBG.y + 57 : FlxG.height - scoreTxt.height - 14;
 		scoreTxt.cameras = [camHUD];
 		add(scoreTxt);
 
