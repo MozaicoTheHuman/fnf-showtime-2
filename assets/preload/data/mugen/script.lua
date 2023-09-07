@@ -1,3 +1,5 @@
+math.randomseed(os.time())
+math.random(); math.random(); math.random()
 local a = math.random(1,3)
 
 local allowCountdown = false
