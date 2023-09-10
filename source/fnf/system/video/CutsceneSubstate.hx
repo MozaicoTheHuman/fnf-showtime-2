@@ -98,7 +98,7 @@ class CutsceneSubstate extends MusicBeatSubstate
 					newSubtitle(subs[i]);
 		}
 
-		if (canPressNow)
+		if (canPressNow && video.isVideoPlaying)
 		{
 			if (FlxG.keys.justPressed.ENTER && paused)
 			{

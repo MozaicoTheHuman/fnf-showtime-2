@@ -895,13 +895,11 @@ class PlayState extends MusicBeatState
 		reloadHealthBarColors();
 
 		scoreTxt = new FlxText(0, 0, FlxG.width, "", isMugen ? 16 : 28);
-		scoreTxt.setFormat(Paths.font(isMugen ? "mugen.otf" : "p5.ttf"), isMugen ? 16 : 28, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE,
-			FlxColor.BLACK);
+		scoreTxt.setFormat(Paths.font(isMugen ? "mugen.otf" : "p5.ttf"), isMugen ? 16 : 28, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.45;
 		scoreTxt.visible = !ClientPrefs.hideHud;
-		scoreTxt.y = isMugen ? healthBarBG.y + 40 : FlxG.height - scoreTxt.height - 14;
-		if (ClientPrefs.downScroll && !isMugen) scoreTxt.y = !isMugen ? healthBarBG.y + 57 : FlxG.height - scoreTxt.height - 14;
+		scoreTxt.y = isMugen ? healthBarBG.y + 40 : (ClientPrefs.downScroll ? healthBarBG.y + 57 : FlxG.height - scoreTxt.height - 14);
 		scoreTxt.cameras = [camHUD];
 		add(scoreTxt);
 
@@ -1168,6 +1166,9 @@ class PlayState extends MusicBeatState
 		nextPage(0);
 	}
 
+	var lastTextTween:FlxTween = null;
+	var textTween:FlxTween = null;
+
 	function nextPage(add:Int = 1)
 	{
 		curPage += add;
@@ -1181,12 +1182,20 @@ class PlayState extends MusicBeatState
 				lastTextDiscard.angle = -10;
 				lastTextDiscard.alpha = 0.5;
 
-				FlxTween.tween(lastTextDiscard, {
+				if (lastTextTween != null)
+					lastTextTween.cancel();
+
+				lastTextTween = FlxTween.tween(lastTextDiscard, {
 					x: -268,
 					y: -118,
 					angle: -20,
 					alpha: 0
-				}, 0.3);
+				}, 0.3, {
+					onComplete: function(twn:FlxTween)
+					{
+						lastTextTween = null;
+					}
+				});
 			}
 
 			textDiscard.loadGraphic(textIntro.graphic);
@@ -1195,12 +1204,20 @@ class PlayState extends MusicBeatState
 			textDiscard.angle = 0;
 			textDiscard.alpha = 1;
 
-			FlxTween.tween(textDiscard, {
+			if (textTween != null)
+				textTween.cancel();
+
+			textTween = FlxTween.tween(textDiscard, {
 				x: 66,
 				y: 94,
 				angle: -10,
 				alpha: 0.5
-			}, 0.3);
+			}, 0.3, {
+				onComplete: function(twn:FlxTween)
+				{
+					textTween = null;
+				}
+			});
 		}
 		textIntro.text = Language.cutscene[curPage];
 	}
@@ -1221,6 +1238,15 @@ class PlayState extends MusicBeatState
 		persistentUpdate = false;
 		openSubState(new CutsceneSubstate(name, function()
 		{
+			if (name == 'lovely')
+			{
+				finishedText = true;
+				textIntro.destroy();
+				textDiscard.destroy();
+				lastTextDiscard.destroy();
+				triangleText.destroy();
+				bgIntro.destroy();
+			}
 			startAndEnd();
 			return;
 		}));
@@ -1813,13 +1839,7 @@ class PlayState extends MusicBeatState
 			}
 			else
 			{
-				finishedText = true;
 				startVideo('lovely');
-				textIntro.destroy();
-				textDiscard.destroy();
-				lastTextDiscard.destroy();
-				triangleText.destroy();
-				bgIntro.destroy();
 			}
 		}
 
