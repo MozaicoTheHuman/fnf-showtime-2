@@ -10,7 +10,7 @@
 			"description": "Beat the song Showtime without being stunned"
 		},{
 			"name": "Detective",
-			"description": "Put the secret command on the Title Screen."
+			"description": "Put the secret command on the main menu.\nIt is hidden in a vandalized wall"
 		},{
 			"name": "The Perfect Show",
 			"description": "Beat the song 'Showtime' on Hard with no misses"
@@ -56,7 +56,7 @@
 		"categorys": ["SHOWTIME TEAM", "BETA TESTERS", "SPECIAL THANKS"],
 		"part":[
 			"",
-			"Director, Main Artist/Animator,\nCoder, Charter, Maavo VA,\nMaavo PDFMM+ Model Import",
+			"Director, Main Artist/Animator,\nCoder, Charter, Maavo VA,\nMaavo PDMM+ Model Import",
 			"Musician, and who inspired me to make\n this mod in the first place",
 			"Co-Director, Artist, Cutscene Artist\nBackground artist, icon artist\nand Ivette VA",			
 			"Musician",

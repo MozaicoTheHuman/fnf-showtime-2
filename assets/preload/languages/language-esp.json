@@ -10,9 +10,9 @@
 			"description": "Completa 'Showtime' sin ser stuneado"
 		},{
 			"name": "Detective",
-			"description": "Pon el comando secreto en la pantalla de titulo."
+			"description": "Pon el comando secreto en el menu principal.\nEsta oculto en una pared vandalizada"
 		},{
-			"name": "El chow perfecto",
+			"name": "El Show perfecto",
 			"description": "Completa la cancion 'Showtime' en dificultad Hard sin fallos"
 		},{
 			"name": "Nueva Amistad",
@@ -280,15 +280,15 @@
 		"Combo de Notas"
 	],
 	"rating":[
-		"Apestas!",
-		"Mierda",
+		"Uh q mal",
+		"Nefasto",
 		"Mal",
 		"Bruh",
 		"Mid",
 		"Bien",
 		"Muy Bien",
-		"Demasiado Bien",
-		"Enfermo!",
+		"Epico",
+		"Insano",
 		"Perfecto!!"
 	]
 }

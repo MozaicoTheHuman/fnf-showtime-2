@@ -1,0 +1,294 @@
+{
+	"achievements":[{
+			"name": "Grande Espetaculo",
+			"description": "Termine o modo história no Hard"
+		},{
+			"name": "OBAA GANHEI!",
+			"description": "Perca em Lovely"
+		},{
+			"name": "Profissional",
+			"description": "Complete ‘Showtime’ sem tocar nenhuma Stun Note"
+		},{
+			"name": "Detetive",
+			"description": "Ponha o código secreto  no menu principal.\nEstá escondido numa parede vandalizada."
+		},{
+			"name": "O show perfeito",
+			"description": "Complete a música ‘Showtime’ na dificuldade hard sem falhas"
+		},{
+			"name": "Nova amizade",
+			"description": "Complete a música ‘Pondering (Showtime Mix)’ na dificuldade hard sem falhas"
+		},{
+			"name": "Maavo Generations",
+			"description": "Complete a música ‘Light On!’ na dificuldade hard sem falhas"
+		},{
+			"name": "Partida Perfeita",
+			"description": "Complete a música ‘kfm.mid’ na dificuldade hard sem falhas"
+		},{
+			"name": "Maluco",
+			"description": "Complete a música ‘Tokyo Teddy Bear’ na dificuldade Extreme sem falhas"
+		},{
+			"name": "Seu ruim",
+			"description": "Perca 3 vezes seguidas"
+		},{
+			"name": "Ta jogando sem maos?",
+			"description": "Perca 10 vezes seguidas"
+		},{
+			"name": "Perfeccionista",
+			"description": "Complete todas as músicas sem falhas no hard"
+		},{
+			"name": "E as cortinas fecham-se",
+			"description": "Complete todas as conquistas\n(qunado completar, aperte enter nessa conquista)"
+		},{
+			"name": "Friday Night Funkin'",
+			"description": "Jogue uma sexta-feira à noite"
+		},{
+			"name": "Tu Conhece",
+			"description": "Jogue qualquer música de FNF Derker Bluer Edition"
+		}
+	],
+	"unlockguide":[
+		"Complete a conquista ‘Grande Espetáculo’\npara desbloquear essa música",	
+		"Complete a conquista ‘OBAA GANHEI!’\npara desbloquear essa música",
+		"Complete a conquista ‘Detetive’\npara desbloquear essa música",		
+		"Complete a conquista ‘Profissional’\npara desbloquear essa música"
+	],
+	"credits":{
+		"categorys": ["SHOWTIME TEAM", "BETA TESTERS", "SPECIAL THANKS"],
+		"part":[
+			"",
+			"Director, Main Artist/Animator,\nCoder, Charter, Maavo VA,\nMaavo PDMM+ Model Import",
+			"Musician, and who inspired me to make\n this mod in the first place",
+			"Co-Director, Artist, Cutscene Artist\nBackground artist, icon artist\nand Ivette VA",			
+			"Musician",
+			"Musician",
+			"Musician, and Light On Cover artist",
+			"Musician, Animator, Hanzo VA",
+			"Musician",
+			"Musician",
+			"Musician",			
+			"Musician",
+			"Musician",
+			"UTAU Voicebanks",
+			"Coder",
+			"Coder",
+			"Coder",
+			"Coder and Main Chromatic Scales",
+			"Coder",
+			"Coder",
+			"Coder and Tilin\n(Press Enter for a surprise)",
+			"Charter, and who introduced\nme to FNF modding",			
+			"Background Artist",
+			"Background Artist",
+			"Background Artist",
+			"Background Artist, icon artist\nand animator",
+			"Storyboard Artist, and Main Week's Cover artist",
+			"Storyboard Artist",
+			"Storyboard and Pondering Cover Artist",
+			"Cutscene Animator",
+			"Cutscene Animator",
+			"Menu Artist",
+			"Artist",
+			"Icon and Menu Artist",
+			"Maritza VA",
+			"Animation Assistant, Maavo 3D model",
+			"Title Artist",
+			"Menu Background Artist",
+			"Light On chromatic scales",
+			"Tokyo Charter (Extreme Difficulty)",
+			"",
+			"Beta tester",
+			"Beta tester",
+			"Beta tester",
+			"Beta tester",
+			"Beta tester",
+			"Beta tester",	
+			"Beta tester",				
+			"",			
+			"Tokyo Teddy Bear album cover",
+			"kfm.mid album cover",
+			"Maavo PDMM+ Model Import help",			
+			"For testing the mod's beta on stream",
+			"For bringing Chilean modders together\nto make the best mod ever <3",
+			"For voicing Ivette on past projects,\nand providing the samples for the FNF chromatic",
+			"For voicing Maritza on past projects,\nand providing the samples for the FNF chromatic",
+			"Original Tokyo Teddy Bear composer",
+			"Original Tokyo Teddy Bear UST file",
+			"Original creator of MUGEN Ronald McDonald",
+			"Little Coding help",
+			"For being the best friend group ever <3",
+			"For making the original game, y'all are GOATED",	
+			"For making the original game, y'all are GOATED",	
+			"For making the original game, y'all are GOATED",	
+			"For making the original game, y'all are GOATED"				
+		]
+	},
+	"options":[{
+			"name": "Controls",
+			"title": "Controls Settings",
+			"rpc": "In Controls Menu",
+			"options":[
+				{"name": "NOTES"},
+				{"name": "Left"},
+				{"name": "Down"},
+				{"name": "Up"},
+				{"name": "Right"},
+				{"name": "UI"},
+				{"name": "Reset"},
+				{"name": "Accept"},
+				{"name": "Back"},
+				{"name": "Pause"},
+				{"name": "VOLUME"},
+				{"name": "Mute"},
+				{"name": "Up"},
+				{"name": "Down"},
+				{"name": "DEBUG"},
+				{"name": "Key 1"},
+				{"name": "Key 2"},
+				{"name": "Reset to Default Keys"}
+			]
+		},{
+			"name": "Video Settings",
+			"title": "Video Settings",
+			"rpc": "In Video Menu",
+			"options":[{
+					"name": "Resolution:",
+					"description": "Refers to the level of screen definition in pixels,\na higher resolution may result in poorer performance"
+				},{
+					"name": "FPS:",
+					"description": "Pretty self explanatory, isn't it?"
+				},{
+					"name": "Show FPS",
+					"description": "If unchecked, hides FPS Counter."
+				},{
+					"name": "Anti-Aliasing",
+					"description": "If unchecked, disables anti-aliasing, increases performance\nat the cost of sharper visuals."
+				},{
+					"name": "Low Detail",
+					"description": "If checked, disables some background details,\ndecreases loading times and improves performance."
+				}
+			]
+		},{
+			"name": "Preferences",
+			"title": "Preferences Settings",
+			"rpc": "In Preferences Menu",
+			"options":[{
+					"name": "Language:",
+					"description": "Choose the game's language"
+				},{
+					"name": "Subtitles",
+					"description": "If checked, subtitles will show in cutscenes"
+				},{
+					"name": "Downscroll",
+					"description": "If checked, notes go Down instead of Up, simple enough."
+				},{
+					"name": "Middlescroll",
+					"description": "If checked, your notes get centered."
+				},{
+					"name": "Ghost Tapping",
+					"description": "If checked, you won't get misses from pressing keys\nwhile there are no notes able to be hit."
+				},{
+					"name": "Note Quantization",
+					"description": "If checked, the note colors will depend on\ntheir beat quantization instead of their direction.\n(Highly recommended)"
+				}
+			]
+		},{
+			"name": "Visuals Settings",
+			"title": "Visuals Settings",
+			"rpc": "In Visuals Menu",
+			"options":[{
+					"name": "Flashing Lights",
+					"description": "Uncheck this if you're sensitive to flashing lights!"
+				},{
+					"name": "Note Splashes",
+					"description": "If unchecked, hitting \"Sick!\" notes won't show particles."
+				},{
+					"name": "Camera Zooms",
+					"description": "If unchecked, the camera won't zoom in on a beat hit."
+				},{
+					"name": "Dynamic Camera",
+					"description": "If checked, the camera will move in the note direction."
+				},{
+					"name": "Hide HUD",
+					"description": "If checked, hides most HUD elements."
+				},{
+					"name": "Hide Song Length",
+					"description": "If checked, the bar showing how much time is left\nwill be hidden."
+				}
+			]
+		},{
+			"name": "Offset and Combo",
+			"title": "Offset and Combo Settings",
+			"rpc": "In Offset and Combo Menu",
+			"options":[{
+					"name": "Combo Offset (Press Accept to Switch)"
+				},{
+					"name": "Rating Offset",
+					"description": "Note Offset"
+				},{
+					"name": "Beat Delay (Press Accept to Switch)",
+					"description": "Current offset"
+				}
+			]
+		},{
+			"name": "Modifiers",
+			"title": "Modifiers Settings",
+			"rpc": "In Modifiers",
+			"options":[{
+					"name": "Scroll Type"
+				},{
+					"name": "Scroll Speed"
+				},{
+					"name": "Instakill on Miss"
+				},{
+					"name": "Practice Mode"
+				},{
+					"name": "BotPlay"
+				}
+			]
+		},{
+			"name": "Pause Menu",
+			"title": "Pause Menu",
+			"rpc": "In Pause Menu",
+			"options":[{
+					"name": "Resume"
+				},{
+					"name": "Restart Song"
+				},{
+					"name": "Modifiers"
+				},{
+					"name": "Change Difficulty"
+				},{
+					"name": "Options"
+				},{
+					"name": "Exit to menu"
+				},{
+					"name": "Back"
+				}
+			]
+		}
+	],
+	"cutscene":[
+		"Era uma noite tranquila,\nBoyfriend e Girlfriend estavam em um encontro…\nEm cima de um prédio",
+		"Como eles tem um só neurônio,\nque compartilham entre os dois, cairam do prédio,\nmas uma lixeira amorteceu a queda",
+		"Depois da queda, Girlfriend encontrou\nna lixeira um caderno, com várias folhas arrancadas\ne outras rabiscadas.",	
+		"Como estava tonta pela queda,\nusou seus poderes por acidente e\nentrou junto a Boyfriend na única folha\nquase intacta do caderno."
+	],
+	"score":[
+		"Score",
+		"Misses",
+		"Accuracy",
+		"Note Combo"
+	],
+	"rating":[
+		"Horrivel",
+		"preocupante",
+		"Ruim",
+		"Bruh",
+		"Médio",
+		"Bom",
+		"Muito Bom",
+		"Epico",
+		"Insano",
+		"Perfeito!!"
+	]
+}
