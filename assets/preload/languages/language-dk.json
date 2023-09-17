@@ -1,0 +1,298 @@
+{
+	"achievements":[{
+			"name": "Great Show",
+			"description": "Fulfør historietilstanden på Svær"
+		},{
+			"name": "YAAAY I WON!",
+			"description": "Dø på 'Lovely'"
+		},{
+			"name": "Damn Expert",
+			"description": "Fulfør sangen Showtime uden at blive fordøvet"
+		},{
+			"name": "Detective",
+			"description": "Sæt det hemmelige kommando i hovedmenuen.\nDen er skjult i en hærværkskramt mur"
+		},{
+			"name": "The Perfect Show",
+			"description": "Fulfør sangen 'Showtime' på Svær uden at misse"
+		},{
+			"name": "New Friend",
+			"description": "Fulfør sangen 'Pondering (Showtime Mix)' på Svær uden at misse"
+		},{
+			"name": "Maavo Generations",
+			"description": "Fulfør sangen 'Light On!' på Svær uden at misse"
+		},{
+			"name": "Perfect Round",
+			"description": "Fulfør sangen 'kfm.mid' på Svær uden at misse"
+		},{
+			"name": "Sick",
+			"description": "Fulfør 'Tokyo Teddy Bear' på Ekstrem uden at misse"
+		},{
+			"name": "Skill Issue",
+			"description": "Dø 3 gange i træk"
+		},{
+			"name": "You literally have no hands",
+			"description": "Dø 10 gange i træk"
+		},{
+			"name": "Perfeccionist",
+			"description": "Fulfør alle sangene på Svær uden at misse"
+		},{
+			"name": "And the curtain falls",
+			"description": "Fulfør alle præstation\n(Tryk enter på denne præstation, hvid du har gennemført den)"
+		},{
+			"name": "Friday Night Funkin'",
+			"description": "Spil på en Fredag aften"
+		},{
+			"name": "An OG",
+			"description": "Spil envher sang på FNF Derker Bluer Edition"
+		}
+	],
+	"unlockguide":[
+		"Færdiggør 'Great Show' præstation \nfor at låse op denne sang",
+		"Færdiggør 'YAAAY I WON!' præstation \nfor at låse op denne sang",		
+		"Færdiggør 'Detective' præstation \nfor at låse op denne sang",
+		"Færdiggør 'Damn Expert' præstation \nfor at låse op denne sang"	
+	],
+	"credits":{
+		"categorys": ["SHOWTIME TEAM", "BETA TESTERS", "SPECIELT TAK"],
+		"part":[
+			"",
+			"Direktør, Hovedkunster/Animator,\nKoder, Charter, Maavo VA,\nMaavo PDFMM+ Model Import",
+			"Musiker, og hvem der inspirerede mig til at lave\n denne mod i første omgang",
+			"Meddirektør, Kunstner, Cutscene Kunstner\nBaggrundskunstner, ikon kunstner\nog Ivette VA",			
+			"Musiker",
+			"Musiker",
+			"Musiker, og Light On Coverkunstner",
+			"Musiker, Animator, Hanzo VA",
+			"Musiker",
+			"Musiker",
+			"Musiker",			
+			"Musiker",
+			"Musiker",
+			"UTAU Stemmebanker",
+			"Koder",
+			"Koder",
+			"Koder",
+			"Koder og Vigtigste kromatiske skalaer",
+			"Koder",
+			"Koder",
+			"Koder og Tilin\n(Tryk på Enter for at få en overraskelse)",
+			"Charter, og hvem der introducerede mig til FNF modding",			
+			"Baggrundskunstner",
+			"Baggrundskunstner",
+			"Baggrundskunstner",
+			"Baggrundskunstner, ikon kunstner\nog animator",
+			"Storyboard Kunstner, og Main Week's Coverkunstner",
+			"Storyboard Kunstner",
+			"Storyboard og Pondering Coverkunstner",
+			"Cutscene Animator",
+			"Cutscene Animator",
+			"Menu Kunstner",
+			"Kunstner",
+			"Ikon og Menu Kunstner",
+			"Maritza VA",
+			"Animationsassistent, Maavo 3D model",
+			"Titel kunstner",
+			"Menu Baggrundskunstner",
+			"Light On kromatiske skalaer",
+			"Tokyo Charter (Ekstrem sværhedsgrad)",
+			"",
+			"Betatester",
+			"Betatester",
+			"Betatester",
+			"Betatester",
+			"Betatester",
+			"Betatester",	
+			"Betatester",				
+			"",		
+			"Portuguese (Brazil) translation",				
+			"French (France) and French (Canada)\ntranslation",	
+			"Danish translation",						
+			"",			
+			"Tokyo Teddy Bear albumcover",
+			"kfm.mid albumcover",
+			"Maavo PDMM+ Model Import hjælp",			
+			"For at teste mod'ens beta på stream",
+			"For at bringe chilenske moddere sammen\nfor at lave den bedste mod nogensinde <3",
+			"For at give udtryk for Ivette om tidligere projekter\nog levere prøverne til FNF-kromatikken",
+			"For at give udtryk for Maritza om tidligere projekter\nog levere prøverne til FNF-kromatikken",
+			"Original Tokyo Teddy Bear komponist",
+			"Original Tokyo Teddy Bear UST fil",
+			"Oprindelige skaber af MUGEN Ronald McDonald",
+			"Lille kodningshjælp",
+			"For at være den bedste vennegruppe nogensinde <3",
+			"For at lave det originale spil, er I GOATED",	
+			"For at lave det originale spil, er I GOATED",	
+			"For at lave det originale spil, er I GOATED",	
+			"For at lave det originale spil, er I GOATED"			
+		]
+	},
+	"options":[{
+			"name": "Kontrolelementer",
+			"title": "Kontrolindstillinger",
+			"rpc": "I kontrolmenuen",
+			"options":[
+				{"name": "NOTES"},
+				{"name": "Venstre"},
+				{"name": "Ned"},
+				{"name": "Op"},
+				{"name": "Højre"},
+				{"name": "UI"},
+				{"name": "Nulstil"},
+				{"name": "Accepter"},
+				{"name": "Tilbage"},
+				{"name": "Pause"},
+				{"name": "LYDSTYRKE"},
+				{"name": "Stum"},
+				{"name": "Op"},
+				{"name": "Ned"},
+				{"name": "DEBUG"},
+				{"name": "Tast 1"},
+				{"name": "Tast 2"},
+				{"name": "Nulstil til standardtaster"}
+			]
+		},{
+			"name": "Videoindstillinger",
+			"title": "Videoindstillinger",
+			"rpc": "I videomenuen",
+			"options":[{
+					"name": "Resolution:",
+					"description": "Henviser til niveauet af skærmdefinition i pixels,\nahøjere opløsning kan resultere i dårligere ydeevne"
+				},{
+					"name": "FPS:",
+					"description": "Temmelig selvforklarende, er det ikke?"
+				},{
+					"name": "Vis FPS",
+					"description": "Hvis det ikke er markeret, skjuler FPS-tælleren."
+				},{
+					"name": "Anti-Aliasing",
+					"description": "Hvis ikke markeret, deaktiverer anti-aliasing, øger ydeevnen\npå bekostning af skarpere billeder."
+				},{
+					"name": "Lav detalje",
+					"description": "Hvis markeret, deaktiverer nogle baggrundsdetaljer,\nreducerer indlæsningstiden og forbedrer ydeevnen."
+				}
+			]
+		},{
+			"name": "Preferences",
+			"title": "Preferences Settings",
+			"rpc": "In Preferences Menu",
+			"options":[{
+					"name": "Sprog:",
+					"description": "Vælg spillets sprog"
+				},{
+					"name": "Undertekster",
+					"description": "Hvis markeret, vises undertekster i mellemsekvenser"
+				},{
+					"name": "Rul ned",
+					"description": "Hvis markeret, går noter ned i stedet for op, enkelt nok."
+				},{
+					"name": "Midterste rulle",
+					"description": "Hvis markeret, bliver dine noter centreret."
+				},{
+					"name": "Ghost Tapping",
+					"description": "Hvis markeret, vil du ikke få misses ved at trykke på taster,\nmens der ikke er nogen noder, der kan rammes."
+				},{
+					"name": "Note Quantization",
+					"description": "Hvis markeret, vil nodefarverne afhænge af\nderes taktkvantisering i stedet for deres retning.\n(Højt anbefalet)"
+				}
+			]
+		},{
+			"name": "Visuelle indstillinger",
+			"title": "Visuelle indstillinger",
+			"rpc": "I Visuel menu",
+			"options":[{
+					"name": "Blinkende lys",
+					"description": "Fjern markeringen her, hvis du er følsom over for blinkende lys!"
+				},{
+					"name": "Note Splashes",
+					"description": "Hvis det ikke er markeret, vil det ikke vise partikler at trykke på \"Sick!\"-noter."
+				},{
+					"name": "Kamerazoom",
+					"description": "Hvis det ikke er markeret, zoomer kameraet ikke ind på et slag."
+				},{
+					"name": "Dynamisk kamera",
+					"description": "Hvis markeret, vil kameraet bevæge sig i notens retning."
+				},{
+					"name": "Skjul HUD",
+					"description": "Hvis markeret, skjuler de fleste HUD-elementer."
+				},{
+					"name": "Hide Song Length",
+					"description": "Hvis markeret, vil bjælken, der viser, hvor meget tid der er tilbage,\nblive skjult."
+				}
+			]
+		},{
+			"name": "Offset og Combo",
+			"title": "Offset og Combo indstillinger",
+			"rpc": "I Offset og Combo menuen",
+			"options":[{
+					"name": "Combo Offset (Tryk på Accepter for at skifte)"
+				},{
+					"name": "Rating Offset",
+					"description": "Note Offset"
+				},{
+					"name": "Beat-forsinkelse (Tryk på Accepter for at skifte)",
+					"description": "Nuværende offset"
+				}
+			]
+		},{
+			"name": "Modifikatorer",
+			"title": "Modifikatorindstillinger",
+			"rpc": "I Modifikatorer",
+			"options":[{
+					"name": "Rultype"
+				},{
+					"name": "Rullehastighed"
+				},{
+					"name": "Instakill on Miss"
+				},{
+					"name": "Practice Mode"
+				},{
+					"name": "BotPlay"
+				}
+			]
+		},{
+			"name": "Pausemenuen",
+			"title": "Pausemenuen",
+			"rpc": "I pausemenuen",
+			"options":[{
+					"name": "Genoptag"
+				},{
+					"name": "Genstart sang"
+				},{
+					"name": "Modifikatorer"
+				},{
+					"name": "Change Difficulty"
+				},{
+					"name": "Indstillinger"
+				},{
+					"name": "Afslut til menu"
+				},{
+					"name": "Tilbage"
+				}
+			]
+		}
+	],
+	"cutscene":[
+		"Det var en stille nat, \nog Boyfriend og Girlfriend \nvar på en date... \npå toppen af en bygning.",
+		"Da de har 1 neuron og \ndeler den på skift, faldt de \nned fra bygningen og landede på en \ncontainer, der brød deres fald.",
+		"Da Girlfriend falder i \nskraldespanden, finder hun en notesbog \nmed adskillige sider revet \nud og fuld af sletninger.",
+		"Svimmel efter faldet \nbruger hun ved et uheld sine kræfter \nog kommer ind i notesbogen med \nBoyfriend på det eneste ark, der næsten var intakt."
+	],
+	"score":[
+		"Score",
+		"Misses",
+		"Nøjagtighed",
+		"Note Combo"
+	],
+	"rating":[
+		"You Stinker!",
+		"Lort",
+		"Dårligt",
+		"Bruh",
+		"Meh",
+		"Degligt",
+		"Godt",
+		"Flot",
+		"Sygt!",
+		"Perfekt!!"
+	]
+}

@@ -56,7 +56,7 @@ typedef SubtitlesData =
 class Language
 {
 	// All Avaiable Languages
-	public static var languages:Array<Dynamic> = [['English', 'eng'], ['Spanish', 'esp'], ['Portuguese (Brazil)', 'pt']];
+	public static var languages:Array<Dynamic> = [['English', 'eng'], ['Spanish', 'esp'], ['Portuguese (Brazil)', 'pt'], ['French', 'fr'], ['French (Canada)', 'frc'], ['Danish', 'dk']];
 	public static var achievements:Array<AchievementStructure> = [];
 	public static var unlockguide:Array<String> = [];
 	public static var credits:CreditsStructure = {

@@ -166,6 +166,10 @@ class CreditsState extends MusicBeatState
 			['_j.meta', 'javi','', 'https://www.instagram.com/_j.meta/', '64CCC9'],
 			['Suabruh', 'suabruh','', 'https://twitter.com/suabruh', '0040FF'],
 			[Language.credits.categorys[2]],
+			['Marcelo Nunes', 'marcelonfbarros','', 'https://www.instagram.com/marcelonfbarros/', '0040FF'],
+			['zeff111', 'zeff','', 'https://twitter.com/MZeff111', '0040FF'],
+			['Oliver As Latias', 'oliver','', 'https://www.youtube.com/@OliverTEENAGER13', '0040FF'],
+			[Language.credits.categorys[3]],
 			['ShaminBECA', 'nada','', 'https://twitter.com/ShaminBECA', 'FFDD33'],
 			['InukoExo', 'nada','', 'https://twitter.com/InukoExo', 'F01E6A'],
 			[

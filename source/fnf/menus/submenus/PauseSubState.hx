@@ -83,45 +83,45 @@ class PauseSubState extends MusicBeatSubstate
 
 		var infoArray:Array<String> = Song.loadInfoTXT(Paths.formatToSongPath(PlayState.SONG.song));
 
-		var levelName:FlxText = new FlxText(20, 15, 0, "", 32);
+		var levelName:FlxText = new FlxText(20, 15, 0, "", 34);
 		levelName.text += infoArray[1];
 		levelName.scrollFactor.set();
-		levelName.setFormat(Paths.font("vcr.ttf"), 32);
+		levelName.setFormat(Paths.font("p5.ttf"), 44);
 		levelName.updateHitbox();
 		add(levelName);
 
-		var levelArtist:FlxText = new FlxText(20, 47, 0, "", 24);
+		var levelArtist:FlxText = new FlxText(20, 47, 0, "", 28);
 		levelArtist.text += "By: " + infoArray[0];
 		levelArtist.scrollFactor.set();
-		levelArtist.setFormat(Paths.font("vcr.ttf"), 24);
+		levelArtist.setFormat(Paths.font("p5.ttf"), 38);
 		levelArtist.updateHitbox();
 		add(levelArtist);
 
-		var levelDifficulty:FlxText = new FlxText(20, 15, 0, "", 32);
+		var levelDifficulty:FlxText = new FlxText(20, 15, 0, "", 34);
 		levelDifficulty.text += CoolUtil.difficultyString();
 		levelDifficulty.scrollFactor.set();
-		levelDifficulty.setFormat(Paths.font('vcr.ttf'), 32);
+		levelDifficulty.setFormat(Paths.font('p5.ttf'), 44);
 		levelDifficulty.updateHitbox();
 		add(levelDifficulty);
 
-		var blueballedTxt:FlxText = new FlxText(20, 47, 0, "", 32);
+		var blueballedTxt:FlxText = new FlxText(20, 47, 0, "", 34);
 		blueballedTxt.text = "Blueballed: " + PlayState.deathCounter;
 		blueballedTxt.scrollFactor.set();
-		blueballedTxt.setFormat(Paths.font('vcr.ttf'), 32);
+		blueballedTxt.setFormat(Paths.font('p5.ttf'), 44);
 		blueballedTxt.updateHitbox();
 		add(blueballedTxt);
 
-		practiceText = new FlxText(20, 15 + 101, 0, "PRACTICE MODE", 32);
+		practiceText = new FlxText(20, 1 + 87, 0, "PRACTICE MODE", 34);
 		practiceText.scrollFactor.set();
-		practiceText.setFormat(Paths.font('vcr.ttf'), 32);
+		practiceText.setFormat(Paths.font('p5.ttf'), 44);
 		practiceText.x = FlxG.width - (practiceText.width + 20);
 		practiceText.updateHitbox();
 		practiceText.visible = PlayState.practiceMode;
 		add(practiceText);
 
-		botplayText = new FlxText(20, FlxG.height - 40, 0, "BOTPLAY", 32);
+		botplayText = new FlxText(20, FlxG.height - 40, 0, "BOTPLAY", 34);
 		botplayText.scrollFactor.set();
-		botplayText.setFormat(Paths.font('vcr.ttf'), 32);
+		botplayText.setFormat(Paths.font('p5.ttf'), 44);
 		botplayText.x = FlxG.width - (botplayText.width + 20);
 		botplayText.updateHitbox();
 		botplayText.visible = PlayState.cpuControlled;

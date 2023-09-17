@@ -53,7 +53,7 @@
 		"Completa el logro 'Maldito Experto' \npara desbloquear esta canción"
 	],
 	"credits":{
-		"categorys": ["SHOWTIME TEAM", "BETA TESTERS", "AGRADECIMIENTOS ESPECIALES"],
+		"categorys": ["SHOWTIME TEAM", "BETA TESTERS", "TRADUCTORES", "AGRADECIMIENTOS ESPECIALES"],
 		"part":[
 			"",
 			"Director, artista y animador principal,\nprogramador, charter, actor de voz de Maavo, y\nPort de Maavo a Project Diva Megamix+",
@@ -104,6 +104,10 @@
 			"Beta tester",	
 			"Beta tester",				
 			"",		
+			"Traduccion al Portugues",				
+			"Traduccion al Frances (Francia)\n y Frances (Canada)",	
+			"Traduccion al Danes",							
+			"",			
 			"Portada de Tokyo Teddy Bear",	
 			"Portada de kfm.mid",			
 			"Ayuda con el port de Maavo a \nProject Diva Megamix+",			

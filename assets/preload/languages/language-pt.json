@@ -52,7 +52,7 @@
 		"Complete a conquista ‘Detetive’\npara desbloquear essa música",		
 		"Complete a conquista ‘Profissional’\npara desbloquear essa música"
 	],
-	"credits":{
+		"credits":{
 		"categorys": ["SHOWTIME TEAM", "BETA TESTERS", "SPECIAL THANKS"],
 		"part":[
 			"",
@@ -103,6 +103,10 @@
 			"Beta tester",
 			"Beta tester",	
 			"Beta tester",				
+			"",		
+			"Portuguese (Brazil) translation",				
+			"French (France) and French (Canada)\ntranslation",	
+			"Danish translation",							
 			"",			
 			"Tokyo Teddy Bear album cover",
 			"kfm.mid album cover",
@@ -274,10 +278,10 @@
 		"Como estava tonta pela queda,\nusou seus poderes por acidente e\nentrou junto a Boyfriend na única folha\nquase intacta do caderno."
 	],
 	"score":[
-		"Score",
-		"Misses",
-		"Accuracy",
-		"Note Combo"
+		"Pontuação",
+		"Falhas",
+		"Precisão",
+		"Combo de Notas"
 	],
 	"rating":[
 		"Horrivel",
