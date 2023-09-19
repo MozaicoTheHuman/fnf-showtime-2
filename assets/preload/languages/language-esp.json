@@ -106,7 +106,8 @@
 			"",		
 			"Traduccion al Portugues",				
 			"Traduccion al Frances (Francia)\n y Frances (Canada)",	
-			"Traduccion al Danes",							
+			"Traduccion al Danes",			
+			"Traduccion al Japones",					
 			"",			
 			"Portada de Tokyo Teddy Bear",	
 			"Portada de kfm.mid",			
@@ -272,7 +273,7 @@
 		}
 	],
 	"cutscene":[
-		"Era una noche tranquila, \ny Boyfriend y Girlfriend estaban \nen una cita... \n\nencima de un edificio",
+		"Era una noche tranquila, \ny Boyfriend y Girlfriend estaban\nen una cita... encima de un edificio",
 		"ya que tienen 1 neurona y la \ncomparten por turnos, se cayeron \ndel edificio, aterrizando en un \nbasurero que amortiguo su caída",
 		"Girlfriend al caer, se encuentra \nen la basura un cuaderno, con \nvarias hojas arrancadas \ny llena de borrones.",	
 		"Al estar mareada por la caída, \naccidentalmente usa sus poderes, \nentrando junto a BF al cuaderno en \nla única hoja que estaba casi intacta."

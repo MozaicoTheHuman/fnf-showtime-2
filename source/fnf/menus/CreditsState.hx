@@ -169,6 +169,7 @@ class CreditsState extends MusicBeatState
 			['Marcelo Nunes', 'marcelonfbarros','', 'https://www.instagram.com/marcelonfbarros/', '0040FF'],
 			['zeff111', 'zeff','', 'https://twitter.com/MZeff111', '0040FF'],
 			['Oliver As Latias', 'oliver','', 'https://www.youtube.com/@OliverTEENAGER13', '0040FF'],
+			['zeropso2', 'zeropso2','', 'https://www.youtube.com/@garakutaZERO', '0040FF'],
 			[Language.credits.categorys[3]],
 			['ShaminBECA', 'nada','', 'https://twitter.com/ShaminBECA', 'FFDD33'],
 			['InukoExo', 'nada','', 'https://twitter.com/InukoExo', 'F01E6A'],
@@ -276,7 +277,7 @@ class CreditsState extends MusicBeatState
 		descText = new FlxText(50, FlxG.height + offsetThing - 25, 1180, "", 32);
 		descText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER /*, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK*/);
 		descText.scrollFactor.set();
-		// descText.borderSize = 2.4;
+		descText.borderSize = 2.4;
 		descBox.sprTracker = descText;
 		add(descText);
 
@@ -450,7 +451,7 @@ class CreditsState extends MusicBeatState
 		}
 
 		descText.text = creditsDesc[curSelected];
-		descText.y = FlxG.height - descText.height + offsetThing - 60;
+		descText.y = FlxG.height - descText.height + offsetThing - 40;
 
 		if (moveTween != null)
 			moveTween.cancel();

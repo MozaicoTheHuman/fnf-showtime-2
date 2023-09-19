@@ -9,6 +9,7 @@ import flixel.util.FlxColor;
 import fnf.system.ClientPrefs;
 import fnf.system.Language;
 import fnf.system.MusicBeatState;
+import fnf.system.ClientPrefs;
 import fnf.system.Paths;
 import fnf.system.unlockeables.Achievements;
 import fnf.system.visuals.Alphabet;
