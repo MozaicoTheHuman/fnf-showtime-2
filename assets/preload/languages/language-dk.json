@@ -218,6 +218,9 @@
 				},{
 					"name": "Hide Song Length",
 					"description": "Hvis markeret, vil bjælken, der viser, hvor meget tid der er tilbage,\nblive skjult."
+				},{
+					"name": "Score Text Zoom on Hit",
+					"description": "If unchecked, disables the Score text zooming\neverytime you hit a note."
 				}
 			]
 		},{
@@ -282,7 +285,8 @@
 		"Score",
 		"Misses",
 		"Nøjagtighed",
-		"Note Combo"
+		"Note Combo",
+		"BotPlay"
 	],
 	"rating":[
 		"You Stinker!",

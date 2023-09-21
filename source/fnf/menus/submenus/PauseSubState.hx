@@ -81,17 +81,15 @@ class PauseSubState extends MusicBeatSubstate
 		bg.scrollFactor.set();
 		add(bg);
 
-		var infoArray:Array<String> = Song.loadInfoTXT(Paths.formatToSongPath(PlayState.SONG.song));
-
 		var levelName:FlxText = new FlxText(20, 15, 0, "", 34);
-		levelName.text += infoArray[1];
+		levelName.text += PlayState.songInfo[1];
 		levelName.scrollFactor.set();
 		levelName.setFormat(Paths.font("p5.ttf"), 44);
 		levelName.updateHitbox();
 		add(levelName);
 
 		var levelArtist:FlxText = new FlxText(20, 47, 0, "", 28);
-		levelArtist.text += "By: " + infoArray[0];
+		levelArtist.text += PlayState.songInfo[0];
 		levelArtist.scrollFactor.set();
 		levelArtist.setFormat(Paths.font("p5.ttf"), 38);
 		levelArtist.updateHitbox();

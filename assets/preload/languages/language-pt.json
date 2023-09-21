@@ -217,6 +217,9 @@
 				},{
 					"name": "Hide Song Length",
 					"description": "If checked, the bar showing how much time is left\nwill be hidden."
+				},{
+					"name": "Score Text Zoom on Hit",
+					"description": "If unchecked, disables the Score text zooming\neverytime you hit a note."
 				}
 			]
 		},{
@@ -281,7 +284,8 @@
 		"Pontuação",
 		"Falhas",
 		"Precisão",
-		"Combo de Notas"
+		"Combo de Notas",
+		"BotPlay"
 	],
 	"rating":[
 		"Horrivel",

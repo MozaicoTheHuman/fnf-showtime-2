@@ -21,16 +21,19 @@ class CoolUtil
 	// [Difficulty name, Chart file suffix]
 	public static var difficultyStuff:Array<Array<String>> = [['Easy', '-easy'], ['Normal', ''], ['Hard', '-hard'], ['Extreme', '-extreme']];
 
-	public static function resetSprite(spr:FlxSprite, x:Float, y:Float)
+	public static function getGlobalFont(?mugen:Bool = false)
 	{
-		spr.reset(x, y);
-		spr.alpha = 1;
-		spr.visible = true;
-		spr.active = true;
-		spr.acceleration.set();
-		spr.drag.set();
-		spr.antialiasing = FlxSprite.defaultAntialiasing;
-		FlxTween.cancelTweensOf(spr);
+		var font:String = "p5.ttf";
+		switch (ClientPrefs.language)
+		{
+			case 'English' | 'Spanish':
+				font = !mugen ? "p5.ttf" : "mugen.otf";
+			case 'Portuguese (Brazil)' | 'French' | 'French (Canada)' | 'Danish':
+				font = !mugen ? "arsenal.ttf" : "dotgothic.ttf";
+			case 'Japanese':
+				font = !mugen ? "arsenaljp.ttf" : "dotgothic.ttf";
+		}
+		return Paths.font(font);
 	}
 
 	inline public static function colorFromString(color:String):FlxColor

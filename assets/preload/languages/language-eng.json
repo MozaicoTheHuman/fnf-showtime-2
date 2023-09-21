@@ -218,6 +218,9 @@
 				},{
 					"name": "Hide Song Length",
 					"description": "If checked, the bar showing how much time is left\nwill be hidden."
+				},{
+					"name": "Score Text Zoom on Hit",
+					"description": "If unchecked, disables the Score text zooming\neverytime you hit a note."
 				}
 			]
 		},{
@@ -282,7 +285,8 @@
 		"Score",
 		"Misses",
 		"Accuracy",
-		"Note Combo"
+		"Note Combo",
+		"BotPlay"
 	],
 	"rating":[
 		"You Suck!",

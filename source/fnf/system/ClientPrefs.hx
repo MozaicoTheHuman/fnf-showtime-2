@@ -61,6 +61,7 @@ class ClientPrefs
 	public static var dynamicCamera:Bool = true;
 	public static var hideHud:Bool = false;
 	public static var hideTime:Bool = false;
+	public static var scoreZoom:Bool = true;
 
 	// Note Offset
 	public static var noteOffset:Int = 0;
@@ -121,6 +122,7 @@ class ClientPrefs
 		save.data.dynamicCamera = dynamicCamera;
 		save.data.hideHud = hideHud;
 		save.data.hideTime = hideTime;
+		save.data.scoreZoom = scoreZoom;
 
 		// Note Offset
 		save.data.noteOffset = noteOffset;
@@ -135,6 +137,7 @@ class ClientPrefs
 	public static function loadPrefs()
 	{
 		// Controls
+
 		save.bind('controls', 'Mozaico');
 		if (save != null && save.data.customControls != null)
 		{
@@ -147,6 +150,7 @@ class ClientPrefs
 		}
 
 		// Graphics
+
 		save.bind('settings', 'Mozaico');
 		if (save.data.resolution != null)
 		{
@@ -186,80 +190,51 @@ class ClientPrefs
 		{
 			showFPS = save.data.showFPS;
 			if (Main.fpsVar != null)
-			{
 				Main.fpsVar.visible = showFPS;
-			}
 		}
 		if (save.data.globalAntialiasing != null)
-		{
 			globalAntialiasing = save.data.globalAntialiasing;
-		}
 		if (save.data.lowQuality != null)
-		{
 			lowQuality = save.data.lowQuality;
-		}
 
 		// Preferences
+
 		if (save.data.language != null)
-		{
 			language = save.data.language;
-		}
 		if (save.data.showSubs != null)
-		{
 			showSubs = save.data.showSubs;
-		}
 		if (save.data.downScroll != null)
-		{
 			downScroll = save.data.downScroll;
-		}
 		if (save.data.middleScroll != null)
-		{
 			middleScroll = save.data.middleScroll;
-		}
 		if (save.data.ghostTapping != null)
-		{
 			ghostTapping = save.data.ghostTapping;
-		}
 		if (save.data.noteQuant != null)
-		{
 			noteQuant = save.data.noteQuant;
-		}
 
 		// Visuals
+
 		if (save.data.flashing != null)
-		{
 			flashing = save.data.flashing;
-		}
 		if (save.data.noteSplashes != null)
-		{
 			noteSplashes = save.data.noteSplashes;
-		}
 		if (save.data.camZooms != null)
-		{
 			camZooms = save.data.camZooms;
-		}
 		if (save.data.dynamicCamera != null)
-		{
 			dynamicCamera = save.data.dynamicCamera;
-		}
 		if (save.data.hideHud != null)
-		{
 			hideHud = save.data.hideHud;
-		}
 		if (save.data.hideTime != null)
-		{
 			hideTime = save.data.hideTime;
-		}
+		if (save.data.scoreZoom != null)
+			scoreZoom = save.data.scoreZoom;
 
 		// Note Offset
+
 		if (save.data.noteOffset != null)
-		{
 			noteOffset = save.data.noteOffset;
-		}
 		if (save.data.comboOffset != null)
-		{
 			comboOffset = save.data.comboOffset;
-		}
 
 		if (save.data.gameplaySettings != null)
 		{
@@ -269,14 +244,11 @@ class ClientPrefs
 		}
 
 		// Sound
+
 		if (FlxG.save.data.volume != null)
-		{
 			FlxG.sound.volume = FlxG.save.data.volume;
-		}
 		if (FlxG.save.data.mute != null)
-		{
 			FlxG.sound.muted = FlxG.save.data.mute;
-		}
 	}
 
 	inline public static function getGameplaySetting(name:String, defaultValue:Dynamic = null):Dynamic

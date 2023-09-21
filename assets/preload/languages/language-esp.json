@@ -218,6 +218,9 @@
 				},{
 					"name": "Esconder Temporizador",
 					"description": "Si lo activas, se ocultara el temporizador de la cancion"
+				},{
+					"name": "Score Text Zoom al Tocar",
+					"description": "Si lo desactivas, el texto del puntaje no se agrandara\ncada que toques una nota."
 				}
 			]
 		},{

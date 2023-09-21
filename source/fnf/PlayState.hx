@@ -65,17 +65,17 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X = 42;
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
-	public static var ratingStuff:Array<Dynamic> = [
-		[Language.rating[0], 0.2], // From 0% to 19%
-		[Language.rating[1], 0.4], // From 20% to 39%
-		[Language.rating[2], 0.5], // From 40% to 49%
-		[Language.rating[3], 0.6], // From 50% to 59%
-		[Language.rating[4], 0.69], // From 60% to 68%
-		[Language.rating[5], 0.7], // 69%
-		[Language.rating[6], 0.8], // From 70% to 79%
-		[Language.rating[7], 0.9], // From 80% to 89%
-		[Language.rating[8], 1], // From 90% to 99%
-		[Language.rating[9], 1] // The value on this one isn't used actually, since Perfect is always "1"
+	public static var ratingStuff:Array<Float> = [
+		0.2, // From 0% to 19%
+		0.4, // From 20% to 39%
+		0.5, // From 40% to 49%
+		0.6, // From 50% to 59%
+		0.69, // From 60% to 68%
+		0.7, // 69%
+		0.8, // From 70% to 79%
+		0.9, // From 80% to 89%
+		1, // From 90% to 99%
+		1 // The value on this one isn't used actually, since Perfect is always "1"
 	];
 
 	#if (haxe >= "4.0.0")
@@ -252,7 +252,7 @@ class PlayState extends MusicBeatState
 	var finishedText:Bool = true;
 	var textIntro:FlxText;
 	var textDiscard:FlxSprite;
-	var lastTextDiscard:FlxSprite;
+	var lastDiscard:FlxSprite;
 	var bgIntro:FlxSprite;
 	var curPage:Int = 0;
 	var triangleText:FlxSprite;
@@ -261,7 +261,6 @@ class PlayState extends MusicBeatState
 	public static var isTokyo:Bool = false;
 	public static var isMugen:Bool = false;
 
-	var lan:String;
 	// Tokyo
 	var tokyoSprite:FlxSprite;
 	#if VIDEOS_ALLOWED
@@ -301,6 +300,7 @@ class PlayState extends MusicBeatState
 	var stunTimer:FlxTimer = null;
 
 	public static var onModifiers:String = "";
+	public static var songInfo:Array<String> = ["", ""];
 
 	override public function create()
 	{
@@ -344,6 +344,7 @@ class PlayState extends MusicBeatState
 		Conductor.mapBPMChanges(SONG);
 		Conductor.changeBPM(SONG.bpm);
 
+		songInfo = Song.loadInfoTXT(Paths.formatToSongPath(PlayState.SONG.song));
 		isLightOn = SONG.song.toLowerCase() == "light-on";
 		isTokyo = SONG.song.toLowerCase() == "tokyo";
 		isMugen = SONG.song.toLowerCase() == "mugen";
@@ -639,17 +640,7 @@ class PlayState extends MusicBeatState
 		var gfVersion:String = SONG.player3;
 		if (gfVersion == null || gfVersion.length < 1)
 		{
-			switch (curStage)
-			{
-				case 'limo':
-					gfVersion = 'gf-car';
-				case 'mall' | 'mallEvil':
-					gfVersion = 'gf-christmas';
-				case 'school' | 'schoolEvil':
-					gfVersion = 'gf-pixel';
-				default:
-					gfVersion = 'gf';
-			}
+			gfVersion = 'gf';
 			SONG.player3 = gfVersion; // Fix for the Chart Editor
 		}
 
@@ -828,22 +819,23 @@ class PlayState extends MusicBeatState
 
 		if (isMugen)
 		{
-			var dadMugenPortrait:FlxSprite = new FlxSprite(10, 10);
-			dadMugenPortrait.loadGraphic(Paths.image('hud/${songUiFolder}mugenportrait'));
-			dadMugenPortrait.scrollFactor.set();
-			dadMugenPortrait.cameras = [camHUD];
-			dadMugenPortrait.visible = !ClientPrefs.hideHud;
-			add(dadMugenPortrait);
-			porDad.x = dadMugenPortrait.x;
-			porDad.y = dadMugenPortrait.y;
-			var bfMugenPortrait:FlxSprite = new FlxSprite(FlxG.width - 127, 10);
-			bfMugenPortrait.loadGraphic(Paths.image('hud/${songUiFolder}mugenportrait'));
-			bfMugenPortrait.scrollFactor.set();
-			bfMugenPortrait.cameras = [camHUD];
-			bfMugenPortrait.visible = !ClientPrefs.hideHud;
-			add(bfMugenPortrait);
-			porBF.x = bfMugenPortrait.x;
-			porBF.y = bfMugenPortrait.y;
+			var dadPortrait:FlxSprite = new FlxSprite(10, 10);
+			dadPortrait.loadGraphic(Paths.image('hud/${songUiFolder}mugenportrait'));
+			dadPortrait.scrollFactor.set();
+			dadPortrait.cameras = [camHUD];
+			dadPortrait.visible = !ClientPrefs.hideHud;
+			add(dadPortrait);
+			porDad.x = dadPortrait.x;
+			porDad.y = dadPortrait.y;
+			var bfPortrait:FlxSprite = new FlxSprite(FlxG.width - 127, 10);
+			bfPortrait.loadGraphic(Paths.image('hud/${songUiFolder}mugenportrait'));
+			bfPortrait.scrollFactor.set();
+			bfPortrait.cameras = [camHUD];
+			bfPortrait.visible = !ClientPrefs.hideHud;
+			bfPortrait.flipX = true;
+			add(bfPortrait);
+			porBF.x = bfPortrait.x;
+			porBF.y = bfPortrait.y;
 		}
 
 		healthBarBG = new FlxSprite(172).loadGraphic(Paths.image('hud/${songUiFolder}healthBar'));
@@ -894,12 +886,16 @@ class PlayState extends MusicBeatState
 		add(iconP2);
 		reloadHealthBarColors();
 
-		scoreTxt = new FlxText(0, 0, FlxG.width, "", isMugen ? 16 : 28);
-		scoreTxt.setFormat(Paths.font(isMugen ? "mugen.otf" : "p5.ttf"), isMugen ? 16 : 28, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		var curLan = ClientPrefs.language;
+
+		scoreTxt = new FlxText(0, 0, FlxG.width, "", 8);
+		scoreTxt.setFormat(CoolUtil.getGlobalFont(isMugen), !isMugen ? 28 : curLan == 'English' || curLan == 'Spanish' ? 16 : 21, FlxColor.WHITE, CENTER,
+			FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
+		scoreTxt.bold = true;
 		scoreTxt.borderSize = 1.45;
 		scoreTxt.visible = !ClientPrefs.hideHud;
-		scoreTxt.y = isMugen ? healthBarBG.y + 40 : (ClientPrefs.downScroll ? healthBarBG.y + 57 : FlxG.height - scoreTxt.height - 14);
+		scoreTxt.y = isMugen ? healthBarBG.y + 40 : ClientPrefs.downScroll ? healthBarBG.y + 57 : FlxG.height - scoreTxt.height - 14;
 		scoreTxt.cameras = [camHUD];
 		add(scoreTxt);
 
@@ -996,7 +992,7 @@ class PlayState extends MusicBeatState
 
 		FlxG.sound.load(Paths.sound('stunsound'));
 
-		#if desktopMUGEN
+		#if desktop
 		// Updating Discord Rich Presence.
 		DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 		#end
@@ -1145,16 +1141,19 @@ class PlayState extends MusicBeatState
 		add(bgIntro);
 
 		textIntro = new FlxText(400, 306);
-		textIntro.setFormat(Paths.font("frank.ttf"), 38, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		textIntro.setFormat(Paths.font("keifont.ttf"), 38, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		textIntro.antialiasing = ClientPrefs.globalAntialiasing;
 		textIntro.cameras = [camHUD];
 
 		textDiscard = new FlxSprite(-100, -100);
+		textDiscard.antialiasing = ClientPrefs.globalAntialiasing;
 		textDiscard.cameras = [camHUD];
 
-		lastTextDiscard = new FlxSprite(-100, -100);
-		lastTextDiscard.cameras = [camHUD];
+		lastDiscard = new FlxSprite(-100, -100);
+		lastDiscard.antialiasing = ClientPrefs.globalAntialiasing;
+		lastDiscard.cameras = [camHUD];
 
-		add(lastTextDiscard);
+		add(lastDiscard);
 		add(textDiscard);
 		add(textIntro);
 
@@ -1166,7 +1165,7 @@ class PlayState extends MusicBeatState
 		nextPage(0);
 	}
 
-	var lastTextTween:FlxTween = null;
+	var lastTween:FlxTween = null;
 	var textTween:FlxTween = null;
 
 	function nextPage(add:Int = 1)
@@ -1176,16 +1175,16 @@ class PlayState extends MusicBeatState
 		{
 			if (curPage >= 2)
 			{
-				lastTextDiscard.loadGraphic(textDiscard.graphic);
-				lastTextDiscard.x = 66;
-				lastTextDiscard.y = 94;
-				lastTextDiscard.angle = -10;
-				lastTextDiscard.alpha = 0.5;
+				lastDiscard.loadGraphic(textDiscard.graphic);
+				lastDiscard.x = 66;
+				lastDiscard.y = 94;
+				lastDiscard.angle = -10;
+				lastDiscard.alpha = 0.5;
 
-				if (lastTextTween != null)
-					lastTextTween.cancel();
+				if (lastTween != null)
+					lastTween.cancel();
 
-				lastTextTween = FlxTween.tween(lastTextDiscard, {
+				lastTween = FlxTween.tween(lastDiscard, {
 					x: -268,
 					y: -118,
 					angle: -20,
@@ -1193,7 +1192,7 @@ class PlayState extends MusicBeatState
 				}, 0.3, {
 					onComplete: function(twn:FlxTween)
 					{
-						lastTextTween = null;
+						lastTween = null;
 					}
 				});
 			}
@@ -1243,7 +1242,7 @@ class PlayState extends MusicBeatState
 				finishedText = true;
 				textIntro.destroy();
 				textDiscard.destroy();
-				lastTextDiscard.destroy();
+				lastDiscard.destroy();
 				triangleText.destroy();
 				bgIntro.destroy();
 			}
@@ -1357,7 +1356,7 @@ class PlayState extends MusicBeatState
 						spr.scrollFactor.set();
 						spr.updateHitbox();
 						spr.screenCenter();
-						spr.antialiasing = ClientPrefs.globalAntialiasing;
+						spr.antialiasing = !isMugen ? ClientPrefs.globalAntialiasing : false;
 						add(spr);
 						countDownSprites.push(spr);
 						FlxTween.tween(spr, {y: spr.y += 100, alpha: 0}, Conductor.crochet / 1000, {
@@ -1424,7 +1423,7 @@ class PlayState extends MusicBeatState
 
 		#if desktop
 		// Updating Discord Rich Presence (with Time Left)
-		DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter(), true, songLength);
+		DiscordClient.changePresence(detailsText, songInfo[1] + " (" + storyDifficultyText + ")", iconP2.getCharacter(), true, songLength);
 		#end
 		setOnLuas('songLength', songLength);
 		callOnLuas('onSongStart', []);
@@ -1756,7 +1755,7 @@ class PlayState extends MusicBeatState
 			#if desktop
 			if (startTimer != null && startTimer.finished)
 			{
-				DiscordClient.changePresence(detailsText, SONG.song
+				DiscordClient.changePresence(detailsText, songInfo[1]
 					+ " ("
 					+ storyDifficultyText
 					+ ")", iconP2.getCharacter(), true,
@@ -1766,7 +1765,7 @@ class PlayState extends MusicBeatState
 			}
 			else
 			{
-				DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+				DiscordClient.changePresence(detailsText, songInfo[1] + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 			}
 			#end
 		}
@@ -1780,7 +1779,7 @@ class PlayState extends MusicBeatState
 		{
 			if (Conductor.songPosition > 0.0)
 			{
-				DiscordClient.changePresence(detailsText, SONG.song
+				DiscordClient.changePresence(detailsText, songInfo[1]
 					+ " ("
 					+ storyDifficultyText
 					+ ")", iconP2.getCharacter(), true,
@@ -1790,7 +1789,7 @@ class PlayState extends MusicBeatState
 			}
 			else
 			{
-				DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+				DiscordClient.changePresence(detailsText, songInfo[1] + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 			}
 		}
 		#end
@@ -1803,7 +1802,7 @@ class PlayState extends MusicBeatState
 		#if desktop
 		if (health > 0 && !paused)
 		{
-			DiscordClient.changePresence(detailsPausedText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+			DiscordClient.changePresence(detailsPausedText, songInfo[1] + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 		}
 		#end
 
@@ -1878,7 +1877,7 @@ class PlayState extends MusicBeatState
 
 		super.update(elapsed);
 
-		scoreTxt.text = !cpuControlled ? '${Language.score[0]}: $songScore | ${Language.score[1]}: $songMisses | $ratingName ${ratingName != '?' ? '(${Highscore.floorDecimal(ratingPercent * 100, 2)}%)' : ''}${isMugen ? '| ${Language.score[3]}: $combo' : ''}' : "--- BotPlay ---";
+		scoreTxt.text = !cpuControlled ? '${Language.score[0]}: $songScore | ${Language.score[1]}: $songMisses | $ratingName ${ratingName != '?' ? '(${Highscore.floorDecimal(ratingPercent * 100, 2)}%) - $ratingFC' : ''}${isMugen ? '| ${Language.score[3]}: $combo' : ''}' : '--- ${Language.score[4]} ---';
 
 		if (controls.PAUSE && startedCountdown && canPause)
 		{
@@ -1907,7 +1906,7 @@ class PlayState extends MusicBeatState
 				openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 
 				#if desktop
-				DiscordClient.changePresence(detailsPausedText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+				DiscordClient.changePresence(detailsPausedText, songInfo[1] + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 				#end
 			}
 		}
@@ -2444,7 +2443,7 @@ class PlayState extends MusicBeatState
 
 				#if desktop
 				// Game Over doesn't get his own variable because it's only used here
-				DiscordClient.changePresence("Game Over - " + detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+				DiscordClient.changePresence("Game Over - " + detailsText, songInfo[1] + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 				#end
 				isDead = true;
 				return true;
@@ -3226,27 +3225,22 @@ class PlayState extends MusicBeatState
 			totalPlayed++;
 			RecalculateRating();
 
-			if (scoreTxtTween != null)
+			if (ClientPrefs.scoreZoom)
 			{
-				scoreTxtTween.cancel();
-			}
-			scoreTxt.scale.x = 1.1;
-			scoreTxt.scale.y = 1.1;
-			scoreTxtTween = FlxTween.tween(scoreTxt.scale, {x: 1, y: 1}, 0.2, {
-				onComplete: function(twn:FlxTween)
+				if (scoreTxtTween != null)
 				{
-					scoreTxtTween = null;
+					scoreTxtTween.cancel();
 				}
-			});
+				scoreTxt.scale.x = 1.1;
+				scoreTxt.scale.y = 1.1;
+				scoreTxtTween = FlxTween.tween(scoreTxt.scale, {x: 1, y: 1}, 0.2, {
+					onComplete: function(twn:FlxTween)
+					{
+						scoreTxtTween = null;
+					}
+				});
+			}
 		}
-
-		/* if (combo > 60)
-			daRating = 'sick';
-		else if (combo > 12)
-			daRating = 'good'
-		else if (combo > 4)
-			daRating = 'bad';
-	 */
 
 		rating.loadGraphic(Paths.image('hud/$songUiFolder$daRating'));
 		rating.cameras = [camHUD];
@@ -4088,7 +4082,7 @@ class PlayState extends MusicBeatState
 				{
 					for (i in 0...ratingStuff.length - 1)
 					{
-						if (ratingPercent < ratingStuff[i][1])
+						if (ratingPercent < ratingStuff[i])
 						{
 							ratingName = Language.rating[i];
 							break;

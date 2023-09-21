@@ -28,6 +28,9 @@ class VisualsSubState extends BaseOptionsMenu
 		var option:Option = new Option(translation[5].name, translation[5].description, 'hideTime', 'bool', false);
 		addOption(option);
 
+		var option:Option = new Option(translation[6].name, translation[6].description, 'scoreZoom', 'bool', true);
+		addOption(option);
+
 		super();
 	}
 }

@@ -218,6 +218,9 @@
 				},{
 					"name": "Hide Song Length",
 					"description": "チェックを入れると、残り時間を示すバーが非表示になります。"
+				},{
+					"name": "Score Text Zoom on Hit",
+					"description": "If unchecked, disables the Score text zooming\neverytime you hit a note."
 				}
 			]
 		},{
@@ -282,7 +285,8 @@
 		"スコア",
 		"ミス数",
 		"Accuracy",
-		"コンボ数"
+		"コンボ数",
+		"BotPlay"
 	],
 	"rating":[
 		"最低だ！",
