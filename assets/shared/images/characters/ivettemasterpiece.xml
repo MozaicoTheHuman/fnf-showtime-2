@@ -1,170 +1,200 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="ivettemasterpiece.png">
-	<!-- Created with Adobe Animate version 18.0.2.126 -->
+	<!-- Created with Adobe Animate version 23.0.2.103 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Abajo0000" x="10" y="10" width="913" height="900"/>
-	<SubTexture name="Abajo0001" x="10" y="10" width="913" height="900"/>
-	<SubTexture name="Abajo0002" x="933" y="10" width="913" height="900"/>
-	<SubTexture name="Abajo0003" x="933" y="10" width="913" height="900"/>
-	<SubTexture name="Abajo0004" x="1856" y="10" width="913" height="900"/>
-	<SubTexture name="Abajo0005" x="1856" y="10" width="913" height="900"/>
-	<SubTexture name="Abajo0006" x="1856" y="10" width="913" height="900"/>
-	<SubTexture name="Abajo0007" x="1856" y="10" width="913" height="900"/>
-	<SubTexture name="Abajo0008" x="1856" y="10" width="913" height="900"/>
-	<SubTexture name="Abajo0009" x="1856" y="10" width="913" height="900"/>
-	<SubTexture name="Abajo0010" x="1856" y="10" width="913" height="900"/>
-	<SubTexture name="Abajo0011" x="1856" y="10" width="913" height="900"/>
-	<SubTexture name="Abajo0012" x="1856" y="10" width="913" height="900"/>
-	<SubTexture name="Abajo0013" x="1856" y="10" width="913" height="900"/>
-	<SubTexture name="Abajo0014" x="1856" y="10" width="913" height="900"/>
-	<SubTexture name="Abajo0015" x="1856" y="10" width="913" height="900"/>
-	<SubTexture name="Abajo0016" x="1856" y="10" width="913" height="900"/>
-	<SubTexture name="Abajo0017" x="1856" y="10" width="913" height="900"/>
-	<SubTexture name="Arriba0000" x="2779" y="10" width="899" height="910"/>
-	<SubTexture name="Arriba0001" x="2779" y="10" width="899" height="910"/>
-	<SubTexture name="Arriba0002" x="10" y="930" width="899" height="910"/>
-	<SubTexture name="Arriba0003" x="10" y="930" width="899" height="910"/>
-	<SubTexture name="Arriba0004" x="919" y="930" width="899" height="910"/>
-	<SubTexture name="Arriba0005" x="919" y="930" width="899" height="910"/>
-	<SubTexture name="Arriba0006" x="919" y="930" width="899" height="910"/>
-	<SubTexture name="Arriba0007" x="919" y="930" width="899" height="910"/>
-	<SubTexture name="Arriba0008" x="919" y="930" width="899" height="910"/>
-	<SubTexture name="Arriba0009" x="919" y="930" width="899" height="910"/>
-	<SubTexture name="Arriba0010" x="919" y="930" width="899" height="910"/>
-	<SubTexture name="Arriba0011" x="919" y="930" width="899" height="910"/>
-	<SubTexture name="Arriba0012" x="919" y="930" width="899" height="910"/>
-	<SubTexture name="Arriba0013" x="919" y="930" width="899" height="910"/>
-	<SubTexture name="Arriba0014" x="919" y="930" width="899" height="910"/>
-	<SubTexture name="Arriba0015" x="919" y="930" width="899" height="910"/>
-	<SubTexture name="Derecha0000" x="1828" y="930" width="916" height="900"/>
-	<SubTexture name="Derecha0001" x="1828" y="930" width="916" height="900"/>
-	<SubTexture name="Derecha0002" x="2754" y="930" width="916" height="900"/>
-	<SubTexture name="Derecha0003" x="2754" y="930" width="916" height="900"/>
-	<SubTexture name="Derecha0004" x="10" y="1850" width="916" height="900"/>
-	<SubTexture name="Derecha0005" x="10" y="1850" width="916" height="900"/>
-	<SubTexture name="Derecha0006" x="10" y="1850" width="916" height="900"/>
-	<SubTexture name="Derecha0007" x="10" y="1850" width="916" height="900"/>
-	<SubTexture name="Derecha0008" x="10" y="1850" width="916" height="900"/>
-	<SubTexture name="Derecha0009" x="10" y="1850" width="916" height="900"/>
-	<SubTexture name="Derecha0010" x="10" y="1850" width="916" height="900"/>
-	<SubTexture name="Derecha0011" x="10" y="1850" width="916" height="900"/>
-	<SubTexture name="Derecha0012" x="10" y="1850" width="916" height="900"/>
-	<SubTexture name="Derecha0013" x="10" y="1850" width="916" height="900"/>
-	<SubTexture name="IvetteDown0000" x="936" y="1850" width="899" height="900"/>
-	<SubTexture name="IvetteDown0001" x="936" y="1850" width="899" height="900"/>
-	<SubTexture name="IvetteDown0002" x="1845" y="1850" width="899" height="900"/>
-	<SubTexture name="IvetteDown0003" x="1845" y="1850" width="899" height="900"/>
-	<SubTexture name="IvetteDown0004" x="2754" y="1850" width="899" height="900"/>
-	<SubTexture name="IvetteDown0005" x="2754" y="1850" width="899" height="900"/>
-	<SubTexture name="IvetteDown0006" x="2754" y="1850" width="899" height="900"/>
-	<SubTexture name="IvetteDown0007" x="2754" y="1850" width="899" height="900"/>
-	<SubTexture name="IvetteDown0008" x="2754" y="1850" width="899" height="900"/>
-	<SubTexture name="IvetteDown0009" x="2754" y="1850" width="899" height="900"/>
-	<SubTexture name="IvetteDown0010" x="2754" y="1850" width="899" height="900"/>
-	<SubTexture name="IvetteDown0011" x="2754" y="1850" width="899" height="900"/>
-	<SubTexture name="IvetteDown0012" x="2754" y="1850" width="899" height="900"/>
-	<SubTexture name="IvetteDown0013" x="2754" y="1850" width="899" height="900"/>
-	<SubTexture name="IvetteDown0014" x="2754" y="1850" width="899" height="900"/>
-	<SubTexture name="IvetteDown0015" x="2754" y="1850" width="899" height="900"/>
-	<SubTexture name="IvetteDown0016" x="2754" y="1850" width="899" height="900"/>
-	<SubTexture name="IvetteDown0017" x="2754" y="1850" width="899" height="900"/>
-	<SubTexture name="IvetteIdle0000" x="10" y="2760" width="899" height="900"/>
-	<SubTexture name="IvetteIdle0001" x="10" y="2760" width="899" height="900"/>
-	<SubTexture name="IvetteIdle0002" x="919" y="2760" width="899" height="900"/>
-	<SubTexture name="IvetteIdle0003" x="919" y="2760" width="899" height="900"/>
-	<SubTexture name="IvetteIdle0004" x="1828" y="2760" width="899" height="900"/>
-	<SubTexture name="IvetteIdle0005" x="1828" y="2760" width="899" height="900"/>
-	<SubTexture name="IvetteIdle0006" x="1828" y="2760" width="899" height="900"/>
-	<SubTexture name="IvetteIdle0007" x="1828" y="2760" width="899" height="900"/>
-	<SubTexture name="IvetteIdle0008" x="1828" y="2760" width="899" height="900"/>
-	<SubTexture name="IvetteIdle0009" x="1828" y="2760" width="899" height="900"/>
-	<SubTexture name="IvetteIdle0010" x="1828" y="2760" width="899" height="900"/>
-	<SubTexture name="IvetteIdle0011" x="1828" y="2760" width="899" height="900"/>
-	<SubTexture name="IvetteIdle0012" x="1828" y="2760" width="899" height="900"/>
-	<SubTexture name="IvetteIdle0013" x="1828" y="2760" width="899" height="900"/>
-	<SubTexture name="IvetteLeft0000" x="2737" y="2760" width="905" height="900"/>
-	<SubTexture name="IvetteLeft0001" x="2737" y="2760" width="905" height="900"/>
-	<SubTexture name="IvetteLeft0002" x="10" y="3670" width="905" height="900"/>
-	<SubTexture name="IvetteLeft0003" x="10" y="3670" width="905" height="900"/>
-	<SubTexture name="IvetteLeft0004" x="925" y="3670" width="905" height="900"/>
-	<SubTexture name="IvetteLeft0005" x="925" y="3670" width="905" height="900"/>
-	<SubTexture name="IvetteLeft0006" x="925" y="3670" width="905" height="900"/>
-	<SubTexture name="IvetteLeft0007" x="925" y="3670" width="905" height="900"/>
-	<SubTexture name="IvetteLeft0008" x="925" y="3670" width="905" height="900"/>
-	<SubTexture name="IvetteLeft0009" x="925" y="3670" width="905" height="900"/>
-	<SubTexture name="IvetteLeft0010" x="925" y="3670" width="905" height="900"/>
-	<SubTexture name="IvetteRight0000" x="1840" y="3670" width="907" height="900"/>
-	<SubTexture name="IvetteRight0001" x="1840" y="3670" width="907" height="900"/>
-	<SubTexture name="IvetteRight0002" x="2757" y="3670" width="907" height="900"/>
-	<SubTexture name="IvetteRight0003" x="2757" y="3670" width="907" height="900"/>
-	<SubTexture name="IvetteRight0004" x="10" y="4580" width="907" height="900"/>
-	<SubTexture name="IvetteRight0005" x="10" y="4580" width="907" height="900"/>
-	<SubTexture name="IvetteRight0006" x="10" y="4580" width="907" height="900"/>
-	<SubTexture name="IvetteRight0007" x="10" y="4580" width="907" height="900"/>
-	<SubTexture name="IvetteRight0008" x="10" y="4580" width="907" height="900"/>
-	<SubTexture name="IvetteRight0009" x="10" y="4580" width="907" height="900"/>
-	<SubTexture name="IvetteRight0010" x="10" y="4580" width="907" height="900"/>
-	<SubTexture name="IvetteRight0011" x="10" y="4580" width="907" height="900"/>
-	<SubTexture name="IvetteRight0012" x="10" y="4580" width="907" height="900"/>
-	<SubTexture name="IvetteRight0013" x="10" y="4580" width="907" height="900"/>
-	<SubTexture name="IvetteUp0000" x="927" y="4580" width="899" height="900"/>
-	<SubTexture name="IvetteUp0001" x="927" y="4580" width="899" height="900"/>
-	<SubTexture name="IvetteUp0002" x="1836" y="4580" width="899" height="900"/>
-	<SubTexture name="IvetteUp0003" x="1836" y="4580" width="899" height="900"/>
-	<SubTexture name="IvetteUp0004" x="2745" y="4580" width="899" height="900"/>
-	<SubTexture name="IvetteUp0005" x="2745" y="4580" width="899" height="900"/>
-	<SubTexture name="IvetteUp0006" x="2745" y="4580" width="899" height="900"/>
-	<SubTexture name="IvetteUp0007" x="2745" y="4580" width="899" height="900"/>
-	<SubTexture name="IvetteUp0008" x="2745" y="4580" width="899" height="900"/>
-	<SubTexture name="IvetteUp0009" x="2745" y="4580" width="899" height="900"/>
-	<SubTexture name="IvetteUp0010" x="2745" y="4580" width="899" height="900"/>
-	<SubTexture name="IvetteUp0011" x="2745" y="4580" width="899" height="900"/>
-	<SubTexture name="IvetteUp0012" x="2745" y="4580" width="899" height="900"/>
-	<SubTexture name="IvetteUp0013" x="2745" y="4580" width="899" height="900"/>
-	<SubTexture name="IvetteUp0014" x="2745" y="4580" width="899" height="900"/>
-	<SubTexture name="IvetteUp0015" x="2745" y="4580" width="899" height="900"/>
-	<SubTexture name="Izquierda0000" x="10" y="5490" width="913" height="900"/>
-	<SubTexture name="Izquierda0001" x="10" y="5490" width="913" height="900"/>
-	<SubTexture name="Izquierda0002" x="933" y="5490" width="913" height="900"/>
-	<SubTexture name="Izquierda0003" x="933" y="5490" width="913" height="900"/>
-	<SubTexture name="Izquierda0004" x="1856" y="5490" width="913" height="900"/>
-	<SubTexture name="Izquierda0005" x="1856" y="5490" width="913" height="900"/>
-	<SubTexture name="Izquierda0006" x="1856" y="5490" width="913" height="900"/>
-	<SubTexture name="Izquierda0007" x="1856" y="5490" width="913" height="900"/>
-	<SubTexture name="Izquierda0008" x="1856" y="5490" width="913" height="900"/>
-	<SubTexture name="Izquierda0009" x="1856" y="5490" width="913" height="900"/>
-	<SubTexture name="Izquierda0010" x="1856" y="5490" width="913" height="900"/>
-	<SubTexture name="shuo0000" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0001" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0002" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0003" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0004" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0005" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0006" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0007" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0008" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0009" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0010" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0011" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0012" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0013" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0014" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0015" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0016" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0017" x="10" y="6400" width="754" height="788"/>
-	<SubTexture name="shuo0018" x="10" y="6400" width="754" height="788"/>
-	<SubTexture name="shuo0019" x="10" y="6400" width="754" height="788"/>
-	<SubTexture name="shuo0020" x="10" y="6400" width="754" height="788"/>
-	<SubTexture name="shuo0021" x="10" y="6400" width="754" height="788"/>
-	<SubTexture name="shuo0022" x="10" y="6400" width="754" height="788"/>
-	<SubTexture name="shuo0023" x="10" y="6400" width="754" height="788"/>
-	<SubTexture name="shuo0024" x="10" y="6400" width="754" height="788"/>
-	<SubTexture name="shuo0025" x="10" y="6400" width="754" height="788"/>
-	<SubTexture name="shuo0026" x="10" y="6400" width="754" height="788"/>
-	<SubTexture name="shuo0027" x="10" y="6400" width="754" height="788"/>
-	<SubTexture name="shuo0028" x="10" y="6400" width="754" height="788"/>
-	<SubTexture name="shuo0029" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0030" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0031" x="2779" y="5490" width="754" height="788"/>
-	<SubTexture name="shuo0032" x="2779" y="5490" width="754" height="788"/>
+	<SubTexture name="Abajo0000" x="3" y="3" width="913" height="889" frameX="0" frameY="-10" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Abajo0001" x="3" y="3" width="913" height="889" frameX="0" frameY="-10" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Abajo0002" x="919" y="3" width="899" height="900" frameX="-6" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Abajo0003" x="919" y="3" width="899" height="900" frameX="-6" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Abajo0004" x="1821" y="3" width="899" height="900" frameX="-6" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Abajo0005" x="1821" y="3" width="899" height="900" frameX="-6" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Abajo0006" x="1821" y="3" width="899" height="900" frameX="-6" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Abajo0007" x="1821" y="3" width="899" height="900" frameX="-6" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Abajo0008" x="1821" y="3" width="899" height="900" frameX="-6" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Abajo0009" x="1821" y="3" width="899" height="900" frameX="-6" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Abajo0010" x="1821" y="3" width="899" height="900" frameX="-6" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Abajo0011" x="1821" y="3" width="899" height="900" frameX="-6" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Abajo0012" x="1821" y="3" width="899" height="900" frameX="-6" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Abajo0013" x="1821" y="3" width="899" height="900" frameX="-6" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Abajo0014" x="1821" y="3" width="899" height="900" frameX="-6" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Abajo0015" x="1821" y="3" width="899" height="900" frameX="-6" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Abajo0016" x="1821" y="3" width="899" height="900" frameX="-6" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Abajo0017" x="1821" y="3" width="899" height="900" frameX="-6" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Arriba0000" x="2723" y="3" width="883" height="910" frameX="-8" frameY="0" frameWidth="899" frameHeight="910"/>
+	<SubTexture name="Arriba0001" x="2723" y="3" width="883" height="910" frameX="-8" frameY="0" frameWidth="899" frameHeight="910"/>
+	<SubTexture name="Arriba0002" x="3609" y="3" width="899" height="900" frameX="0" frameY="-9" frameWidth="899" frameHeight="910"/>
+	<SubTexture name="Arriba0003" x="3609" y="3" width="899" height="900" frameX="0" frameY="-9" frameWidth="899" frameHeight="910"/>
+	<SubTexture name="Arriba0004" x="4511" y="3" width="899" height="900" frameX="0" frameY="-9" frameWidth="899" frameHeight="910"/>
+	<SubTexture name="Arriba0005" x="4511" y="3" width="899" height="900" frameX="0" frameY="-9" frameWidth="899" frameHeight="910"/>
+	<SubTexture name="Arriba0006" x="4511" y="3" width="899" height="900" frameX="0" frameY="-9" frameWidth="899" frameHeight="910"/>
+	<SubTexture name="Arriba0007" x="4511" y="3" width="899" height="900" frameX="0" frameY="-9" frameWidth="899" frameHeight="910"/>
+	<SubTexture name="Arriba0008" x="4511" y="3" width="899" height="900" frameX="0" frameY="-9" frameWidth="899" frameHeight="910"/>
+	<SubTexture name="Arriba0009" x="4511" y="3" width="899" height="900" frameX="0" frameY="-9" frameWidth="899" frameHeight="910"/>
+	<SubTexture name="Arriba0010" x="4511" y="3" width="899" height="900" frameX="0" frameY="-9" frameWidth="899" frameHeight="910"/>
+	<SubTexture name="Arriba0011" x="4511" y="3" width="899" height="900" frameX="0" frameY="-9" frameWidth="899" frameHeight="910"/>
+	<SubTexture name="Arriba0012" x="4511" y="3" width="899" height="900" frameX="0" frameY="-9" frameWidth="899" frameHeight="910"/>
+	<SubTexture name="Arriba0013" x="4511" y="3" width="899" height="900" frameX="0" frameY="-9" frameWidth="899" frameHeight="910"/>
+	<SubTexture name="Arriba0014" x="4511" y="3" width="899" height="900" frameX="0" frameY="-9" frameWidth="899" frameHeight="910"/>
+	<SubTexture name="Arriba0015" x="4511" y="3" width="899" height="900" frameX="0" frameY="-9" frameWidth="899" frameHeight="910"/>
+	<SubTexture name="Derecha0000" x="5413" y="3" width="916" height="900"/>
+	<SubTexture name="Derecha0001" x="5413" y="3" width="916" height="900"/>
+	<SubTexture name="Derecha0002" x="6332" y="3" width="908" height="900" frameX="-1" frameY="0" frameWidth="916" frameHeight="900"/>
+	<SubTexture name="Derecha0003" x="6332" y="3" width="908" height="900" frameX="-1" frameY="0" frameWidth="916" frameHeight="900"/>
+	<SubTexture name="Derecha0004" x="7243" y="3" width="899" height="900" frameX="-1" frameY="0" frameWidth="916" frameHeight="900"/>
+	<SubTexture name="Derecha0005" x="7243" y="3" width="899" height="900" frameX="-1" frameY="0" frameWidth="916" frameHeight="900"/>
+	<SubTexture name="Derecha0006" x="7243" y="3" width="899" height="900" frameX="-1" frameY="0" frameWidth="916" frameHeight="900"/>
+	<SubTexture name="Derecha0007" x="7243" y="3" width="899" height="900" frameX="-1" frameY="0" frameWidth="916" frameHeight="900"/>
+	<SubTexture name="Derecha0008" x="7243" y="3" width="899" height="900" frameX="-1" frameY="0" frameWidth="916" frameHeight="900"/>
+	<SubTexture name="Derecha0009" x="7243" y="3" width="899" height="900" frameX="-1" frameY="0" frameWidth="916" frameHeight="900"/>
+	<SubTexture name="Derecha0010" x="7243" y="3" width="899" height="900" frameX="-1" frameY="0" frameWidth="916" frameHeight="900"/>
+	<SubTexture name="Derecha0011" x="7243" y="3" width="899" height="900" frameX="-1" frameY="0" frameWidth="916" frameHeight="900"/>
+	<SubTexture name="Derecha0012" x="7243" y="3" width="899" height="900" frameX="-1" frameY="0" frameWidth="916" frameHeight="900"/>
+	<SubTexture name="Derecha0013" x="7243" y="3" width="899" height="900" frameX="-1" frameY="0" frameWidth="916" frameHeight="900"/>
+	<SubTexture name="IvetteDown0000" x="3" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteDown0001" x="3" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteDown0002" x="905" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteDown0003" x="905" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteDown0004" x="1807" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteDown0005" x="1807" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteDown0006" x="1807" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteDown0007" x="1807" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteDown0008" x="1807" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteDown0009" x="1807" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteDown0010" x="1807" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteDown0011" x="1807" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteDown0012" x="1807" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteDown0013" x="1807" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteDown0014" x="1807" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteDown0015" x="1807" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteDown0016" x="1807" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteDown0017" x="1807" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteIdle0000" x="2709" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteIdle0001" x="2709" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteIdle0002" x="3611" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteIdle0003" x="3611" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteIdle0004" x="4513" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteIdle0005" x="4513" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteIdle0006" x="4513" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteIdle0007" x="4513" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteIdle0008" x="4513" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteIdle0009" x="4513" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteIdle0010" x="4513" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteIdle0011" x="4513" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteIdle0012" x="4513" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteIdle0013" x="4513" y="916" width="899" height="900"/>
+	<SubTexture name="IvetteLeft0000" x="5415" y="916" width="905" height="900"/>
+	<SubTexture name="IvetteLeft0001" x="5415" y="916" width="905" height="900"/>
+	<SubTexture name="IvetteLeft0002" x="6323" y="916" width="899" height="900" frameX="-5" frameY="0" frameWidth="905" frameHeight="900"/>
+	<SubTexture name="IvetteLeft0003" x="6323" y="916" width="899" height="900" frameX="-5" frameY="0" frameWidth="905" frameHeight="900"/>
+	<SubTexture name="IvetteLeft0004" x="7225" y="916" width="899" height="900" frameX="-5" frameY="0" frameWidth="905" frameHeight="900"/>
+	<SubTexture name="IvetteLeft0005" x="7225" y="916" width="899" height="900" frameX="-5" frameY="0" frameWidth="905" frameHeight="900"/>
+	<SubTexture name="IvetteLeft0006" x="7225" y="916" width="899" height="900" frameX="-5" frameY="0" frameWidth="905" frameHeight="900"/>
+	<SubTexture name="IvetteLeft0007" x="7225" y="916" width="899" height="900" frameX="-5" frameY="0" frameWidth="905" frameHeight="900"/>
+	<SubTexture name="IvetteLeft0008" x="7225" y="916" width="899" height="900" frameX="-5" frameY="0" frameWidth="905" frameHeight="900"/>
+	<SubTexture name="IvetteLeft0009" x="7225" y="916" width="899" height="900" frameX="-5" frameY="0" frameWidth="905" frameHeight="900"/>
+	<SubTexture name="IvetteLeft0010" x="7225" y="916" width="899" height="900" frameX="-5" frameY="0" frameWidth="905" frameHeight="900"/>
+	<SubTexture name="IvetteRight0000" x="3" y="1819" width="907" height="900"/>
+	<SubTexture name="IvetteRight0001" x="3" y="1819" width="907" height="900"/>
+	<SubTexture name="IvetteRight0002" x="913" y="1819" width="899" height="900" frameX="0" frameY="0" frameWidth="907" frameHeight="900"/>
+	<SubTexture name="IvetteRight0003" x="913" y="1819" width="899" height="900" frameX="0" frameY="0" frameWidth="907" frameHeight="900"/>
+	<SubTexture name="IvetteRight0004" x="1815" y="1819" width="899" height="900" frameX="0" frameY="0" frameWidth="907" frameHeight="900"/>
+	<SubTexture name="IvetteRight0005" x="1815" y="1819" width="899" height="900" frameX="0" frameY="0" frameWidth="907" frameHeight="900"/>
+	<SubTexture name="IvetteRight0006" x="1815" y="1819" width="899" height="900" frameX="0" frameY="0" frameWidth="907" frameHeight="900"/>
+	<SubTexture name="IvetteRight0007" x="1815" y="1819" width="899" height="900" frameX="0" frameY="0" frameWidth="907" frameHeight="900"/>
+	<SubTexture name="IvetteRight0008" x="1815" y="1819" width="899" height="900" frameX="0" frameY="0" frameWidth="907" frameHeight="900"/>
+	<SubTexture name="IvetteRight0009" x="1815" y="1819" width="899" height="900" frameX="0" frameY="0" frameWidth="907" frameHeight="900"/>
+	<SubTexture name="IvetteRight0010" x="1815" y="1819" width="899" height="900" frameX="0" frameY="0" frameWidth="907" frameHeight="900"/>
+	<SubTexture name="IvetteRight0011" x="1815" y="1819" width="899" height="900" frameX="0" frameY="0" frameWidth="907" frameHeight="900"/>
+	<SubTexture name="IvetteRight0012" x="1815" y="1819" width="899" height="900" frameX="0" frameY="0" frameWidth="907" frameHeight="900"/>
+	<SubTexture name="IvetteRight0013" x="1815" y="1819" width="899" height="900" frameX="0" frameY="0" frameWidth="907" frameHeight="900"/>
+	<SubTexture name="IvetteUp0000" x="2717" y="1819" width="899" height="900"/>
+	<SubTexture name="IvetteUp0001" x="2717" y="1819" width="899" height="900"/>
+	<SubTexture name="IvetteUp0002" x="3619" y="1819" width="899" height="900"/>
+	<SubTexture name="IvetteUp0003" x="3619" y="1819" width="899" height="900"/>
+	<SubTexture name="IvetteUp0004" x="4521" y="1819" width="899" height="900"/>
+	<SubTexture name="IvetteUp0005" x="4521" y="1819" width="899" height="900"/>
+	<SubTexture name="IvetteUp0006" x="4521" y="1819" width="899" height="900"/>
+	<SubTexture name="IvetteUp0007" x="4521" y="1819" width="899" height="900"/>
+	<SubTexture name="IvetteUp0008" x="4521" y="1819" width="899" height="900"/>
+	<SubTexture name="IvetteUp0009" x="4521" y="1819" width="899" height="900"/>
+	<SubTexture name="IvetteUp0010" x="4521" y="1819" width="899" height="900"/>
+	<SubTexture name="IvetteUp0011" x="4521" y="1819" width="899" height="900"/>
+	<SubTexture name="IvetteUp0012" x="4521" y="1819" width="899" height="900"/>
+	<SubTexture name="IvetteUp0013" x="4521" y="1819" width="899" height="900"/>
+	<SubTexture name="IvetteUp0014" x="4521" y="1819" width="899" height="900"/>
+	<SubTexture name="IvetteUp0015" x="4521" y="1819" width="899" height="900"/>
+	<SubTexture name="Izquierda0000" x="5423" y="1819" width="913" height="900"/>
+	<SubTexture name="Izquierda0001" x="5423" y="1819" width="913" height="900"/>
+	<SubTexture name="Izquierda0002" x="6339" y="1819" width="899" height="900" frameX="-12" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Izquierda0003" x="6339" y="1819" width="899" height="900" frameX="-12" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Izquierda0004" x="7241" y="1819" width="899" height="900" frameX="-12" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Izquierda0005" x="7241" y="1819" width="899" height="900" frameX="-12" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Izquierda0006" x="7241" y="1819" width="899" height="900" frameX="-12" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Izquierda0007" x="7241" y="1819" width="899" height="900" frameX="-12" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Izquierda0008" x="7241" y="1819" width="899" height="900" frameX="-12" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Izquierda0009" x="7241" y="1819" width="899" height="900" frameX="-12" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="Izquierda0010" x="7241" y="1819" width="899" height="900" frameX="-12" frameY="0" frameWidth="913" frameHeight="900"/>
+	<SubTexture name="shuo0000" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0001" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0002" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0003" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0004" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0005" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0006" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0007" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0008" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0009" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0010" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0011" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0012" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0013" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0014" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0015" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0016" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0017" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0018" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0019" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0020" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0021" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0022" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0023" x="3" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0024" x="760" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0025" x="760" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0026" x="760" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0027" x="760" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0028" x="1517" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0029" x="1517" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0030" x="1517" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0031" x="1517" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0032" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0033" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0034" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0035" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0036" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0037" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0038" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0039" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0040" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0041" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0042" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0043" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0044" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0045" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0046" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0047" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0048" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0049" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0050" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0051" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0052" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0053" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0054" x="2274" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0055" x="1517" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0056" x="1517" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0057" x="1517" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0058" x="1517" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0059" x="760" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0060" x="760" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0061" x="760" y="2722" width="754" height="788"/>
+	<SubTexture name="shuo0062" x="760" y="2722" width="754" height="788"/>
 </TextureAtlas>
