@@ -48,7 +48,7 @@ class ClientPrefs
 
 	// Preferences
 	public static var language:String = "English";
-	public static var showSubs:Bool = false;
+	public static var showSubs:Bool = true;
 	public static var downScroll:Bool = false;
 	public static var middleScroll:Bool = false;
 	public static var ghostTapping:Bool = true;
