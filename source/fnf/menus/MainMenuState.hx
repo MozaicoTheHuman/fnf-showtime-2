@@ -524,7 +524,7 @@ class MainMenuState extends MusicBeatState
 			{
 				for (i in 0...Achievements.achievementsStuff.length)
 				{
-					Achievements.unlockAchievement(Achievements.achievementsStuff[i][0]);
+					FlxG.sound.play(Paths.sound('horadelshow'));
 				}
 			}
 			if (FlxG.keys.justPressed.EIGHT)
