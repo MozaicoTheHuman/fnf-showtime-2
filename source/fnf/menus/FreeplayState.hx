@@ -498,6 +498,7 @@ class FreeplayState extends MusicBeatState
 			}
 			else
 			{
+				FlxG.sound.play(Paths.sound('confirmMenu'));
 				var songLowercase:String = Paths.formatToSongPath(songs[curSelected].songName);
 				var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
 				#if MODS_ALLOWED
