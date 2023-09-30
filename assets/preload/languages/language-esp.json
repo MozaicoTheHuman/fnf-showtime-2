@@ -194,6 +194,9 @@
 				},{
 					"name": "Quantizacion de Notas",
 					"description": "Si lo activas, el color de las notas cambiara con su ritmo\nen lugar de la direccion, haciendo que sean mas faciles de distinguir. (Recomendado)."
+				},{
+					"name": "Fondo de notas",
+					"description": "Si lo activas, pondra un fondo oscuro detras de las notas"
 				}
 			]
 		},{

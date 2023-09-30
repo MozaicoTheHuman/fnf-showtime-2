@@ -193,6 +193,9 @@
 				},{
 					"name": "Note Quantization",
 					"description": "If checked, the note colors will depend on\ntheir beat quantization instead of their direction.\n(Highly recommended)"
+				},{
+					"name": "Note Background",
+					"description": "If checked,"
 				}
 			]
 		},{

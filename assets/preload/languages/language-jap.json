@@ -194,6 +194,9 @@
 				},{
 					"name": "Note Quantization",
 					"description": "チェックした場合、\n音符の色は方向ではなくビートのクオンタイズに依存します。 \n(リズムゲームに慣れない方は強く推奨)"
+				},{
+					"name": "Note Background",
+					"description": "If checked,"
 				}
 			]
 		},{

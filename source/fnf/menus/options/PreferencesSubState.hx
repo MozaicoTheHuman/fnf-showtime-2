@@ -29,6 +29,9 @@ class PreferencesSubState extends BaseOptionsMenu
 		var option:Option = new Option(translation[5].name, translation[5].description, 'noteQuant', 'bool', false);
 		addOption(option);
 
+		var option:Option = new Option(translation[6].name, translation[6].description, 'background', 'bool', false);
+		addOption(option);
+
 		super();
 	}
 

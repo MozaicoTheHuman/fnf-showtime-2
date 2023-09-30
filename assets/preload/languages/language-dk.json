@@ -194,6 +194,9 @@
 				},{
 					"name": "Note Quantization",
 					"description": "Hvis markeret, vil nodefarverne afhænge af\nderes taktkvantisering i stedet for deres retning.\n(Højt anbefalet)"
+				},{
+					"name": "Note Background",
+					"description": "If checked,"
 				}
 			]
 		},{

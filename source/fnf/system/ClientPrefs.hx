@@ -53,6 +53,7 @@ class ClientPrefs
 	public static var middleScroll:Bool = false;
 	public static var ghostTapping:Bool = true;
 	public static var noteQuant:Bool = false;
+	public static var background:Bool = false;
 
 	// Visuals
 	public static var flashing:Bool = true;
@@ -114,6 +115,7 @@ class ClientPrefs
 		save.data.middleScroll = middleScroll;
 		save.data.ghostTapping = ghostTapping;
 		save.data.noteQuant = noteQuant;
+		save.data.background = background;
 
 		// Visuals
 		save.data.flashing = flashing;
@@ -211,6 +213,9 @@ class ClientPrefs
 			ghostTapping = save.data.ghostTapping;
 		if (save.data.noteQuant != null)
 			noteQuant = save.data.noteQuant;
+		if (save.data.background != null)
+			background = save.data.background;
+		
 
 		// Visuals
 
