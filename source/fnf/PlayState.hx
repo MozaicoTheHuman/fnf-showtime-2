@@ -148,7 +148,6 @@ class PlayState extends MusicBeatState
 	public var eventNotes:Array<Dynamic> = [];
 
 	private var strumLine:FlxSprite;
-	public var blackbg: FlxSprite;
 
 	// Handles the new epic mega sexy cam code that i've done
 	private var camFollow:FlxPoint;
@@ -268,10 +267,6 @@ class PlayState extends MusicBeatState
 	#if VIDEOS_ALLOWED
 	var tokyoVideo:VideoHandler;
 	#end
-
-	//MUGEN
-	var comboS:FlxSprite;
-	var comboNum:FlxSprite;
 
 	var songLength:Float = 0;
 
@@ -717,13 +712,15 @@ class PlayState extends MusicBeatState
 		dwBar.cameras = [camHUD];
 		add(dwBar);
 
-		blackbg = new FlxSprite(ClientPrefs.middleScroll
-			|| isTokyo ? STRUM_X_MIDDLESCROLL + 673 : STRUM_X + 675,  0).makeGraphic(480, FlxG.height, FlxColor.BLACK);
-		blackbg.alpha = 0.5;
-		blackbg.scrollFactor.set();
-		blackbg.cameras = [camHUD];
 		if (ClientPrefs.background)
+		{
+			var blackbg:FlxSprite = new FlxSprite(ClientPrefs.middleScroll || isTokyo ? STRUM_X_MIDDLESCROLL + 673 : STRUM_X + 675,
+				0).makeGraphic(480, FlxG.height, FlxColor.BLACK);
+			blackbg.alpha = 0.5;
+			blackbg.scrollFactor.set();
+			blackbg.cameras = [camHUD];
 			add(blackbg);
+		}
 
 		strumLine = new FlxSprite(ClientPrefs.middleScroll
 			|| isTokyo ? STRUM_X_MIDDLESCROLL : STRUM_X, isMugen ? 128 : 50).makeGraphic(FlxG.width, 10);
@@ -732,7 +729,8 @@ class PlayState extends MusicBeatState
 		strumLine.scrollFactor.set();
 
 		timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 248, 20, 400, "", isMugen ? 64 : 32);
-		timeTxt.setFormat(Paths.font(isMugen ? "mugen.otf" : "frank.ttf"), isMugen ? 64 : 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		timeTxt.setFormat(Paths.font(isMugen ? "mugen.otf" : "frank.ttf"), isMugen ? 64 : 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE,
+			FlxColor.BLACK);
 		timeTxt.scrollFactor.set();
 		timeTxt.alpha = 0;
 		timeTxt.borderSize = 2;
@@ -764,8 +762,14 @@ class PlayState extends MusicBeatState
 
 		strumLineNotes = new FlxTypedGroup<StrumNote>();
 		add(strumLineNotes);
-		mugenCombo = new FlxTypedGroup<FlxSprite>();
-		add(mugenCombo);
+
+		if (isMugen)
+		{
+			mugenCombo = new FlxTypedGroup<FlxSprite>();
+			add(mugenCombo);
+			mugenCombo.cameras = [camHUD];
+		}
+
 		add(grpNoteSplashes);
 
 		var splash:NoteSplash = new NoteSplash(100, 100, 0);
@@ -911,7 +915,7 @@ class PlayState extends MusicBeatState
 		scoreTxt.bold = true;
 		scoreTxt.borderSize = 1.45;
 		scoreTxt.visible = !ClientPrefs.hideHud;
-		scoreTxt.y = isMugen ? healthBarBG.y + 40 : ClientPrefs.downScroll ? healthBarBG.y + 57 : FlxG.height - scoreTxt.height - 14;
+		scoreTxt.y = isMugen ? healthBarBG.y - 20 : ClientPrefs.downScroll ? healthBarBG.y + 57 : FlxG.height - scoreTxt.height - 14;
 		scoreTxt.cameras = [camHUD];
 		add(scoreTxt);
 
@@ -928,7 +932,6 @@ class PlayState extends MusicBeatState
 		}
 
 		strumLineNotes.cameras = [camHUD];
-		mugenCombo.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
 		notes.cameras = [camHUD];
 		healthBar.cameras = [camHUD];
@@ -1895,7 +1898,7 @@ class PlayState extends MusicBeatState
 		super.update(elapsed);
 
 		scoreTxt.text = !cpuControlled ? '${Language.score[0]}: $songScore | ${Language.score[1]}: $songMisses | $ratingName ${ratingName != '?' ? '(${Highscore.floorDecimal(ratingPercent * 100, 2)}%) - $ratingFC' : ''}${isMugen ? '| ${Language.score[3]}: $combo' : ''}' : '--- ${Language.score[4]} ---';
-		//mugen
+		// mugen
 		if (controls.PAUSE && startedCountdown && canPause)
 		{
 			var ret:Dynamic = callOnLuas('onPause', []);
@@ -3269,8 +3272,8 @@ class PlayState extends MusicBeatState
 		rating.acceleration.y = 550;
 		rating.velocity.y -= FlxG.random.int(140, 175);
 		rating.velocity.x -= FlxG.random.int(0, 10);
-		rating.x +=  isMugen ? 0 : ClientPrefs.comboOffset[0];
-		rating.y -=  isMugen ? 0 : ClientPrefs.comboOffset[1];
+		rating.x += isMugen ? 0 : ClientPrefs.comboOffset[0];
+		rating.y -= isMugen ? 0 : ClientPrefs.comboOffset[1];
 		rating.setGraphicSize(Std.int(isMugen ? rating.width * 1.2 : rating.width * 0.7));
 		rating.updateHitbox();
 		insert(members.indexOf(strumLineNotes), rating);
@@ -3290,8 +3293,6 @@ class PlayState extends MusicBeatState
 		comboSpr.setGraphicSize(Std.int(comboSpr.width * 0.7));
 		comboSpr.updateHitbox();
 
-
-
 		var seperatedScore:Array<Int> = [];
 
 		if (combo >= 1000)
@@ -3302,10 +3303,10 @@ class PlayState extends MusicBeatState
 		seperatedScore.push(Math.floor(combo / 10) % 10);
 		seperatedScore.push(combo % 10);
 
-		var daLoop:Int = 0;
 		var xThing:Float = 0;
 		if (!isMugen)
 		{
+			var daLoop:Int = 0;
 			for (i in seperatedScore)
 			{
 				var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image('hud/${songUiFolder}num${Std.int(i)}'));
@@ -3335,42 +3336,46 @@ class PlayState extends MusicBeatState
 				if (numScore.x > xThing)
 					xThing = numScore.x;
 			}
-		} else {
+		}
+		else
+		{
+			mugenCombo.forEachAlive(function(combos:FlxSprite) combos.destroy());
 			mugenCombo.clear();
 			var mugenSeperatedScore:Array<Int> = [];
-			if (combo >= 1000)
-				{
-					mugenSeperatedScore.push(Math.floor((combo + 1) / 1000) % 10);
-				}
-				mugenSeperatedScore.push(Math.floor((combo + 1) / 100) % 10);
-				mugenSeperatedScore.push(Math.floor((combo + 1) / 10) % 10);
-				mugenSeperatedScore.push((combo + 1)  % 10);
 
-				comboS = new FlxSprite(1080, 206).loadGraphic(Paths.image('hud/${songUiFolder}combito'));
-				comboS.cameras = [camHUD];
-				comboS.visible = !ClientPrefs.hideHud;
-				comboS.antialiasing = false;
-				comboS.updateHitbox();
-				mugenCombo.add(comboS);
-	
-			
+			combo++;
+			mugenSeperatedScore.push(combo % 10);
+			if (combo >= 10)
+				mugenSeperatedScore.push(Math.floor(combo / 10) % 10);
+			if (combo >= 100)
+				mugenSeperatedScore.push(Math.floor(combo / 100) % 10);
+			if (combo >= 1000)
+				mugenSeperatedScore.push(Math.floor(combo / 1000) % 10);
+			combo--;
+
+			comboS = new FlxSprite(1080, 306).loadGraphic(Paths.image('hud/${songUiFolder}combito'));
+			comboS.cameras = [camHUD];
+			comboS.visible = !ClientPrefs.hideHud;
+			comboS.antialiasing = false;
+			comboS.updateHitbox();
+			mugenCombo.add(comboS);
+
+			var daLoop:Int = 1;
 			for (i in mugenSeperatedScore)
 			{
-				comboNum = new FlxSprite().loadGraphic(Paths.image('hud/${songUiFolder}num${Std.int(i)}'));
+				var comboNum:FlxSprite = new FlxSprite().loadGraphic(Paths.image('hud/${songUiFolder}num${Std.int(i)}'));
 				comboNum.cameras = [camHUD];
 				comboNum.screenCenter();
-				comboNum.x = 1035 + (43 * daLoop) - 90;
-				comboNum.y = 200;
+				comboNum.x = comboS.x - (comboNum.width * daLoop) - 15;
+				comboNum.y = comboS.y - 6;
 				comboNum.updateHitbox();
-			
+
 				comboNum.visible = !ClientPrefs.hideHud;
 				comboNum.antialiasing = false;
 
 				mugenCombo.add(comboNum);
-				
 
 				daLoop++;
-				
 			}
 		}
 		comboSpr.x = xThing + 50;
@@ -3386,6 +3391,8 @@ class PlayState extends MusicBeatState
 			startDelay: Conductor.crochet * 0.002
 		});
 	}
+
+	var comboS:FlxSprite;
 
 	private function keyShit():Void
 	{
@@ -3553,7 +3560,10 @@ class PlayState extends MusicBeatState
 		}
 		combo = 0;
 		if (isMugen)
+		{
+			mugenCombo.forEachAlive(function(combos:FlxSprite) combos.destroy());
 			mugenCombo.clear();
+		}
 
 		songMisses++;
 		vocals.volume = 0;
@@ -3615,11 +3625,13 @@ class PlayState extends MusicBeatState
 		]);
 	}
 
+	/*
 	function noteMissPress(direction:Int = 1, ?ghostMiss:Bool = false):Void // You pressed a key when there was no notes to press for this key
 	{
 		if (!boyfriend.stunned)
 		{
 			health -= 0.05;
+			vfxcombo = 0;
 			combo = 0;
 			if (combo > 5 && gf.animOffsets.exists('sad'))
 			{
@@ -3647,7 +3659,7 @@ class PlayState extends MusicBeatState
 			new FlxTimer().start(1 / 60, function(tmr:FlxTimer)
 			{
 				boyfriend.stunned = false;
-		});*/
+		});
 
 			switch (direction)
 			{
@@ -3663,7 +3675,7 @@ class PlayState extends MusicBeatState
 			vocals.volume = 0;
 		}
 	}
-
+ */
 	function goodNoteHit(note:Note):Void
 	{
 		if (!note.wasGoodHit)
