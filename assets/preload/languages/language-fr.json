@@ -196,7 +196,7 @@
 					"description": "Si coché, la couleur des notes dépendront de leur\nquantification rythmique au lieu de leurs direction. (Hautement reccomendé)"
 				},{
 					"name": "Note Background",
-					"description": "If checked,"
+					"description": "If checked, a black background will appear behind the arrows."
 				}
 			]
 		},{

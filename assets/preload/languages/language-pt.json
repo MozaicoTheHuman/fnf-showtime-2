@@ -195,7 +195,7 @@
 					"description": "If checked, the note colors will depend on\ntheir beat quantization instead of their direction.\n(Highly recommended)"
 				},{
 					"name": "Note Background",
-					"description": "If checked,"
+					"description": "If checked, a black background will appear behind the arrows."
 				}
 			]
 		},{

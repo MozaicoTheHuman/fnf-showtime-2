@@ -716,7 +716,7 @@ class PlayState extends MusicBeatState
 		{
 			var blackbg:FlxSprite = new FlxSprite(ClientPrefs.middleScroll || isTokyo ? STRUM_X_MIDDLESCROLL + 673 : STRUM_X + 675,
 				0).makeGraphic(480, FlxG.height, FlxColor.BLACK);
-			blackbg.alpha = 0.5;
+			blackbg.alpha = 0.65;
 			blackbg.scrollFactor.set();
 			blackbg.cameras = [camHUD];
 			add(blackbg);
@@ -3369,15 +3369,15 @@ class PlayState extends MusicBeatState
 				comboNum.x = comboS.x - (comboNum.width * daLoop) - 15;
 				comboNum.y = comboS.y - 6;
 				comboNum.updateHitbox();
-
 				comboNum.visible = !ClientPrefs.hideHud;
 				comboNum.antialiasing = false;
-
 				mugenCombo.add(comboNum);
+
 
 				daLoop++;
 			}
 		}
+
 		comboSpr.x = xThing + 50;
 		FlxTween.tween(rating, {alpha: 0}, 0.2, {
 			startDelay: Conductor.crochet * 0.001

@@ -196,7 +196,7 @@
 					"description": "Hvis markeret, vil nodefarverne afhænge af\nderes taktkvantisering i stedet for deres retning.\n(Højt anbefalet)"
 				},{
 					"name": "Note Background",
-					"description": "If checked,"
+					"description": "If checked, a black background will appear behind the arrows."
 				}
 			]
 		},{

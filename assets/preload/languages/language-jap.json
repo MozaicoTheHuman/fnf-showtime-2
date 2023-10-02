@@ -196,7 +196,7 @@
 					"description": "チェックした場合、\n音符の色は方向ではなくビートのクオンタイズに依存します。 \n(リズムゲームに慣れない方は強く推奨)"
 				},{
 					"name": "Note Background",
-					"description": "If checked,"
+					"description": "チェックを入れると、矢印の後ろに黒い背景が表示される。"
 				}
 			]
 		},{
