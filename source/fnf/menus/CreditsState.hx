@@ -172,7 +172,7 @@ class CreditsState extends MusicBeatState
 			['zeropso2', 'zeropso2','', 'https://www.youtube.com/@garakutaZERO', 'FFFFFF'],
 			[Language.credits.categorys[3]],
 			['ShaminBECA', 'nada','', 'https://twitter.com/ShaminBECA', 'FFDD33'],
-			['InukoExo', 'nada','', 'https://twitter.com/InukoExo', 'F01E6A'],
+			['InukoExo', 'inuko','', 'https://twitter.com/InukoExo', 'F01E6A'],
 			[
 				'AndresLoquendero0',
 				'nada',
